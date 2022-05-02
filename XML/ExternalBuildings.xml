@@ -1,0 +1,1396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Buildings.xsd">
+  <!-- Markets & Related needs desc-->
+  <Building ID="City Square" InSettlement="false" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl1" />
+    </Model>
+    <Construction Cost="2500" SackValue="1000" MinTurns="0" Upkeep="0" CardIcon="G_TechIcon_Opera_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01" />
+    <Requirements>
+      <Population Num="60" />
+      <Building ID="Town" Condition="true" Exact="false" />
+      <!--Terrain -->
+      <RequireEither>
+        <Terrain ID="Fertile Plain" />
+        <Terrain ID="Grassland" />
+      </RequireEither>
+      <!--All False-->
+      <RequireEither>
+        <TerrainAttribute Require="Farmland" Condition="true" Adjacent="true" />
+        <Terrain ID="Fertile Farmland" Condition="true" Adjacent="true" />
+        <Terrain ID="Grassy Farmland" Condition="true" Adjacent="true" />
+        <Terrain ID="Irrigated Fertile Farmland" Condition="true" Adjacent="true" />
+        <Terrain ID="Irrigated Grassy Farmland" Condition="true" Adjacent="true" />
+      </RequireEither>
+      <!-- <Terrain ID="Barren Farmland" Condition="false" Adjacent="true" />
+      <Terrain ID="Terraced Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Terraced Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Terraced Plateau" Condition="false" Adjacent="true" />
+      <Terrain ID="Destroyed Terraced Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Destroyed Terraced Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Flooded Land" Condition="false" Adjacent="true" />
+      <Terrain ID="Marsh" Condition="false" Adjacent="true" />
+      <Terrain ID="Forest" Condition="false" Adjacent="true" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+      <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="true" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="true" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="true" />
+      <Terrain ID="Sea" Condition="false" Adjacent="true" /> -->
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Fortification I" Condition="false" Exact="true" />
+      <Building ID="Trading Square" Condition="false" Exact="true" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="5" />
+    <Capability Name="Noble Happiness" Level="3" />
+    <Capability Name="Produce Local Items" Level="1" />
+    <Capability Name="Increase Tax" Level="10" />
+  </Building>
+  <Building ID="Huge City Square" InSettlement="false" MaxNumber="1" Upgrades="City Square">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl1" />
+    </Model>
+    <Construction Cost="5000" SackValue="2000" MinTurns="0" Upkeep="0" CardIcon="G_TechIcon_Opera_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01" />
+    <Requirements>
+      <Population Num="225" />
+      <Tech Item="Coinage" />
+      <Building ID="City" Condition="true" Exact="true" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="Noble Happiness" Level="6" />
+    <Capability Name="Produce Local Items" Level="1" />
+    <Capability Name="Increase Tax" Level="15" />
+  </Building>
+  <Building ID="Metropolitan City Square" InSettlement="false" MaxNumber="1" Upgrades="Huge City Square">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="3000" MinTurns="0" Upkeep="0" CardIcon="G_TechIcon_Opera_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01" />
+    <Requirements>
+      <Population Num="550" />
+      <Tech Item="Coinage" />
+      <Building ID="Huge City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="15" />
+    <Capability Name="Noble Happiness" Level="12" />
+    <Capability Name="Produce Local Items" Level="2" />
+    <Capability Name="Increase Tax" Level="20" />
+  </Building>
+  <Building ID="Large Metropolitan City Square" InSettlement="false" MaxNumber="1" Upgrades="Metropolitan City Square">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl1" />
+    </Model>
+    <Construction Cost="15000" SackValue="4000" MinTurns="0" Upkeep="0" CardIcon="G_TechIcon_Opera_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01" />
+    <Requirements>
+      <Population Num="1000" />
+      <Tech Item="Coinage" />
+      <Building ID="Metropolitan City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="20" />
+    <Capability Name="Noble Happiness" Level="16" />
+    <Capability Name="Produce Local Items" Level="3" />
+    <Capability Name="Increase Tax" Level="25" />
+  </Building>
+
+  <Building ID="Caravanseray" InSettlement="false" MaxNumber="1" Upgrades="Market III">
+    <Model SlotSize="1" TempleSlot="false">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseCaravansary_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaCaravansary_Lvl1" />
+    </Model>
+    <Construction Cost="15000" SackValue="2250" MinTurns="0" Upkeep="0" CardIcon="G_BuildingIcon_CaravansaryLvl1_01" CardMinorIcon="G_Icon12x12_Caravansary_01" />
+    <Requirements>
+      <Population Num="425" />
+      <Tech Item="Road Building" />
+      <Tech Item="Mathematics" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+      <!--Terrain -->
+      <Terrain ID="Dry Plain" Condition="true" Adjacent="false" />
+      <Terrain ID="Sand" Condition="true" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+      <RequireEither>
+        <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+        <Terrain ID="Plateau" Condition="true" Adjacent="true" />
+      </RequireEither>
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Happiness" Level="5" />
+    <Capability Name="Trade Distance" Level="90" />
+    <Capability Name="Increase Internal Trade" Level="-50" />
+  </Building>
+  <Building ID="Caravanseray II" InSettlement="false" MaxNumber="1" Upgrades="Caravanseray">
+    <Model SlotSize="1" TempleSlot="false">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseCaravansary_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaCaravansary_Lvl1" />
+    </Model>
+    <Construction Cost="30000" SackValue="2750" MinTurns="1" Upkeep="0" CardIcon="G_BuildingIcon_CaravansaryLvl1_01" CardMinorIcon="G_Icon12x12_Caravansary_01" />
+    <Requirements>
+      <Population Num="525" />
+      <Tech Item="Silk Road" />
+      <Building ID="Large Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Trade Distance" Level="120" />
+    <Capability Name="Increase Internal Trade" Level="-95" />
+  </Building>
+  <Building ID="Trading Square" InSettlement="false" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="1000" MinTurns="0" Upkeep="0" CardIcon="G_BuildingIcon_CaravansaryLvl1_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="150" />
+      <Building ID="City" Exact="true" />
+      <!--Terrain -->
+      <RequireEither>
+        <Terrain ID="Fertile Plain" Condition="true" Adjacent="false" />
+        <Terrain ID="Grassland" Condition="true" Adjacent="false" />
+      </RequireEither>
+      <Terrain ID="Navigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Forest" Condition="true" Adjacent="true" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Fortification I" Condition="false" Exact="false" />
+      <Building ID="Huge City Square" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="6" />
+    <Capability Name="Noble Unrest" Level="3" />
+    <Capability Name="Produce Local Items" Level="1" />
+    <Capability Name="Increase Internal Trade" Level="20" />
+  </Building>
+  <Building ID="Large Trading Square" InSettlement="false" MaxNumber="1" Upgrades="Trading Square">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl2" />
+    </Model>
+    <Construction Cost="12000" SackValue="2500" MinTurns="1" Upkeep="0" CardIcon="G_BuildingIcon_CaravansaryLvl1_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="275" />
+      <Tech Item="Paper Currency" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="12" />
+    <Capability Name="Noble Unrest" Level="6" />
+    <Capability Name="Produce Local Items" Level="2" />
+    <Capability Name="Increase Internal Trade" Level="40" />
+  </Building>
+  <Building ID="Trading District" InSettlement="false" MaxNumber="1" Upgrades="Large Trading Square">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="16000" SackValue="4000" MinTurns="2" Upkeep="0" CardIcon="G_BuildingIcon_CaravansaryLvl1_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Tech Item="Joint Stock Company" />
+      <Building ID="Large Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="24" />
+    <Capability Name="Noble Unrest" Level="12" />
+    <Capability Name="Produce Local Items" Level="3" />
+    <Capability Name="Increase Internal Trade" Level="60" />
+  </Building>
+  <!-- Desc done -->
+  <Building ID="Fortified Winter Palace" InSettlement="false" MaxNumber="1">
+    <Model SlotSize="2">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl3" />
+    </Model>
+    <Construction Cost="16000" SackValue="10000" MinTurns="1" Upkeep="250" CardIcon="G_BuildingIcon_PalaceLvl1_01" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="515" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+      <Building ID="High Stone Wall" Condition="true" Exact="false" />
+      <Building ID="Fortified Barracks IV" Condition="true" Exact="false" />
+      <Building ID="Fortified Stables IV" Condition="true" Exact="false" />
+      <!--Terrain -->
+      <Terrain ID="Grassland" Condition="true" Adjacent="false" />
+      <!--All False-->
+      <Terrain ID="Terraced Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Terraced Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Terraced Plateau" Condition="false" Adjacent="true" />
+      <TerrainAttribute Require="Farmland" Condition="false" Adjacent="true" />
+      <Terrain ID="Barren Farmland" Condition="false" Adjacent="true" />
+      <Terrain ID="Irrigated Grassy Farmland" Condition="false" Adjacent="true" />
+      <Terrain ID="Destroyed Terraced Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Destroyed Terraced Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Flooded Land" Condition="false" Adjacent="true" />
+      <Terrain ID="Marsh" Condition="false" Adjacent="true" />
+      <Terrain ID="Forest" Condition="false" Adjacent="true" />
+      <Terrain ID="Dry Plain" Condition="false" Adjacent="true" />
+      <Terrain ID="Sand" Condition="false" Adjacent="true" />
+      <Terrain ID="Fertile Plain" Condition="false" Adjacent="true" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+      <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="true" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="true" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="true" />
+      <Terrain ID="Sea" Condition="false" Adjacent="true" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Fortified Summer Palace" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="20" />
+    <Capability Name="Suppress Nobles" Level="20" />
+    <Capability Name="Store Food" Level="12" />
+    <Capability Name="Recruit Guards Cavalry" Level="-6" />
+    <Capability Name="Recruit Guards Melee Short" Level="-8" />
+    <Capability Name="Recruit Guards Melee Long" Level="-7" />
+    <Capability Name="Recruit Guards Ranged" Level="-9" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="-5" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="-3" />
+    <Capability Name="Recruit Regulars Melee Short" Level="-4" />
+    <Capability Name="Recruit Regulars Melee Long" Level="-3" />
+    <Capability Name="Recruit Regulars Hybrid" Level="-2" />
+    <Capability Name="Recruit Regulars Cavalry" Level="-6" />
+    <Capability Name="Culture VP" Level="-2" />
+  </Building>
+  <Building ID="Fortified Summer Palace" InSettlement="false" MaxNumber="1">
+    <Model SlotSize="2">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl3" />
+    </Model>
+    <Construction Cost="16000" SackValue="10000" MinTurns="1" Upkeep="999" CardIcon="G_BuildingIcon_PalaceLvl3_01" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="515" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+      <Building ID="High Stone Wall" Condition="true" Exact="false" />
+      <Building ID="Fortified Barracks IV" Condition="true" Exact="false" />
+      <Building ID="Fortified Stables IV" Condition="true" Exact="false" />
+      <!--Terrain -->
+      <Terrain ID="Fertile Plain" Condition="true" Adjacent="false" />
+      <!--All False-->
+      <Terrain ID="Terraced Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Terraced Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Terraced Plateau" Condition="false" Adjacent="true" />
+      <TerrainAttribute Require="Farmland" Condition="false" Adjacent="true" />
+      <Terrain ID="Barren Farmland" Condition="false" Adjacent="true" />
+      <Terrain ID="Irrigated Grassy Farmland" Condition="false" Adjacent="true" />
+      <Terrain ID="Destroyed Terraced Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Destroyed Terraced Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Flooded Land" Condition="false" Adjacent="true" />
+      <Terrain ID="Marsh" Condition="false" Adjacent="true" />
+      <Terrain ID="Forest" Condition="false" Adjacent="true" />
+      <Terrain ID="Dry Plain" Condition="false" Adjacent="true" />
+      <Terrain ID="Sand" Condition="false" Adjacent="true" />
+      <Terrain ID="Grassland" Condition="false" Adjacent="true" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+      <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Fortified Winter Palace" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="250" />
+    <Capability Name="Suppress Nobles" Level="18" />
+    <Capability Name="Store Food" Level="4" />
+    <Capability Name="Recruit Guards Cavalry" Level="-6" />
+    <Capability Name="Recruit Guards Melee Short" Level="-8" />
+    <Capability Name="Recruit Guards Melee Long" Level="-7" />
+    <Capability Name="Recruit Guards Ranged" Level="-9" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="-5" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="-3" />
+    <Capability Name="Recruit Regulars Melee Short" Level="1" />
+    <Capability Name="Recruit Regulars Melee Long" Level="2" />
+    <Capability Name="Recruit Regulars Hybrid" Level="3" />
+    <Capability Name="Recruit Regulars Cavalry" Level="1" />
+    <Capability Name="Culture VP" Level="1" />
+  </Building>
+  <!-- Civilian Recruitment needs desc-->
+  <Building ID="Settlement Office I" InSettlement="false" MaxNumber="1" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="25000" SackValue="2500" MinTurns="1" Upkeep="2500" CardIcon="G_BuildingIcon_Town_01" CardMinorIcon="G_Icon12x12_City_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Building ID="City" Condition="true" Exact="false" />
+      <Terrain ID="Forest" Condition="true" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="true" />
+      <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Recruit Town Settlers" Level="1" />
+  </Building>
+  <Building ID="Settlement Office II" InSettlement="false" MaxNumber="1" Upgrades="Settlement Office I" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="5000" SackValue="5000" MinTurns="2" Upkeep="5000" CardIcon="G_BuildingIcon_Town_01" CardMinorIcon="G_Icon12x12_City_01" />
+    <Requirements>
+      <Population Num="650" />
+      <Building ID="City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Trading City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="40" />
+    <Capability Name="Recruit Town Settlers" Level="1" />
+    <Capability Name="Recruit City Settlers" Level="1" />
+  </Building>
+  <Building ID="Settlement Office III" InSettlement="false" MaxNumber="1" Upgrades="Settlement Office II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="7500" SackValue="7500" MinTurns="3" Upkeep="7500" CardIcon="G_BuildingIcon_Town_01" CardMinorIcon="G_Icon12x12_City_01" />
+    <Requirements>
+      <Population Num="850" />
+    </Requirements>
+    <Capability Name="Recruit Town Settlers" Level="1" />
+    <Capability Name="Recruit City Settlers" Level="1" />
+    <Capability Name="Peasant Unrest" Level="60" />
+  </Building>
+  <Building ID="Settlement Office IV" InSettlement="false" MaxNumber="1" Upgrades="Settlement Office III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="10000" SackValue="10000" MinTurns="4" Upkeep="10000" CardIcon="G_BuildingIcon_Town_01" CardMinorIcon="G_Icon12x12_City_01" />
+    <Requirements>
+      <Population Num="1050" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="80" />
+    <Capability Name="Recruit Town Settlers" Level="1" />
+    <Capability Name="Recruit City Settlers" Level="1" />
+    <Capability Name="Recruit Huge City Settlers" Level="1" />
+  </Building>
+  <Building ID="Settlement Office V" InSettlement="false" MaxNumber="1" Upgrades="Settlement Office IV">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="12500" SackValue="12500" MinTurns="5" Upkeep="12500" CardIcon="G_BuildingIcon_Town_01" CardMinorIcon="G_Icon12x12_City_01" />
+    <Requirements>
+      <Population Num="1250" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="100" />
+    <Capability Name="Recruit Town Settlers" Level="1" />
+    <Capability Name="Recruit City Settlers" Level="1" />
+    <Capability Name="Recruit Huge City Settlers" Level="1" />
+  </Building>
+  <!-- Mines & Related -->
+  <!-- Nomad Only -->
+  <Building ID="Glass Foundry Nomad" MaxNumber="16" InSettlement="false" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl1" />
+    </Model>
+    <Construction Cost="1000" SackValue="125" MinTurns="0" Upkeep="0" CardIcon="G_ExtConstruct_MineCopper_Lvl3_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="150" />
+      <!--Terrain -->
+      <Terrain ID="Sand" Condition="true" Adjacent="false" />
+      <RequireEither>
+        <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+        <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="true" Adjacent="true" />
+      </RequireEither>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="true" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="4" />
+    <Capability Name="Mine Income" Level="75" />
+  </Building>
+  <Building ID="Glass Factory Nomad" MaxNumber="8" InSettlement="false" Upgrades="Glass Foundry Nomad" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="2000" SackValue="250" MinTurns="0" Upkeep="0" CardIcon="G_ExtConstruct_MineCopper_Lvl3_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="300" />
+      <!--Terrain -->
+      <Terrain ID="Sand" Condition="true" Adjacent="true" />
+      <RequireEither>
+        <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+        <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+      </RequireEither>
+      <RequireEither>
+        <Terrain ID="Navigable River" Condition="false" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Condition="false" Adjacent="true" />
+        <TerrainAttribute Require="AllowAdjacentPort" Condition="false" Adjacent="true" />
+        <TerrainAttribute Require="IrrigationSource" Condition="false" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Condition="false" Adjacent="false" />
+        <TerrainAttribute Require="AllowAdjacentPort" Condition="false" Adjacent="false" />
+        <TerrainAttribute Require="IrrigationSource" Condition="false" Adjacent="false" />
+      </RequireEither>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="true" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="7" />
+    <Capability Name="Mine Income" Level="150" />
+  </Building>
+  <!-- Copper Foundries Chinese: needs desc-->
+  <Building ID="Copper Mine Chinese" MaxNumber="3" InSettlement="false" AllowedForHorde="false">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl1" />
+    </Model>
+    <Construction Cost="2500" SackValue="1000" MinTurns="0" Upkeep="0" CardIcon="G_ExtConstruct_MineCopper_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="100" />
+      <!--Terrain -->
+      <RequireEither>
+        <RequireAll>
+          <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+          <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+          <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+        </RequireAll>
+        <RequireAll>
+          <Terrain ID="Plateau" Condition="true" Adjacent="true" />
+          <RequireEither>
+            <Terrain ID="Mountains" Condition="true" Adjacent="true" />
+            <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+          </RequireEither>
+        </RequireAll>
+      </RequireEither>
+      <TerrainAttribute Require="Farmland" Condition="false" Adjacent="true" />
+      <TerrainAttribute Require="AllowAdjacentPort" Condition="false" Adjacent="true" />
+      <TerrainAttribute Require="IrrigationSource" Condition="false" Adjacent="true" />
+      <TerrainAttribute Require="Farmland" Condition="false" Adjacent="false" />
+      <TerrainAttribute Require="AllowAdjacentPort" Condition="false" Adjacent="false" />
+      <TerrainAttribute Require="IrrigationSource" Condition="false" Adjacent="false" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="false" />
+      <RequireEither>
+        <Era Value="0" />
+        <Era Value="1" />
+      </RequireEither>
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="5" />
+    <Capability Name="Noble Unrest" Level="10" />
+    <Capability Name="Produce Copper" Level="1" />
+  </Building>
+  <Building ID="Copper Foundry Chinese" MaxNumber="2" InSettlement="false" Upgrades="Copper Mine Chinese" AllowedForHorde="false">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="5000" SackValue="1500" MinTurns="1" Upkeep="0" CardIcon="G_ExtConstruct_MineCopper_Lvl2_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="200" />
+      <!--Terrain -->
+      <Terrain ID="Forest" Condition="true" Adjacent="true" />
+      <ControlNumSettlements Num="10" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Unrest" Level="15" />
+    <Capability Name="Produce Copper" Level="3" />
+  </Building>
+  <Building ID="Large Copper Foundry Chinese" MaxNumber="1" InSettlement="false" Upgrades="Copper Foundry Chinese" AllowedForHorde="false">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="7500" SackValue="2250" MinTurns="2" Upkeep="0" CardIcon="G_ExtConstruct_MineCopper_Lvl3_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="400" />
+      <!--Terrain -->
+      <ControlNumSettlements Num="20" Exact="false" />
+      <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="30" />
+    <Capability Name="Produce Copper" Level="6" />
+  </Building>
+  <!-- Copper Foundries Nomad: needs desc-->
+  <Building ID="Copper Mine Nomad" MaxNumber="3" InSettlement="false" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl1" />
+    </Model>
+    <Construction Cost="2250" SackValue="1000" MinTurns="0" Upkeep="0" CardIcon="G_ExtConstruct_MineCopper_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="100" />
+      <!--Terrain -->
+      <Terrain ID="Forest" Condition="true" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+      <RequireEither>
+        <RequireAll>
+          <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+          <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+        </RequireAll>
+        <RequireAll>
+          <Terrain ID="Plateau" Condition="true" Adjacent="true" />
+          <RequireEither>
+            <Terrain ID="Mountains" Condition="true" Adjacent="true" />
+            <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+          </RequireEither>
+        </RequireAll>
+      </RequireEither>
+      <TerrainAttribute Require="Farmland" Condition="false" Adjacent="true" />
+      <TerrainAttribute Require="AllowAdjacentPort" Condition="false" Adjacent="true" />
+      <TerrainAttribute Require="IrrigationSource" Condition="false" Adjacent="true" />
+      <TerrainAttribute Require="Farmland" Condition="false" Adjacent="false" />
+      <TerrainAttribute Require="AllowAdjacentPort" Condition="false" Adjacent="false" />
+      <TerrainAttribute Require="IrrigationSource" Condition="false" Adjacent="false" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="true" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="5" />
+    <Capability Name="Noble Unrest" Level="10" />
+    <Capability Name="Produce Copper" Level="1" />
+  </Building>
+  <Building ID="Copper Foundry Nomad" MaxNumber="2" InSettlement="false" Upgrades="Copper Mine Nomad" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="4500" SackValue="1500" MinTurns="1" Upkeep="0" CardIcon="G_ExtConstruct_MineCopper_Lvl2_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="200" />
+      <RequireEither>
+        <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+        <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+      </RequireEither>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="true" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Unrest" Level="15" />
+    <Capability Name="Produce Copper" Level="3" />
+  </Building>
+  <Building ID="Large Copper Foundry Nomad" MaxNumber="1" InSettlement="false" Upgrades="Copper Foundry Nomad" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="6250" SackValue="2250" MinTurns="2" Upkeep="0" CardIcon="G_ExtConstruct_MineCopper_Lvl3_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="true" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="30" />
+    <Capability Name="Produce Copper" Level="6" />
+  </Building>
+  <!-- Bronze Foundries needs desc-->
+  <Building ID="Tin And Copper Mine" MaxNumber="3" InSettlement="false" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="3000" SackValue="1750" MinTurns="1" Upkeep="0" CardIcon="G_TechIcon_BronzeMaking_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Tech Item="Arsenic Bronze Making" />
+      <Population Num="150" />
+      <!--Terrain -->
+      <Terrain ID="Gentle Hills" Condition="true" Adjacent="false" />
+      <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Forest" Condition="true" Adjacent="true" />
+      <RequireEither>
+        <Terrain ID="Navigable River" Condition="true" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Condition="true" Adjacent="true" />
+        <TerrainAttribute Require="AllowAdjacentPort" Condition="true" Adjacent="true" />
+        <TerrainAttribute Require="IrrigationSource" Condition="true" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Condition="true" Adjacent="false" />
+        <TerrainAttribute Require="AllowAdjacentPort" Condition="true" Adjacent="false" />
+        <TerrainAttribute Require="IrrigationSource" Condition="true" Adjacent="false" />
+      </RequireEither>
+      <Terrain ID="Dry Plain" Condition="false" Adjacent="false" />
+      <Terrain ID="Sand" Condition="false" Adjacent="false" />
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+      <Building Condition="false" ID="Iron Mine" Exact="false" />
+      <Building Condition="false" ID="Silk Weaver I" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building Condition="false" ID="Iron Mine" Exact="false" />
+      <Building Condition="false" ID="Silk Weaver I" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="6" />
+    <Capability Name="Noble Unrest" Level="10" />
+    <Capability Name="Produce Bronze" Level="1" />
+  </Building>
+  <Building ID="Tin And Copper Foundry" MaxNumber="2" InSettlement="false" Upgrades="Tin And Copper Mine" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="6000" SackValue="2250" MinTurns="3" Upkeep="0" CardIcon="G_TechIcon_BronzeMaking_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="300" />
+    </Requirements>
+    <StaticRequirements>
+      <Building Condition="false" ID="Iron Mine" Exact="false" />
+      <Building Condition="false" ID="Silk Weaver I" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="12" />
+    <Capability Name="Noble Unrest" Level="20" />
+    <Capability Name="Produce Bronze" Level="3" />
+  </Building>
+  <Building ID="Large Tin And Copper Foundry" MaxNumber="1" InSettlement="false" Upgrades="Tin And Copper Foundry">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="9000" SackValue="2750" MinTurns="6" Upkeep="0" CardIcon="G_TechIcon_BronzeMaking_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Terrain ID="Mountains" Condition="true" Adjacent="true" />
+    </Requirements>
+    <StaticRequirements>
+      <Building Condition="false" ID="Iron Mine" Exact="false" />
+      <Building Condition="false" ID="Silk Weaver I" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="24" />
+    <Capability Name="Noble Unrest" Level="40" />
+    <Capability Name="Produce Bronze" Level="6" />
+  </Building>
+  <!--Iron Foundries: needs desc-->
+  <Building ID="Iron Mine" MaxNumber="3" InSettlement="false" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="4000" SackValue="1500" MinTurns="2" Upkeep="0" CardIcon="G_TechIcon_IronCasting_01" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="375" />
+      <Tech Item="Iron Casting" />
+      <!--Terrain -->
+      <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="true" Adjacent="false" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Forest" Condition="true" Adjacent="true" />
+      <RequireEither>
+        <Terrain ID="Navigable River" Condition="true" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Condition="true" Adjacent="true" />
+        <TerrainAttribute Require="AllowAdjacentPort" Condition="true" Adjacent="true" />
+        <TerrainAttribute Require="IrrigationSource" Condition="true" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Condition="true" Adjacent="false" />
+        <TerrainAttribute Require="AllowAdjacentPort" Condition="true" Adjacent="false" />
+        <TerrainAttribute Require="IrrigationSource" Condition="true" Adjacent="false" />
+      </RequireEither>
+      <Terrain ID="Fertile Plain" Condition="false" Adjacent="false" />
+      <Terrain ID="Grassland" Condition="false" Adjacent="false" />
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+      <Building Condition="false" ID="Tin And Copper Mine" Exact="false" />
+      <Building Condition="false" ID="Silk Weaver I" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building Condition="false" ID="Tin And Copper Mine" Exact="false" />
+      <Building Condition="false" ID="Silk Weaver I" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="8" />
+    <Capability Name="Noble Unrest" Level="12" />
+    <Capability Name="Produce Iron" Level="1" />
+  </Building>
+  <Building ID="Iron Foundry" MaxNumber="2" InSettlement="false" Upgrades="Iron Mine">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="8000" SackValue="2500" MinTurns="4" Upkeep="0" CardIcon="G_TechIcon_IronCasting_01" CardMinorIcon="G_Icon12x12_Armorer_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Tech Item="Malleable Cast Iron" />
+    </Requirements>
+    <StaticRequirements>
+      <Building Condition="false" ID="Tin And Copper Mine" Exact="false" />
+      <Building Condition="false" ID="Silk Weaver I" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="16" />
+    <Capability Name="Noble Unrest" Level="24" />
+    <Capability Name="Produce Iron" Level="3" />
+  </Building>
+  <Building ID="Large Iron Foundry" MaxNumber="1" InSettlement="false" Upgrades="Iron Foundry">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseFoundry_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAFoundry_Lvl2" />
+    </Model>
+    <Construction Cost="12000" SackValue="3500" MinTurns="7" Upkeep="0" CardIcon="G_TechIcon_IronCasting_01" CardMinorIcon="G_Icon12x12_Armorer_01" />
+    <Requirements>
+      <Population Num="525" />
+      <Tech Item="Steel" />
+      <Terrain ID="Mountains" Condition="true" Adjacent="true" />
+    </Requirements>
+    <StaticRequirements>
+      <Building Condition="false" ID="Tin And Copper Mine" Exact="false" />
+      <Building Condition="false" ID="Silk Weaver I" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="32" />
+    <Capability Name="Noble Unrest" Level="48" />
+    <Capability Name="Produce Iron" Level="6" />
+  </Building>
+  <!-- Gold Mines needs desc-->
+  <Building ID="Gold Scrape" InSettlement="false" MaxNumber="3" Tags="Mine" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseMineGold_Lvl1" />
+    </Model>
+    <Construction Cost="5000" SackValue="2250" MinTurns="1" Upkeep="0" Military="true" CardIcon="G_ExtConstruct_MineGold_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="225" />
+      <!--Terrain -->
+      <MapResource Type="Gold" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Jade Scrape" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="3" />
+    <Capability Name="Noble Happiness" Level="4" />
+    <Capability Name="Mine Income" Level="350" />
+    <Capability Name="Recruit Regulars Ranged" Level="1" />
+  </Building>
+  <Building ID="Gold Mine" InSettlement="false" Upgrades="Gold Scrape" MaxNumber="2" Tags="Mine" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseMineGold_Lvl2" />
+    </Model>
+    <Construction Cost="10000" SackValue="4500" MinTurns="2" Upkeep="0" Military="true" CardIcon="G_ExtConstruct_MineGold_Lvl2_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="375" />
+      <Tech Item="Churn Drill" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="6" />
+    <Capability Name="Noble Happiness" Level="8" />
+    <Capability Name="Mine Income" Level="750" />
+    <Capability Name="Recruit Regulars Melee Short" Level="1" />
+    <Capability Name="Recruit Regulars Melee Long" Level="1" />
+    <Capability Name="Recruit Regulars Ranged" Level="2" />
+    <Capability Name="Recruit Regulars Ranged Crossbow" Level="1" />
+    <Capability Name="Recruit Regulars Cavalry" Level="1" />
+  </Building>
+  <Building ID="Large Gold Mine" InSettlement="false" Upgrades="Gold Mine" MaxNumber="1" Tags="Mine" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseMineGold_Lvl3" />
+    </Model>
+    <Construction Cost="20000" SackValue="7500" MinTurns="3" Upkeep="0" Military="true" CardIcon="G_ExtConstruct_MineGold_Lvl3_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Tech Item="Mine Ventilation" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="12" />
+    <Capability Name="Noble Happiness" Level="16" />
+    <Capability Name="Mine Income" Level="1500" />
+    <Capability Name="Recruit Regulars Melee Short" Level="2" />
+    <Capability Name="Recruit Regulars Melee Long" Level="2" />
+    <Capability Name="Recruit Regulars Hybrid" Level="1" />
+    <Capability Name="Recruit Regulars Ranged" Level="3" />
+    <Capability Name="Recruit Regulars Ranged Crossbow" Level="2" />
+    <Capability Name="Recruit Regulars Ranged Crossbow Alt" Level="1" />
+    <Capability Name="Recruit Regulars Cavalry" Level="2" />
+  </Building>
+  <!-- Jade Mines needs desc -->
+  <Building ID="Jade Scrape" InSettlement="false" MaxNumber="3" Tags="Mine" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseMineJade_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="1500" MinTurns="1" Upkeep="0" Military="false" CardIcon="G_ExtConstruct_MineJade_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Tech Item="Jade Working" />
+      <!-- Terrain -->
+      <MapResource Type="Jade" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Gold Scrape" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="4" />
+    <Capability Name="Noble Happiness" Level="4" />
+    <Capability Name="Produce Jade" Level="3" />
+    <Capability Name="Recruit Guards Ranged" Level="1" />
+  </Building>
+  <Building ID="Jade Mine" InSettlement="false" Upgrades="Jade Scrape" MaxNumber="2" Tags="Mine" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseMineJade_Lvl2" />
+    </Model>
+    <Construction Cost="10000" SackValue="3000" MinTurns="2" Upkeep="0" Military="false" CardIcon="G_ExtConstruct_MineJade_Lvl2_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Churn Drill" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="8" />
+    <Capability Name="Noble Happiness" Level="8" />
+    <Capability Name="Produce Jade" Level="6" />
+    <Capability Name="Recruit Guards Melee Short" Level="1" />
+    <Capability Name="Recruit Guards Melee Long" Level="1" />
+    <Capability Name="Recruit Guards Ranged" Level="2" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="1" />
+    <Capability Name="Recruit Guards Cavalry" Level="1" />
+  </Building>
+  <Building ID="Large Jade Mine" InSettlement="false" Upgrades="Jade Mine" MaxNumber="1" Tags="Mine" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseMineJade_Lvl3" />
+    </Model>
+    <Construction Cost="14000" SackValue="6000" MinTurns="3" Upkeep="0" Military="false" CardIcon="G_ExtConstruct_MineJade_Lvl3_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="750" />
+      <Tech Item="Mine Ventilation" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Trading City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="16" />
+    <Capability Name="Noble Happiness" Level="16" />
+    <Capability Name="Produce Jade" Level="9" />
+    <Capability Name="Recruit Guards Melee Short" Level="2" />
+    <Capability Name="Recruit Guards Melee Long" Level="2" />
+    <Capability Name="Recruit Guards Hybrid" Level="1" />
+    <Capability Name="Recruit Guards Ranged" Level="3" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="2" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="1" />
+    <Capability Name="Recruit Guards Cavalry" Level="2" />
+  </Building>
+  <!--Military Buildings needs desc-->
+  <Building ID="Outpost" InSettlement="false" MaxNumber="1" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseHorseStud_Lvl1" />
+    </Model>
+    <Construction Cost="2000" SackValue="100" MinTurns="0" Upkeep="150" Military="true" CardIcon="G_TechIcon_MilitaryArchitecture_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="150" />
+      <Tech Item="Military Drill" />
+      <Building ID="Town" Condition="true" Exact="false" />
+      <!-- Terrain -->
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+      <RequireEither>
+        <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+        <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+        <Terrain ID="Plateau" Condition="true" Adjacent="true" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="5" />
+    <Capability Name="Suppress Nobles" Level="2" />
+    <Capability Name="Recruit Militia" Level="1" />
+    <Capability Name="Increase Internal Trade" Level="3" />
+    <Capability Name="Increase Tax" Level="-2" />
+  </Building>
+  <Building ID="Training Grounds" InSettlement="false" Upgrades="Outpost" MaxNumber="1" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseHorseStud_Lvl1" />
+    </Model>
+    <Construction Cost="4000" SackValue="250" MinTurns="1" Upkeep="300" Military="true" CardIcon="G_TechIcon_MilitaryTheory_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="350" />
+      <Tech Item="Military Drill" />
+      <RequireEither>
+        <Building ID="Fortified City" Condition="true" Exact="false" />
+        <Building ID="Huge City" Condition="true" Exact="false" />
+        <Building ID="Large Trading City" Condition="true" Exact="false" />
+      </RequireEither>
+      <!-- Terrain -->
+      <Terrain ID="Forest" Condition="true" Adjacent="true" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="10" />
+    <Capability Name="Suppress Nobles" Level="4" />
+    <Capability Name="Recruit Militia" Level="2" />
+    <Capability Name="Increase Internal Trade" Level="-6" />
+    <Capability Name="Increase Tax" Level="-4" />
+  </Building>
+  <!-- Ports needs desc-->
+  <Building ID="Port I" InSettlement="false" MaxNumber="1" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChinesePort_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAPort_Lvl1" />
+      <ShorePlacement FixedHeight="8.2" Parameter="2" />
+    </Model>
+    <Construction Cost="3000" SackValue="1000" MinTurns="0" Upkeep="125" Military="false" CardIcon="G_ExtConstruct_Port_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Tech Item="Ship Building" />
+      <RequireEither>
+        <RequireAll>
+          <Population Num="200" />
+          <Building ID="Trading City" Exact="false" />
+        </RequireAll>
+        <RequireAll>
+          <Population Num="750" />
+          <Building ID="Huge City" Exact="false" />
+        </RequireAll>
+      </RequireEither>
+      <!-- Terrain -->
+      <Terrain ID="Forest" Condition="false" Adjacent="true" />
+      <RequireEither>
+        <Terrain ID="Navigable River" />
+        <Terrain ID="Coastal" />
+      </RequireEither>
+      <TerrainAttribute Require="AllowAdjacentPort" Adjacent="true" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="4" />
+    <Capability Name="Noble Unrest" Level="4" />
+    <Capability Name="Water Trade Distance" Level="50" />
+  </Building>
+  <Building ID="Port II" Upgrades="Port I" InSettlement="false" MaxNumber="1" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChinesePort_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAPort_Lvl2" />
+      <ShorePlacement FixedHeight="8.2" Parameter="2" />
+    </Model>
+    <Construction Cost="6000" SackValue="2500" MinTurns="1" Upkeep="250" Military="false" CardIcon="G_ExtConstruct_Port_Lvl2_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Tech Item="Dock" />
+      <RequireEither>
+        <RequireAll>
+          <Population Num="300" />
+          <Building ID="Trading City" Exact="false" />
+        </RequireAll>
+        <RequireAll>
+          <Population Num="1000" />
+          <Building ID="Metropolitan City" Exact="false" />
+        </RequireAll>
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="8" />
+    <Capability Name="Noble Unrest" Level="8" />
+    <Capability Name="Water Trade Distance" Level="100" />
+  </Building>
+  <Building ID="Port III" Upgrades="Port II" InSettlement="false" MaxNumber="1" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChinesePort_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAPort_Lvl3" />
+      <ShorePlacement FixedHeight="8.2" Parameter="2" />
+    </Model>
+    <Construction Cost="9000" SackValue="4000" MinTurns="2" Upkeep="500" Military="false" CardIcon="G_ExtConstruct_Port_Lvl3_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Tech Item="Large Dock" />
+      <RequireEither>
+        <RequireAll>
+          <Population Num="500" />
+          <Building ID="Large Trading City" Exact="false" />
+        </RequireAll>
+        <RequireAll>
+          <Population Num="1250" />
+          <Building ID="Large Metropolitan City" Exact="false" />
+        </RequireAll>
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="16" />
+    <Capability Name="Noble Unrest" Level="16" />
+    <Capability Name="Water Trade Distance" Level="150" />
+  </Building>
+  <!-- Ship Yards desc done-->
+  <Building ID="Shipyard I" InSettlement="false" MaxNumber="1" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseShipyard_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAShipyard_Lvl1" />
+      <ShorePlacement FixedHeight="8.2" Parameter="2" />
+    </Model>
+    <Construction Cost="3500" SackValue="-100" MinTurns="1" Upkeep="250" Military="true" CardIcon="G_ExtConstruct_Shipyard_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="300" />
+      <Tech Item="Shipyard" />
+      <Building ID="Port I" Condition="true" Exact="false" />
+      <Building ID="Fortified City" Condition="true" Exact="false" />
+      <!-- Terrain -->
+      <Terrain ID="Forest" Condition="true" Adjacent="true" />
+      <TerrainAttribute Require="AllowAdjacentPort" Adjacent="true" />
+      <RequireEither>
+        <Terrain ID="Navigable River" />
+        <Terrain ID="Coastal" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="12" />
+    <Capability Name="Noble Unrest" Level="6" />
+    <Capability Name="Recruit Naval" Level="1" />
+  </Building>
+  <Building ID="Shipyard II" Upgrades="Shipyard I" InSettlement="false" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseShipyard_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAShipyard_Lvl2" />
+      <ShorePlacement FixedHeight="8.2" Parameter="2" />
+    </Model>
+    <Construction Cost="7000" SackValue="-200" MinTurns="2" Upkeep="500" Military="true" CardIcon="G_ExtConstruct_Shipyard_Lvl2_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Tech Item="Large Shipyard" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+      <Building ID="Fortification II" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="24" />
+    <Capability Name="Noble Unrest" Level="12" />
+    <Capability Name="Recruit Naval" Level="3" />
+  </Building>
+  <Building ID="Shipyard III" Upgrades="Shipyard II" InSettlement="false" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseShipyard_Lvl3" />
+      <ShorePlacement FixedHeight="8.2" Parameter="2" />
+    </Model>
+    <Construction Cost="11500" SackValue="-300" MinTurns="3" Upkeep="750" Military="true" CardIcon="G_ExtConstruct_Shipyard_Lvl3_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Wharf" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+      <Building ID="Fortification III" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="48" />
+    <Capability Name="Noble Unrest" Level="24" />
+    <Capability Name="Recruit Naval" Level="6" />
+  </Building>
+  <!-- Temples and stuff needs desc-->
+  <Building ID="Shrine I" InSettlement="false" MaxNumber="8" Tags="Religious" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseShrine_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAShrine_Lvl1" />
+    </Model>
+    <Construction Cost="1000" SackValue="200" MinTurns="0" Upkeep="100" Military="false" CardIcon="G_ExtConstruct_Shrine_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="250" />
+      <RequireEither>
+        <Terrain ID="Mountains" Condition="true" Adjacent="false" />
+        <Terrain ID="Plateau" Condition="true" Adjacent="false" />
+      </RequireEither>
+      <RequireEither>
+        <RequireAll>
+          <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+          <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+        </RequireAll>
+        <RequireAll>
+          <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+          <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+        </RequireAll>
+      </RequireEither>
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="4" />
+    <Capability Name="Noble Happiness" Level="2" />
+  </Building>
+  <Building ID="Shrine II" InSettlement="false" MaxNumber="5" Upgrades="Shrine I" Tags="Religious" AllowedForHorde="true">
+    <Model SlotSize="2">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseShrine_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAShrine_Lvl2" />
+    </Model>
+    <Construction Cost="1000" SackValue="400" MinTurns="0" Upkeep="200" Military="false" CardIcon="G_ExtConstruct_Shrine_Lvl2_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="350" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="8" />
+    <Capability Name="Noble Happiness" Level="4" />
+    <Capability Name="Produce Pilgrims" Level="1" />
+  </Building>
+  <Building ID="Shrine III" InSettlement="false" MaxNumber="3" Upgrades="Shrine II" Tags="Religious" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseShrine_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAShrine_Lvl3" />
+
+    </Model>
+    <Construction Cost="2000" SackValue="600" MinTurns="1" Upkeep="300" Military="false" CardIcon="G_ExtConstruct_Shrine_Lvl3_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="450" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="16" />
+    <Capability Name="Noble Happiness" Level="8" />
+    <Capability Name="Produce Pilgrims" Level="2" />
+    <Capability Name="Culture VP" Level="1" />
+  </Building>
+  <!-- Pavilions needs desc-->
+  <Building ID="Pavilion I" InSettlement="false" MaxNumber="3" AllowedForHorde="true">
+    <Model SlotSize="2">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChinesePavillion_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAPavillion_Lvl1" />
+    </Model>
+    <Construction Cost="1500" SackValue="250" MinTurns="1" Upkeep="150" Military="false" CardIcon="G_ExtConstruct_Pavillion_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="250" />
+      <TerrainAttribute Condition="false" Require="Farmland" Adjacent="false" />
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Plateau" Condition="false" Adjacent="false" />
+      <Terrain ID="Sand" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+      <Terrain ID="Forest" Condition="false" Adjacent="true" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+      <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+      <Terrain ID="Sand" Condition="false" Adjacent="true" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="true" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="true" />
+      <Terrain ID="Sea" Condition="false" Adjacent="true" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="true" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="true" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="3" />
+    <Capability Name="Noble Happiness" Level="6" />
+  </Building>
+  <Building ID="Pavilion II" InSettlement="false" MaxNumber="3" Upgrades="Pavilion I" AllowedForHorde="true">
+    <Model SlotSize="4">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChinesePavillion_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAPavillion_Lvl2" />
+    </Model>
+    <Construction Cost="3000" SackValue="500" MinTurns="3" Upkeep="300" Military="false" CardIcon="G_ExtConstruct_Pavillion_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="500" />
+      <TerrainAttribute Condition="false" Require="Farmland" Adjacent="true" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="6" />
+    <Capability Name="Noble Happiness" Level="12" />
+    <Capability Name="Culture VP" Level="1" />
+  </Building>
+  <!-- Monastary needs desc-->
+  <Building ID="Monastery I" InSettlement="false" MaxNumber="2" Tags="Religious" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseMonastery_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAMonastery_Lvl1" />
+    </Model>
+    <Construction Cost="2000" SackValue="375" MinTurns="1" Upkeep="200" Military="false" CardIcon="G_ExtConstruct_Monastory_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="400" />
+      <!-- Terrain -->
+      <RequireEither>
+        <Terrain ID="Mountains" Condition="true" Adjacent="false" />
+        <Terrain ID="Plateau" Condition="true" Adjacent="false" />
+      </RequireEither>
+      <RequireEither>
+        <RequireAll>
+          <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+          <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+        </RequireAll>
+        <RequireAll>
+          <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+          <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+        </RequireAll>
+      </RequireEither>
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+      <!-- <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="true" Adjacent="true" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+      <TerrainAttribute Condition="false" Require="Farmland" Adjacent="true" /> -->
+    </Requirements>
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Peasant Happiness" Level="10" />
+  </Building>
+  <Building ID="Monastery II" InSettlement="false" MaxNumber="2" Tags="Religious" Upgrades="Monastery I" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseMonastery_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_CAMonastery_Lvl1" />
+    </Model>
+    <Construction Cost="4000" SackValue="750" MinTurns="3" Upkeep="400" Military="false" CardIcon="G_ExtConstruct_Monastory_Lvl1_01" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="800" />
+      <RequireEither>
+        <Terrain ID="Grassland" Condition="true" Adjacent="true" />
+        <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />
+      </RequireEither>
+      <Terrain ID="Steep Hills" Condition="true" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="true" Adjacent="false" />
+      <TerrainAttribute Condition="false" Require="Farmland" Adjacent="true" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="20" />
+    <Capability Name="Noble Happiness" Level="20" />
+    <Capability Name="Culture VP" Level="1" />
+  </Building> <!--    Theaters    Needs Description 
+  25k to fully upgrade-->
+  <!--Peasant Happiness:450 Noble Happiness:300-->
+
+  <Building ID="Theatre" InSettlement="false" MaxNumber="3">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTheater_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CATheater_Lv1" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="1" Upkeep="500" CardIcon="G_BuildingIcon_TheatreLvl1_01" CardMinorIcon="G_Icon12x12_Theatre_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Tech Item="Theatre" />
+      <Tech Item="Yin and Yang" />
+      <Building ID="City" Condition="true" Exact="false" />
+      <TerrainAttribute Condition="true" Require="Farmland" Adjacent="false" />
+      <Terrain ID="Forest" Condition="false" Adjacent="false" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="false" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="false" />
+      <Terrain ID="Plateau" Condition="false" Adjacent="false" />
+      <Terrain ID="Sand" Condition="false" Adjacent="false" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="false" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="false" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="false" />
+      <Terrain ID="Sea" Condition="false" Adjacent="false" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="false" />
+      <Terrain ID="Forest" Condition="false" Adjacent="true" />
+      <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+      <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+      <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+      <Terrain ID="Sand" Condition="false" Adjacent="true" />
+      <Terrain ID="Navigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Unnavigable River" Condition="false" Adjacent="true" />
+      <Terrain ID="Unnavigable Lake" Condition="false" Adjacent="true" />
+      <Terrain ID="Coastal" Condition="false" Adjacent="true" />
+      <Terrain ID="Sea" Condition="false" Adjacent="true" />
+      <Terrain ID="Ocean" Condition="false" Adjacent="true" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="22" />
+    <Capability Name="Noble Happiness" Level="15" />
+    <Capability Name="Culture VP" Level="2" />
+  </Building>
+  <Building ID="Amphitheatre" InSettlement="false" Upgrades="Theatre" MaxNumber="2">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTheater_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CATheater_Lv1" />
+    </Model>
+    <Construction Cost="15000" SackValue="3750" MinTurns="3" Upkeep="1000" CardIcon="G_BuildingIcon_TheatreLvl1_01" CardMinorIcon="G_Icon12x12_Theatre_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="The Five Elements" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="45" />
+    <Capability Name="Noble Happiness" Level="30" />
+    <Capability Name="Culture VP" Level="4" />
+  </Building>
+  <Building ID="Large Amphitheatre" InSettlement="false" Upgrades="Amphitheatre" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTheater_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CATheater_Lv1" />
+    </Model>
+    <Construction Cost="15000" SackValue="3750" MinTurns="3" Upkeep="1000" CardIcon="G_BuildingIcon_TheatreLvl1_01" CardMinorIcon="G_Icon12x12_Theatre_01" />
+    <Requirements>
+      <Population Num="1000" />
+      <Tech Item="The Five Elements" />
+      <Building ID="Huge City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="45" />
+    <Capability Name="Noble Happiness" Level="30" />
+    <Capability Name="Culture VP" Level="4" />
+  </Building>
+  <!-- End of Theaters-->
+</Root>

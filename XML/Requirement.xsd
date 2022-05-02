@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!--Base class for requirements. -->
+	<xs:complexType name="Requirement" abstract="true">
+	</xs:complexType>
+
+	<!--A list of requirements. Note this is itself a requirement
+		that requires all the contained requirements to be met -->
+	<xs:complexType name="RequirementList">
+		<xs:complexContent>
+			<xs:extension base="oe:Requirement">
+				<xs:group ref="oe:RequirementGroup" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Requires that one of the two requirements be true. Either requirement may be a list-->
+	<xs:complexType name="RequirementAlternative">
+		<xs:complexContent>
+			<xs:extension base="oe:Requirement">
+				<xs:sequence>
+					<xs:choice>
+						<xs:group ref="oe:RequirementGroup" minOccurs ="2" maxOccurs="unbounded"/>
+					</xs:choice>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Base type for requirements that can be required to not be true-->
+	<xs:complexType name="ReversableRequirement">
+		<xs:complexContent>
+			<xs:extension base="oe:Requirement">
+				<xs:attribute name="Condition" type="xs:boolean" default="true" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!--Requirement that a facility exist in the colong-->
+	<xs:complexType name="RequireBuilding">
+		<xs:complexContent>
+			<xs:extension base="oe:ReversableRequirement">
+				<xs:attribute name="ID" type="xs:string" use="required"/>
+				<xs:attribute name="Number" type="xs:nonNegativeInteger" use="optional"/>
+        <xs:attribute name="Condition" type="xs:boolean" use="optional"/>
+        <xs:attribute name="Exact" type="xs:boolean" use="optional"/>
+        <xs:attribute name="UpgradeLevel" type="xs:nonNegativeInteger" use="optional"/>
+      </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+  <!-- Requires a player to be of a particular faction -->
+	<xs:complexType name ="RequireFaction">
+		<xs:annotation >
+			<xs:documentation>Requires the player to be of the given faction.</xs:documentation> 
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="oe:ReversableRequirement">
+				<xs:attribute name="ID" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+  <!-- Requires the player to be the colony founder -->
+  <xs:complexType name ="RequireFounder">
+    <xs:annotation >
+      <xs:documentation>Requires the player to be the colony founder.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Requirement that can never be met. Useful for marking special unbuildable types -->
+  <xs:complexType name ="RequireNever">
+    <xs:complexContent>
+      <xs:extension base="oe:Requirement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <!-- Require a Player to have a particular level in a  capability-->
+  <xs:complexType name ="RequirePlayerCapability">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Name" type="xs:string" use="required"/>
+        <xs:attribute name="Level" type="xs:int" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Requires a player posses a certain technology -->
+  <xs:complexType name ="RequireTech">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Item" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Requires a player posses a certain number of technologies of the given era or better -->
+  <xs:complexType name ="RequireNumTechs">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Num" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="Era" type="xs:nonNegativeInteger" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <!-- Requires a player has issued a certain edict -->
+  <xs:complexType name ="RequireEdict">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Item" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <!-- Requires that certain terrain be in or adjacent to a hex -->
+  <xs:complexType name ="RequireTerrain">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="ID" type="xs:string" use="required"/>
+        <xs:attribute name="Adjacent" type="xs:boolean" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Requires that terrain with a particular attribute be in or adjacent to a hex -->
+  <xs:simpleType name="TerrainAttribute">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Farmland"/>
+      <xs:enumeration value="IrrigationSource"/>
+      <xs:enumeration value ="AllowAdjacentPort"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name ="RequireTerrainAttribute">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Require" type="oe:TerrainAttribute" use="required"/>
+        <xs:attribute name="Adjacent" type="xs:boolean" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name ="RequireHeightmapPlacementDot">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="R" type="xs:int" use="required"/>
+        <xs:attribute name="G" type="xs:int" use="required"/>
+        <xs:attribute name="B" type="xs:int" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="RequirePopulation">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Num" type="xs:int" use="required"/>
+      </xs:extension> 
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireMapResource">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireTradeItem">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireEra">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Value" type="xs:nonNegativeInteger" use="required"/>
+        <xs:attribute name="Exact" type="xs:boolean" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Requires a player faction to have a certain tag -->
+  <xs:complexType name ="RequireFactionTag">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Tag" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name ="RequireOnwardTradePossible">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireSettlementWithDisasterEffects">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireCapitalCanBeRelocated">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireHordeSettlement">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireCanConvertToHorde">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="RequireFactionLeaderInCapital">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireArchitecture">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Style" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireCityArchitecture">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Style" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireSuccessionCrisis">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireScriptEventTriggered">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Event" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireControlSettlementAt">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="X" type="xs:int" use="required"/>
+        <xs:attribute name="Y" type="xs:int" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RequireControlNumSettlements">
+    <xs:complexContent>
+      <xs:extension base="oe:ReversableRequirement">
+        <xs:attribute name="Num" type="xs:int" use="required"/>
+        <xs:attribute name="Exact" type="xs:boolean" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:group name="RequirementGroup">
+		<xs:choice>
+			<xs:element name ="RequireAll" type ="oe:RequirementList"/>
+			<xs:element name ="RequireEither" type="oe:RequirementAlternative"/>
+			<xs:element name ="Building" type ="oe:RequireBuilding"/>
+			<xs:element name ="Faction" type="oe:RequireFaction"/>
+      <xs:element name ="Never" type ="oe:RequireNever"/>
+      <xs:element name ="PlayerCapability" type="oe:RequirePlayerCapability"/>
+      <xs:element name ="Tech" type="oe:RequireTech"/>
+      <xs:element name ="NumTechs" type="oe:RequireNumTechs"/>
+      <xs:element name ="Edict" type="oe:RequireEdict"/>
+      <xs:element name ="Founder" type="oe:RequireFounder"/>
+      <xs:element name="Terrain" type="oe:RequireTerrain"/>
+      <xs:element name="TerrainAttribute" type="oe:RequireTerrainAttribute"/>
+      <xs:element name="Population" type="oe:RequirePopulation"/>
+      <xs:element name="MapResource" type="oe:RequireMapResource"/>
+      <xs:element name="TradeItem" type="oe:RequireTradeItem"/>
+      <xs:element name="HeightmapPlacementDot" type ="oe:RequireHeightmapPlacementDot"/>
+      <xs:element name="Era" type ="oe:RequireEra"/>
+      <xs:element name ="FactionTag" type="oe:RequireFactionTag"/>
+      <xs:element name ="OnwardTradePossible" type="oe:RequireOnwardTradePossible"/>
+      <xs:element name ="SettlementWithDisasterUnrest" type="oe:RequireSettlementWithDisasterEffects"/>
+      <xs:element name ="CanRelocateCapital" type="oe:RequireCapitalCanBeRelocated"/>
+      <xs:element name ="HordeSettlement" type="oe:RequireHordeSettlement"/>
+      <xs:element name ="CanConvertToHorde" type="oe:RequireCanConvertToHorde"/>
+      <xs:element name ="FactionLeaderInCapital" type="oe:RequireFactionLeaderInCapital"/>
+      <xs:element name="Architecture" type="oe:RequireArchitecture"/>
+      <xs:element name="CityArchitecture" type="oe:RequireCityArchitecture"/>
+      <xs:element name="SuccessionCrisis" type="oe:RequireSuccessionCrisis"/>
+      <xs:element name="ScriptEventTriggered" type="oe:RequireScriptEventTriggered"/>
+      <xs:element name="UsingRoyalCourt" type="oe:ReversableRequirement"/>
+      <xs:element name="ControlSettlementAt" type="oe:RequireControlSettlementAt"/>
+      <xs:element name="ControlNumSettlements" type="oe:RequireControlNumSettlements"/>
+    </xs:choice>
+	</xs:group>
+
+</xs:schema>
+

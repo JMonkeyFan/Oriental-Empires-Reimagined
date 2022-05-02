@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UnitTypes xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires UnitType.xsd">
+
+  <!-- All cost and upkeep values after this will be modified by these percentages -->
+  <CostModifiers Recruitment="140" Upkeep="140" />
+
+  <!-- Artillery ///////////////////////////////////////////// -->
+  <!-- WS Small Trebuchet -->
+  <Unit ID="WS Small Trebuchet" NameTag="Small Trebuchet" Category="Artillery">
+    <Banners Main="OE_Banner_Missile" Mini="" />
+    <Card CardName="G_Stack_Type_SiegeTrebSmall_01" Class="Regular" />
+    <Recruitment Pool="Light Artillery" Cost="5000" Population="75" Upkeep="500" />
+    <Requirements>
+      <Building ID="Artillery Workshop I" Exact="false" />
+      <Tech Item="Stone Throwing Engine" />
+    </Requirements>
+    <MultiBlockFormation PaddingRear="2">
+      <Block Name="Engines" SpacingX="7" SpacingY="6" MaxCols="3" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Crew Name="LeftLoader" ElementIndex="1" AttachTo="Engines" Bone="bone_STT_Reload_Pos01_NS" Weight="1" />
+      <Crew Name="RightLoader" ElementIndex="2" AttachTo="Engines" Bone="bone_STT_Reload_Pos02_NS" Weight="1" />
+      <Crew Name="Puller1" ElementIndex="3" AttachTo="Engines" Bone="bone_STT_CrewPos01_NS" Weight="1" />
+      <Crew Name="Puller2" ElementIndex="4" AttachTo="Engines" Bone="bone_STT_CrewPos02_NS" Weight="1" />
+      <Block Name="Spare Crew" SpacingX="2" SpacingY="2" Forming="PoorlyFormed" MaxCols="20">
+        <Anchor AnchorBlock="0" EdgeRelativeY="true" YOffset="-1" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+        <Element Index="3" Weight="1" />
+        <Element Index="4" Weight="1" />
+      </Block>
+    </MultiBlockFormation>
+    <Combat Morale="Regular" />
+    <Element Number="3" Type="ArtilleryEngine" DestructionSound="SmallEngineDestroyed">
+      <Actor ModelName="S Traction Trebuchet" Role="Equipment" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="Light Engine" />
+      <Projectile AttachBone="bone_AttachedRock_NS" Ammo="STrebRock" Ammo2="STrebFlamingRock" Ammo3="STrebBomb" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="Trebuchet Loader Left" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="Trebuchet Loader Right" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller4" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller1" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Baggage Train" MovementUnit="WS Packed Artillery" />
+  </Unit>
+  <!-- WS Medium Trebuchet -->
+  <Unit ID="WS Medium Trebuchet" NameTag="Medium Trebuchet" Category="Artillery">
+    <Banners Main="OE_Banner_Missile" Mini="" />
+    <Card CardName="G_Stack_Type_SiegeTrebMed_01" Class="Regular" />
+    <Recruitment Pool="Medium Artillery" Cost="10000" Population="90" Upkeep="750" />
+    <Requirements>
+      <Building ID="Artillery Workshop II" Exact="false" />
+      <Tech Item="Crouching Tiger" />
+    </Requirements>
+    <MultiBlockFormation PaddingRear="2">
+      <Block Name="Engines" SpacingX="8" SpacingY="8" MaxCols="3" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Crew Name="LeftLoader" ElementIndex="1" AttachTo="Engines" Bone="bone_MTT_ReloadPos01_NS" Weight="1" />
+      <Crew Name="RightLoader" ElementIndex="2" AttachTo="Engines" Bone="bone_MTT_ReloadPos02_NS" Weight="1" />
+      <Crew Name="Puller1" ElementIndex="3" AttachTo="Engines" Bone="bone_MTT_CrewPos01_NS" Weight="1" />
+      <Crew Name="Puller2" ElementIndex="4" AttachTo="Engines" Bone="bone_MTT_CrewPos02_NS" Weight="1" />
+      <Crew Name="Puller3" ElementIndex="5" AttachTo="Engines" Bone="bone_MTT_CrewPos03_NS" Weight="1" />
+      <Crew Name="Puller4" ElementIndex="6" AttachTo="Engines" Bone="bone_MTT_CrewPos04_NS" Weight="1" />
+      <Block Name="Spare Crew" SpacingX="2" SpacingY="2" Forming="PoorlyFormed" MaxCols="20">
+        <Anchor AnchorBlock="0" EdgeRelativeY="true" YOffset="-4" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+        <Element Index="3" Weight="1" />
+        <Element Index="4" Weight="1" />
+        <Element Index="5" Weight="1" />
+        <Element Index="6" Weight="1" />
+      </Block>
+    </MultiBlockFormation>
+    <Combat Morale="Regular" />
+    <Element Number="3" Type="ArtilleryEngine" DestructionSound="SmallEngineDestroyed">
+      <Actor ModelName="M Traction Trebuchet" Role="Equipment" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="Heavy Engine" />
+      <Projectile AttachBone="bone_AttachedRock_NS" Ammo="MTrebRock" Ammo2="MTrebFlamingRock" Ammo3="MTrebBomb" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="Trebuchet Loader Left" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="Trebuchet Loader Right" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller2" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller1" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller4" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller3" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Baggage Train" MovementUnit="WS Packed Artillery" />
+  </Unit>
+  <!-- WS Large Trebuchet -->
+  <Unit ID="WS Large Trebuchet" NameTag="Large Trebuchet" Category="Artillery">
+    <Banners Main="OE_Banner_Missile" Mini="" />
+    <Card CardName="G_Stack_Type_SiegeTrebLarge_01" Class="Regular" />
+    <Recruitment Pool="Heavy Artillery" Cost="15000" Population="115" Upkeep="1000" />
+    <Requirements>
+      <Building ID="Artillery Workshop III" Exact="false" />
+      <Tech Item="Four Legged Engine" />
+    </Requirements>
+    <MultiBlockFormation PaddingRear="2">
+      <Block Name="Engines" SpacingX="8" SpacingY="9" MaxCols="3" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Crew Name="LeftLoader" ElementIndex="1" AttachTo="Engines" Bone="bone_LTT_ReloadPos02_NS" Weight="1" />
+      <Crew Name="RightLoader" ElementIndex="2" AttachTo="Engines" Bone="bone_LTT_ReloadPos01_NS" Weight="1" />
+      <Crew Name="Puller1" ElementIndex="3" AttachTo="Engines" Bone="bone_LTT_CrewPos01_NS" Weight="1" />
+      <Crew Name="Puller2" ElementIndex="3" AttachTo="Engines" Bone="bone_LTT_CrewPos02_NS" Weight="1" />
+      <Crew Name="Puller3" ElementIndex="4" AttachTo="Engines" Bone="bone_LTT_CrewPos03_NS" Weight="1" />
+      <Crew Name="Puller4" ElementIndex="4" AttachTo="Engines" Bone="bone_LTT_CrewPos04_NS" Weight="1" />
+      <Crew Name="Puller5" ElementIndex="5" AttachTo="Engines" Bone="bone_LTT_CrewPos05_NS" Weight="1" />
+      <Crew Name="Puller6" ElementIndex="5" AttachTo="Engines" Bone="bone_LTT_CrewPos06_NS" Weight="1" />
+      <Crew Name="Puller7" ElementIndex="6" AttachTo="Engines" Bone="bone_LTT_CrewPos07_NS" Weight="1" />
+      <Crew Name="Puller8" ElementIndex="6" AttachTo="Engines" Bone="bone_LTT_CrewPos08_NS" Weight="1" />
+      <Block Name="Spare Crew" SpacingX="2" SpacingY="2" Forming="PoorlyFormed" MaxCols="20">
+        <Anchor AnchorBlock="0" EdgeRelativeY="true" YOffset="-1" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+        <Element Index="3" Weight="1" />
+        <Element Index="4" Weight="1" />
+        <Element Index="5" Weight="1" />
+        <Element Index="6" Weight="1" />
+      </Block>
+    </MultiBlockFormation>
+    <Combat Morale="Regular" />
+    <Element Number="2" Type="ArtilleryEngine" DestructionSound="LargeEngineDestroyed">
+      <Actor ModelName="L Traction Trebuchet" Role="Equipment" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="Heavy Engine" />
+      <Projectile AttachBone="bone_AttachedRock_NS" Ammo="LTrebRock" Ammo2="LTrebFlamingRock" Ammo3="LTrebBomb" />
+    </Element>
+    <Element Number="4" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="Trebuchet Loader Left" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="4" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="Trebuchet Loader Right" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="4" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller2" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="4" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller1" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="4" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller4" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="4" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="RopePuller3" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Baggage Train" MovementUnit="WS Packed Artillery" />
+
+  </Unit>
+
+  <!-- IM Large Counterweight Trebuchet -->
+  <Unit ID="IM LCW Trebuchet" NameTag="Counterweight Trebuchet" Category="Artillery">
+    <Banners Main="OE_Banner_Missile" Mini="" />
+    <Card CardName="G_Stack_Type_SiegeTrebCW_01" Class="Regular" />
+    <Recruitment Pool="Heaviest Artillery" Cost="20000" Population="135" Upkeep="1250" />
+    <Requirements>
+      <Building ID="Artillery Workshop II" Exact="false" />
+      <Tech Item="Counterweight Trebuchet" />
+    </Requirements>
+    <MultiBlockFormation PaddingRear="2">
+      <Block Name="Engines" SpacingX="8" SpacingY="9" MaxCols="99" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Crew Name="LeftLoader" ElementIndex="1" AttachTo="Engines" Bone="bone_LCT_Reload_Pos02_NS" Weight="1" />
+      <Crew Name="RightLoader" ElementIndex="2" AttachTo="Engines" Bone="bone_LCT_Reload_Pos01_NS" Weight="1" />
+      <Crew Name="LeftWinder" ElementIndex="3" AttachTo="Engines" Bone="bone_LCT_CrewPos02_NS" Weight="1" />
+      <Crew Name="RightWinder" ElementIndex="4" AttachTo="Engines" Bone="bone_LCT_CrewPos01_NS" Weight="1" />
+      <Block Name="Spare Crew" SpacingX="2" SpacingY="2" Forming="PoorlyFormed" MaxCols="20">
+        <Anchor AnchorBlock="0" EdgeRelativeY="true" YOffset="-2" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+        <Element Index="3" Weight="1" />
+        <Element Index="4" Weight="1" />
+      </Block>
+    </MultiBlockFormation>
+    <Combat Morale="Regular" />
+    <Element Number="2" Type="ArtilleryEngine" DestructionSound="LargeEngineDestroyed">
+      <Actor ModelName="L Counterweight Trebuchet" Role="Equipment" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="Heavy Engine" />
+      <Projectile AttachBone="bone_AttachedRock_NS" Ammo="LCWTrebRock" Ammo2="LCWTrebFlamingRock" Ammo3="LCWTrebBomb" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="Trebuchet Loader Left" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="Trebuchet Loader Right" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="Trebuchet Winder Left" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="Trebuchet Winder Right" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Baggage Train" MovementUnit="WS Packed Artillery" />
+  </Unit>
+
+  <!-- WS Large Crossbow Ballista -->
+  <Unit ID="WS L Crossbow Ballista" NameTag="Large Crossbow Ballista" Category="Artillery">
+    <Banners Main="OE_Banner_Missile" Mini="" />
+    <Card CardName="G_Stack_Type_SiegeBallistaLarge_01" Class="Regular" />
+    <Recruitment Pool="Heavy Artillery" Cost="12500" Population="110" Upkeep="900" />
+    <Requirements>
+      <Building ID="Artillery Workshop II" Exact="false" />
+      <Tech Item="Triple Giant Crossbow" />
+    </Requirements>
+    <MultiBlockFormation PaddingRear="2">
+      <Block Name="Engines" SpacingX="8" SpacingY="9" MaxCols="99" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Crew Name="Loader" ElementIndex="1" AttachTo="Engines" Bone="bone_CrewReload_NS" Weight="1" />
+      <Crew Name="LeftWinder" ElementIndex="2" AttachTo="Engines" Bone="bone_CrewWindL_NS" Weight="1" />
+      <Crew Name="RightWinder" ElementIndex="3" AttachTo="Engines" Bone="bone_CrewWindR_NS" Weight="1" />
+      <Crew Name="Firer" ElementIndex="4" AttachTo="Engines" Bone="bone_CrewTrigger_NS" Weight="1" />
+      <Block Name="Spare Crew" SpacingX="2" SpacingY="2" Forming="PoorlyFormed" MaxCols="20">
+        <Anchor AnchorBlock="0" EdgeRelativeY="true" YOffset="-2" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+        <Element Index="3" Weight="1" />
+        <Element Index="4" Weight="1" />
+      </Block>
+    </MultiBlockFormation>
+    <Combat Morale="Regular" />
+    <Element Number="2" Type="ArtilleryEngine" DestructionSound="LargeEngineDestroyed">
+      <Actor ModelName="Ballista Crossbow L" Role="Equipment" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="Light Engine" />
+      <Projectile AttachBone="bone_Arrow_NS" Ammo="LBallistaBolt" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="L Ballista Loader" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="Trebuchet Winder Left" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="Trebuchet Winder Right" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="L Ballista Triggerman" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Baggage Train" MovementUnit="WS Packed Artillery" />
+  </Unit>
+
+  <!-- WS Small Crossbow Ballista -->
+  <Unit ID="WS S Crossbow Ballista" NameTag="Small Crossbow Ballista" Category="Artillery">
+    <Banners Main="OE_Banner_Missile" Mini="" />
+    <Card CardName="G_Stack_Type_SiegeBallistaSmall_01" Class="Regular" />
+    <Recruitment Pool="Medium Artillery" Cost="9000" Population="90" Upkeep="450" />
+    <Requirements>
+      <Building ID="Artillery Workshop I" Exact="false" />
+      <Tech Item="Giant Crossbow" />
+    </Requirements>
+    <MultiBlockFormation PaddingRear="2">
+      <Block Name="Engines" SpacingX="8" SpacingY="9" MaxCols="99" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Crew Name="Loader" ElementIndex="1" AttachTo="Engines" Bone="bone_MBallistaCrossbow_S_Crew02_NS" Weight="1" />
+      <Crew Name="Firer" ElementIndex="2" AttachTo="Engines" Bone="bone_MBallistaCrossbow_S_Crew01_NS" Weight="1" />
+      <Block Name="Spare Crew" SpacingX="2" SpacingY="2" Forming="PoorlyFormed" MaxCols="20">
+        <Anchor AnchorBlock="0" EdgeRelativeY="true" YOffset="-2" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+      </Block>
+    </MultiBlockFormation>
+    <Combat Morale="Regular" />
+    <Element Number="2" Type="ArtilleryEngine" DestructionSound="SmallEngineDestroyed">
+      <Actor ModelName="Ballista Crossbow S" Role="Equipment" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="Heavy Engine" />
+      <Projectile AttachBone="bone_MBallistaCrossbow_S_Bolt_NS" Ammo="SBallistaBolt" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="S Ballista Loader" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="S Ballista Triggerman" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Baggage Train" MovementUnit="WS Packed Artillery" />
+  </Unit>
+
+  <!-- IC Small Cannon -->
+  <Unit ID="IC Small Cannon" NameTag="Small Cannon" Category="Artillery">
+    <Banners Main="OE_Banner_Missile" Mini="" />
+    <Card CardName="G_Stack_Type_SiegeCannon_01" Class="Regular" />
+    <Recruitment Pool="Heaviest Artillery" Cost="22500" Population="175" Upkeep="1250" />
+    <Requirements>
+      <Building ID="Artillery Workshop III" Exact="false" />
+    </Requirements>
+    <MultiBlockFormation PaddingRear="2">
+      <Block Name="Engines" SpacingX="8" SpacingY="5" MaxCols="99" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Crew Name="Loader" ElementIndex="1" AttachTo="Engines" Bone="bone_CrewReloadPos_NS" Weight="1" />
+      <Crew Name="Rammer" ElementIndex="2" AttachTo="Engines" Bone="bone_CrewRamPos_NS" Weight="1" />
+      <Crew Name="Firer" ElementIndex="3" AttachTo="Engines" Bone="bone_CrewSetFirePos_NS" Weight="1" />
+      <Block Name="Spare Crew" SpacingX="2" SpacingY="2" Forming="PoorlyFormed" MaxCols="20">
+        <Anchor AnchorBlock="0" EdgeRelativeY="true" YOffset="-2" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+        <Element Index="3" Weight="1" />
+      </Block>
+    </MultiBlockFormation>
+    <Combat Morale="Regular" />
+    <Element Number="2" Type="ArtilleryEngine" DestructionSound="SmallEngineDestroyed">
+      <Actor ModelName="Small Cannon" Role="Equipment" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="Heavy Engine" />
+      <Projectile AttachBone="bone_CannonSmall_MountBullet_NS" Ammo="SCannonBall" Ammo2="SCannonShell" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="SCA Loader Right" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Cannon Rammer" AnimSet="SCA Ramming Man" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Cannon SetFire" AnimSet="SCA SetFire Man" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Baggage Train" MovementUnit="WS Packed Artillery" />
+  </Unit>
+
+  <!-- IC Multiple Rocket Launcher -->
+  <Unit ID="IC Hundred Tigers Launcher" NameTag="Hundred Tigers Launcher" Category="Artillery">
+    <Banners Main="OE_Banner_Missile" Mini="" />
+    <Card CardName="G_Stack_Type_Siege100Tigers_01" Class="Regular" />
+    <Recruitment Pool="Heaviest Artillery" Cost="25000" Population="200" Upkeep="1500" />
+    <Requirements>
+      <Building ID="Artillery Workshop II" Exact="false" />
+      <Tech Item="Hundred Tigers Launcher" />
+    </Requirements>
+    <MultiBlockFormation PaddingRear="2">
+      <Block Name="Engines" SpacingX="8" SpacingY="5" MaxCols="99" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Crew Name="Left Loader" ElementIndex="1" AttachTo="Engines" Bone="bone_CrewL_Reload_NS" Weight="1" />
+      <Crew Name="Right Loader" ElementIndex="2" AttachTo="Engines" Bone="bone_CrewR_Reload_NS" Weight="1" />
+      <Crew Name="Firer" ElementIndex="3" AttachTo="Engines" Bone="bone_CrewSetFire_NS" Weight="1" />
+      <Block Name="Spare Crew" SpacingX="2" SpacingY="2" Forming="PoorlyFormed" MaxCols="20">
+        <Anchor AnchorBlock="0" EdgeRelativeY="true" YOffset="-2" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+        <Element Index="3" Weight="1" />
+      </Block>
+    </MultiBlockFormation>
+    <Combat Morale="Regular" />
+    <Element Number="2" Type="ArtilleryEngine" DestructionSound="SmallEngineDestroyed">
+      <Actor ModelName="Box Rocket Launcher" Role="Equipment" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="Heavy Engine" />
+      <Projectile AttachBone="bone_MRL_body" Ammo="HundredTigersRocket" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="MRL Loader Left" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Loader" AnimSet="MRL Loader Right" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="3" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" AnimSet="MRL SetFire Man" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Baggage Train" MovementUnit="WS Packed Artillery" />
+  </Unit>
+
+  <!-- Moving Artillery -->
+  <!-- Generic card used for moving artillery units -->
+  <Unit ID="WS Packed Artillery" NameTag="Packed Artillery" Category="Artillery" NonCombat="true">
+    <Banners Main="OE_Banner_Missile" Mini="" />
+    <Card CardName="G_Stack_Type_Settler_01" Class="Levy" />
+    <Recruitment Pool="Heavy Artillery" Cost="15000" Population="125" Upkeep="600" />
+    <StaticRequirements>
+      <Never />
+    </StaticRequirements>
+    <MultiBlockFormation PaddingRear="2" PaddingSide="2">
+      <Block Name="Carts" SpacingX="2" SpacingY="10" MaxCols="1" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Block Name="Right Crew" SpacingX="1.5" SpacingY="2" MaxCols="2" Forming="Formed">
+        <Anchor AnchorBlock="0" EdgeRelativeX="true" XOffset="0.75" YOffset="0" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+        <Element Index="3" Weight="1" />
+        <Element Index="4" Weight="1" />
+        <Element Index="5" Weight="1" />
+        <Element Index="6" Weight="1" />
+        <Element Index="7" Weight="1" />
+        <Element Index="8" Weight="1" />
+      </Block>
+      <!--
+      <Block Name="Left Crew" SpacingX="1.5" SpacingY="2.5" MaxCols="2" Forming="PoorlyFormed">
+        <Anchor AnchorBlock="0" EdgeRelativeX="true" XOffset="-1" YOffset="-1"/>
+        <Element Index="1" Weight="1"/>
+        <Element Index="2" Weight="1"/>
+        <Element Index="3" Weight="1"/>
+        <Element Index="4" Weight="1"/>
+        <Element Index="5" Weight="1"/>
+        <Element Index="6" Weight="1"/>
+        <Element Index="7" Weight="1"/>
+        <Element Index="8" Weight="1"/> 
+      </Block>-->
+    </MultiBlockFormation>
+    <Combat Morale="Civilian" />
+    <Element Number="3" Type="Vehicle" DestructionSound="SmallEngineDestroyed">
+      <Actor ModelName="M_Cart2hB" Role="Vehicle" />
+      <Actor ModelName="Ox" Role="Draught" TargetBone="bone_OxPos1_NS" AttachBone="bone_Ox_Hip" />
+      <Actor ModelName="Ox" Role="Draught" TargetBone="bone_OxPos2_NS" AttachBone="bone_Ox_Hip" />
+      <!-- <Actor ModelName="WS Cart Driver" Role="Driver" TargetBone="bone_OxDriverPos_NS" AttachBone ="bone_hips" AnimSet="On Carrier Cart"/> -->
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="5" Type="Infantry">
+      <Actor ModelName="WS Artillery Crew" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Baggage Train" />
+  </Unit>
+
+
+</UnitTypes> 

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Root Element -->
+  <xs:element name ="Projectiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Projectile" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Firing">
+                <xs:complexType>
+                  <xs:attribute name="MaxRange" type="xs:float" use="required"/>
+                  <xs:attribute name="MinRange" type="xs:float" use="optional"/>
+                  <xs:attribute name="HalfFiringArcDegrees" type="xs:float" use="required"/>
+                  <xs:attribute name="AccuraryAngleDegrees" type="xs:float" use="required"/>
+                  <xs:attribute name="AccuracyRangePercent" type="xs:float" use="required"/>
+                  <xs:attribute name="LaunchAngleDegrees" type="xs:float" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <!-- This is used for projectiles that have a fixed firing velocity, and whose range is determined by varying the angle of elevation-->
+              <xs:element name="FiringVelocity" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="Velocity" type="xs:float" use="required"/>
+                  <xs:attribute name="MinFiringAngle" type="xs:float" use="required"/>
+                  <xs:attribute name="MaxFiringAngle" type="xs:float" use="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FiringSequence">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" use="required"/>
+                  <xs:attribute name="ReloadLoops" type="xs:int" use="optional"/>
+                  <xs:attribute name="Shots" type="xs:int" use="optional"/>
+                  <xs:attribute name="FiringDelay" type="xs:float" use="optional"/>
+                  <xs:attribute name="FireEffectPrefab" type="xs:string" use="optional"/>
+                  <xs:attribute name="FiringSound" type="xs:string" use="optional"/>
+                  <xs:attribute name="MissileSound" type="xs:string" use="optional"/>
+                  <xs:attribute name="ReloadSound" type="xs:string" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Damage">
+                <xs:complexType>
+                  <xs:attribute name="HitEffectPrefab" type="xs:string" use="optional"/>
+                  <xs:attribute name="Damage" type="xs:int" use="required"/>
+                  <xs:attribute name="APLevel" type="xs:int" use="optional"/>
+                  <xs:attribute name="TerrorFactor" type="xs:int" use="optional"/>
+                  <xs:attribute name="PoorVsArmor" type="xs:boolean" use="optional"/>
+                  <xs:attribute name="SoldierPiercing" type="xs:boolean" use="optional"/>
+                  <xs:attribute name="IgnoreSoldiersForCollision" type="xs:boolean" use="optional"/>
+                  <xs:attribute name="Sound" type="xs:string" use="optional"/>
+                  <xs:attribute name="KillBonusCapability" type="xs:string" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="BuildingDamage" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="HitEffectPrefab" type="xs:string" use="required"/>
+                  <xs:attribute name="Damage" type="xs:int" use="required"/>
+                  <xs:attribute name="FireDamage" type="xs:int" use="optional"/>
+                  <xs:attribute name="Sound" type="xs:string" use="required"/>
+                  <xs:attribute name="MaxHPCanDamage" type="xs:int" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Explosion" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name='EffectPrefab' type='xs:string' use='required'/>
+                  <xs:attribute name="Damage" type="xs:int" use="required"/>
+                  <xs:attribute name="Radius" type="xs:float" use="required"/>
+                  <xs:attribute name="Sound" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ID" type="xs:string" use="required"/>
+            <xs:attribute name="Prefab" type="xs:string" use="required"/>
+            <xs:attribute name="RequiredTech" type="xs:string" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation ="OrientalEmpires Settlements.xsd">
+
+ <!-- Architecture can be specified for 
+ SlotProxy, GeneralProxy and WallProxy
+ -->
+  
+  <!--  Architectures must be declared first -->
+  <Architecture ID ="Central Asian"/>
+
+  <!-- Central Asia people -->
+  <AmbientProxy Prefab="OE_CivilianCAPoorIdle_Proxy">
+    <Item Item="M Peasant CA Standing" Weight="1"/>
+    <Item Item="F Peasant CA Standing" Weight="1"/>
+  </AmbientProxy>
+
+<!-- Settlement Bases////////////////////////////////////////////////////////////// -->
+
+  <SettlementBase ID ="Base128_Flat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_128x128_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_128Flat_Mask"/>
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Default"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Southern China" Seasonal ="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Gobi Desert" Seasonal ="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Central Asia DLC" Seasonal ="false"/>
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Default"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Southern China" Seasonal ="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Gobi Desert" Seasonal="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Central Asia DLC" Seasonal="false"/>
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Southern China" Seasonal ="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Gobi Desert" Seasonal="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Central Asia DLC" Seasonal="false"/>
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID ="Base128_Flat_NoWalls" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_128x128_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_128Flat_NoWalls_Mask"/>
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default"/>
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Base_diff" Climate="Default"/>
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default"/>
+    </Mud>
+  </SettlementBase>
+  
+  <SettlementBase ID ="Base128_Moat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_128x128_Moat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_128Moat_Mask"/>
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Default"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Southern China" Seasonal ="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Gobi Desert" Seasonal ="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Central Asia DLC" Seasonal ="false"/>
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Default"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Southern China" Seasonal ="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Gobi Desert" Seasonal="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Central Asia DLC" Seasonal="false"/>
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Southern China" Seasonal ="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Gobi Desert" Seasonal="false"/>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Central Asia DLC" Seasonal="false"/>
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID ="Base160_Flat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_160x160_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_160Flat_Mask"/>
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Default"/>
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Default"/>
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default"/>
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID ="Base160_Flat_NoWalls" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_160x160_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_160Flat_NoWalls_Mask"/>
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Default"/>
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Default"/>
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Default"/>
+    </Mud>
+  </SettlementBase>
+  
+  <SettlementBase ID ="Base160_Moat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_160x160_Moat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_160Moat_Mask"/>
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Default"/>
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Default"/>
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default"/>
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID ="Base64_Flat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_96x96_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_64Flat_Mask"/>
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Default"/>
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Default"/>
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default"/>
+    </Mud>
+  </SettlementBase>
+	<SettlementBase ID ="Base64_Flat_NoWalls" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_96x96_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_64Flat_NoWalls_Mask"/>
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Default"/>
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Default"/>
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default"/>
+    </Mud>
+  </SettlementBase>
+  
+  <SettlementBase ID ="Base64_Moat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_96x96_Moat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_64Moat_Mask"/>
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Default"/>
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Default"/>
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default"/>
+    </Mud>
+  </SettlementBase>
+  
+  <!-- Wall Proxies ///////////////////////////////////////////////////////////////////-->
+  <WallProxy Prefab="OE_WallBrick_3m_Straight_Lvl1" PieceType="Wall">
+    
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_Straight_Lvl1" Level="2" TechLevel="0" 
+                 HitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_Straight_Breach_Lvl1" DestructionEffect="OE_P_BuildingCollapse_Large" DestructionSound="EarthWallCollapse"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_Straight_Lvl1" Level="3" TechLevel="0"
+                 HitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_Straight_Breach_Lvl1" DestructionEffect="OE_P_BuildingCollapse_Large" DestructionSound="EarthWallCollapse"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_Straight_Lvl1" Level="2" TechLevel="1"
+                 HitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_Straight_Breach_Lvl1" DestructionEffect="OE_P_BuildingCollapse_Large" DestructionSound="EarthWallCollapse"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_Straight_Lvl1" Level="3" TechLevel="1"
+                 HitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_Straight_Breach_Lvl1" DestructionEffect="OE_P_BuildingCollapse_Large" DestructionSound="EarthWallCollapse"/>
+				 
+  </WallProxy>
+  
+  <WallProxy Prefab ="OE_WallBrick_3m_NoBreach_Lvl1" PieceType="Tower">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_NoBreach_Lvl1" Level="2" TechLevel="0" />
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_NoBreach_Lvl1" Level="3" TechLevel="0" />
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_NoBreach_Lvl1" Level="2" TechLevel="1" />
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_NoBreach_Lvl1" Level="3" TechLevel="1" />
+  </WallProxy>
+  
+ <WallProxy Prefab ="OE_WallBrick_3m_TowerSmall_Lvl2" PieceType="Tower">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerSmall_Lvl1" Level="2" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerSmall_Damaged_Lvl1"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerSmall_Lvl2" Level="2" TechLevel="0" UpgradeLevel="1" HitPoints="100" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerSmall_Damaged_Lvl2"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerSmall_Lvl1" Level="3" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerSmall_Damaged_Lvl1" />
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerSmall_Lvl2" Level="3" TechLevel="0" UpgradeLevel="1" HitPoints="100" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerSmall_Damaged_Lvl2"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerSmall_Lvl1" Level="2" TechLevel="1" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerSmall_Damaged_Lvl1"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerSmall_Lvl2" Level="2" TechLevel="1" UpgradeLevel="1" HitPoints="100" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerSmall_Damaged_Lvl2"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerSmall_Lvl1" Level="3" TechLevel="1" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerSmall_Damaged_Lvl1"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerSmall_Lvl2" Level="3" TechLevel="1" UpgradeLevel="1" HitPoints="100" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerSmall_Damaged_Lvl2"/>
+  </WallProxy>
+  
+ <WallProxy Prefab ="OE_WallBrick_3m_TowerMed_Lvl2" PieceType="Tower">
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerMed_Lvl1" TechLevel="0" Level="2" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerMed_Damaged_Lvl1"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerMed_Lvl2" Level="2" TechLevel="0" UpgradeLevel="1" HitPoints="200" FireHitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerMed_Damaged_Lvl2"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerMed_Lvl1" TechLevel="0" Level="3" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerMed_Damaged_Lvl1"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerMed_Lvl2" Level="3" TechLevel="0" UpgradeLevel="1" HitPoints="200" FireHitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerMed_Damaged_Lvl2"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerMed_Lvl1" TechLevel="1" Level="2" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerMed_Damaged_Lvl1"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerMed_Lvl2" Level="2" TechLevel="1" UpgradeLevel="1" HitPoints="200" FireHitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerMed_Damaged_Lvl2"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerMed_Lvl1" TechLevel="1" Level="3" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerMed_Damaged_Lvl1"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerMed_Lvl2" Level="3" TechLevel="1" UpgradeLevel="1" HitPoints="200" FireHitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerMed_Damaged_Lvl2"/>
+ </WallProxy>
+ 
+  <WallProxy Prefab ="OE_WallBrick_3m_TowerLarge_Lvl2" PieceType="Tower">
+    <Replacement  Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerLarge_Lvl1" Level="2" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerLarge_Damaged_Lvl1"/>
+    <Replacement  Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerLarge_Lvl2" Level="2" TechLevel="0" UpgradeLevel="1" HitPoints="250" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_TowerLarge_Damaged_Lvl2"/>
+    <Replacement  Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerLarge_Lvl1" Level="3" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerLarge_Damaged_Lvl1"/>
+    <Replacement  Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerLarge_Lvl2" Level="3" TechLevel="0" UpgradeLevel="1" HitPoints="250" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_TowerLarge_Damaged_Lvl2"/>
+    <Replacement  Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerLarge_Lvl1" Level="2" TechLevel="1" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerLarge_Damaged_Lvl1"/>
+    <Replacement  Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerLarge_Lvl2" Level="2" TechLevel="1" UpgradeLevel="1" HitPoints="250" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_TowerLarge_Damaged_Lvl2"/>
+    <Replacement  Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerLarge_Lvl1" Level="3" TechLevel="1" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerLarge_Damaged_Lvl1"/>
+    <Replacement  Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerLarge_Lvl2" Level="3" TechLevel="1" UpgradeLevel="1" HitPoints="250" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_TowerLarge_Damaged_Lvl2"/>
+
+ </WallProxy>
+	
+  <WallProxy Prefab ="OE_WallBrick_3m_Gatehouse_Lvl2" PieceType="Gate">
+    <!-- <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_GateHouse_Lvl1" Level="1" TechLevel="0" HitPoints ="150" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_GateHouse_Lvl1_Damaged"/> -->
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_Gatehouse_Lvl1" Level="2" TechLevel="0" HitPoints ="300" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_Gatehouse_Damaged_Lvl1" />
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_Gatehouse_Lvl2" Level="2" TechLevel="0" UpgradeLevel="1" HitPoints ="300" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_3m_Gatehouse_Damaged_Lvl2"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_Gatehouse_Lvl1" Level="3" TechLevel="0" HitPoints ="400" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_Gatehouse_Damaged_Lvl1" />
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_Gatehouse_Lvl2" Level="3" TechLevel="0" UpgradeLevel="1" HitPoints ="400" FireHitPoints="600" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallSand_4m_Gatehouse_Damaged_Lvl2"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_Gatehouse_Lvl1" Level="2" TechLevel="1" HitPoints ="500" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_Gatehouse_Damaged_Lvl1"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_Gatehouse_Lvl2" Level="2" TechLevel="1" UpgradeLevel="1" HitPoints ="500" FireHitPoints="600" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_3m_Gatehouse_Damaged_Lvl2"/>
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_Gatehouse_Lvl1" Level="3" TechLevel="1" HitPoints ="600" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_Gatehouse_Damaged_Lvl1" />
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_Gatehouse_Lvl2" Level="3" TechLevel="1" UpgradeLevel="1" HitPoints ="600" FireHitPoints="600" DestroyedPrefab="Architecture/Walls/Prefabs/OE_CA_WallBrick_4m_Gatehouse_Damaged_Lvl2"/>
+  </WallProxy>
+ 
+  <!-- Slot Proxies -->
+  <SlotProxy Prefab="OE_SlotProxy_12m" Size ="1">
+	  <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_12m" Weight="1"/>
+	  <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_12m_V2" Weight="1"/>
+	  <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_12m_V3" Weight="1"/>
+  </SlotProxy>
+  
+  <SlotProxy Prefab="OE_SlotProxy_16m" Size ="2" >
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_16m" Weight="1"/>
+    <Filler Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_16m" Size="-1"/>
+  </SlotProxy>
+   <SlotProxy Prefab="OE_SlotProxy_16m_Temple" Size ="2" SpecialTemple ="true">
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_16m" Weight="1"/>
+	
+    <Filler Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_16m" Size="-1"/>
+  </SlotProxy>
+   <SlotProxy Prefab="OE_SlotProxy_16m_Palace" Size ="2" SpecialPalace ="true">
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_16m" Weight="1"/>
+    <Filler Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_16m" Size="-1"/>
+  </SlotProxy>
+  
+<SlotProxy Prefab="OE_SlotProxy_24m" Size ="3">
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_24m" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_24m_v2" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_24m_v3" Weight="1"/>
+
+	<Filler Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_24m"  Size="-1"/>
+</SlotProxy>
+
+  <SlotProxy Prefab="OE_SlotProxy_24m_Temple" Size ="3" SpecialTemple ="true">
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_24m" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_24m_v2" Weight="1"/>	
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_24m_v3" Weight="1"/>
+
+    <Filler Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_24m"  Size="-1"/>
+  </SlotProxy>
+  
+  <SlotProxy Prefab="OE_SlotProxy_24m_Palace" Size ="3" SpecialPalace ="true">
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_24m" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_24m_v2" Weight="1"/>	
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotCentralAsiaAmbientA_24m_v3" Weight="1"/>
+
+    <Filler Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_24m"  Size="-1"/>
+  </SlotProxy>
+
+<!-- General Proxies -->
+<GeneralProxy Prefab="OE_BuildingProxy_Small">
+    <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Small_Lvl" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Small_Lvl1B" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Small_Lvl1C" Weight="1"/>
+</GeneralProxy>
+
+<GeneralProxy Prefab="OE_BuildingProxy_Medium">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Medium_Lvl" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Medium_Lvl1B" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Medium_Lvl1C" Weight="1"/>
+	<!-- <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Medium_Lvl1D" Weight="1"/> -->
+	<!-- <Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Medium_Lvl1F" Weight="1"/> -->
+ </GeneralProxy>
+ 
+ <GeneralProxy Prefab="OE_BuildingProxy_Large">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Large_Lvl" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Large_Lvl1B" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Large_Lvl1C" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_BuildingCentralAsia_Large_Lvl1D" Weight="1"/>
+  </GeneralProxy>
+  
+  
+  
+  <!-- Detail proxies for small objects like silk cloth,carpet, etc. -->
+  
+   <GeneralProxy Prefab="OE_DetailProxy_Awning">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_Awning_Blue" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_Awning_Red" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_Awning_Yellow" Weight="1"/>
+  </GeneralProxy>
+  
+  <GeneralProxy Prefab="OE_Detail_CA_Carpet4x4_Proxy">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CA_Carpet4x4_01" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CA_Carpet4x4_02" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CA_Carpet4x4_03" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CA_Carpet4x4_04" Weight="1"/>
+
+  </GeneralProxy>
+  
+    <GeneralProxy Prefab="OE_Detail_CentralAsia_Tent_Proxy">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_Tent01" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_Tent02" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_Tent03" Weight="1"/>
+
+  </GeneralProxy>
+  
+  <GeneralProxy Prefab="OE_Detail_CentralAsia_CeramicGroup_Proxy">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_CeramicGroup01" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_CeramicGroup02" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_CeramicGroup03" Weight="1"/>
+
+  </GeneralProxy>
+  
+    <GeneralProxy Prefab="OE_Detail_CentralAsia_SilkClothline_Proxy">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_SilkClothline01" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_SilkClothline02" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_SilkClothline03" Weight="1"/>
+
+  </GeneralProxy>
+  
+    <GeneralProxy Prefab="OE_Detail_CentralAsia_SilkClothline_Small_Proxy">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_SilkClothline_Small01" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_SilkClothline_Small02" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_SilkClothline_Small03" Weight="1"/>
+
+  </GeneralProxy>
+  
+     <GeneralProxy Prefab="OE_Detail_CentralAsia_SilkPile_Proxy">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_SilkPile01" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_SilkPile02" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Details/Prefabs/OE_Detail_CentralAsia_SilkPile03" Weight="1"/>
+
+  </GeneralProxy>
+
+       <GeneralProxy Prefab="OE_Ambient_CentralAsia_StallSmall_Proxy">
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_CentralAsia_StallSmall01" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_CentralAsia_StallSmall02" Weight="1"/>
+	<Replacement Architecture="Central Asian" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_CentralAsia_StallSmall03" Weight="1"/>
+
+  </GeneralProxy>
+  
+</Root>

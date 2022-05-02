@@ -1,0 +1,2238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TechnologyItems xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Technology.xsd">
+  <!-- Balance -->
+  <LevelData Level="0" Turns="8" Era="0" />
+  <LevelData Level="1" Turns="9" />
+  <LevelData Level="2" Turns="10" />
+  <LevelData Level="3" Turns="11" />
+  <LevelData Level="4" Turns="12" Era="1" />
+  <LevelData Level="5" Turns="13" />
+  <LevelData Level="6" Turns="14" />
+  <LevelData Level="7" Turns="15" Era="2" />
+  <LevelData Level="8" Turns="16" />
+  <LevelData Level="9" Turns="16" />
+  <LevelData Level="10" Turns="16" />
+  <LevelData Level="11" Turns="16" />
+  <LevelData Level="12" Turns="16" />
+  <!-- Combat Related -->
+  <!-- <Capability Name="Infantry Skill" Level="1" />
+    <Capability Name="Sword Skill" Level="1" />
+    <Capability Name="Bow Skill" Level="1" />
+    <Capability Name="Chariot Skill" Level="1" />
+    <Capability Name="Cavalry Skill" Level="1" />
+    <Capability Name="CombatAdvantage" Level="1" />
+    <Capability Name="Battle Healing" Level="1" />
+    <Capability Name="Melee Attack" Level="1" />
+    <Capability Name="Melee Defense" Level="1" />
+    <Capability Name="Capture Tech" Level="1" /> -->
+  <!-- Character Related -->
+  <!-- <Capability Name="Character Armor" Level="1" />
+    <Capability Name="NewLeaderEnergy" Level="1" />
+    <Capability Name="NewLeaderVirtue" Level="1" /> -->
+  <!-- Economy Related -->
+  <!-- <Capability Name="CeramicsTradeValue" Level="1" />
+    <Capability Name="BronzeTradeValue" Level="1" />
+    <Capability Name="IronTradeValue" Level="1" />
+    <Capability Name="SilkTradeValue" Level="1" />
+    <Capability Name="CeramicsTradeValue" Level="1" />
+    <Capability Name="Increase Trade" Level="1" />
+    <Capability Name="AgriculturalProduction" Level="1" /> -->
+  <!-- Building Related -->
+  <!-- <Capability Name="Boost Military" Level="1" /> -->
+  <!-- <Capability Name="Boost Naval" Level="1" /> -->
+  <!-- <Capability Name="Boost Agriculture" Level="1" /> -->
+  <!-- <Capability Name="Boost Economy" Level="1" /> -->
+  <!-- <Capability Name="Boost Authority" Level="1" /> -->
+  <!-- <Capability Name="Boost Culture" Level="1" /> -->
+  <!-- <Capability Name="Boost Misc" Level="1" /> -->
+
+  <!-- Happiness/Authority Related -->
+  <!-- <Capability Name="Noble Happiness" Level="1" />
+    <Capability Name="Peasant Happiness" Level="1" />
+    <Capability Name="Noble Unrest" Level="1" />
+    <Capability Name="Peasant Unrest" Level="1" />
+    <Capability Name="Battle Healing" Level="1" />
+    <Capability Name="Capture Tech" Level="1" /> -->
+  <!-- Tech Related -->
+  <!-- <Capability Name="Boost Power" Level="1" /> -->
+  <!-- <Capability Name="Boost Craft" Level="1" /> -->
+  <!-- <Capability Name="Boost Thought" Level="1" /> -->
+  <!-- <Capability Name="Boost Knowledge" Level="1" /> -->
+  <!-- Other
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Culture" Level="1" /> -->
+  <!--Techs -->
+  <!--Knowledge: 47-->
+  <!--Thought: 54-->
+  <!--Craft: 54-->
+  <!--Power: 62 -->
+  <!-- Military Authority Total: 129 -->
+  <!-- Economy  Total: 89 -->
+  <!-- Authority Authority Total: 140 -->
+  <!-- Culture Authority Total: 0 -->
+  <!-- Agriculture Totals
+    AgricultureProduction: 15 + 28 + 25 = 68%
+    BoostAgriculture: 41 + 10 - 6 = 45%
+    BoostProduction:  14 + 15 = 29%
+  Peasant Happiness: 40
+  With Astrology: 40
+  With Zoology: 46
+  Peasant Unrest with Legalism(no priest king): 12
+  Peasant Unrest With (no priest king)Agressive Legalism: 20  
+   Noble Happiness: 43 with priest king: 51
+     Noble unrest base: 16
+  Noble Unrest with Legalism(no priest king): 31
+  Noble Unrest With (no priest king)Agressive Legalism: 41  
+  -->
+
+  <!-- Agriculture 
+    Happiness: 
+    Peasant: 14
+    Tools 
+    4X2+12= 15% agricultureproduction  
+  4X2+12= 41% Boost Agriculture-->
+  <Item ID="Seed Drill" Icon="G_TechIcon_SeedlingTransplantation_01">
+    <Data Tech="Craft" Area="Agriculture" Level="1" />
+    <Prerequisite Item="Agriculture" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="AgriculturalProduction" Level="2" />
+  </Item>
+  <!--Reapers -->
+  <Item ID="Reaper" Icon="G_TechIcon_IronPlough_01">
+    <Data Tech="Craft" Area="Agriculture" Level="2" />
+    <Prerequisite Item="Seed Drill" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="AgriculturalProduction" Level="2" />
+  </Item>
+  <Item ID="Iron Reaper" Icon="G_TechIcon_IronPlough_01">
+    <Data Tech="Craft" Area="Agriculture" Level="4" />
+    <Prerequisite Item="Reaper" />
+    <Prerequisite Item="Iron Casting" />
+    <!-- <Capability Name="Peasant Happiness" Level="2" /> -->
+    <Capability Name="AgriculturalProduction" Level="2" />
+  </Item>
+  <!--Ploughs -->
+  <Item ID="Plough" Icon="G_TechIcon_IronPlough_01">
+    <Data Tech="Craft" Area="Agriculture" Level="3" />
+    <Prerequisite Item="Seed Drill" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="AgriculturalProduction" Level="3" />
+  </Item>
+  <Item ID="Iron Plough" Icon="G_TechIcon_IronPlough_01">
+    <Data Tech="Craft" Area="Agriculture" Level="6" />
+    <Prerequisite Item="Plough" />
+    <Prerequisite Item="Quenching" />
+    <!-- <Capability Name="Peasant Happiness" Level="2" /> -->
+    <Capability Name="AgriculturalProduction" Level="3" />
+  </Item>
+  <!-- Quernstones -->
+  <Item ID="Saddle Quernstone" Icon="G_TechIcon_BrickFacedWells_01">
+    <Data Tech="Craft" Area="Agriculture" Level="6" />
+    <Prerequisite Item="Agriculture" />
+    <!-- <Capability Name="Peasant Happiness" Level="2" /> -->
+    <Capability Name="AgriculturalProduction" Level="3" />
+  </Item>
+  <Item ID="Rotary Quernstone" Icon="G_TechIcon_BrickFacedWells_01">
+    <Data Tech="Craft" Area="Agriculture" Level="7" />
+    <Prerequisite Item="Saddle Quernstone" />
+    <Capability Name="AgriculturalProduction" Level="3" />
+    <!-- <Capability Name="Peasant Happiness" Level="2" /> -->
+  </Item>
+  <!--Other -->
+  <Item ID="Thresher" Icon="G_TechIcon_CropRotation_01">
+    <Data Tech="Craft" Area="Agriculture" Level="7" />
+    <Prerequisite Item="Crop Rotation" />
+    <Prerequisite Item="Brick Faced Wells" />
+    <Capability Name="Noble Unrest" Level="1" />
+    <Capability Name="AgriculturalProduction" Level="3" />
+    <!-- <Capability Name="Peasant Happiness" Level="3" /> -->
+  </Item>
+  <!-- Agriculture Improvements 
+    noble happiness: 10
+ProductionBoost: 14
+AgriculturalProduction: 28
+Boost Agriculture: 10 -->
+  <Item ID="Flood Control" Icon="G_TechIcon_FloodControl_01">
+    <Data Tech="Power" Area="Agriculture" Level="3" />
+    <StaticRequirements>
+      <FactionTag Tag="Japan Tech" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Agriculture" />
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+    <Capability Name="Boost Economy" Level="2" />
+    <Capability Name="AgriculturalProduction" Level="4" />
+    <Capability Name="Boost Agriculture" Level="4" />
+  </Item>
+  <Item ID="Marsh Drainage" Icon="G_TechIcon_MarshDrainage_01">
+    <Data Tech="Power" Area="Agriculture" Level="5" />
+    <Prerequisite Item="Flood Control" />
+    <!-- <Capability Name="Noble Happiness" Level="3" /> -->
+    <Capability Name="Boost Economy" Level="3" />
+    <Capability Name="AgriculturalProduction" Level="2" />
+    <Capability Name="Boost Agriculture" Level="5" />
+  </Item>
+  <Item ID="Terracing" Icon="G_TechIcon_Terracing_01">
+    <Data Tech="Power" Area="Agriculture" Level="4" />
+    <Prerequisite Item="Flood Control" />
+    <!-- <Capability Name="Noble Happiness" Level="3" /> -->
+    <Capability Name="Boost Economy" Level="4" />
+    <Capability Name="AgriculturalProduction" Level="2" />
+    <Capability Name="Boost Agriculture" Level="4" />
+  </Item>
+  <Item ID="Irrigation" Icon="G_TechIcon_Irrigation_01">
+    <Data Tech="Power" Area="Agriculture" Level="4" />
+    <Requirements>
+      <RequireEither>
+        <Tech Item="Iron Plough" />
+        <Tech Item="Thresher" />
+      </RequireEither>
+      <RequireEither>
+        <Tech Item="Marsh Drainage" />
+        <Tech Item="Terracing" />
+      </RequireEither>
+    </Requirements>
+    <Prerequisite Item="Agriculture" />
+    <!-- <Capability Name="Boost Power" Level="12" /> -->
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+    <Capability Name="AgriculturalProduction" Level="4" />
+    <Capability Name="Boost Agriculture" Level="5" />
+  </Item>
+  <!-- Agriculture Wells 
+    noble happiness: 5
+    peasant happiness: 3
+ProductionBoost: 15-->
+  <Item ID="Wells" Icon="G_TechIcon_BrickFacedWells_01">
+    <Data Tech="Craft" Area="Agriculture" Level="4" />
+    <Prerequisite Item="Flood Control" />
+    <Prerequisite Item="Ceramic Roof Tiles" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+    <Capability Name="Boost Economy" Level="5" />
+    <Capability Name="AgriculturalProduction" Level="5" />
+  </Item>
+  <Item ID="Brick Faced Wells" Icon="G_TechIcon_BrickFacedWells_01">
+    <Data Tech="Craft" Area="Agriculture" Level="6" />
+    <Prerequisite Item="Wells" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+    <Capability Name="Boost Economy" Level="5" />
+    <Capability Name="AgriculturalProduction" Level="5" />
+  </Item>
+  <!-- Agriculture Ideas
+    noble happiness: 5
+    peasant happiness: 3
+  AgricultureProduction: 25
+  BoostAgriculture: -6-->
+  <Item ID="Seedling Transplantation" Icon="G_TechIcon_SeedlingTransplantation_01">
+    <Data Tech="Knowledge" Area="Agriculture" Level="6" />
+    <Prerequisite Item="Irrigation" />
+    <Capability Name="Boost Agriculture" Level="2" />
+    <Capability Name="AgriculturalProduction" Level="4" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+  </Item>
+  <Item ID="Crop Rotation" Icon="G_TechIcon_CropRotation_01">
+    <Data Tech="Knowledge" Area="Agriculture" Level="8" />
+    <Prerequisite Item="Seedling Transplantation" />
+    <Prerequisite Item="Iron Plough" />
+    <!-- <Capability Name="Peasant Happiness" Level="2" /> -->
+    <!-- <Capability Name="Noble Happiness" Level="3" /> -->
+    <Capability Name="Boost Agriculture" Level="2" />
+    <Capability Name="AgriculturalProduction" Level="4" />
+  </Item>
+  <!-- Subsistance Method 
+  Noble Happiness Total: 20
+  Peasant Happiness Total: 20
+<
+-->
+  <Item ID="Agriculture" Icon="G_TechIcon_Agriculture_01">
+    <Data Tech="Knowledge" Area="Agriculture" Level="0" />
+    <Capability Name="Agriculture" Level="0" />
+    <CustomGameTech FactionTag="Farmers" />
+  </Item>
+  <Item ID="Pastoralism" Icon="G_TechIcon_Pastoralism_01">
+    <Data Tech="Thought" Area="Agriculture" Level="4" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Capability Name="Pastoralism" Level="1" />
+  </Item>
+  <Item ID="Nomadism" Icon="G_TechIcon_Nomadism_01">
+    <Data Tech="Power" Area="Agriculture" Level="7" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Pastoralism" />
+    <Prerequisite Item="Horse Riding" />
+    <Capability Name="Nomadism" Level="1" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <!--Metals 
+  noble happiness/peasant happiness and unrest cancels each other out mostly
+  Irrelevant
+  -->
+  <Item ID="Arsenic Bronze Making" Icon="G_TechIcon_BronzeMaking_01">
+    <Data Tech="Knowledge" Area="Culture" Level="0" />
+    <Capability Name="Boost Economy" Level="2" />
+    <Capability Name="Melee Attack" Level="2" />
+    <Capability Name="Authority" Level="1" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <Item ID="Bronze Making" Icon="G_TechIcon_BronzeMaking_01">
+    <Data Tech="Knowledge" Area="Culture" Level="1" />
+    <Prerequisite Item="Arsenic Bronze Making" />
+    <Capability Name="Boost Economy" Level="2" />
+    <Capability Name="Boost Military" Level="1" />
+    <Capability Name="Melee Attack" Level="4" />
+    <Capability Name="BronzeTradeValue" Level="20" />
+    <Capability Name="Authority" Level="1" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <!-- Can only select Mild Bronze OR High Tin Bronze, focus on economy vs better quality gear -->
+  <Item ID="Mild Bronze" Icon="G_TechIcon_HighTinBronze_01">
+    <Data Tech="Knowledge" Area="Misc" Level="1" />
+    <StaticRequirements>
+      <Tech Item="High Tin Bronze" Condition="false" />
+    </StaticRequirements>
+    <Requirements>
+      <Tech Item="High Tin Bronze" Condition="false" />
+    </Requirements>
+    <Prerequisite Item="Bronze Making" />
+    <Capability Name="Boost Economy" Level="5" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="BronzeTradeValue" Level="20" />
+    <Capability Name="Authority" Level="1" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <Item ID="High Tin Bronze" Icon="G_TechIcon_HighTinBronze_01">
+    <Data Tech="Knowledge" Area="Misc" Level="1" />
+    <StaticRequirements>
+      <Tech Item="Mild Bronze" Condition="false" />
+    </StaticRequirements>
+    <Requirements>
+      <Tech Item="Mild Bronze" Condition="false" />
+    </Requirements>
+    <Prerequisite Item="Bronze Making" />
+    <Capability Name="Boost Military" Level="8" />
+    <Capability Name="Melee Attack" Level="4" />
+    <Capability Name="Melee Defense" Level="5" />
+    <Capability Name="Authority" Level="2" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+
+  <Item ID="Bronze Casting" Icon="G_TechIcon_BronzeMaking_01">
+    <Data Tech="Knowledge" Area="Misc" Level="2" />
+    <Requirements>
+      <RequireEither>
+        <Tech Item="Mild Bronze" Condition="true" />
+        <Tech Item="High Tin Bronze" Condition="true" />
+      </RequireEither>
+    </Requirements>
+    <Prerequisite Item="Bronze Making" />
+    <Capability Name="Melee Attack" Level="6" />
+    <Capability Name="BronzeTradeValue" Level="20" />
+    <Capability Name="Boost Economy" Level="2" />
+    <Capability Name="Boost Military" Level="3" />
+    <Capability Name="Authority" Level="1" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <Item ID="Two Part Stone Mold" Icon="G_TechIcon_BronzeMaking_01">
+    <Data Tech="Knowledge" Area="Misc" Level="3" />
+    <Prerequisite Item="Bronze Casting" />
+    <Capability Name="Melee Attack" Level="8" />
+    <Capability Name="BronzeTradeValue" Level="20" />
+    <Capability Name="Boost Economy" Level="2" />
+    <Capability Name="Boost Military" Level="3" />
+    <Capability Name="Authority" Level="1" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+
+  <Item ID="Advanced Bronze Casting" Icon="G_TechIcon_AdvancedBronzeCasting_01">
+    <Data Tech="Knowledge" Area="Misc" Level="4" />
+    <Prerequisite Item="Two Part Stone Mold" />
+    <Capability Name="Melee Attack" Level="10" />
+    <Capability Name="BronzeTradeValue" Level="20" />
+    <Capability Name="Boost Economy" Level="3" />
+    <Capability Name="Boost Military" Level="4" />
+    <Capability Name="Authority" Level="2" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+
+  <Item ID="Iron Casting" Icon="G_TechIcon_IronCasting_01">
+    <Data Tech="Knowledge" Area="Misc" Level="3" />
+    <Prerequisite Item="Bronze Casting" />
+    <Capability Name="Melee Attack" Level="0" />
+    <Capability Name="Melee Defense" Level="1" />
+    <Capability Name="BronzeTradeValue" Level="-5" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Economy" Level="2" />
+    <Capability Name="Boost Military" Level="5" />
+    <Capability Name="Noble Unrest" Level="1" />
+    <Capability Name="Peasant Happiness" Level="1" />
+  </Item> <!-- CRAFT Weapon  Making -->
+
+  <Item ID="Quenching" Icon="G_TechIcon_IronCasting_01">
+    <Data Tech="Knowledge" Area="Misc" Level="4" />
+    <Prerequisite Item="Iron Casting" />
+    <Capability Name="Melee Attack" Level="1" />
+    <Capability Name="Melee Defense" Level="2" />
+    <Capability Name="BronzeTradeValue" Level="-5" />
+    <Capability Name="IronTradeValue" Level="15" />
+    <Capability Name="Authority" Level="2" />
+    <Capability Name="Boost Economy" Level="3" />
+    <Capability Name="Boost Military" Level="5" />
+    <!-- <Capability Name="Noble Unrest" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Malleable Cast Iron" Icon="G_TechIcon_MalleableCastIron_01">
+    <Data Tech="Knowledge" Area="Misc" Level="5" />
+    <Prerequisite Item="Iron Casting" />
+    <Capability Name="Melee Attack" Level="2" />
+    <Capability Name="Melee Defense" Level="1" />
+    <Capability Name="BronzeTradeValue" Level="-5" />
+    <Capability Name="IronTradeValue" Level="15" />
+    <Capability Name="Authority" Level="2" />
+    <Capability Name="Boost Economy" Level="3" />
+    <Capability Name="Boost Military" Level="6" />
+    <!-- <Capability Name="Noble Unrest" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Steel" Icon="G_TechIcon_Steel_01">
+    <Data Tech="Knowledge" Area="Misc" Level="6" />
+    <Prerequisite Item="Malleable Cast Iron" />
+    <Prerequisite Item="Quenching" />
+    <Capability Name="Melee Attack" Level="3" />
+    <Capability Name="Melee Defense" Level="4" />
+    <Capability Name="BronzeTradeValue" Level="-5" />
+    <Capability Name="IronTradeValue" Level="15" />
+    <Capability Name="Authority" Level="2" />
+    <Capability Name="Boost Economy" Level="4" />
+    <Capability Name="Boost Military" Level="6" />
+    <!-- <Capability Name="Noble Unrest" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Hydraulic Bellows" Icon="G_TechIcon_HydraulicBellows_01">
+    <Data Tech="Knowledge" Area="Misc" Level="7" />
+    <Prerequisite Item="Steel" />
+    <Capability Name="Melee Attack" Level="4" />
+    <Capability Name="BronzeTradeValue" Level="-5" />
+    <Capability Name="IronTradeValue" Level="15" />
+    <Capability Name="Authority" Level="3" />
+    <Capability Name="Boost Economy" Level="4" />
+    <Capability Name="Boost Military" Level="7" />
+    <!-- <Capability Name="Noble Unrest" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Coke Fuelled Furnace" Icon="G_TechIcon_CokeFuelledFurnace_01">
+    <Data Tech="Knowledge" Area="Misc" Level="8" />
+    <Prerequisite Item="Hydraulic Bellows" />
+    <Capability Name="Melee Attack" Level="5" />
+    <Capability Name="Melee Defense" Level="6" />
+    <Capability Name="BronzeTradeValue" Level="-5" />
+    <Capability Name="IronTradeValue" Level="15" />
+    <Capability Name="Authority" Level="3" />
+    <Capability Name="Boost Economy" Level="5" />
+    <Capability Name="Boost Military" Level="8" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <!-- CRAFT Textiles  
+  Noble Happiness: 3
+Peasant Unrest: 3 -->
+  <Item ID="Silk" Icon="G_TechIcon_Silk_01">
+    <Data Tech="Thought" Area="Misc" Level="2" />
+    <StaticRequirements>
+      <ControlNumSettlements Num="25" Exact="false" Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Draw Loom" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Boost Economy" Level="2" />
+    <Capability Name="SilkTradeValue" Level="25" />
+    <Capability Name="Increase Trade" Level="-2" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <Item ID="Textile Printing" Icon="G_TechIcon_TextilePrinting_01">
+    <Data Tech="Thought" Area="Misc" Level="6" />
+    <StaticRequirements>
+      <ControlNumSettlements Num="50" Exact="false" Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Silk" />
+    <Prerequisite Item="Stone Rubbing Copying" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Boost Economy" Level="4" />
+    <Capability Name="SilkTradeValue" Level="50" />
+    <Capability Name="Increase Trade" Level="-5" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <Item ID="Silk Road" Icon="G_TechIcon_TextilePrinting_01">
+    <Data Tech="Thought" Area="Misc" Level="7" />
+    <StaticRequirements>
+      <ControlNumSettlements Num="75" Exact="false" Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Textile Printing" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Boost Economy" Level="6" />
+    <Capability Name="SilkTradeValue" Level="75" />
+    <Capability Name="Increase Trade" Level="-10" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <!-- CRAFT Ceramics
+  Peasant Unrest: 5  -->
+  <Item ID="Black Ceramics" Icon="G_TechIcon_BlackCeramics_01">
+    <!--Decorated Ceramics-->
+    <Data Tech="Craft" Area="Misc" Level="0" />
+    <Capability Name="Peasant Unrest" Level="1" />
+  </Item>
+  <Item ID="Ceramic Roof Tiles" Icon="G_TechIcon_CeramicRoofTiles_01">
+    <Data Tech="Craft" Area="Naval" Level="1" />
+    <Prerequisite Item="Black Ceramics" />
+    <Capability Name="Roof Tiles" Level="1" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="CeramicsTradeValue" Level="10" />
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <Item ID="Industrial Pottery Production" Icon="G_TechIcon_IndustrialPotteryProduction_01">
+    <Data Tech="Craft" Area="Misc" Level="4" />
+    <Prerequisite Item="Ceramic Roof Tiles" />
+    <!-- <Capability Name="CeramicsTradeValue" Level="25" /> -->
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="CeramicsTradeValue" Level="10" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Peasant Unrest" Level="1" />
+  </Item>
+  <Item ID="Tricolor Ceramics" Icon="G_TechIcon_TricolorCeramics_01">
+    <Data Tech="Craft" Area="Misc" Level="7" />
+    <Prerequisite Item="Industrial Pottery Production" />
+    <!-- <Capability Name="CeramicsTradeValue" Level="30" /> -->
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="CeramicsTradeValue" Level="10" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <Item ID="Porcelain" Icon="G_TechIcon_Porcelain_01">
+    <Data Tech="Craft" Area="Misc" Level="8" />
+    <Prerequisite Item="Tricolor Ceramics" />
+    <!-- <Capability Name="CeramicsTradeValue" Level="35" /> -->
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="CeramicsTradeValue" Level="10" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+  </Item>
+  <!--Peasant Unrest: 2
+    Noble Happiness: 2-->
+  <Item ID="Jade Working" Icon="G_TechIcon_JadeWorking_01">
+    <Data Tech="Craft" Area="Misc" Level="3" />
+    <StaticRequirements></StaticRequirements>
+    <Capability Name="Boost Economy" Level="4" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Increase Trade" Level="6" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+    <Capability Name="Authority" Level="1" />
+  </Item>
+  <Item ID="Precious Metal Work" Icon="G_TechIcon_PreciousMetalWork_01">
+    <Data Tech="Craft" Area="Misc" Level="6" />
+    <StaticRequirements>
+      <TradeItem Type="Jade" />
+    </StaticRequirements>
+    <Capability Name="Boost Economy" Level="5" />
+    <Capability Name="Boost Military" Level="4" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Increase Trade" Level="12" />
+    <!-- <Capability Name="Noble Happiness" Level="1" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="1" /> -->
+    <Capability Name="Authority" Level="1" />
+  </Item>
+  <!--Peasant Happiness: 6
+    Noble Unrest: -->
+  <Item ID="Abacus" Icon="G_TechIcon_Abacus_01">
+    <Data Tech="Knowledge" Area="Economy" Level="0" />
+    <Capability Name="Increase Trade" Level="3" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Boost Economy" Level="1" />
+    <!-- <Capability Name="Noble Unrest" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Mathematics" Icon="G_TechIcon_Mathematics_01">
+    <Data Tech="Knowledge" Area="Economy" Level="1" />
+    <Prerequisite Item="Abacus" />
+    <Capability Name="Increase Trade" Level="5" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Boost Economy" Level="1" />
+    <!-- <Capability Name="Noble Unrest" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Algebra" Icon="G_TechIcon_TwelveEqualTemperamentScale_01">
+    <Data Tech="Knowledge" Area="Economy" Level="4" />
+    <Prerequisite Item="Mathematics" />
+    <Capability Name="Increase Trade" Level="7" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Boost Economy" Level="2" />
+    <!-- <Capability Name="Noble Unrest" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Number Theory" Icon="G_TechIcon_TwelveEqualTemperamentScale_01">
+    <Data Tech="Knowledge" Area="Economy" Level="7" />
+    <Prerequisite Item="Algebra" />
+    <Capability Name="Increase Trade" Level="9" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Boost Economy" Level="3" />
+    <!-- <Capability Name="Noble Unrest" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Geometry" Icon="G_TechIcon_TwelveEqualTemperamentScale_01">
+    <Data Tech="Knowledge" Area="Economy" Level="3" />
+    <Prerequisite Item="Mathematics" />
+    <Capability Name="Increase Trade" Level="11" />
+    <Capability Name="Boost Culture" Level="5" />
+    <Capability Name="Boost Economy" Level="2" />
+    <!-- <Capability Name="Noble Unrest" Level="1" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Trigonometry" Icon="G_TechIcon_TwelveEqualTemperamentScale_01">
+    <Data Tech="Knowledge" Area="Economy" Level="6" />
+    <Prerequisite Item="Geometry" />
+    <Capability Name="Increase Trade" Level="13" />
+    <Capability Name="Boost Culture" Level="4" />
+    <Capability Name="Boost Economy" Level="3" />
+    <Capability Name="Noble Unrest" Level="1" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <!-- Peasant Happiness: 1+3(Herders only) -->
+  <Item ID="Carpet Weaving" Icon="G_TechIcon_Mongol_CarpetWeaving01">
+    <Data Tech="Craft" Area="Naval" Level="1" />
+    <StaticRequirements>
+      <RequireEither>
+        <Architecture Style="Central Asian" />
+        <FactionTag Tag="Herders" />
+      </RequireEither>
+    </StaticRequirements>
+    <Prerequisite Item="Draw Loom" />
+    <Capability Name="Increase Trade" Level="6" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Fine Carpet Weaving" Icon="G_TechIcon_Mongol_CarpetWeaving01">
+    <Data Tech="Craft" Area="Naval" Level="2" />
+    <StaticRequirements>
+      <RequireEither>
+        <Architecture Style="Central Asian" />
+        <FactionTag Tag="Herders" />
+      </RequireEither>
+    </StaticRequirements>
+    <Prerequisite Item="Draw Loom" />
+    <Capability Name="Increase Trade" Level="8" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Decorated Carpet Weaving" Icon="G_TechIcon_Mongol_CarpetWeaving01">
+    <Data Tech="Craft" Area="Naval" Level="3" />
+    <StaticRequirements>
+      <RequireEither>
+        <Architecture Style="Central Asian" />
+        <FactionTag Tag="Herders" />
+      </RequireEither>
+    </StaticRequirements>
+    <Prerequisite Item="Draw Loom" />
+    <Capability Name="Authority" Level="-8" />
+    <Capability Name="Increase Trade" Level="12" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item>
+  <Item ID="Draw Loom" Icon="G_TechIcon_Mongol_DecimalArmyOrganization01">
+    <Data Tech="Craft" Area="Naval" Level="0" />
+    <Capability Name="Increase Trade" Level="4" />
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+  </Item> <!-- Money -->
+  <Item ID="Coinage" Icon="G_TechIcon_Coinage_01">
+    <Data Tech="Knowledge" Area="Economy" Level="2" />
+    <Requirements></Requirements>
+    <Prerequisite Item="Mathematics" />
+    <Capability Name="Increase Trade" Level="15" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Economy" Level="2" />
+  </Item>
+  <Item ID="Metropolitan City" Icon="G_TechIcon_Coinage_01">
+    <Data Tech="Knowledge" Area="Agriculture" Level="5" />
+    <Prerequisite Item="Abacus" />
+    <Capability Name="Boost Agriculture" Level="5" />
+  </Item>
+  <Item ID="Large Metropolitan City" Icon="G_TechIcon_Coinage_01">
+    <Data Tech="Knowledge" Area="Agriculture" Level="8" />
+    <Prerequisite Item="Metropolitan City" />
+    <Prerequisite Item="Algebra" />
+    <Capability Name="Boost Agriculture" Level="5" />
+  </Item>
+  <Item ID="Trading City" Icon="G_TechIcon_Coinage_01">
+    <Data Tech="Knowledge" Area="Economy" Level="3" />
+    <Prerequisite Item="Coinage" />
+    <Capability Name="Boost Agriculture" Level="5" />
+  </Item>
+  <Item ID="Large Trading City" Icon="G_TechIcon_Coinage_01">
+    <Data Tech="Knowledge" Area="Economy" Level="6" />
+    <Prerequisite Item="Trading City" />
+    <Prerequisite Item="Paper Currency" />
+    <Capability Name="Boost Agriculture" Level="5" />
+  </Item>
+  <Item ID="Fortified City" Icon="G_TechIcon_MilitaryArchitecture_01">
+    <Data Tech="Knowledge" Area="Military" Level="4" />
+    <Prerequisite Item="Military Structures" />
+    <Capability Name="Boost Agriculture" Level="5" />
+  </Item>
+  <Item ID="Large Fortified City" Icon="G_TechIcon_MilitaryArchitecture_01">
+    <Data Tech="Knowledge" Area="Military" Level="7" />
+    <Prerequisite Item="Fortified City" />
+    <Prerequisite Item="Military Architecture" />
+    <Capability Name="Boost Agriculture" Level="5" />
+  </Item>
+  <Item ID="Paper Currency" Icon="G_TechIcon_PaperCurrency_01">
+    <Data Tech="Knowledge" Area="Economy" Level="5" />
+    <Prerequisite Item="Coinage" />
+    <Prerequisite Item="Wood Block Printing" />
+    <Capability Name="Increase Trade" Level="20" />
+    <Capability Name="Authority" Level="1" />
+  </Item>
+  <Item ID="Joint Stock Company" Icon="G_TechIcon_JointStockCompany_01">
+    <Data Tech="Knowledge" Area="Economy" Level="6" />
+    <Prerequisite Item="Paper Currency" />
+    <Prerequisite Item="Lineage Groups" />
+    <Capability Name="Increase Trade" Level="25" />
+    <Capability Name="Authority" Level="1" />
+  </Item>
+  <Item ID="Banking I" Icon="G_TechIcon_Banking_01">
+    <Data Tech="Knowledge" Area="Economy" Level="5" />
+    <Prerequisite Item="Paper Currency" />
+    <Prerequisite Item="Mathematics" />
+    <Capability Name="Authority" Level="1" />
+  </Item>
+  <Item ID="Banking II" Icon="G_TechIcon_Banking_01">
+    <Data Tech="Knowledge" Area="Economy" Level="8" />
+    <Prerequisite Item="Banking I" />
+    <Prerequisite Item="Algebra" />
+    <Capability Name="Authority" Level="1" />
+  </Item>
+  <!-- Religion, Superstition 2 Custom Trees, Divination 3 Techs, Shamanism 4 Techs  
+  Zoology Peasant Happiness: 6
+  Astrology Peasant Happiness: 0
+  Zoology ag prod: 10 
+  Astrology ag prod: 6
+
+  -->
+  <!-- Divination/Astrology Tree: -->
+  <Item ID="Divination" Icon="G_TechIcon_Shamanism_01">
+    <Data Tech="Thought" Area="Misc" Level="0" />
+    <StaticRequirements>
+      <Tech Item="Shamanism" Condition="false" />
+    </StaticRequirements>
+    <!-- <Capability Name="Peasant Happiness" Level="2" /> -->
+    <Capability Name="AgriculturalProduction" Level="2" />
+    <Capability Name="Character Armor" Level="1" />
+    <Capability Name="Authority" Level="3" />
+  </Item>
+  <Item ID="I Ching" Icon="G_TechIcon_Shamanism_01">
+    <Data Tech="Thought" Area="Misc" Level="4" />
+    <Prerequisite Item="Divination" />
+    <!-- <Capability Name="Peasant Happiness" Level="2" /> -->
+    <Capability Name="AgriculturalProduction" Level="4" />
+    <Capability Name="Character Armor" Level="2" />
+    <Capability Name="Authority" Level="6" />
+  </Item>
+  <Item ID="Zoology" Icon="G_TechIcon_Shamanism_01">
+    <Data Tech="Thought" Area="Misc" Level="2" />
+    <StaticRequirements>
+      <Tech Item="Astrology" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="I Ching" />
+    <Capability Name="AgriculturalProduction" Level="4" />
+    <Capability Name="Character Armor" Level="1" />
+    <!-- <Capability Name="Peasant Happiness" Level="2" /> -->
+  </Item>
+  <Item ID="Astrology" Icon="G_TechIcon_Shamanism_01">
+    <Data Tech="Thought" Area="Misc" Level="2" />
+    <StaticRequirements>
+      <Tech Item="Zoology" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="I Ching" />
+    <Capability Name="CombatAdvantage" Level="1" />
+    <Capability Name="Character Armor" Level="3" />
+    <!-- <Capability Name="Peasant Happiness" Level="-4" /> -->
+    <Capability Name="Authority" Level="9" />
+  </Item>
+  <!-- Shamanism/Priest King Tree: Done Except Times 
+   Peasant Unrest: 14
+   Noble Unrest: 14
+   Peasant Happiness:  
+   Noble Happiness:  
+   Combat Advantage Total: 4
+   Authority: 14
+ -->
+  <Item ID="Shamanism" Icon="G_TechIcon_OracleBones_01">
+    <Data Tech="Thought" Area="Misc" Level="2" />
+    <StaticRequirements>
+      <Tech Item="Divination" Condition="false" />
+    </StaticRequirements>
+    <!-- <Capability Name="Peasant Unrest" Level="2" /> -->
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+    <Capability Name="CombatAdvantage" Level="1" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="Capture Tech" Level="4" />
+    <Capability Name="Authority" Level="2" />
+  </Item>
+  <Item ID="Oracle Bones" Icon="G_TechIcon_OracleBones_01">
+    <Data Tech="Thought" Area="Misc" Level="2" />
+    <Prerequisite Item="Shamanism" />
+    <!-- <Capability Name="Peasant Unrest" Level="3" /> -->
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+    <Capability Name="CombatAdvantage" Level="1" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="Capture Tech" Level="6" />
+    <Capability Name="Authority" Level="3" />
+  </Item>
+  <Item ID="Ancestor Worship" Icon="G_TechIcon_OracleBones_01">
+    <Data Tech="Thought" Area="Misc" Level="3" />
+    <Prerequisite Item="Oracle Bones" />
+    <!-- <Capability Name="Peasant Unrest" Level="4" /> -->
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+    <Capability Name="CombatAdvantage" Level="1" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="Capture Tech" Level="8" />
+    <Capability Name="Authority" Level="4" />
+  </Item>
+  <Item ID="Priest King" Icon="G_TechIcon_OracleBones_01">
+    <Data Tech="Thought" Area="Misc" Level="6" />
+    <Prerequisite Item="Ancestor Worship" />
+    <!-- <Capability Name="Peasant Unrest" Level="5" /> -->
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+    <Capability Name="CombatAdvantage" Level="1" />
+    <Capability Name="Boost Military" Level="2" />
+    <Capability Name="Capture Tech" Level="10" />
+    <Capability Name="Authority" Level="5" />
+  </Item>
+  <Item ID="Lineage Groups" Icon="G_TechIcon_lineageGroups_01">
+    <Data Tech="Thought" Area="Authority" Level="5" />
+    <Prerequisite Item="Ancestor Worship" />
+    <Capability Name="Culture" Level="2" />
+    <!-- <Capability Name="Noble Happiness" Level="4" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="6" /> -->
+  </Item>
+  <!-- Philosophy -->
+  <Item ID="Confucianism" Icon="G_TechIcon_Confucianism_01">
+    <Data Tech="Thought" Area="Misc" Level="3" />
+    <Prerequisite Item="Ancestor Worship" />
+    <Prerequisite Item="Logographic Script" />
+    <Capability Name="Culture" Level="3" />
+    <!-- <Capability Name="Reduce Thought" Level="2" /> -->
+    <!-- <Capability Name="Reduce Knowledge" Level="3" /> -->
+    <!-- <Capability Name="Reduce Power" Level="4" /> -->
+    <!-- <Capability Name="Boost Craft" Level="10" /> -->
+  </Item>
+  <Item ID="Book of Rites" Icon="G_TechIcon_BookofRites_01">
+    <Data Tech="Thought" Area="Misc" Level="4" />
+    <Prerequisite Item="Confucianism" />
+    <Capability Name="Culture" Level="4" />
+    <!-- <Capability Name="Reduce Knowledge" Level="4" /> -->
+    <!-- <Capability Name="Reduce Power" Level="4" /> -->
+    <!-- <Capability Name="Boost Craft" Level="4" /> -->
+    <!-- <Capability Name="Boost Thought" Level="12" /> -->
+  </Item>
+  <Item ID="Neo Confucianism" Icon="G_TechIcon_NeoConfucianism_01">
+    <Data Tech="Thought" Area="Misc" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Islam Only" Condition="false" />
+      <Architecture Style="Chinese" />
+    </StaticRequirements>
+    <Prerequisite Item="Book of Rites" />
+    <Capability Name="Culture" Level="5" />
+    <!-- <Capability Name="Boost Knowledge" Level="20" /> -->
+    <!-- <Capability Name="Reduce Thought" Level="6" /> -->
+    <!-- <Capability Name="Reduce Power" Level="6" /> -->
+    <!-- <Capability Name="Reduce Craft" Level="6" /> -->
+  </Item>
+  <Item ID="Daoism" Icon="G_TechIcon_Daoism_01">
+    <Data Tech="Thought" Area="Misc" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Islam Only" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Yin and Yang" />
+    <Prerequisite Item="Logographic Script" />
+    <Capability Name="Culture" Level="10" />
+    <!-- <Capability Name="Boost Thought" Level="12" /> -->
+    <Capability Name="NewLeaderEnergy" Level="1" />
+    <Capability Name="Increase Scholar Energy" Level="1" />
+    <Capability Name="Increase General Energy" Level="1" />
+  </Item>
+  <Item ID="Buddhism" Icon="G_TechIcon_Buddism_01">
+    <Data Tech="Thought" Area="Misc" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Islam Only" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Culture" Level="10" />
+    <!-- <Capability Name="Boost Knowledge" Level="8" /> -->
+    <!-- <Capability Name="Boost Thought" Level="16" /> -->
+    <!-- <Capability Name="Reduce Power" Level="20" /> -->
+    <Capability Name="NewLeaderVirtue" Level="1" />
+    <Capability Name="Increase Scholar Virtue" Level="1" />
+    <Capability Name="Increase General Virtue" Level="1" />
+  </Item>
+  <Item ID="Mohism" Icon="G_TechIcon_Monism_01">
+    <Data Tech="Thought" Area="Misc" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Islam Only" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Logographic Script" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="AgriculturalProduction" Level="15" /> -->
+    <Capability Name="Boost Agriculture" Level="5" />
+    <!-- <Capability Name="Reduce Thought" Level="10" /> -->
+    <!-- <Capability Name="Reduce Knowledge" Level="10" /> -->
+    <!-- <Capability Name="Reduce Craft" Level="10" /> -->
+    <!-- <Capability Name="Reduce Power" Level="10" /> -->
+  </Item>
+  <Item ID="Yin and Yang" Icon="G_TechIcon_YinYang_01">
+    <Data Tech="Thought" Area="Misc" Level="4" />
+  </Item>
+  <!-- Misc Culture -->
+  <Item ID="Tea Culture" Icon="G_TechIcon_TeaCulture_01">
+    <Data Tech="Thought" Area="Misc" Level="4" />
+    <Capability Name="Culture" Level="4" />
+  </Item>
+  <Item ID="Chess" Icon="G_TechIcon_GameofGo_01" TranslationTag="Go">
+    <Data Tech="Thought" Area="Misc" Level="1" />
+    <Prerequisite Item="Tea Culture" />
+    <Capability Name="Culture" Level="8" />
+    <Capability Name="NewLeaderEnergy" Level="1" />
+    <Capability Name="NewLeaderVirtue" Level="1" />
+  </Item>
+  <!-- Legacy Version-->
+  <Item ID="Go" Icon="G_TechIcon_GameofGo_01">
+    <Data Tech="Thought" Area="Misc" Level="1" />
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Yin and Yang" />
+    <Capability Name="NewLeaderEnergy" Level="1" />
+    <Capability Name="NewLeaderVirtue" Level="1" />
+  </Item>
+  <!-- Royal Court Version-->
+  <Item ID="Go2" Icon="G_TechIcon_GameofGo_01" TranslationTag="Go">
+    <Data Tech="Thought" Area="Misc" Level="1" />
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Yin and Yang" />
+    <Capability Name="NewLeaderEnergy" Level="1" />
+    <Capability Name="NewLeaderVirtue" Level="1" />
+  </Item>
+  <!-- Added in Genghis -->
+  <Item ID="Naadam Festival" Icon="G_TechIcon_Mongol_Naadam_01">
+    <Data Tech="Thought" Area="Misc" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Wrestling" />
+    <Capability Name="Culture" Level="3" />
+  </Item>
+
+  <Item ID="Tengrism" Icon="G_TechIcon_Mongol_Tengrism01">
+    <Data Tech="Thought" Area="Misc" Level="4" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Shamanism" />
+    <Capability Name="Battle Healing" Level="15" />
+    <!-- <Capability Name="Boost Power" Level="10" /> -->
+    <!-- <Capability Name="Boost Knowledge" Level="6" /> -->
+    <Capability Name="Culture" Level="2" />
+    <Capability Name="Authority" Level="3" />
+  </Item>
+  <Item ID="Qada Anda Nokor" Icon="G_TechIcon_Mongol_QadaAndaNokor01">
+    <Data Tech="Thought" Area="Misc" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Record Keeping" />
+    <Capability Name="Culture" Level="4" />
+    <Capability Name="Increase Trade" Level="8" />
+  </Item>
+  <Item ID="Sulde" Icon="G_TechIcon_Mongol_Sulde01">
+    <Data Tech="Thought" Area="Misc" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Ancestor Worship" />
+    <Capability Name="Culture" Level="4" />
+    <Capability Name="Increase Trade" Level="8" />
+  </Item>
+  <!-- Legacy Version -->
+  <Item ID="Story Telling" Icon="G_TechIcon_Mongol_StoryTelling01">
+    <Data Tech="Thought" Area="Misc" Level="6" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Sulde" />
+    <Capability Name="Authority" Level="5" />
+    <Capability Name="Melee Defense" Level="-3" />
+    <Capability Name="Melee Attack" Level="2" />
+  </Item>
+  <!-- Royal Court Version -->
+  <Item ID="Story Telling2" Icon="G_TechIcon_Mongol_StoryTelling01" TranslationTag="Story Telling">
+    <Data Tech="Thought" Area="Misc" Level="3" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Sulde" />
+    <Capability Name="Authority" Level="5" />
+    <Capability Name="Melee Defense" Level="-3" />
+    <Capability Name="Melee Attack" Level="2" />
+  </Item>
+  <Item ID="Islam" Icon="G_TechIcon_Mongol_Islam01">
+    <Data Tech="Thought" Area="Misc" Level="7" />
+    <StaticRequirements>
+      <FactionTag Tag="Islamic" Condition="true" />
+    </StaticRequirements>
+    <Capability Name="Culture" Level="8" />
+    <Capability Name="Increase Trade" Level="-4" />
+  </Item>
+  <Item ID="Nestorian Christianity" Icon="G_TechIcon_Mongol_NestorianChristianity01">
+    <Data Tech="Thought" Area="Misc" Level="7" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+      <FactionTag Tag="Islam Only" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Culture" Level="8" />
+    <Capability Name="Increase Trade" Level="-4" />
+  </Item>
+  <!-- CRAFT Paper and Printing -->
+  <Item ID="Bamboo Strips" Icon="G_TechIcon_BambooStrips_01">
+    <Data Tech="Power" Area="Economy" Level="2" />
+    <StaticRequirements>
+      <TradeItem Type="Bamboo" />
+    </StaticRequirements>
+    <Prerequisite Item="Logographic Script" />
+    <Capability Name="Increase Trade" Level="1" />
+    <Capability Name="AgriculturalProduction" Level="-1" />
+    <Capability Name="Culture" Level="2" />
+  </Item>
+
+  <Item ID="Paper" Icon="G_TechIcon_Paper_01">
+    <Data Tech="Craft" Area="Economy" Level="3" />
+    <Prerequisite Item="Bamboo Strips" />
+    <Capability Name="Culture" Level="3" />
+    <Capability Name="Increase Trade" Level="2" />
+    <Capability Name="AgriculturalProduction" Level="-2" />
+  </Item>
+  <Item ID="Stone Rubbing Copying" Icon="G_TechIcon_StoneRubbingCopying_01">
+    <Data Tech="Power" Area="Economy" Level="4" />
+    <Prerequisite Item="Paper" />
+    <Capability Name="Culture" Level="4" />
+    <Capability Name="Increase Trade" Level="3" />
+    <Capability Name="AgriculturalProduction" Level="-3" />
+  </Item>
+  <Item ID="Wood Block Printing" Icon="G_TechIcon_WoodBlockPrinting_01">
+    <Data Tech="Power" Area="Economy" Level="5" />
+    <Prerequisite Item="Stone Rubbing Copying" />
+    <Capability Name="Culture" Level="5" />
+    <Capability Name="Increase Trade" Level="4" />
+    <Capability Name="AgriculturalProduction" Level="-4" />
+  </Item>
+  <Item ID="Illustrated Books" Icon="G_TechIcon_IllustratedBooks_01">
+    <Data Tech="Power" Area="Economy" Level="7" />
+    <Prerequisite Item="Wood Block Printing" />
+    <Capability Name="Culture" Level="6" />
+    <Capability Name="Increase Trade" Level="5" />
+    <Capability Name="AgriculturalProduction" Level="-5" />
+  </Item>
+  <!-- CRAFT Misc Items -->
+  <Item ID="Zither" Icon="G_TechIcon_Zither_01">
+    <Data Tech="Craft" Area="Authority" Level="8" />
+    <Prerequisite Item="Steel" />
+    <Capability Name="Authority" Level="2" />
+  </Item>
+  <!-- CRAFT Culture -->
+  <Item ID="Theatre" Icon="G_TechIcon_Theatre_01">
+    <Data Tech="Craft" Area="Culture" Level="6" />
+    <Prerequisite Item="Poetry" />
+    <Prerequisite Item="Poetry2" />
+    <Capability Name="Culture" Level="2" />
+  </Item>
+  <Item ID="Amphitheatre" Icon="G_TechIcon_Theatre_01">
+    <Data Tech="Craft" Area="Culture" Level="7" />
+    <Prerequisite Item="Theatre" />
+    <Capability Name="Culture" Level="4" />
+  </Item>
+  <Item ID="Opera" Icon="G_TechIcon_Opera_01">
+    <Data Tech="Craft" Area="Culture" Level="7" />
+    <Prerequisite Item="Theatre" />
+    <Capability Name="Culture" Level="3" />
+  </Item>
+  <Item ID="Calligraphy" Icon="G_TechIcon_Calligraphy_01">
+    <Data Tech="Craft" Area="Misc" Level="7" />
+    <Prerequisite Item="Paper" />
+    <Capability Name="Culture" Level="4" />
+  </Item>
+  <Item ID="Painting" Icon="G_TechIcon_Painting_01">
+    <Data Tech="Craft" Area="Misc" Level="8" />
+    <Prerequisite Item="Calligraphy" />
+    <Capability Name="Culture" Level="6" />
+  </Item>
+
+  <Item ID="The Five Elements" Icon="G_TechIcon_FiveElements_01">
+    <Data Tech="Knowledge" Area="Misc" Level="6" />
+    <Prerequisite Item="Yin and Yang" />
+    <Capability Name="Culture" Level="5" />
+  </Item>
+
+  <Item ID="Five Punishments" Icon="G_TechIcon_TheFivePunishments_01">
+    <Data Tech="Power" Area="Misc" Level="4" />
+    <Prerequisite Item="Logographic Script" />
+    <!-- <Capability Name="Peasant Unrest" Level="-15" /> -->
+    <!-- <Capability Name="Peasant Unrest" Level="-15" /> -->
+  </Item>
+  <Item ID="Legalism" Icon="G_TechIcon_Legalism_01">
+    <Data Tech="Thought" Area="Misc" Level="6" />
+    <StaticRequirements>
+      <FactionTag Tag="Islam Only" Condition="false" />
+      <!-- <Tech Item="Agressive Legalism" Condition="false" /> -->
+    </StaticRequirements>
+    <Requirements>
+      <!-- <Tech Item="Agressive Legalism" Condition="false" /> -->
+      <RequireEither>
+        <Tech Item="Mohism" />
+        <Tech Item="Buddhism" />
+        <Tech Item="Daoism" />
+        <Tech Item="Neo Confucianism" />
+      </RequireEither>
+    </Requirements>
+    <Prerequisite Item="Mathematics" />
+    <!-- <Capability Name="Noble Unrest" Level="15" />
+    <Capability Name="Peasant Unrest" Level="10" /> -->
+    <Capability Name="Increase Trade" Level="20" />
+  </Item>
+  <Item ID="Agressive Legalism" Icon="G_TechIcon_Legalism_01">
+    <Data Tech="Thought" Area="Misc" Level="6" />
+    <StaticRequirements>
+      <FactionTag Tag="Islam Only" Condition="false" />
+      <Tech Item="Legalism" Condition="false" />
+    </StaticRequirements>
+    <Requirements>
+      <!-- <Tech Item="Legalism" Condition="false" /> -->
+      <RequireEither>
+        <Tech Item="Mohism" />
+        <Tech Item="Buddhism" />
+        <Tech Item="Daoism" />
+        <Tech Item="Neo Confucianism" />
+      </RequireEither>
+    </Requirements>
+    <Prerequisite Item="Mathematics" />
+    <Capability Name="Noble Unrest" Level="25" />
+    <Capability Name="Peasant Unrest" Level="18" />
+    <!-- <Capability Name="Increase Trade" Level="40" /> -->
+  </Item>
+  <!-- Medicine done-->
+  <Item ID="Hot Cold Theory" Icon="G_TechIcon_HotColdTheory_01">
+    <Data Tech="Knowledge" Area="Military" Level="2" />
+    <Prerequisite Item="Yin and Yang" />
+    <Capability Name="Character Armor" Level="2" />
+  </Item>
+  <Item ID="Medicine" Icon="G_TechIcon_Medicine_01">
+    <Data Tech="Knowledge" Area="Military" Level="6" />
+    <Prerequisite Item="Hot Cold Theory" />
+    <Capability Name="Character Armor" Level="4" />
+  </Item>
+  <!-- Acupuncture Tree -->
+  <Item ID="Acupuncture" Icon="G_TechIcon_Acupuncture_01">
+    <Data Tech="Knowledge" Area="Military" Level="4" />
+    <Prerequisite Item="Medicine" />
+    <Capability Name="Battle Healing" Level="15" />
+    <Capability Name="Melee Defense" Level="-1" />
+  </Item>
+  <Item ID="Anesthetic" Icon="G_TechIcon_Anesthetic_01">
+    <Data Tech="Knowledge" Area="Military" Level="5" />
+    <StaticRequirements>
+      <Tech Item="Massage" Condition="false" />
+      <Tech Item="Tai Chi" Condition="false" />
+    </StaticRequirements>
+    <Requirements>
+      <Tech Item="Massage" Condition="false" />
+      <Tech Item="Tai Chi" Condition="false" />
+    </Requirements>
+    <Prerequisite Item="Acupuncture" />
+    <Capability Name="Battle Healing" Level="10" />
+    <Capability Name="Melee Defense" Level="-2" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Strong Anesthetic" Icon="G_TechIcon_Anesthetic_01">
+    <Data Tech="Knowledge" Area="Military" Level="7" />
+    <StaticRequirements>
+      <Tech Item="Wrestling" Condition="false" />
+    </StaticRequirements>
+    <Requirements>
+      <Tech Item="Wrestling" Condition="false" />
+    </Requirements>
+    <Prerequisite Item="Acupuncture" />
+    <Capability Name="Battle Healing" Level="15" />
+    <Capability Name="Melee Defense" Level="-3" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <!-- Acupuncture Tree Wrestling Spinoff -->
+  <Item ID="Wrestling" Icon="G_TechIcon_Mongol_Wrestling01">
+    <Data Tech="Power" Area="Military" Level="6" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+      <Tech Item="Massage" Condition="false" />
+    </StaticRequirements>
+    <Requirements>
+      <Tech Item="Massage" Condition="false" />
+    </Requirements>
+    <Prerequisite Item="Acupuncture" />
+    <Capability Name="Battle Healing" Level="-10" />
+    <Capability Name="Melee Defense" Level="3" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Wrestling Competitions" Icon="G_TechIcon_Mongol_Wrestling01">
+    <Data Tech="Power" Area="Military" Level="7" />
+    <Prerequisite Item="Wrestling" />
+    <Capability Name="Battle Healing" Level="-20" />
+    <Capability Name="Melee Defense" Level="6" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+
+  <!-- Blood Circulation Tree -->
+  <Item ID="Blood Circulation" Icon="G_TechIcon_BloodCirculation_01">
+    <Data Tech="Craft" Area="Military" Level="4" />
+    <Prerequisite Item="Acupuncture" />
+    <Capability Name="Battle Healing" Level="5" />
+    <Capability Name="Melee Attack" Level="1" />
+  </Item>
+  <Item ID="Massage" Icon="G_TechIcon_Massage_01">
+    <Data Tech="Craft" Area="Military" Level="5" />
+    <Requirements>
+      <Tech Item="Wrestling" Condition="false" />
+      <Tech Item="Anesthetic" Condition="false" />
+    </Requirements>
+    <Prerequisite Item="Blood Circulation" />
+    <Capability Name="Battle Healing" Level="10" />
+    <Capability Name="Melee Attack" Level="2" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Hot Stone Massage" Icon="G_TechIcon_Massage_01">
+    <Data Tech="Craft" Area="Military" Level="7" />
+    <StaticRequirements>
+      <Tech Item="Kung Fu" Condition="false" />
+    </StaticRequirements>
+    <Requirements>
+      <Tech Item="Kung Fu" Condition="false" />
+    </Requirements>
+    <Prerequisite Item="Massage" />
+    <Capability Name="Battle Healing" Level="15" />
+    <Capability Name="Melee Attack" Level="3" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <!-- Tai Chi Tree -->
+  <Item ID="Tai Chi" Icon="G_TechIcon_ThaiChi_01">
+    <Data Tech="Thought" Area="Military" Level="4" />
+    <StaticRequirements>
+      <Architecture Style="Chinese" />
+      <Tech Item="Wrestling" Condition="false" />
+      <Tech Item="Anesthetic" Condition="false" />
+    </StaticRequirements>
+    <Requirements>
+      <Tech Item="Wrestling" Condition="false" />
+      <Tech Item="Anesthetic" Condition="false" />
+    </Requirements>
+    <Prerequisite Item="Blood Circulation" />
+    <Prerequisite Item="Medicine" />
+    <Capability Name="Battle Healing" Level="3" />
+    <Capability Name="Melee Defense" Level="2" />
+    <Capability Name="Melee Attack" Level="1" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Kung Fu" Icon="G_TechIcon_KungFu_01">
+    <Data Tech="Thought" Area="Military" Level="5" />
+    <StaticRequirements>
+      <Architecture Style="Chinese" />
+    </StaticRequirements>
+    <Prerequisite Item="Tai Chi" />
+    <Capability Name="Battle Healing" Level="6" />
+    <Capability Name="Melee Defense" Level="4" />
+    <Capability Name="Melee Attack" Level="2" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Kung Fu Competitions" Icon="G_TechIcon_KungFu_01">
+    <Data Tech="Thought" Area="Military" Level="7" />
+    <StaticRequirements>
+      <Architecture Style="Chinese" />
+    </StaticRequirements>
+    <Prerequisite Item="Tai Chi" />
+    <Capability Name="Battle Healing" Level="9" />
+    <Capability Name="Melee Defense" Level="6" />
+    <Capability Name="Melee Attack" Level="3" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+
+
+  <!-- CRAFT Armor -->
+  <Item ID="Bronze Armor" Icon="G_TechIcon_BronzeArmor_01">
+    <Data Tech="Craft" Area="Military" Level="3" />
+    <StaticRequirements>
+      <TradeItem Type="Bronze" />
+    </StaticRequirements>
+    <Prerequisite Item="Bronze Making" />
+    <Capability Name="Character Armor" Level="2" />
+    <Capability Name="Melee Defense" Level="2" />
+  </Item>
+  <Item ID="Lamellar Coat" Icon="G_TechIcon_LamellarCoat_01">
+    <Data Tech="Craft" Area="Military" Level="4" />
+    <Prerequisite Item="Bronze Armor" />
+    <Capability Name="Character Armor" Level="4" />
+    <Capability Name="Melee Defense" Level="4" />
+  </Item>
+  <Item ID="Mountain Armor" Icon="G_TechIcon_MountainArmor_01">
+    <Data Tech="Craft" Area="Military" Level="6" />
+    <Prerequisite Item="Lamellar Coat" />
+    <Capability Name="Character Armor" Level="6" />
+    <Capability Name="Melee Defense" Level="6" />
+  </Item>
+  <Item ID="Horse Armor" Icon="G_TechIcon_HorseArmor_01">
+    <Data Tech="Craft" Area="Military" Level="6" />
+    <Prerequisite Item="Lamellar Coat" />
+    <Prerequisite Item="Horse Riding" />
+    <Capability Name="Cavalry Skill" Level="5" />
+  </Item>
+  <Item ID="Iron Armor" Icon="G_TechIcon_IronArmor_01">
+    <Data Tech="Craft" Area="Military" Level="7" />
+    <StaticRequirements>
+      <TradeItem Type="Iron" />
+    </StaticRequirements>
+    <Prerequisite Item="Malleable Cast Iron" />
+    <Capability Name="Character Armor" Level="8" />
+    <Capability Name="Melee Defense" Level="8" />
+    <CustomGameTech FactionTag="Farmers" />
+  </Item>
+
+
+  <Item ID="Spear Making" Icon="G_TechIcon_SwordMaking_01">
+    <Data Tech="Craft" Area="Military" Level="3" />
+    <Prerequisite Item="Bronze Casting" />
+  </Item>
+  <Item ID="Axe Making" Icon="G_TechIcon_SwordMaking_01">
+    <Data Tech="Craft" Area="Military" Level="4" />
+    <StaticRequirements>
+      <!-- here2 NOTE a little bit of a hack to stop herder factions getting Swordsmith building that gives them no units -->
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Two Part Stone Mold" />
+  </Item>
+  <Item ID="Halberd Making" Icon="G_TechIcon_SwordMaking_01">
+    <Data Tech="Craft" Area="Military" Level="5" />
+    <Prerequisite Item="Advanced Bronze Casting" />
+  </Item>
+  <Item ID="Sword Making" Icon="G_TechIcon_SwordMaking_01">
+    <Data Tech="Craft" Area="Military" Level="4" />
+    <StaticRequirements>
+      <!-- here2 NOTE a little bit of a hack to stop herder factions getting Swordsmith building that gives them no units -->
+      <FactionTag Tag="Farmers" />
+    </StaticRequirements>
+    <Prerequisite Item="Malleable Cast Iron" />
+  </Item>
+  <Item ID="Variable Composition Spear" Icon="G_TechIcon_VariableCompositionSword_01">
+    <Data Tech="Craft" Area="Authority" Level="9" />
+    <Requirements></Requirements>
+    <Prerequisite Item="Malleable Cast Iron" />
+    <Prerequisite Item="Steel" />
+    <Prerequisite Item="Spear Making" />
+  </Item>
+  <Item ID="Variable Composition Axe" Icon="G_TechIcon_VariableCompositionSword_01">
+    <Data Tech="Craft" Area="Authority" Level="9" />
+    <Requirements></Requirements>
+    <Prerequisite Item="Malleable Cast Iron" />
+    <Prerequisite Item="Steel" />
+    <Prerequisite Item="Axe Making" />
+  </Item>
+  <Item ID="Variable Composition Halberd" Icon="G_TechIcon_VariableCompositionSword_01">
+    <Data Tech="Craft" Area="Authority" Level="9" />
+    <Requirements></Requirements>
+    <Prerequisite Item="Malleable Cast Iron" />
+    <Prerequisite Item="Steel" />
+    <Prerequisite Item="Halberd Making" />
+  </Item>
+  <Item ID="Variable Composition Sword" Icon="G_TechIcon_VariableCompositionSword_01">
+    <Data Tech="Craft" Area="Authority" Level="9" />
+    <Requirements></Requirements>
+    <Prerequisite Item="Malleable Cast Iron" />
+    <Prerequisite Item="Steel" />
+    <Prerequisite Item="Sword Making" />
+  </Item>
+  <!-- Infantry Done?-->
+  <Item ID="Infantry Maneuvers" Icon="G_TechIcon_MilitaryTheory_01">
+    <Data Tech="Power" Area="Culture" Level="5" />
+    <Prerequisite Item="Military Drill" />
+    <Capability Name="Infantry Skill" Level="5" />
+    <Capability Name="Sword Skill" Level="-5" />
+    <!-- <Capability Name="Boost Power" Level="2" /> -->
+  </Item>
+  <Item ID="Infantry Tactics" Icon="G_TechIcon_MilitaryTheory_01">
+    <Data Tech="Knowledge" Area="Culture" Level="6" />
+    <Prerequisite Item="Infantry Maneuvers" />
+    <Capability Name="Infantry Skill" Level="10" />
+    <Capability Name="Sword Skill" Level="-10" />
+    <!-- <Capability Name="Boost Power" Level="3" /> -->
+  </Item>
+  <Item ID="Infantry Strategy" Icon="G_TechIcon_MilitaryTheory_01">
+    <Data Tech="Power" Area="Culture" Level="8" />
+    <Prerequisite Item="Infantry Tactics" />
+    <Capability Name="Infantry Skill" Level="15" />
+    <Capability Name="Sword Skill" Level="-15" />
+    <!-- <Capability Name="Boost Power" Level="4" /> -->
+  </Item>
+  <!-- Swords Done?-->
+  <Item ID="Sword Maneuvers" Icon="G_TechIcon_SwordMaking_01">
+    <Data Tech="Knowledge" Area="Culture" Level="5" />
+    <Requirements></Requirements>
+    <Prerequisite Item="Advanced Bronze Casting" />
+    <Prerequisite Item="Military Drill" />
+    <Prerequisite Item="Sword Making" />
+    <Capability Name="Sword Skill" Level="10" />
+    <!-- <Capability Name="Boost Power" Level="2" /> -->
+  </Item>
+  <Item ID="Sword Tactics" Icon="G_TechIcon_SwordMaking_01">
+    <Data Tech="Thought" Area="Culture" Level="6" />
+    <Prerequisite Item="Sword Maneuvers" />
+    <Prerequisite Item="Malleable Cast Iron" />
+    <Capability Name="Sword Skill" Level="3" />
+    <!-- <Capability Name="Boost Power" Level="4" /> -->
+  </Item>
+  <Item ID="Sword Strategy" Icon="G_TechIcon_SwordMaking_01">
+    <Data Tech="Power" Area="Culture" Level="8" />
+    <Prerequisite Item="Sword Tactics" />
+    <Prerequisite Item="Variable Composition Sword" />
+    <Capability Name="Sword Skill" Level="4" />
+    <!-- <Capability Name="Boost Power" Level="6" /> -->
+  </Item>
+  <!-- Bows DONE? -->
+  <Item ID="Bow Maneuvers" Icon="G_TechIcon_CompositeBow_01">
+    <Data Tech="Thought" Area="Culture" Level="3" />
+    <Prerequisite Item="Shortbow" />
+    <Prerequisite Item="High Tin Bronze" />
+    <Capability Name="Bow Skill" Level="5" />
+    <!-- <Capability Name="Boost Craft" Level="2" /> -->
+    <!-- <Capability Name="Boost Power" Level="1" /> -->
+  </Item>
+  <Item ID="Bow Tactics" Icon="G_TechIcon_CompositeBow_01">
+    <Data Tech="Knowledge" Area="Military" Level="5" />
+    <Prerequisite Item="Bow Maneuvers" />
+    <Prerequisite Item="Kurultai" />
+    <Capability Name="Bow Skill" Level="10" />
+    <!-- <Capability Name="Boost Craft" Level="3" /> -->
+    <!-- <Capability Name="Boost Power" Level="2" /> -->
+  </Item>
+  <Item ID="Bow Strategy" Icon="G_TechIcon_CompositeBow_01">
+    <Data Tech="Craft" Area="Culture" Level="7" />
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Bow Tactics" />
+    <Prerequisite Item="Nestorian Christianity" />
+    <Capability Name="Bow Skill" Level="15" />
+    <!-- <Capability Name="Boost Craft" Level="5" /> -->
+    <!-- <Capability Name="Boost Power" Level="3" /> -->
+  </Item>
+  <!-- Chariots Done? 17%-->
+  <Item ID="Chariot Maneuvers" Icon="G_TechIcon_FourHorseChariot_01">
+    <Data Tech="Craft" Area="Culture" Level="4" />
+    <Prerequisite Item="Horse Riding" />
+    <Prerequisite Item="Four Horse Chariot" />
+    <Capability Name="Chariot Skill" Level="5" />
+    <Capability Name="Cavalry Skill" Level="-3" />
+  </Item>
+  <Item ID="Chariot Tactics" Icon="G_TechIcon_FourHorseChariot_01">
+    <Data Tech="Power" Area="Culture" Level="6" />
+    <Prerequisite Item="Chariot Maneuvers" />
+    <Prerequisite Item="Iron Armor" />
+    <Capability Name="Chariot Skill" Level="10" />
+    <Capability Name="Cavalry Skill" Level="-5" />
+  </Item>
+  <Item ID="Chariot Strategy" Icon="G_TechIcon_FourHorseChariot_01">
+    <Data Tech="Knowledge" Area="Culture" Level="8" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Chariot Tactics" />
+    <Prerequisite Item="Horse Armor" />
+    <Capability Name="Chariot Skill" Level="15" />
+    <Capability Name="Cavalry Skill" Level="-8" />
+  </Item>
+  <!-- Cavalry 12%-->
+  <Item ID="Cavalry Maneuvers" Icon="G_TechIcon_HorseArmor_01">
+    <Data Tech="Power" Area="Culture" Level="5" />
+    <Prerequisite Item="Horse Riding" />
+    <Prerequisite Item="The Five Elements" />
+    <Capability Name="Cavalry Skill" Level="5" />
+    <Capability Name="Chariot Skill" Level="-2" />
+  </Item>
+  <Item ID="Cavalry Tactics" Icon="G_TechIcon_HorseArmor_01">
+    <Data Tech="Power" Area="Culture" Level="7" />
+    <Prerequisite Item="Cavalry Maneuvers" />
+    <Prerequisite Item="Tai Chi" />
+    <Capability Name="Cavalry Skill" Level="9" />
+    <Capability Name="Chariot Skill" Level="-4" />
+  </Item>
+  <Item ID="Cavalry Strategy" Icon="G_TechIcon_HorseArmor_01">
+    <Data Tech="Power" Area="Culture" Level="8" />
+    <Prerequisite Item="Cavalry Tactics" />
+    <Prerequisite Item="Khanate Administration" />
+    <Capability Name="Cavalry Skill" Level="14" />
+    <Capability Name="Chariot Skill" Level="-7" />
+  </Item> <!-- Cavalry Archers-->
+  <Item ID="Horse Archery" Icon="G_TechIcon_HorseArchery_01">
+    <Data Tech="Craft" Area="Culture" Level="3" />
+    <Prerequisite Item="Horse Riding" />
+    <Prerequisite Item="Shortbow" />
+    <Capability Name="Cavalry Skill" Level="1" />
+    <Capability Name="Bow Skill" Level="4" />
+  </Item>
+  <Item ID="Parthian Shot" Icon="G_TechIcon_HorseArchery_01">
+    <Data Tech="Thought" Area="Culture" Level="6" />
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Horse Archery" />
+    <Prerequisite Item="Bow Maneuvers" />
+    <Capability Name="Cavalry Skill" Level="2" />
+    <Capability Name="Bow Skill" Level="8" />
+  </Item>
+  <Item ID="Cantabrian Circle" Icon="G_TechIcon_HorseArchery_01">
+    <Data Tech="Knowledge" Area="Culture" Level="8" />
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="true" />
+      <FactionTag Tag="Herders" Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Parthian Shot" />
+    <Prerequisite Item="Bow Strategy" />
+    <Capability Name="Cavalry Skill" Level="3" />
+    <Capability Name="Bow Skill" Level="12" />
+  </Item>
+  <!-- Cavalry base-->
+  <Item ID="Horse Domestication" Icon="G_TechIcon_HorseDomestication_01">
+    <Data Tech="Power" Area="Culture" Level="0" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Agriculture" Level="5" />
+    <!-- <Capability Name="Boost Craft" Level="5" /> -->
+  </Item>
+  <Item ID="Horse Riding" Icon="G_TechIcon_HorseRiding_01">
+    <Data Tech="Power" Area="Culture" Level="1" />
+    <Prerequisite Item="Horse Domestication" />
+    <Capability Name="Boost Agriculture" Level="5" />
+    <Capability Name="Authority" Level="1" />
+  </Item>
+  <Item ID="Stirrup" Icon="G_TechIcon_Stirrups_01">
+    <Data Tech="Power" Area="Culture" Level="7" />
+    <Prerequisite Item="Horse Armor" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Agriculture" Level="5" />
+    <Capability Name="Cavalry Skill" Level="10" />
+  </Item>
+  <!-- Wall Construction -->
+  <Item ID="Wooden Palisade" Icon="G_TechIcon_RammedEarthWall_01">
+    <Data Tech="Power" Area="Military" Level="0" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Military" Level="1" />
+  </Item>
+  <Item ID="Rammed Earth Wall" Icon="G_TechIcon_RammedEarthWall_01">
+    <Data Tech="Power" Area="Military" Level="2" />
+    <Prerequisite Item="Wooden Palisade" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Military" Level="2" />
+  </Item>
+  <Item ID="High Walls" Icon="G_TechIcon_HighWalls_01">
+    <Data Tech="Power" Area="Military" Level="4" />
+    <Prerequisite Item="Rammed Earth Wall" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Military" Level="3" />
+  </Item>
+  <Item ID="Brick Faced Walls" Icon="G_TechIcon_BrickFacedWalls_01">
+    <Data Tech="Power" Area="Military" Level="7" />
+    <Prerequisite Item="Military Architecture" />
+    <Capability Name="Wall Construction" Level="1" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Military" Level="3" />
+  </Item>
+  <Item ID="Siege Defenses I" Icon="G_TechIcon_MilitaryArchitecture_01">
+    <Data Tech="Power" Area="Military" Level="4" />
+    <Prerequisite Item="Rammed Earth Wall" />
+    <Prerequisite Item="Military Structures" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Military" Level="2" />
+  </Item>
+  <Item ID="Siege Defenses II" Icon="G_TechIcon_MilitaryArchitecture_01">
+    <Data Tech="Power" Area="Military" Level="6" />
+    <Prerequisite Item="Siege Defenses I" />
+    <Prerequisite Item="Military Architecture" />
+    <Prerequisite Item="High Walls" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Military" Level="2" />
+  </Item>
+  <Item ID="Military Architecture" Icon="G_TechIcon_MilitaryArchitecture_01">
+    <Data Tech="Power" Area="Military" Level="6" />
+    <Prerequisite Item="High Walls" />
+    <Prerequisite Item="Military Structures" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Military" Level="1" />
+  </Item>
+  <Item ID="Military Structures" Icon="G_TechIcon_MilitaryArchitecture_01">
+    <Data Tech="Power" Area="Military" Level="3" />
+    <Prerequisite Item="Rammed Earth Wall" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Boost Military" Level="1" />
+  </Item>
+
+
+  <!-- Writing and Literature done? -->
+  <Item ID="Logographic Script" Icon="G_TechIcon_LogographicScript_01">
+    <Data Tech="Thought" Area="Misc" Level="2" />
+    <Prerequisite Item="Oracle Bones" />
+    <Capability Name="Culture" Level="1" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="Noble Happiness" Level="2" /> -->
+    <!-- <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="Increase Scholar Energy" Level="1" />
+    <Capability Name="Increase General Energy" Level="1" />
+  </Item>
+  <Item ID="Literature" Icon="G_TechIcon_Literature_01">
+    <Data Tech="Thought" Area="Misc" Level="6" />
+    <Prerequisite Item="Paper" />
+    <Capability Name="Culture" Level="2" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="Noble Happiness" Level="2" />
+    <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="Increase Scholar Energy" Level="1" />
+    <Capability Name="Increase General Energy" Level="1" />
+  </Item>
+  <Item ID="Literary Criticism2" Icon="G_TechIcon_LiteraryCriticism_01" TranslationTag="Literary Criticism">
+    <Data Tech="Thought" Area="Misc" Level="8" />
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Literature" />
+    <Capability Name="Culture" Level="1" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="Noble Unrest" Level="2" />
+    <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="Increase Scholar Energy" Level="1" />
+    <Capability Name="Increase General Energy" Level="1" />
+  </Item>
+  <Item ID="Poetry2" Icon="G_TechIcon_Poetry_01" TranslationTag="Poetry">
+    <Data Tech="Thought" Area="Misc" Level="3" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="false" />
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Logographic Script" />
+    <Capability Name="Culture" Level="1" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="Noble Happiness" Level="2" />
+    <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="Increase Scholar Energy" Level="1" />
+    <Capability Name="Increase General Energy" Level="1" />
+  </Item>
+
+  <!-- History -->
+  <Item ID="Record Keeping" Icon="G_TechIcon_NationalMyth_01">
+    <Data Tech="Knowledge" Area="Misc" Level="3" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Culture" Level="1" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="Noble Unrest" Level="1" />
+    <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="Increase Scholar Virtue" Level="1" />
+    <Capability Name="Increase Scholar Energy" Level="1" />
+  </Item>
+  <Item ID="Canon of Wisdom2" Icon="G_TechIcon_CannonofWisdom_01">
+    <Data Tech="Knowledge" Area="Misc" Level="4" />
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Record Keeping" />
+    <Prerequisite Item="Bamboo Strips" />
+    <Capability Name="Culture" Level="2" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="Noble Unrest" Level="1" />
+    <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="Increase General Virtue" Level="1" />
+    <Capability Name="Increase General Energy" Level="1" />
+  </Item>
+  <Item ID="History2" Icon="G_TechIcon_History_01" TranslationTag="History">
+    <Data Tech="Knowledge" Area="Misc" Level="5" />
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Canon of Wisdom2" />
+    <Capability Name="Culture" Level="4" />
+    <Capability Name="Boost Culture" Level="4" />
+    <!-- <Capability Name="Noble Unrest" Level="1" />
+    <Capability Name="Peasant Happiness" Level="1" /> -->
+    <Capability Name="NewLeaderEnergy" Level="1" />
+    <Capability Name="NewLeaderVirtue" Level="1" />
+  </Item>
+
+
+  <!-- Royal Court version -->
+  <Item ID="Mandate of Heaven2" Icon="G_TechIcon_MandateofHeaven_01" TranslationTag="Mandate of Heaven">
+    <Data Tech="Power" Area="Authority" Level="5" />
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Prerequisite Item="Priest King" />
+    <Prerequisite Item="History2" />
+    <Capability Name="Authority" Level="15" />
+  </Item>
+
+  <Item ID="Imperial Rites" Icon="G_TechIcon_ImperialRites_01">
+    <Data Tech="Power" Area="Authority" Level="6" />
+    <Prerequisite Item="Mandate of Heaven2" />
+    <Capability Name="Authority" Level="25" />
+  </Item>
+
+  <!-- Power -->
+  <!-- Chariots -->
+  <Item ID="Light Chariot" Icon="G_TechIcon_Chariot_01">
+    <Data Tech="Power" Area="Military" Level="1" />
+    <Prerequisite Item="Horse Domestication" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Chariot Skill" Level="3" />
+  </Item>
+  <Item ID="Heavy Chariot" Icon="G_TechIcon_HeavyChariot_01">
+    <Data Tech="Power" Area="Military" Level="2" />
+    <Prerequisite Item="Light Chariot" />
+    <Capability Name="Authority" Level="1" />
+    <Capability Name="Chariot Skill" Level="6" />
+  </Item>
+  <Item ID="Four Horse Chariot" Icon="G_TechIcon_FourHorseChariot_01">
+    <Data Tech="Power" Area="Military" Level="3" />
+    <Prerequisite Item="Heavy Chariot" />
+    <Capability Name="Authority" Level="2" />
+    <Capability Name="Chariot Skill" Level="9" />
+  </Item>
+
+
+  <!-- Roads and Mines -->
+  <Item ID="Road Building" Icon="G_TechIcon_RoadBuilding_01">
+    <Data Tech="Craft" Area="Military" Level="1" />
+    <Prerequisite Item="Rammed Earth Wall" />
+    <Capability Name="Road Building" Level="1" />
+    <Capability Name="Boost Agriculture" Level="10" />
+    <Capability Name="Authority" Level="3" />
+  </Item>
+  <Item ID="Churn Drill" Icon="G_TechIcon_ChurnDrill_01">
+    <Data Tech="Craft" Area="Military" Level="1" />
+    <Prerequisite Item="Rammed Earth Wall" />
+    <Capability Name="Authority" Level="3" />
+  </Item>
+  <Item ID="Mine Ventilation" Icon="G_TechIcon_MineVentilation_01">
+    <Data Tech="Craft" Area="Military" Level="4" />
+    <Prerequisite Item="Churn Drill" />
+    <Capability Name="Authority" Level="3" />
+  </Item>
+
+
+  <!-- Weapons -->
+
+  <Item ID="Shortbow" Icon="G_TechIcon_CompositeBow_01">
+    <Data Tech="Craft" Area="Culture" Level="0" />
+  </Item>
+  <Item ID="Longbow" Icon="G_TechIcon_CompositeBow_01">
+    <Data Tech="Craft" Area="Culture" Level="3" />
+    <Prerequisite Item="Shortbow" />
+  </Item>
+  <Item ID="Composite Bow" Icon="G_TechIcon_CompositeBow_01">
+    <Data Tech="Craft" Area="Culture" Level="0" />
+    <Prerequisite Item="Longbow" />
+  </Item>
+  <Item ID="Crossbow" Icon="G_TechIcon_Crossbow_01">
+    <Data Tech="Craft" Area="Culture" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="false" />
+    </StaticRequirements>
+    <Requirements>
+      <Tech Item="Advanced Bronze Casting" />
+    </Requirements>
+    <Prerequisite Item="Advanced Bronze Casting" />
+    <Prerequisite Item="Composite Bow" />
+    <Capability Name="Authority" Level="2" />
+  </Item>
+  <Item ID="Chu ko nu" Icon="G_TechIcon_RepeatingCrossbow_01">
+    <Data Tech="Craft" Area="Culture" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Crossbow" />
+    <Capability Name="Authority" Level="2" />
+  </Item>
+
+
+  <!-- Military Theory -->
+  <Item ID="Military Drill" Icon="G_TechIcon_MilitaryDrill_01">
+    <Data Tech="Knowledge" Area="Culture" Level="0" />
+    <Capability Name="Authority" Level="1" />
+  </Item>
+  <Item ID="Signaling" Icon="G_TechIcon_Signaling_01">
+    <Data Tech="Knowledge" Area="Culture" Level="1" />
+    <Prerequisite Item="Military Drill" />
+    <Capability Name="CombatAdvantage" Level="1" />
+  </Item>
+  <Item ID="Combined Arms" Icon="G_TechIcon_CombinedArms_01">
+    <Data Tech="Knowledge" Area="Culture" Level="2" />
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Signaling" />
+    <Capability Name="CombatAdvantage" Level="1" />
+  </Item>
+  <Item ID="Military Theory" Icon="G_TechIcon_MilitaryTheory_01">
+    <Data Tech="Knowledge" Area="Culture" Level="4" />
+    <Prerequisite Item="Signaling" />
+    <Prerequisite Item="Combined Arms" />
+    <Prerequisite Item="Bamboo Strips" />
+    <Capability Name="Infantry Skill" Level="-5" />
+    <Capability Name="Sword Skill" Level="3" />
+    <Capability Name="Bow Skill" Level="6" />
+    <Capability Name="Crossbow Skill" Level="3" />
+    <Capability Name="Chariot Skill" Level="-4" />
+    <Capability Name="Cavalry Skill" Level="-2" />
+  </Item>
+  <Item ID="Guest General" Icon="G_TechIcon_MilitaryTheory_01">
+    <Data Tech="Knowledge" Area="Culture" Level="7" />
+    <Prerequisite Item="Military Theory" />
+    <Capability Name="Authority" Level="2" />
+    <Capability Name="Character Armor" Level="5" />
+    <Capability Name="Infantry Skill" Level="3" />
+    <Capability Name="Sword Skill" Level="1" />
+    <Capability Name="Bow Skill" Level="-1" />
+    <Capability Name="Crossbow Skill" Level="2" />
+    <Capability Name="Chariot Skill" Level="8" />
+    <Capability Name="Cavalry Skill" Level="-1" />
+  </Item>
+
+  <!-- Knowledge: Mathematics -->
+  <Item ID="Calendar" Icon="G_TechIcon_Calendar_01">
+    <Data Tech="Knowledge" Area="Authority" Level="3" />
+    <Capability Name="Increase Trade" Level="3" />
+  </Item>
+  <Item ID="Astronomy" Icon="G_TechIcon_Astronomy_01">
+    <Data Tech="Knowledge" Area="Authority" Level="5" />
+    <Prerequisite Item="Calendar" />
+    <Capability Name="Increase Trade" Level="6" />
+  </Item>
+
+
+  <!-- Naval Technologies ///////////////////////////////////-->
+  <Item ID="Ship Building" Icon="G_TechIcon_LargeRiverShip_01">
+    <Data Tech="Thought" Area="Naval" Level="0" />
+    <Requirements></Requirements>
+    <Prerequisite Item="Advanced Bronze Casting" />
+    <Prerequisite Item="Bronze Making" />
+  </Item>
+  <Item ID="Dock" Icon="G_TechIcon_LargeRiverShip_01">
+    <Data Tech="Thought" Area="Naval" Level="2" />
+    <Prerequisite Item="Ship Building" />
+  </Item>
+  <Item ID="Large Dock" Icon="G_TechIcon_LargeRiverShip_01">
+    <Data Tech="Thought" Area="Naval" Level="4" />
+    <Prerequisite Item="Dock" />
+  </Item>
+  <Item ID="Junk Sails" Icon="G_TechIcon_Junk_01">
+    <Data Tech="Thought" Area="Naval" Level="5" />
+    <Prerequisite Item="Dock" />
+    <Capability Name="Increase Ship HP" Level="10" />
+  </Item>
+  <Item ID="Shipyard" Icon="G_TechIcon_LargeRiverShip_01">
+    <Data Tech="Thought" Area="Naval" Level="4" />
+    <Prerequisite Item="Quenching" />
+    <Prerequisite Item="Junk Sails" />
+    <Prerequisite Item="Dock" />
+  </Item>
+  <Item ID="Stern Rudder" Icon="G_TechIcon_Rudder_01">
+    <Data Tech="Thought" Area="Naval" Level="5" />
+    <Prerequisite Item="Large Dock" />
+    <Capability Name="Increase Ship HP" Level="20" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Large Shipyard" Icon="G_TechIcon_LargeRiverShip_01">
+    <Data Tech="Thought" Area="Naval" Level="6" />
+    <Prerequisite Item="Shipyard" />
+    <Prerequisite Item="Stern Rudder" />
+    <Prerequisite Item="Steel" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Paddle Wheel" Icon="G_TechIcon_PaddleWheel_01">
+    <Data Tech="Thought" Area="Naval" Level="6" />
+    <Prerequisite Item="Stern Rudder" />
+    <Prerequisite Item="Shipyard" />
+    <Capability Name="Increase Ship HP" Level="30" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Wharf" Icon="G_TechIcon_LargeRiverShip_01">
+    <Data Tech="Thought" Area="Naval" Level="7" />
+    <Prerequisite Item="Paddle Wheel" />
+    <Prerequisite Item="Large Shipyard" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Watertight Compartments" Icon="G_TechIcon_WatertightCompartments_01">
+    <Data Tech="Thought" Area="Naval" Level="8" />
+    <Prerequisite Item="Wharf" />
+    <Capability Name="Increase Ship HP" Level="25" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Star Charts" Icon="G_TechIcon_StarCharts_01">
+    <Data Tech="Thought" Area="Naval" Level="5" />
+    <Prerequisite Item="Astronomy" />
+    <Prerequisite Item="Large Shipyard" />
+    <Capability Name="Seafaring" Level="1" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Marine Compass" Icon="G_TechIcon_Compass_01">
+    <Data Tech="Thought" Area="Naval" Level="4" />
+    <Prerequisite Item="Star Charts" />
+    <Prerequisite Item="Wharf" />
+    <Capability Name="Oceanfaring" Level="1" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+
+
+  <!-- REMOVED ITEMS KEPT FOR SAVE GAME COMPATIBILITY -->
+  <Item ID="Mahjong" Icon="G_TechIcon_Mahjong_01">
+    <Data Tech="Thought" Area="Misc" Level="5" />
+    <StaticRequirements>
+      <Never />
+    </StaticRequirements>
+    <Prerequisite Item="Tea Culture" />
+    <Capability Name="Culture" Level="2" />
+  </Item>
+  <Item ID="Chrome Plating" Icon="G_TechIcon_ChromePlating_01">
+    <Data Tech="Craft" Area="Misc" Level="6" />
+    <StaticRequirements>
+      <Never />
+    </StaticRequirements>
+    <Prerequisite Item="Malleable Cast Iron" />
+    <Capability Name="Culture" Level="1" />
+    <Capability Name="IronTradeValue" Level="5" />
+  </Item>
+
+  <!-- Added in Genghis -->
+  <Item ID="Iron Wheeled Carts" Icon="G_TechIcon_Mongol_IronWheeledCarts01">
+    <Data Tech="Knowledge" Area="Agriculture" Level="7" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Nomadism" />
+  </Item>
+  <Item ID="Terror Tactics" Icon="G_TechIcon_Mongol_TerrorTactics01">
+    <Data Tech="Power" Area="Authority" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Military Theory" />
+    <Capability Name="Terror Tactics" Level="2" />
+  </Item>
+  <Item ID="Terror Tactics2" Icon="G_TechIcon_Mongol_TerrorTactics01">
+    <Data Tech="Power" Area="Authority" Level="7" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Terror Tactics" />
+    <Capability Name="Terror Tactics" Level="4" />
+  </Item>
+  <Item ID="Terror Tactics3" Icon="G_TechIcon_Mongol_TerrorTactics01">
+    <Data Tech="Power" Area="Authority" Level="7" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Terror Tactics2" />
+    <Capability Name="Terror Tactics" Level="6" />
+  </Item>
+  <Item ID="Nerge" Icon="G_TechIcon_Mongol_Nerge01">
+    <Data Tech="Knowledge" Area="Authority" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Horse Archery" />
+    <Capability Name="Melee Defense" Level="-2" />
+    <Capability Name="Culture" Level="3" />
+    <Capability Name="Authority" Level="3" />
+  </Item>
+
+  <Item ID="Steppe Medicine" Icon="G_TechIcon_Mongol_SteppeMedicine01">
+    <Data Tech="Knowledge" Area="Authority" Level="6" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Acupuncture" />
+    <Capability Name="Battle Healing" Level="15" />
+    <Capability Name="Culture" Level="1" />
+  </Item>
+
+  <Item ID="Allegiance" Icon="G_TechIcon_Mongol_Allegiance01">
+    <Data Tech="Power" Area="Authority" Level="6" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Qada Anda Nokor" />
+    <Capability Name="Authority" Level="4" />
+    <Capability Name="Melee Defense" Level="-1" />
+    <Capability Name="Melee Attack" Level="1" />
+    <Capability Name="Increase Trade" Level="-1" />
+  </Item>
+
+  <Item ID="Kurultai" Icon="G_TechIcon_Mongol_Kurultai01">
+    <Data Tech="Power" Area="Authority" Level="5" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Allegiance" />
+    <Capability Name="Authority" Level="7" />
+    <Capability Name="Melee Defense" Level="-2" />
+    <Capability Name="Melee Attack" Level="2" />
+    <Capability Name="Increase Trade" Level="-2" />
+  </Item>
+
+  <Item ID="Khanate Administration" Icon="G_TechIcon_Mongol_KhanateAdministraion01">
+    <Data Tech="Power" Area="Authority" Level="7" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Prerequisite Item="Allegiance" />
+    <Capability Name="Authority" Level="10" />
+    <Capability Name="Melee Defense" Level="-3" />
+    <Capability Name="Melee Attack" Level="3" />
+    <Capability Name="Increase Trade" Level="-5" />
+  </Item>
+
+  <!-- Mongol specific items -->
+
+  <Item ID="Decimal Army Organization" Icon="G_TechIcon_Mongol_DecimalArmyOrganization01">
+    <Data Tech="Power" Area="Authority" Level="7" />
+    <StaticRequirements>
+      <Faction ID="Khamag Mongols" />
+    </StaticRequirements>
+    <Prerequisite Item="Military Theory" />
+    <Capability Name="Authority" Level="2" />
+  </Item>
+
+  <Item ID="Reconnaissance" Icon="G_TechIcon_Mongol_Reconnaissance01">
+    <Data Tech="Power" Area="Authority" Level="7" />
+    <StaticRequirements>
+      <Faction ID="Khamag Mongols" />
+    </StaticRequirements>
+    <Prerequisite Item="Military Theory" />
+    <Capability Name="Authority" Level="2" />
+  </Item>
+
+  <Item ID="Use All Talents" Icon="G_TechIcon_Mongol_UseAllTalents01">
+    <Data Tech="Power" Area="Misc" Level="7" />
+    <StaticRequirements>
+      <Faction ID="Khamag Mongols" />
+    </StaticRequirements>
+    <Prerequisite Item="Tengrism" />
+    <Capability Name="Capture Tech" Level="50" />
+    <!-- <Capability Name="Boost Knowledge" Level="10" /> -->
+    <!-- <Capability Name="Boost Craft" Level="10" /> -->
+  </Item>
+
+  <!-- Genghis specific items -->
+  <Item ID="Protection of Heaven" Icon="G_TechIcon_Mongol_ProtectionOfHeaven01">
+    <Data Tech="Thought" Area="Authority" Level="7" />
+    <StaticRequirements>
+      <FactionTag Tag="Genghis" />
+    </StaticRequirements>
+    <Capability Name="Leader Invulnerable" Level="13" />
+  </Item>
+
+  <Item ID="Loyal Followers" Icon="G_TechIcon_Mongol_LoyalFollowers01">
+    <Data Tech="Thought" Area="Authority" Level="8" />
+    <StaticRequirements>
+      <FactionTag Tag="Genghis" />
+    </StaticRequirements>
+    <Prerequisite Item="Protection of Heaven" />
+    <Capability Name="Authority" Level="16" />
+  </Item>
+
+  <Item ID="Mongol Destiny" Icon="G_TechIcon_Mongol_MongolDestiny01">
+    <Data Tech="Thought" Area="Authority" Level="9" />
+    <StaticRequirements>
+      <FactionTag Tag="Genghis" />
+    </StaticRequirements>
+    <Prerequisite Item="Loyal Followers" />
+    <Capability Name="Authority" Level="20" />
+  </Item>
+  <Item ID="Poetry" Icon="G_TechIcon_Poetry_01">
+    <Data Tech="Thought" Area="Misc" Level="3" />
+    <StaticRequirements>
+      <FactionTag Tag="Herders" Condition="false" />
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Logographic Script" />
+    <Capability Name="Culture" Level="1" />
+  </Item>
+  <!-- Legacy Version -->
+  <Item ID="Literary Criticism" Icon="G_TechIcon_LiteraryCriticism_01">
+    <Data Tech="Thought" Area="Misc" Level="8" />
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Literature" />
+  </Item>
+  <!-- Pre Gunpowder Artillery -->
+  <Item ID="Stone Throwing Engine" Icon="G_TechIcon_SmallStoneThrower_01">
+    <Data Tech="Power" Area="Misc" Level="6" />
+    <Capability Name="Authority" Level="2" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Crouching Tiger" Icon="G_TechIcon_CrouchingTigerStoneThrower_01">
+    <Data Tech="Power" Area="Misc" Level="6" />
+    <Prerequisite Item="Stone Throwing Engine" />
+    <Capability Name="Authority" Level="2" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Four Legged Engine" Icon="G_TechIcon_FourLeggedEngine_01">
+    <Data Tech="Power" Area="Misc" Level="8" />
+    <Prerequisite Item="Crouching Tiger" />
+    <Capability Name="Authority" Level="2" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Counterweight Trebuchet" Icon="G_TechIcon_CounterweightTrebuchet_01">
+    <Data Tech="Power" Area="Misc" Level="8" />
+    <Prerequisite Item="Four Legged Engine" />
+    <Capability Name="Authority" Level="3" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+
+  <Item ID="Giant Crossbow" Icon="G_TechIcon_GiantCrossbow_01">
+    <Data Tech="Power" Area="Misc" Level="8" />
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Crouching Tiger" />
+    <Prerequisite Item="Crossbow" />
+    <Capability Name="Authority" Level="1" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Triple Giant Crossbow" Icon="G_TechIcon_TripleGiantCrossbow_01">
+    <Data Tech="Power" Area="Misc" Level="9" />
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Giant Crossbow" />
+    <Capability Name="Authority" Level="2" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+
+  <!-- Gunpowder Weapons -->
+  <Item ID="Beehive Rocket Launcher" Icon="G_TechIcon_Rocket_01">
+    <Data Tech="Power" Area="Misc" Level="9" />
+    <StaticRequirements>
+      <FactionTag Tag="No Gunpowder" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Gunpowder" />
+    <Capability Name="Authority" Level="3" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Three Eyed Gun" Icon="G_TechIcon_3BarrelGun_01">
+    <Data Tech="Power" Area="Misc" Level="9" />
+    <StaticRequirements>
+      <FactionTag Tag="No Gunpowder" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Beehive Rocket Launcher" />
+    <Capability Name="Authority" Level="4" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+
+  <!-- Gunpowder Artillery -->
+  <Item ID="Hundred Tigers Launcher" Icon="G_TechIcon_MultipleRocket_01">
+    <Data Tech="Power" Area="Misc" Level="9" />
+    <StaticRequirements>
+      <FactionTag Tag="No Gunpowder" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Beehive Rocket Launcher" />
+    <Capability Name="Authority" Level="4" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Cannon Making" Icon="G_TechIcon_Cannon_01">
+    <Data Tech="Power" Area="Misc" Level="10" />
+    <StaticRequirements>
+      <FactionTag Tag="No Gunpowder" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Three Eyed Gun" />
+    <Capability Name="Authority" Level="5" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+
+  <!-- Gunpowder and incendiaries -->
+  <Item ID="Flaming Pitch" Icon="G_TechIcon_Naphtha_01">
+    <Data Tech="Knowledge" Area="Military" Level="3" />
+    <Prerequisite Item="The Five Elements" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Gunpowder" Icon="G_TechIcon_Gunpowder_01">
+    <Data Tech="Knowledge" Area="Military" Level="6" />
+    <StaticRequirements>
+      <FactionTag Tag="No Gunpowder" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Flaming Pitch" />
+    <Prerequisite Item="Mathematics" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Thunderclap Bomb" Icon="G_TechIcon_FragmentationBomb_01">
+    <Data Tech="Power" Area="Misc" Level="8" />
+    <StaticRequirements>
+      <FactionTag Tag="No Gunpowder" Condition="false" />
+    </StaticRequirements>
+    <Prerequisite Item="Gunpowder" />
+    <Prerequisite Item="Crouching Tiger" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Enable Clear Grassland" Icon="G_TechIcon_VariableCompositionSword_01">
+    <Data Tech="Power" Area="Misc" Level="1" />
+    <Prerequisite Item="Axe Making" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Enable Clear Fertile Plain" Icon="G_TechIcon_VariableCompositionSword_01">
+    <Data Tech="Power" Area="Misc" Level="1" />
+    <Prerequisite Item="Axe Making" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Enable Clear Gentle Hills" Icon="G_TechIcon_VariableCompositionSword_01">
+    <Data Tech="Power" Area="Misc" Level="2" />
+    <Prerequisite Item="Axe Making" />
+    <Prerequisite Item="Terracing" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Enable Clear Steep Hills" Icon="G_TechIcon_VariableCompositionSword_01">
+    <Data Tech="Power" Area="Misc" Level="2" />
+    <Prerequisite Item="Axe Making" />
+    <Prerequisite Item="Terracing" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+  <Item ID="Enable Clear Plateau" Icon="G_TechIcon_VariableCompositionSword_01">
+    <Data Tech="Power" Area="Misc" Level="2" />
+    <Prerequisite Item="Axe Making" />
+    <Prerequisite Item="Terracing" />
+    <CustomGameTech FactionTag="Never" />
+  </Item>
+</TechnologyItems>

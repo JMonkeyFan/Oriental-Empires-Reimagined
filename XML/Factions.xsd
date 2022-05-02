@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+  
+  <!-- Enumeration of areas -->
+  <xs:simpleType name="FactionSelection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Any"/>
+      <xs:enumeration value="AIOnly"/>
+      <xs:enumeration value="Hidden"/>
+      <xs:enumeration value="LockedTurns"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="FactionRelations">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="AtWar"/>
+      <xs:enumeration value="TheirVassal"/>
+      <xs:enumeration value="FraternalPact"/>
+      <xs:enumeration value="DefensivePact"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="RelationshipType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Spouse"/>
+      <xs:enumeration value="Concubine"/>
+      <xs:enumeration value="Parent"/>
+      <xs:enumeration value="Child"/>
+      <xs:enumeration value="Sibling"/>
+      <xs:enumeration value="Friend"/>
+      <xs:enumeration value="Enemy"/>
+      <xs:enumeration value="Other"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PortraitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="General"/>
+      <xs:enumeration value="FemaleNoble"/>
+      <xs:enumeration value="MaleCivilian"/>
+      <xs:enumeration value="Hero"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PortraitSet">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Chinese"/>
+      <xs:enumeration value="Mongolian"/>
+      <xs:enumeration value="IslamicTurk"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType  name ="MapPosition">
+    <xs:sequence>
+      <xs:element name="Pos">
+        <xs:complexType>
+          <xs:attribute name ="X" type="xs:int" use ="required"/>
+          <xs:attribute name ="Y" type="xs:int" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name ="MapPositionList">
+    <xs:sequence>
+      <xs:element name="Pos" type="oe:MapPosition" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name ="Settlement">
+    <xs:sequence>
+      <xs:element name ="Walls" minOccurs ="0">
+        <xs:complexType>
+          <xs:attribute name ="WallLevel" type="xs:nonNegativeInteger" use="optional"/>
+          <xs:attribute name ="WallTech" type="xs:nonNegativeInteger" use="optional"/>
+          <xs:attribute name ="TowerUpgrade" type="xs:nonNegativeInteger" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name ="Population" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name ="Type" type="xs:string" use="optional"/>
+          <xs:attribute name ="Number" type="xs:positiveInteger" use="required"/>
+          <xs:attribute name ="Flocks" type="xs:positiveInteger" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Building" maxOccurs="unbounded" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name ="Type" type="xs:string" use="required"/>
+          <xs:attribute name ="X" type="xs:int" use="optional"/>
+          <xs:attribute name ="Y" type="xs:int" use="optional"/>
+          <xs:attribute name="CannotDestroy" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FarmImprovements" type="oe:MapPositionList" minOccurs="0"/>
+      <xs:element name="ClearanceImprovements" type="oe:MapPositionList" minOccurs="0"/>
+      <xs:element name="RoadImprovements" type="oe:MapPositionList" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name ="Name" type="xs:string" use="required"/>
+    <xs:attribute name ="X" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name ="Y" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name="Template" type="xs:string" use="required"/>
+    <xs:attribute name="TiledRoof" type="xs:boolean" use="optional"/>
+    <xs:attribute name ="Architecture" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="Unit">
+    <xs:sequence>
+      <xs:element name="Leader" type ="oe:Leader" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name ="Type" type="xs:string" use="required"/>
+    <xs:attribute name ="Number" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name ="Cargo" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="Relationship">
+    <xs:attribute name="FirstName" type="xs:string" use="required"/>
+    <xs:attribute name="LastName" type="xs:string" use="optional"/>
+    <xs:attribute name="Type" type ="oe:RelationshipType" use="required"/>
+    <xs:attribute name="Value" type ="xs:float" use="optional"/>
+    <xs:attribute name="Reciprical" type ="xs:boolean" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="CourtCharacter">
+    <xs:sequence>
+      <xs:element name ="Bodyguard" maxOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Unit" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Reserve" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="AvailableTurn" type="xs:integer" use="required"/>
+          <xs:attribute name="EventOnlyUntilTurn" type="xs:integer" use="optional"/>
+          <xs:attribute name="Transferable" type="xs:boolean" use="required"/>
+          <xs:attribute name="X" type ="xs:integer" use="optional"/>
+          <xs:attribute name="Y" type ="xs:integer" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Relationship" type ="oe:Relationship" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="FirstName" type="xs:string" use="required"/>
+    <xs:attribute name="LastName" type="xs:string" use="required"/>
+    <xs:attribute name="Dead" type="xs:boolean" use="optional"/>
+    <xs:attribute name ="PortraitIndex" type="xs:nonNegativeInteger" use="required"/>
+    <xs:attribute name ="PortraitType" type="oe:PortraitType" use="required"/>
+    <xs:attribute name ="PortraitSet" type="oe:PortraitSet" use="optional"/>
+    <xs:attribute name ="Energy" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name ="Virtue" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name ="AgeInYears" type="xs:nonNegativeInteger" use="required"/>
+    <xs:attribute name ="Authority" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name="Office" type="xs:string" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="Leader">
+    <xs:sequence>
+      <xs:element name="Relationship" type ="oe:Relationship" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="FirstName" type="xs:string" use="required"/>
+    <xs:attribute name="LastName" type="xs:string" use="required"/>
+    <xs:attribute name ="PortraitIndex" type="xs:nonNegativeInteger" use="required"/>
+    <xs:attribute name ="PortraitSet" type="oe:PortraitSet" use="optional"/>
+    <xs:attribute name ="Energy" type="xs:nonNegativeInteger" use="required"/>
+    <xs:attribute name ="Virtue" type="xs:nonNegativeInteger" use="required"/>
+    <xs:attribute name ="AgeInYears" type="xs:nonNegativeInteger" use="required"/>
+    <xs:attribute name ="Authority" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name ="Title" type="xs:string" use="optional"/>
+    <xs:attribute name ="Leader" type="xs:boolean" use="optional"/>
+    <xs:attribute name ="Heir" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="Force">
+    <xs:sequence>
+      <xs:element name="Unit" type ="oe:Unit" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name ="Settlement" type="xs:string" use="optional"/>
+    <xs:attribute name ="X" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name ="Y" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name="RandomPos" type="xs:boolean" use ="optional"/>
+    <xs:attribute name="Facing" type="xs:float" use ="optional"/>
+    <xs:attribute name="Formation" type="xs:string" use ="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="FacionRules">
+    <xs:attribute name="BaseType" type ="xs:string" use="optional"/>
+    
+    <xs:attribute name="NoDiplomacy" type="xs:boolean" use="optional"/>
+    <xs:attribute name="NoTechnology" type="xs:boolean" use="optional"/>
+    <xs:attribute name="NoEdicts" type="xs:boolean" use="optional"/>
+    <xs:attribute name="NoNewLeaders" type="xs:boolean" use="optional"/>
+    <xs:attribute name="NoElimination" type="xs:boolean" use="optional"/>
+
+    <xs:attribute name="NoVictory" type="xs:boolean" use="optional"/>
+    <xs:attribute name="CannotBeAttacked" type="xs:boolean" use="optional"/>
+    <xs:attribute name="NoAttacking" type="xs:boolean" use="optional"/>
+
+    <xs:attribute name="StateFrozen" type="xs:boolean" use="optional"/>
+    <xs:attribute name="UnfreezeIfAttacked" type="xs:boolean" use="optional"/>
+    <xs:attribute name="NoMovement" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="DiplomaticAgreement">
+    <xs:attribute name="TurnsLeft" type="xs:positiveInteger" use="required"/>
+    <xs:attribute name="Amount" type="xs:integer" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="Faction">
+    <xs:sequence>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element name ="BasedOn">
+            <xs:complexType>
+              <xs:attribute name="Faction" type="xs:string" use="required"/>
+              <xs:attribute name ="NewAIStrategies" type ="xs:boolean" use="optional"/>
+              <xs:attribute name ="NewCapabilities" type ="xs:boolean" use="optional"/>
+              <xs:attribute name ="NewStartItems" type ="xs:boolean" use="optional"/>
+              <xs:attribute name ="NewTech" type ="xs:boolean" use="optional"/>
+              <xs:attribute name ="NewTags" type ="xs:boolean" use="optional"/>
+              <xs:attribute name ="ColorSet" type ="xs:int" use ="optional"/>
+              <xs:attribute name="Symbol" type ="xs:string" use ="optional"/>
+              <xs:attribute name="AltSymbol" type ="xs:string" use ="optional"/>
+              <xs:attribute name="NameSet" type ="xs:string" use ="optional"/>
+              <xs:attribute name="PersonalNames" type ="xs:string" use ="optional"/>
+              <xs:attribute name="Architecture" type="xs:string" use="optional"/>
+              <xs:attribute name="Music" type="xs:string" use="optional"/>
+              <xs:attribute name="PortraitSet" type="xs:string" use="optional"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Desription" minOccurs ="0"/>
+          <xs:element name="Start" minOccurs="0">
+            <xs:complexType>
+              <xs:attribute name ="Money" type ="xs:nonNegativeInteger" use ="required"/>
+              <xs:attribute name ="Era" type ="xs:nonNegativeInteger" use ="required"/>
+              <xs:attribute name ="LeadersIncome" type ="xs:nonNegativeInteger" use ="required"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Selection">
+            <xs:complexType>
+              <xs:attribute name="XPos" type ="xs:int" use ="optional"/>
+              <xs:attribute name="YPos" type ="xs:int" use ="optional"/>
+              <xs:attribute name="FactionImage" type ="xs:string" use ="optional"/>
+              <xs:attribute name="ShowPositionMarker" type ="xs:boolean" use ="optional"/>
+              <xs:attribute name="Selectable" type ="oe:FactionSelection" use ="optional"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name ="FactionRules" type="oe:FacionRules" minOccurs ="0"/>
+          <xs:element name="UnitSet" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:attribute name="Name" type="xs:string" use="required"/>
+              <xs:attribute name="Era" type="xs:int" use="optional"/>
+              <xs:attribute name="MinEra" type="xs:int" use="optional"/>
+              <xs:attribute name="MaxEra" type="xs:int" use="optional"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element name ="Data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="UnitSet" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:attribute name="Name" type="xs:string" use="required"/>
+                    <xs:attribute name="Era" type="xs:int" use="optional"/>
+                    <xs:attribute name="MinEra" type="xs:int" use="optional"/>
+                    <xs:attribute name="MaxEra" type="xs:int" use="optional"/>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name ="ColorSet" type ="xs:int" use ="required"/>
+              <xs:attribute name="Symbol" type ="xs:string" use ="required"/>
+              <xs:attribute name="AltSymbol" type ="xs:string" use ="optional"/>
+              <xs:attribute name="NameSet" type ="xs:string" use ="required"/>
+              <xs:attribute name="PersonalNames" type ="xs:string" use ="required"/>
+              <xs:attribute name="Architecture" type="xs:string" use ="required"/>
+              <xs:attribute name="Music" type="xs:string" use="optional"/>
+              <xs:attribute name="PortraitSet" type="xs:string" use="optional"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Initially" minOccurs="0">
+            <xs:complexType>
+              <xs:attribute name ="Money" type ="xs:nonNegativeInteger" use ="required"/>
+              <xs:attribute name ="Era" type ="xs:nonNegativeInteger" use ="required"/>
+              <xs:attribute name ="LeadersIncome" type ="xs:nonNegativeInteger" use ="required"/>
+              <xs:attribute name="PreferredClimate" type="xs:string" use="optional"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="BaseSelection">
+            <xs:complexType>
+              <xs:attribute name="FactionImage" type ="xs:string" use ="optional"/>
+              <xs:attribute name="Selectable" type ="oe:FactionSelection" use ="optional"/>
+              <xs:attribute name="DLC" type ="xs:string" use ="optional"/>
+              <xs:attribute name="ReplaceFaction" type ="xs:string" use ="optional"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:choice>
+      <!-- The capabilities the faction has -->
+      <xs:element name="Capability" maxOccurs="unbounded" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required"/>
+          <xs:attribute name="Level" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name ="Tech" minOccurs ="0" maxOccurs ="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Item" type="xs:string" use="required"/>
+          <xs:attribute name="Lacks" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name ="Edict" minOccurs ="0" maxOccurs ="unbounded">
+        <xs:complexType>
+          <xs:attribute name="ID" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DiplomaticRelation" minOccurs ="0" maxOccurs ="unbounded">
+        <xs:complexType>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element name="RegularPayment" type="oe:DiplomaticAgreement"/>
+          </xs:choice>
+          <xs:attribute name="ID" type="xs:string" use="required"/>
+          <xs:attribute name="Relations" type="oe:FactionRelations" use="optional"/>
+          <xs:attribute name="TurnsLeft" type="xs:positiveInteger" use="optional"/>
+          <xs:attribute name="KnowsCapital" type="xs:boolean" use="optional"/>
+          <xs:attribute name="RecognizeAsEmperor" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExploredLocation" minOccurs ="0" maxOccurs ="unbounded">
+        <xs:complexType>
+          <xs:attribute name="X" type="xs:int" use="required"/>
+          <xs:attribute name="Y" type="xs:int" use="required"/>
+          <xs:attribute name="Radius" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AIHints" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name ="Strategy"  minOccurs ="0" maxOccurs ="unbounded">
+              <xs:complexType>
+                <xs:attribute name="Name" type="xs:string" use="required"/>
+                <xs:attribute name="KnowsCapital" type="xs:boolean" use="required"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="FoundingLocation" minOccurs="0" maxOccurs ="unbounded">
+              <xs:complexType>
+                <xs:attribute name="X" type="xs:int" use="required"/>
+                <xs:attribute name="Y" type="xs:int" use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="Tag" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:choice minOccurs ="0" maxOccurs ="unbounded">
+        <xs:element name="Settlement" type ="oe:Settlement"/>
+        <xs:element name="Force" type ="oe:Force"/>
+        <xs:element name="Character" type="oe:CourtCharacter"/>
+        <xs:element name="ReserveCharacter" type="oe:CourtCharacter"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+    <xs:attribute name ="StartDormant" type="xs:boolean" use="optional"/>
+    <xs:attribute name ="StartFrozen" type="xs:boolean" use="optional"/>
+    <xs:attribute name ="Bandit" type="xs:boolean" use="optional"/>
+    <xs:attribute name ="PeasantRebels" type="xs:boolean" use="optional"/>
+    <xs:attribute name="DescriptionKey" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- List of factions in the faction definition file-->
+  <xs:element name="Factions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Faction" type ="oe:Faction" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

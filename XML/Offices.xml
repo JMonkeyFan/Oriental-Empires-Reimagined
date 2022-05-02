@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Offices.xsd">
+
+  <!-- Budgets subject to corruption effects -->
+  <Budget Type="AllIncome" ImmuneAmount="300" />
+  <Budget Type="LandUpkeepCost" ImmuneAmount="150" />
+  <Budget Type="SecularBuildingUpkeep" ImmuneAmount="200" />
+  <Budget Type="ReligiousBuildingUpkeep" ImmuneAmount="100" />
+  <Budget Type="RecruitmentCost" ImmuneAmount="150" />
+  <Budget Type="Justice" ImmuneAmount="150" />
+  <Budget Type="Government" ImmuneAmount="150" />
+
+  <Office ID="Grand Commandant" MustBeGeneral="true">
+    <Seniority Max="5" IncreaseYears="2" />
+    <Effectiveness Energy="1" Virtue="0" Seniority="0.5" HasHolderBonus="1.5" />
+    <Effect Type="InfantryCombat" Base="0.9" EffectModifier="0.5" />
+    <Effect Type="NobleUnrest" Base="-10" EffectModifier2="25" />
+    <Effect Type="Authority" Base="0" EffectModifier="3" />
+    <Budget Type="LandUpkeepCost" />
+  </Office>
+
+  <Office ID="Grand Chancellor" MustBeGeneral="false">
+    <Seniority Max="5" IncreaseYears="2" />
+    <Effectiveness Energy="1" Virtue="-0.5" Seniority="0.5" HasHolderBonus="2.5" />
+    <Effectiveness2 Energy="1" Virtue="-0.5" Seniority="-0.5" HasHolderBonus="0" />
+    <Effect Type="IncreaseTax" Base="0.9" EffectModifier="0.4" />
+    <Effect Type="NobleUnrest" Base="-10" EffectModifier2="25" />
+    <Effect Type="Authority" Base="0" EffectModifier="3" />
+    <Budget Type="AllIncome" />
+  </Office>
+
+  <Office ID="Imperial Counsellor" MustBeGeneral="false">
+    <Seniority Max="5" IncreaseYears="2" />
+    <Effectiveness Energy="1" Virtue="1" Seniority="0.5" HasHolderBonus="2.5" />
+    <Effect Type="FoodProduction" Base="0.9" EffectModifier="0.33" />
+    <Effect Type="PeasantUnrest" Base="-15" EffectModifier2="16" />
+    <Effect Type="Authority" Base="0" EffectModifier="3" />
+    <Budget Type="SecularBuildingUpkeep" />
+  </Office>
+
+  <Office ID="Minister Coachman" MustBeGeneral="true">
+    <Seniority Max="3" IncreaseYears="2" />
+    <Effectiveness Energy="0.5" Virtue="1" Seniority="0.5" HasHolderBonus="5" />
+    <Effectiveness2 Energy="1" Virtue="0" Seniority="0.5" HasHolderBonus="1.5" />
+    <Effect Type="MountedCombat" Base="0.9" EffectModifier2="0.5" />
+    <Effect Type="PeasantUnrest" Base="-15" EffectModifier2="16" />
+    <Effect Type="Authority" Base="0" EffectModifier="3" />
+    <Budget Type="RecruitmentCost" />
+  </Office>
+
+  <Office ID="Minister of Rites" MustBeGeneral="false">
+    <Seniority Max="3" IncreaseYears="2" />
+    <Effectiveness Energy="0" Virtue="-1" Seniority="-0.5" HasHolderBonus="0" />
+    <!--    <Effect Type="CivilCandidateQuality" Base="0.5" EffectModifier="1"/> -->
+    <Effect Type="NobleUnrest" Base="-10" EffectModifier2="16" />
+    <Effect Type="IncreaseTax" Base="0.9" EffectModifier="0.4" />
+    <Effect Type="Authority" Base="0" EffectModifier="3" />
+    <Budget Type="ReligiousBuildingUpkeep" />
+  </Office>
+
+  <Office ID="Minister of Justice" MustBeGeneral="false">
+    <Seniority Max="3" IncreaseYears="2" />
+    <Effectiveness Energy="-1" Virtue="-1" Seniority="-0.5" HasHolderBonus="-2.5" />
+    <Effect Type="NobleUnrest" Base="-15" EffectModifier2="12" />
+    <Effect Type="PeasantUnrest" Base="-15" EffectModifier2="12" />
+    <Effect Type="Authority" Base="0" EffectModifier="3" />
+    <Budget Type="Justice" />
+  </Office>
+
+  <Office ID="Advisor 1" MustBeGeneral="false" IsAdvisor="true">
+    <Seniority Max="5" IncreaseYears="2" />
+    <Effectiveness Energy="0" Virtue="0" Seniority="1" HasHolderBonus="5" />
+    <Effectiveness2 Energy="0" Virtue="1" Seniority="0.5" HasHolderBonus="1" />
+    <Effect Type="Authority" Base="0" EffectModifier="6" />
+    <Effect Type="ReduceCorruption" Base="0" EffectModifier2="0.5" />
+    <Effect Type="IncreaseCourtCharacters" Base="0" EffectModifier="1.75" />
+  </Office>
+
+  <Office ID="Advisor 2" MustBeGeneral="false" IsAdvisor="true">
+    <Seniority Max="5" IncreaseYears="2" />
+    <Effectiveness Energy="0" Virtue="0" Seniority="1" HasHolderBonus="5" />
+    <Effectiveness2 Energy="0" Virtue="1" Seniority="0.5" HasHolderBonus="2.5" />
+    <Effect Type="Authority" Base="0" EffectModifier="6" />
+    <Effect Type="ReduceCorruption" Base="0" EffectModifier2="1" />
+    <Effect Type="IncreaseCourtCharacters" Base="0" EffectModifier="2" />
+  </Office>
+
+</Root>

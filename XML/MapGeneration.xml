@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires MapGeneration.xsd">
+  <!-- Map Types //////////////////////////////////////////////////////-->
+  <MapType ID="Island Continent" TemplateBaseName="Continent" PictureName="G_Sprite_MapContinent_01" />
+  <MapType ID="Continental Edge" TemplateBaseName="EdgeContinent" PictureName="G_Sprite_MapContinentalCoast_01" />
+  <MapType ID="Inland Sea" TemplateBaseName="InlandSea" PictureName="G_Sprite_MapInslandSea_01" />
+  <MapType ID="Americas" TemplateBaseName="Americas" PictureName="G_Sprite_MapAmericas_01" />
+  <ClimateSet ID="China And Mongolia" Picture="OE_FE_Map_ChinaMongolia_01" MinMapArea="4500">
+    <ClimateGenerator ID="Central Asia" MinSeeds="3" MaxSeeds="8">
+      <Placement Left="0" Right="1" Bottom="0.6" Top="1" />
+    </ClimateGenerator>
+    <ClimateGenerator ID="Gobi Desert" MinSeeds="2" MaxSeeds="6">
+      <Placement Left="0" Right="1" Bottom="0.3" Top="0.9" />
+    </ClimateGenerator>
+    <ClimateGenerator ID="Northern China" MinSeeds="3" MaxSeeds="10">
+      <Placement Left="0.2" Right="1" Bottom="0.3" Top="0.7" />
+    </ClimateGenerator>
+    <ClimateGenerator ID="Southern China" MinSeeds="3" MaxSeeds="10">
+      <Placement Left="0.2" Right="1" Bottom="0" Top="0.3" />
+    </ClimateGenerator>
+    <ClimateGenerator ID="Western China" MinSeeds="3" MaxSeeds="10">
+      <Placement Left="0" Right="0.2" Bottom="0" Top="0.6" />
+    </ClimateGenerator>
+  </ClimateSet>
+  <ClimateSet ID="China Only" MinMapArea="2000" Picture="OE_FE_Map_ChinaAll_01">
+    <ClimateGenerator ID="Northern China" MinSeeds="2" MaxSeeds="5">
+      <Placement Left="0.2" Right="1" Bottom="0.6" Top="1" />
+    </ClimateGenerator>
+    <ClimateGenerator ID="Southern China" MinSeeds="2" MaxSeeds="5">
+      <Placement Left="0.2" Right="1" Bottom="0" Top="0.4" />
+    </ClimateGenerator>
+    <ClimateGenerator ID="Western China" MinSeeds="2" MaxSeeds="5">
+      <Placement Left="0" Right="0.2" Bottom="0" Top="0.6" />
+    </ClimateGenerator>
+  </ClimateSet>
+  <ClimateSet ID="Northern China" Picture="OE_FE_Map_ChinaNorthern_01">
+    <ClimateGenerator ID="Northern China" MinSeeds="2" MaxSeeds="10">
+      <Placement Left="0" Right="1" Bottom="0" Top="1" />
+    </ClimateGenerator>
+  </ClimateSet>
+  <ClimateSet ID="Southern China" Picture="OE_FE_Map_ChinaSouthern_01">
+    <ClimateGenerator ID="Southern China" MinSeeds="2" MaxSeeds="10">
+      <Placement Left="0" Right="1" Bottom="0" Top="1" />
+    </ClimateGenerator>
+  </ClimateSet>
+  <ClimateSet ID="Western China" Picture="OE_FE_Map_ChinaWestern_01">
+    <ClimateGenerator ID="Western China" MinSeeds="2" MaxSeeds="10">
+      <Placement Left="0" Right="1" Bottom="0" Top="1" />
+    </ClimateGenerator>
+  </ClimateSet>
+  <ClimateSet ID="Mongolia" Picture="OE_FE_Map_Mongolia_01">
+    <ClimateGenerator ID="Central Asia" MinSeeds="4" MaxSeeds="6">
+      <Placement Left="0" Right="1" Bottom="0.6" Top="1" />
+    </ClimateGenerator>
+    <ClimateGenerator ID="Gobi Desert" MinSeeds="2" MaxSeeds="6">
+      <Placement Left="0" Right="1" Bottom="0" Top="0.3" />
+    </ClimateGenerator>
+  </ClimateSet> <!-- Terrain Features ////////////////////////////////////////////////////////--> <!-- Cell filling features -->
+  <TerrainFeature ID="Featureless Dry Plain">
+    <Blob Terrain="Dry Plain" Fill="true" MinLength="0" MaxLength="3" MinWidth="0" MaxWidth="1.75" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.4" All="false" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.0025" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Featureless Grassy Plain">
+    <Blob Terrain="Fertile Plain" Fill="true" MinLength="0" MaxLength="2" MinWidth="0" MaxWidth="1.5" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.6" All="false" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.0025" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Wooded Grassy Plain">
+    <Blob Terrain="Grassland" Fill="true" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2.75" />
+    <Scatter Terrain="Forest" MinCoverage="0.05" MaxCoverage="0.0125" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.25" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.005" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.0125" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.0075" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Wooded Fertile Plain">
+    <Blob Terrain="Fertile Plain" Fill="true" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2.75" />
+    <Scatter Terrain="Forest" MinCoverage="0.05" MaxCoverage="0.01" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.25" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.01" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.008" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.006" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Wooded Barren Plain">
+    <Blob Terrain="Dry Plain" Fill="true" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2.75" />
+    <Scatter Terrain="Forest" MinCoverage="0.05" MaxCoverage="0.003" All="false" />
+    <Scatter Terrain="Sand" MinCoverage="0" MaxCoverage="0.2" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.2" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.08" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.008" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.006" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.01" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Wooded Fertile Plain">
+    <Blob Terrain="Forest" Fill="true" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2.75" />
+    <Scatter Terrain="Forest" MinCoverage="0.05" MaxCoverage="0.45" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0.25" MaxCoverage="0.8" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0.01" MaxCoverage="0.3" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.008" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.008" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.008" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Marshy Plain">
+    <Blob Terrain="Grassland" Fill="true" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2.75" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.15" All="false" />
+    <Scatter Terrain="Marsh" MinCoverage="0" MaxCoverage="0.4" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.4" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.006" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.006" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.006" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Mounded Desert Plain">
+    <Blob Terrain="Fertile Plain" Fill="true" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2.75" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.001" />
+    <Surround Terrain="Gentle Hills" MinWidth="0" MaxWidth="0.04" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.001" />
+    <Surround Terrain="Plateau" MinWidth="0" MaxWidth="0.075" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.001" />
+    <Surround Terrain="Steep Hills" MinWidth="0" MaxWidth="0.04" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.002" />
+    <Surround Terrain="Plateau" MinWidth="0" MaxWidth="0.025" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.001" />
+    <Surround Terrain="Dry Plain" MinWidth="0" MaxWidth="0.15" />
+    <Surround Terrain="Gentle Hills" MinWidth="0" MaxWidth="0.075" />
+    <Surround Terrain="Dry Plain" MinWidth="0" MaxWidth="0.15" />
+    <Surround Terrain="Sand" MinWidth="0" MaxWidth="0.2" />
+    <Surround Terrain="Navigable River" MinWidth="0" MaxWidth="0.002" />
+    <Scatter Terrain="Dry Plain" MinCoverage="0" MaxCoverage="0.01" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Mounded Fertile Plain">
+    <Blob Terrain="Fertile Plain" Fill="true" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2.75" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.005" />
+    <Surround Terrain="Gentle Hills" MinWidth="0" MaxWidth="0.075" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.005" />
+    <Surround Terrain="Plateau" MinWidth="0" MaxWidth="0.075" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.005" />
+    <Surround Terrain="Gentle Hills" MinWidth="0" MaxWidth="0.075" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.005" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.01" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Mounded Grassy Plain">
+    <Blob Terrain="Grassland" Fill="true" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2.75" />
+    <Surround Terrain="Gentle Hills" MinWidth="0" MaxWidth="0.075" />
+    <Scatter Terrain="Plateau" MinCoverage="0" MaxCoverage="0.0075" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.4" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.0008" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.0009" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.0005" All="false" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.1" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.025" All="false" />
+  </TerrainFeature> <!-- Medium Features -->
+  <TerrainFeature ID="Marsh">
+    <Blob Terrain="Fertile Plain" MinLength="0" MaxLength="1" MinWidth="0.075" MaxWidth="1.75" />
+    <Surround Terrain="Marsh" MinWidth="0" MaxWidth="0.075" />
+    <Scatter Terrain="Marsh" MinCoverage="0.15" MaxCoverage="0.35" All="false" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.1" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.0007" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.0006" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.0005" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Swamp">
+    <Blob Terrain="Marsh" MinLength="0" MaxLength="2" MinWidth="0.15" MaxWidth="2.75" />
+    <Surround Terrain="Gentle Hills" MinWidth="0" MaxWidth="0.01" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.35" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.15" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.014" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.012" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.001" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Light Fertile Forest">
+    <Blob Terrain="Forest" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0.45" MaxCoverage="0.8" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0.15" MaxCoverage="0.35" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.005" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.004" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Light Grassy Forest">
+    <Blob Terrain="Forest" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0.0" MaxCoverage="0.6" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0.15" MaxCoverage="0.8" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.005" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.004" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Light Barren Forest">
+    <Blob Terrain="Forest" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="2" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.15" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.15" All="false" />
+    <Scatter Terrain="Dry Plain" MinCoverage="0.3" MaxCoverage="0.7" All="false" />
+    <Scatter Terrain="Sand" MinCoverage="0.1" MaxCoverage="0.15" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.006" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.008" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.0012" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Light Swampy Forest">
+    <Blob Terrain="Marsh" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="1.75" />
+    <Scatter Terrain="Forest" MinCoverage="0.1" MaxCoverage="0.35" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.25" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.25" All="false" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0" MaxCoverage="0.005" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.004" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.003" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Heavy Swampy Forest">
+    <Blob Terrain="Marsh" MinLength="1" MaxLength="2" MinWidth="1" MaxWidth="1.5" />
+    <Scatter Terrain="Forest" MinCoverage="0.25" MaxCoverage="0.75" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.25" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.25" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0" MaxCoverage="0.0075" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0" MaxCoverage="0.009" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Thick Fertile Forest">
+    <Blob Terrain="Forest" MinLength="1" MaxLength="3" MinWidth="1" MaxWidth="2.75" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.6" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.2" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Thick Grassy Forest">
+    <Blob Terrain="Forest" MinLength="1" MaxLength="3" MinWidth="1" MaxWidth="2.75" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0" MaxCoverage="0.2" All="false" />
+    <Scatter Terrain="Grassland" MinCoverage="0" MaxCoverage="0.6" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Rolling Hills">
+    <Blob Terrain="Gentle Hills" MinLength="1" MaxLength="3" MinWidth="0.05" MaxWidth="0.15" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.1" />
+    <Surround Terrain="Plateau" MinWidth="0.0000025" MaxWidth="0.025" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.1" />
+    <Surround Terrain="Steep Hills" MinWidth="0.0000025" MaxWidth="0.015" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.2" />
+  </TerrainFeature>
+  <TerrainFeature ID="Barren Rolling Hills">
+    <Blob Terrain="Gentle Hills" MinLength="1" MaxLength="2" MinWidth="0.075" MaxWidth="0.2" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.01" />
+    <Surround Terrain="Plateau" MinWidth="0.0000025" MaxWidth="0.025" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.01" />
+    <Surround Terrain="Steep Hills" MinWidth="0.0000025" MaxWidth="0.015" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.02" />
+  </TerrainFeature>
+  <TerrainFeature ID="Large Mountains In Heavy Forest">
+    <Blob Terrain="Mountains" MinLength="1" MaxLength="2" MinWidth="0.25" MaxWidth="1.75" />
+    <Surround Terrain="Steep Hills" MinWidth="0.0000015" MaxWidth="0.01" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.00000125" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0.1" MaxWidth="0.3" />
+  </TerrainFeature>
+  <TerrainFeature ID="Small Mountains In Heavy Forest">
+    <Blob Terrain="Mountains" MinLength="1" MaxLength="1" MinWidth="0.15" MaxWidth="0.75" />
+    <Surround Terrain="Steep Hills" MinWidth="0.000002" MaxWidth="0.01" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.000001" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0.1" MaxWidth="0.3" />
+  </TerrainFeature>
+  <TerrainFeature ID="Large Mountains In Light Forest">
+    <Blob Terrain="Mountains" MinLength="1" MaxLength="2" MinWidth="0.25" MaxWidth="1.75" />
+    <Surround Terrain="Steep Hills" MinWidth="0.0000015" MaxWidth="0.01" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.00000125" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0.01" MaxWidth="0.03" />
+  </TerrainFeature>
+  <TerrainFeature ID="Small Mountains In Light Forest">
+    <Blob Terrain="Mountains" MinLength="1" MaxLength="1" MinWidth="0.15" MaxWidth="0.75" />
+    <Surround Terrain="Steep Hills" MinWidth="0.000002" MaxWidth="0.01" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.000001" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0.01" MaxWidth="0.03" />
+  </TerrainFeature>
+  <TerrainFeature ID="Steep Hills In Heavy Forest">
+    <Blob Terrain="Steep Hills" MinLength="1" MaxLength="2" MinWidth="0.15" MaxWidth="1.5" />
+    <Surround Terrain="Gentle Hills" MinWidth="0" MaxWidth="0.0125" />
+    <Surround Terrain="Forest" MinWidth="0.1" MaxWidth="0.3" />
+  </TerrainFeature>
+  <TerrainFeature ID="Steep Hills In Light Forest">
+    <Blob Terrain="Steep Hills" MinLength="1" MaxLength="2" MinWidth="0.15" MaxWidth="1.5" />
+    <Surround Terrain="Gentle Hills" MinWidth="0" MaxWidth="0.0125" />
+    <Surround Terrain="Forest" MinWidth="0.01" MaxWidth="0.03" />
+  </TerrainFeature>
+  <TerrainFeature ID="Isolated Small Hill">
+    <Blob Terrain="Gentle Hills" MinLength="0" MaxLength="1" MinWidth="0" MaxWidth="0.15" />
+    <Surround Terrain="Mountains" MinWidth="0.0005" MaxWidth="0.01" />
+    <Surround Terrain="Steep Hills" MinWidth="0.001" MaxWidth="0.015" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.1" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.1" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Isolated Medium Hill">
+    <Blob Terrain="Steep Hills" MinLength="0" MaxLength="1" MinWidth="0.15" MaxWidth="0.3" />
+    <Surround Terrain="Mountains" MinWidth="0.00075" MaxWidth="0.02" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.002" MaxWidth="0.025" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.15" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.15" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Isolated Large Hill">
+    <Blob Terrain="Mountains" MinLength="0" MaxLength="1" MinWidth="0.25" MaxWidth="0.6" />
+    <Surround Terrain="Steep Hills" MinWidth="0.001" MaxWidth="0.04" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.002" MaxWidth="0.045" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.2" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.2" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Dunes">
+    <Blob Terrain="Steep Hills" Fill="true" MinLength="1" MaxLength="5" MinWidth="1.75" MaxWidth="3.5" />
+    <Surround Terrain="Sand" MinWidth="0.004" MaxWidth="0.15" />
+    <Surround Terrain="Gentle Hills" MinWidth="0" MaxWidth="0.035" />
+    <Surround Terrain="Dry Plain" MinWidth="0" MaxWidth="0.075" />
+    <Scatter Terrain="Dry Plain" MinCoverage="0" MaxCoverage="0.8" All="false" />
+    <Scatter Terrain="Sand" MinCoverage="0" MaxCoverage="0.8" All="false" />
+  </TerrainFeature> <!-- Large Complex Features -->
+  <TerrainFeature ID="Small Mountain Valley">
+    <Blob Terrain="Fertile Plain" MinLength="1" MaxLength="2" MinWidth="0.15" MaxWidth="0.7" />
+    <Surround Terrain="Plateau" MinWidth="0.002" MaxWidth="0.25" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Mountains" MinWidth="0.003" MaxWidth="0.2" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.025" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0.25" MaxCoverage="0.5" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Medium Mountain Valley">
+    <Blob Terrain="Fertile Plain" MinLength="2" MaxLength="3" MinWidth="0.2" MaxWidth="1.4" />
+    <Surround Terrain="Plateau" MinWidth="0.002" MaxWidth="0.25" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Mountains" MinWidth="0.003" MaxWidth="0.2" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.025" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0.25" MaxCoverage="0.5" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Large Mountain Valley">
+    <Blob Terrain="Fertile Plain" MinLength="3" MaxLength="4" MinWidth="1" MaxWidth="2" />
+    <Surround Terrain="Plateau" MinWidth="0.002" MaxWidth="0.25" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Mountains" MinWidth="0.003" MaxWidth="0.2" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.025" All="false" />
+    <Scatter Terrain="Fertile Plain" MinCoverage="0.25" MaxCoverage="0.5" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Small Upland Plateau">
+    <Blob Terrain="Plateau" MinLength="1" MaxLength="1" MinWidth="0.75" MaxWidth="1.25" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Mountains" MinWidth="0.003" MaxWidth="0.2" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.025" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Medium Upland Plateau">
+    <Blob Terrain="Plateau" MinLength="2" MaxLength="2" MinWidth="1.5" MaxWidth="2.5" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Mountains" MinWidth="0.003" MaxWidth="0.2" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.025" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Large Upland Plateau">
+    <Blob Terrain="Plateau" MinLength="3" MaxLength="3" MinWidth="2" MaxWidth="4" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Mountains" MinWidth="0.003" MaxWidth="0.2" />
+    <Surround Terrain="Steep Hills" MinWidth="0.002" MaxWidth="0.15" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.05" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.1" />
+    <Scatter Terrain="Forest" MinCoverage="0" MaxCoverage="0.025" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Oasis">
+    <Blob Terrain="Unnavigable Lake" MinLength="0" MaxLength="2" MinWidth="0.01" MaxWidth="0.75" />
+    <Surround Terrain="Fertile Plain" MinWidth="0.7" MaxWidth="2.5" />
+    <Scatter Terrain="Forest" MinCoverage="0.05" MaxCoverage="0.1" All="false" />
+  </TerrainFeature> <!-- Linear Features -->
+  <TerrainFeature ID="Steep Hill Line">
+    <Blob Terrain="Steep Hills" MinLength="0" MaxLength="2" MinWidth="0" MaxWidth="0.15" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.001" MaxWidth="0.25" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.075" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0.005" MaxCoverage="0.02" All="false" />
+    <Scatter Terrain="Mountains" MinCoverage="0.0025" MaxCoverage="0.02" All="false" />
+    <Scatter Terrain="Forest" MinCoverage="0.05" MaxCoverage="0.1" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Mountain Line">
+    <Blob Terrain="Mountains" MinLength="0" MaxLength="3" MinWidth="0" MaxWidth="0.225" />
+    <Surround Terrain="Steep Hills" MinWidth="0.0001" MaxWidth="0.2" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.1" />
+    <Scatter Terrain="Gentle Hills" MinCoverage="0.000025" MaxCoverage="0.002" All="false" />
+    <Scatter Terrain="Steep Hills" MinCoverage="0.00001" MaxCoverage="0.002" All="false" />
+    <Scatter Terrain="Forest" MinCoverage="0.05" MaxCoverage="0.1" All="false" />
+  </TerrainFeature>
+  <TerrainFeature ID="Desert Mountain Line">
+    <Blob Terrain="Mountains" MinLength="0" MaxLength="4" MinWidth="0" MaxWidth="0.3" />
+    <Surround Terrain="Steep Hills" MinWidth="0.1" MaxWidth="0.4" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.5" MaxWidth="0.8" />
+    <Surround Terrain="Forest" MinWidth="0" MaxWidth="0.005" />
+    <Surround Terrain="Sand" MinWidth="0" MaxWidth="0.01" />
+    <Surround Terrain="Dry Plain" MinWidth="0" MaxWidth="0.01" />
+    <Scatter Terrain="Dry Plain" MinCoverage="0.01" MaxCoverage="0.25" All="false" />
+  </TerrainFeature> <!-- Border Features -->
+  <TerrainFeature ID="Mountain Border">
+    <Blob Terrain="Mountains" MinLength="0" MaxLength="0" MinWidth="0" MaxWidth="0" />
+    <Surround Terrain="Steep Hills" MinWidth="0.6" MaxWidth="0.8" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.5" MaxWidth="0.8" />
+    <Surround Terrain="Forest" MinWidth="0.25" MaxWidth="0.6" />
+  </TerrainFeature>
+  <TerrainFeature ID="Desert Mountain Border">
+    <Blob Terrain="Mountains" MinLength="0" MaxLength="0" MinWidth="0" MaxWidth="0" />
+    <Surround Terrain="Steep Hills" MinWidth="0.1" MaxWidth="0.8" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.3" MaxWidth="0.8" />
+  </TerrainFeature>
+  <TerrainFeature ID="Steep Hill Border">
+    <Blob Terrain="Steep Hills" MinLength="0" MaxLength="0" MinWidth="0" MaxWidth="0" />
+    <Surround Terrain="Gentle Hills" MinWidth="0.5" MaxWidth="0.8" />
+    <Surround Terrain="Forest" MinWidth="0.25" MaxWidth="0.6" />
+  </TerrainFeature> <!-- Climate Generators ///////////////////////////////////////////////////// --> <!-- Northern China -->
+  <ClimateGenerator ID="Northern China" ClimateType="Northern China" DefaultTerrain="Grassland">
+    <SubClimate ID="Northern China #1">
+      <Feature ID="Mounded Fertile Plain" Weight="75" />
+      <Feature ID="Wooded Fertile Plain" Weight="5" />
+      <Feature ID="Light Fertile Forest" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="8" />
+      <Feature ID="Steep Hills In Light Forest" Weight="0" />
+      <Feature ID="Small Mountain Valley" Weight="4" />
+      <Feature ID="Large Mountain Valley" Weight="2" />
+      <Feature ID="Mountain Line" Weight="2" />
+      <Feature ID="Large Mountains In Light Forest" Weight="6" />
+      <Border Feature="Mountain Border" Chance="0.75" />
+      <Headlands Terrain="Steep Hills" BackTerrain="Gentle Hills" />
+    </SubClimate>
+    <SubClimate ID="Northern China #2">
+      <Feature ID="Mounded Fertile Plain" Weight="70" />
+      <Feature ID="Wooded Fertile Plain" Weight="0" />
+      <Feature ID="Light Fertile Forest" Weight="0" />
+      <Feature ID="Rolling Hills" Weight="1" />
+      <Feature ID="Steep Hills In Light Forest" Weight="3" />
+      <Feature ID="Small Mountain Valley" Weight="2" />
+      <Feature ID="Medium Mountain Valley" Weight="3" />
+      <Feature ID="Large Mountain Valley" Weight="1" />
+      <Feature ID="Mountain Line" Weight="5" />
+      <Feature ID="Large Mountains In Light Forest" Weight="4" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Northern China #3">
+      <Feature ID="Mounded Fertile Plain" Weight="65" />
+      <Feature ID="Wooded Fertile Plain" Weight="0" />
+      <Feature ID="Light Fertile Forest" Weight="5" />
+      <Feature ID="Rolling Hills" Weight="4" />
+      <Feature ID="Steep Hills In Light Forest" Weight="2" />
+      <Feature ID="Large Mountains In Light Forest" Weight="1" />
+      <Feature ID="Small Mountain Valley" Weight="2" />
+      <Feature ID="Medium Mountain Valley" Weight="1" />
+      <Feature ID="Large Mountain Valley" Weight="3" />
+      <Feature ID="Mountain Line" Weight="7" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="3" />
+      <Border Feature="Steep Hill Border" Chance="0.9" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Northern China #4">
+      <Feature ID="Mounded Fertile Plain" Weight="60" />
+      <Feature ID="Wooded Fertile Plain" Weight="8" />
+      <Feature ID="Light Fertile Forest" Weight="12" />
+      <Feature ID="Rolling Hills" Weight="3" />
+      <Feature ID="Steep Hills In Light Forest" Weight="3" />
+      <Feature ID="Small Mountains In Light Forest" Weight="2" />
+      <Feature ID="Isolated Large Hill" Weight="1" />
+      <Feature ID="Isolated Medium Hill" Weight="1" />
+      <Feature ID="Isolated Small Hill" Weight="1" />
+      <Feature ID="Large Mountain Valley" Weight="3" />
+      <Feature ID="Mountain Line" Weight="0" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="3" />
+      <Border Feature="Mountain Border" Chance="0.75" />
+      <Headlands Terrain="Steep Hills" BackTerrain="Gentle Hills" />
+    </SubClimate>
+    <SubClimate ID="Northern China #5">
+      <Feature ID="Mounded Fertile Plain" Weight="55" />
+      <Feature ID="Wooded Fertile Plain" Weight="4" />
+      <Feature ID="Light Fertile Forest" Weight="4" />
+      <Feature ID="Rolling Hills" Weight="3" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="2" />
+      <Feature ID="Medium Mountain Valley" Weight="1" />
+      <Feature ID="Mountain Line" Weight="0" />
+      <Feature ID="Large Mountains In Light Forest" Weight="2" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Northern China #6">
+      <Feature ID="Mounded Fertile Plain" Weight="50" />
+      <Feature ID="Wooded Fertile Plain" Weight="5" />
+      <Feature ID="Light Fertile Forest" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="4" />
+      <Feature ID="Small Mountains In Light Forest" Weight="1" />
+      <Feature ID="Isolated Large Hill" Weight="0" />
+      <Feature ID="Isolated Medium Hill" Weight="1" />
+      <Feature ID="Isolated Small Hill" Weight="0" />
+      <Feature ID="Mountain Line" Weight="4" />
+      <Feature ID="Large Mountains In Light Forest" Weight="5" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Northern China #7">
+      <Feature ID="Mounded Fertile Plain" Weight="45" />
+      <Feature ID="Wooded Fertile Plain" Weight="10" />
+      <Feature ID="Light Fertile Forest" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="3" />
+      <Feature ID="Small Mountains In Light Forest" Weight="4" />
+      <Feature ID="Isolated Large Hill" Weight="0" />
+      <Feature ID="Isolated Medium Hill" Weight="0" />
+      <Feature ID="Isolated Small Hill" Weight="1" />
+      <Feature ID="Mountain Line" Weight="3" />
+      <Feature ID="Steep Hills In Light Forest" Weight="2" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Northern China #8">
+      <Feature ID="Mounded Fertile Plain" Weight="40" />
+      <Feature ID="Wooded Fertile Plain" Weight="0" />
+      <Feature ID="Light Fertile Forest" Weight="0" />
+      <Feature ID="Rolling Hills" Weight="3" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="2" />
+      <Feature ID="Small Mountains In Light Forest" Weight="4" />
+      <Feature ID="Isolated Large Hill" Weight="1" />
+      <Feature ID="Isolated Medium Hill" Weight="0" />
+      <Feature ID="Isolated Small Hill" Weight="0" />
+      <Feature ID="Mountain Line" Weight="3" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="1" />
+      <Feature ID="Steep Hills In Light Forest" Weight="3" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="1" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+  </ClimateGenerator> <!-- Southern China -->
+  <ClimateGenerator ID="Southern China" ClimateType="Southern China" DefaultTerrain="Fertile Plain">
+    <SubClimate ID="Jungle1">
+      <Feature ID="Thick Fertile Forest" Weight="30" />
+      <Feature ID="Wooded Fertile Plain" Weight="15" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="7" />
+      <Feature ID="Small Mountains In Heavy Forest" Weight="2" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="1" />
+      <Feature ID="Swamp" Weight="15" />
+      <Feature ID="Isolated Medium Hill" Weight="6" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Forest" />
+    </SubClimate>
+    <SubClimate ID="Jungle2">
+      <Feature ID="Thick Grassy Forest" Weight="16" />
+      <Feature ID="Wooded Grassy Plain" Weight="16" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="6" />
+      <Feature ID="Small Mountains In Heavy Forest" Weight="3" />
+      <Feature ID="Swamp" Weight="12" />
+      <Feature ID="Isolated Medium Hill" Weight="10" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Forest" BackTerrain="Mountains" />
+    </SubClimate>
+    <SubClimate ID="Swamp1">
+      <Feature ID="Swamp" Weight="40" />
+      <Feature ID="Isolated Medium Hill" Weight="2" />
+      <Feature ID="Isolated Small Hill" Weight="5" />
+      <Feature ID="Small Mountain Valley" Weight="5" />
+      <Feature ID="Thick Fertile Forest" Weight="20" />
+      <Feature ID="Marshy Plain" Weight="20" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Forest" BackTerrain="Gentle Hills" />
+    </SubClimate>
+    <SubClimate ID="Swamp2">
+      <Feature ID="Swamp" Weight="25" />
+      <Feature ID="Marshy Plain" Weight="10" />
+      <Feature ID="Marsh" Weight="25" />
+      <Feature ID="Isolated Medium Hill" Weight="7" />
+      <Feature ID="Isolated Small Hill" Weight="5" />
+      <Feature ID="Small Mountain Valley" Weight="5" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="1" />
+      <Feature ID="Thick Grassy Forest" Weight="4" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Forest" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Plains1">
+      <Feature ID="Marshy Plain" Weight="4" />
+      <Feature ID="Swamp" Weight="2" />
+      <Feature ID="Small Mountain Valley" Weight="3" />
+      <Feature ID="Isolated Small Hill" Weight="3" />
+      <Feature ID="Isolated Medium Hill" Weight="2" />
+      <Feature ID="Isolated Large Hill" Weight="1" />
+      <Feature ID="Small Mountains In Heavy Forest" Weight="2" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="4" />
+      <Feature ID="Mounded Fertile Plain" Weight="25" />
+      <Feature ID="Mounded Grassy Plain" Weight="15" />
+      <Feature ID="Wooded Grassy Plain" Weight="20" />
+      <Feature ID="Wooded Fertile Plain" Weight="10" />
+      <Border Feature="Mountain Border" Chance="0.8" />
+      <Headlands Terrain="Steep Hills" BackTerrain="Forest" />
+    </SubClimate>
+    <SubClimate ID="Plains2">
+      <Feature ID="Small Mountain Valley" Weight="6" />
+      <Feature ID="Isolated Small Hill" Weight="5" />
+      <Feature ID="Isolated Medium Hill" Weight="4" />
+      <Feature ID="Isolated Large Hill" Weight="3" />
+      <Feature ID="Small Mountains In Heavy Forest" Weight="2" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="1" />
+      <Feature ID="Mounded Fertile Plain" Weight="12" />
+      <Feature ID="Mounded Grassy Plain" Weight="18" />
+      <Feature ID="Wooded Grassy Plain" Weight="15" />
+      <Feature ID="Wooded Fertile Plain" Weight="25" />
+      <Border Feature="Mountain Border" Chance="0.8" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Forest" />
+    </SubClimate>
+    <SubClimate ID="Plains3">
+      <Feature ID="Small Mountain Valley" Weight="3" />
+      <Feature ID="Isolated Small Hill" Weight="4" />
+      <Feature ID="Isolated Medium Hill" Weight="5" />
+      <Feature ID="Isolated Large Hill" Weight="6" />
+      <Feature ID="Small Mountains In Heavy Forest" Weight="1" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="3" />
+      <Feature ID="Mounded Fertile Plain" Weight="10" />
+      <Feature ID="Wooded Grassy Plain" Weight="35" />
+      <Feature ID="Wooded Fertile Plain" Weight="15" />
+      <Border Feature="Mountain Border" Chance="0.8" />
+      <Headlands Terrain="Steep Hills" BackTerrain="Mountains" />
+    </SubClimate>
+
+  </ClimateGenerator> <!-- Western China 
+  Unique Feature per climate:
+  Western China:    <Feature ID="Small Upland Plateau" Weight="4" />
+  Northern China:    <Feature ID="Small Mountain Valley" Weight="4" />
+  Central Asia:    <Feature ID="Barren Rolling Hills" Weight="5" />
+  Southern China:    <Feature ID="Rolling Hills" Weight="10" />
+  Gobi Desert        <Feature ID="Oasis" Weight="10" />
+  -->
+  <ClimateGenerator ID="Western China" ClimateType="Western China" DefaultTerrain="Grassland">
+    <SubClimate ID="Sichuan">
+      <Feature ID="Wooded Fertile Plain" Weight="5" />
+      <Feature ID="Mounded Fertile Plain" Weight="5" />
+      <Feature ID="Thick Grassy Forest" Weight="5" />
+      <Feature ID="Light Fertile Forest" Weight="5" />
+      <Feature ID="Light Barren Forest" Weight="5" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Feature ID="Small Upland Plateau" Weight="1" />
+      <Feature ID="Medium Upland Plateau" Weight="3" />
+      <Feature ID="Large Upland Plateau" Weight="2" />
+      <Feature ID="Swamp" Weight="5" />
+      <Feature ID="Marsh" Weight="5" />
+      <Feature ID="Dunes" Weight="5" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Foothills">
+      <Feature ID="Wooded Grassy Plain" Weight="8" />
+      <Feature ID="Mounded Fertile Plain" Weight="5" />
+      <Feature ID="Thick Fertile Forest" Weight="6" />
+      <Feature ID="Light Grassy Forest" Weight="5" />
+      <Feature ID="Light Barren Forest" Weight="5" />
+      <Feature ID="Steep Hill Line" Weight="3" />
+      <Feature ID="Small Upland Plateau" Weight="2" />
+      <Feature ID="Medium Upland Plateau" Weight="2" />
+      <Feature ID="Large Upland Plateau" Weight="2" />
+      <Feature ID="Swamp" Weight="0" />
+      <Feature ID="Marsh" Weight="0" />
+      <Feature ID="Dunes" Weight="10" />
+      <Border Feature="Mountain Border" Chance="0.2" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Guanxi">
+      <Feature ID="Wooded Fertile Plain" Weight="4" />
+      <Feature ID="Mounded Fertile Plain" Weight="2" />
+      <Feature ID="Thick Grassy Forest" Weight="6" />
+      <Feature ID="Light Grassy Forest" Weight="5" />
+      <Feature ID="Light Barren Forest" Weight="13" />
+      <Feature ID="Steep Hill Line" Weight="12" />
+      <Feature ID="Small Upland Plateau" Weight="2" />
+      <Feature ID="Medium Upland Plateau" Weight="1" />
+      <Feature ID="Large Upland Plateau" Weight="0" />
+      <Feature ID="Swamp" Weight="2" />
+      <Feature ID="Marsh" Weight="1" />
+      <Feature ID="Dunes" Weight="0" />
+      <Border Feature="Steep Hill Border" Chance="0.5" />
+      <Headlands Terrain="Steep Hills" BackTerrain="Gentle Hills" />
+    </SubClimate>
+    <SubClimate ID="West China #1">
+      <Feature ID="Wooded Fertile Plain" Weight="12" />
+      <Feature ID="Mounded Fertile Plain" Weight="12" />
+      <Feature ID="Thick Grassy Forest" Weight="4" />
+      <Feature ID="Light Fertile Forest" Weight="10" />
+      <Feature ID="Light Barren Forest" Weight="2" />
+      <Feature ID="Steep Hill Line" Weight="8" />
+      <Feature ID="Small Upland Plateau" Weight="0" />
+      <Feature ID="Medium Upland Plateau" Weight="1" />
+      <Feature ID="Large Upland Plateau" Weight="2" />
+      <Feature ID="Swamp" Weight="7" />
+      <Feature ID="Marsh" Weight="13" />
+      <Feature ID="Dunes" Weight="0" />
+      <Border Feature="Steep Hill Border" Chance="0.5" />
+      <Headlands Terrain="Steep Hills" BackTerrain="Mountains" />
+    </SubClimate>
+    <SubClimate ID="West China #2">
+      <Feature ID="Wooded Fertile Plain" Weight="5" />
+      <Feature ID="Mounded Fertile Plain" Weight="5" />
+      <Feature ID="Thick Grassy Forest" Weight="5" />
+      <Feature ID="Light Grassy Forest" Weight="5" />
+      <Feature ID="Light Barren Forest" Weight="5" />
+      <Feature ID="Steep Hill Line" Weight="10" />
+      <Feature ID="Small Upland Plateau" Weight="3" />
+      <Feature ID="Medium Upland Plateau" Weight="0" />
+      <Feature ID="Large Upland Plateau" Weight="0" />
+      <Feature ID="Swamp" Weight="0" />
+      <Feature ID="Marsh" Weight="0" />
+      <Feature ID="Dunes" Weight="10" />
+      <Feature ID="Desert Mountain Line" Weight="5" />
+      <Feature ID="Barren Rolling Hills" Weight="5" />
+      <Border Feature="Mountain Border" Chance="0.5" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="West China #4">
+      <Feature ID="Wooded Barren Plain" Weight="20" />
+      <Feature ID="Mounded Fertile Plain" Weight="10" />
+      <Feature ID="Thick Fertile Forest" Weight="0" />
+      <Feature ID="Light Fertile Forest" Weight="10" />
+      <Feature ID="Light Barren Forest" Weight="10" />
+      <Feature ID="Steep Hill Line" Weight="10" />
+      <Feature ID="Small Upland Plateau" Weight="0" />
+      <Feature ID="Medium Upland Plateau" Weight="3" />
+      <Feature ID="Large Upland Plateau" Weight="0" />
+      <Feature ID="Swamp" Weight="0" />
+      <Feature ID="Marsh" Weight="0" />
+      <Feature ID="Dunes" Weight="20" />
+      <Feature ID="Desert Mountain Line" Weight="7" />
+      <Feature ID="Barren Rolling Hills" Weight="4" />
+      <Border Feature="Mountain Border" Chance="0.5" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="West China #3">
+      <Feature ID="Wooded Barren Plain" Weight="15" />
+      <Feature ID="Mounded Fertile Plain" Weight="25" />
+      <Feature ID="Thick Fertile Forest" Weight="4" />
+      <Feature ID="Light Fertile Forest" Weight="12" />
+      <Feature ID="Light Barren Forest" Weight="15" />
+      <Feature ID="Steep Hill Line" Weight="8" />
+      <Feature ID="Small Upland Plateau" Weight="1" />
+      <Feature ID="Medium Upland Plateau" Weight="2" />
+      <Feature ID="Large Upland Plateau" Weight="3" />
+      <Feature ID="Swamp" Weight="2" />
+      <Feature ID="Marsh" Weight="2" />
+      <Feature ID="Dunes" Weight="10" />
+      <Feature ID="Desert Mountain Line" Weight="3" />
+      <Feature ID="Barren Rolling Hills" Weight="2" />
+      <Border Feature="Steep Hill Border" Chance="0.5" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Mountains" />
+    </SubClimate>
+  </ClimateGenerator> <!-- Central Asia -->
+  <ClimateGenerator ID="Central Asia" ClimateType="Central Asia" DefaultTerrain="Dry Plain">
+    <SubClimate ID="Steppe">
+      <Feature ID="Wooded Fertile Plain" Weight="10" />
+      <Feature ID="Light Fertile Forest" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="10" />
+      <Feature ID="Isolated Large Hill" Weight="10" />
+      <Feature ID="Mounded Fertile Plain" Weight="18" />
+      <Feature ID="Mounded Desert Plain" Weight="12" />
+      <Feature ID="Wooded Grassy Plain" Weight="16" />
+      <Border Feature="Mountain Border" Chance="0.2" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Gentle Hills" />
+    </SubClimate>
+    <SubClimate ID="Mongolia">
+      <Feature ID="Wooded Grassy Plain" Weight="15" />
+      <Feature ID="Light Barren Forest" Weight="6" />
+      <Feature ID="Rolling Hills" Weight="15" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Feature ID="Wooded Fertile Plain" Weight="9" />
+      <Feature ID="Small Mountain Valley" Weight="12" />
+      <Feature ID="Mounded Fertile Plain" Weight="2" />
+      <Feature ID="Mounded Desert Plain" Weight="12" />
+      <Feature ID="Wooded Grassy Plain" Weight="13" />
+      <Feature ID="Thick Fertile Forest" Weight="10" />
+      <Border Feature="Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Steep Hills" BackTerrain="Gentle Hills" />
+    </SubClimate>
+    <SubClimate ID="Siberia">
+      <Feature ID="Wooded Grassy Plain" Weight="8" />
+      <Feature ID="Light Barren Forest" Weight="8" />
+      <Feature ID="Rolling Hills" Weight="8" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Feature ID="Wooded Fertile Plain" Weight="8" />
+      <Feature ID="Small Mountain Valley" Weight="8" />
+      <Feature ID="Mounded Fertile Plain" Weight="12" />
+      <Feature ID="Mounded Desert Plain" Weight="8" />
+      <Feature ID="Wooded Grassy Plain" Weight="5" />
+      <Feature ID="Thick Fertile Forest" Weight="5" />
+      <Feature ID="Mountain Line" Weight="8" />
+      <Border Feature="Mountain Border" Chance="0.8" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Central Asia #1">
+      <Feature ID="Wooded Fertile Plain" Weight="5" />
+      <Feature ID="Marsh" Weight="10" />
+      <Feature ID="Light Barren Forest" Weight="25" />
+      <Feature ID="Rolling Hills" Weight="10" />
+      <Feature ID="Isolated Large Hill" Weight="5" />
+      <Feature ID="Marshy Plain" Weight="10" />
+      <Feature ID="Swamp" Weight="5" />
+      <Feature ID="Thick Fertile Forest" Weight="5" />
+      <Feature ID="Mounded Fertile Plain" Weight="20" />
+      <Border Feature="Mountain Border" Chance="0.2" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Gentle Hills" />
+    </SubClimate>
+    <SubClimate ID="Central Asia #2">
+      <Feature ID="Wooded Fertile Plain" Weight="5" />
+      <Feature ID="Light Fertile Forest" Weight="15" />
+      <Feature ID="Rolling Hills" Weight="15" />
+      <Feature ID="Isolated Large Hill" Weight="5" />
+      <Feature ID="Marshy Plain" Weight="5" />
+      <Feature ID="Mounded Fertile Plain" Weight="50" />
+      <Border Feature="Mountain Border" Chance="0.2" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Gentle Hills" />
+    </SubClimate>
+    <SubClimate ID="Central Asia #3">
+      <Feature ID="Wooded Fertile Plain" Weight="8" />
+      <Feature ID="Mounded Fertile Plain" Weight="12" />
+      <Feature ID="Light Barren Forest" Weight="15" />
+      <Feature ID="Rolling Hills" Weight="5" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Feature ID="Thick Fertile Forest" Weight="5" />
+      <Feature ID="Dunes" Weight="6" />
+      <Feature ID="Small Mountain Valley" Weight="12" />
+      <Feature ID="Mounded Desert Plain" Weight="20" />
+      <Border Feature="Steep Hill Border" Chance="0.5" />
+      <Headlands Terrain="Steep Hills" BackTerrain="Mountains" />
+    </SubClimate>
+    <SubClimate ID="Central Asia #4">
+      <Feature ID="Mounded Fertile Plain" Weight="25" />
+      <Feature ID="Mounded Desert Plain" Weight="25" />
+      <Feature ID="Wooded Fertile Plain" Weight="7" />
+      <Feature ID="Rolling Hills" Weight="7" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Feature ID="Dunes" Weight="10" />
+      <Feature ID="Barren Rolling Hills" Weight="5" />
+      <Border Feature="Mountain Border" Chance="0.5" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Central Asia #5">
+      <Feature ID="Mounded Fertile Plain" Weight="35" />
+      <Feature ID="Mounded Desert Plain" Weight="15" />
+      <Feature ID="Wooded Fertile Plain" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="5" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Feature ID="Dunes" Weight="5" />
+      <Feature ID="Barren Rolling Hills" Weight="5" />
+      <Feature ID="Desert Mountain Line" Weight="5" />
+      <Border Feature="Steep Hill Border" Chance="0.5" />
+      <Headlands Terrain="Gentle Hills" BackTerrain="Mountains" />
+    </SubClimate>
+    <SubClimate ID="Central Asia #6">
+      <Feature ID="Thick Fertile Forest" Weight="25" />
+      <Feature ID="Wooded Grassy Plain" Weight="15" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="10" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="15" />
+      <Feature ID="Dunes" Weight="8" />
+      <Feature ID="Marshy Plain" Weight="10" />
+      <Feature ID="Mounded Fertile Plain" Weight="15" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Central Asia #7">
+      <Feature ID="Thick Fertile Forest" Weight="10" />
+      <Feature ID="Light Fertile Forest" Weight="10" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="10" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="10" />
+      <Feature ID="Swamp" Weight="5" />
+      <Feature ID="Marshy Plain" Weight="10" />
+      <Feature ID="Mounded Fertile Plain" Weight="15" />
+      <Feature ID="Wooded Fertile Plain" Weight="15" />
+      <Feature ID="Rolling Hills" Weight="10" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Central Asia #8">
+      <Feature ID="Thick Fertile Forest" Weight="5" />
+      <Feature ID="Wooded Fertile Plain" Weight="10" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="10" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="10" />
+      <Feature ID="Swamp" Weight="4" />
+      <Feature ID="Marshy Plain" Weight="10" />
+      <Feature ID="Mounded Fertile Plain" Weight="10" />
+      <Feature ID="Wooded Fertile Plain" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="12" />
+      <Feature ID="Isolated Large Hill" Weight="8" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Border Feature="Mountain Border" Chance="0.8" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Central Asia #9">
+      <Feature ID="Thick Fertile Forest" Weight="5" />
+      <Feature ID="Wooded Grassy Plain" Weight="10" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="10" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="10" />
+      <Feature ID="Swamp" Weight="10" />
+      <Feature ID="Marshy Plain" Weight="10" />
+      <Feature ID="Mounded Fertile Plain" Weight="10" />
+      <Feature ID="Wooded Fertile Plain" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="12" />
+      <Feature ID="Isolated Large Hill" Weight="8" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Border Feature="Mountain Border" Chance="0.8" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+  </ClimateGenerator> <!-- Gobi Desert -->
+  <ClimateGenerator ID="Gobi Desert" ClimateType="Gobi Desert" DefaultTerrain="Fertile Plain">
+    <SubClimate ID="Dry Desert">
+      <Feature ID="Featureless Dry Plain" Weight="15" />
+      <Feature ID="Mounded Desert Plain" Weight="40" />
+      <Feature ID="Barren Rolling Hills" Weight="10" />
+      <Feature ID="Dunes" Weight="20" />
+      <Feature ID="Rolling Hills" Weight="5" />
+      <Feature ID="Isolated Large Hill" Weight="5" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Border Feature="Desert Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Dry Desert2">
+      <Feature ID="Featureless Dry Plain" Weight="25" />
+      <Feature ID="Mounded Desert Plain" Weight="30" />
+      <Feature ID="Barren Rolling Hills" Weight="5" />
+      <Feature ID="Dunes" Weight="15" />
+      <Feature ID="Rolling Hills" Weight="10" />
+      <Feature ID="Isolated Large Hill" Weight="5" />
+      <Feature ID="Steep Hill Line" Weight="10" />
+      <Border Feature="Desert Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Dry Desert3">
+      <Feature ID="Featureless Dry Plain" Weight="40" />
+      <Feature ID="Mounded Desert Plain" Weight="15" />
+      <Feature ID="Barren Rolling Hills" Weight="10" />
+      <Feature ID="Dunes" Weight="20" />
+      <Feature ID="Isolated Large Hill" Weight="5" />
+      <Feature ID="Steep Hill Line" Weight="10" />
+      <Border Feature="Desert Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Dry Desert4">
+      <Feature ID="Featureless Dry Plain" Weight="60" />
+      <Feature ID="Mounded Desert Plain" Weight="15" />
+      <Feature ID="Barren Rolling Hills" Weight="5" />
+      <Feature ID="Dunes" Weight="5" />
+      <Feature ID="Desert Mountain Line" Weight="10" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Border Feature="Desert Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Mountains" BackTerrain="Steep Hills" />
+    </SubClimate>
+    <SubClimate ID="Mountainous Desert">
+      <Feature ID="Featureless Dry Plain" Weight="5" />
+      <Feature ID="Mounded Desert Plain" Weight="25" />
+      <Feature ID="Dunes" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="10" />
+      <Feature ID="Desert Mountain Line" Weight="10" />
+      <Feature ID="Oasis" Weight="15" />
+      <Feature ID="Barren Rolling Hills" Weight="5" />
+      <Feature ID="Isolated Large Hill" Weight="10" />
+      <Feature ID="Steep Hill Line" Weight="10" />
+      <Border Feature="Desert Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Mountains" BackTerrain="Sand" />
+    </SubClimate>
+    <SubClimate ID="Mountainous Desert1">
+      <Feature ID="Featureless Dry Plain" Weight="10" />
+      <Feature ID="Mounded Desert Plain" Weight="20" />
+      <Feature ID="Dunes" Weight="15" />
+      <Feature ID="Rolling Hills" Weight="5" />
+      <Feature ID="Desert Mountain Line" Weight="5" />
+      <Feature ID="Oasis" Weight="20" />
+      <Feature ID="Barren Rolling Hills" Weight="5" />
+      <Feature ID="Isolated Large Hill" Weight="10" />
+      <Feature ID="Steep Hill Line" Weight="10" />
+      <Border Feature="Desert Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Mountains" BackTerrain="Sand" />
+    </SubClimate>
+    <SubClimate ID="Mountainous Desert2">
+      <Feature ID="Featureless Dry Plain" Weight="20" />
+      <Feature ID="Mounded Desert Plain" Weight="20" />
+      <Feature ID="Dunes" Weight="15" />
+      <Feature ID="Rolling Hills" Weight="10" />
+      <Feature ID="Oasis" Weight="15" />
+      <Feature ID="Isolated Large Hill" Weight="10" />
+      <Feature ID="Steep Hill Line" Weight="10" />
+      <Border Feature="Desert Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Mountains" BackTerrain="Sand" />
+    </SubClimate>
+    <SubClimate ID="Mountainous Desert3">
+      <Feature ID="Featureless Dry Plain" Weight="10" />
+      <Feature ID="Mounded Desert Plain" Weight="30" />
+      <Feature ID="Dunes" Weight="20" />
+      <Feature ID="Rolling Hills" Weight="10" />
+      <Feature ID="Oasis" Weight="25" />
+      <Feature ID="Isolated Large Hill" Weight="5" />
+      <Feature ID="Steep Hill Line" Weight="10" />
+      <Border Feature="Desert Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Mountains" BackTerrain="Sand" />
+    </SubClimate>
+    <SubClimate ID="Mountainous Desert4">
+      <Feature ID="Featureless Dry Plain" Weight="50" />
+      <Feature ID="Mounded Desert Plain" Weight="5" />
+      <Feature ID="Dunes" Weight="25" />
+      <Feature ID="Rolling Hills" Weight="5" />
+      <Feature ID="Oasis" Weight="10" />
+      <Feature ID="Isolated Large Hill" Weight="5" />
+      <Border Feature="Desert Mountain Border" Chance="0.6" />
+      <Headlands Terrain="Mountains" BackTerrain="Sand" />
+    </SubClimate>
+  </ClimateGenerator>
+  <!-- Stashed: 
+    <SubClimate ID="Southern China #1">
+      <Feature ID="Thick Fertile Forest" Weight="25" />
+      <Feature ID="Light Forest" Weight="15" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="10" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="5" />
+      <Feature ID="Swamp" Weight="10" />
+      <Feature ID="Marshy Plain" Weight="10" />
+      <Feature ID="Mounded Fertile Plain" Weight="15" />
+      <Feature ID="Wooded Grassy Plain" Weight="8" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Steep Hills" BackTerrain="Coastal" />
+    </SubClimate>
+    <SubClimate ID="Southern China #2">
+      <Feature ID="Thick Fertile Forest" Weight="10" />
+      <Feature ID="Light Forest" Weight="10" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="5" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="10" />
+      <Feature ID="Swamp" Weight="5" />
+      <Feature ID="Marshy Plain" Weight="10" />
+      <Feature ID="Mounded Fertile Plain" Weight="20" />
+      <Feature ID="Wooded Fertile Plain" Weight="15" />
+      <Feature ID="Rolling Hills" Weight="5" />
+      <Feature ID="Wooded Grassy Plain" Weight="5" />
+      <Border Feature="Mountain Border" Chance="0.9" />
+      <Headlands Terrain="Mountains" BackTerrain="Gentle Hills" />
+    </SubClimate>
+    <SubClimate ID="Southern China #3">
+      <Feature ID="Thick Fertile Forest" Weight="5" />
+      <Feature ID="Light Forest" Weight="10" />
+      <Feature ID="Large Mountains In Heavy Forest" Weight="10" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="10" />
+      <Feature ID="Swamp" Weight="10" />
+      <Feature ID="Marshy Plain" Weight="10" />
+      <Feature ID="Mounded Fertile Plain" Weight="10" />
+      <Feature ID="Wooded Fertile Plain" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="12" />
+      <Feature ID="Isolated Large Hill" Weight="8" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Border Feature="Mountain Border" Chance="0.8" />
+      <Headlands Terrain="Grassland" BackTerrain="Marsh" />
+    </SubClimate>
+    <SubClimate ID="Southern China #3">
+      <Feature ID="Large Mountains In Heavy Forest" Weight="15" />
+      <Feature ID="Steep Hills In Heavy Forest" Weight="15" />
+      <Feature ID="Wooded Grassy Plain" Weight="10" />
+      <Feature ID="Mounded Fertile Plain" Weight="10" />
+      <Feature ID="Wooded Fertile Plain" Weight="10" />
+      <Feature ID="Rolling Hills" Weight="12" />
+      <Feature ID="Isolated Large Hill" Weight="8" />
+      <Feature ID="Steep Hill Line" Weight="5" />
+      <Border Feature="Mountain Border" Chance="0.8" />
+      <Headlands Terrain="Grassland" BackTerrain="Marsh" />
+    </SubClimate>
+  -->
+</Root>

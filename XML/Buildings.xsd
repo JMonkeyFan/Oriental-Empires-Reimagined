@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="Requirement.xsd"/>
+
+  <!-- Enumeration of external placement -->
+  <xs:simpleType name="ExternalPlacementType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal"/>
+      <xs:enumeration value="Shore"/>
+      <xs:enumeration value="PlacementDot"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  
+  <xs:complexType name="Building">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="Model">
+          <xs:complexType>
+            <xs:sequence>
+            <xs:element name="Prefab" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="Name" type="xs:string" use="required"/>
+                <xs:attribute name="Style" type="xs:string" use="optional"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ShorePlacement" minOccurs="0">
+              <xs:complexType>
+                <xs:attribute name="Parameter" type="xs:float" use="optional"/>
+                <xs:attribute name="FixedHeight" type="xs:float" use="optional"/>
+              </xs:complexType>
+            </xs:element>
+              <xs:element name="Placement" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="R" type="xs:int" use ="required"/>
+                  <xs:attribute name="G" type="xs:int" use ="required"/>
+                  <xs:attribute name="B" type="xs:int" use ="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SlotSize" type="xs:int" use="optional"/>
+            <xs:attribute name="TempleSlot" type="xs:boolean" use="optional"/>
+            <xs:attribute name="PalaceSlot" type="xs:boolean" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VirtualBuilding">
+          <xs:complexType>
+            <xs:attribute name="Type" type="xs:string" use="optional"/>
+            <xs:attribute name="Level" type="xs:int" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+      
+      <xs:element name="Construction">
+        <xs:complexType>
+          <xs:attribute name="Cost" type="xs:int" use="required"/>
+          <xs:attribute name="SackValue" type="xs:int" use="optional"/>
+          <xs:attribute name="MinTurns" type="xs:int" use="required"/>
+          <xs:attribute name="Upkeep" type="xs:int" use="required"/>
+          <xs:attribute name="CardIcon" type="xs:string" use="required"/>
+          <xs:attribute name="CardMinorIcon" type="xs:string" use="required"/>
+          <xs:attribute name="Military" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <!--Requirements that the player can take action to meet-->
+      <xs:element name="Requirements" type="oe:RequirementList" minOccurs ="0"/>
+
+      <!-- These are requirements that won't change over time, or are only valid
+			at certain fixed locations. Player's won't be offerred items that don't meet
+			the static reqirements since they have no means to meet them.
+			Examples include requirements for a specific race, game type,
+			or geographical location -->
+      <xs:element name="StaticRequirements" type="oe:RequirementList" minOccurs ="0"/>
+
+      <!-- The capabilities the building has -->
+      <xs:element name="Capability" maxOccurs="unbounded" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required"/>
+          <xs:attribute name="Level" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+    <xs:attribute name ="InSettlement" type="xs:boolean" use="required"/>
+    <xs:attribute name="MaxNumber" type="xs:nonNegativeInteger" use="optional"/>
+    <xs:attribute name ="Upgrades" type="xs:string" use="optional"/>
+    <xs:attribute name ="Tags" type="xs:string" use="optional"/>
+    <xs:attribute name="AllowedForHorde" type ="xs:boolean" use="optional"/>
+  </xs:complexType>
+
+  <!-- Modding Elements //////////////////////////////////////////////// -->
+
+  <xs:complexType name="DropBuildingType">
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!--///////////////////////////////////////////////////////////////// -->
+
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="Building" type="oe:Building" maxOccurs="unbounded"/>
+        <xs:element name="Replace" type="oe:Building" maxOccurs="unbounded"/>
+        <xs:element name="Drop" type="oe:DropBuildingType" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:complexType>
+
+  </xs:element>
+</xs:schema>

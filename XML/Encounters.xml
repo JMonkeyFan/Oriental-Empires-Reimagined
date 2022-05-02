@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation ="OrientalEmpires Encounters.xsd">
+
+  <!-- Tech Encounters /////////////////////////////////////////////////-->
+  <!-- Famous Craftsman -->
+  <Encounter ID="CraftsmanA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_03" Portrait="Character_07" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <!-- High random range for reward to span list of techs -->
+    <Rewards Type="RandomCraftTech" Min="0" Max="10000"/>
+    <Cost Type="Money" Min="50" Max="200"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <Encounter ID="CraftsmanB" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_03" Portrait="Character_16" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="ImproveCraftResearch" Min="5" Max="15"/>
+    <Cost Type="Money" Min="250" Max="750"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+
+  <!-- Famous Statesmen -->
+  <Encounter ID="StatesmanA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_10" Portrait="Character_06" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <!-- High random range for reward to span list of techs -->
+    <Rewards Type="RandomPowerTech" Min="0" Max="10000"/>
+    <Cost Type="Money" Min="100" Max="250"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <Encounter ID="StatesmanB" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_11" Portrait="Character_09" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="ImprovePowerResearch" Min="5" Max="15"/>
+    <Cost Type="Money" Min="300" Max="900"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <Encounter ID="StatesmanC" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_12" Portrait="Character_15" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="JoinAsCivilLeader" Min="0" Max="0"/>
+    <Cost Type="Money" Min="500" Max="1500"/>
+    <Text NoReward="ENC Not Here"/>
+  </Encounter>
+
+  <!-- Famous Philosophers -->
+  <Encounter ID="PhilosopherA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_09" Portrait="Character_01" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0.1"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <!-- High random range for reward to span list of techs -->
+    <Rewards Type="RandomThoughtTech" Min="0" Max="10000"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <Encounter ID="PhilosopherB" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_12" Portrait="Character_12" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0.1"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="ImproveThoughtResearch" Min="5" Max="15"/>
+    <Cost Type="Money" Min="100" Max="300"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+
+  <!-- Famous Scholars -->
+  <Encounter ID="ScholarA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_06" Portrait="Character_13" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <!-- High random range for reward to span list of techs -->
+    <Rewards Type="RandomKnowledgeTech" Min="0" Max="10000"/>
+    <Cost Type="Money" Min="200" Max="400"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <Encounter ID="ScholarB" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_04" Portrait="Character_17" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="ImproveKnowledgeResearch" Min="5" Max="15"/>
+    <Cost Type="Money" Min="250" Max="750"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+
+  <!-- Teachers -->
+  <Encounter ID="TeacherA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_01" Portrait="Character_09" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="ImproveQi" Min="1" Max="2"/>
+    <Cost Type="Money" Min="100" Max="300"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <Encounter ID="TeacherB" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_06" Portrait="Character_06" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="ImproveRen" Min="1" Max="2"/>
+    <Cost Type="Money" Min="100" Max="300"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <Encounter ID="TeacherC" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_09" Portrait="Character_19" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="ImproveRen" Min="1" Max="1"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+
+  <!-- Historians-->
+  <Encounter ID="HistorianA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_01" Portrait="Character_10" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="ImproveRen" Min="1" Max="2"/>
+    <Cost Type="Money" Min="100" Max="300"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+
+  <!-- Shaman / Witches-->
+  <Encounter ID="WitchA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_08" Portrait="Character_03" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0.1"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="IncreaseAuthority" Min="1" Max="2"/>
+    <Cost Type="Money" Min="10" Max="200"/>
+    <Text NoReward="ENC Only For Leader or Heir"/>
+  </Encounter>
+
+  <!-- Noble Women-->
+  <Encounter ID="NoblewomanA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_11" Portrait="Character_05" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="Money" Min="100" Max="1000"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <Encounter ID="NoblewomanB" PersistAfterFirstVisit="10" MustAccept="true">
+    <Graphics Picture="EncounterBG_02" Portrait="Character_21" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="Always" Min="0" Max="0" Tag="ENC Steal your treasure"/>
+    <Cost Type ="Money" Max="100" Min="500"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  
+  <!-- Merchants -->
+  <Encounter ID="MerchantA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_05" Portrait="Character_08" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0.1"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="Money" Min="100" Max="1000"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <!-- Dead merchant -->
+  <Encounter ID="MerchantB" PersistAfterFirstVisit="10" MustAccept="true">
+    <Graphics Picture="EncounterBG_02" Portrait="Character_20" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0.1"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="Always" Min="0" Max="0" Tag="ENC Attend Funeral"/>
+    <Cost Type="Money" Min="10" Max="50"/>
+    <Text NoReward="ENC Nothing To Teach"/>
+  </Encounter>
+  <Encounter ID="MerchantC" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_08" Portrait="Character_23" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0003">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0.1"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="IncreaseAuthority" Min="1" Max="3"/>
+    <Cost Type="Money" Min="400" Max="800"/>
+    <Text NoReward="ENC Merchant King Only"/>
+  </Encounter>
+  <Encounter ID="MerchantD" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_03" Portrait="Character_08" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0003">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0.1"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="CultureVPs" Min="1" Max="3"/>
+    <Cost Type="Money" Min="300" Max="600"/>
+    <Text NoReward="ENC Merchant King Only"/>
+  </Encounter>
+  <Encounter ID="MerchantE" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_05" Portrait="Character_23" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0.1"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="RevealCities" Min="20" Max="20"/>
+    <Cost Type="Money" Min="100" Max="400"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+  
+  <!-- Girls -->
+  <Encounter ID="GirlA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_09" Portrait="Character_04" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0006">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="IncreaseAuthority" Min="1" Max="3"/>
+    <Cost Type="Money" Min="300" Max="600"/>
+    <Text NoReward="ENC Girl Only For Leader"/>
+  </Encounter>
+  <Encounter ID="GirlB" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_10" Portrait="Character_21" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0003">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="CultureVPs" Min="1" Max="3"/>
+    <Cost Type="Money" Min="300" Max="600"/>
+    <Text NoReward="ENC Not Here"/>
+  </Encounter>
+  <Encounter ID="GirlC" PersistAfterFirstVisit="10" MustAccept="true">
+    <Graphics Picture="EncounterBG_10" Portrait="Character_22" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0003">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="Always" Min="1" Max="1" Tag="ENC Always Pleasant Time"/>
+    <Cost Type="Money" Min="100" Max="200"/>
+    <Text NoReward="ENC Not Here"/>
+  </Encounter>
+  <Encounter ID="GirlD" PersistAfterFirstVisit="10" MustAccept="true">
+    <Graphics Picture="EncounterBG_10" Portrait="Character_04" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0003">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="DecreaeQi" Min="1" Max="2"/>
+    <Rewards Type="DecreaseRen" Min="2" Max="3"/>
+    <Cost Type="Money" Min="200" Max="500"/>
+    <Text NoReward="ENC Not Here"/>
+  </Encounter>
+  
+  <!-- Miners -->
+  <Encounter ID="MinerJade" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_04" Portrait="Character_07" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0004">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="RevealResource" Min="30" Max="30" Tag="Jade"/>
+    <Cost Type="Money" Min="100" Max="300"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+  <Encounter ID="MinerGold" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_01" Portrait="Character_16" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0004">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="RevealResource" Min="30" Max="30" Tag="Gold"/>
+    <Cost Type="Money" Min="100" Max="200"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+
+  <!-- Travellers -->
+  <Encounter ID="TravellerA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_09" Portrait="Character_01" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="RevealMap" Min="10" Max="25"/>
+    <Cost Type="Money" Min="200" Max="400"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+  
+  <!-- Tribal Guide -->
+  <Encounter ID="TribalGuideA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_11" Portrait="Character_14" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.001">
+      <AllowedTerrain ID="Forest"/>
+      <AllowedTerrain ID="Marsh"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+      <ClimateModifier ID="Northern China" Modifier="0"/>
+      <ClimateModifier ID="Western China" Modifier="0"/>
+    </Occurance>
+    <Rewards Type="RevealMap" Min="10" Max="25"/>
+    <Cost Type="Money" Min="100" Max="300"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+
+  <!-- Exiles -->
+  <Encounter ID="ExileA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_12" Portrait="Character_13" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Gentle Hills"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="RevealCapital" Min="50" Max="50"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+
+  <!-- Warriors -->
+  <Encounter ID="WarriorA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_08" Portrait="Character_24" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="JoinAsMilitaryLeader" Min="0" Max="0"/>
+    <Cost Type="Money" Min="500" Max="1500"/>
+    <Text NoReward="ENC Not Here"/>
+  </Encounter>
+  <Encounter ID="WarriorB" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_07" Portrait="Character_18" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="UnitsJoinArmy" Min="1" Max="2" Tag="EncNoble"/>
+    <Cost Type="Money" Min="20" Max="60"/>
+    <Text NoReward="ENC Not Here"/>
+  </Encounter>
+  
+  <!-- Bandits -->
+  <Encounter ID="BanditA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_11" Portrait="Character_11" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="Money" Min="100" Max="500"/>
+    <Rewards Type="DecreaseAuthority" Min="1" Max="1"/>
+    <Text NoReward="ENC Need Leader For Amnesty"/>
+  </Encounter>
+  <Encounter ID="BanditB" PersistAfterFirstVisit="10" MustAccept="true">
+    <Graphics Picture="EncounterBG_02" Portrait="Character_18" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Forest"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="Always" Min="0" Max="0" Tag ="ENC Steal your treasure"/>
+    <Cost Type="Money" Min="100" Max="500"/>
+    <Text NoReward="ENC Not Here"/>
+  </Encounter>
+  <Encounter ID="BanditC" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_07" Portrait="Character_19" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <AllowedTerrain ID="Forest"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0.5"/>
+    </Occurance>
+    <Rewards Type="UnitsJoinArmy" Min="1" Max="4" Tag="EncBandit"/>
+    <Text NoReward="ENC Not Here"/>
+  </Encounter>
+
+  <!-- Fishermen -->
+  <Encounter ID="FishermanA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_13" Portrait="Character_25" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Marsh"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0"/>
+    </Occurance>
+    <Rewards Type="RevealWater" Min="12" Max="18"/>
+    <Cost Type="Money" Min="200" Max="500"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+  <Encounter ID="FishermanB" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_13" Portrait="Character_25" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Marsh"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0"/>
+    </Occurance>
+    <Rewards Type="RevealResource" Min="25" Max="30" Tag="Fish"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+  
+  <!-- Hunters -->
+  <Encounter ID="HunterA" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_01" Portrait="Character_07" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Dry Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Northern China" Modifier="0"/>
+      <ClimateModifier ID="Southern China" Modifier="0"/>
+    </Occurance>
+    <Rewards Type="RevealResource" Min="25" Max="30" Tag="Wild Horses"/>
+    <Cost Type="Money" Min="50" Max="300"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+  <Encounter ID="HunterB" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_01" Portrait="Character_16" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Forest"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Central Asia" Modifier="0"/>
+    </Occurance>
+    <Rewards Type="RevealResource" Min="25" Max="30" Tag="Rhinoceros"/>
+    <Cost Type="Money" Min="50" Max="300"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+  <Encounter ID="HunterC" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_01" Portrait="Character_02" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0005">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Southern China" Modifier="0"/>
+    </Occurance>
+    <Rewards Type="RevealResource" Min="25" Max="30" Tag="Wild Game"/>
+    <Cost Type="Money" Min="50" Max="300"/>
+    <Text NoReward="ENC No Info"/>
+  </Encounter>
+
+  <!-- Travellers -->
+  <Encounter ID="Xu Fu" PersistAfterFirstVisit="10">
+    <Graphics Picture="EncounterBG_13" Portrait="Character_17" SpriteMarker="G_Icon_Encounter_Default_01" EventIcon="G_Icon_List_EventEncounter_01"/>
+    <Occurance BaseChance="0.0003">
+      <AllowedTerrain ID="Fertile Plain"/>
+      <AllowedTerrain ID="Grassland"/>
+      <ClimateModifier ID="Gobi Desert" Modifier="0"/>
+      <ClimateModifier ID="Southern China" Modifier="0"/>
+    </Occurance>
+    <Rewards Type="IncreaseAuthority" Min="1" Max="2"/>
+    <Cost Type="Money" Min="500" Max="1000"/>
+    <Text NoReward="ENC Leaders Ears Only"/>
+  </Encounter>
+  
+  <!-- Robbers -->
+</Root>

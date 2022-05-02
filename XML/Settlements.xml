@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Settlements.xsd">
+
+  <!--  Architectures must be declared first -->
+  <Architecture ID="Chinese" />
+  <Architecture ID="Nomad" />
+  <Architecture ID="Central Asian" />
+
+  <!-- Environment Proxies /////////////////////////////////////////////////////////-->
+  <EnvProxy Prefab="OE_Tree_Proxy">
+    <Climate Name="Northern China">
+      <Item EnvItem="NorthernTree7" Weight="1" />
+      <Item EnvItem="NorthernTree8" Weight="1" />
+    </Climate>
+    <Climate Name="Southern China">
+      <Item EnvItem="SouthernTree5" Weight="1" />
+      <Item EnvItem="SouthernTree6" Weight="1" />
+    </Climate>
+    <Climate Name="Western China">
+      <Item EnvItem="WesternTree5" Weight="1" />
+      <Item EnvItem="WesternTree6" Weight="1" />
+    </Climate>
+    <Climate Name="Central Asia">
+      <Item EnvItem="CentralTree1" Weight="1" />
+      <Item EnvItem="CentralTree2" Weight="1" />
+    </Climate>
+    <Climate Name="Gobi Desert">
+      <Item EnvItem="DesertTree5" Weight="1" />
+    </Climate>
+    <Climate Name="Central Asia DLC">
+      <Item EnvItem="DesertTree5" Weight="1" />
+    </Climate>
+
+  </EnvProxy>
+
+  <!-- Ambient Proxies ////////////////////////////////////////////////////////////////-->
+  <AmbientProxy Prefab="OE_CivilianPoorIdle_Proxy">
+    <Item Item="M Peasant Standing" Weight="1" />
+    <Item Item="F Peasant Standing" Weight="1" />
+  </AmbientProxy>
+  <AmbientProxy Prefab="OE_CivilianNobleIdle_Proxy">
+    <Item Item="M Noble Standing" Weight="1" />
+    <Item Item="F Noble Standing" Weight="1" />
+  </AmbientProxy>
+
+  <!-- Animal Proxies ////////////////////////////////////////////////////////////////-->
+  <AmbientProxy Prefab="OE_HorseIdle_Proxy">
+    <Item Item="Wild Horse" Weight="1" />
+  </AmbientProxy>
+  <AmbientProxy Prefab="OE_AnimalOxIdle_Proxy">
+    <Item Item="Ox" Weight="1" />
+  </AmbientProxy>
+
+  <!-- Banner Proxies /////////////////////////////////////////////////////////////////-->
+  <BannerProxy Prefab="OE_Flag_Proxy" BannerName="Banners/Prefabs/OE_Banner_Mounted" Scale="0.5" />
+  <BannerProxy Prefab="OE_FlagGate_Proxy" BannerName="Banners/Prefabs/OE_Banner_Infantry" Scale="1" />
+
+  <!-- Position Proxies ///////////////////////////////////////////////////////////////-->
+  <PositionProxy Prefab="OE_FlagSettlement_Proxy" Type="GarrisonBanner" />
+  <PositionProxy Prefab="Proxy_Gate_Position" Type="GatePosition" />
+  <PositionProxy Prefab="Proxy_Road_Position" Type="GatePosition" />
+  <PositionProxy Prefab="Proxy_Passable_Wall" Type="PassableArea" />
+  <PositionProxy Prefab="Proxy_Passable_Gate" Type="PassableArea" />
+
+  <!-- Particle Effect Proxies //////////////////////////////////////////////////////////////////-->
+  <ParticleProxy Prefab="OE_FireBrazierSmall_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_BrazierFire_Small" Use="Default" />
+  <ParticleProxy Prefab="OE_SmokeSmall_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Smoke_Small" Use="Default" />
+  <ParticleProxy Prefab="OE_SmokeMedium_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Smoke_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_SmokeLarge_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Smoke_Large" Use="Default" />
+  <ParticleProxy Prefab="OE_FireSmall_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Fire_Small" Use="Default" Sound="SmallFire" />
+  <ParticleProxy Prefab="OE_FireMedium_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Fire_Medium" Use="Default" Sound="SmallFire" />
+  <ParticleProxy Prefab="OE_FireLarge_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Fire_Large" Use="Default" Sound="LargeFire" />
+  <ParticleProxy Prefab="OE_SpiritualSmall_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Spiritual_Small" Use="Default" />
+  <ParticleProxy Prefab="OE_SpiritualMedium_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Spiritual_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_SpiritualLarge_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Spiritual_Large" Use="Default" />
+  <ParticleProxy Prefab="OE_MineCopperSmall_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_MineCopper_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_MineCopperMedium_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_MineCopper_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_MineCopperLarge_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_MineCopper_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_MineGoldSmall_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_MineGold_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_MineGoldMedium_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_MineGold_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_MineGoldLarge_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_MineGold_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_MineJadeSmall_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_MineJade_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_MineJadeMedium_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_MineJade_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_MineJadeLarge_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_MineJade_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_PavillionSmall_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Pavillion_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_PavillionMedium_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Pavillion_Medium" Use="Default" />
+  <ParticleProxy Prefab="OE_BurningBuildingSmall_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Fire_Small" Use="Destroyed" Sound="SmallFire" />
+  <ParticleProxy Prefab="OE_BurningBuildingMedium_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Fire_Medium" Use="Destroyed" Sound="LargeFire" />
+  <ParticleProxy Prefab="OE_BurningBuildingLarge_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Fire_Large" Use="Destroyed" Sound="LargeFire" />
+
+  <!-- Distressed Settlement Effect Proxies //////////////////////////////////////////////////////////////////-->
+  <!-- <ParticleProxy Prefab="OE_Siege1_Town_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Disease_Small"/>
+  <ParticleProxy Prefab="OE_Siege2_Town_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Disease_Small"/>
+  <ParticleProxy Prefab="OE_Siege3_Town_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Disease_Small"/>
+  <ParticleProxy Prefab="OE_Siege1_City_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Disease_Medium"/>
+  <ParticleProxy Prefab="OE_Siege2_City_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Disease_Medium"/>
+  <ParticleProxy Prefab="OE_Siege3_City_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Disease_Medium"/>
+  <ParticleProxy Prefab="OE_Siege1_LargeCity_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Disease_Large"/>
+  <ParticleProxy Prefab="OE_Siege2_LargeCity_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Disease_Large"/>
+  <ParticleProxy Prefab="OE_Siege3_LargeCity_Proxy" ParticlePrefab="Effects/Prefabs/High_Resolution/OE_P_Disease_Large"/>-->
+
+
+  <!-- Bridge and Crossing Proxies ////////////////////////////////////////////////////-->
+  <BridgeProxy Prefab="OE_BridgeBrick_01" MoatCrossing="false" />
+  <BridgeProxy Prefab="OE_BridgeWooden_01" MoatCrossing="false" />
+  <BridgeProxy Prefab="OE_MoatCrossing01" MoatCrossing="true" />
+
+  <!-- Firing Position Proxies ////////////////////////////////////////////////////-->
+  <PositionProxy Prefab="OE_FiringAngle_Proxy" Type="FiringPosition" />
+  <PositionProxy Prefab="OE_FiringAngleArt_Proxy" Type="FiringPosition" />
+  <PositionProxy Prefab="OE_FiringAngleSR_Proxy" Type="FiringPosition" />
+
+  <!-- Siege Palisade Proxies ////////////////////////////////////////////////////-->
+  <StatusProxy Prefab="OE_SiegePalisade_Town_Proxy" Type="Siege">
+    <Replacement Prefab="Architecture/Buildings/Prefabs/OE_SiegePalisade_Town" />
+  </StatusProxy>
+  <StatusProxy Prefab="OE_SiegePalisade_City_Proxy" Type="Siege">
+    <Replacement Prefab="Architecture/Buildings/Prefabs/OE_SiegePalisade_City" />
+  </StatusProxy>
+  <StatusProxy Prefab="OE_SiegePalisade_LargeCity_Proxy" Type="Siege">
+    <Replacement Prefab="Architecture/Buildings/Prefabs/OE_SiegePalisade_LargeCity" />
+  </StatusProxy>
+
+  <!-- Wall Proxies ///////////////////////////////////////////////////////////////////-->
+  <WallProxy Prefab="OE_WallBrick_3m_Straight_Lvl1" PieceType="Wall">
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_Straight_Lvl1" Level="1" TechLevel="0" HitPoints="100" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_Straight_Lvl1_Breach" DestructionEffect="OE_P_BuildingCollapse_Large" DestructionSound="WoodenWallCollapse" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_Straight_Lvl1" Level="2" TechLevel="0" HitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_3m_Straight_Lvl1_Breach" DestructionEffect="OE_P_BuildingCollapse_Large" DestructionSound="EarthWallCollapse" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_Straight_Lvl1" Level="3" TechLevel="0" HitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_4m_Straight_Lvl1_Breach" DestructionEffect="OE_P_BuildingCollapse_Large" DestructionSound="EarthWallCollapse" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_Straight_Lvl1" Level="2" TechLevel="1" HitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_Straight_Lvl1_Breach" DestructionEffect="OE_P_BuildingCollapse_Large" DestructionSound="EarthWallCollapse" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_Straight_Lvl1" Level="3" TechLevel="1" HitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_Straight_Lvl1_Breach" DestructionEffect="OE_P_BuildingCollapse_Large" DestructionSound="EarthWallCollapse" />
+  </WallProxy>
+  <WallProxy Prefab="OE_WallBrick_3m_NoBreach_Lvl1" PieceType="Tower">
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_NoBreach_Lvl1" Level="1" TechLevel="0" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_NoBreach_Lvl1" Level="2" TechLevel="0" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_NoBreach_Lvl1" Level="3" TechLevel="0" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_NoBreach_Lvl1" Level="2" TechLevel="1" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_NoBreach_Lvl1" Level="3" TechLevel="1" />
+  </WallProxy>
+  <WallProxy Prefab="OE_WallBrick_3m_TowerSmall_Lvl2" PieceType="Tower">
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_TowerSmall_Lvl1" Level="1" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_TowerSmall_Lvl1_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerSmall_Lvl1" Level="2" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerSmall_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerSmall_Lvl2" Level="2" TechLevel="0" UpgradeLevel="1" HitPoints="100" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerSmall_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerSmall_Lvl1" Level="3" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerSmall_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerSmall_Lvl2" Level="3" TechLevel="0" UpgradeLevel="1" HitPoints="100" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerSmall_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerSmall_Lvl1" Level="2" TechLevel="1" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerSmall_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerSmall_Lvl2" Level="2" TechLevel="1" UpgradeLevel="1" HitPoints="100" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerSmall_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerSmall_Lvl1" Level="3" TechLevel="1" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerSmall_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerSmall_Lvl2" Level="3" TechLevel="1" UpgradeLevel="1" HitPoints="100" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerSmall_Lvl2_Damaged" />
+  </WallProxy>
+  <WallProxy Prefab="OE_WallBrick_3m_TowerMed_Lvl2" PieceType="Tower">
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_TowerMed_Lvl1" TechLevel="0" Level="1" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_TowerMed_Lvl1_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerMed_Lvl1" TechLevel="0" Level="2" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerMed_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerMed_Lvl2" Level="2" TechLevel="0" UpgradeLevel="1" HitPoints="200" FireHitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerMed_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerMed_Lvl1" TechLevel="0" Level="3" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerMed_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerMed_Lvl2" Level="3" TechLevel="0" UpgradeLevel="1" HitPoints="200" FireHitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerMed_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WalBrick_3m_TowerMed_Lvl1" TechLevel="1" Level="2" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerMed_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerMed_Lvl2" Level="2" TechLevel="1" UpgradeLevel="1" HitPoints="200" FireHitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerMed_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WalBrick_4m_TowerMed_Lvl1" TechLevel="1" Level="3" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerMed_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerMed_Lvl2" Level="3" TechLevel="1" UpgradeLevel="1" HitPoints="200" FireHitPoints="300" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerMed_Lvl2_Damaged" />
+  </WallProxy>
+  <WallProxy Prefab="OE_WallBrick_3m_TowerLarge_Lvl2" PieceType="Tower">
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_TowerLarge_Lvl1" Level="1" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_TowerLarge_Lvl1_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerLarge_Lvl1" Level="2" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerLarge_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerLarge_Lvl2" Level="2" TechLevel="0" UpgradeLevel="1" HitPoints="250" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_3m_TowerLarge_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerLarge_Lvl1" Level="3" TechLevel="0" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerLarge_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerLarge_Lvl2" Level="3" TechLevel="0" UpgradeLevel="1" HitPoints="250" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_4m_TowerLarge_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerLarge_Lvl1" Level="2" TechLevel="1" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerLarge_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerLarge_Lvl2" Level="2" TechLevel="1" UpgradeLevel="1" HitPoints="250" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_TowerLarge_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerLarge_Lvl1" Level="3" TechLevel="1" HitPoints="100" FireHitPoints="100" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerLarge_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerLarge_Lvl2" Level="3" TechLevel="1" UpgradeLevel="1" HitPoints="250" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_TowerLarge_Lvl2_Damaged" />
+  </WallProxy>
+  <WallProxy Prefab="OE_WallBrick_3m_Gatehouse_Lvl2" PieceType="Gate">
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_GateHouse_Lvl1" Level="1" TechLevel="0" HitPoints="150" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallWooden_2m_GateHouse_Lvl1_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_GateHouse_Lvl1" Level="2" TechLevel="0" HitPoints="300" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_3m_Gatehouse_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_3m_Gatehouse_Lvl2" Level="2" TechLevel="0" UpgradeLevel="1" HitPoints="300" FireHitPoints="400" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_3m_Gatehouse_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_Gatehouse_Lvl1" Level="3" TechLevel="0" HitPoints="400" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_4m_Gatehouse_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallMud_4m_Gatehouse_Lvl2" Level="3" TechLevel="0" UpgradeLevel="1" HitPoints="400" FireHitPoints="600" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallMud_4m_Gatehouse_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_Gatehouse_Lvl1" Level="2" TechLevel="1" HitPoints="500" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_Gatehouse_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_Gatehouse_Lvl2" Level="2" TechLevel="1" UpgradeLevel="1" HitPoints="500" FireHitPoints="600" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_3m_Gatehouse_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_Gatehouse_Lvl1" Level="3" TechLevel="1" HitPoints="600" FireHitPoints="200" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_Gatehouse_Lvl2_Damaged" />
+    <Replacement Prefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_Gatehouse_Lvl2" Level="3" TechLevel="1" UpgradeLevel="1" HitPoints="600" FireHitPoints="600" DestroyedPrefab="Architecture/Walls/Prefabs/OE_WallBrick_4m_Gatehouse_Lvl2_Damaged" />
+  </WallProxy>
+
+
+  <!-- Slot Proxies -->
+  <SlotProxy Prefab="OE_SlotProxy_12m" Size="1">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_12m" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_12m_V2" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_12m_V3" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_12m_V4" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_SlotNomadAmbientA_12m" />
+  </SlotProxy>
+  <SlotProxy Prefab="OE_SlotProxy_16m" Size="2">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_16m" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_16m_V2" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_16m_V3" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_SlotNomadAmbientA_16m" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_16m" Architecture="Chinese" Size="-1" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_16m" Architecture="Nomad" Size="-1" />
+  </SlotProxy>
+  <SlotProxy Prefab="OE_SlotProxy_16m_Temple" Size="2" SpecialTemple="true">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_16m" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_16m_V2" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_16m_V3" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_SlotNomadAmbientA_16m" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_16m" Architecture="Chinese" Size="-1" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_16m" Architecture="Nomad" Size="-1" />
+  </SlotProxy>
+  <SlotProxy Prefab="OE_SlotProxy_16m_Palace" Size="2" SpecialPalace="true">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_16m" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_16m_V2" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_16m_V3" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_SlotNomadAmbientA_16m" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_16m" Architecture="Chinese" Size="-1" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_16m" Architecture="Nomad" Size="-1" />
+  </SlotProxy>
+  <SlotProxy Prefab="OE_SlotProxy_24m" Size="3">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_24m" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_24m_V2" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_24m_V3" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_SlotNomadAmbientA_24m" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_24m" Architecture="Chinese" Size="-1" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_24m" Architecture="Nomad" Size="-1" />
+  </SlotProxy>
+  <SlotProxy Prefab="OE_SlotProxy_24m_Temple" Size="3" SpecialTemple="true">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_24m" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_24m_V2" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_24m_V3" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_SlotNomadAmbientA_24m" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_24m" Architecture="Chinese" Size="-1" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_24m" Architecture="Nomad" Size="-1" />
+  </SlotProxy>
+  <SlotProxy Prefab="OE_SlotProxy_24m_Palace" Size="3" SpecialPalace="true">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_24m" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_24m_V2" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseAmbientA_24m_V3" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_SlotNomadAmbientA_24m" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_24m" Architecture="Chinese" Size="-1" />
+    <Filler Prefab="Architecture/Buildings/Prefabs/OE_SlotChineseFiller_24m" Architecture="Nomad" Size="-1" />
+  </SlotProxy>
+
+  <!-- General Proxies -->
+  <GeneralProxy Prefab="OE_BuildingProxy_Small">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl" Weight="2" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1B" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1C" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1D" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingNomad_Small_Lvl" Weight="2" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1C" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1D" Weight="1" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_BuildingProxy_Medium">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Medium_Lvl" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Medium_Lvl1B" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Medium_Lvl1C" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingNomad_Medium_Lvl" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_BuildingProxy_Large">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Large_Lvl" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Large_Lvl1B" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Large_Lvl1C" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Lvl" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_BuildingChinese_Small_Lvl">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl" Weight="2" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1B" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1C" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1D" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingNomad_Small_Lvl" Weight="2" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1C" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Small_Lvl1D" Weight="1" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_BuildingChinese_Medium_Lvl">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Medium_Lvl" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Medium_Lvl1B" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Medium_Lvl1C" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingNomad_Medium_Lvl" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_BuildingChinese_Large_Lvl">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Large_Lvl" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Large_Lvl1B" Weight="1" />
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_BuildingChinese_Large_Lvl1C" Weight="1" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Lvl" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_Shelter">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_Shelter" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_Shelter" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_ShelterLarge">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ShelterLarge" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_Shelter" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_CartLarge">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_CartLarge" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_CartLarge" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_CartSmall">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_CartSmall" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_CartSmall" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_ClothCoverA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ClothCoverA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ClothCoverA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_ClothCoverB">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ClothCoverB" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ClothCoverB" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_Wall">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_Wall" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_Wall" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_Well">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_Well" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_Well" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_BoulderA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_BoulderA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_BoulderA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_JadeRock">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_JadeRock" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_JadeRock" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_RockA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_RockA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_RockA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_MineEntrance">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_MineEntrance" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_MineEntrance" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_MineShaft">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_MineShaft" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_MineShaft" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_ArtilleryLarge">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ArtilleryLarge" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ArtilleryLarge" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_ArtilleryMedium">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ArtilleryMedium" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ArtilleryMedium" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_ArtillerySmall">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ArtillerySmall" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_ArtillerySmall" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_BoatMedium">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_BoatMedium" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_BoatMedium" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_BoatSmall">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_BoatSmall" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_BoatSmall" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_GrainSiloMediumA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_GrainSiloMediumA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_GrainSiloMediumA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_Target">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_Target" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_Target" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Ambient_C_GrainSiloLargeA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_GrainSiloLargeA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_Ambient_C_GrainSiloLargeA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_BuildingNomad_Small_Lvl">
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingNomad_Small_Lvl" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_BuildingNomad_Medium_Lvl">
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingNomad_Medium_Lvl" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_BuildingNomad_Large_Lvl">
+    <Replacement Architecture="Nomad" Prefab="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Lvl" />
+  </GeneralProxy>
+
+  <!-- Detail Proxies -->
+  <GeneralProxy Prefab="OE_Detail_BarrelA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_BarrelA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_BarrelA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_Bench">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_Bench" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_Bench" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_Brazier">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_Brazier" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_Brazier" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_BucketMetal">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_BucketMetal" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_BucketMetal" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_CrateA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_CrateA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_CrateA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_Ladder">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_Ladder" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_Ladder" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_LargeBasket">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_LargeBasket" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_LargeBasket" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_PlanksVert">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_PlanksVert" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_PlanksVert" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_Spade">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_Spade" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_Spade" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_SpiceBarrelA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_SpiceBarrelA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_SpiceBarrelA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_SpiceBoxA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_SpiceBoxA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_SpiceBoxA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_Trough">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_Trough" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_Trough" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_VaseSmallA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_VaseSmallA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_VaseSmallA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_VaseTallA">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_VaseTallA" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_VaseTallA" />
+  </GeneralProxy>
+  <GeneralProxy Prefab="OE_Detail_LogPile">
+    <Replacement Architecture="Chinese" Prefab="Architecture/Details/Prefabs/OE_Detail_LogPile" />
+    <Replacement Architecture="Nomad" Prefab="Architecture/Details/Prefabs/OE_Detail_LogPile" />
+  </GeneralProxy>
+
+  <!-- Tech Dependent Materials //////////////////////////////////////////////////////-->
+  <TechDependentMaterial Capability="Roof Tiles" Material="Architecture/Buildings/Materials/Northern_China/OE_Buildings_Chinese">
+    <Replacement Level="0" Material="Architecture/Buildings/Materials/Northern_China/OE_Buildings_Chinese" />
+    <Replacement Level="1" Material="Architecture/Buildings/Materials/Northern_China/OE_Buildings_Chinese_Lvl2" />
+  </TechDependentMaterial>
+
+  <!-- Auto Materials /////////////////////////////////////////////////////////////////-->
+  <!-- These materials are automatically seasonal and references to these materials 
+  //// are adjusteed for the climate that the object appears in -->
+  <AutoMaterial Material="Architecture/Walls/Materials/Northern_China/OE_WallsBrick_diff">
+    <Override Climate="Southern_China" UseClimate="Northern_China" Seasonal="false" />
+    <Override Climate="Gobi_Desert" UseClimate="Northern_China" Seasonal="false" />
+  </AutoMaterial>
+  <AutoMaterial Material="Architecture/Walls/Materials/Northern_China/OE_WallsMud_diff">
+    <Override Climate="Southern_China" UseClimate="Northern_China" Seasonal="false" />
+    <Override Climate="Gobi_Desert" UseClimate="Northern_China" Seasonal="false" />
+  </AutoMaterial>
+  <AutoMaterial Material="Architecture/Walls/Materials/Northern_China/OE_WallsWood_diff">
+    <Override Climate="Southern_China" UseClimate="Northern_China" Seasonal="false" />
+    <Override Climate="Gobi_Desert" UseClimate="Northern_China" Seasonal="false" />
+  </AutoMaterial>
+
+  <!-- Settlement Bases////////////////////////////////////////////////////////////// -->
+  <SettlementBase ID="Base128_Flat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_128x128_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_128Flat_Mask" />
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Southern China" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Southern China" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Southern China" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID="Base128_Flat_NoWalls" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_128x128_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_128Flat_NoWalls_Mask" />
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Base_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID="Base128_Moat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_128x128_Moat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_128Moat_Mask" />
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Southern China" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Southern China" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Southern China" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Mud>
+  </SettlementBase>
+
+  <SettlementBase ID="Base160_Flat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_160x160_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_160Flat_Mask" />
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID="Base160_Flat_NoWalls" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_160x160_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_160Flat_NoWalls_Mask" />
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Base_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID="Base160_Moat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_160x160_Moat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_160Moat_Mask" />
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+    </Mud>
+  </SettlementBase>
+
+  <SettlementBase ID="Base64_Flat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_96x96_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_64Flat_Mask" />
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID="Base64_Flat_NoWalls" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_96x96_Flat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_64Flat_NoWalls_Mask" />
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Base_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+    </Mud>
+  </SettlementBase>
+  <SettlementBase ID="Base64_Moat" Prefab="Architecture/Settlement_Terrain/Exports/OE_TerrainChinese_96x96_Moat01">
+    <Mask Material="Architecture/Terrain_Masks/Materials/OE_Settlement_64Moat_Mask" />
+    <Road>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Cobbles_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Cobbles_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Road>
+    <Dirt>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Dirt_diff" Climate="Default" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Gobi Desert" Seasonal="false" />
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Central_Asia/OE_SettlementTerrain_CentralAsia_Dirt_diff" Climate="Central Asia DLC" Seasonal="false" />
+    </Dirt>
+    <Mud>
+      <Texture Name="Architecture/Settlement_Terrain/Textures/Northern_China/OE_SettlementTerrain_Mud_diff" Climate="Default" />
+    </Mud>
+  </SettlementBase>
+
+
+  <!-- Settlements ///////////////////////////////////////////////////////////////////-->
+
+  <Settlement ID="Chinese Town" TranslationTag="SD_Town" Level="0" NumSlotBuildingsAllowed="8">
+    <Model Prefab="Architecture/Settlements/Prefabs/OE_Settlement_64x64" Icon="UI/Materials/Settlement_DistanceIcons/OE_SettlementDistIcon_Lvl1" />
+    <UpgradePath Next="Chinese City" />
+    <WallLevel Level="0" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_64x64" Base="Base64_Flat_NoWalls" />
+    <WallLevel Level="1" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_64x64" Base="Base64_Flat" MoatBase="Base64_Moat" />
+    <WallLevel Level="2" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_64x64" Base="Base64_Flat" MoatBase="Base64_Moat" />
+    <WallLevel Level="3" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_64x64" Base="Base64_Flat" MoatBase="Base64_Moat" />
+    <Gate Location="NorthGate" OutsideX="0" OutsideY="1" InsideX="0" InsideY="0" />
+    <Gate Location="SouthGate" OutsideX="0" OutsideY="-1" InsideX="0" InsideY="0" />
+    <Gate Location="EastGate" OutsideX="1" OutsideY="0" InsideX="0" InsideY="0" />
+    <Gate Location="WestGate" OutsideX="-1" OutsideY="0" InsideX="0" InsideY="0" />
+    <CoveredHex X="0" Y="0" />
+  </Settlement>
+
+  <Settlement ID="Chinese City" TranslationTag="SD_City" Level="1" NumSlotBuildingsAllowed="10">
+    <Model Prefab="Architecture/Settlements/Prefabs/OE_Settlement_128x128" Icon="UI/Materials/Settlement_DistanceIcons/OE_SettlementDistIcon_Lvl2" />
+    <UpgradePath Next="Chinese Large City" />
+    <WallLevel Level="0" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_128x128" Base="Base128_Flat_NoWalls" />
+    <WallLevel Level="1" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_128x128" Base="Base128_Flat" MoatBase="Base128_Moat" />
+    <WallLevel Level="2" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_128x128" Base="Base128_Flat" MoatBase="Base128_Moat" />
+    <WallLevel Level="3" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_128x128" Base="Base128_Flat" MoatBase="Base128_Moat" />
+    <Gate Location="NorthGate" OutsideX="0" OutsideY="2" InsideX="0" InsideY="1" />
+    <Gate Location="SouthGate" OutsideX="0" OutsideY="-2" InsideX="0" InsideY="-1" />
+    <Gate Location="EastGate" OutsideX="2" OutsideY="0" InsideX="1" InsideY="0" />
+    <Gate Location="WestGate" OutsideX="-2" OutsideY="0" InsideX="-1" InsideY="0" />
+    <CoveredHex X="0" Y="0" />
+    <CoveredHex X="1" Y="0" />
+    <CoveredHex X="-1" Y="0" />
+    <CoveredHex X="0" Y="1" />
+    <CoveredHex X="-1" Y="1" />
+    <CoveredHex X="0" Y="-1" />
+    <CoveredHex X="-1" Y="-1" />
+  </Settlement>
+
+  <Settlement ID="Chinese Large City" TranslationTag="SD_Large City" Level="2" NumSlotBuildingsAllowed="12">
+    <Model Prefab="Architecture/Settlements/Prefabs/OE_Settlement_160x160" Icon="UI/Materials/Settlement_DistanceIcons/OE_SettlementDistIcon_Lvl3" />
+    <WallLevel Level="0" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_160x160" Base="Base160_Flat_NoWalls" />
+    <WallLevel Level="1" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_160x160" Base="Base160_Flat" MoatBase="Base160_Moat" />
+    <WallLevel Level="2" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_160x160" Base="Base160_Flat" MoatBase="Base160_Moat" />
+    <WallLevel Level="3" Prefab="Architecture/Settlements/Prefabs/OE_Settlement_160x160" Base="Base160_Flat" MoatBase="Base160_Moat" />
+    <Gate Location="NorthGate" OutsideX="0" OutsideY="2" InsideX="0" InsideY="1" />
+    <Gate Location="SouthGate" OutsideX="0" OutsideY="-2" InsideX="0" InsideY="-1" />
+    <Gate Location="EastGate" OutsideX="2" OutsideY="0" InsideX="1" InsideY="0" />
+    <Gate Location="WestGate" OutsideX="-2" OutsideY="0" InsideX="-1" InsideY="0" />
+    <CoveredHex X="0" Y="0" />
+    <CoveredHex X="1" Y="0" />
+    <CoveredHex X="-1" Y="0" />
+    <CoveredHex X="0" Y="1" />
+    <CoveredHex X="-1" Y="1" />
+    <CoveredHex X="0" Y="-1" />
+    <CoveredHex X="-1" Y="-1" />
+  </Settlement>
+
+
+</Root>

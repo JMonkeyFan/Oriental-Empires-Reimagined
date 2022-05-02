@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="MusicSet">
+    <xs:sequence>
+      <xs:element name ="Track" maxOccurs ="unbounded">
+        <xs:complexType>
+          <xs:attribute name="File" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name ="Name" type ="xs:string" use="required"/>
+    <xs:attribute name ="Tag" type ="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="Sound">
+    <xs:attribute name ="Name" type ="xs:string" use="required"/>
+    <xs:attribute name="File" type="xs:string" use="required"/>
+    <xs:attribute name ="Volume" type="xs:float" use ="optional" default="1"/>
+  </xs:complexType>
+
+  <xs:complexType name="Sound3D">
+    <xs:attribute name ="Name" type ="xs:string" use="required"/>
+    <xs:attribute name="File" type="xs:string" use="required"/>
+    <xs:attribute name ="MinDist" type="xs:float" use ="required"/>
+    <xs:attribute name ="Volume" type="xs:float" use ="optional"/>
+    <xs:attribute name ="MaxDist" type="xs:float" use ="optional"/>
+    <xs:attribute name ="MinPitch" type="xs:float" use ="optional"/>
+    <xs:attribute name ="MaxPitch" type="xs:float" use ="optional"/>
+    <xs:attribute name ="Priority" type="xs:float" use ="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="SoundSet">
+    <xs:sequence>
+      <xs:element name="Sound" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="File" type="xs:string" use="required"/>
+          <xs:attribute name ="MinDist" type="xs:float" use ="optional"/>
+          <xs:attribute name ="Volume" type="xs:float" use ="optional"/>
+          <xs:attribute name ="MaxDist" type="xs:float" use ="optional"/>
+          <xs:attribute name="Chance" type="xs:positiveInteger" use ="optional"/>
+          <xs:attribute name ="MinPitch" type="xs:float" use ="optional"/>
+          <xs:attribute name ="MaxPitch" type="xs:float" use ="optional"/>
+          <xs:attribute name ="Priority" type="xs:float" use ="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name ="Name" type ="xs:string" use="required"/>
+    <xs:attribute name ="MinDist" type="xs:float" use ="required"/>
+    <xs:attribute name ="Volume" type="xs:float" use ="optional" default="1"/>
+    <xs:attribute name ="MaxDist" type="xs:float" use ="optional"/>
+    <xs:attribute name ="Priority" type="xs:float" use ="optional"/>
+    <xs:attribute name ="ChanceOfAnySound" type="xs:float" use ="optional"/>
+  </xs:complexType>
+
+  <xs:element name="Sounds">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:choice>
+          <xs:element name="MusicSet" type="oe:MusicSet"/>
+          <xs:element name="Sound" type="oe:Sound"/>
+          <xs:element name="Sound3D" type="oe:Sound3D"/>
+          <xs:element name="SoundSet" type="oe:SoundSet"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

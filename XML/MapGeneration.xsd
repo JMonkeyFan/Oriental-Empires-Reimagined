@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="ClimateSet">
+    <xs:sequence>
+      <xs:element name="ClimateGenerator" maxOccurs ="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Placement">
+              <xs:complexType>
+                <xs:attribute name ="Left" type="xs:float" use="required"/>
+                <xs:attribute name ="Right" type="xs:float" use="required"/>
+                <xs:attribute name ="Top" type="xs:float" use="required"/>
+                <xs:attribute name ="Bottom" type="xs:float" use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="ID" type="xs:string" use="required"/>
+          <xs:attribute name="MinSeeds" type="xs:int" use="required"/>
+          <xs:attribute name="MaxSeeds" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+    <xs:attribute name="Picture" type="xs:string" use="required"/>
+    <xs:attribute name="MinMapArea" type="xs:int" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="ClimateGenerator">
+    <xs:sequence>
+      <xs:element name="SubClimate" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Feature" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="Weight" type="xs:int" use="required"/>
+                <xs:attribute name="ID" type="xs:string" use ="required"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Border">
+              <xs:complexType>
+                <xs:attribute name="Feature" type="xs:string" use="required"/>
+                <xs:attribute name="Chance" type="xs:float" use="required"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Headlands">
+              <xs:complexType>
+                <xs:attribute name="Terrain" type="xs:string" use="required"/>
+                <xs:attribute name="BackTerrain" type="xs:string" use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="ID" type="xs:string" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+    <xs:attribute name="ClimateType" type="xs:string" use="required"/>
+    <xs:attribute name="DefaultTerrain" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="MapType">
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+    <xs:attribute name="TemplateBaseName" type="xs:string" use="required"/>
+    <xs:attribute name="PictureName" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="MapFeature">
+    <xs:sequence>
+      <xs:element name="Blob">
+        <xs:complexType>
+          <xs:attribute name="Terrain" type="xs:string" use="required"/>
+          <xs:attribute name="MinLength" type="xs:int" use="required"/>
+          <xs:attribute name="MaxLength" type="xs:int" use="required"/>
+          <xs:attribute name="MinWidth" type="xs:float" use="required"/>
+          <xs:attribute name="MaxWidth" type="xs:float" use="required"/>
+          <xs:attribute name="Fill" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Surround" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Terrain" type="xs:string" use="required"/>
+          <xs:attribute name="MinWidth" type="xs:float" use="required"/>
+          <xs:attribute name="MaxWidth" type="xs:float" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Scatter" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Terrain" type="xs:string" use="required"/>
+          <xs:attribute name="MinCoverage" type="xs:float" use="required"/>
+          <xs:attribute name="MaxCoverage" type="xs:float" use="required"/>
+          <xs:attribute name="All" type="xs:boolean" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MapType" type="oe:MapType" maxOccurs ="unbounded"/>
+        <xs:element name="ClimateSet" type="oe:ClimateSet" maxOccurs ="unbounded"/>
+        <xs:element name="TerrainFeature" type="oe:MapFeature" maxOccurs ="unbounded"/>
+        <xs:element name="ClimateGenerator" type="oe:ClimateGenerator" maxOccurs ="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Enumeration of seasons -->
+  <xs:simpleType name="Season">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Spring"/>
+      <xs:enumeration value="Summer"/>
+      <xs:enumeration value="Autumn"/>
+      <xs:enumeration value="Winter"/>
+      <xs:enumeration value ="Any"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Enumeration of wall piece types -->
+  <xs:simpleType name="WallPieceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Wall"/>
+      <xs:enumeration value="Tower"/>
+      <xs:enumeration value="Gate"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Enumeration of items that use position proxies -->
+  <xs:simpleType name="PositionProxyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GarrisonBanner"/>
+      <xs:enumeration value="GatePosition"/>
+      <xs:enumeration value="FiringPosition"/>
+      <xs:enumeration value="PassableArea"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Enumeration of items that use status proxies -->
+  <xs:simpleType name="StatusProxyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Siege"/>
+      <xs:enumeration value="Plague"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EffectProxyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default"/>
+      <xs:enumeration value="Destroyed"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Enumeration of gate locations -->
+  <xs:simpleType name="GateRecruitmentLocation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NorthGate"/>
+      <xs:enumeration value="SouthGate"/>
+      <xs:enumeration value="EastGate"/>
+      <xs:enumeration value="WestGate"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name ="ClimateTextureSpec">
+    <xs:sequence>
+      <xs:element name="Texture" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required"/>
+          <xs:attribute name="Climate" type="xs:string" use="required"/>
+          <xs:attribute name="Seasonal" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name ="TechDependentMaterial">
+    <xs:sequence>
+      <xs:element name="Replacement" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Material" type="xs:string" use ="required"/>
+          <xs:attribute name="Level" type="xs:nonNegativeInteger" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Material" type="xs:string" use="required"/>
+    <xs:attribute name="Capability" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name ="AutoClimateSeasonMateiral">
+    <xs:sequence minOccurs="0">
+      <xs:element name="Override" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Climate" type="xs:string" use ="required"/>
+          <xs:attribute name="UseClimate" type="xs:string" use ="required"/>
+          <xs:attribute name="Seasonal" type="xs:boolean" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Material" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="EmbeddedMesh">
+    <xs:sequence>
+      <xs:element name="Mask" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="Material" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Road" type="oe:ClimateTextureSpec"/>
+      <xs:element name="Dirt" type="oe:ClimateTextureSpec"/>
+      <xs:element name="Mud" type="oe:ClimateTextureSpec" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="Prefab" type="xs:string" use="required"/>
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="Settlement">
+    <xs:sequence>
+      <xs:element name ="Model">
+        <xs:complexType>
+          <xs:attribute name="Prefab" type="xs:string" use="required"/>
+          <xs:attribute name="Icon" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name ="UpgradePath" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name ="Next" type = "xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name ="WallLevel" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name ="Level" type="xs:nonNegativeInteger" use="required"/>
+          <xs:attribute name ="Prefab" type = "xs:string" use="required"/>
+          <xs:attribute name ="Base" type = "xs:string" use="required"/>
+          <xs:attribute name ="MoatBase" type = "xs:string" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Gate" maxOccurs="4">
+        <xs:complexType>
+          <xs:attribute name ="Location" type="oe:GateRecruitmentLocation" use="required"/>
+          <xs:attribute name ="OutsideX" type = "xs:integer" use="required"/>
+          <xs:attribute name ="OutsideY" type = "xs:integer" use="required"/>
+          <xs:attribute name ="InsideX" type = "xs:integer" use="required"/>
+          <xs:attribute name ="InsideY" type = "xs:integer" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CoveredHex" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name ="X" type = "xs:integer" use="required"/>
+          <xs:attribute name ="Y" type = "xs:integer" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+    <xs:attribute name="Level" type="xs:nonNegativeInteger" use="required"/>
+    <xs:attribute name="TranslationTag" type="xs:string" use ="optional"/>
+    <xs:attribute name="NumSlotBuildingsAllowed" type="xs:nonNegativeInteger" use="required"/>
+  </xs:complexType>
+
+  <!-- Description of tree or other environmental proxy item -->
+  <xs:complexType name ="EnvironmentProxy">
+    <xs:sequence>
+      <xs:element name="Climate" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Item" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="EnvItem" type ="xs:string" use ="required"/>
+                <xs:attribute name="Weight" type="xs:positiveInteger" use ="optional"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="Name" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+  </xs:complexType>
+
+  <!-- Proxy for person or animal or other animated item -->
+  <xs:complexType name ="AmbientCreatureProxy">
+    <xs:sequence>
+      <xs:element name="Item" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Item" type ="xs:string" use ="required"/>
+          <xs:attribute name="Weight" type="xs:positiveInteger" use ="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+  </xs:complexType>
+
+  <xs:complexType name ="BannerProxy">
+    <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+    <xs:attribute name="BannerName" type="xs:string" use ="required"/>
+    <xs:attribute name="Scale" type="xs:float" use ="required"/>
+  </xs:complexType>
+
+  <xs:complexType name ="PositionProxy">
+    <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+    <xs:attribute name="Type" type="oe:PositionProxyType" use ="required"/>
+  </xs:complexType>
+
+  <xs:complexType name ="StatusProxy">
+    <xs:sequence>
+      <xs:element name="Replacement" maxOccurs ="unbounded" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+          <xs:attribute name="Architecture" type="xs:string" use="optional"/>
+          <xs:attribute name ="Weight" type="xs:positiveInteger" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+    <xs:attribute name="Type" type="oe:StatusProxyType" use ="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name ="ParticleProxy">
+    <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+    <xs:attribute name="ParticlePrefab" type="xs:string" use ="required"/>
+    <xs:attribute name="Use" type="oe:EffectProxyType" use ="required"/>
+    <xs:attribute name="Sound" type="xs:string" use ="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name ="BridgeProxy">
+    <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+    <xs:attribute name="MoatCrossing" type="xs:boolean" use ="required"/>
+  </xs:complexType>
+
+  <xs:complexType name ="WallProxy">
+    <xs:sequence>
+      <xs:element name="Replacement" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Prefab" type="xs:string" use="required"/>
+          <xs:attribute name="Architecture" type ="xs:string" use="optional"/>
+          <xs:attribute name ="Level" type ="xs:positiveInteger" use="required"/>
+          <xs:attribute name ="UpgradeLevel" type ="xs:positiveInteger" use="optional"/>
+          <xs:attribute name ="TechLevel" type ="xs:nonNegativeInteger" use="optional"/>
+          <xs:attribute name="HitPoints" type="xs:integer" use ="optional"/>
+          <xs:attribute name="FireHitPoints" type="xs:integer" use="optional"/>
+          <xs:attribute name="DestroyedPrefab" type="xs:string" use ="optional"/>
+          <xs:attribute name="DestructionEffect" type="xs:string" use ="optional"/>
+          <xs:attribute name="DestructionSound" type="xs:string" use ="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+    <xs:attribute name="PieceType" type="oe:WallPieceType" use ="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="GeneralProxy">
+    <xs:sequence>
+      <xs:element name="Replacement" maxOccurs ="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+          <xs:attribute name="Architecture" type="xs:string" use="optional"/>
+          <xs:attribute name ="Weight" type="xs:positiveInteger" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Prefab" type="xs:string" use ="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="BuildingSlotProxy">
+    <xs:complexContent>
+      <xs:extension base="oe:GeneralProxy">
+        <xs:sequence>
+          <xs:element name="Filler" minOccurs ="0" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:attribute name="Prefab" type="xs:string" use="required"/>
+              <xs:attribute name="Architecture" type="xs:string" use="optional"/>
+              <xs:attribute name="Size" type="xs:negativeInteger" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name ="Size" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name ="SpecialTemple" type="xs:boolean" use="optional"/>
+        <xs:attribute name ="SpecialPalace" type="xs:boolean" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ArchitecturalStyle">
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Architecture" type="oe:ArchitecturalStyle" minOccurs ="0" maxOccurs="unbounded"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="EnvProxy" type="oe:EnvironmentProxy"/>
+          <xs:element name="AmbientProxy" type="oe:AmbientCreatureProxy"/>
+          <xs:element name="BannerProxy" type="oe:BannerProxy"/>
+          <xs:element name="PositionProxy" type="oe:PositionProxy"/>
+          <xs:element name="StatusProxy" type="oe:StatusProxy"/>
+          <xs:element name="ParticleProxy" type="oe:ParticleProxy"/>
+          <xs:element name="WallProxy" type="oe:WallProxy"/>
+          <xs:element name="BridgeProxy" type="oe:BridgeProxy"/>
+          <xs:element name="SlotProxy" type="oe:BuildingSlotProxy"/>
+          <xs:element name="GeneralProxy" type="oe:GeneralProxy"/>
+        </xs:choice>
+        <xs:element name="TechDependentMaterial" type="oe:TechDependentMaterial" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name ="AutoMaterial" type="oe:AutoClimateSeasonMateiral" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="SettlementBase" type="oe:EmbeddedMesh" minOccurs ="0" maxOccurs="unbounded"/>
+        <xs:element name ="Settlement" type ="oe:Settlement" minOccurs ="0" maxOccurs ="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

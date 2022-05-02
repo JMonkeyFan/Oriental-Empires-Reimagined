@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires ResourcesAndTrade.xsd">
+  <!--Resources-->
+  <MapResource ID="Copper" IconName="Resources\CopperBoost" HighlightIcon="CopperBoost" Use="ProductionBoost" BoostTradeItem="Copper" Value="160">
+    <DotColor R="255" G="0" B="255" />
+    <Placement Terrain="Steep Hills" Chance="0.01" />
+  </MapResource>
+  <MapResource ID="Tin And Copper Deposit" IconName="Resources\TinAndCopperBoost" HighlightIcon="TinAndCopperBoost" Use="ProductionBoost" BoostTradeItem="Bronze" Value="100">
+    <Placement Terrain="Steep Hills" Chance="0.0022" />
+    <Placement Terrain="Mountains" Chance="0.004" />
+  </MapResource>
+  <MapResource ID="Iron Deposit" IconName="Resources\IronBoost" HighlightIcon="IronBoost" Use="ProductionBoost" BoostTradeItem="Iron" Value="90">
+    <Placement Terrain="Steep Hills" Chance="0.0015" />
+    <Placement Terrain="Mountains" Chance="0.006" />
+  </MapResource>
+
+  <MapResource ID="Gold" IconName="G_Icon_Resource_Gold_01" HighlightIcon="G_Icon_Resource_Gold_01_Active" Use="Money" Value="500">
+    <DotColor R="255" G="0" B="255" />
+    <Placement Terrain="Mountains" Climate="Northern China" Chance="0.04" />
+    <Placement Terrain="Mountains" Climate="Southern China" Chance="0.05" />
+    <Placement Terrain="Mountains" Climate="Western China" Chance="0.06" />
+    <Placement Terrain="Mountains" Climate="Central Asia" Chance="0.07" />
+    <Placement Terrain="Mountains" Climate="Gobi Desert" Chance="0.08" />
+  </MapResource>
+  <MapResource ID="Jade" IconName="G_Icon_Resource_Jade_01" HighlightIcon="G_Icon_Resource_Jade_01_Active" Use="Other">
+    <DotColor R="255" G="0" B="255" />
+    <Placement Terrain="Mountains" Climate="Northern China" Chance="0.07" />
+    <Placement Terrain="Mountains" Climate="Southern China" Chance="0.06" />
+    <Placement Terrain="Mountains" Climate="Western China" Chance="0.05" />
+    <Placement Terrain="Mountains" Climate="Central Asia" Chance="0.04" />
+    <Placement Terrain="Mountains" Climate="Gobi Desert" Chance="0.03" />
+  </MapResource>
+  <MapResource ID="Kaolinite" IconName="G_Icon_Resource_WhiteClay_01" HighlightIcon="G_Icon_Resource_WhiteClay_01_Active" Use="ProductionBoost" BoostTradeItem="Ceramics" Value="150">
+    <Placement Terrain="Sand" Climate="Northern China" Chance="0.02" />
+    <Placement Terrain="Sand" Climate="Southern China" Chance="0.0175" />
+    <Placement Terrain="Sand" Climate="Western China" Chance="0.015" />
+    <Placement Terrain="Sand" Climate="Central Asia" Chance="0.0045" />
+    <Placement Terrain="Sand" Climate="Gobi Desert" Chance="0.0023" />
+    <Placement Terrain="Dry Plain" Climate="Northern China" Chance="0.02" />
+    <Placement Terrain="Dry Plain" Climate="Southern China" Chance="0.0175" />
+    <Placement Terrain="Dry Plain" Climate="Western China" Chance="0.015" />
+    <Placement Terrain="Dry Plain" Climate="Central Asia" Chance="0.005" />
+    <Placement Terrain="Dry Plain" Climate="Gobi Desert" Chance="0.0026" />
+  </MapResource>
+</Root>

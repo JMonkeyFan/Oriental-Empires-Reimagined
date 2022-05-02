@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="FloatProperty">
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type ="xs:float" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="IntProperty">
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type ="xs:int" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="StringProperty">
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type ="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="Rules">
+
+    <xs:complexType>
+      <xs:sequence>
+        <!-- List of Terrain classes -->
+        <xs:element name="TerrainClass" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Name" type ="xs:ID" use ="required"/>
+            <xs:attribute name="Water" type="xs:boolean" use ="optional"/>
+            <xs:attribute name="CapabilityNeededToPass" type="xs:string" use ="optional"/>
+          </xs:complexType>
+        </xs:element>
+        
+        <!-- List of Movement types -->
+        <xs:element name="MovementClass" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Impassable" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="Class" type="xs:IDREF" use="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Terrain" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="Class" type="xs:IDREF" use="required"/>
+                  <xs:attribute name="Points" type="xs:integer" use="required"/>
+                  <xs:attribute name="CrossingOnly" type="xs:boolean" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" use="required"/>
+            <xs:attribute name="MovePoints" type ="xs:nonNegativeInteger" use="required"/>
+            <xs:attribute name="Naval" type="xs:boolean" use="required"/>
+            <xs:attribute name="RoadModifier" type="xs:float" use="optional"/>
+            <xs:attribute name="Base" type="xs:string" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="TerrainCombatEffectClass" maxOccurs ="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TerrainEffect" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="MoveClass" type="xs:string" use="required"/>
+                  <xs:attribute name="AttackModifier" type="xs:float" use="required"/>
+                  <xs:attribute name="DefenseModifier" type="xs:float" use="required"/>
+                  <xs:attribute name="Charge" type="xs:boolean" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ID" type="xs:string" use="required"/>
+            <xs:attribute name="WadingModifier" type="xs:float" use="required"/>
+          </xs:complexType>  
+        </xs:element>
+        
+        <xs:element name ="WeaponClass" maxOccurs ="unbounded">
+          <xs:complexType>
+            <xs:attribute name ="Name" type="xs:string" use ="required"/>
+            <xs:attribute name ="Attack" type="xs:int" use ="required"/>
+            <xs:attribute name ="Defense" type ="xs:int" use ="required"/>
+            <xs:attribute name="APLevel" type ="xs:int" use="optional"/>
+            <xs:attribute name="CavDefenceLevel" type ="xs:int" use="optional"/>
+            <xs:attribute name="CavAttackLevel" type ="xs:int" use="optional"/>
+            <xs:attribute name="FootAttackLevel" type ="xs:int" use="optional"/>
+            <xs:attribute name="Metallic" type ="xs:float" use="optional"/>
+            <xs:attribute name="Blade" type ="xs:boolean" use="optional"/>
+            <xs:attribute name="TerrainCombatClass" type ="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="CombatSkillClass" maxOccurs ="unbounded">
+          <xs:complexType>
+            <xs:attribute name ="Name" type="xs:string" use ="required"/>
+            <xs:attribute name ="Attack" type="xs:int" use ="required"/>
+            <xs:attribute name ="Defense" type ="xs:int" use ="required"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ArmorClass" maxOccurs ="unbounded">
+          <xs:complexType>
+            <xs:attribute name ="Name" type="xs:string" use ="required"/>
+            <xs:attribute name ="Defense" type ="xs:int" use ="required"/>
+            <xs:attribute name ="HorseDefense" type ="xs:int" use ="optional"/>
+            <xs:attribute name="Metallic" type ="xs:float" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ShieldClass" maxOccurs ="unbounded">
+          <xs:complexType>
+            <xs:attribute name ="Name" type="xs:string" use ="required"/>
+            <xs:attribute name ="Defense" type ="xs:int" use ="required"/>
+            <xs:attribute name="Metallic" type ="xs:float" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="MoraleClass" maxOccurs ="unbounded">
+          <xs:complexType>
+            <xs:attribute name ="Name" type="xs:string" use ="required"/>
+            <xs:attribute name ="Morale" type="xs:int" use ="required"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name ="RecruitmentPool" maxOccurs ="unbounded">
+          <xs:complexType>
+            <xs:attribute name ="ID" type="xs:string" use ="required"/>
+            <xs:attribute name ="RegenTime" type="xs:nonNegativeInteger" use ="required"/>
+            <xs:attribute name ="Population" type="xs:string" use ="optional"/>
+            <xs:attribute name ="AmountPerPop" type="xs:float" use ="optional"/>
+            <xs:attribute name ="Min" type="xs:nonNegativeInteger" use ="optional"/>
+            <xs:attribute name ="Max" type="xs:positiveInteger" use ="optional"/>
+            <xs:attribute name ="IsNoble" type="xs:boolean" use ="optional"/>
+            <xs:attribute name ="IsPeasant" type="xs:boolean" use ="optional"/>
+            <xs:attribute name ="IsTribal" type="xs:boolean" use ="optional"/>
+            <xs:attribute name ="SplitWithTribal" type="xs:boolean" use ="optional"/>
+            <xs:attribute name ="DisbandedUnitReturn" type="xs:boolean" use ="optional"/>
+            <xs:attribute name ="ReplenishAnywhere" type="xs:boolean" use ="optional"/>
+            <xs:attribute name ="Naval" type="xs:boolean" use ="optional"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="GeneralRules" minOccurs="0">
+          <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+              <xs:element name="FProperty" type="oe:FloatProperty"/>
+              <xs:element name="SProperty" type="oe:StringProperty"/>
+              <xs:element name="IProperty" type="oe:IntProperty"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SettlementRules" minOccurs="0">
+          <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+              <xs:element name="FProperty" type="oe:FloatProperty"/>
+              <xs:element name="SProperty" type="oe:StringProperty"/>
+              <xs:element name="IProperty" type="oe:IntProperty"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CombatRules" minOccurs="0">
+          <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+              <xs:element name="FProperty" type="oe:FloatProperty"/>
+              <xs:element name="SProperty" type="oe:StringProperty"/>
+              <xs:element name="IProperty" type="oe:IntProperty"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MoraleRules" minOccurs="0">
+          <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+              <xs:element name="FProperty" type="oe:FloatProperty"/>
+              <xs:element name="SProperty" type="oe:StringProperty"/>
+              <xs:element name="IProperty" type="oe:IntProperty"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>        
+  </xs:element>
+
+</xs:schema>

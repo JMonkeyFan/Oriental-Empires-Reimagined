@@ -1,0 +1,80 @@
+{BD Trading Square}
+{Trading Square}
+{BD Trading Square Desc}
+{To upgrade into a Large Trading Square you will need 85 pop, a Trading City and the tech: Paper Currency}
+{BD Large Trading Square}
+{Large Trading Square}
+{BD Large Trading Square Desc}
+{To upgrade into a Trading District you will need 135 pop a Large Trading City and the tech: Joint Stock Company}
+{BD Trading District}
+{Trading District}
+{BD Trading District Desc}
+{An area bustling with commerce.}
+{BD Caravan Square}
+{Caravan Square}
+{BD Caravan Square Desc}
+{Required to create a Caravansary, can only be placed on Dry Plain or Sand(and some more intricate terrain requirements I don't feel like writing out, nor you probably read em. Same for some of the other external buildings. I can't have them show up before their requirements are fulfilled, so I have to let you know in the previous building what you need. For placing initial external buildings I guess you'll figure it out during play by making random combinations of buildings and the logic I tried to put into the city system. Hope you enjoy it.)}
+{BD Outpost}
+{Outpost}
+{BD Outpost Desc}
+{Can only be placed next to Gentle Hills, Steep Hills or a Plateau. To upgrade into a Training Grounds(Required for a Fortification I(Internal)) you will need an adjacent Forest tile, 45 pop, a Wooden Palisade and the tech: Military Drill.}
+{BD Training Grounds}
+{Training Grounds}
+{BD Training Grounds Desc}
+{To build a Fortification I(Internal) you will need this building, 75 pop, Palace II, access to a copper, bronze or iron mine and the tech: Military Structures.}
+{BD Copper Mine Chinese}
+{Copper Mine}
+{BD Copper Mine Chinese Desc}
+{To be able to further upgrade this building you will need the presence of a forest tile(lvl 2) and for a fully upgraded mine you will also need to be able to supply water to it, via access to water, be it navigable rivers, coastal or irrigation through farming. Chinese cultures can only stake a claim on this resource during the first two eras. After that only upgrading of existing infrastructure is possible.}
+{BD Copper Foundry Chinese}
+{Copper Foundry}
+{BD Copper Foundry Chinese Desc}
+{To be able to further upgrade this building you will need to be able to supply water to it. This is possible via access to water, be it navigable rivers, coastal or irrigation through farming.}
+{BD Large Copper Foundry Chinese}
+{Large Copper Foundry}
+{BD Large Copper Foundry Chinese Desc}
+{Access to necessary resources have allowed this Foundry to flourish, producing a significant amount of copper for trade.}
+{BD Copper Mine Nomad}
+{Copper Mine}
+{BD Copper Mine Nomad Desc}
+{To upgrade this building to the next level it will need access to a forest tile next to it.}
+{BD Copper Foundry Nomad}
+{Copper Foundry}
+{BD Copper Foundry Nomad Desc}
+{To be able to further upgrade this building you will need to be able to supply water to it. This is possible via access to water, be it navigable rivers, coastal or irrigation through farming.}
+{BD Large Copper Foundry Nomad}
+{Large Copper Foundry}
+{BD Large Copper Foundry Nomad Desc}
+{Access to necessary resources have allowed this Foundry to flourish, producing a significant amount of copper for trade.}
+{BD Tin And Copper Mine}
+{Tin And Copper Mine}
+{BD Tin And Copper Mine Desc}
+{An excavation for extracting minerals, with a bounty of tin and copper present allowing for the production of bronze.                                  To upgrade this building to the next level it will need: 40 population in this settlement.␤Access to: Steep Hills or Mountains(Adjacent).}
+{BD Tin And Copper Foundry}
+{Tin And Copper Foundry}
+{BD Tin And Copper Foundry Desc}
+{To upgrade this building to the next level it will need: 65 population in this settlement.␤Access to: Mountains(Adjacent).}
+{BD Large Tin And Copper Foundry}
+{Large Tin And Copper Foundry}
+{BD Large Tin And Copper Foundry Desc}
+{Just to give you an idea of what went into deciding the placement of this building >.<: <!--Terrain --> <RequireEither>        <Terrain ID="Gentle Hills" Condition="true" Adjacent="false" />        <Terrain ID="Gentle Hills" Condition="true" Adjacent="true" />      </RequireEither>      <RequireEither>        <Terrain ID="Navigable River" Adjacent="true" Condition="true" />        <TerrainAttribute Require="Farmland" Condition="true" Adjacent="true" />        <TerrainAttribute Require="AllowAdjacentPort" Condition="true" Adjacent="true" />        <TerrainAttribute Require="IrrigationSource" Condition="true" Adjacent="true" />        <TerrainAttribute Require="Farmland" Condition="true" Adjacent="false" />        <TerrainAttribute Require="AllowAdjacentPort" Condition="true" Adjacent="false" />        <TerrainAttribute Require="IrrigationSource" Condition="true" Adjacent="false" />      </RequireEither>      <Terrain ID="Fertile Plain" Condition="false" Adjacent="false" />      <Terrain ID="Dry Plain" Condition="false" Adjacent="false" />      <Terrain ID="Sand" Condition="false" Adjacent="false" />      <Terrain ID="Grassland" Condition="false" Adjacent="false" />      <Terrain ID="Forest" Condition="false" Adjacent="false" />      <Terrain ID="Forest" Condition="false" Adjacent="false" />      <Terrain ID="Navigable River" Adjacent="false" Condition="false" />      <Terrain ID="Coastal" Adjacent="false" Condition="false" />      <Terrain ID="Mountains" Condition="false" Adjacent="false" />      <!-- Other Conditions -->      <Population Num="18" />      <Tech Item="Bronze Making" />      <Building Condition="false" ID="Iron Mine" />      <Building Condition="false" ID="Iron Foundry" />      <Building Condition="false" ID="Large Iron Foundry" />}
+{BD Iron Mine}
+{Iron Mine}
+{BD Iron Mine Desc}
+{An excavation for extracting minerals, with a bounty of iron and coal present allowing for the production of iron and steel.                            To upgrade this building to the next level it will need: 50 population in this settlement and access to: Forest, Steep Hills or Mountains(Adjacent).}
+{BD Iron Foundry}
+{Iron Foundry}
+{BD Iron Foundry Desc}
+{To upgrade this building to the next level it will need: 75 population in this settlement.␤Access to: Mountains(Adjacent).}
+{BD Large Iron Foundry}
+{Large Iron Foundry}
+{BD Large Iron Foundry Desc}
+{Access to necessary resources have allowed this Foundry to flourish, producing a significant amount of bronze for trade.}
+{BD Glass Foundry Nomad}
+{Glass Foundry Nomad}
+{BD Glass Foundry Nomad Desc}
+{Glass can be produced here, this building is only available to Herders and it can only be placed on Sand tiles. To upgrade this building you will need access to another Sand tile adjacent and either a Steep Hill or Gentle hill adjacent}
+{BD Glass Factory Nomad}
+{Glass Factory Nomad}
+{BD Glass Factory Nomad Desc}
+{Access to necessary resources have allowed this Factory to flourish, producing a significant amount of income from Glass(like a Jade or Gold Mine).}

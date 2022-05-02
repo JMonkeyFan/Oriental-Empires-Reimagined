@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UnitTypes xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires UnitType.xsd">
+
+  <!-- All cost and upkeep values after this will be modified by these percentages -->
+  <CostModifiers Recruitment="140" Upkeep="140" />
+
+  <!-- //////////////////////////////////////////////////////-->
+  <!-- Faction Specific Units ///-->
+  <!-- //////////////////////////////////////////////////////-->
+  <!-- WS Qin Mixed -->
+  <Unit ID="WS Qin Mixed L1" NameTag="Qin Mixed Foot" Category="Infantry">
+    <Banners Main="OE_Banner_Missile" Mini="OE_Banner_SmallShort" />
+    <Card CardName="G_Stack_Type_MissileCrossbow&amp;Spear_01" Class="Regular" Armor="0" />
+    <Recruitment Pool="Regulars" Cost="120" Upkeep="25" Era="1" />
+    <Requirements>
+      <Building ID="Fortified Barracks I" />
+      <Building ID="Shortbow Maker" UpgradeLevel="1" />
+      <Building ID="Armorer I" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Qin" />
+    </StaticRequirements>
+    <BlockFormation Depth="5" SpacingX="1" SpacingY="1.5" Forming="Formed" />
+    <Combat Morale="Regular" />
+    <Element Number="12">
+      <Actor ModelName="WS Light1A Halberd" />
+      <Combat Weapon="Foot Halberd" Skill="Regular" Armor="None" />
+    </Element>
+    <Element Number="12">
+      <Actor ModelName="WS Light1A Spearman" />
+      <Combat Weapon="Foot Long Spear" Skill="Regular" Armor="None" />
+    </Element>
+    <Element Number="36">
+      <Actor ModelName="WS Light1A Crossbow" />
+      <Combat Weapon="Foot Short Sword" Skill="Regular" Armor="None" />
+      <Projectile Ammo="Regular Composite Bow Arrow 1" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="WS Qin Mixed L2" BasedOn="WS Qin Mixed L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="0" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="WS Light1B Halberd" Armor="Light" />
+    <ElementChange Index="1" Actor="0" NewModel="WS Light1B Spearman" Armor="Light" />
+    <ElementChange Index="2" Actor="0" NewModel="WS Light1B Crossbow" Armor="Light" />
+  </ArmorVariant>
+  <ArmorVariant ID="WS Qin Mixed L3" BasedOn="WS Qin Mixed L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="WS Armoured1A Halberd" Armor="Medium" />
+    <ElementChange Index="1" Actor="0" NewModel="WS Armoured1A Spearman" Armor="Medium" />
+    <ElementChange Index="2" Actor="0" NewModel="WS Armoured1A Crossbow" Armor="Medium" />
+  </ArmorVariant>
+  <ArmorVariant ID="WS Qin Mixed L4" BasedOn="WS Qin Mixed L1" ArmorLevel="3">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="WS Armoured1B Halberd" Armor="Heavy" />
+    <ElementChange Index="1" Actor="0" NewModel="WS Armoured1B Spearman" Armor="Heavy" />
+    <ElementChange Index="2" Actor="0" NewModel="WS Armoured1B Crossbow" Armor="Heavy" />
+  </ArmorVariant>
+
+  <!-- IC Qin Mixed -->
+  <EraVariant ID="IC Qin Mixed L1" BasedOn="WS Qin Mixed L1" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Light1A Halberd" Armor="None" />
+    <ElementChange Index="1" Actor="0" NewModel="IC Light1A Spearman" Armor="None" />
+    <ElementChange Index="2" Actor="0" NewModel="IC Light1A Crossbow" Armor="None" />
+  </EraVariant>
+  <EraVariant ID="IC Qin Mixed L2" BasedOn="WS Qin Mixed L2" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Light1B Halberd" Armor="Light" />
+    <ElementChange Index="1" Actor="0" NewModel="IC Light1B Spearman" Armor="Light" />
+    <ElementChange Index="2" Actor="0" NewModel="IC Light1B Crossbow" Armor="Light" />
+  </EraVariant>
+  <EraVariant ID="IC Qin Mixed L3" BasedOn="WS Qin Mixed L3" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Armoured1A Halberd" Armor="Medium" />
+    <ElementChange Index="1" Actor="0" NewModel="IC Armoured1A Spearman" Armor="Medium" />
+    <ElementChange Index="2" Actor="0" NewModel="IC Armoured1A Crossbow" Armor="Medium" />
+  </EraVariant>
+  <EraVariant ID="IC Qin Mixed L4" BasedOn="WS Qin Mixed L4" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Armoured1B Halberd" Armor="Heavy" />
+    <ElementChange Index="1" Actor="0" NewModel="IC Armoured1B Spearman" Armor="Heavy" />
+    <ElementChange Index="2" Actor="0" NewModel="IC Armoured1B Crossbow" Armor="Heavy" />
+  </EraVariant>
+
+  <!-- WS Crossbow Militia -->
+  <Unit ID="WS Crossbow Militia L1" NameTag="Crossbow Militia" Category="Missile">
+    <Banners Main="OE_Banner_Missile" Mini="OE_Banner_SmallShort" />
+    <Card CardName="G_Stack_Type_MissileCrossbow_01" Class="Levy" />
+    <Recruitment Pool="Militia" Cost="0" Upkeep="10" Era="1" UnitSet="Chinese" />
+    <Requirements>
+      <Building ID="Shortbow Maker" UpgradeLevel="1" />
+      <Building ID="Armorer I" UpgradeLevel="1" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Han" />
+    </StaticRequirements>
+    <BlockFormation Depth="5" SpacingX="1" SpacingY="1.5" Forming="PoorlyFormed" />
+    <Combat Morale="Militia" />
+    <Element Number="60">
+      <Actor ModelName="WS Light1A Crossbow" />
+      <Combat Weapon="Foot Short Sword" Skill="Militia" Armor="None" />
+      <Projectile Ammo="Regular Composite Bow Arrow 1" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="WS Crossbow Militia L2" BasedOn="WS Crossbow Militia L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Light" Actor="0" NewModel="WS Light1B Crossbow" />
+  </ArmorVariant>
+  <ArmorVariant ID="WS Crossbow Militia L3" BasedOn="WS Crossbow Militia L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Medium" Actor="0" NewModel="WS Armoured1A Crossbow" />
+  </ArmorVariant>
+
+  <!-- IC Crossbow Militia -->
+  <EraVariant ID="IC Crossbow Militia L1" BasedOn="WS Crossbow Militia L1" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Light1A Crossbow" />
+  </EraVariant>
+  <EraVariant ID="IC Crossbow Militia L2" BasedOn="WS Crossbow Militia L2" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Light1B Crossbow" />
+  </EraVariant>
+  <EraVariant ID="IC Crossbow Militia L3" BasedOn="WS Crossbow Militia L3" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Armoured1A Crossbow" />
+  </EraVariant>
+
+  <!-- WS Horse Archer Militia -->
+  <Unit ID="WS Horse Archer Militia L1" NameTag="Horse Archer Militia" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedArchers_01" Class="Levy" Armor="0" />
+    <Recruitment Pool="Militia" Cost="0" Upkeep="20" Era="1" UnitSet="Chinese" />
+    <Requirements>
+      <Edict Item="Ride Like a Barbarian" />
+      <Tech Item="Horse Archery" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Armorer I" UpgradeLevel="1" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Zhao" />
+    </StaticRequirements>
+    <BlockFormation Depth="4" SpacingX="2.5" SpacingY="4" Forming="PoorlyFormed" />
+    <Combat Morale="Militia" DismountedUnit="WS Militia Light Archer L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Light1A" Role="Mount" />
+      <Actor ModelName="WS Cav1A Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Militia" Armor="Cavalry None" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="-1" />
+    </Element>
+    <Movement Class="Light Cavalry" />
+  </Unit>
+  <ArmorVariant ID="WS Horse Archer Militia L2" BasedOn="WS Horse Archer Militia L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="false" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="WS Militia Light Archer L2" />
+    <ElementChange Index="0" Armor="Cavalry Light" Actor="1" NewModel="WS Cav1B Archer" />
+  </ArmorVariant>
+
+  <!-- IC Horse Archer Militia -->
+  <EraVariant ID="IC Horse Archer Militia L1" BasedOn="WS Horse Archer Militia L1" Era="2">
+    <SubstituteUnits DismountedUnit="IC Militia Light Archer L1" />
+    <ElementChange Index="0" Actor="1" NewModel="IC Cav1A Archer" />
+  </EraVariant>
+  <EraVariant ID="IC Horse Archer Militia L2" BasedOn="WS Horse Archer Militia L2" Era="2">
+    <SubstituteUnits DismountedUnit="IC Militia Light Archer L2" />
+    <ElementChange Index="0" Actor="1" NewModel="IC Cav1B Archer" />
+  </EraVariant>
+
+  <!-- WS Picked Horse Archers -->
+  <Unit ID="WS Picked Horse Archer L1" NameTag="Picked Horse Archers" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedArchers_01" Class="Special" Armor="0" />
+    <Recruitment Pool="Palace Troops" Cost="150" Upkeep="25" Era="1" UnitSet="Chinese" />
+    <Requirements>
+      <Edict Item="Ride Like a Barbarian" />
+      <Tech Item="Horse Archery" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Armorer I" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Zhao" />
+    </StaticRequirements>
+    <BlockFormation Depth="4" SpacingX="2.5" SpacingY="4" Forming="WellFormed" />
+    <Combat Morale="Guard" DismountedUnit="WS Army Light Archer L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Light1A" Role="Mount" />
+      <Actor ModelName="WS Cav1A Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Picked" Armor="Cavalry None" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="1" />
+    </Element>
+    <Movement Class="Light Cavalry" />
+  </Unit>
+  <ArmorVariant ID="WS Picked Horse Archer L2" BasedOn="WS Picked Horse Archer L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="WS Army Light Archer L2" />
+    <ElementChange Index="0" Armor="Cavalry Light" Actor="1" NewModel="WS Cav1B Archer" />
+  </ArmorVariant>
+
+  <!-- IC Picked Horse Archers -->
+  <EraVariant ID="IC Picked Horse Archer L1" BasedOn="WS Picked Horse Archer L1" Era="2">
+    <SubstituteUnits DismountedUnit="IC Army Light Archer L1" />
+    <ElementChange Index="0" Actor="1" NewModel="IC Cav1A Archer" />
+  </EraVariant>
+  <EraVariant ID="IC Picked Horse Archer L2" BasedOn="WS Picked Horse Archer L2" Era="2">
+    <SubstituteUnits DismountedUnit="IC Army Light Archer L2" />
+    <ElementChange Index="0" Actor="1" NewModel="IC Cav1B Archer" />
+  </EraVariant>
+
+  <!-- Noble Horse Archers -->
+  <Unit ID="WS Noble Horse Archers L1" NameTag="Noble Horse Archers" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedArcherHeavy_01" Class="Noble" Armor="0" />
+    <Recruitment Pool="Nobles" Cost="0" Upkeep="25" Era="1" UnitSet="Chinese" />
+    <Requirements>
+      <Tech Item="Horse Archery" />
+      <Edict Item="Ride Like a Barbarian" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Armorer I" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Zhao" />
+    </StaticRequirements>
+    <BlockFormation Depth="3" SpacingX="1.6" SpacingY="4" Forming="PoorlyFormed" />
+    <Combat Morale="Noble" DismountedUnit="WS Noble Archer L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Medium1A" Role="Mount" />
+      <Actor ModelName="WS Cav2A Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Noble" Armor="Cavalry Medium" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+  <ArmorVariant ID="WS Noble Horse Archers L2" BasedOn="WS Noble Horse Archers L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="WS Noble Archer L2" />
+    <ElementChange Index="0" Actor="1" NewModel="WS Cav2B Archer" Armor="Cavalry Heavy" />
+  </ArmorVariant>
+
+  <!-- WS Picked Heavy Infantry -->
+  <Unit ID="WS Picked Heavy Infantry L1" NameTag="Picked Heavy Infantry" Category="Missile">
+    <Banners Main="OE_Banner_Missile" Mini="OE_Banner_SmallShort" />
+    <Card CardName="G_Stack_Type_MeleeHalberd_01" Class="Special" />
+    <Recruitment Pool="Regulars" Cost="120" Upkeep="30" Era="1" UnitSet="Chinese" />
+    <Requirements>
+      <Building ID="Fortified Barracks I" />
+      <Building ID="Weaponsmith I" />
+      <Building ID="Shortbow Maker" UpgradeLevel="1" />
+      <Building ID="Armorer I" UpgradeLevel="0" Exact="true" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Wei" />
+    </StaticRequirements>
+    <BlockFormation Depth="5" SpacingX="1" SpacingY="1.5" Forming="WellFormed" />
+    <Combat Morale="Guard" />
+    <Element Number="60">
+      <Actor ModelName="WS LeatherMedium1A Halberd Crossbow" />
+      <Combat Weapon="Foot Halberd" Skill="Picked" Armor="Medium" Shield="None" />
+      <Projectile Ammo="Regular Composite Bow Arrow 1" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="WS Picked Heavy Infantry L2" BasedOn="WS Picked Heavy Infantry L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" Armor="Heavy" NewModel="WS LeatherHeavy1A Halberd Crossbow" />
+  </ArmorVariant>
+
+  <!-- IC Picked Heavy Infantry -->
+  <EraVariant ID="IC Picked Heavy Infantry L1" BasedOn="WS Picked Heavy Infantry L1" Era="2">
+    <ElementChange Index="0" Actor="0" Armor="Medium" NewModel="IC Armoured1A Halberd Crossbow" />
+  </EraVariant>
+  <EraVariant ID="IC Picked Heavy Infantry L2" BasedOn="WS Picked Heavy Infantry L2" Era="2">
+    <ElementChange Index="0" Actor="0" Armor="Heavy" NewModel="IC Armoured1B Halberd Crossbow" />
+  </EraVariant>
+
+  <!-- WS Heavy Spear Militia -->
+  <Unit ID="WS Heavy Spear Militia L1" NameTag="Heavy Spear Militia" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MeleeSpearLongShieldTall_01" Class="Levy" />
+    <Recruitment Pool="Militia" Cost="0" Upkeep="10" Era="1" UnitSet="Chinese" />
+    <Requirements>
+      <Building ID="Armorer I" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Yan" />
+    </StaticRequirements>
+    <BlockFormation Depth="5" SpacingX="1" SpacingY="1.1" Forming="Formed" />
+    <Combat Morale="Militia" />
+    <Element Number="60">
+      <Actor ModelName="WS Light1A Long Spearman" />
+      <Combat Weapon="Foot Long Spear" Skill="Militia" Armor="None" Shield="Large" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="WS Heavy Spear Militia L2" BasedOn="WS Heavy Spear Militia L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Light" Actor="0" NewModel="WS Light1B Long Spearman" />
+  </ArmorVariant>
+  <ArmorVariant ID="WS Heavy Spear Militia L3" BasedOn="WS Heavy Spear Militia L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Medium" Actor="0" NewModel="WS Armoured1A Long Spearman" />
+  </ArmorVariant>
+
+  <!-- IC Heavy Spear Militia -->
+  <EraVariant ID="IC Heavy Spear Militia L1" BasedOn="WS Heavy Spear Militia L1" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Light1A Long Spearman" />
+  </EraVariant>
+  <EraVariant ID="IC Heavy Spear Militia L2" BasedOn="WS Heavy Spear Militia L2" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Light1B Long Spearman" />
+  </EraVariant>
+  <EraVariant ID="IC Heavy Spear Militia L3" BasedOn="WS Heavy Spear Militia L3" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="IC Armoured1A Long Spearman" />
+  </EraVariant>
+
+  <!-- Tiger Guards-->
+  <Unit ID="EBA Tiger Guards" NameTag="Tiger Guards" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MeleeAxeLong_01" Class="Guard" />
+    <Recruitment Pool="Palace Troops" Cost="100" Upkeep="25" Era="0" UnitSet="Chinese" />
+    <Requirements>
+      <Building ID="Armorer I" />
+      <Building ID="Weaponsmith I" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Zhou" />
+    </StaticRequirements>
+    <BlockFormation Depth="5" SpacingX="1" SpacingY="1" Forming="WellFormed" />
+    <Combat Morale="Guard" />
+    <Element Number="48">
+      <Actor ModelName="EBA Nobles1B Dagger Axeman" />
+      <Combat Weapon="Foot Dagger Axe" Skill="Guard" Armor="Heavy" Shield="Small" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <EraVariant ID="WS Tiger Guards" BasedOn="EBA Tiger Guards" Era="1">
+    <ElementChange Index="0" Actor="0" NewModel="HR WS LeatherHeavy1A Dagger Axeman" />
+  </EraVariant>
+  <EraVariant ID="IC Tiger Guards" BasedOn="WS Tiger Guards" Era="2" CardName="G_Stack_Type_MeleeHalberd_01">
+    <ElementChange Index="0" Actor="0" NewModel="IC_Elite1A Halberd" Shield="None" Weapon="Foot Halberd" AnimSet="Halberd NS" Armor="Heavy" />
+  </EraVariant>
+
+  <!-- Five Family Chariots -->
+  <Unit ID="WS Five Family Chariots" NameTag="Five Family Chariots" Category="Chariot">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_ChariotHeavy_01" Class="Guard" />
+    <Recruitment Pool="Palace Troops" Cost="250" Upkeep="40" Era="1" UnitSet="Chinese" />
+    <Requirements>
+      <Tech Item="Four Horse Chariot" Condition="true" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Qi" />
+    </StaticRequirements>
+    <BlockFormation Depth="1" SpacingX="6" SpacingY="10" Forming="Formed" PaddingSide="7" PaddingRear="7" />
+    <Combat Morale="Guard" DismountedUnit="EBA Noble Dagger Axemen L1" />
+    <Element Number="3" Type="Vehicle">
+      <Actor ModelName="M_Chariot4hB" Role="Vehicle" />
+      <Actor ModelName="Horse_Light1A_Crest" Role="Draught" TargetBone="bone_HorsePos1_NS" AttachBone="bone_H_hips" />
+      <Actor ModelName="Horse_Light1A_Crest" Role="Draught" TargetBone="bone_HorsePos2_NS" AttachBone="bone_H_hips" />
+      <Actor ModelName="Horse_Light1A_Crest" Role="Draught" TargetBone="bone_HorsePos3_NS" AttachBone="bone_H_hips" />
+      <Actor ModelName="Horse_Light1A_Crest" Role="Draught" TargetBone="bone_HorsePos4_NS" AttachBone="bone_H_hips" />
+      <Actor ModelName="WS LeatherHeavy1A Chariot Driver" Role="Driver" TargetBone="bone_C_DriverPos_NS" AttachBone="bone_hips" AnimSet="HDR F" />
+      <Actor ModelName="WS LeatherHeavy1A Archer" Role="RiderShooter" TargetBone="bone_C_ArcherPos_NS" AttachBone="bone_hips" AnimSet="HBW F" />
+      <Actor ModelName="WS LeatherHeavy1A Triple Axe" Role="Rider" TargetBone="bone_C_AxePos_NS" AttachBone="bone_hips" AnimSet="HHB F" />
+      <Combat Weapon="4HChariot Triple Dagger Axe" Skill="Noble" Armor="Heavy 4HChariot2" />
+      <Projectile Ammo="Chariot Arrow" AttachBone="bone_Weapon" SkillModifier="2" />
+    </Element>
+    <Movement Class="Chariot" />
+  </Unit>
+
+
+  <!--
+  // Stuff for Yue
+  -->
+
+</UnitTypes> 

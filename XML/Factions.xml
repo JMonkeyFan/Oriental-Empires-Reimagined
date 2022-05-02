@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Factions xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Factions.xsd">
+  <!-- Huaxia Factions 
+  <Capability Name = "Roof Tiles" Level = "1"/>
+    <Capability Name = "Wall Construction" Level = "1"/>
+    <Capability Name = "Road Building" Level = "1"/>
+    <Capability Name = "Peasant Happiness" Level = "1"/>
+    <Capability Name = "Noble Happiness" Level = "1"/>
+    <Capability Name = "Peasant Unrest" Level = "1"/>
+    <Capability Name = "Noble Unrest" Level = "1"/>
+    <Capability Name = "Boost Thought" Level = "1"/>
+    <Capability Name = "Boost Craft" Level = "1"/>
+    <Capability Name = "Boost Power" Level = "1"/>
+    <Capability Name = "Boost Knowledge" Level = "1"/>
+    <Capability Name = "Reduce Thought" Level = "1"/>
+    <Capability Name = "Reduce Power" Level = "1"/>
+    <Capability Name = "Boost Military" Level = "1"/>
+    <Capability Name = "Boost Culture" Level = "1"/>
+    <Capability Name = "Boost Economy" Level = "1"/>
+    <Capability Name = "Boost Agriculture" Level = "1"/>
+    <Capability Name = "Reduce Agriculture" Level = "1"/>
+    <Capability Name = "Boost Naval" Level = "1"/>
+    <Capability Name = "Primitive" Level = "1"/>
+    <Capability Name = "Authority" Level = "1"/>
+    <Capability Name = "Culture" Level = "1"/>
+    <Capability Name = "NewLeaderVirtue" Level = "1"/>
+    <Capability Name = "NewLeaderEnergy" Level = "1"/>
+    <Capability Name = "AgriculturalProduction" Level = "1"/>
+    <Capability Name = "Battle Healing" Level = "1"/>
+    <Capability Name = "Decreased Wall Cost" Level = "1"/>
+    <Capability Name = "Capture Tech" Level = "1"/>
+    <Capability Name = "Increase Trade" Level = "1"/>
+    <Capability Name = "Recovery Rate" Level = "1"/>
+    <Capability Name = "Decreased Wall Cost" Level = "1"/>
+    <Capability Name = "Capture Tech" Level = "1"/>
+    <Capability Name = "Increase Ship HP" Level = "1"/>
+    <Capability Name = "Decreased Wall Cost" Level = "1"/>
+    <Capability Name = "Capture Tech" Level = "1"/>
+    <Capability Name = "Terror Tactics" Level = "1"/>
+    <Capability Name = "Capture Tech" Level = "1"/>
+    <Capability Name = "Morale Penalty" Level = "1"/>
+    <Capability Name = "Looting Bonus" Level = "1"/>
+    <Capability Name = "Reduced Noble Recruitment" Level = "1"/>
+    <Capability Name = "Morale Bonus" Level = "1"/>
+    <Capability Name = "Reduced Noble Recruitment" Level = "1"/>
+    <Capability Name = "Accepts Bandits" Level = "1"/>
+    <Capability Name = "Friendly To Rebels" Level = "1"/>
+    <Capability Name = "Accepts Peasant Rebels" Level = "1"/>
+    <Capability Name = "Increase Scholar Virtue" Level = "1"/>
+    <Capability Name = "Increase General Virtue" Level = "1"/>
+    <Capability Name = "Crossbow Skill" Level = "1"/>
+    <Capability Name = "Forest Combat Skill" Level = "1"/>
+    <Capability Name = "Bow Skill" Level = "1"/>
+    <Capability Name = "Sword Skill" Level = "1"/>
+    <Capability Name = "Cavalry Skill" Level = "1"/>
+    <Capability Name = "Infantry Skill" Level = "1"/>
+    <Capability Name = "Chariot Skill" Level = "1"/>
+    <Capability Name = "Naval Skill" Level = "1"/>
+    <Capability Name = "Melee Attack" Level = "1"/>
+    <Capability Name = "Melee Defense" Level = "1"/>
+    <Capability Name = "Character Armor" Level = "1"/>
+    <Capability Name = "Agriculture" Level = "1"/>
+    <Capability Name = "Pastoralism" Level = "1"/>
+    <Capability Name = "Nomadism" Level = "1"/>
+    <Capability Name = "AttackAdvantageIfCharging" Level = "1"/>
+    <Capability Name = "DefenseAdvantageIfDefending" Level = "1"/>
+    <Capability Name = "SilkTradeValue" Level = "1"/>
+    <Capability Name = "CeramicsTradeValue" Level = "1"/>
+    <Capability Name = "IronTradeValue" Level = "1"/>
+    <Capability Name = "BronzeTradeValue" Level = "1"/>
+    <Capability Name = "Seafaring" Level = "1"/>
+    <Capability Name = "Oceanfaring" Level = "1"/>
+    
+    <Capability Name = "Character Armor" Level = "5"/>
+    <Capability Name = "AttackAdvantageIfCharging" Level = "5"/>
+    <Capability Name = "Looting Bonus" Level = "50"/>
+    <Capability Name = "Boost Military" Level = "10"/>
+    <Capability Name = "Boost Agriculture" Level = "25"/>
+    <Capability Name = "Accepts Bandits" Level = "1"/>
+    <Capability Name = "Friendly To Rebels" Level = "1"/>
+    <Capability Name = "Accepts Peasant Rebels" Level = "1"/>
+    <Capability Name = "Agriculture" Level = "1"/>
+    <Capability Name = "Pastoralism" Level = "1"/>
+    <Capability Name = "Nomadism" Level = "1"/>
+    <Capability Name = "Reduced Noble Recruitment" Level = "1"/>
+  -->
+  <!-- Huaxia Factions -->
+  <!-- Shang -->
+  <Faction ID="Shang">
+    <Data ColorSet="81" Symbol="OE_FactionSymbol_01" AltSymbol="OE_FactionSymbol_50" NameSet="Shang" PersonalNames="Chinese" Architecture="Chinese" PortraitSet="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Shang_01" />
+    <Capability Name="Boost Power" Level="10" />
+    <Capability Name="Boost Military" Level="5" />
+    <Capability Name="Naval Skill" Level="1" />
+    <Capability Name="Accepts Peasant Rebels" Level="1" />
+    <Capability Name="Melee Attack" Level="10" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Zhou -->
+  <Faction ID="Zhou">
+    <Data ColorSet="0" Symbol="OE_FactionSymbol_12" AltSymbol="OE_FactionSymbol_51" NameSet="Zhou" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Zhou_01" />
+    <Capability Name="Increase Trade" Level="-10" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Crossbow Skill" Level="10" />
+    <Capability Name="Cavalry Skill" Level="15" />
+    <Capability Name="Chariot Skill" Level="-10" />
+    <Capability Name="NewLeaderVirtue" Level="2" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Qin -->
+  <Faction ID="Qin">
+    <Data ColorSet="112" Symbol="OE_FactionSymbol_13" AltSymbol="OE_FactionSymbol_52" NameSet="Qin" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Qin_01" />
+    <Capability Name="CombatAdvantage" Level="10" />
+    <Capability Name="Boost Power" Level="20" />
+    <Capability Name="Reduce Thought" Level="20" />
+    <Capability Name="Reduce Culture" Level="20" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Han -->
+  <Faction ID="Han">
+    <Data ColorSet="119" Symbol="OE_FactionSymbol_10" AltSymbol="OE_FactionSymbol_53" NameSet="Han" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Han_01" />
+    <Capability Name="Boost Culture" Level="5" />
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="Crossbow Skill" Level="20" />
+    <Capability Name="CombatDisadvantage" Level="10" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Southern Chinese-->
+  <!-- Chu -->
+  <Faction ID="Chu">
+    <Data ColorSet="100" Symbol="OE_FactionSymbol_07" AltSymbol="OE_FactionSymbol_54" NameSet="Chu" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Southern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Chu_01" />
+    <Capability Name="Naval Skill" Level="15" />
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="CombatDisadvantage" Level="10" />
+    <Capability Name="Boost Agriculture" Level="25" />
+    <Capability Name="Accepts Bandits" Level="1" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Wu -->
+  <Faction ID="Wu">
+    <Data ColorSet="126" Symbol="OE_FactionSymbol_06" AltSymbol="OE_FactionSymbol_55" NameSet="Wu" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Southern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Wu_01" />
+    <Capability Name="Sword Skill" Level="10" />
+    <Capability Name="Naval Skill" Level="15" />
+    <Capability Name="Poor Horses" Level="15" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Min -->
+  <Faction ID="Min">
+    <Data ColorSet="82" Symbol="OE_FactionSymbol_05" AltSymbol="OE_FactionSymbol_56" NameSet="Min" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Southern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Yue_01" />
+    <Capability Name="Forest Combat Skill" Level="20" />
+    <Capability Name="Naval Skill" Level="15" />
+    <Capability Name="Boost Naval" Level="20" />
+    <Capability Name="Poor Horses" Level="15" />
+    <Capability Name="Reduce Military" Level="20" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Western Factions -->
+  <!-- Shu -->
+  <Faction ID="Shu">
+    <Data ColorSet="57" Symbol="OE_FactionSymbol_04" NameSet="Shu" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Western China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Shu_01" />
+    <Capability Name="Boost Craft" Level="15" />
+    <Capability Name="Reduce Thought" Level="15" />
+    <Capability Name="Increase Trade" Level="-10" />
+    <Capability Name="Cavalry Skill" Level="20" />
+    <Capability Name="Reduce Military" Level="-15" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Ba -->
+  <Faction ID="Ba">
+    <Data ColorSet="56" Symbol="OE_FactionSymbol_11" NameSet="Ba" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Western China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Ba_01" />
+    <Capability Name="Reduce Agriculture" Level="15" />
+    <Capability Name="Reduce Culture" Level="20" />
+    <Capability Name="Reduce Military" Level="25" />
+    <Capability Name="Boost Economy" Level="25" />
+    <Capability Name="Reduced Noble Recruitment" Level="50" />
+    <Capability Name="Decreased Wall Cost" Level="50" />
+    <Capability Name="Capture Tech" Level="50" />
+    <Capability Name="Increase Trade" Level="1" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Central Barbarian Factions -->
+  <!-- Rong -->
+  <Faction ID="Rong">
+    <Data ColorSet="63" Symbol="OE_FactionSymbol_23" NameSet="Rong" PersonalNames="Mongolian" Architecture="Nomad" PortraitSet="Mongolian">
+      <UnitSet Name="ECB" Era="0" />
+      <UnitSet Name="ENB" Era="1" />
+      <UnitSet Name="NB" Era="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Western China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_DogRong_01" />
+    <Capability Name="CombatAdvantage" Level="-10" />
+    <Capability Name="Reduce Power" Level="20" />
+    <Capability Name="Reduce Knowledge" Level="15" />
+    <Capability Name="Reduce Thought" Level="10" />
+    <Capability Name="Boost Craft" Level="25" />
+    <Capability Name="Increase General Virtue" Level="2" />
+    <Capability Name="Bow Skill" Level="25" />
+    <Capability Name="Looting Bonus" Level="50" />
+    <Capability Name="Reduced Noble Recruitment" Level="25" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <!-- Di -->
+  <Faction ID="Di">
+    <Data ColorSet="8" Symbol="OE_FactionSymbol_03" NameSet="Di" PersonalNames="Mongolian" Architecture="Nomad" PortraitSet="Mongolian">
+      <UnitSet Name="ECB" Era="0" />
+      <UnitSet Name="ENB" Era="1" />
+      <UnitSet Name="NB" Era="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_WhiteDi_01" />
+    <Capability Name="Infantry Skill" Level="15" />
+    <Capability Name="Bow Skill" Level="10" />
+    <Capability Name="Chariot Skill" Level="5" />
+    <Capability Name="Cavalry Skill" Level="-25" />
+    <Capability Name="NewLeaderEnergy" Level="-1" />
+    <Capability Name="NewLeaderVirtue" Level="3" />
+    <Capability Name="AgriculturalProduction" Level="10" />
+    <Capability Name="Character Armor" Level="10" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <!-- Yi -->
+  <Faction ID="Yi">
+    <Data ColorSet="85" Symbol="OE_FactionSymbol_08" NameSet="Yi" PersonalNames="Chinese" Architecture="Nomad">
+      <UnitSet Name="ECB" Era="0" />
+      <UnitSet Name="ENB" Era="1" />
+      <UnitSet Name="NB" Era="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_DongYi_01" />
+    <Capability Name="Bow Skill" Level="15" />
+    <Capability Name="Infantry Skill" Level="-15" />
+    <Capability Name="Chariot Skill" Level="-25" />
+    <Capability Name="Cavalry Skill" Level="25" />
+    <Capability Name="Capture Tech" Level="25" />
+    <Capability Name="Looting Bonus" Level="25" />
+    <Capability Name="Boost Power" Level="10" />
+    <Capability Name="Boost Military" Level="15" />
+    <Capability Name="Reduce Knowledge" Level="25" />
+    <Capability Name="Reduce Thought" Level="20" />
+    <Capability Name="Reduce Craft" Level="15" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <!-- Northern Barbarian Factions -->
+  <!-- Xiongnu -->
+  <Faction ID="Xiongnu">
+    <Data ColorSet="80" Symbol="OE_FactionSymbol_09" NameSet="Xiongnu" PersonalNames="Xiongnu" Architecture="Nomad" PortraitSet="Mongolian">
+      <UnitSet Name="ENB" MinEra="0" MaxEra="1" />
+      <UnitSet Name="NB" Era="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Central Asia" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Xiongnu_01" />
+    <Capability Name="Bow Skill" Level="-15" />
+    <Capability Name="Infantry Skill" Level="-15" />
+    <Capability Name="Chariot Skill" Level="15" />
+    <Capability Name="Cavalry Skill" Level="25" />
+    <Capability Name="Capture Tech" Level="25" />
+    <Capability Name="Looting Bonus" Level="25" />
+    <Capability Name="Boost Power" Level="15" />
+    <Capability Name="Boost Military" Level="10" />
+    <Capability Name="Reduce Knowledge" Level="25" />
+    <Capability Name="Reduce Thought" Level="20" />
+    <Capability Name="Reduce Craft" Level="15" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <!-- Xianbei -->
+  <Faction ID="Xianbei">
+    <Data ColorSet="60" Symbol="OE_FactionSymbol_02" NameSet="Xianbei" PersonalNames="Mongolian" Architecture="Nomad" PortraitSet="Mongolian">
+      <UnitSet Name="ENB" MinEra="0" MaxEra="1" />
+      <UnitSet Name="NB" Era="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Central Asia" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Xianbei_01" />
+    <Capability Name="Bow Skill" Level="-15" />
+    <Capability Name="Infantry Skill" Level="-15" />
+    <Capability Name="Chariot Skill" Level="15" />
+    <Capability Name="Cavalry Skill" Level="25" />
+    <Capability Name="Capture Tech" Level="25" />
+    <Capability Name="Looting Bonus" Level="25" />
+    <Capability Name="Boost Power" Level="10" />
+    <Capability Name="Boost Military" Level="10" />
+    <Capability Name="Reduce Knowledge" Level="25" />
+    <Capability Name="Reduce Thought" Level="20" />
+    <Capability Name="Reduce Craft" Level="15" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Herders" />
+  </Faction>
+
+  <!-- Dingling -->
+  <Faction ID="Dingling">
+    <Data ColorSet="14" Symbol="OE_FactionSymbol_14" NameSet="Dingling" PersonalNames="Xiongnu" Architecture="Nomad" PortraitSet="Mongolian">
+      <UnitSet Name="ENB" MinEra="0" MaxEra="1" />
+      <UnitSet Name="NB" Era="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Central Asia" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Dingling_01" />
+    <Capability Name="Infantry Skill" Level="25" />
+    <Capability Name="Bow Skill" Level="10" />
+    <Capability Name="Chariot Skill" Level="-10" />
+    <Capability Name="Cavalry Skill" Level="-30" />
+    <Capability Name="NewLeaderEnergy" Level="2" />
+    <Capability Name="NewLeaderVirtue" Level="-1" />
+    <Capability Name="AgriculturalProduction" Level="15" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <!-- Mongols -->
+  <Faction ID="Mongols">
+    <Data ColorSet="124" Symbol="OE_FactionSymbol_15" NameSet="Mongols" PersonalNames="Mongolian" Architecture="Nomad" PortraitSet="Mongolian">
+      <UnitSet Name="ENB" MinEra="0" MaxEra="1" />
+      <UnitSet Name="NB" Era="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Central Asia" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Mongols_01" />
+    <Capability Name="Character Armor" Level="5" />
+    <Capability Name="AttackAdvantageIfCharging" Level="5" />
+    <Capability Name="Looting Bonus" Level="50" />
+    <Capability Name="Boost Military" Level="10" />
+    <Capability Name="Boost Agriculture" Level="25" />
+    <Capability Name="Accepts Bandits" Level="1" />
+    <Capability Name="Friendly To Rebels" Level="1" />
+    <Capability Name="Accepts Peasant Rebels" Level="1" />
+    <Capability Name="Agriculture" Level="1" />
+    <Capability Name="Pastoralism" Level="1" />
+    <Capability Name="Nomadism" Level="1" />
+    <Capability Name="Reduced Noble Recruitment" Level="5" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Herders" />
+  </Faction>
+
+  <!-- Warring States Factions -->
+  <!-- Zhao -->
+  <Faction ID="Zhao">
+    <Data ColorSet="88" Symbol="OE_FactionSymbol_TombGuardian" AltSymbol="OE_FactionSymbol_Zhao" NameSet="Zhao" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Zhao_01" />
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="Cavalry Skill" Level="10" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Wei -->
+  <Faction ID="Wei">
+    <Data ColorSet="3" Symbol="OE_FactionSymbol_Halberd" AltSymbol="OE_FactionSymbol_Wei" NameSet="Wei" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Wei_01" />
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="AgriculturalProduction" Level="10" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Qi -->
+  <Faction ID="Qi">
+    <Data ColorSet="125" Symbol="OE_FactionSymbol_Coin" AltSymbol="OE_FactionSymbol_Qi" NameSet="Qi" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_GenericWS_04" />
+    <Capability Name="Increase Trade" Level="15" />
+    <Capability Name="Boost Thought" Level="15" />
+    <Capability Name="CombatDisadvantage" Level="10" />
+    <Capability Name="AttackAdvantageIfCharging" Level="15" />
+    <Capability Name="Peasant Unrest" Level="5" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Yan -->
+  <Faction ID="Yan">
+    <Data ColorSet="55" Symbol="OE_FactionSymbol_Wall" AltSymbol="OE_FactionSymbol_Yan" NameSet="Yan" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Yan_01" />
+    <Capability Name="DefenseAdvantageIfDefending" Level="10" />
+    <Capability Name="Decreased Wall Cost" Level="25" />
+    <Capability Name="Culture" Level="2" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Genghis Factions //////////////////////////////////////////////////////-->
+
+  <Faction ID="Khamag Mongols" DescriptionKey="Mongols Desc">
+    <Data ColorSet="124" Symbol="OE_FactionSymbol_MongolFalcon_01" NameSet="Mongols" PersonalNames="Mongolian" Architecture="Nomad" Music="Mongol" PortraitSet="Mongolian">
+      <UnitSet Name="Mongol" Era="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Central Asia" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Mongol2" DLC="Genghis" ReplaceFaction="Mongols" />
+    <Capability Name="Cavalry Skill" Level="20" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Boost Military" Level="30" />
+    <Capability Name="Primitive" Level="30" />
+    <Tech Item="Pastoralism" />
+    <AIHints></AIHints>
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <Faction ID="Khwarezm">
+    <Data ColorSet="86" Symbol="OE_FactionSymbol_TimuridSymbol_01" AltSymbol="" Architecture="Central Asian" PersonalNames="Islamic" NameSet="Central Asian" PortraitSet="IslamicTurk">
+      <UnitSet Name="Islamic Turk" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Central Asia DLC" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Khwarezm" DLC="Genghis" ReplaceFaction="" />
+    <Capability Name="Noble Unrest" Level="20" />
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Cavalry Skill" Level="10" />
+    <Capability Name="Increase Trade" Level="15" />
+    <Tech Item="Islam" />
+    <Tag Name="Farmers" />
+    <Tag Name="Islam Only" />
+    <Tag Name="Islamic" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <Faction ID="Qocho Uyghurs">
+    <Data ColorSet="122" Symbol="OE_FactionSymbol_Pagoda_02" AltSymbol="" Architecture="Chinese" PersonalNames="Mongolian" NameSet="Tarim Basin" Music="Mongol">
+      <UnitSet Name="TarimB" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Qocha" DLC="Genghis" ReplaceFaction="" />
+    <Capability Name="Bow Skill" Level="20" />
+    <Capability Name="Boost Thought" Level="10" />
+    <Capability Name="Increase Trade" Level="15" />
+    <Capability Name="CombatDisadvantage" Level="10" />
+    <Tech Item="Buddhism" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <Faction ID="The Naiman">
+    <Data ColorSet="9" Symbol="OE_FactionSymbol_TurkishHelmet_01" AltSymbol="" Architecture="Nomad" PersonalNames="Mongolian" NameSet="Mongols" Music="Mongol" PortraitSet="Mongolian">
+      <UnitSet Name="Turk" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Central Asia" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Naiman" DLC="Genghis" ReplaceFaction="" />
+    <Capability Name="Cavalry Skill" Level="20" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Boost Military" Level="30" />
+    <Capability Name="Primitive" Level="20" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Nestorian Christianity" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+    <Tag Name="Nestorian Christian" />
+  </Faction>
+
+  <Faction ID="Kereits">
+    <Data ColorSet="80" Symbol="OE_FactionSymbol_CelticCross_01" NameSet="Xiongnu" PersonalNames="Xiongnu" Architecture="Nomad" PortraitSet="Mongolian">
+      <UnitSet Name="Turk" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Central Asia" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Kereit" DLC="Genghis" ReplaceFaction="Xiongnu" />
+    <Capability Name="Cavalry Skill" Level="20" />
+    <Capability Name="Boost Craft" Level="10" />
+    <Capability Name="Reduce Power" Level="20" />
+    <Capability Name="Reduce Thought" Level="30" />
+    <Capability Name="Boost Military" Level="30" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Nestorian Christianity" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+    <Tag Name="Nestorian Christian" />
+  </Faction>
+
+  <Faction ID="Xi Xia">
+    <Data ColorSet="40" Symbol="OE_FactionSymbol_TibetanStupa_01" PersonalNames="Chinese" Architecture="Chinese" NameSet="Xi Xia" Music="Mongol">
+      <UnitSet Name="Xi Xia" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Western China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_XiXia" DLC="Genghis" ReplaceFaction="" />
+    <Capability Name="NewLeaderVirtue" Level="1" />
+    <Capability Name="CombatDisadvantage" Level="10" />
+    <Capability Name="Increase Trade" Level="10" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Buddhism" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <Faction ID="Jurchen Jin">
+    <Data ColorSet="71" Symbol="OE_FactionSymbol_JinCharacter_01" PersonalNames="Chinese" Architecture="Chinese" NameSet="Han" Music="Mongol">
+      <UnitSet Name="Jurchen Jin" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Jurchen" DLC="Genghis" ReplaceFaction="" />
+    <Capability Name="CombatDisadvantage" Level="10" />
+    <Capability Name="Cavalry Skill" Level="20" />
+    <Tech Item="Pastoralism" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <Faction ID="Khitans">
+    <Data ColorSet="60" Symbol="OE_FactionSymbol_02" NameSet="Xianbei" PersonalNames="Mongolian" Architecture="Nomad" Music="Mongol" PortraitSet="Mongolian">
+      <UnitSet Name="Mongol" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Central Asia" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Xianbei_01" DLC="Genghis" ReplaceFaction="Xianbei" />
+    <Capability Name="Cavalry Skill" Level="20" />
+    <Capability Name="Boost Craft" Level="20" />
+    <Capability Name="Reduce Power" Level="30" />
+    <Capability Name="Primitive" Level="20" />
+    <Capability Name="Boost Military" Level="30" />
+    <Tech Item="Pastoralism" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <Faction ID="Song Genghis">
+    <Data ColorSet="81" Symbol="OE_FactionSymbol_SongCharacter_01" NameSet="Shang" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2500" LeadersIncome="250" Era="2" PreferredClimate="Southhern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Ba_01" DLC="Genghis" ReplaceFaction="Shang" />
+    <Capability Name="CombatDisadvantage" Level="25" />
+    <Capability Name="Crossbow Skill" Level="15" />
+    <Capability Name="Boost Craft" Level="15" />
+    <Capability Name="Boost Knowledge" Level="15" />
+    <Capability Name="Boost Power" Level="15" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <Faction ID="Merkits">
+    <Data ColorSet="14" Symbol="OE_FactionSymbol_MerkitMask_01" NameSet="Dingling" PersonalNames="Xiongnu" Architecture="Nomad" Music="Mongol" PortraitSet="Mongolian">
+      <UnitSet Name="Mongol" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Central Asia" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Merkit" DLC="Genghis" ReplaceFaction="Dingling" />
+    <Capability Name="Boost Craft" Level="20" />
+    <Capability Name="Forest Combat Skill" Level="20" />
+    <Capability Name="Bow Skill" Level="20" />
+    <Capability Name="Reduce Power" Level="30" />
+    <Capability Name="Primitive" Level="30" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Agriculture" />
+    <AIHints></AIHints>
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <Faction ID="Karakhanids">
+    <Data ColorSet="13" Symbol="OE_FactionSymbol_Sulde_01" NameSet="Tarim Basin" PersonalNames="Islamic" Architecture="Central Asian" Music="Mongol" PortraitSet="IslamicTurk">
+      <UnitSet Name="Islamic Turk" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Central Asia DLC" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Karakhanid" DLC="Genghis" />
+    <Capability Name="Cavalry Skill" Level="20" />
+    <Capability Name="Reduce Power" Level="10" />
+    <Capability Name="Primitive" Level="10" />
+    <Capability Name="Noble Unrest" Level="20" />
+    <Tech Item="Pastoralism" />
+    <Tech Item="Agriculture" />
+    <Tech Item="Islam" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+    <Tag Name="Islam Only" />
+    <Tag Name="Islamic" />
+  </Faction>
+
+  <!-- Three Kingdoms Factions -->
+  <Faction ID="Shu Han">
+    <Data ColorSet="57" Symbol="OE_FactionSymbol_LiuCharacter_01" NameSet="Shu" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Three Kingdoms" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="200" Era="2" PreferredClimate="Western China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Liu Bei" DLC="Three Kingdoms" ReplaceFaction="Shu" />
+    <Capability Name="Peasant Happiness" Level="20" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <Faction ID="Cao Wei">
+    <Data ColorSet="3" Symbol="OE_FactionSymbol_CaoCharacter_01" AltSymbol="" NameSet="Wei" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Three Kingdoms" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Cao Cao" DLC="Three Kingdoms" ReplaceFaction="Wei" />
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="CombatAdvantage" Level="10" />
+    <Capability Name="Boost Power" Level="20" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+  <!-- Dummy faction that many 3K factions are based off -->
+  <Faction ID="Three Kingdoms Base">
+    <Data ColorSet="119" Symbol="OE_FactionSymbol_10" AltSymbol="OE_FactionSymbol_53" NameSet="Han" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Three Kingdoms" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="2000" LeadersIncome="150" Era="2" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Hidden" FactionImage="OE_FE_FactionElement_Han_01" />
+    <Capability Name="Authority" Level="-8" />
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+
+  <Faction ID="Yelang">
+    <Data ColorSet="62" Symbol="OE_FactionSymbol_26" NameSet="Southern Chinese" PersonalNames="Nanman" Architecture="Nomad" PortraitSet="Mongolian">
+      <UnitSet Name="ECB" Era="0" />
+      <UnitSet Name="Early Southern Barbarian" Era="1" />
+      <UnitSet Name="Southern Barbarian" Era="2" />
+    </Data>
+    <Initially Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Western China" />
+    <BaseSelection Selectable="Any" FactionImage="OE_FE_FactionElement_Nanman" DLC="Three Kingdoms" />
+    <Capability Name="Forest Combat Skill" Level="20" />
+    <Capability Name="Primitive" Level="20" />
+    <Capability Name="Increase Trade" Level="15" />
+    <Tech Item="Agriculture" />
+    <Tech Item="Pastoralism" />
+    <Tag Name="Farmers" />
+    <Tag Name="Herders" />
+    <Tag Name="No Crossbows" />
+  </Faction>
+
+  <!-- Japan Factions ///////////////////////////////////////////////////////////////////////////////////////-->
+
+  <!-- Dummy base for Japan Factions -->
+  <Faction ID="Japan Base">
+    <Data ColorSet="119" Symbol="OE_FactionSymbol_10" AltSymbol="OE_FactionSymbol_53" NameSet="Han" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="1000" LeadersIncome="100" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Hidden" FactionImage="OE_FE_FactionElement_Han_01" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+    <Tag Name="No Crossbows" />
+    <Tag Name="Japan Tech" />
+  </Faction>
+
+  <!-- Dummy base for Emishi Factions -->
+  <Faction ID="Emishi Base">
+    <Data ColorSet="14" Symbol="OE_FactionSymbol_14" NameSet="Dingling" PersonalNames="Xiongnu" Architecture="Nomad" PortraitSet="Mongolian">
+      <UnitSet Name="ENB" MinEra="0" MaxEra="1" />
+      <UnitSet Name="NB" Era="2" />
+    </Data>
+    <Initially Money="1000" LeadersIncome="100" Era="0" PreferredClimate="Northern China" />
+    <BaseSelection Selectable="Hidden" FactionImage="OE_FE_FactionElement_Dingling_01" />
+    <Capability Name="Reduce Agriculture" Level="30" />
+    <Capability Name="Bow Skill" Level="20" />
+    <Capability Name="Forest Combat Skill" Level="20" />
+    <Capability Name="Primitive" Level="20" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+    <Tag Name="No Crossbows" />
+    <Tag Name="Japan Tech" />
+  </Faction>
+
+
+  <!-- Bandits -->
+  <Faction ID="Bandits" Bandit="true">
+    <Data ColorSet="37" Symbol="OE_FactionSymbol_27" NameSet="Northern Chinese" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="0" LeadersIncome="0" Era="0" />
+    <BaseSelection Selectable="Hidden" />
+    <Capability Name="Reduce Power" Level="50" />
+    <Capability Name="Reduce Thought" Level="50" />
+    <Capability Name="Reduce Knowledge" Level="50" />
+  </Faction>
+
+  <!-- Peasant Rebels -->
+  <Faction ID="Red Eyebrow Rebels" PeasantRebels="true">
+    <Data ColorSet="53" Symbol="OE_FactionSymbol_28" NameSet="Northern Chinese" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="0" LeadersIncome="0" Era="0" />
+    <BaseSelection Selectable="Hidden" />
+    <Capability Name="Reduce Thought" Level="50" />
+    <Capability Name="Reduce Knowledge" Level="50" />
+    <Capability Name="Boost Agriculture" Level="40" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+  <Faction ID="Yellow Turban Rebels" PeasantRebels="true">
+    <Data ColorSet="21" Symbol="OE_FactionSymbol_29" NameSet="Northern Chinese" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="0" LeadersIncome="0" Era="0" />
+    <BaseSelection Selectable="Hidden" />
+    <Capability Name="Reduce Thought" Level="50" />
+    <Capability Name="Reduce Knowledge" Level="50" />
+    <Capability Name="Boost Agriculture" Level="40" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+  <Faction ID="Red Turban Rebels" PeasantRebels="true">
+    <Data ColorSet="53" Symbol="OE_FactionSymbol_29" NameSet="Northern Chinese" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="0" LeadersIncome="0" Era="0" />
+    <BaseSelection Selectable="Hidden" />
+    <Capability Name="Reduce Thought" Level="50" />
+    <Capability Name="Reduce Knowledge" Level="50" />
+    <Capability Name="Boost Agriculture" Level="40" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+  <Faction ID="White Lotus Rebellion" PeasantRebels="true">
+    <Data ColorSet="61" Symbol="OE_FactionSymbol_26" NameSet="Northern Chinese" PersonalNames="Chinese" Architecture="Chinese">
+      <UnitSet Name="Chinese" MinEra="0" MaxEra="2" />
+    </Data>
+    <Initially Money="0" LeadersIncome="0" Era="0" />
+    <BaseSelection Selectable="Hidden" />
+    <Capability Name="Reduce Thought" Level="50" />
+    <Capability Name="Reduce Knowledge" Level="50" />
+    <Capability Name="Boost Agriculture" Level="40" />
+    <Tech Item="Agriculture" />
+    <Tag Name="Farmers" />
+  </Faction>
+
+</Factions>

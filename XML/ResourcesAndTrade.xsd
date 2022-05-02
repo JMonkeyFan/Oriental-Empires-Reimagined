@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Enumeration of ambient creature actions -->
+  <xs:simpleType name="ResourceUse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Food"/>
+      <xs:enumeration value="Trade"/>
+      <xs:enumeration value="Money"/>
+      <xs:enumeration value="ProductionBoost"/>
+      <xs:enumeration value="Network"/>
+      <xs:enumeration value="Other"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="MapResource">
+    <xs:sequence minOccurs="0">
+      <xs:element name="DotColor" minOccurs ="0">
+        <xs:complexType>
+          <xs:attribute name="R" type="xs:nonNegativeInteger" use ="required"/>
+          <xs:attribute name="G" type="xs:nonNegativeInteger" use ="required"/>
+          <xs:attribute name="B" type="xs:nonNegativeInteger" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Placement" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Terrain" type="xs:string" use ="required"/>
+          <xs:attribute name="Climate" type="xs:string" use ="optional"/>
+          <xs:attribute name="Chance" type="xs:float" use ="required"/>
+          <xs:attribute name="PlacementSet" type="xs:string" use ="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use ="required"/>
+    <xs:attribute name="IconName" type="xs:string" use ="required"/>
+    <xs:attribute name="HighlightIcon" type="xs:string" use ="required"/>
+    <xs:attribute name="Use" type="oe:ResourceUse" use ="required"/>
+    <xs:attribute name="Value" type="xs:nonNegativeInteger" use ="optional"/>
+    <xs:attribute name="AmbientItemSet" type="xs:string" use ="optional"/>
+    <xs:attribute name="TradeItem" type="xs:string" use ="optional"/>
+    <xs:attribute name="BoostTradeItem" type="xs:string" use ="optional"/>
+  </xs:complexType>
+  
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MapResource" type="oe:MapResource" maxOccurs ="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="Requirement.xsd" />
+
+  <!-- Enumeration of seasons -->
+  <xs:simpleType name="Season">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Spring" />
+      <xs:enumeration value="Summer" />
+      <xs:enumeration value="Autumn" />
+      <xs:enumeration value="Winter" />
+      <xs:enumeration value="Any" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- Enumeration of resolution hints -->
+  <xs:simpleType name="ResHint">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Terrace" />
+      <xs:enumeration value="VeryHigh" />
+      <xs:enumeration value="High" />
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Low" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Terrain Improvement Types -->
+  <xs:simpleType name="ImprovementType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Farm" />
+      <xs:enumeration value="Clearing" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:complexType name="Color">
+    <xs:attribute name="R" type="xs:int" use="required" />
+    <xs:attribute name="G" type="xs:int" use="required" />
+    <xs:attribute name="B" type="xs:int" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="Direction">
+    <xs:attribute name="X" type="xs:float" use="required" />
+    <xs:attribute name="Y" type="xs:float" use="required" />
+    <xs:attribute name="Z" type="xs:float" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TerrainTypeBase" abstract="true">
+    <xs:sequence>
+      <xs:element name="Heightmap" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required" />
+          <xs:attribute name="Offset" type="xs:float" use="optional" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Material" maxOccurs="4" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required" />
+          <xs:attribute name="Season" type="oe:Season" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WaterMaterial" minOccurs="0" maxOccurs="4">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required" />
+          <xs:attribute name="Season" type="oe:Season" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EnvironmentSet" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="optional" />
+          <xs:attribute name="AmbientSound" type="xs:string" use="optional" />
+          <xs:attribute name="WinterSound" type="xs:string" use="optional" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AmbientCreatureSet" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExternalPlacementMap" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" use="required" />
+    <xs:attribute name="TranslationTag" type="xs:string" use="optional" />
+    <xs:attribute name="AllowFlatLod" type="xs:boolean" use="optional" />
+    <xs:attribute name="ResHint" type="oe:ResHint" use="optional" />
+    <xs:attribute name="SteepToRiver" type="xs:boolean" use="optional" />
+    <xs:attribute name="CanConceal" type="xs:boolean" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="TerrainDefault">
+    <xs:complexContent>
+      <xs:extension base="oe:TerrainTypeBase">
+        <xs:sequence>
+          <xs:element name="MapColor" type="oe:Color" />
+          <xs:element name="Data">
+            <xs:complexType>
+              <xs:attribute name="Water" type="xs:boolean" use="required" />
+              <xs:attribute name="Sea" type="xs:boolean" use="optional" />
+              <xs:attribute name="River" type="xs:boolean" use="optional" />
+              <xs:attribute name="Lake" type="xs:boolean" use="optional" />
+              <xs:attribute name="OffMap" type="xs:boolean" use="optional" />
+              <xs:attribute name="Farmland" type="xs:boolean" use="optional" />
+              <xs:attribute name="IrrigationSource" type="xs:boolean" use="optional" />
+              <xs:attribute name="AllowSettlement" type="xs:boolean" use="optional" />
+              <xs:attribute name="AdjacentSettlement" type="xs:boolean" use="optional" />
+              <xs:attribute name="AllowRoad" type="xs:boolean" use="optional" />
+              <xs:attribute name="AllowAdjacentPort" type="xs:boolean" use="optional" />
+              <xs:attribute name="Floods" type="xs:boolean" use="optional" />
+              <xs:attribute name="IsFlooded" type="xs:boolean" use="optional" />
+              <xs:attribute name="PillagedType" type="xs:string" use="optional" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Improvement" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Requirements" type="oe:RequirementList" />
+              </xs:sequence>
+              <xs:attribute name="To" type="xs:string" use="required" />
+              <xs:attribute name="Type" type="oe:ImprovementType" use="required" />
+              <xs:attribute name="Labor" type="xs:positiveInteger" use="required" />
+              <xs:attribute name="Sprite" type="xs:string" use="required" />
+              <xs:attribute name="NameTag" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Production" minOccurs="0">
+            <xs:complexType>
+              <xs:attribute name="Food1" type="xs:float" use="required" />
+              <xs:attribute name="Food2" type="xs:float" use="required" />
+              <xs:attribute name="Grazing" type="xs:nonNegativeInteger" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="OverlayOrder" type="xs:int" use="required" />
+        <xs:attribute name="MoveClass" type="xs:string" use="required" />
+        <xs:attribute name="CanUseToCross" type="xs:string" use="optional" />
+        <xs:attribute name="AllowInEditor" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TerrainOverride">
+    <xs:complexContent>
+      <xs:extension base="oe:TerrainTypeBase">
+        <xs:sequence>
+          <xs:element name="Production" minOccurs="0">
+            <xs:complexType>
+              <xs:attribute name="Food1" type="xs:float" use="required" />
+              <xs:attribute name="Food2" type="xs:float" use="required" />
+              <xs:attribute name="Grazing" type="xs:float" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="MoveClass" type="xs:string" use="optional" />
+        <xs:attribute name="CausesAttrition" type="xs:boolean" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Climate">
+    <xs:sequence>
+      <xs:element name="MapColor" type="oe:Color" />
+      <xs:element name="Terrain" type="oe:TerrainOverride" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="ID" use="required" />
+    <xs:attribute name="TranslationTag" type="xs:string" use="optional" />
+    <xs:attribute name="OverlayOrder" type="xs:int" use="required" />
+    <xs:attribute name="WinterAttrition" type="xs:boolean" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="SeasonData">
+    <xs:sequence>
+      <xs:element name="Light">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Color" type="oe:Color" />
+            <xs:element name="Direction" type="oe:Direction" />
+            <xs:element name="UpperHemisphereColor" type="oe:Color" />
+            <xs:element name="LowerHemisphereColor" type="oe:Color" />
+          </xs:sequence>
+          <xs:attribute name="Intensity" type="xs:float" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Ambient" type="oe:Color" />
+      <xs:element name="Fog">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Color" type="oe:Color" />
+          </xs:sequence>
+          <xs:attribute name="Height" type="xs:int" use="required" />
+          <xs:attribute name="ViewDistanceFlat" type="xs:int" use="required" />
+          <xs:attribute name="ViewDistanceDown" type="xs:int" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Skybox">
+        <xs:complexType>
+          <xs:attribute name="Material" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ColorCorrection">
+        <xs:complexType>
+          <xs:attribute name="Texture" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="oe:Season" use="required" />
+  </xs:complexType>
+
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Season" type="oe:SeasonData" minOccurs="4" maxOccurs="4" />
+        <xs:element name="Terrain" type="oe:TerrainDefault" maxOccurs="unbounded" />
+        <xs:element name="Climate" type="oe:Climate" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

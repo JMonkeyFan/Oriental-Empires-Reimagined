@@ -1,0 +1,1406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Projectiles xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires ProjectileTypes.xsd">
+
+  <!-- Trebuchet Projectiles -->
+  <Projectile ID="STrebRock" Prefab="OE_P_Projectile_Rock_Large">
+    <Firing MinRange="10" MaxRange="150" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="5" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Small Trebuchet Fire" MissileSound="Rock In Flight" />
+    <Damage Damage="10" />
+    <BuildingDamage Damage="12" MaxHPCanDamage="200" HitEffectPrefab="OE_P_ImpactWall_Large" Sound="SmallRockHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWall_Large" Damage="4" Radius="1.5" Sound="SmallRockHit" />
+  </Projectile>
+  <Projectile ID="STrebFlamingRock" Prefab="OE_P_Projectile_RockFire_Large" RequiredTech="Flaming Pitch">
+    <Firing MinRange="10" MaxRange="150" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="5" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Small Trebuchet Fire" MissileSound="Flaming Rock In Flight" />
+    <Damage Damage="12" />
+    <BuildingDamage Damage="5" FireDamage="30" MaxHPCanDamage="200" HitEffectPrefab="OE_P_ImpactWallExpolosion_Large" Sound="SmallFlamingRockHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWallExpolosion_Large" Damage="6" Radius="1.5" Sound="SmallFlamingRockHitsWall" />
+  </Projectile>
+  <Projectile ID="STrebBomb" Prefab="OE_P_Projectile_Smoke_Medium" RequiredTech="Thunderclap Bomb">
+    <Firing MinRange="10" MaxRange="150" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="5" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Small Trebuchet Fire" MissileSound="Rock In Flight" />
+    <Damage Damage="12" APLevel="1" TerrorFactor="1" />
+    <BuildingDamage Damage="0" FireDamage="0" MaxHPCanDamage="0" HitEffectPrefab="OE_P_ImpactWallThunderClap_Medium" Sound="ShellExplosionSmall" />
+    <Explosion EffectPrefab="OE_P_ImpactWallThunderClap_Medium" Damage="8" Radius="2" Sound="ShellExplosionSmall" />
+  </Projectile>
+
+  <Projectile ID="MTrebRock" Prefab="OE_P_Projectile_Rock_Large">
+    <Firing MinRange="20" MaxRange="150" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="5" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Medium Trebuchet Fire" MissileSound="Rock In Flight" />
+    <Damage Damage="20" APLevel="2" />
+    <BuildingDamage Damage="20" MaxHPCanDamage="300" HitEffectPrefab="OE_P_ImpactWall_Large" Sound="MediumRockHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWall_Large" Damage="5" Radius="2" Sound="MediumRockHit" />
+  </Projectile>
+  <Projectile ID="MTrebFlamingRock" Prefab="OE_P_Projectile_RockFire_Large" RequiredTech="Flaming Pitch">
+    <Firing MinRange="20" MaxRange="150" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="5" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Medium Trebuchet Fire" MissileSound="Flaming Rock In Flight" />
+    <Damage Damage="24" APLevel="2" />
+    <BuildingDamage Damage="10" FireDamage="50" MaxHPCanDamage="300" HitEffectPrefab="OE_P_ImpactWallExpolosion_Large" Sound="MediumFlamingRockHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWallExpolosion_Large" Damage="6" Radius="2.5" Sound="MediumFlamingRockHitsWall" />
+  </Projectile>
+  <Projectile ID="MTrebBomb" Prefab="OE_P_Projectile_Smoke_Medium" RequiredTech="Thunderclap Bomb">
+    <Firing MinRange="20" MaxRange="150" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="5" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Medium Trebuchet Fire" MissileSound="Rock In Flight" />
+    <Damage Damage="24" APLevel="1" TerrorFactor="1" />
+    <BuildingDamage Damage="0" FireDamage="0" MaxHPCanDamage="0" HitEffectPrefab="OE_P_ImpactWallThunderClap_Medium" Sound="ShellExplosionMedium" />
+    <Explosion EffectPrefab="OE_P_ImpactWallThunderClap_Medium" Damage="8" Radius="3" Sound="ShellExplosionMedium" />
+  </Projectile>
+
+  <Projectile ID="LTrebRock" Prefab="OE_P_Projectile_Rock_Large">
+    <Firing MinRange="20" MaxRange="180" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Large Trebuchet Fire" MissileSound="Rock In Flight" />
+    <Damage Damage="40" APLevel="2" />
+    <BuildingDamage Damage="30" MaxHPCanDamage="99999" HitEffectPrefab="OE_P_ImpactWall_Large" Sound="LargeRockHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWall_Large" Damage="8" Radius="3" Sound="LargeRockHit" />
+  </Projectile>
+  <Projectile ID="LTrebFlamingRock" Prefab="OE_P_Projectile_RockFire_Large" RequiredTech="Flaming Pitch">
+    <Firing MinRange="20" MaxRange="180" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="5" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Large Trebuchet Fire" MissileSound="Flaming Rock In Flight" />
+    <Damage Damage="50" APLevel="2" />
+    <BuildingDamage Damage="15" FireDamage="70" MaxHPCanDamage="99999" HitEffectPrefab="OE_P_ImpactWallExpolosion_Large" Sound="LargeFlamingRockHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWallExpolosion_Large" Damage="10" Radius="3.5" Sound="LargeRockHit" />
+  </Projectile>
+  <Projectile ID="LTrebBomb" Prefab="OE_P_Projectile_Smoke_Medium" RequiredTech="Thunderclap Bomb">
+    <Firing MinRange="20" MaxRange="180" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="5" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Large Trebuchet Fire" MissileSound="Rock In Flight" />
+    <Damage Damage="50" APLevel="1" TerrorFactor="1" />
+    <BuildingDamage Damage="0" FireDamage="0" MaxHPCanDamage="0" HitEffectPrefab="OE_P_ImpactWallThunderClap_Medium" Sound="ShellExplosionLarge" />
+    <Explosion EffectPrefab="OE_P_ImpactWallThunderClap_Medium" Damage="12" Radius="4" Sound="ShellExplosionLarge" />
+  </Projectile>
+
+  <Projectile ID="LCWTrebRock" Prefab="OE_P_Projectile_Rock_Large">
+    <Firing MinRange="20" MaxRange="180" HalfFiringArcDegrees="22.5" AccuracyRangePercent="3" AccuraryAngleDegrees="3" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Counterweight Trebuchet Fire" MissileSound="Rock In Flight" />
+    <Damage Damage="40" APLevel="2" />
+    <BuildingDamage Damage="60" MaxHPCanDamage="99999" HitEffectPrefab="OE_P_ImpactWall_Large" Sound="LargeRockHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWall_Large" Damage="10" Radius="3" Sound="LargeRockHit" />
+  </Projectile>
+  <Projectile ID="LCWTrebFlamingRock" Prefab="OE_P_Projectile_RockFire_Large" RequiredTech="Flaming Pitch">
+    <Firing MinRange="20" MaxRange="180" HalfFiringArcDegrees="22.5" AccuracyRangePercent="3" AccuraryAngleDegrees="3" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Counterweight Trebuchet Fire" MissileSound="Flaming Rock In Flight" />
+    <Damage Damage="50" APLevel="2" />
+    <BuildingDamage Damage="30" FireDamage="90" MaxHPCanDamage="99999" HitEffectPrefab="OE_P_ImpactWallFire_Large" Sound="LargeFlamingRockHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWallExpolosion_Large" Damage="12" Radius="3.5" Sound="LargeRockHit" />
+  </Projectile>
+  <Projectile ID="LCWTrebBomb" Prefab="OE_P_Projectile_Smoke_Medium" RequiredTech="Thunderclap Bomb">
+    <Firing MinRange="20" MaxRange="180" HalfFiringArcDegrees="22.5" AccuracyRangePercent="3" AccuraryAngleDegrees="3" LaunchAngleDegrees="30" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Counterweight Trebuchet Fire" MissileSound="Rock In Flight" />
+    <Damage Damage="50" APLevel="1" TerrorFactor="1" />
+    <BuildingDamage Damage="0" FireDamage="0" MaxHPCanDamage="0" HitEffectPrefab="OE_P_ImpactWallThunderClap_Medium" Sound="ShellExplosionLarge" />
+    <Explosion EffectPrefab="OE_P_ImpactWallThunderClap_Medium" Damage="14" Radius="4" Sound="ShellExplosionLarge" />
+  </Projectile>
+
+  <!-- Ballista Projectiles -->
+  <Projectile ID="SBallistaBolt" Prefab="OE_P_Projectile_BalistaBoltSmall">
+    <Firing MinRange="5" MaxRange="150" HalfFiringArcDegrees="22.5" AccuracyRangePercent="2" AccuraryAngleDegrees="2" LaunchAngleDegrees="15" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Large Crossbow Fire" ReloadSound="Large Crossbow Reload" />
+    <Damage Damage="15" APLevel="2" SoldierPiercing="true" />
+    <BuildingDamage Damage="7" MaxHPCanDamage="100" HitEffectPrefab="OE_P_ImpactWall_Small" Sound="BallistaBoltHitsWall" />
+  </Projectile>
+  <Projectile ID="LBallistaBolt" Prefab="OE_P_Projectile_BalistaBoltLarge">
+    <Firing MinRange="20" MaxRange="250" HalfFiringArcDegrees="22.5" AccuracyRangePercent="3" AccuraryAngleDegrees="3" LaunchAngleDegrees="15" />
+    <FiringSequence Name="StandardArtillery" FiringSound="Large Crossbow Fire" ReloadSound="Large Crossbow Reload" />
+    <Damage Damage="25" APLevel="2" SoldierPiercing="true" />
+    <BuildingDamage Damage="12" MaxHPCanDamage="100" HitEffectPrefab="OE_P_ImpactWall_Small" Sound="BallistaBoltHitsWall" />
+  </Projectile>
+
+  <!-- Cannons and rockets -->
+  <Projectile ID="SCannonBall" Prefab="OE_P_Projectile_CannonBall_Large">
+    <Firing MinRange="0" MaxRange="250" HalfFiringArcDegrees="12" AccuracyRangePercent="2" AccuraryAngleDegrees="2" LaunchAngleDegrees="5" />
+    <FiringSequence Name="SCannon" FireEffectPrefab="OE_P_MuzzleFlash_Large" FiringSound="Small Cannon Fire" />
+    <Damage Damage="50" APLevel="2" SoldierPiercing="true" />
+    <BuildingDamage Damage="80" MaxHPCanDamage="99999" HitEffectPrefab="OE_P_ImpactWall_Large" Sound="CannonBallHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWall_Large" Damage="12" Radius="1" Sound="SmallRockHit" />
+  </Projectile>
+  <Projectile ID="SCannonShell" Prefab="OE_P_Projectile_Smoke_Medium" RequiredTech="Thunderclap Bomb">
+    <Firing MinRange="0" MaxRange="250" HalfFiringArcDegrees="12" AccuracyRangePercent="2" AccuraryAngleDegrees="2" LaunchAngleDegrees="5" />
+    <FiringSequence Name="SCannon" FireEffectPrefab="OE_P_MuzzleFlash_Large" FiringSound="Small Cannon Fire" />
+    <Damage Damage="50" APLevel="2" SoldierPiercing="false" TerrorFactor="1" />
+    <BuildingDamage Damage="0" MaxHPCanDamage="0" HitEffectPrefab="OE_P_ImpactWallThunderClap_Medium" Sound="ShellExplosionSmall" />
+    <Explosion EffectPrefab="OE_P_ImpactWallThunderClap_Medium" Damage="12" Radius="4" Sound="ShellExplosionSmall" />
+  </Projectile>
+  <Projectile ID="HundredTigersRocket" Prefab="OE_P_Projectile_Rocket_Small">
+    <Firing MinRange="0" MaxRange="150" HalfFiringArcDegrees="22" AccuracyRangePercent="40" AccuraryAngleDegrees="15" LaunchAngleDegrees="10" />
+    <FiringSequence Name="HundredTigers" FireEffectPrefab="OE_P_MuzzleFlash_Small" Shots="40" FiringSound="Hundred Tigers Fire" />
+    <Damage Damage="15" APLevel="1" SoldierPiercing="false" TerrorFactor="1" />
+    <BuildingDamage Damage="0" FireDamage="3" MaxHPCanDamage="0" HitEffectPrefab="OE_P_ImpactWallExpolosion_Medium" Sound="RocketHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWallExpolosion_Medium" Damage="4" Radius="1" Sound="RocketExplosion" />
+  </Projectile>
+
+  <!-- Foot Soldier Projectiles -->
+  <!-- Shortbow -->
+  <Projectile ID="Militia Shortbow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Shortbow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Longbow -->
+  <Projectile ID="Militia Longbow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Longbow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Composite Bow -->
+  <Projectile ID="Militia Composite Bow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Composite Bow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Crossbow -->
+  <Projectile ID="Militia Crossbow 1" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="8" APLevel="1" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Crossbow 2" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="9" APLevel="1" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Crossbow 3" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="10" APLevel="1" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Repeating Crossbow -->
+  <Projectile ID="Militia Repeating Crossbow 1" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="2" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Repeating Crossbow 2" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="3" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Militia Repeating Crossbow 3" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="4" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+
+
+  <!-- Shortbow -->
+  <Projectile ID="Noble Shortbow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Shortbow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Longbow -->
+  <Projectile ID="Noble Longbow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Longbow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Composite Bow -->
+  <Projectile ID="Noble Composite Bow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Composite Bow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="2" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Crossbow -->
+  <Projectile ID="Noble Crossbow 1" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="8" APLevel="5" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Crossbow 2" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="9" APLevel="5" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Crossbow 3" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="10" APLevel="5" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Repeating Crossbow -->
+  <Projectile ID="Noble Repeating Crossbow 1" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="3" APLevel="1" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Repeating Crossbow 2" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="4" APLevel="1" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Noble Repeating Crossbow 3" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="5" APLevel="1" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+
+
+  <!-- Shortbow -->
+  <Projectile ID="Regular Shortbow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Shortbow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Longbow -->
+  <Projectile ID="Regular Longbow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Longbow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Composite Bow -->
+  <Projectile ID="Regular Composite Bow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Composite Bow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="1" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Crossbow -->
+  <Projectile ID="Regular Crossbow 1" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="8" APLevel="4" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Crossbow 2" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="9" APLevel="4" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Crossbow 3" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="10" APLevel="4" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Repeating Crossbow -->
+  <Projectile ID="Regular Repeating Crossbow 1" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="2" APLevel="0" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Repeating Crossbow 2" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="3" APLevel="1" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Regular Repeating Crossbow 3" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="4" APLevel="2" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+
+
+  <!-- Shortbow -->
+  <Projectile ID="Guard Shortbow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Shortbow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="8" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="16" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="2" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="7" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Longbow -->
+  <Projectile ID="Guard Longbow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Longbow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="12" MaxRange="90" HalfFiringArcDegrees="22.5" AccuracyRangePercent="14" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="80" MinFiringAngle="6" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="6" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Composite Bow -->
+  <Projectile ID="Guard Composite Bow Arrow 1" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Burning Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Flaming Arrow 1" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Fire Arrow 1" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="3" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Arrow 2" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Burning Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Flaming Arrow 2" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Fire Arrow 2" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Arrow 3" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Burning Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="1" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Flaming Arrow 3" Prefab="OE_P_Projectile_ArrowFlaming" RequiredTech="Flaming Pitch">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="2" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Composite Bow Fire Arrow 3" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="5" APLevel="3" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Crossbow -->
+  <Projectile ID="Guard Crossbow 1" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="8" APLevel="6" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Crossbow 2" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="9" APLevel="6" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Crossbow 3" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="10" APLevel="6" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!-- Repeating Crossbow -->
+  <Projectile ID="Guard Repeating Crossbow 1" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="2" APLevel="3" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Repeating Crossbow 2" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="3" APLevel="2" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Guard Repeating Crossbow 3" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="15" AccuraryAngleDegrees="4.5" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="RepCrossbow" Shots="10" FiringSound="Repeating Crossbow Fire" />
+    <Damage Damage="4" APLevel="1" PoorVsArmor="true" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <!--Default stuff-->
+  <Projectile ID="Infantry Triple Gun" Prefab="OE_P_Projectile_Bullet">
+    <Firing MinRange="10" MaxRange="50" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="60" MaxFiringAngle="45" MinFiringAngle="0" />
+    <FiringSequence Name="Crossbow" Shots="3" FireEffectPrefab="OE_P_MuzzleFlash_Small" FiringSound="Primitive Gun Fire" />
+    <Damage Damage="15" APLevel="2" />
+  </Projectile>
+
+  <Projectile ID="Beehive Rocket" Prefab="OE_P_Projectile_Rocket_Small">
+    <Firing MinRange="10" MaxRange="100" HalfFiringArcDegrees="22.5" AccuracyRangePercent="30" AccuraryAngleDegrees="12" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="70" MinFiringAngle="5" />
+    <FiringSequence Name="Crossbow" FireEffectPrefab="OE_P_MuzzleFlash_Small" Shots="10" ReloadLoops="5" FiringSound="Beehive Launcher Fire" />
+    <Damage Damage="7" TerrorFactor="1" />
+    <BuildingDamage Damage="0" FireDamage="4" HitEffectPrefab="OE_P_ImpactWallFire_Small" Sound="ArrowHitsWall" />
+    <Explosion EffectPrefab="OE_P_ImpactWallFire_Small" Damage="3" Radius="1" Sound="RocketExplosion" />
+  </Projectile>
+
+  <!-- Cavalry Projectiles -->
+  <Projectile ID="Cavalry Arrow" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="30" MaxFiringAngle="70" MinFiringAngle="-60" />
+    <FiringSequence Name="Bow" />
+    <Damage Damage="6" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Cavalry Crossbow" Prefab="OE_P_Projectile_Bolt_Small">
+    <Firing MinRange="10" MaxRange="80" HalfFiringArcDegrees="22.5" AccuracyRangePercent="10" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="45" MinFiringAngle="-60" />
+    <FiringSequence Name="Crossbow" FiringSound="Crossbow Fire" />
+    <Damage Damage="6" APLevel="1" KillBonusCapability="Crossbow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+
+  <!-- Chariot Projectiles -->
+  <Projectile ID="Chariot Arrow" Prefab="OE_P_Projectile_Arrow">
+    <Firing MinRange="10" MaxRange="70" HalfFiringArcDegrees="22.5" AccuracyRangePercent="1" AccuraryAngleDegrees="2" />
+    <FiringVelocity Velocity="35" MaxFiringAngle="70" MinFiringAngle="-60" />
+    <FiringSequence Name="Bow" />
+    <Damage Damage="12" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="0" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+
+
+  <Projectile ID="Infantry Arrow" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Burning Arrow" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Flaming Arrow" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+  <Projectile ID="Fire Arrow" Prefab="OE_P_Projectile_ArrowFire" RequiredTech="Gunpowder">
+    <Firing MinRange="16" MaxRange="110" HalfFiringArcDegrees="22.5" AccuracyRangePercent="12" AccuraryAngleDegrees="3" />
+    <FiringVelocity Velocity="40" MaxFiringAngle="90" MinFiringAngle="10" />
+    <FiringSequence Name="Bow" FiringSound="Bow Fire" />
+    <Damage Damage="4" KillBonusCapability="Bow Skill" />
+    <BuildingDamage Damage="0" FireDamage="3" HitEffectPrefab="" Sound="ArrowHitsWall" />
+  </Projectile>
+
+
+</Projectiles>

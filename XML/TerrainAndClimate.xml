@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires TerrainAndClimate.xsd">
+  <!-- Season Data Definations -->
+  <Season ID="Winter">
+    <Light Intensity="1.05">
+      <Color R="226" G="238" B="255" />
+      <Direction X="35" Y="225" Z="355" />
+      <UpperHemisphereColor R="116" G="121" B="124" />
+      <LowerHemisphereColor R="116" G="121" B="124" />
+    </Light>
+    <Ambient R="116" G="121" B="124" />
+    <Fog Height="1000" ViewDistanceFlat="1000" ViewDistanceDown="400">
+      <Color R="175" G="185" B="194" />
+    </Fog>
+    <Skybox Material="Sky/Materials/OE_Sky_Winter" />
+    <ColorCorrection Texture="Effects/Textures/color correction ramp_winter" />
+  </Season>
+  <Season ID="Spring">
+    <Light Intensity="1.05">
+      <Color R="255" G="254" B="244" />
+      <Direction X="35" Y="225" Z="355" />
+      <UpperHemisphereColor R="116" G="121" B="124" />
+      <LowerHemisphereColor R="89" G="126" B="91" />
+    </Light>
+    <Ambient R="116" G="121" B="124" />
+    <Fog Height="1000" ViewDistanceFlat="1000" ViewDistanceDown="400">
+      <Color R="172" G="189" B="202" />
+    </Fog>
+    <Skybox Material="Sky/Materials/OE_Sky_Spring" />
+    <ColorCorrection Texture="Effects/Textures/color correction ramp_spring" />
+  </Season>
+  <Season ID="Summer">
+    <Light Intensity="1.15">
+      <Color R="255" G="227" B="166" />
+      <Direction X="35" Y="225" Z="355" />
+      <UpperHemisphereColor R="116" G="121" B="124" />
+      <LowerHemisphereColor R="89" G="126" B="91" />
+    </Light>
+    <Ambient R="116" G="121" B="124" />
+    <Fog Height="1000" ViewDistanceFlat="1000" ViewDistanceDown="400">
+      <Color R="170" G="188" B="200" />
+    </Fog>
+    <Skybox Material="Sky/Materials/OE_Sky_Summer" />
+    <ColorCorrection Texture="Effects/Textures/color correction ramp_summer" />
+  </Season>
+  <Season ID="Autumn">
+    <Light Intensity="1.05">
+      <Color R="255" G="240" B="232" />
+      <Direction X="35" Y="225" Z="355" />
+      <UpperHemisphereColor R="116" G="121" B="124" />
+      <LowerHemisphereColor R="89" G="126" B="91" />
+    </Light>
+    <Ambient R="116" G="121" B="124" />
+    <Fog Height="1000" ViewDistanceFlat="1000" ViewDistanceDown="400">
+      <Color R="177" G="190" B="209" />
+    </Fog>
+    <Skybox Material="Sky/Materials/OE_Sky_Autumn" />
+    <ColorCorrection Texture="Effects/Textures/color correction ramp_autumn" />
+  </Season> <!-- Land Terrain Types with default definitions -->
+  <Terrain ID="OffMap" OverlayOrder="0" AllowFlatLod="true" ResHint="Low" MoveClass="Impassable" AllowInEditor="true">
+    <Heightmap Name="" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Unexplored" Season="Any" />
+    <MapColor R="0" G="0" B="0" />
+    <Data Water="false" OffMap="true" />
+  </Terrain>
+  <Terrain ID="Unexplored" OverlayOrder="200" AllowFlatLod="true" ResHint="Low" MoveClass="Impassable">
+    <Heightmap Name="" Offset="8.2" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Unexplored" Season="Any" />
+    <MapColor R="0" G="0" B="0" />
+    <Data Water="false" />
+  </Terrain>
+  <Terrain ID="Dry Plain" OverlayOrder="10" AllowFlatLod="false" ResHint="Low" MoveClass="FlatGround" CanUseToCross="true" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_DryPlain" Season="Any" />
+    <EnvironmentSet Name="Northern_Dry" AmbientSound="AmbientTemperatePlain" />
+    <MapColor R="180" G="180" B="64" />
+    <Data Water="false" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" />
+    <Production Food1="0.45" Food2="0.9" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Grassland" OverlayOrder="15" AllowFlatLod="false" ResHint="Low" MoveClass="FlatGround" CanUseToCross="true" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_GrassLand" Season="Any" />
+    <EnvironmentSet Name="Northern_Grassland" AmbientSound="AmbientWindyGrassland" />
+    <AmbientCreatureSet Name="Generic Grassland" />
+    <MapColor R="72" G="209" B="117" />
+    <Data Water="false" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" />
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="25" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="Town" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="35" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="45" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <RequireEither>
+          <Building ID="Trading City" Condition="true" Exact="true" />
+          <Building ID="Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="55" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <RequireEither>
+          <Building ID="Large Trading City" Condition="true" Exact="true" />
+          <Building ID="Large Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="75" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="Huge City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="90" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="110" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Production Food1="1.5" Food2="3" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Fertile Plain" OverlayOrder="20" AllowFlatLod="true" ResHint="Low" MoveClass="FlatGround" CanUseToCross="true" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_FertilePlain" Season="Any" />
+    <EnvironmentSet Name="Northern_Fertile" AmbientSound="AmbientTemperatePlain" />
+    <AmbientCreatureSet Name="Generic Fertile" />
+    <MapColor R="0" G="255" B="0" />
+    <Data Water="false" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" />
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="27" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="Town" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="40" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="50" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <RequireEither>
+          <Building ID="Trading City" Condition="true" Exact="true" />
+          <Building ID="Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="66" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <RequireEither>
+          <Building ID="Large Trading City" Condition="true" Exact="true" />
+          <Building ID="Large Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="83" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="Huge City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="106" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="178" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Production Food1="1.75" Food2="3.5" Grazing="2" />
+  </Terrain>
+  <Terrain ID="Gentle Hills" OverlayOrder="60" SteepToRiver="true" ResHint="High" MoveClass="GentleHills" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleHills" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_GentleHills" Season="Any" />
+    <EnvironmentSet Name="Northern_GentleHills" AmbientSound="AmbientTemperatePlain" />
+    <MapColor R="64" G="192" B="64" />
+    <Data Water="false" AdjacentSettlement="true" AllowAdjacentPort="false" AllowRoad="true" AllowSettlement="true" />
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="25" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Town" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="35" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="45" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <RequireEither>
+          <Building ID="Trading City" Condition="true" Exact="true" />
+          <Building ID="Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="55" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <RequireEither>
+          <Building ID="Large Trading City" Condition="true" Exact="true" />
+          <Building ID="Large Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="75" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Huge City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="90" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="110" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Production Food1="1.35" Food2="2.7" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Steep Hills" OverlayOrder="80" SteepToRiver="true" ResHint="High" MoveClass="SteepHills" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_SteepHills" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_SteepHills" Season="Any" />
+    <EnvironmentSet Name="Northern_SteepHills" AmbientSound="AmbientMountain" />
+    <ExternalPlacementMap Name="ExtPlacement_Generic_HM_SteepHills" />
+    <MapColor R="160" G="128" B="0" />
+    <Data Water="false" />
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="27" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Town" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="40" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="50" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <RequireEither>
+          <Building ID="Trading City" Condition="true" Exact="true" />
+          <Building ID="Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="66" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <RequireEither>
+          <Building ID="Large Trading City" Condition="true" Exact="true" />
+          <Building ID="Large Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="83" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Huge City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="106" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="178" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Production Food1="1.25" Food2="2.5" Grazing="2" />
+  </Terrain>
+  <Terrain ID="Mountains" OverlayOrder="90" SteepToRiver="true" ResHint="High" MoveClass="Mountains" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_NC_HM_Mountains" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_Mountains" Season="Any" />
+    <EnvironmentSet Name="Northern_Mountains" AmbientSound="AmbientMountain" />
+    <ExternalPlacementMap Name="ExtPlacement_NC_HM_Mountains" />
+    <MapColor R="150" G="150" B="150" />
+    <Data Water="false" />
+  </Terrain>
+
+  <Terrain ID="Forest" OverlayOrder="50" ResHint="Low" MoveClass="Forest" SteepToRiver="true" CanUseToCross="true" CanConceal="true" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_Forest" Season="Any" />
+    <EnvironmentSet Name="Northern Forest" AmbientSound="AmbientTemperateForest" />
+    <AmbientCreatureSet Name="Generic Forest" />
+    <MapColor R="0" G="100" B="0" />
+    <Data Water="false" AdjacentSettlement="true" />
+
+    <Improvement Type="Clearing" To="Grassland" Labor="70" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Grassland">
+      <Requirements>
+        <Tech Item="Enable Clear Grassland" />
+        <Tech Item="Axe Making" />
+        <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+        <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+        <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+        <Terrain ID="Grassland" Condition="false" Adjacent="true" />
+        <Terrain ID="Fertile Plain" Condition="false" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+        <Terrain ID="Grassland" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Adjacent="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Clearing" To="Grassland" Labor="70" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Dry Grassland">
+      <Requirements>
+        <Tech Item="Enable Clear Grassland" />
+        <Tech Item="Axe Making" />
+        <FactionTag Tag="Herders" />
+        <Terrain ID="Dry Plain" Adjacent="true" />
+        <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+        <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+        <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+        <Terrain ID="Grassland" Condition="false" Adjacent="true" />
+        <Terrain ID="Fertile Plain" Condition="false" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Adjacent="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Clearing" To="Plateau" Labor="60" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Plateau">
+      <Requirements>
+        <Tech Item="Enable Clear Plateau" />
+        <Tech Item="Axe Making" />
+        <Tech Item="Terracing" />
+        <Terrain ID="Plateau" Adjacent="true" />
+        <Terrain ID="Dry Plain" Condition="false" Adjacent="true" />
+        <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+        <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+        <Terrain ID="Grassland" Condition="false" Adjacent="true" />
+        <Terrain ID="Fertile Plain" Condition="false" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Adjacent="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Clearing" To="Gentle Hills" Labor="50" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Gentle Hills">
+      <Requirements>
+        <Tech Item="Enable Clear Gentle Hills" />
+        <Tech Item="Axe Making" />
+        <Tech Item="Terracing" />
+        <Terrain ID="Gentle Hills" Adjacent="true" />
+        <Terrain ID="Dry Plain" Condition="false" Adjacent="true" />
+        <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+        <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+        <Terrain ID="Grassland" Condition="false" Adjacent="true" />
+        <Terrain ID="Fertile Plain" Condition="false" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Adjacent="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Clearing" To="Steep Hills" Labor="40" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Steep Hills">
+      <Requirements>
+        <Tech Item="Enable Clear Steep Hills" />
+        <Tech Item="Axe Making" />
+        <Tech Item="Terracing" />
+        <Terrain ID="Steep Hills" Adjacent="true" />
+        <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+        <Terrain ID="Fertile Plain" Condition="false" Adjacent="true" />
+        <Terrain ID="Grassland" Condition="false" Adjacent="true" />
+        <Terrain ID="Dry Plain" Condition="false" Adjacent="true" />
+        <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+        <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+        <TerrainAttribute Require="Farmland" Adjacent="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Clearing" To="Fertile Plain" Labor="80" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Fertile Plain">
+      <Requirements>
+        <Tech Item="Enable Clear Fertile Plain" />
+        <Tech Item="Axe Making" />
+        <RequireEither>
+          <Terrain ID="Fertile Plain" Adjacent="true" />
+          <Terrain ID="Steep Hills" Adjacent="true" />
+          <Terrain ID="Gentle Hills" Condition="false" Adjacent="true" />
+          <Terrain ID="Steep Hills" Condition="false" Adjacent="true" />
+          <Terrain ID="Grassland" Condition="false" Adjacent="true" />
+          <Terrain ID="Dry Plain" Condition="false" Adjacent="true" />
+          <Terrain ID="Plateau" Condition="false" Adjacent="true" />
+          <Terrain ID="Mountains" Condition="false" Adjacent="true" />
+          <TerrainAttribute Require="Farmland" Adjacent="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Production Food1="0.5" Food2="0" Grazing="0" />
+  </Terrain>
+  <Terrain ID="Marsh" OverlayOrder="40" AllowFlatLod="true" ResHint="Low" MoveClass="SoftGround" SteepToRiver="false" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Marsh" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_Marsh_winter" Season="Winter" />
+    <EnvironmentSet Name="Northern_Marsh" AmbientSound="AmbientMarsh" />
+    <AmbientCreatureSet Name="Generic Marsh" />
+    <MapColor R="0" G="120" B="120" />
+    <Data Water="false" AllowRoad="true" AdjacentSettlement="true" AllowAdjacentPort="true" />
+    <Improvement Type="Clearing" To="Fertile Plain" Labor="8" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Drain Marshes">
+      <Requirements>
+        <Tech Item="Marsh Drainage" />
+      </Requirements>
+    </Improvement>
+    <Production Food1="0.5" Food2="0" Grazing="0" />
+  </Terrain>
+  <Terrain ID="Sand" OverlayOrder="30" MoveClass="SoftGround" SteepToRiver="true" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Sand" Season="Any" />
+    <MapColor R="255" G="255" B="0" />
+    <Data Water="false" />
+  </Terrain>
+  <Terrain ID="Plateau" OverlayOrder="70" SteepToRiver="true" MoveClass="FlatGround" AllowInEditor="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="4" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_Plateau" Season="Any" />
+    <EnvironmentSet Name="Northern_Plateau" AmbientSound="AmbientWindyGrassland" />
+    <MapColor R="100" G="150" B="100" />
+    <Data Water="false" AllowRoad="true" AllowSettlement="true" />
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="27" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Town" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="40" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="50" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <RequireEither>
+          <Building ID="Trading City" Condition="true" Exact="true" />
+          <Building ID="Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="66" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+      <Requirements>
+        <Tech Item="Agriculture" />
+        <RequireEither>
+          <Building ID="Large Trading City" Condition="true" Exact="true" />
+          <Building ID="Large Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="83" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Huge City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="106" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="178" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+      <Requirements>
+        <Tech Item="Terracing" />
+        <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Production Food1="1.5" Food2="3" Grazing="2" />
+  </Terrain> <!-- Improved Terrains -->
+
+  <Terrain ID="Terraced Plateau" OverlayOrder="81" SteepToRiver="true" ResHint="High" MoveClass="SoftGround">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Terrace" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_Terrace_winter" Season="Winter" />
+    <EnvironmentSet Name="Northern_Terrace" AmbientSound="AmbientTemperatePlain" />
+    <AmbientCreatureSet Name="Generic Terrace" />
+    <MapColor R="150" G="200" B="150" />
+    <Data Water="false" Farmland="true" PillagedType="Destroyed Terraced Gentle Hills" AllowRoad="true" />
+    <Production Food1="0.9" Food2="1.8" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Terraced Gentle Hills" OverlayOrder="81" SteepToRiver="true" ResHint="High" MoveClass="SoftGround">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Terrace" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_Terrace_winter" Season="Winter" />
+    <EnvironmentSet Name="Northern_Terrace" AmbientSound="AmbientTemperatePlain" />
+    <AmbientCreatureSet Name="Generic Terrace" />
+    <MapColor R="150" G="200" B="150" />
+    <Data Water="false" Farmland="true" PillagedType="Destroyed Terraced Gentle Hills" AllowRoad="true" />
+    <Production Food1="0.75" Food2="1.5" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Terraced Steep Hills" OverlayOrder="82" SteepToRiver="true" ResHint="High" MoveClass="SteepHills">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Terrace" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_Terrace_winter" Season="Winter" />
+    <EnvironmentSet Name="Northern_Terrace" AmbientSound="AmbientTemperatePlain" />
+    <AmbientCreatureSet Name="Generic Terrace" />
+    <MapColor R="64" G="156" B="0" />
+    <Data Water="false" Farmland="true" PillagedType="Destroyed Terraced Steep Hills" />
+    <Production Food1="0.6" Food2="1.2" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Fertile Farmland" OverlayOrder="25" AllowFlatLod="true" ResHint="Low" MoveClass="FlatGround" CanUseToCross="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Farm" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_Farm_winter" Season="Winter" />
+    <EnvironmentSet Name="Northern_Farms" AmbientSound="AmbientTemperatePlain" />
+    <AmbientCreatureSet Name="Generic Farmland" />
+    <MapColor R="10" G="245" B="131" />
+    <Data Water="false" Farmland="true" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" PillagedType="Destroyed Farmland" />
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="25" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
+        <Terrain ID="Fertile Farmland" />
+        <Building ID="Town" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="35" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
+        <Terrain ID="Fertile Farmland" />
+        <Building ID="City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="45" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
+        <Terrain ID="Fertile Farmland" />
+        <RequireEither>
+          <Building ID="Trading City" Condition="true" Exact="true" />
+          <Building ID="Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="55" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
+        <Terrain ID="Fertile Farmland" />
+        <RequireEither>
+          <Building ID="Large Trading City" Condition="true" Exact="true" />
+          <Building ID="Large Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="75" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
+        <Terrain ID="Fertile Farmland" />
+        <Building ID="Huge City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="90" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
+        <Terrain ID="Fertile Farmland" />
+        <Building ID="Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="110" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
+        <Terrain ID="Fertile Farmland" />
+        <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Production Food1="1.2" Food2="2.4" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Irrigated Fertile Farmland" OverlayOrder="26" AllowFlatLod="true" ResHint="Low" MoveClass="FlatGround" CanUseToCross="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_FarmIrrigated" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_FarmIrrigated_winter" Season="Winter" />
+    <EnvironmentSet Name="Northern_FarmsIrrigated" AmbientSound="AmbientTemperatePlain" />
+    <AmbientCreatureSet Name="Generic FarmIrriagted" />
+    <MapColor R="50" G="245" B="161" />
+    <Data Water="false" Farmland="true" IrrigationSource="true" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" PillagedType="Destroyed Farmland" />
+    <Production Food1="1.4" Food2="2.8" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Barren Farmland" OverlayOrder="203" AllowFlatLod="true" ResHint="Low" MoveClass="FlatGround" CanUseToCross="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_DryPlain" Season="Any" />
+    <EnvironmentSet Name="Northern_Dry" AmbientSound="AmbientTemperatePlain" />
+    <AmbientCreatureSet Name="Generic Farmland" />
+    <MapColor R="180" G="180" B="64" />
+    <Data Water="false" Farmland="true" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" PillagedType="Destroyed Farmland" />
+    <Production Food1="0.5" Food2="1" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Grassy Farmland" OverlayOrder="202" AllowFlatLod="true" ResHint="Low" MoveClass="FlatGround" CanUseToCross="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_GrassLand" Season="Any" />
+    <EnvironmentSet Name="Northern_Grassland" AmbientSound="AmbientWindyGrassland" />
+    <AmbientCreatureSet Name="Generic Grassland" />
+    <MapColor R="72" G="209" B="117" />
+    <Data Water="false" Farmland="true" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" PillagedType="Destroyed Farmland" />
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="25" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
+        <Terrain ID="Grassy Farmland" />
+        <Building ID="Town" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="35" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <Terrain ID="Grassy Farmland" />
+        <Building ID="City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="45" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <Terrain ID="Grassy Farmland" />
+        <RequireEither>
+          <Building ID="Trading City" Condition="true" Exact="true" />
+          <Building ID="Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="55" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
+        <Terrain ID="Fertile Farmland" />
+        <RequireEither>
+          <Building ID="Large Trading City" Condition="true" Exact="true" />
+          <Building ID="Large Fortified City" Condition="true" Exact="true" />
+        </RequireEither>
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="75" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <Terrain ID="Grassy Farmland" />
+        <Building ID="Huge City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="90" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <Terrain ID="Grassy Farmland" />
+        <Building ID="Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="110" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+      <Requirements>
+        <Tech Item="Irrigation" />
+        <Terrain ID="Grassy Farmland" />
+        <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
+      </Requirements>
+    </Improvement>
+    <Production Food1="1" Food2="2" Grazing="1" />
+  </Terrain>
+  <Terrain ID="Irrigated Grassy Farmland" OverlayOrder="201" AllowFlatLod="true" ResHint="Low" MoveClass="FlatGround" CanUseToCross="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+    <Material Name="Terrain/Materials/Northern_China/OE_NC_GrassLand" Season="Any" />
+    <EnvironmentSet Name="Northern_Grassland" AmbientSound="AmbientWindyGrassland" />
+    <AmbientCreatureSet Name="Generic Grassland" />
+    <MapColor R="72" G="209" B="117" />
+    <Data Water="false" Farmland="true" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" PillagedType="Destroyed Farmland" />
+    <Production Food1="1.2" Food2="2.4" Grazing="1" />
+  </Terrain>
+  <!-- Water Terrain Types with default definitions -->
+  <Terrain ID="Coastal" OverlayOrder="3" ResHint="High" MoveClass="Coastal" AllowInEditor="true">
+    <Heightmap Name="" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Riverbed" Season="Any" />
+    <WaterMaterial Name="Terrain/Materials/Water/OE_Water_Coast" Season="Any" />
+    <EnvironmentSet Name="Northern_Coastal" AmbientSound="AmbientSea" />
+    <MapColor R="0" G="200" B="255" />
+    <Data Water="true" IrrigationSource="true" Sea="true" />
+  </Terrain>
+  <Terrain ID="Sea" OverlayOrder="2" AllowFlatLod="true" MoveClass="Sea" AllowInEditor="true">
+    <Heightmap Name="" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Seabed" Season="Any" />
+    <WaterMaterial Name="Terrain/Materials/Water/OE_Water_Sea" Season="Any" />
+    <EnvironmentSet AmbientSound="AmbientSea" />
+    <MapColor R="0" G="170" B="255" />
+    <Data Water="true" Sea="true" />
+  </Terrain>
+  <Terrain ID="Ocean" OverlayOrder="1" AllowFlatLod="true" MoveClass="Ocean" AllowInEditor="true">
+    <Heightmap Name="" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Seabed" Season="Any" />
+    <WaterMaterial Name="Terrain/Materials/Water/OE_Water_Ocean" Season="Any" />
+    <EnvironmentSet AmbientSound="AmbientSea" />
+    <MapColor R="0" G="128" B="200" />
+    <Data Water="true" Sea="true" />
+  </Terrain>
+  <Terrain ID="Unnavigable River" OverlayOrder="4" MoveClass="UnnavigableRiver" AllowInEditor="true">
+    <Heightmap Name="" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Riverbed" Season="Any" />
+    <WaterMaterial Name="Terrain/Materials/Water/OE_Water_River UN" Season="Any" />
+    <EnvironmentSet Name="Northern_River_Rocks" AmbientSound="AmbientRiver" />
+    <MapColor R="120" G="80" B="120" />
+    <Data Water="true" River="true" IrrigationSource="true" AllowRoad="false" />
+  </Terrain>
+  <Terrain ID="Navigable River" OverlayOrder="5" MoveClass="NavigableRiver" AllowInEditor="true">
+    <Heightmap Name="" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Riverbed" Season="Any" />
+    <WaterMaterial Name="Terrain/Materials/Water/OE_Water_River" Season="Any" />
+    <EnvironmentSet Name="Northern_River" AmbientSound="AmbientRiver" />
+    <MapColor R="0" G="0" B="255" />
+    <Data Water="true" River="true" IrrigationSource="true" AllowRoad="true" />
+  </Terrain>
+  <Terrain ID="Unnavigable Lake" OverlayOrder="7" MoveClass="UnnavigableRiver" AllowInEditor="true">
+    <Heightmap Name="" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Riverbed" Season="Any" />
+    <WaterMaterial Name="Terrain/Materials/Water/OE_Water_River UN" Season="Any" />
+    <EnvironmentSet Name="Northern_River" AmbientSound="AmbientRiver" />
+    <MapColor R="0" G="80" B="180" />
+    <Data Water="true" River="false" IrrigationSource="true" AllowRoad="false" />
+  </Terrain> <!-- Temporary Terrain Types with default definitions -->
+  <Terrain ID="Destroyed Farmland" OverlayOrder="27" AllowFlatLod="true" ResHint="Low" MoveClass="FlatGround" CanUseToCross="true">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_FarmDestroyed_winter" Season="Winter" />
+    <EnvironmentSet Name="Destroyed Farmland Default" AmbientSound="AmbientTemperatePlain" />
+    <MapColor R="5" G="122" B="65" />
+    <Data Water="false" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" />
+  </Terrain>
+  <Terrain ID="Destroyed Terraced Steep Hills" OverlayOrder="84" SteepToRiver="true" ResHint="High" MoveClass="SteepHills">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_FarmDestroyed_winter" Season="Winter" />
+    <EnvironmentSet Name="Destroyed Terrace Default" AmbientSound="AmbientTemperatePlain" />
+    <MapColor R="32" G="78" B="0" />
+    <Data Water="false" />
+  </Terrain>
+  <Terrain ID="Destroyed Terraced Gentle Hills" OverlayOrder="83" SteepToRiver="true" ResHint="High" MoveClass="GentleHills">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_FarmDestroyed_winter" Season="Winter" />
+    <EnvironmentSet Name="Destroyed Terrace Default" AmbientSound="AmbientTemperatePlain" />
+    <MapColor R="75" G="100" B="75" />
+    <Data Water="false" />
+  </Terrain>
+  <Terrain ID="Flooded Land" OverlayOrder="41" AllowFlatLod="true" ResHint="Low" MoveClass="SoftGround" SteepToRiver="false">
+    <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+    <Material Name="Terrain/Materials/Shared/OE_Generic_Marsh" Season="Any" />
+    <Material Name="Terrain/Materials/Shared/Winter/OE_Generic_Marsh_winter" Season="Winter" />
+    <EnvironmentSet Name="Flood_Default" AmbientSound="AmbientMarsh" />
+    <AmbientCreatureSet Name="Generic Marsh" />
+    <MapColor R="0" G="130" B="130" />
+    <Data Water="false" AllowRoad="false" AdjacentSettlement="false" AllowAdjacentPort="true" IsFlooded="true" />
+  </Terrain> <!-- Climates --> <!-- Central Asia --> <!-- NOTE due to some bad name choices at the start of the project, this is actually the climate for Mongolia-->
+  <Climate ID="Central Asia" OverlayOrder="40" WinterAttrition="true">
+    <MapColor R="240" G="200" B="160" />
+    <Terrain ID="Mountains">
+      <Heightmap Name="Terrain/Heightmaps/OE_CA_HM_Mountains" />
+      <Material Name="Terrain/Materials/Central_Asia/OE_CA_Mountains" Season="Any" />
+      <Material Name="Terrain/Materials/Central_Asia/Winter/OE_CA_Mountains_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Central_Asia/Autumn/OE_CA_Mountains_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Central_Asia/Spring/OE_CA_Mountains_Spring" Season="Spring" />
+      <EnvironmentSet Name="Central_Mountains" />
+      <ExternalPlacementMap Name="ExtPlacement_CA_HM_Mountains" />
+    </Terrain>
+    <Terrain ID="Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_SteepHills" />
+      <Material Name="Terrain/Materials/Central_Asia/OE_CA_SteepHills" Season="Any" />
+      <Material Name="Terrain/Materials/Central_Asia/Winter/OE_CA_SteepHills_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Central_Asia/Autumn/OE_CA_SteepHills_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Central_Asia/Spring/OE_CA_SteepHills_Spring" Season="Spring" />
+      <EnvironmentSet Name="Central_SteepHills" />
+    </Terrain>
+    <Terrain ID="Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleHills" />
+      <Material Name="Terrain/Materials/Central_Asia/OE_CA_GentleHills" Season="Any" />
+      <Material Name="Terrain/Materials/Central_Asia/Winter/OE_CA_GentleHills_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Central_Asia/Autumn/OE_CA_GentleHills_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Central_Asia/Spring/OE_CA_GentleHills_Spring" Season="Spring" />
+      <EnvironmentSet Name="Central_GentleHills" AmbientSound="AmbientWindyGrassland" WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Fertile Plain" AllowFlatLod="false">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Central_Asia/OE_CA_FertilePlain" Season="Any" />
+      <Material Name="Terrain/Materials/Central_Asia/Winter/OE_CA_FertilePlain_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Central_Asia/Autumn/OE_CA_FertilePlain_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Central_Asia/Spring/OE_CA_FertilePlain_Spring" Season="Spring" />
+      <EnvironmentSet Name="Central_Fertile" AmbientSound="AmbientWindyGrassland" WinterSound="AmbientTemperatePlainWinter" />
+      <AmbientCreatureSet Name="Northern Fertile" />
+    </Terrain>
+    <Terrain ID="Grassland" AllowFlatLod="false">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Central_Asia/OE_CA_GrassLand" Season="Any" />
+      <Material Name="Terrain/Materials/Central_Asia/Winter/OE_CA_GrassLand_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Central_Asia/Autumn/OE_CA_GrassLand_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Central_Asia/Spring/OE_CA_GrassLand_Spring" Season="Spring" />
+      <EnvironmentSet Name="Central_Grassland" AmbientSound="AmbientWindyGrassland" WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Marsh">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <EnvironmentSet Name="Central_Marsh" />
+    </Terrain>
+    <Terrain ID="Dry Plain" AllowFlatLod="false">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Central_Asia/OE_CA_DryPlain" Season="Any" />
+      <Material Name="Terrain/Materials/Central_Asia/Winter/OE_CA_DryPlain_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Central_Asia/Autumn/OE_CA_DryPlain_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Central_Asia/Spring/OE_CA_DryPlain_Spring" Season="Spring" />
+      <EnvironmentSet Name="Central_Dry" AmbientSound="AmbientWindyGrassland" WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Plateau">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="4" />
+      <Material Name="Terrain/Materials/Central_Asia/OE_CA_Plateau" Season="Any" />
+      <Material Name="Terrain/Materials/Central_Asia/Winter/OE_CA_Plateau_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Central_Asia/Autumn/OE_CA_Plateau_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Central_Asia/Spring/OE_CA_Plateau_Spring" Season="Spring" />
+      <EnvironmentSet Name="Central_Plateau" AmbientSound="AmbientWindyGrassland" WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Sand">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+    </Terrain>
+    <Terrain ID="Forest">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="1" />
+      <Material Name="Terrain/Materials/Central_Asia/OE_CA_Forest" Season="Any" />
+      <Material Name="Terrain/Materials/Central_Asia/Winter/OE_CA_Forest_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Central_Asia/Autumn/OE_CA_Forest_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Central_Asia/Spring/OE_CA_Forest_Spring" Season="Spring" />
+      <EnvironmentSet Name="Central_Forest" WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Terraced Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+      <EnvironmentSet Name="Central_Terrace" AmbientSound="AmbientWindyGrassland" WinterSound="AmbientTemperatePlainWinter" />
+      <Production Food1="1.2" Food2="1.8" Grazing="1" />
+    </Terrain>
+    <Terrain ID="Terraced Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+      <EnvironmentSet Name="Central_Terrace" AmbientSound="AmbientWindyGrassland" WinterSound="AmbientTemperatePlainWinter" />
+      <Production Food1="1.2" Food2="1.8" Grazing="0" />
+    </Terrain>
+    <Terrain ID="Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+      <EnvironmentSet Name="Central_Farms" AmbientSound="AmbientWindyGrassland" WinterSound="" />
+      <Production Food1="1.2" Food2="1.8" Grazing="1" />
+    </Terrain>
+    <Terrain ID="Irrigated Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+      <EnvironmentSet Name="Central_FarmsIrrigated" AmbientSound="AmbientWindyGrassland" WinterSound="AmbientTemperatePlainWinter" />
+      <Production Food1="1.2" Food2="2.4" Grazing="1" />
+    </Terrain>
+    <Terrain ID="Coastal">
+      <EnvironmentSet Name="Central_Coastal" />
+    </Terrain>
+    <Terrain ID="Unnavigable River">
+      <EnvironmentSet Name="Central_River_Rocks" />
+    </Terrain>
+    <Terrain ID="Navigable River">
+      <EnvironmentSet Name="Central_River" />
+    </Terrain>
+    <Terrain ID="Unnavigable Lake">
+      <EnvironmentSet Name="Central_River" />
+    </Terrain>
+  </Climate> <!-- Gobi Desert -->
+  <Climate ID="Gobi Desert" OverlayOrder="0">
+    <MapColor R="225" G="225" B="64" />
+    <Terrain ID="Gentle Hills" CausesAttrition="true">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleHills" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_GentleHills" Season="Any" />
+      <EnvironmentSet Name="Desert_GentleHills" AmbientSound="AmbientDesert" />
+      <Production Food1="0" Food2="0" Grazing="0" />
+    </Terrain>
+    <Terrain ID="Sand" CausesAttrition="true">
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Sand" Season="Any" />
+      <EnvironmentSet AmbientSound="AmbientDesert" />
+    </Terrain>
+    <Terrain ID="Plateau" CausesAttrition="true">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="4" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Plateau" Season="Any" />
+      <EnvironmentSet Name="Desert_Plateau" AmbientSound="AmbientDesert" />
+      <Production Food1="0" Food2="0" Grazing="0" />
+    </Terrain>
+    <Terrain ID="Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_SteepHills" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_SteepHills" Season="Any" />
+      <EnvironmentSet Name="Desert_SteepHills" AmbientSound="AmbientDesert" />
+    </Terrain>
+    <Terrain ID="Mountains">
+      <Heightmap Name="Terrain/Heightmaps/OE_GD_HM_Mountains" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Mountains" Season="Any" />
+      <EnvironmentSet Name="Desert_Mountains" />
+      <ExternalPlacementMap Name="ExtPlacement_GD_HM_Mountains" />
+    </Terrain>
+    <Terrain ID="Dry Plain" CausesAttrition="true">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_DryPlain" Season="Any" />
+      <EnvironmentSet Name="Desert_Dry" AmbientSound="AmbientDesert" />
+      <Production Food1="0" Food2="0" Grazing="0" />
+    </Terrain>
+    <Terrain ID="Grassland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_GrassLand" Season="Any" />
+      <EnvironmentSet Name="Desert_Grassland" />
+    </Terrain>
+    <Terrain ID="Fertile Plain">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_FertilePlain" Season="Any" />
+      <EnvironmentSet Name="Desert_Fertile" />
+      <AmbientCreatureSet Name="Northern Fertile" />
+    </Terrain>
+    <Terrain ID="Forest">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="1" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Forest" Season="Any" />
+      <EnvironmentSet Name="Desert_Forest" />
+    </Terrain>
+    <Terrain ID="Marsh">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Marsh" Season="Winter" />
+      <EnvironmentSet Name="Desert_Marsh" />
+    </Terrain>
+    <Terrain ID="Terraced Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Terrace" Season="Any" />
+      <EnvironmentSet Name="Desert_Terrace" />
+    </Terrain>
+    <Terrain ID="Terraced Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Terrace" Season="Any" />
+      <EnvironmentSet Name="Desert_Terrace" />
+    </Terrain>
+    <Terrain ID="Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Farm" Season="Any" />
+      <EnvironmentSet Name="Desert_Farms" />
+    </Terrain>
+    <Terrain ID="Irrigated Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_FarmIrrigated" Season="Any" />
+      <EnvironmentSet Name="Desert_FarmsIrrigated" />
+    </Terrain>
+    <Terrain ID="Destroyed Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+      <EnvironmentSet Name="Destroyed Farmland Default" />
+    </Terrain>
+    <Terrain ID="Destroyed Terraced Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+      <EnvironmentSet Name="Destroyed Terrace Default" />
+    </Terrain>
+    <Terrain ID="Destroyed Terraced Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+      <EnvironmentSet Name="Destroyed Terrace Default" />
+    </Terrain>
+    <Terrain ID="Flooded Land">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Marsh" Season="Any" />
+      <EnvironmentSet Name="Flood_Default" />
+    </Terrain>
+    <Terrain ID="Coastal">
+      <EnvironmentSet Name="Desert_Coastal" />
+    </Terrain>
+    <Terrain ID="Unnavigable River">
+      <EnvironmentSet Name="Desert_River_Rocks" />
+    </Terrain>
+    <Terrain ID="Navigable River">
+      <EnvironmentSet Name="Desert_River" />
+    </Terrain>
+    <Terrain ID="Unnavigable Lake">
+      <EnvironmentSet Name="Desert_River" />
+    </Terrain>
+  </Climate> <!-- Northern China -->
+  <Climate ID="Northern China" OverlayOrder="30" WinterAttrition="true">
+    <MapColor R="0" G="0" B="200" />
+    <Terrain ID="Mountains">
+      <Heightmap Name="Terrain/Heightmaps/OE_NC_HM_Mountains" />
+      <Material Name="Terrain/Materials/Northern_China/Winter/OE_NC_Mountains_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Northern_China/Autumn/OE_NC_Mountains_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Northern_China/Spring/OE_NC_Mountains_Spring" Season="Spring" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_SteepHills" />
+      <Material Name="Terrain/Materials/Northern_China/Winter/OE_NC_SteepHills_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Northern_China/Autumn/OE_NC_SteepHills_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Northern_China/Spring/OE_NC_SteepHills_Spring" Season="Spring" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleHills" />
+      <Material Name="Terrain/Materials/Northern_China/Winter/OE_NC_GentleHills_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Northern_China/Autumn/OE_NC_GentleHills_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Northern_China/Spring/OE_NC_GentleHills_Spring" Season="Spring" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Fertile Plain">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Northern_China/Winter/OE_NC_FertilePlain_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Northern_China/Autumn/OE_NC_FertilePlain_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Northern_China/Spring/OE_NC_FertilePlain_Spring" Season="Spring" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Marsh">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+    </Terrain>
+    <Terrain ID="Dry Plain">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Northern_China/Winter/OE_NC_DryPlain_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Northern_China/Autumn/OE_NC_DryPlain_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Northern_China/Spring/OE_NC_DryPlain_Spring" Season="Spring" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Grassland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Northern_China/OE_NC_GrassLand" Season="Any" />
+      <Material Name="Terrain/Materials/Northern_China/Winter/OE_NC_GrassLand_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Northern_China/Autumn/OE_NC_GrassLand_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Northern_China/Spring/OE_NC_GrassLand_Spring" Season="Spring" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Plateau">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="4" />
+      <Material Name="Terrain/Materials/Northern_China/Winter/OE_NC_Plateau_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Northern_China/Autumn/OE_NC_Plateau_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Northern_China/Spring/OE_NC_Plateau_Spring" Season="Spring" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Sand">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+    </Terrain>
+    <Terrain ID="Forest">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="1" />
+      <Material Name="Terrain/Materials/Northern_China/Winter/OE_NC_Forest_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Northern_China/Autumn/OE_NC_Forest_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Northern_China/Spring/OE_NC_Forest_Spring" Season="Spring" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Terraced Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Terraced Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+    <Terrain ID="Irrigated Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <EnvironmentSet WinterSound="AmbientTemperatePlainWinter" />
+    </Terrain>
+  </Climate> <!-- Southern China -->
+  <Climate ID="Southern China" OverlayOrder="10">
+    <MapColor R="0" G="200" B="0" />
+    <Terrain ID="Fertile Plain">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Southern_China/OE_SC_FertilePlain" Season="Any" />
+      <EnvironmentSet Name="Southern_Fertile" AmbientSound="AmbientTropicalPlain" />
+    </Terrain>
+    <Terrain ID="Dry Plain">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Southern_China/OE_SC_DryPlain" Season="Any" />
+      <EnvironmentSet Name="Southern_Dry" />
+    </Terrain>
+    <Terrain ID="Grassland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Southern_China/OE_SC_GrassLand" Season="Any" />
+      <EnvironmentSet Name="Southern_Grassland" />
+    </Terrain>
+    <Terrain ID="Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleHills" />
+      <Material Name="Terrain/Materials/Southern_China/OE_SC_GentleHills" Season="Any" />
+      <EnvironmentSet Name="Southern_GentleHills" AmbientSound="AmbientTropicalPlain" />
+    </Terrain>
+    <Terrain ID="Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_SteepHills" />
+      <Material Name="Terrain/Materials/Southern_China/OE_SC_SteepHills" Season="Any" />
+      <EnvironmentSet Name="Southern_SteepHills" />
+    </Terrain>
+    <Terrain ID="Mountains">
+      <Heightmap Name="Terrain/Heightmaps/OE_SC_HM_Mountains" />
+      <Material Name="Terrain/Materials/Southern_China/OE_SC_Mountains" Season="Any" />
+      <EnvironmentSet Name="Southern_Mountains" />
+      <ExternalPlacementMap Name="ExtPlacement_SC_HM_Mountains" />
+    </Terrain>
+    <Terrain ID="Forest">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="1" />
+      <Material Name="Terrain/Materials/Southern_China/OE_SC_Forest" Season="Any" />
+      <EnvironmentSet Name="Southern_Forest" AmbientSound="AmbientTropicalForest" />
+    </Terrain>
+    <Terrain ID="Marsh">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Marsh" Season="Winter" />
+      <EnvironmentSet Name="Southern_Marsh" />
+      <AmbientCreatureSet Name="Migration Marsh" />
+    </Terrain>
+    <Terrain ID="Sand">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+    </Terrain>
+    <Terrain ID="Plateau">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="4" />
+      <Material Name="Terrain/Materials/Southern_China/OE_SC_Plateau" Season="Any" />
+      <EnvironmentSet Name="Southern_Plateau" />
+    </Terrain>
+    <Terrain ID="Terraced Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Terrace" Season="Any" />
+      <EnvironmentSet Name="Southern_Terrace" AmbientSound="AmbientTropicalPlain" />
+    </Terrain>
+    <Terrain ID="Terraced Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Terrace" Season="Any" />
+      <EnvironmentSet Name="Southern_Terrace" AmbientSound="AmbientTropicalPlain" />
+    </Terrain>
+    <Terrain ID="Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmWet" Season="Any" />
+      <EnvironmentSet Name="Southern_Farms" AmbientSound="AmbientTropicalPlain" />
+    </Terrain>
+    <Terrain ID="Irrigated Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmIrrigatedWet" Season="Any" />
+      <EnvironmentSet Name="Southern_FarmsIrrigated" AmbientSound="AmbientTropicalPlain" />
+    </Terrain>
+    <Terrain ID="Destroyed Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+      <EnvironmentSet Name="Destroyed Farmland Default" />
+    </Terrain>
+    <Terrain ID="Destroyed Terraced Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+      <EnvironmentSet Name="Destroyed Terrace Default" />
+    </Terrain>
+    <Terrain ID="Destroyed Terraced Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+      <EnvironmentSet Name="Destroyed Terrace Default" />
+    </Terrain>
+    <Terrain ID="Flooded Land">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Marsh" Season="Any" />
+      <EnvironmentSet Name="Flood_Default" />
+    </Terrain>
+    <Terrain ID="Coastal">
+      <EnvironmentSet Name="Southern_Coastal" />
+    </Terrain>
+    <Terrain ID="Unnavigable River">
+      <EnvironmentSet Name="Southern_River_Rocks" />
+    </Terrain>
+    <Terrain ID="Navigable River">
+      <EnvironmentSet Name="Southern_River" />
+    </Terrain>
+    <Terrain ID="Unnavigable Lake">
+      <EnvironmentSet Name="Southern_River" />
+    </Terrain>
+  </Climate> <!-- Western China -->
+  <Climate ID="Western China" OverlayOrder="20">
+    <MapColor R="0" G="200" B="200" />
+    <Terrain ID="Mountains">
+      <Heightmap Name="Terrain/Heightmaps/OE_WC_HM_Mountains" />
+      <Material Name="Terrain/Materials/Western_China/OE_WC_Mountains" Season="Any" />
+      <Material Name="Terrain/Materials/Western_China/Winter/OE_WC_Mountains_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Western_China/Autumn/OE_WC_Mountains_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Western_China/Spring/OE_WC_Mountains_Spring" Season="Spring" />
+      <EnvironmentSet Name="Western_Mountains" />
+      <ExternalPlacementMap Name="ExtPlacement_WC_HM_Mountains" />
+    </Terrain>
+    <Terrain ID="Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_SteepHills" />
+      <Material Name="Terrain/Materials/Western_China/OE_WC_SteepHills" Season="Any" />
+      <Material Name="Terrain/Materials/Western_China/Winter/OE_WC_SteepHills_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Western_China/Autumn/OE_WC_SteepHills_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Western_China/Spring/OE_WC_SteepHills_Spring" Season="Spring" />
+      <EnvironmentSet Name="Western_SteepHills" />
+    </Terrain>
+    <Terrain ID="Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleHills" />
+      <Material Name="Terrain/Materials/Western_China/OE_WC_GentleHills" Season="Any" />
+      <Material Name="Terrain/Materials/Western_China/Winter/OE_WC_GentleHills_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Western_China/Autumn/OE_WC_GentleHills_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Western_China/Spring/OE_WC_GentleHills_Spring" Season="Spring" />
+      <EnvironmentSet Name="Western_GentleHills" />
+      <AmbientCreatureSet Name="Western_GentleHills_Creatures" />
+    </Terrain>
+    <Terrain ID="Fertile Plain">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Western_China/OE_WC_FertilePlain" Season="Any" />
+      <Material Name="Terrain/Materials/Western_China/Winter/OE_WC_FertilePlain_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Western_China/Autumn/OE_WC_FertilePlain_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Western_China/Spring/OE_WC_FertilePlain_Spring" Season="Spring" />
+      <EnvironmentSet Name="Western_Fertile" />
+    </Terrain>
+    <Terrain ID="Marsh">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Marsh" Season="Winter" />
+      <EnvironmentSet Name="Western_Marsh" />
+      <AmbientCreatureSet Name="Migration Marsh" />
+    </Terrain>
+    <Terrain ID="Dry Plain">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Western_China/OE_WC_DryPlain" Season="Any" />
+      <Material Name="Terrain/Materials/Western_China/Winter/OE_WC_DryPlain_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Western_China/Autumn/OE_WC_DryPlain_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Western_China/Spring/OE_WC_DryPlain_Spring" Season="Spring" />
+      <EnvironmentSet Name="Western_Dry" />
+    </Terrain>
+    <Terrain ID="Grassland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Western_China/OE_WC_GrassLand" Season="Any" />
+      <Material Name="Terrain/Materials/Western_China/Winter/OE_WC_GrassLand_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Western_China/Autumn/OE_WC_GrassLand_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Western_China/Spring/OE_WC_GrassLand_Spring" Season="Spring" />
+      <EnvironmentSet Name="Western_Grassland" />
+    </Terrain>
+    <Terrain ID="Plateau">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="4" />
+      <Material Name="Terrain/Materials/Western_China/OE_WC_Plateau" Season="Any" />
+      <Material Name="Terrain/Materials/Western_China/Winter/OE_WC_Plateau_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Western_China/Autumn/OE_WC_Plateau_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Western_China/Spring/OE_WC_Plateau_Spring" Season="Spring" />
+      <EnvironmentSet Name="Western_Plateau" />
+    </Terrain>
+    <Terrain ID="Sand">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+    </Terrain>
+    <Terrain ID="Forest">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="1" />
+      <Material Name="Terrain/Materials/Western_China/OE_WC_Forest" Season="Any" />
+      <Material Name="Terrain/Materials/Western_China/Winter/OE_WC_Forest_winter" Season="Winter" />
+      <Material Name="Terrain/Materials/Western_China/Autumn/OE_WC_Forest_Autumn" Season="Autumn" />
+      <Material Name="Terrain/Materials/Western_China/Spring/OE_WC_Forest_Spring" Season="Spring" />
+      <EnvironmentSet Name="Western_Forest" />
+    </Terrain>
+    <Terrain ID="Terraced Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Terrace" Season="Winter" />
+      <EnvironmentSet Name="Western_Terrace" />
+    </Terrain>
+    <Terrain ID="Terraced Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Terrace" Season="Winter" />
+      <EnvironmentSet Name="Western_Terrace" />
+    </Terrain>
+    <Terrain ID="Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmWet" Season="Any" />
+      <EnvironmentSet Name="Western_Farms" />
+    </Terrain>
+    <Terrain ID="Irrigated Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmIrrigatedWet" Season="Any" />
+      <EnvironmentSet Name="Western_FarmsIrrigated" />
+    </Terrain>
+    <Terrain ID="Coastal">
+      <EnvironmentSet Name="Western_Coastal" />
+    </Terrain>
+    <Terrain ID="Unnavigable River">
+      <EnvironmentSet Name="Western_River_Rocks" />
+    </Terrain>
+    <Terrain ID="Navigable River">
+      <EnvironmentSet Name="Western_River" />
+    </Terrain>
+    <Terrain ID="Unnavigable Lake">
+      <EnvironmentSet Name="Western_River" />
+    </Terrain>
+  </Climate> <!-- Central Asia (The real central asia) -->
+  <Climate ID="Central Asia DLC" OverlayOrder="5">
+    <MapColor R="200" G="200" B="64" />
+    <Terrain ID="Gentle Hills" CausesAttrition="true">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleHills" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_GentleHills" Season="Any" />
+      <EnvironmentSet Name="Desert_GentleHills" AmbientSound="AmbientDesert" />
+      <Production Food1="0" Food2="0" Grazing="0" />
+    </Terrain>
+    <Terrain ID="Sand" CausesAttrition="true">
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Sand" Season="Any" />
+      <EnvironmentSet AmbientSound="AmbientDesert" />
+    </Terrain>
+    <Terrain ID="Plateau" CausesAttrition="true">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="4" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Plateau" Season="Any" />
+      <EnvironmentSet Name="Desert_Plateau" AmbientSound="AmbientDesert" />
+      <Production Food1="0" Food2="0" Grazing="0" />
+    </Terrain>
+    <Terrain ID="Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_SteepHills" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_SteepHills" Season="Any" />
+      <EnvironmentSet Name="Desert_SteepHills" AmbientSound="AmbientDesert" />
+    </Terrain>
+    <Terrain ID="Mountains">
+      <Heightmap Name="Terrain/Heightmaps/OE_GD_HM_Mountains" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Mountains" Season="Any" />
+      <EnvironmentSet Name="Desert_Mountains" />
+      <ExternalPlacementMap Name="ExtPlacement_GD_HM_Mountains" />
+    </Terrain>
+    <Terrain ID="Dry Plain" CausesAttrition="true">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_DryPlain" Season="Any" />
+      <EnvironmentSet Name="Desert_Dry" AmbientSound="AmbientDesert" />
+      <Production Food1="0" Food2="0" Grazing="0" />
+    </Terrain>
+    <Terrain ID="Grassland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_GrassLand" Season="Any" />
+      <EnvironmentSet Name="Desert_Grassland" />
+    </Terrain>
+    <Terrain ID="Fertile Plain">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_Plains" Offset="0" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_FertilePlain" Season="Any" />
+      <EnvironmentSet Name="Desert_Fertile" />
+      <AmbientCreatureSet Name="Northern Fertile" />
+    </Terrain>
+    <Terrain ID="Forest">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" Offset="1" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Forest" Season="Any" />
+      <EnvironmentSet Name="Desert_Forest" />
+    </Terrain>
+    <Terrain ID="Marsh">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Marsh" Season="Winter" />
+      <EnvironmentSet Name="Desert_Marsh" />
+    </Terrain>
+    <Terrain ID="Terraced Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Terrace" Season="Any" />
+      <EnvironmentSet Name="Desert_Terrace" />
+      <AmbientCreatureSet Name="Central Asian Terrace" />
+    </Terrain>
+    <Terrain ID="Terraced Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Terrace" Season="Any" />
+      <EnvironmentSet Name="Desert_Terrace" />
+      <AmbientCreatureSet Name="Central Asian Terrace" />
+    </Terrain>
+    <Terrain ID="Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_Farm" Season="Any" />
+      <EnvironmentSet Name="Desert_Farms" />
+      <AmbientCreatureSet Name="Central Asian Farmland" />
+    </Terrain>
+    <Terrain ID="Irrigated Fertile Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Gobi_Desert/OE_GD_FarmIrrigated" Season="Any" />
+      <EnvironmentSet Name="Desert_FarmsIrrigated" />
+      <AmbientCreatureSet Name="Central Asian FarmIrriagted" />
+    </Terrain>
+    <Terrain ID="Destroyed Farmland">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_FloodPlains" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+      <EnvironmentSet Name="Destroyed Farmland Default" />
+    </Terrain>
+    <Terrain ID="Destroyed Terraced Steep Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Terrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+      <EnvironmentSet Name="Destroyed Terrace Default" />
+      <AmbientCreatureSet Name="Central Asian Terrace" />
+    </Terrain>
+    <Terrain ID="Destroyed Terraced Gentle Hills">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_GentleTerrace" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_FarmDestroyed" Season="Any" />
+      <EnvironmentSet Name="Destroyed Terrace Default" />
+    </Terrain>
+    <Terrain ID="Flooded Land">
+      <Heightmap Name="Terrain/Heightmaps/OE_Generic_HM_Flats" />
+      <Material Name="Terrain/Materials/Shared/OE_Generic_Marsh" Season="Any" />
+      <EnvironmentSet Name="Flood_Default" />
+    </Terrain>
+    <Terrain ID="Coastal">
+      <EnvironmentSet Name="Desert_Coastal" />
+    </Terrain>
+    <Terrain ID="Unnavigable River">
+      <EnvironmentSet Name="Desert_River_Rocks" />
+    </Terrain>
+    <Terrain ID="Navigable River">
+      <EnvironmentSet Name="Desert_River" />
+    </Terrain>
+    <Terrain ID="Unnavigable Lake">
+      <EnvironmentSet Name="Desert_River" />
+    </Terrain>
+  </Climate>
+</Root>

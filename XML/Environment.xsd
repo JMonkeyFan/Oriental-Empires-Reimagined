@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="OECommon.xsd"/>
+
+  <!-- Enumeration of item types -->
+  <xs:simpleType name="ItemType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TreeCluster"/>
+      <xs:enumeration value="Tree"/>
+      <xs:enumeration value="Bush"/>
+      <xs:enumeration value="Rock"/>
+      <xs:enumeration value="Grass"/>
+      <xs:enumeration value="Building"/>
+      <xs:enumeration value="ParticleSystem"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="EnvironmentalItem">
+    <xs:sequence>
+      <xs:element name ="LOD" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Prefab" type="xs:string" use="required"/>
+          <xs:attribute name="Distance" type="xs:float" use="required"/>
+          <xs:attribute name ="Season" type ="oe:Season" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name ="Name" type ="xs:string" use ="required"/>
+    <xs:attribute name ="Type" type ="oe:ItemType" use ="required"/>
+    <xs:attribute name ="Folder" type ="xs:string" use ="optional"/>
+    <xs:attribute name ="SeasonalFolder" type ="xs:string" use ="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="EnvironmentSet">
+    <xs:sequence>
+      <xs:element name="FullHexTreeCluster" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Item" type="xs:string" use ="required"/>
+          <xs:attribute name="RandomOffset" type="xs:float" use ="required"/>
+          <xs:attribute name="HexType" type="oe:HexCoverage" use ="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ItemSet" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice>
+              <xs:element name ="Generation">
+                <xs:complexType>
+                  <xs:attribute name="Min" type="xs:int" use ="required"/>
+                  <xs:attribute name="Max" type="xs:int" use ="required"/>
+                  <xs:attribute name="Chance" type="xs:float" use ="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Placement" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="MapName" type="xs:string" use ="required"/>
+                  <xs:attribute name="R" type="xs:int" use ="required"/>
+                  <xs:attribute name="G" type="xs:int" use ="required"/>
+                  <xs:attribute name="B" type="xs:int" use ="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+            <xs:element name="Positioning">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name ="RotationSet" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:attribute name="Value" type="oe:Degree" use ="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="MinSeparation" type="xs:float" use ="required"/>
+                <xs:attribute name="MaxSlope" type="xs:float" use ="optional"/>
+                <xs:attribute name="MaxHeight" type="xs:float" use ="optional"/>
+                <xs:attribute name="Underwater" type="xs:float" use ="required"/>
+                <xs:attribute name="MaxUWPlacementDist" type="xs:float" use ="optional"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Clustering" minOccurs="0">
+              <xs:complexType>
+                <xs:attribute name="ClusterRadius" type="xs:float" use ="required"/>
+                <xs:attribute name="Min" type="xs:int" use ="required"/>
+                <xs:attribute name="Max" type="xs:int" use ="required"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name ="Item" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="Name" type="xs:string" use ="required"/>
+                <xs:attribute name="Weight" type="xs:int" use ="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="Name" type="xs:string" use ="required"/>
+          <xs:attribute name="HexType" type="oe:HexCoverage" use ="required"/>
+          <xs:attribute name ="Season" type ="oe:Season" use ="optional"/>
+          <xs:attribute name ="GroundCover" type ="xs:boolean" use ="optional"/>
+          <xs:attribute name ="Occupied" type ="xs:boolean" use ="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use ="required"/>
+  </xs:complexType>
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Item" type="oe:EnvironmentalItem" maxOccurs ="unbounded"/>
+        <xs:element name="Environment" type="oe:EnvironmentSet" maxOccurs ="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

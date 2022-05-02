@@ -1,0 +1,2888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Buildings.xsd">
+  <!-- In settlement buildings /////////////////////////////////////////////////////////////////-->
+  <!-- Shared Buildings Needs Description -->
+  <!-- Temples Partly done Needs Description 
+  
+  Except for artillery peasant unrest/happiness should be pretty solid-->
+  <!-- 
+    (doesn't work, applies a static -90 instead of what it says ingame, -90%
+  <Building ID="LaborReduction" InSettlement="true" MaxNumber="1" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="0" CardIcon="G_TechIcon_Agriculture_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="200" Condition="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="-90" />
+  </Building> -->
+  <Building ID="Buddhist Temple" InSettlement="true" Tags="Buddhist" AllowedForHorde="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTemple_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="0" Upkeep="200" CardIcon="G_BuildingIcon_TempleBuddhistLvl1_01" CardMinorIcon="G_Icon12x12_TempleBuddhist_01" />
+    <Requirements>
+      <Population Num="300" />
+      <Tech Item="Buddhism" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="Noble Happiness" Level="5" />
+    <Capability Name="Culture VP" Level="1" />
+  </Building>
+  <Building ID="Buddhist Temple II" InSettlement="true" Upgrades="Buddhist Temple" Tags="Buddhist">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTemple_Lvl2" />
+    </Model>
+    <Construction Cost="15000" SackValue="3750" MinTurns="0" Upkeep="400" CardIcon="G_BuildingIcon_TempleBuddhistLvl2_01" CardMinorIcon="G_Icon12x12_TempleBuddhist_01" />
+    <Requirements>
+      <Population Num="425" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="20" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Culture VP" Level="2" />
+  </Building>
+  <Building ID="Buddhist Temple III" InSettlement="true" Upgrades="Buddhist Temple II" Tags="Buddhist">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseTemple_Lvl3" />
+    </Model>
+    <Construction Cost="20000" SackValue="5000" MinTurns="1" Upkeep="800" CardIcon="G_BuildingIcon_TempleBuddhistLvl3_01" CardMinorIcon="G_Icon12x12_TempleBuddhist_01" />
+    <Requirements>
+      <Population Num="550" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="30" />
+    <Capability Name="Noble Happiness" Level="17" />
+    <Capability Name="Culture VP" Level="3" />
+  </Building>
+  <Building ID="Taoist Temple" InSettlement="true" Tags="Taoist" AllowedForHorde="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_TaoistTemple_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="0" Upkeep="200" CardIcon="G_BuildingIcon_TempleTaoistLvl1_01" CardMinorIcon="G_Icon12x12_TempleTaoist_01" />
+    <Requirements>
+      <Population Num="275" />
+      <Tech Item="Daoism" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="5" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Boost Knowledge" Level="3" />
+    <Capability Name="Culture VP" Level="1" />
+  </Building>
+  <Building ID="Taoist Temple II" InSettlement="true" Upgrades="Taoist Temple" Tags="Taoist">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_TaoistTemple_Lvl2" />
+    </Model>
+    <Construction Cost="15000" SackValue="3750" MinTurns="0" Upkeep="400" CardIcon="G_BuildingIcon_TempleTaoistLvl2_01" CardMinorIcon="G_Icon12x12_TempleTaoist_01" />
+    <Requirements>
+      <Population Num="400" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="Noble Happiness" Level="15" />
+    <Capability Name="Boost Knowledge" Level="6" />
+    <Capability Name="Culture VP" Level="2" />
+  </Building>
+  <Building ID="Taoist Temple III" InSettlement="true" Upgrades="Taoist Temple II" Tags="Taoist">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_TaoistTemple_Lvl3" />
+    </Model>
+    <Construction Cost="20000" SackValue="5000" MinTurns="1" Upkeep="800" CardIcon="G_BuildingIcon_TempleTaoistLvl3_01" CardMinorIcon="G_Icon12x12_TempleTaoist_01" />
+    <Requirements>
+      <Population Num="525" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="15" />
+    <Capability Name="Noble Happiness" Level="20" />
+    <Capability Name="Boost Knowledge" Level="12" />
+    <Capability Name="Culture VP" Level="2" />
+  </Building>
+  <Building ID="Confucian Temple" InSettlement="true" Tags="Confucian" AllowedForHorde="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ConfucianTemple_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="01" Upkeep="200" CardIcon="G_BuildingIcon_TempleConfucianLvl1_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01" />
+    <Requirements>
+      <Population Num="275" />
+      <Tech Item="Confucianism" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="5" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Boost Craft" Level="3" />
+    <Capability Name="Culture VP" Level="1" />
+  </Building>
+  <Building ID="Confucian Temple II" InSettlement="true" Upgrades="Confucian Temple" Tags="Confucian">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ConfucianTemple_Lvl2" />
+    </Model>
+    <Construction Cost="15000" SackValue="3750" MinTurns="0" Upkeep="400" CardIcon="G_BuildingIcon_TempleConfucianLvl2_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01" />
+    <Requirements>
+      <Population Num="400" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="7" />
+    <Capability Name="Noble Happiness" Level="20" />
+    <Capability Name="Boost Craft" Level="6" />
+    <Capability Name="Culture VP" Level="2" />
+  </Building>
+  <Building ID="Confucian Temple III" InSettlement="true" Upgrades="Confucian Temple II" Tags="Confucian">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ConfucianTemple_Lvl3" />
+    </Model>
+    <Construction Cost="20000" SackValue="5000" MinTurns="1" Upkeep="800" CardIcon="G_BuildingIcon_TempleConfucianLvl3_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01" />
+    <Requirements>
+      <Population Num="525" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="Noble Happiness" Level="30" />
+    <Capability Name="Boost Craft" Level="12" />
+    <Capability Name="Culture VP" Level="3" />
+  </Building>
+  <Building ID="Mohist School" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_MohistSchool_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="0" Upkeep="200" CardIcon="G_BuildingIcon_MohistSchoolLvl1_01" CardMinorIcon="G_Icon12x12_MohistSchool_01" />
+    <Requirements>
+      <Population Num="275" />
+      <Tech Item="Mohism" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="Noble Happiness" Level="5" />
+    <Capability Name="Boost Thought" Level="3" />
+    <Capability Name="Culture VP" Level="1" />
+  </Building>
+  <Building ID="Mohist School II" InSettlement="true" Upgrades="Mohist School">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_MohistSchool_Lvl2" />
+    </Model>
+    <Construction Cost="15000" SackValue="3750" MinTurns="0" Upkeep="400" CardIcon="G_BuildingIcon_MohistSchoolLvl2_01" CardMinorIcon="G_Icon12x12_MohistSchool_01" />
+    <Requirements>
+      <Population Num="400" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="20" />
+    <Capability Name="Noble Happiness" Level="7" />
+    <Capability Name="Boost Thought" Level="6" />
+    <Capability Name="Culture VP" Level="2" />
+  </Building>
+  <Building ID="Mohist School III" InSettlement="true" Upgrades="Mohist School II">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_MohistSchool_Lvl3" />
+    </Model>
+    <Construction Cost="20000" SackValue="5000" MinTurns="1" Upkeep="800" CardIcon="G_BuildingIcon_MohistSchoolLvl3_01" CardMinorIcon="G_Icon12x12_MohistSchool_01" />
+    <Requirements>
+      <Population Num="525" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="30" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Boost Thought" Level="12" />
+    <Capability Name="Culture VP" Level="3" />
+  </Building>
+  <Building ID="Legalist School" InSettlement="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="1" Upkeep="0" CardIcon="G_BuildingIcon_LegalistSchoolLvl1_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01" />
+    <Requirements>
+      <Population Num="350" />
+      <RequireEither>
+        <Tech Item="Legalism" />
+        <Tech Item="Agressive Legalism" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="3" />
+    <Capability Name="Noble Unrest" Level="3" />
+    <Capability Name="Increase Internal Trade" Level="15" />
+    <Capability Name="Culture VP" Level="-2" />
+  </Building>
+  <Building ID="Legalist School II" InSettlement="true" Upgrades="Legalist School">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl2" />
+    </Model>
+    <Construction Cost="20000" SackValue="5000" MinTurns="3" Upkeep="0" CardIcon="G_BuildingIcon_LegalistSchoolLvl2_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01" />
+    <Requirements>
+      <Population Num="450" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="6" />
+    <Capability Name="Noble Unrest" Level="6" />
+    <Capability Name="Increase Internal Trade" Level="30" />
+    <Capability Name="Culture VP" Level="-4" />
+  </Building>
+  <Building ID="Legalist School III" InSettlement="true" Upgrades="Legalist School II">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseLegalistSchool_Lvl3" />
+    </Model>
+    <Construction Cost="30000" SackValue="7500" MinTurns="6" Upkeep="0" CardIcon="G_BuildingIcon_LegalistSchoolLvl3_01" CardMinorIcon="G_Icon12x12_LegalistSchool_01" />
+    <Requirements>
+      <Population Num="550" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="9" />
+    <Capability Name="Noble Unrest" Level="9" />
+    <Capability Name="Increase Internal Trade" Level="45" />
+    <Capability Name="Culture VP" Level="-6" />
+  </Building>
+  <Building ID="Mosque I" InSettlement="true" Tags="Islamic" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMosque_Lvl1" />
+      <Prefab Style="Nomad" Name="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Muslim" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="0" Upkeep="50" CardIcon="G_BuildingIcon_TempleConfucianLvl1_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01" />
+    <Requirements>
+      <Tech Item="Islam" />
+      <Population Num="200" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Disaster Medical Care" Level="15" />
+    <Capability Name="Culture VP" Level="1" />
+  </Building>
+  <Building ID="Mosque II" InSettlement="true" Upgrades="Mosque I" Tags="Islamic">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMosque_Lvl2" />
+    </Model>
+    <Construction Cost="15000" SackValue="3750" MinTurns="2" Upkeep="100" CardIcon="G_BuildingIcon_TempleConfucianLvl2_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01" />
+    <Requirements>
+      <Population Num="400" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Trading City" Exact="false" Condition="false" />
+      <Building ID="Fortified City" Exact="false" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="17" />
+    <Capability Name="Noble Happiness" Level="17" />
+    <Capability Name="Reduce Thought" Level="15" />
+    <Capability Name="Disaster Medical Care" Level="25" />
+    <Capability Name="Culture VP" Level="2" />
+  </Building>
+  <Building ID="Mosque III" InSettlement="true" Upgrades="Mosque II" Tags="Islamic">
+    <Model SlotSize="3" TempleSlot="true">
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMosque_Lvl3" />
+    </Model>
+    <Construction Cost="20000" SackValue="5000" MinTurns="4" Upkeep="140" CardIcon="G_BuildingIcon_TempleConfucianLvl3_01" CardMinorIcon="G_Icon12x12_TempleConfucian_01" />
+    <Requirements>
+      <Population Num="800" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Trading City" Exact="false" Condition="false" />
+      <Building ID="Fortified City" Exact="false" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="25" />
+    <Capability Name="Noble Happiness" Level="25" />
+    <Capability Name="Reduce Thought" Level="20" />
+    <Capability Name="Disaster Medical Care" Level="40" />
+    <Capability Name="Culture VP" Level="4" />
+  </Building>
+  <!-- Production  takes about 100 k to upgrade all of ceramics, textile & silk production buildings -->
+  <!-- Ceramics Factory String Desc Done
+  28000 to fully upgrade-->
+  <!--Peasant Unrest:600 Noble Unrest:300-->
+  <Building ID="Ceramics Workshop I" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseCeramics_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CACeramics_Lvl1" />
+    </Model>
+    <Construction Cost="4000" SackValue="1000" MinTurns="0" Upkeep="0" CardIcon="G_BuildingIcon_CeramicsLvl1_01" CardMinorIcon="G_Icon12x12_CeramicsFactory_01" />
+    <Requirements>
+      <Population Num="150" />
+      <Tech Item="Black Ceramics" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="3" />
+    <Capability Name="Produce Ceramics" Level="1" />
+  </Building>
+  <Building ID="Ceramics Workshop II" InSettlement="true" Upgrades="Ceramics Workshop I" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseCeramics_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CACeramics_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="1500" MinTurns="0" Upkeep="0" CardIcon="G_BuildingIcon_CeramicsLvl1_01" CardMinorIcon="G_Icon12x12_CeramicsFactory_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Tech Item="Industrial Pottery Production" />
+      <Building ID="City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="27" />
+    <Capability Name="Noble Unrest" Level="7" />
+    <Capability Name="Produce Ceramics" Level="2" />
+  </Building>
+  <Building ID="Ceramics Workshop III" InSettlement="true" Upgrades="Ceramics Workshop II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseCeramics_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CACeramics_Lvl2" />
+    </Model>
+    <Construction Cost="8000" SackValue="2000" MinTurns="1" Upkeep="0" CardIcon="G_BuildingIcon_CeramicsLvl1_01" CardMinorIcon="G_Icon12x12_CeramicsFactory_01" />
+    <Requirements>
+      <Population Num="350" />
+      <Tech Item="Tricolor Ceramics" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Large Tin And Copper Foundry" Condition="false" Exact="false" />
+      <Building ID="Large Iron Foundry" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="35" />
+    <Capability Name="Noble Unrest" Level="15" />
+    <Capability Name="Produce Ceramics" Level="3" />
+  </Building>
+  <Building ID="Ceramics Workshop IV" InSettlement="true" Upgrades="Ceramics Workshop III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseCeramics_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CACeramics_Lvl2" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="2" Upkeep="0" CardIcon="G_BuildingIcon_CeramicsLvl2_01" CardMinorIcon="G_Icon12x12_CeramicsFactory_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Tech Item="Porcelain" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Tin And Copper Foundry" Condition="false" Exact="false" />
+      <Building ID="Iron Foundry" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="42" />
+    <Capability Name="Noble Unrest" Level="30" />
+    <Capability Name="Produce Ceramics" Level="4" />
+  </Building>
+  <!-- Weaver Desc Done 
+  12000 to fully upgrade -->
+  <!--Peasant Unrest:400 Noble Unrest:300-->
+  <Building ID="Weaver I" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CASilkWeaver_Lvl1" />
+    </Model>
+    <Construction Cost="2000" SackValue="500" MinTurns="0" Upkeep="0" CardIcon="G_TechIcon_Mongol_CarpetWeaving01" CardMinorIcon="G_Icon12x12_SilkWeaver_01" />
+    <Requirements>
+      <Population Num="150" />
+      <Tech Item="Draw Loom" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Unrest" Level="7" />
+    <Capability Name="Produce Textiles" Level="1" />
+  </Building>
+  <Building ID="Weaver II" InSettlement="true" Upgrades="Weaver I" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CASilkWeaver_Lvl1" />
+    </Model>
+    <Construction Cost="4000" SackValue="1000" MinTurns="1" Upkeep="0" CardIcon="G_TechIcon_Mongol_CarpetWeaving01" CardMinorIcon="G_Icon12x12_SilkWeaver_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Tech Item="Textile Printing" />
+      <Building ID="City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building Condition="false" ID="Large Tin And Copper Foundry" />
+      <Building Condition="false" ID="Large Iron Foundry" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="17" />
+    <Capability Name="Noble Unrest" Level="15" />
+    <Capability Name="Produce Textiles" Level="2" />
+  </Building>
+  <Building ID="Weaver III" InSettlement="true" Upgrades="Weaver II" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CASilkWeaver_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="1500" MinTurns="2" Upkeep="0" CardIcon="G_TechIcon_Mongol_CarpetWeaving01" CardMinorIcon="G_Icon12x12_SilkWeaver_01" />
+    <Requirements>
+      <Population Num="350" />
+    </Requirements>
+    <StaticRequirements>
+      <Building Condition="false" ID="Tin And Copper Foundry" Exact="false" />
+      <Building Condition="false" ID="Iron Foundry" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="25" />
+    <Capability Name="Noble Unrest" Level="30" />
+    <Capability Name="Produce Textiles" Level="3" />
+  </Building>
+  <!-- Silk Weaver Desc Done 
+  60k to fully upgrade-->
+  <!--Peasant Unrest:1500 Noble Happiness:500-->
+  <Building ID="Silk Weaver I" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CASilkWeaver_Lvl2" />
+    </Model>
+    <Construction Cost="5000" SackValue="1250" MinTurns="1" Upkeep="0" CardIcon="G_BuildingIcon_SilkWeaverLvl1_01" CardMinorIcon="G_Icon12x12_SilkWeaver_01" />
+    <Requirements>
+      <Population Num="125" />
+      <Tech Item="Silk" />
+    </Requirements>
+    <StaticRequirements>
+      <Building Condition="false" ID="Copper Mine Chinese" Exact="false" />
+      <Building Condition="false" ID="Tin And Copper Mine" Exact="false" />
+      <Building Condition="false" ID="Iron Mine" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="40" />
+    <Capability Name="Noble Happiness" Level="17" />
+    <Capability Name="Produce Silk" Level="1" />
+  </Building>
+  <Building ID="Silk Weaver II" InSettlement="true" Upgrades="Silk Weaver I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CASilkWeaver_Lvl2" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="3" Upkeep="0" CardIcon="G_TechIcon_TextilePrinting_01" CardMinorIcon="G_Icon12x12_SilkWeaver_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Tech Item="Silk Road" />
+      <Building ID="City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="60" />
+    <Capability Name="Noble Happiness" Level="27" />
+    <Capability Name="Produce Silk" Level="2" />
+  </Building>
+  <Building ID="Silk Weaver III" InSettlement="true" Upgrades="Silk Weaver II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CASilkWeaver_Lvl2" />
+    </Model>
+    <Construction Cost="15000" SackValue="3750" MinTurns="8" Upkeep="0" CardIcon="G_TechIcon_Silk_01" CardMinorIcon="G_Icon12x12_SilkWeaver_01" />
+    <Requirements>
+      <Population Num="500" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="80" />
+    <Capability Name="Noble Happiness" Level="35" />
+    <Capability Name="Produce Silk" Level="3" />
+  </Building>
+  <Building ID="Silk Weaver IV" InSettlement="true" Upgrades="Silk Weaver III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseSilkWeaver_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CASilkWeaver_Lvl2" />
+    </Model>
+    <Construction Cost="20000" SackValue="5000" MinTurns="8" Upkeep="0" CardIcon="G_TechIcon_Silk_01" CardMinorIcon="G_Icon12x12_SilkWeaver_01" />
+    <Requirements>
+      <Population Num="1000" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="100" />
+    <Capability Name="Noble Happiness" Level="50" />
+    <Capability Name="Produce Silk" Level="4" />
+  </Building>
+  <!-- End of Production get icons from tech tree Needs Description-->
+  <!--                Agriculture                     -->
+  <!--Peasant Unrest:200-->
+  <Building ID="Agricultural Office I" InSettlement="true" MaxNumber="2" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="1000" CardIcon="G_TechIcon_Agriculture_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="100" Condition="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Boost Agriculture" Level="15" />
+  </Building>
+  <Building ID="Agricultural Office II" InSettlement="true" MaxNumber="1" Upgrades="Agricultural Office I" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="2000" CardIcon="G_TechIcon_SeedlingTransplantation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="200" Condition="false" />
+      <Tech Item="Irrigation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Boost Agriculture" Level="30" />
+  </Building>
+  <Building ID="Agricultural Office III" InSettlement="true" MaxNumber="1" Upgrades="Agricultural Office II" AllowedForHorde="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="3" MinTurns="0" Upkeep="3000" CardIcon="G_TechIcon_CropRotation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="300" Condition="false" />
+      <RequireEither>
+        <Tech Item="Seedling Transplantation" />
+        <Tech Item="Crop Rotation" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="30" />
+    <Capability Name="Boost Agriculture" Level="45" />
+  </Building>
+  <!--Peasant Unrest:300 Noble Unrest:250-->
+  <Building ID="Economic Office I" InSettlement="true" MaxNumber="2" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="1000" CardIcon="G_TechIcon_Agriculture_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="225" Condition="false" />
+      <Tech Item="Irrigation" />
+    </Requirements>
+    <Capability Name="Noble Unrest" Level="10" />
+    <Capability Name="Boost Economy" Level="15" />
+  </Building>
+  <Building ID="Economic Office II" InSettlement="true" MaxNumber="1" Upgrades="Economic Office I" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="2000" CardIcon="G_TechIcon_SeedlingTransplantation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="325" Condition="false" />
+      <Tech Item="Seedling Transplantation" />
+    </Requirements>
+    <Capability Name="Noble Unrest" Level="20" />
+    <Capability Name="Boost Economy" Level="30" />
+  </Building>
+  <Building ID="Economic Office III" InSettlement="true" MaxNumber="1" Upgrades="Economic Office II" AllowedForHorde="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="3000" CardIcon="G_TechIcon_CropRotation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="425" Condition="false" />
+      <Tech Item="Crop Rotation" />
+    </Requirements>
+    <Capability Name="Noble Unrest" Level="30" />
+    <Capability Name="Boost Economy" Level="45" />
+  </Building>
+  <!--Peasant Unrest:300 Noble Unrest:200-->
+  <Building ID="Military Office I" InSettlement="true" MaxNumber="2" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="1000" CardIcon="G_TechIcon_Agriculture_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="250" Condition="true" />
+      <Tech Item="Irrigation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="4" />
+    <Capability Name="Noble Unrest" Level="8" />
+    <Capability Name="Boost Military" Level="15" />
+  </Building>
+  <Building ID="Military Office II" InSettlement="true" MaxNumber="1" Upgrades="Military Office I" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="2000" CardIcon="G_TechIcon_SeedlingTransplantation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="350" Condition="true" />
+      <Tech Item="Seedling Transplantation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="8" />
+    <Capability Name="Noble Unrest" Level="16" />
+    <Capability Name="Boost Military" Level="30" />
+  </Building>
+  <Building ID="Military Office III" InSettlement="true" MaxNumber="1" Upgrades="Military Office II" AllowedForHorde="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="3000" CardIcon="G_TechIcon_CropRotation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="450" Condition="true" />
+      <Tech Item="Crop Rotation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="16" />
+    <Capability Name="Noble Unrest" Level="32" />
+    <Capability Name="Boost Military" Level="45" />
+  </Building>
+  <!--Peasant Unrest:300 Noble Unrest:300-->
+  <Building ID="Naval Office I" InSettlement="true" MaxNumber="2" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="1000" CardIcon="G_TechIcon_Agriculture_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="200" Condition="true" />
+      <Tech Item="Irrigation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="7" />
+    <Capability Name="Noble Unrest" Level="7" />
+    <Capability Name="Boost Naval" Level="15" />
+  </Building>
+  <Building ID="Naval Office II" InSettlement="true" MaxNumber="1" Upgrades="Naval Office I" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="2000" CardIcon="G_TechIcon_SeedlingTransplantation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="300" Condition="true" />
+      <Tech Item="Seedling Transplantation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="14" />
+    <Capability Name="Noble Unrest" Level="14" />
+    <Capability Name="Boost Naval" Level="30" />
+  </Building>
+  <Building ID="Naval Office III" InSettlement="true" MaxNumber="1" Upgrades="Naval Office II" AllowedForHorde="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="3000" CardIcon="G_TechIcon_CropRotation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="400" Condition="true" />
+      <Tech Item="Crop Rotation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="28" />
+    <Capability Name="Noble Unrest" Level="28" />
+    <Capability Name="Boost Naval" Level="45" />
+  </Building>
+  <!--Peasant Unrest:600 Noble Happiness:600-->
+  <Building ID="Cultural Office I" InSettlement="true" MaxNumber="2" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="1000" CardIcon="G_TechIcon_Agriculture_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="400" Condition="true" />
+      <Tech Item="Irrigation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Boost Culture" Level="15" />
+  </Building>
+  <Building ID="Cultural Office II" InSettlement="true" MaxNumber="1" Upgrades="Cultural Office I" AllowedForHorde="true">
+    <Model SlotSize="1" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="2000" CardIcon="G_TechIcon_SeedlingTransplantation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="600" Condition="true" />
+      <Tech Item="Seedling Transplantation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Happiness" Level="20" />
+    <Capability Name="Boost Culture" Level="30" />
+  </Building>
+  <Building ID="Cultural Office III" InSettlement="true" MaxNumber="1" Upgrades="Cultural Office II" AllowedForHorde="true">
+    <Model SlotSize="2" TempleSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="0" SackValue="0" MinTurns="0" Upkeep="3000" CardIcon="G_TechIcon_CropRotation_01" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="800" Condition="true" />
+      <Tech Item="Crop Rotation" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="30" />
+    <Capability Name="Noble Happiness" Level="30" />
+    <Capability Name="Boost Culture" Level="45" />
+  </Building>
+  <!--                End of Agriculture                     -->
+
+  <!-- Military Enhancement Buildings: Desc Done -->
+  <!-- Any City -->
+  <!--Peasant Unrest:100 Noble Unrest:200-->
+  <Building ID="Weaponsmith I" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="1500" MinTurns="1" Upkeep="350" Military="true" CardIcon="Buildings\Weaponsmith 1" CardMinorIcon="G_Icon12x12_Weaponsmith_01" />
+    <Requirements>
+      <Tech Item="Military Structures" />
+      <Population Num="250" />
+      <RequireEither>
+        <RequireEither>
+          <Building ID="Fortified Barracks I" Condition="true" Exact="false" />
+          <Building ID="Fortified Stables I" Condition="true" Exact="false" />
+        </RequireEither>
+        <RequireEither>
+          <Building ID="Metropolitan Barracks I" Condition="true" Exact="false" />
+          <Building ID="Metropolitan Stables I" Condition="true" Exact="false" />
+        </RequireEither>
+        <Building ID="Merchant Mustering Hall I" Condition="true" Exact="false" />
+      </RequireEither>
+      <RequireEither>
+        <Building ID="Copper Mine Nomad" Condition="true" Exact="false" />
+        <Building ID="Copper Foundry Chinese" Condition="true" Exact="false" />
+        <Building ID="Tin And Copper Mine" Condition="true" Exact="false" />
+        <Building ID="Iron Mine" Condition="true" Exact="false" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="30" />
+  </Building>
+  <Building ID="Weaponsmith II" InSettlement="true" Upgrades="Weaponsmith I" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl1" />
+    </Model>
+    <Construction Cost="8000" SackValue="2000" MinTurns="1" Upkeep="700" Military="true" CardIcon="Buildings\Weaponsmith 2" CardMinorIcon="G_Icon12x12_Weaponsmith_01" />
+    <Requirements>
+      <Population Num="350" />
+      <RequireEither>
+        <RequireEither>
+          <Building ID="Fortified Barracks II" Condition="true" Exact="false" />
+          <Building ID="Fortified Stables II" Condition="true" Exact="false" />
+        </RequireEither>
+        <RequireEither>
+          <Building ID="Metropolitan Barracks II" Condition="true" Exact="false" />
+          <Building ID="Metropolitan Stables II" Condition="true" Exact="false" />
+        </RequireEither>
+        <Building ID="Merchant Mustering Hall II" Condition="true" Exact="false" />
+      </RequireEither>
+      <RequireEither>
+        <Building ID="Copper Foundry Nomad" Condition="true" Exact="false" />
+        <Building ID="Large Copper Foundry Chinese" Condition="true" Exact="false" />
+        <Building ID="Tin And Copper Foundry" Condition="true" Exact="false" />
+        <Building ID="Iron Mine" Condition="true" Exact="false" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="40" />
+    <Capability Name="Noble Unrest" Level="20" />
+  </Building>
+  <!--Peasant Unrest:100 Noble Unrest:200-->
+  <Building ID="Axesmith" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="2" Upkeep="300" Military="true" CardIcon="Buildings\Axesmith 1" CardMinorIcon="G_Icon12x12_Weaponsmith_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Tech Item="Military Architecture" />
+      <Tech Item="Axe Making" />
+      <Building ID="Weaponsmith I" UpgradeLevel="1" />
+      <RequireEither>
+        <RequireAll>
+          <Building ID="Fortified Barracks III" Condition="true" Exact="false" />
+          <Building ID="Fortified Stables III" Condition="true" Exact="false" />
+        </RequireAll>
+        <RequireAll>
+          <Building ID="Metropolitan Barracks III" Condition="true" Exact="false" />
+          <Building ID="Metropolitan Stables III" Condition="true" Exact="false" />
+        </RequireAll>
+        <Building ID="Merchant Mustering Hall III" Condition="true" Exact="false" />
+      </RequireEither>
+      <RequireEither>
+        <Building ID="Large Copper Foundry Nomad" Condition="true" Exact="false" />
+        <Building ID="Large Tin And Copper Foundry" Condition="true" Exact="false" />
+        <Building ID="Iron Foundry" Condition="true" Exact="false" />
+      </RequireEither>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Herders" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="20" />
+  </Building>
+  <Building ID="Swordsmith" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="2" Upkeep="300" Military="true" CardIcon="Buildings\Swordsmith 1" CardMinorIcon="G_Icon12x12_Weaponsmith_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Tech Item="Military Architecture" />
+      <Tech Item="Sword Making" />
+      <Building ID="Weaponsmith I" UpgradeLevel="1" />
+      <RequireEither>
+        <RequireEither>
+          <Building ID="Fortified Barracks III" Condition="true" Exact="false" />
+          <Building ID="Fortified Stables III" Condition="true" Exact="false" />
+        </RequireEither>
+        <RequireEither>
+          <Building ID="Metropolitan Barracks III" Condition="true" Exact="false" />
+          <Building ID="Metropolitan Stables III" Condition="true" Exact="false" />
+        </RequireEither>
+        <Building ID="Merchant Mustering Hall III" Condition="true" Exact="false" />
+      </RequireEither>
+      <RequireEither>
+        <Building ID="Large Copper Foundry Nomad" Condition="true" Exact="false" />
+        <Building ID="Large Tin And Copper Foundry" Condition="true" Exact="false" />
+        <Building ID="Iron Foundry" Condition="true" Exact="false" />
+      </RequireEither>
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Farmers" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="20" />
+  </Building>
+
+
+  <!-- Any City  Desc Done-->
+  <!--Peasant Unrest:400 Noble Unrest:800-->
+  <Building ID="Armorer I" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl1" />
+    </Model>
+    <Construction Cost="7500" SackValue="1875" MinTurns="0" Upkeep="1000" Military="true" CardIcon="G_BuildingIcon_ArmorerLvl1_01" CardMinorIcon="Buildings\Armorer 1" />
+    <Requirements>
+      <Population Num="300" />
+      <RequireEither>
+        <RequireEither>
+          <Building ID="Fortified Barracks I" Condition="true" Exact="false" />
+          <Building ID="Fortified Stables I" Condition="true" Exact="false" />
+        </RequireEither>
+        <RequireEither>
+          <Building ID="Metropolitan Barracks I" Condition="true" Exact="false" />
+          <Building ID="Metropolitan Stables I" Condition="true" Exact="false" />
+        </RequireEither>
+        <Building ID="Merchant Mustering Hall I" Condition="true" Exact="false" />
+      </RequireEither>
+      <Tech Item="Bronze Armor" />
+      <Tech Item="Military Structures" />
+      <RequireEither>
+        <Building ID="Copper Mine Nomad" Condition="true" Exact="false" />
+        <Building ID="Copper Foundry Chinese" Condition="true" Exact="false" />
+        <Building ID="Tin And Copper Mine" Condition="true" Exact="false" />
+        <Building ID="Iron Mine" Condition="true" Exact="false" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Armorer" Level="0" />
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="20" />
+  </Building>
+  <Building ID="Armorer II" InSettlement="true" Upgrades="Armorer I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl2" />
+    </Model>
+    <Construction Cost="10000" SackValue="2500" MinTurns="1" Upkeep="2000" Military="true" CardIcon="G_BuildingIcon_ArmorerLvl2_01" CardMinorIcon="Buildings\Armorer 2" />
+    <Requirements>
+      <Population Num="400" />
+      <Tech Item="Mountain Armor" />
+      <RequireEither>
+        <RequireEither>
+          <Building ID="Fortified Barracks II" Condition="true" Exact="false" />
+          <Building ID="Fortified Stables II" Condition="true" Exact="false" />
+        </RequireEither>
+        <RequireEither>
+          <Building ID="Metropolitan Barracks II" Condition="true" Exact="false" />
+          <Building ID="Metropolitan Stables II" Condition="true" Exact="false" />
+        </RequireEither>
+        <Building ID="Merchant Mustering Hall II" Condition="true" Exact="false" />
+      </RequireEither>
+      <RequireEither>
+        <Building ID="Copper Foundry Nomad" Condition="true" Exact="false" />
+        <Building ID="Large Copper Foundry Chinese" Condition="true" Exact="false" />
+        <Building ID="Tin And Copper Foundry" Condition="true" Exact="false" />
+        <Building ID="Iron Mine" Condition="true" Exact="false" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Armorer" Level="1" />
+    <Capability Name="Peasant Unrest" Level="40" />
+    <Capability Name="Noble Unrest" Level="40" />
+  </Building>
+  <Building ID="Armorer III" InSettlement="true" Upgrades="Armorer II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArmorer_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAArmorer_Lvl3" />
+    </Model>
+    <Construction Cost="12500" SackValue="3125" MinTurns="2" Upkeep="3000" Military="true" CardIcon="G_BuildingIcon_ArmorerLvl3_01" CardMinorIcon="Buildings\Armorer 3" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Military Architecture" />
+      <Tech Item="Iron Armor" />
+      <RequireEither>
+        <RequireEither>
+          <Building ID="Fortified Barracks III" Condition="true" Exact="false" />
+          <Building ID="Fortified Stables III" Condition="true" Exact="false" />
+        </RequireEither>
+        <RequireEither>
+          <Building ID="Metropolitan Barracks III" Condition="true" Exact="false" />
+          <Building ID="Metropolitan Stables III" Condition="true" Exact="false" />
+        </RequireEither>
+        <Building ID="Merchant Mustering Hall III" Condition="true" Exact="false" />
+      </RequireEither>
+      <RequireEither>
+        <Building ID="Large Copper Foundry Nomad" Condition="true" Exact="false" />
+        <Building ID="Large Tin And Copper Foundry" Condition="true" Exact="false" />
+        <Building ID="Iron Foundry" Condition="true" Exact="false" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Armorer" Level="2" />
+    <Capability Name="Peasant Unrest" Level="60" />
+    <Capability Name="Noble Unrest" Level="80" />
+  </Building>
+  <!--Peasant Unrest:200 Noble Unrest:200-->
+  <Building ID="Shortbow Maker" InSettlement="true" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBowyer_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CABowyer_Lvl1" />
+    </Model>
+    <Construction Cost="5000" MinTurns="1" SackValue="1250" Upkeep="250" Military="true" CardIcon="Buildings\Shortbow Maker" CardMinorIcon="G_Icon12x12_Bowyer_01" />
+    <Requirements>
+      <Population Num="100" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Unrest" Level="10" />
+    <Capability Name="Recruit Militia Ranged" Level="2" />
+    <Capability Name="Recruit Nobles Ranged" Level="2" />
+    <Capability Name="Recruit Regulars" Level="2" />
+    <Capability Name="Recruit Guards Ranged" Level="2" />
+  </Building>
+  <Building ID="Longbow Maker" InSettlement="true" Upgrades="Shortbow Maker" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBowyer_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CABowyer_Lvl1" />
+    </Model>
+    <Construction Cost="7500" MinTurns="1" Upkeep="300" Military="true" CardIcon="Buildings\Longbow Maker" CardMinorIcon="G_Icon12x12_Bowyer_01" />
+    <Requirements>
+      <Population Num="200" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="15" />
+    <Capability Name="Noble Unrest" Level="15" />
+    <Capability Name="Recruit Militia Ranged" Level="4" />
+    <Capability Name="Recruit Nobles Ranged" Level="4" />
+    <Capability Name="Recruit Regulars" Level="4" />
+    <Capability Name="Recruit Guards Ranged" Level="4" />
+  </Building>
+  <Building ID="Compositebow Maker" InSettlement="true" Upgrades="Longbow Maker" AllowedForHorde="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBowyer_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CABowyer_Lvl1" />
+    </Model>
+    <Construction Cost="10000" MinTurns="1" SackValue="2500" Upkeep="350" Military="true" CardIcon="Buildings\Compositebow Maker" CardMinorIcon="G_Icon12x12_Bowyer_01" />
+    <Requirements>
+      <Population Num="300" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="20" />
+    <Capability Name="Recruit Militia Ranged" Level="6" />
+    <Capability Name="Recruit Nobles Ranged" Level="6" />
+    <Capability Name="Recruit Regulars" Level="6" />
+    <Capability Name="Recruit Guards Ranged" Level="6" />
+  </Building>
+  <!--Peasant Unrest:500 Noble Unrest:500-->
+  <Building ID="Crossbow Maker I" InSettlement="true" Upgrades="Compositebow Maker">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBowyer_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CABowyer_Lvl2" />
+    </Model>
+    <Construction Cost="12500" MinTurns="2" SackValue="3125" Upkeep="500" Military="true" CardIcon="Buildings\Crossbow Maker" CardMinorIcon="G_Icon12x12_Bowyer_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Tech Item="Crossbow" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="30" />
+    <Capability Name="Noble Unrest" Level="30" />
+    <Capability Name="Recruit Militia Ranged Crossbow" Level="2" />
+    <Capability Name="Recruit Nobles Ranged Crossbow" Level="2" />
+    <Capability Name="Recruit Regulars Ranged Crossbow" Level="2" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="2" />
+  </Building>
+  <Building ID="Crossbow Maker II" InSettlement="true" Upgrades="Crossbow Maker I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBowyer_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CABowyer_Lvl2" />
+    </Model>
+    <Construction Cost="15000" MinTurns="2" SackValue="3750" Upkeep="650" Military="true" CardIcon="Buildings\Crossbow Maker" CardMinorIcon="G_Icon12x12_Bowyer_01" />
+    <Requirements>
+      <Population Num="475" />
+      <Tech Item="Crossbow" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="40" />
+    <Capability Name="Noble Unrest" Level="40" />
+    <Capability Name="Recruit Militia Ranged Crossbow" Level="3" />
+    <Capability Name="Recruit Militia Ranged Crossbow Alt" Level="1" />
+    <Capability Name="Recruit Nobles Ranged Crossbow" Level="3" />
+    <Capability Name="Recruit Nobles Ranged Crossbow Alt" Level="1" />
+    <Capability Name="Recruit Regulars Ranged Crossbow" Level="3" />
+    <Capability Name="Recruit Regulars Ranged Crossbow Alt" Level="1" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="3" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="1" />
+  </Building>
+  <Building ID="Crossbow Maker III" InSettlement="true" Upgrades="Crossbow Maker II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBowyer_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CABowyer_Lvl2" />
+    </Model>
+    <Construction Cost="17500" MinTurns="2" Upkeep="4375" Military="true" CardIcon="Buildings\Crossbow Maker" CardMinorIcon="G_Icon12x12_Bowyer_01" />
+    <Requirements>
+      <Population Num="550" />
+      <Tech Item="Crossbow" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="No Crossbows" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="50" />
+    <Capability Name="Noble Unrest" Level="50" />
+    <Capability Name="Recruit Militia Ranged Crossbow" Level="5" />
+    <Capability Name="Recruit Militia Ranged Crossbow Alt" Level="3" />
+    <Capability Name="Recruit Nobles Ranged Crossbow" Level="5" />
+    <Capability Name="Recruit Nobles Ranged Crossbow Alt" Level="3" />
+    <Capability Name="Recruit Regulars Ranged Crossbow" Level="5" />
+    <Capability Name="Recruit Regulars Ranged Crossbow Alt" Level="3" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="5" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="3" />
+  </Building>
+  <!--              Cities:              -->
+  <!-- End Of Cities-->
+
+  <!-- End Of Shared-->
+  <!-- Trading City Tree Without any Schools,Temples, resource mines or production stuff(Ceramics, weavers etc) it costs about 262.5k to fully upgrade a trading city.Without any Schools, Temples, resource mines, it costs about 362.5 to fully upgrade a trading cityWithout any Resource Mines but fully upgraded legalist school it costs about 422.5 kGold mine + 35k(mutually exclusive with Jade mine)Jade Mine + 30k(mutually exclusive with Gold mine)Copper Mine + 13kTin And Copper Mine(Bronze) +18k(mutually exclusive with iron mine)Iron Mine + 24k(mutually exclusive with tin and copper mine)Assuming the most expensive options are chosen, to fully upgrade a trading city, it will cost aprox: 494.5k to fully upgrade a trading city.A Fortified city can pay back this cost in aprox 59 turnsA Trading city can pay back this cost in aprox 18 turnsA Metropolitan city can pay back this cost in aprox 13 turns-->
+  <!-- Trading City Markets & Dependants Desc Done 
+  27000 to fully upgrade -->
+  <!--Peasant Unrest:300 Noble Happiness:100-->
+  <Building ID="Market I" InSettlement="true" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="625" MinTurns="0" Upkeep="-250" CardIcon="Buildings\Market 1" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="200" />
+      <Tech Item="Abacus" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="5" />
+    <Capability Name="Noble Happiness" Level="2" />
+    <Capability Name="Trade Distance" Level="20" />
+  </Building>
+  <Building ID="Market II" InSettlement="true" Upgrades="Market I" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl2" />
+    </Model>
+    <Construction Cost="9000" SackValue="675" MinTurns="0" Upkeep="-125" CardIcon="Buildings\Market 2" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="300" />
+      <Tech Item="Mathematics" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Happiness" Level="5" />
+    <Capability Name="Trade Distance" Level="40" />
+  </Building>
+  <Building ID="Market III" InSettlement="true" Upgrades="Market II" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="12000" SackValue="1000" MinTurns="1" Upkeep="0" CardIcon="Buildings\Market 3" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Tech Item="Algebra" />
+      <Building ID="Large Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Trade Distance" Level="60" />
+  </Building>
+  <!-- End Of Trading City Markets  Desc Done
+  22500 to fully upgrade -->
+  <!--Peasant Happiness:250 Noble Unrest:250-->
+  <Building ID="Trading Center I" InSettlement="true" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="7500" SackValue="3250" MinTurns="1" Upkeep="0" CardIcon="Buildings\Trading Center 1" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Tech Item="Paper Currency" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+      <Building ID="Trading Square" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="10" />
+    <Capability Name="Noble Unrest" Level="12" />
+    <Capability Name="Trade Level" Level="1" />
+  </Building>
+  <Building ID="Trading Center II" InSettlement="true" MaxNumber="1" Upgrades="Trading Center I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="15000" SackValue="3250" MinTurns="2" Upkeep="0" CardIcon="Buildings\Trading Center 2" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Abacus" />
+      <Tech Item="Precious Metal Work" />
+      <Building ID="Large Trading Square" Condition="true" Exact="false" />
+      <Building ID="Large Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="20" />
+    <Capability Name="Noble Unrest" Level="25" />
+    <Capability Name="Trade Level" Level="2" />
+  </Building>
+  <!--18000  to fully upgrade-->
+  <!--Peasant Unrest:500 Noble Happiness:500-->
+  <Building ID="Trading Bank I" InSettlement="true" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="4000" SackValue="8000" MinTurns="3" Upkeep="-250" CardIcon="Buildings\Bank 1" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="300" />
+      <Tech Item="Banking I" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="5" />
+    <Capability Name="Noble Happiness" Level="12" />
+    <Capability Name="Increase Tax" Level="15" />
+  </Building>
+  <Building ID="Trading Bank II" InSettlement="true" MaxNumber="1" Upgrades="Trading Bank I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="6000" SackValue="8000" MinTurns="3" Upkeep="-500" CardIcon="Buildings\Bank 2" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Tech Item="Algebra" />
+      <Building ID="Trading District" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Happiness" Level="25" />
+    <Capability Name="Increase Tax" Level="25" />
+  </Building>
+  <Building ID="Trading Bank III" InSettlement="true" MaxNumber="1" Upgrades="Trading Bank II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="8000" SackValue="8000" MinTurns="3" Upkeep="-750" CardIcon="Buildings\Bank 3" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Algebra" />
+      <Building ID="Trading District" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Happiness" Level="50" />
+    <Capability Name="Increase Tax" Level="35" />
+  </Building>
+  <!--End Of Trading City Markets & Dependents -->
+  <!--Trading City Garrissons & Defensive Buildings  Desc Done
+  28000 to fully upgrade-->
+  <!--Suppress Peasants:800 Suppress Nobles:1000-->
+  <Building ID="Merchant Guild Garrisson I" InSettlement="true">
+    <Model SlotSize="1" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="4000" MinTurns="1" Upkeep="250" CardIcon="Buildings\Palace 1" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="225" />
+      <Tech Item="Military Drill" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="12" />
+    <Capability Name="Suppress Nobles" Level="12" />
+    <Capability Name="Recruit Guards Cavalry" Level="2" />
+    <Capability Name="Recruit Guards Melee Short" Level="6" />
+    <Capability Name="Recruit Guards Melee Long" Level="4" />
+    <Capability Name="Recruit Guards Ranged" Level="3" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="1" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="0" />
+    <Capability Name="Store Food" Level="1" />
+  </Building>
+  <Building ID="Merchant Guild Garrisson II" InSettlement="true" Upgrades="Merchant Guild Garrisson I">
+    <Model SlotSize="1" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="6000" MinTurns="3" Upkeep="500" CardIcon="Buildings\Palace 2" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="325" />
+      <Tech Item="Signaling" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="25" />
+    <Capability Name="Suppress Nobles" Level="25" />
+    <Capability Name="Store Food" Level="2" />
+    <Capability Name="Recruit Guards Cavalry" Level="4" />
+    <Capability Name="Recruit Guards Melee Short" Level="8" />
+    <Capability Name="Recruit Guards Melee Long" Level="6" />
+    <Capability Name="Recruit Guards Ranged" Level="5" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="3" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="1" />
+  </Building>
+  <Building ID="Merchant Guild Garrisson III" InSettlement="true" Upgrades="Merchant Guild Garrisson II">
+    <Model SlotSize="1" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="8000" MinTurns="3" Upkeep="750" CardIcon="Buildings\Palace 3" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="425" />
+      <Tech Item="Military Theory" />
+      <Building ID="Large Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="50" />
+    <Capability Name="Suppress Nobles" Level="50" />
+    <Capability Name="Store Food" Level="3" />
+    <Capability Name="Recruit Guards Cavalry" Level="6" />
+    <Capability Name="Recruit Guards Melee Short" Level="10" />
+    <Capability Name="Recruit Guards Melee Long" Level="8" />
+    <Capability Name="Recruit Guards Ranged" Level="7" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="5" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="2" />
+  </Building>
+  <Building ID="Merchant Guild Garrisson IV" InSettlement="true" Upgrades="Merchant Guild Garrisson III">
+    <Model SlotSize="1" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="10000" MinTurns="3" Upkeep="1000" CardIcon="Buildings\Palace 4" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="525" />
+      <Tech Item="Military Architecture" />
+      <Building ID="Large Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="75" />
+    <Capability Name="Suppress Nobles" Level="75" />
+    <Capability Name="Store Food" Level="4" />
+    <Capability Name="Recruit Guards Cavalry" Level="8" />
+    <Capability Name="Recruit Guards Melee Short" Level="12" />
+    <Capability Name="Recruit Guards Melee Long" Level="10" />
+    <Capability Name="Recruit Guards Ranged" Level="9" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="10" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="4" />
+  </Building>
+  <!--Metropolitan Cities Recruitment  Desc Done 
+  28000  to fully upgrade-->
+  <!--Peasant Unrest:750 Noble Unrest:1500-->
+  <Building ID="Merchant Mustering Hall I" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="4000" SackValue="1500" MinTurns="0" Upkeep="500" Military="true" CardIcon="Buildings\Stables 1" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="200" />
+      <Tech Item="Military Structures" />
+      <Tech Item="Combined Arms" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Unrest" Level="25" />
+    <Capability Name="Recruit Nobles Melee Short" Level="6" />
+    <Capability Name="Recruit Nobles Melee Long" Level="4" />
+    <Capability Name="Recruit Nobles Hybrid" Level="2" />
+    <Capability Name="Recruit Nobles Ranged" Level="6" />
+    <Capability Name="Recruit Nobles Ranged Crossbow" Level="4" />
+    <Capability Name="Recruit Nobles Ranged Crossbow Alt" Level="2" />
+    <Capability Name="Recruit Nobles Cavalry" Level="4" />
+  </Building>
+  <Building ID="Merchant Mustering Hall II" InSettlement="true" Upgrades="Merchant Mustering Hall I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="3000" MinTurns="1" Upkeep="1000" Military="true" CardIcon="Buildings\Stables 2" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="300" />
+      <Tech Item="Infantry Maneuvers" />
+      <Tech Item="Cavalry Maneuvers" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="50" />
+    <Capability Name="Recruit Nobles Melee Short" Level="3" />
+    <Capability Name="Recruit Nobles Melee Long" Level="2" />
+    <Capability Name="Recruit Nobles Hybrid" Level="1" />
+    <Capability Name="Recruit Nobles Ranged" Level="3" />
+    <Capability Name="Recruit Nobles Ranged Crossbow" Level="2" />
+    <Capability Name="Recruit Nobles Ranged Crossbow Alt" Level="1" />
+    <Capability Name="Recruit Nobles Cavalry" Level="1" />
+  </Building>
+  <Building ID="Merchant Mustering Hall III" InSettlement="true" Upgrades="Merchant Mustering Hall II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="8000" SackValue="6000" MinTurns="3" Upkeep="1500" Military="true" CardIcon="Buildings\Stables 3" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Tech Item="Military Architecture" />
+      <Tech Item="Infantry Tactics" />
+      <Tech Item="Cavalry Tactics" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="30" />
+    <Capability Name="Noble Unrest" Level="100" />
+    <Capability Name="Recruit Nobles Melee Short" Level="5" />
+    <Capability Name="Recruit Nobles Melee Long" Level="4" />
+    <Capability Name="Recruit Nobles Hybrid" Level="2" />
+    <Capability Name="Recruit Nobles Ranged" Level="5" />
+    <Capability Name="Recruit Nobles Ranged Crossbow" Level="3" />
+    <Capability Name="Recruit Nobles Ranged Crossbow Alt" Level="2" />
+    <Capability Name="Recruit Nobles Cavalry" Level="3" />
+  </Building>
+  <Building ID="Merchant Mustering Hall IV" InSettlement="true" Upgrades="Merchant Mustering Hall III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="6000" MinTurns="3" Upkeep="2000" Military="true" CardIcon="Buildings\Stables 4" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Infantry Strategy" />
+      <Tech Item="Cavalry Strategy" />
+      <Building ID="Large Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="40" />
+    <Capability Name="Noble Unrest" Level="150" />
+    <Capability Name="Recruit Nobles Melee Short" Level="8" />
+    <Capability Name="Recruit Nobles Melee Long" Level="6" />
+    <Capability Name="Recruit Nobles Hybrid" Level="4" />
+    <Capability Name="Recruit Nobles Ranged" Level="7" />
+    <Capability Name="Recruit Nobles Ranged Crossbow" Level="4" />
+    <Capability Name="Recruit Nobles Ranged Crossbow Alt" Level="3" />
+    <Capability Name="Recruit Nobles Cavalry" Level="5" />
+  </Building>
+
+  <!-- Walls   Desc Done
+  27500 to fully upgrade-->
+  <!--Suppress Peasants:400 Suppress Nobles:300-->
+  <Building ID="Trading City Wall I" InSettlement="true">
+    <VirtualBuilding Type="Wall" Level="0" />
+    <Construction Cost="5000" SackValue="-250" MinTurns="0" Upkeep="375" CardIcon="G_BuildingIcon_Walls_Lvl1_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Tech Item="Rammed Earth Wall" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="5" />
+    <Capability Name="Suppress Nobles" Level="7" />
+  </Building>
+  <Building ID="Trading City Wall II" InSettlement="true" Upgrades="Trading City Wall I">
+    <VirtualBuilding Type="Wall" Level="1" />
+    <Construction Cost="7500" SackValue="-500" MinTurns="1" Upkeep="750" CardIcon="G_BuildingIcon_Walls_Lvl2_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="350" />
+      <Tech Item="Rammed Earth Wall" />
+      <Building ID="Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="10" />
+    <Capability Name="Suppress Nobles" Level="15" />
+  </Building>
+  <Building ID="Trading City Wall III" InSettlement="true" Upgrades="Trading City Wall II">
+    <VirtualBuilding Type="Wall" Level="2" />
+    <Construction Cost="10000" SackValue="-999" MinTurns="2" Upkeep="1500" CardIcon="G_BuildingIcon_Walls_Lvl3_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Tech Item="High Walls" />
+      <Building ID="Large Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="15" />
+    <Capability Name="Suppress Nobles" Level="30" />
+  </Building>
+  <!-- Wall Upgrades Desc Done-->
+  <!--Suppress Nobles:100-->
+  <Building ID="Trading City Shooting Galleries" InSettlement="true" MaxNumber="1">
+    <VirtualBuilding Type="Tower" Level="0" />
+    <Construction Cost="5000" SackValue="250" MinTurns="3" Upkeep="750" CardIcon="G_BuildingIcon_ShootingGalleries_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Siege Defenses I" />
+      <Building ID="Trading City Wall II" Exact="false" Condition="true" />
+      <Building ID="Large Trading City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="5" />
+    <Capability Name="Suppress Nobles" Level="10" />
+  </Building>
+  <!--Trading City Garrissons & Defensive Buildings End-->
+  <!-- Trading City Tree End -->
+  <!-- Fortified City Tree: Without any Schools,Temples, resource mines or production stuff(Ceramics, weavers etc) it costs about 247.5k to fully upgrade a Fortified city.Without any Schools, Temples, resource mines, it costs about 347.5 to fully upgrade a Fortified cityWithout any Resource Mines but fully upgraded legalist school it costs about 407.5 kGold mine + 35k(mutually exclusive with Jade mine)Jade Mine + 30k(mutually exclusive with Gold mine)Copper Mine + 13kTin And Copper Mine(Bronze) +18k(mutually exclusive with iron mine)Iron Mine + 24k(mutually exclusive with tin and copper mine)Assuming the most expensive options are chosen, to fully upgrade a Fortified city, it will cost aprox: 419.5k to fully upgrade a Fortified city.A Fortified city can pay back this cost in aprox 50 turnsA Trading city can pay back this cost in aprox 15 turnsA Metropolitan city can pay back this cost in aprox 11 turns
+   -->
+  <!-- Palaces  Desc Done
+  24k to upgrade to III, then specialization another 16k 
+  40k to fully upgrade-->
+  <!--Suppress Peasants:400 Suppress Nobles:400-->
+  <Building ID="Fortified Palace I" InSettlement="true">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl1" />
+      <Prefab Style="Nomad" Name="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Ordo" />
+    </Model>
+    <Construction Cost="4000" SackValue="600" MinTurns="0" Upkeep="200" CardIcon="Buildings\Palace 1" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="225" />
+      <Building ID="Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="20" />
+    <Capability Name="Suppress Nobles" Level="10" />
+    <Capability Name="Store Food" Level="2" />
+    <Capability Name="Recruit Guards Cavalry" Level="2" />
+    <Capability Name="Recruit Guards Melee Short" Level="4" />
+    <Capability Name="Recruit Guards Melee Long" Level="3" />
+    <Capability Name="Recruit Guards Ranged" Level="5" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="1" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="0" />
+  </Building>
+  <Building ID="Fortified Palace II" InSettlement="true" Upgrades="Fortified Palace I">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl2" />
+    </Model>
+    <Construction Cost="8000" SackValue="900" MinTurns="1" Upkeep="350" CardIcon="Buildings\Palace 2" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="325" />
+      <Building ID="Small Stone Wall" Condition="true" Exact="false" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="40" />
+    <Capability Name="Suppress Nobles" Level="20" />
+    <Capability Name="Store Food" Level="4" />
+    <Capability Name="Recruit Guards Cavalry" Level="4" />
+    <Capability Name="Recruit Guards Melee Short" Level="6" />
+    <Capability Name="Recruit Guards Melee Long" Level="5" />
+    <Capability Name="Recruit Guards Ranged" Level="7" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="3" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="1" />
+  </Building>
+  <Building ID="Fortified Palace III" InSettlement="true" Upgrades="Fortified Palace II">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl3" />
+    </Model>
+    <Construction Cost="12000" SackValue="1250" MinTurns="2" Upkeep="500" CardIcon="Buildings\Palace 3" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="425" />
+      <Building ID="Stone Wall" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="80" />
+    <Capability Name="Suppress Nobles" Level="40" />
+    <Capability Name="Store Food" Level="6" />
+    <Capability Name="Recruit Guards Cavalry" Level="8" />
+    <Capability Name="Recruit Guards Cavalry" Level="6" />
+    <Capability Name="Recruit Guards Melee Short" Level="8" />
+    <Capability Name="Recruit Guards Melee Long" Level="7" />
+    <Capability Name="Recruit Guards Ranged" Level="9" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="5" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="3" />
+    <Capability Name="Culture VP" Level="-1" />
+  </Building>
+  <!-- Fortified City Markets Desc Done
+  24k to fully upgrade-->
+  <!--Peasant Unrest:600 Noble Unrest:600-->
+  <Building ID="Fortified Market I" InSettlement="true" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl2" />
+    </Model>
+    <Construction Cost="3000" SackValue="675" MinTurns="0" Upkeep="0" CardIcon="Buildings\Market 1" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="225" />
+      <Tech Item="Abacus" />
+      <Building ID="Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="2" />
+    <Capability Name="Noble Unrest" Level="10" />
+    <Capability Name="Trade Distance" Level="25" />
+  </Building>
+  <Building ID="Fortified Market II" InSettlement="true" MaxNumber="1" Upgrades="Fortified Market I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl2" />
+    </Model>
+    <Construction Cost="5000" SackValue="1250" MinTurns="0" Upkeep="0" CardIcon="Buildings\Market 2" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="275" />
+      <Tech Item="Mathematics" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Exact="false" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="5" />
+    <Capability Name="Noble Unrest" Level="20" />
+    <Capability Name="Trade Distance" Level="40" />
+  </Building>
+  <Building ID="Fortified Market III" InSettlement="true" MaxNumber="1" Upgrades="Fortified Market II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl2" />
+    </Model>
+    <Construction Cost="7000" SackValue="1750" MinTurns="0" Upkeep="0" CardIcon="Buildings\Market 3" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="350" />
+      <Tech Item="Algebra" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Exact="false" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="7" />
+    <Capability Name="Noble Unrest" Level="40" />
+    <Capability Name="Trade Distance" Level="55" />
+  </Building>
+  <Building ID="Fortified Market IV" InSettlement="true" MaxNumber="1" Upgrades="Fortified Market III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl2" />
+    </Model>
+    <Construction Cost="9000" SackValue="2250" MinTurns="0" Upkeep="0" CardIcon="Buildings\Market 4" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="425" />
+      <Tech Item="Number Theory" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Exact="false" Condition="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Unrest" Level="60" />
+    <Capability Name="Trade Distance" Level="70" />
+  </Building>
+  <!-- Fortified City Military Recruitment  Desc Done
+  28k to fully upgrade-->
+  <!--Peasant Unrest:600 Noble Unrest:1000-->
+  <Building ID="Fortified Barracks I" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="4000" SackValue="1000" MinTurns="0" Upkeep="250" Military="true" CardIcon="Buildings\Barracks 1" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="200" />
+      <Tech Item="Military Structures" />
+      <Tech Item="Combined Arms" />
+      <Building ID="Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="12" />
+    <Capability Name="Noble Unrest" Level="12" />
+    <Capability Name="Recruit Regulars Melee Short" Level="2" />
+    <Capability Name="Recruit Regulars Melee Long" Level="1" />
+  </Building>
+  <Building ID="Fortified Barracks II" InSettlement="true" Upgrades="Fortified Barracks I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="1750" MinTurns="1" Upkeep="500" Military="true" CardIcon="Buildings\Barracks 2" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="275" />
+      <Tech Item="Infantry Maneuvers" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="25" />
+    <Capability Name="Recruit Regulars Melee Short" Level="3" />
+    <Capability Name="Recruit Regulars Melee Long" Level="2" />
+    <Capability Name="Recruit Regulars Hybrid" Level="1" />
+  </Building>
+  <Building ID="Fortified Barracks III" InSettlement="true" Upgrades="Fortified Barracks II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="8000" SackValue="3000" MinTurns="2" Upkeep="1000" Military="true" CardIcon="Buildings\Barracks 3" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="350" />
+      <Tech Item="Infantry Tactics" />
+      <Tech Item="Military Architecture" />
+      <Building ID="Fortification II" Condition="true" Exact="false" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="27" />
+    <Capability Name="Noble Unrest" Level="50" />
+    <Capability Name="Recruit Regulars Melee Short" Level="5" />
+    <Capability Name="Recruit Regulars Melee Long" Level="3" />
+    <Capability Name="Recruit Regulars Hybrid" Level="2" />
+  </Building>
+  <Building ID="Fortified Barracks IV" InSettlement="true" Upgrades="Fortified Barracks III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="3000" MinTurns="2" Upkeep="1500" Military="true" CardIcon="Buildings\Barracks 4" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="425" />
+      <Tech Item="Infantry Strategy" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+      <Building ID="Fortification III" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="35" />
+    <Capability Name="Noble Unrest" Level="100" />
+    <Capability Name="Recruit Regulars Melee Short" Level="7" />
+    <Capability Name="Recruit Regulars Melee Long" Level="5" />
+    <Capability Name="Recruit Regulars Hybrid" Level="3" />
+  </Building>
+  <!-- 32k to fully upgrade-->
+  <!--Peasant Unrest:800 Noble Unrest:1200-->
+  <Building ID="Fortified Stables I" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseStables_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaStables_Lvl1" />
+    </Model>
+    <Construction Cost="5000" SackValue="1750" MinTurns="1" Upkeep="500" Military="true" CardIcon="Buildings\Stables 1" CardMinorIcon="G_Icon12x12_Stable_01" />
+    <Requirements>
+      <Population Num="275" />
+      <Tech Item="Military Structures" />
+      <Building ID="Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="15" />
+    <Capability Name="Recruit Regulars Cavalry" Level="2" />
+  </Building>
+  <Building ID="Fortified Stables II" InSettlement="true" Upgrades="Fortified Stables I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseStables_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaStables_Lvl1" />
+    </Model>
+    <Construction Cost="7000" SackValue="2500" MinTurns="2" Upkeep="1000" Military="true" CardIcon="Buildings\Stables 2" CardMinorIcon="G_Icon12x12_Stable_01" />
+    <Requirements>
+      <Population Num="350" />
+      <Tech Item="Cavalry Maneuvers" />
+      <Building ID="Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="30" />
+    <Capability Name="Noble Unrest" Level="30" />
+    <Capability Name="Recruit Regulars Cavalry" Level="4" />
+  </Building>
+  <Building ID="Fortified Stables III" InSettlement="true" Upgrades="Fortified Stables II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseStables_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaStables_Lvl1" />
+    </Model>
+    <Construction Cost="9000" SackValue="5000" MinTurns="3" Upkeep="1500" Military="true" CardIcon="Buildings\Stables 3" CardMinorIcon="G_Icon12x12_Stable_01" />
+    <Requirements>
+      <Population Num="425" />
+      <Tech Item="Cavalry Tactics" />
+      <Tech Item="Military Architecture" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+      <Building ID="Fortification II" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="40" />
+    <Capability Name="Noble Unrest" Level="60" />
+    <Capability Name="Recruit Regulars Cavalry" Level="6" />
+  </Building>
+  <Building ID="Fortified Stables IV" InSettlement="true" Upgrades="Fortified Stables III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseStables_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaStables_Lvl1" />
+    </Model>
+    <Construction Cost="11000" SackValue="5000" MinTurns="3" Upkeep="2000" Military="true" CardIcon="Buildings\Stables 4" CardMinorIcon="G_Icon12x12_Stable_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Cavalry Strategy" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+      <Building ID="Fortification III" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="50" />
+    <Capability Name="Noble Unrest" Level="120" />
+    <Capability Name="Recruit Regulars Cavalry" Level="8" />
+  </Building>
+  <!-- Needs Description
+  28k to fully upgrade-->
+  <!--Suppress Peasants:1200 Suppress Nobles:1200-->
+  <Building ID="Military Prison I" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl1" />
+    </Model>
+    <Construction Cost="4000" MinTurns="1" Upkeep="150" Military="true" CardIcon="Buildings\Prison\Prison 1" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Tech Item="Military Structures" />
+      <Building ID="Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="10" />
+    <Capability Name="Suppress Nobles" Level="7" />
+    <Capability Name="Recruit Convicts" Level="1" />
+  </Building>
+  <Building ID="Military Prison II" InSettlement="true" Upgrades="Military Prison I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="6000" MinTurns="1" Upkeep="300" Military="true" CardIcon="Buildings\Prison\Prison 2" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="200" />
+      <Tech Item="Five Punishments" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="20" />
+    <Capability Name="Suppress Nobles" Level="15" />
+    <Capability Name="Recruit Convicts" Level="2" />
+  </Building>
+  <Building ID="Military Prison III" InSettlement="true" Upgrades="Military Prison II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="8000" MinTurns="1" Upkeep="450" Military="true" CardIcon="Buildings\Prison\Prison 3" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="300" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="30" />
+    <Capability Name="Suppress Nobles" Level="30" />
+    <Capability Name="Recruit Convicts" Level="3" />
+  </Building>
+  <Building ID="Military Prison IV" InSettlement="true" Upgrades="Military Prison III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="10000" MinTurns="1" Upkeep="600" Military="true" CardIcon="Buildings\Prison\Prison 4" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="400" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="40" />
+    <Capability Name="Suppress Nobles" Level="60" />
+    <Capability Name="Recruit Convicts" Level="4" />
+  </Building>
+  <Building ID="Military Prison V" InSettlement="true" Upgrades="Military Prison IV">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="12000" MinTurns="1" Upkeep="750" Military="true" CardIcon="Buildings\Prison\Prison 5" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="500" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="50" />
+    <Capability Name="Suppress Nobles" Level="120" />
+    <Capability Name="Recruit Convicts" Level="5" />
+  </Building>
+  <!--Desc Done
+  30k to fully upgrade-->
+  <!--Peasant Unrest:1800 Noble Unrest:1800-->
+  <Building ID="Artillery Workshop I" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArtillery_Lvl1" />
+    </Model>
+    <Construction Cost="8000" MinTurns="2" Upkeep="1500" Military="true" CardIcon="G_BuildingIcon_ArtilleryWorkshopLvl1_01" CardMinorIcon="G_Icon12x12_ArtilleryWorkshop_01" />
+    <Requirements>
+      <Population Num="350" />
+      <Tech Item="Military Structures" />
+      <Tech Item="Military Theory" />
+      <Tech Item="Stone Throwing Engine" />
+      <Building ID="Iron Mine" Exact="false" />
+      <Building ID="Fortified Stables I" Exact="false" />
+      <Building ID="Fortified Barracks I" Exact="false" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+      <Building ID="Fortified Palace I" Exact="false" />
+      <Building ID="Small Stone Wall" Condition="true" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+      <Building ID="City" Condition="false" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="45" />
+    <Capability Name="Noble Unrest" Level="45" />
+    <Capability Name="Recruit Light Artillery" Level="1" />
+    <Capability Name="Recruit Medium Artillery" Level="0" />
+    <Capability Name="Recruit Heavy Artillery" Level="0" />
+  </Building>
+  <Building ID="Artillery Workshop II" InSettlement="true" Upgrades="Artillery Workshop I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArtillery_Lvl2" />
+    </Model>
+    <Construction Cost="10000" MinTurns="3" Upkeep="2000" Military="true" CardIcon="G_BuildingIcon_ArtilleryWorkshopLvl2_01" CardMinorIcon="G_Icon12x12_ArtilleryWorkshop_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Tech Item="Military Architecture" />
+      <Tech Item="Chrome Plating" />
+      <RequireEither>
+        <Tech Item="Four Legged Engine" />
+        <Tech Item="Triple Giant Crossbow" />
+      </RequireEither>
+      <Building ID="Iron Foundry" Exact="false" />
+      <Building ID="Fortification II" Exact="false" />
+      <Building ID="Fortified Stables III" Exact="false" />
+      <Building ID="Fortified Barracks III" Exact="false" />
+      <Building ID="Fortified Palace II" Exact="false" />
+      <Building ID="Stone Wall" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="90" />
+    <Capability Name="Noble Unrest" Level="90" />
+    <Capability Name="Recruit Light Artillery" Level="2" />
+    <Capability Name="Recruit Medium Artillery" Level="1" />
+    <Capability Name="Recruit Heavy Artillery" Level="0" />
+  </Building>
+  <Building ID="Artillery Workshop III" InSettlement="true" Upgrades="Artillery Workshop II">
+    <Model SlotSize="2">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseArtillery_Lvl3" />
+    </Model>
+    <Construction Cost="12000" MinTurns="4" Upkeep="2500" Military="true" CardIcon="G_BuildingIcon_ArtilleryWorkshopLvl3_01" CardMinorIcon="G_Icon12x12_ArtilleryWorkshop_01" />
+    <Requirements>
+      <Population Num="550" />
+      <Tech Item="Cannon Making" />
+      <Building ID="Large Iron Foundry" Condition="true" Exact="false" />
+      <Building ID="Fortification III" Condition="true" Exact="false" />
+      <Building ID="Fortified Stables IV" Exact="false" />
+      <Building ID="Fortified Barracks IV" Exact="false" />
+      <Building ID="Fortified Palace III" Exact="false" />
+      <Building ID="High Stone Wall" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="180" />
+    <Capability Name="Noble Unrest" Level="180" />
+    <Capability Name="Recruit Light Artillery" Level="3" />
+    <Capability Name="Recruit Medium Artillery" Level="2" />
+    <Capability Name="Recruit Heavy Artillery" Level="1" />
+  </Building>
+  <!-- Fortified City Military Constructions  Desc Done
+  18k to fully upgrade-->
+  <!--Suppress Peasants:200 Suppress Nobles:200-->
+  <Building ID="Fortification I" InSettlement="true" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseHorseStud_Lvl1" />
+    </Model>
+    <Construction Cost="4000" SackValue="-1000" MinTurns="0" Upkeep="100" Military="false" CardIcon="Buildings\Fortification 1" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="100" />
+      <Tech Item="Military Structures" />
+      <Building ID="Outpost" Condition="true" Exact="false" />
+      <Building ID="City" Exact="true" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Trading Square" Condition="false" Exact="false" />
+      <Building ID="Huge City Square" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="5" />
+    <Capability Name="Suppress Nobles" Level="5" />
+    <Capability Name="Increase Internal Trade" Level="5" />
+    <Capability Name="Increase Tax" Level="-15" />
+  </Building>
+  <Building ID="Fortification II" InSettlement="true" MaxNumber="1" Upgrades="Fortification I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseHorseStud_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="-2500" MinTurns="1" Upkeep="300" Military="false" CardIcon="Buildings\Fortification 2" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Tech Item="Siege Defenses I" />
+      <Tech Item="Military Architecture" />
+      <Building ID="Fortified City" Exact="false" />
+      <RequireEither>
+        <Building ID="Copper Mine Nomad" />
+        <Building ID="Copper Foundry Nomad" />
+        <Building ID="Large Copper Foundry Nomad" />
+        <Building ID="Copper Mine Chinese" />
+        <Building ID="Copper Foundry Chinese" />
+        <Building ID="Large Copper Foundry Chinese" />
+        <Building ID="Tin And Copper Mine" />
+        <Building ID="Tin And Copper Foundry" />
+        <Building ID="Large Tin And Copper Foundry" />
+        <Building ID="Iron Mine" />
+        <Building ID="Iron Foundry" />
+        <Building ID="Large Iron Foundry" />
+      </RequireEither>
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="10" />
+    <Capability Name="Suppress Nobles" Level="10" />
+    <Capability Name="Increase Internal Trade" Level="10" />
+    <Capability Name="Increase Tax" Level="-25" />
+  </Building>
+  <Building ID="Fortification III" InSettlement="true" MaxNumber="1" Upgrades="Fortification II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/ExternalBuildings/OE_External_ChineseHorseStud_Lvl1" />
+    </Model>
+    <Construction Cost="8000" SackValue="-5000" MinTurns="2" Upkeep="500" Military="false" CardIcon="Buildings\Fortification 3" CardMinorIcon="G_Icon12x12_Foundry_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Siege Defenses II" />
+      <Building ID="Fortified Palace III" />
+      <Building ID="Large Fortified City" />
+      <RequireEither>
+        <Building ID="Large Copper Foundry Nomad" />
+        <Building ID="Large Copper Foundry Chinese" />
+        <Building ID="Tin And Copper Foundry" />
+        <Building ID="Large Tin And Copper Foundry" />
+        <Building ID="Iron Foundry" />
+        <Building ID="Large Iron Foundry" />
+      </RequireEither>
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="20" />
+    <Capability Name="Suppress Nobles" Level="20" />
+    <Capability Name="Increase Internal Trade" Level="15" />
+    <Capability Name="Increase Tax" Level="-40" />
+  </Building>
+  <!-- Walls 
+  30k to fully upgrade-->
+  <!--Suppress Peasants:200 Suppress Nobles:200-->
+  <Building ID="Small Stone Wall" InSettlement="true">
+    <VirtualBuilding Type="Wall" Level="0" />
+    <Construction Cost="8000" SackValue="50" MinTurns="0" Upkeep="500" CardIcon="G_BuildingIcon_Walls_Lvl1_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Tech Item="Rammed Earth Wall" />
+      <Building ID="Fortified City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="5" />
+    <Capability Name="Suppress Nobles" Level="5" />
+  </Building>
+  <Building ID="Stone Wall" InSettlement="true" Upgrades="Small Stone Wall">
+    <VirtualBuilding Type="Wall" Level="1" />
+    <Construction Cost="10000" SackValue="750" MinTurns="1" Upkeep="750" CardIcon="G_BuildingIcon_Walls_Lvl2_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="350" />
+      <Tech Item="High Walls" />
+      <Building ID="Fortification I" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="10" />
+    <Capability Name="Suppress Nobles" Level="10" />
+  </Building>
+  <Building ID="High Stone Wall" InSettlement="true" Upgrades="Stone Wall">
+    <VirtualBuilding Type="Wall" Level="2" />
+    <Construction Cost="12000" SackValue="1500" MinTurns="2" Upkeep="1000" CardIcon="G_BuildingIcon_Walls_Lvl3_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="450" />
+      <Tech Item="Brick Faced Walls" />
+      <Building ID="Fortification II" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="15" />
+    <Capability Name="Suppress Nobles" Level="20" />
+  </Building>
+  <!-- Desc Done
+  17.5k to fully upgrade-->
+  <!--Suppress Peasants:200 Suppress Nobles:200-->
+  <Building ID="Fortified Shooting Galleries I" InSettlement="true" MaxNumber="1">
+    <VirtualBuilding Type="Tower" Level="0" />
+    <Construction Cost="7500" SackValue="250" MinTurns="3" Upkeep="500" CardIcon="G_BuildingIcon_ShootingGalleries_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Tech Item="Siege Defenses I" />
+      <Building ID="Stone Wall" Condition="true" Exact="false" />
+      <Building ID="Large Fortified City" Condition="true" Exact="false" />
+      <Building ID="Fortification II" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Huge City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="2" />
+    <Capability Name="Suppress Nobles" Level="10" />
+  </Building>
+  <Building ID="Fortified Shooting Galleries II" InSettlement="true" MaxNumber="1" Upgrades="Fortified Shooting Galleries I">
+    <VirtualBuilding Type="Tower" Level="1" />
+    <Construction Cost="10000" SackValue="250" MinTurns="3" Upkeep="1000" CardIcon="G_BuildingIcon_ShootingGalleries_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Siege Defenses II" />
+      <Building ID="High Stone Wall" Condition="true" Exact="false" />
+      <Building ID="Fortification III" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="5" />
+    <Capability Name="Suppress Nobles" Level="20" />
+  </Building>
+  <!-- Fortified City Tree End -->
+  <!--Metropolitan City Tree 345 to fully upgrade without any production stuff(ceramics, mines, weavers)Without any Schools,Temples, resource mines or production stuff(Ceramics, weavers etc) it costs about 345k to fully upgrade a trading city.Without any Schools, Temples, resource mines, it costs about 445.5 to fully upgrade a Metropolitan cityWithout any Resource Mines but fully upgraded legalist school it costs about 505.5 kGold mine + 35k(mutually exclusive with Jade mine)Jade Mine + 30k(mutually exclusive with Gold mine)Copper Mine + 13kTin And Copper Mine(Bronze) +18k(mutually exclusive with iron mine)Iron Mine + 24k(mutually exclusive with tin and copper mine)Assuming the most expensive options are chosen, to fully upgrade a Metropolitan city, it will cost aprox: 577.5k to fully upgrade a trading city.A Fortified city can pay back this cost in aprox 69 turnsA Trading city can pay back this cost in aprox 21 turnsA Metropolitan city can pay back this cost in aprox 15 turns-->
+
+
+  <!-- Metropolitan Markets & Dependents  Desc Done
+  28 k to fully upgrade-->
+  <!--Peasant Unrest:250 Noble Happiness:250-->
+  <Building ID="Metropolitan Market I" InSettlement="true" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="4000" SackValue="1000" MinTurns="1" Upkeep="0" CardIcon="Buildings\Market 1" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Tech Item="Abacus" />
+      <Building ID="Huge City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="5" />
+    <Capability Name="Noble Happiness" Level="5" />
+    <Capability Name="Trade Distance" Level="40" />
+    <Capability Name="Increase Internal Trade" Level="5" />
+    <Capability Name="Increase Tax" Level="15" />
+  </Building>
+  <Building ID="Metropolitan Market II" InSettlement="true" Upgrades="Metropolitan Market I" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="6000" SackValue="1000" MinTurns="1" Upkeep="0" CardIcon="Buildings\Market 2" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="600" />
+      <Tech Item="Mathematics" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Trade Distance" Level="55" />
+    <Capability Name="Increase Internal Trade" Level="10" />
+    <Capability Name="Increase Tax" Level="10" />
+  </Building>
+  <Building ID="Metropolitan Market III" InSettlement="true" Upgrades="Metropolitan Market II" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="8000" SackValue="1000" MinTurns="1" Upkeep="0" CardIcon="Buildings\Market 3" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="800" />
+      <Tech Item="Algebra" />
+      <Building ID="Metropolitan City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Trading City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="15" />
+    <Capability Name="Noble Happiness" Level="15" />
+    <Capability Name="Trade Distance" Level="65" />
+    <Capability Name="Increase Internal Trade" Level="15" />
+    <Capability Name="Increase Tax" Level="5" />
+  </Building>
+  <Building ID="Metropolitan Market IV" InSettlement="true" Upgrades="Metropolitan Market III" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="10000" SackValue="1000" MinTurns="1" Upkeep="0" CardIcon="Buildings\Market 4" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="1000" />
+      <Tech Item="Number Theory" />
+      <Building ID="Large Metropolitan City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Trading City" Condition="false" Exact="false" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Happiness" Level="20" />
+    <Capability Name="Trade Distance" Level="75" />
+    <Capability Name="Increase Internal Trade" Level="20" />
+  </Building>
+  <!--50k to fully upgrade-->
+  <!--Peasant Unrest:400 Noble Happiness:200-->
+  <Building ID="Metropolitan Bank I" InSettlement="true" MaxNumber="1">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="5000" SackValue="8000" MinTurns="3" Upkeep="0" CardIcon="Buildings\Bank 1" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="1000" />
+      <Tech Item="Banking I" />
+      <Building ID="Metropolitan Market I" Condition="true" Exact="false" />
+      <Building ID="City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="12" />
+    <Capability Name="Noble Happiness" Level="5" />
+    <Capability Name="Increase Tax" Level="25" />
+  </Building>
+  <Building ID="Metropolitan Bank II" InSettlement="true" MaxNumber="1" Upgrades="Metropolitan Bank I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="10000" SackValue="8000" MinTurns="3" Upkeep="0" CardIcon="Buildings\Bank 2" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="1100" />
+      <Building ID="Metropolitan Market II" Condition="true" Exact="false" />
+      <Building ID="Huge City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="17" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="Increase Tax" Level="50" />
+  </Building>
+  <Building ID="Metropolitan Bank III" InSettlement="true" MaxNumber="1" Upgrades="Metropolitan Bank II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="15000" SackValue="8000" MinTurns="3" Upkeep="0" CardIcon="Buildings\Bank 3" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="1200" />
+      <Tech Item="Banking II" />
+      <Building ID="Metropolitan Market III" Condition="true" Exact="false" />
+      <Building ID="Metropolitan City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="22" />
+    <Capability Name="Noble Happiness" Level="15" />
+    <Capability Name="Increase Tax" Level="75" />
+  </Building>
+  <Building ID="Metropolitan Bank IV" InSettlement="true" MaxNumber="1" Upgrades="Metropolitan Bank III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseMarket_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaMarket_Lvl3" />
+    </Model>
+    <Construction Cost="20000" SackValue="8000" MinTurns="3" Upkeep="0" CardIcon="Buildings\Bank 4" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="1300" />
+      <Building ID="Metropolitan Market IV" Condition="true" Exact="false" />
+      <Building ID="Large Metropolitan City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="30" />
+    <Capability Name="Noble Happiness" Level="20" />
+    <Capability Name="Increase Tax" Level="100" />
+  </Building>
+  <!--Metropolitan Cities Recruitment  Desc Done
+  Barracks 35000 to fully upgrade-->
+  <!--Peasant Unrest:800 Noble Unrest:400-->
+  <Building ID="Metropolitan Barracks I" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="5000" SackValue="1500" MinTurns="0" Upkeep="300" Military="true" CardIcon="Buildings\Barracks 1" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="425" />
+      <Tech Item="Military Structures" />
+      <Tech Item="Combined Arms" />
+      <Building ID="City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="12" />
+    <Capability Name="Noble Unrest" Level="5" />
+    <Capability Name="Recruit Militia Melee Short" Level="3" />
+    <Capability Name="Recruit Militia Melee Long" Level="2" />
+    <Capability Name="Recruit Militia Hybrid" Level="1" />
+  </Building>
+  <Building ID="Metropolitan Barracks II" InSettlement="true" Upgrades="Metropolitan Barracks I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="7500" SackValue="3000" MinTurns="1" Upkeep="550" Military="true" CardIcon="Buildings\Barracks 2" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="550" />
+      <Tech Item="Infantry Maneuvers" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="17" />
+    <Capability Name="Noble Unrest" Level="10" />
+    <Capability Name="Recruit Militia Melee Short" Level="6" />
+    <Capability Name="Recruit Militia Melee Long" Level="4" />
+    <Capability Name="Recruit Militia Hybrid" Level="2" />
+  </Building>
+  <Building ID="Metropolitan Barracks III" InSettlement="true" Upgrades="Metropolitan Barracks II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="10000" SackValue="6000" MinTurns="3" Upkeep="900" Military="true" CardIcon="Buildings\Barracks 3" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="750" />
+      <Tech Item="Military Architecture" />
+      <Tech Item="Infantry Tactics" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="22" />
+    <Capability Name="Noble Unrest" Level="20" />
+    <Capability Name="Recruit Militia Melee Short" Level="10" />
+    <Capability Name="Recruit Militia Melee Long" Level="7" />
+    <Capability Name="Recruit Militia Hybrid" Level="4" />
+  </Building>
+  <Building ID="Metropolitan Barracks IV" InSettlement="true" Upgrades="Metropolitan Barracks III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="12500" SackValue="6000" MinTurns="3" Upkeep="1250" Military="true" CardIcon="Buildings\Barracks 4" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="1000" />
+      <Tech Item="Infantry Strategy" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="30" />
+    <Capability Name="Noble Unrest" Level="40" />
+    <Capability Name="Recruit Militia Melee Short" Level="15" />
+    <Capability Name="Recruit Militia Melee Long" Level="12" />
+    <Capability Name="Recruit Militia Hybrid" Level="8" />
+  </Building>
+  <!-- 39000 to upgrade -->
+  <!--Peasant Unrest:400 Noble Unrest:800-->
+  <Building ID="Metropolitan Stables I" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="6000" SackValue="1500" MinTurns="0" Upkeep="400" Military="true" CardIcon="Buildings\Stables 1" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Military Structures" />
+      <Tech Item="Horse Riding" />
+      <Building ID="City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" /> <!--wtf?-->
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Unrest" Level="10" />
+    <Capability Name="Noble Unrest" Level="10" />
+    <Capability Name="Recruit Militia Cavalry" Level="3" />
+  </Building>
+  <Building ID="Metropolitan Stables II" InSettlement="true" Upgrades="Metropolitan Stables I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="8250" SackValue="3000" MinTurns="1" Upkeep="800" Military="true" CardIcon="Buildings\Stables 2" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="650" />
+      <Tech Item="Cavalry Maneuvers" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="20" />
+    <Capability Name="Noble Unrest" Level="10" />
+    <Capability Name="Recruit Militia Cavalry" Level="6" />
+  </Building>
+  <Building ID="Metropolitan Stables III" InSettlement="true" Upgrades="Metropolitan Stables II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="10750" SackValue="6000" MinTurns="3" Upkeep="1350" Military="true" CardIcon="Buildings\Stables 3" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="900" />
+      <Tech Item="Military Architecture" />
+      <Tech Item="Cavalry Tactics" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="30" />
+    <Capability Name="Noble Unrest" Level="40" />
+    <Capability Name="Recruit Militia Cavalry" Level="9" />
+  </Building>
+  <Building ID="Metropolitan Stables IV" InSettlement="true" Upgrades="Metropolitan Stables III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChineseBarracks_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaBarracks_Lvl1" />
+    </Model>
+    <Construction Cost="14000" SackValue="6000" MinTurns="3" Upkeep="1750" Military="true" CardIcon="Buildings\Stables 4" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="1100" />
+      <Tech Item="Cavalry Strategy" />
+    </Requirements>
+    <Capability Name="Peasant Unrest" Level="40" />
+    <Capability Name="Noble Unrest" Level="80" />
+    <Capability Name="Recruit Militia Cavalry" Level="12" />
+  </Building>
+  <!-- 28000 to fully upgrade -->
+  <!--Suppress Peasants:496 Suppress Nobles:304-->
+  <Building ID="Metropolitan Garrisson I" InSettlement="true">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl1" />
+      <Prefab Style="Nomad" Name="Architecture/Buildings/Prefabs/OE_BuildingNomad_Large_Ordo" />
+    </Model>
+    <Construction Cost="4000" SackValue="1000" MinTurns="0" Upkeep="200" CardIcon="Buildings\Palace 1" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Building ID="Huge City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="10" />
+    <Capability Name="Suppress Nobles" Level="3" />
+    <Capability Name="Recruit Guards Cavalry" Level="2" />
+    <Capability Name="Recruit Guards Melee Short" Level="6" />
+    <Capability Name="Recruit Guards Melee Long" Level="4" />
+    <Capability Name="Recruit Guards Ranged" Level="3" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="1" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="0" />
+  </Building>
+  <Building ID="Metropolitan Garrisson II" InSettlement="true" Upgrades="Metropolitan Garrisson I">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl2" />
+    </Model>
+    <Construction Cost="6000" SackValue="2000" MinTurns="1" Upkeep="375" CardIcon="Buildings\Palace 2" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="750" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="30" />
+    <Capability Name="Suppress Nobles" Level="7" />
+    <Capability Name="Recruit Guards Cavalry" Level="4" />
+    <Capability Name="Recruit Guards Melee Short" Level="8" />
+    <Capability Name="Recruit Guards Melee Long" Level="6" />
+    <Capability Name="Recruit Guards Ranged" Level="5" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="3" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="1" />
+  </Building>
+  <Building ID="Metropolitan Garrisson III" InSettlement="true" Upgrades="Metropolitan Garrisson II">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl3" />
+    </Model>
+    <Construction Cost="8000" SackValue="4000" MinTurns="2" Upkeep="525" CardIcon="Buildings\Palace 3" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="1000" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="50" />
+    <Capability Name="Suppress Nobles" Level="15" />
+    <Capability Name="Recruit Guards Cavalry" Level="6" />
+    <Capability Name="Recruit Guards Melee Short" Level="10" />
+    <Capability Name="Recruit Guards Melee Long" Level="8" />
+    <Capability Name="Recruit Guards Ranged" Level="7" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="5" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="2" />
+  </Building>
+  <Building ID="Metropolitan Garrisson IV" InSettlement="true" Upgrades="Metropolitan Garrisson III">
+    <Model SlotSize="2" PalaceSlot="true">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePalace_Lvl3" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CentralAsiaPalace_Lvl3" />
+    </Model>
+    <Construction Cost="10000" SackValue="6000" MinTurns="3" Upkeep="700" CardIcon="Buildings\Palace 4" CardMinorIcon="G_Icon12x12_Palace_01" />
+    <Requirements>
+      <Population Num="1250" />
+      <Building ID="Large Metropolitan City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="70" />
+    <Capability Name="Suppress Nobles" Level="30" />
+    <Capability Name="Recruit Guards Cavalry" Level="8" />
+    <Capability Name="Recruit Guards Melee Short" Level="12" />
+    <Capability Name="Recruit Guards Melee Long" Level="10" />
+    <Capability Name="Recruit Guards Ranged" Level="9" />
+    <Capability Name="Recruit Guards Ranged Crossbow" Level="10" />
+    <Capability Name="Recruit Guards Ranged Crossbow Alt" Level="4" />
+  </Building>
+  <!-- Needs Description 45000 to fully upgrade-->
+  <!--Suppress Peasants:750 Suppress Nobles:750-->
+  <Building ID="Metropolitan Prison I" InSettlement="true">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl1" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl1" />
+    </Model>
+    <Construction Cost="1250" MinTurns="0" Upkeep="50" Military="true" CardIcon="Buildings\Prison\Prison 1" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="400" />
+      <Building ID="City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="20" />
+    <Capability Name="Suppress Nobles" Level="5" />
+    <Capability Name="Recruit Convicts" Level="2" />
+  </Building>
+  <Building ID="Metropolitan Prison II" InSettlement="true" Upgrades="Metropolitan Prison I">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="1500" MinTurns="0" Upkeep="75" Military="true" CardIcon="Buildings\Prison\Prison 2" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Tech Item="Five Punishments" />
+      <Population Num="450" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="25" />
+    <Capability Name="Suppress Nobles" Level="10" />
+    <Capability Name="Recruit Convicts" Level="3" />
+  </Building>
+  <Building ID="Metropolitan Prison III" InSettlement="true" Upgrades="Metropolitan Prison II">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="1750" MinTurns="1" Upkeep="100" Military="true" CardIcon="Buildings\Prison\Prison 3" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="500" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="30" />
+    <Capability Name="Suppress Nobles" Level="15" />
+    <Capability Name="Recruit Convicts" Level="4" />
+  </Building>
+  <Building ID="Metropolitan Prison IV" InSettlement="true" Upgrades="Metropolitan Prison III">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="2000" MinTurns="1" Upkeep="125" Military="true" CardIcon="Buildings\Prison\Prison 4" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="550" />
+      <Tech Item="Military Structures" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="35" />
+    <Capability Name="Suppress Nobles" Level="20" />
+    <Capability Name="Recruit Convicts" Level="5" />
+  </Building>
+  <Building ID="Metropolitan Prison V" InSettlement="true" Upgrades="Metropolitan Prison IV">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="2250" MinTurns="2" Upkeep="150" Military="true" CardIcon="Buildings\Prison\Prison 5" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="600" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="40" />
+    <Capability Name="Suppress Nobles" Level="25" />
+    <Capability Name="Recruit Convicts" Level="6" />
+  </Building>
+  <Building ID="Metropolitan Prison VI" InSettlement="true" Upgrades="Metropolitan Prison V">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="2500" MinTurns="2" Upkeep="175" Military="true" CardIcon="Buildings\Prison\Prison 6" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="750" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="45" />
+    <Capability Name="Suppress Nobles" Level="30" />
+    <Capability Name="Recruit Convicts" Level="7" />
+  </Building>
+  <Building ID="Metropolitan Prison VII" InSettlement="true" Upgrades="Metropolitan Prison VI">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="2750" MinTurns="3" Upkeep="200" Military="true" CardIcon="Buildings\Prison\Prison 7" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="800" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="50" />
+    <Capability Name="Suppress Nobles" Level="35" />
+    <Capability Name="Recruit Convicts" Level="8" />
+  </Building>
+  <Building ID="Metropolitan Prison VIII" InSettlement="true" Upgrades="Metropolitan Prison VII">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="3000" MinTurns="3" Upkeep="250" Military="true" CardIcon="Buildings\Prison\Prison 8" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="850" />
+      <Tech Item="Military Architecture" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="55" />
+    <Capability Name="Suppress Nobles" Level="40" />
+    <Capability Name="Recruit Convicts" Level="9" />
+  </Building>
+  <Building ID="Metropolitan Prison IX" InSettlement="true" Upgrades="Metropolitan Prison VIII">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="3250" MinTurns="3" Upkeep="300" Military="true" CardIcon="Buildings\Prison\Prison 9" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="900" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="60" />
+    <Capability Name="Suppress Nobles" Level="45" />
+    <Capability Name="Recruit Convicts" Level="10" />
+  </Building>
+  <Building ID="Metropolitan Prison X" InSettlement="true" Upgrades="Metropolitan Prison IX">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="3500" MinTurns="3" Upkeep="425" Military="true" CardIcon="Buildings\Prison\Prison 10" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="950" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="65" />
+    <Capability Name="Suppress Nobles" Level="50" />
+    <Capability Name="Recruit Convicts" Level="11" />
+  </Building>
+  <Building ID="Metropolitan Prison XI" InSettlement="true" Upgrades="Metropolitan Prison X">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="3750" MinTurns="3" Upkeep="650" Military="true" CardIcon="Buildings\Prison\Prison 11" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="1000" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="70" />
+    <Capability Name="Suppress Nobles" Level="55" />
+    <Capability Name="Recruit Convicts" Level="12" />
+  </Building>
+  <Building ID="Metropolitan Prison XII" InSettlement="true" Upgrades="Metropolitan Prison XI">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="4000" MinTurns="3" Upkeep="775" Military="true" CardIcon="Buildings\Prison\Prison 12" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="1075" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="75" />
+    <Capability Name="Suppress Nobles" Level="60" />
+    <Capability Name="Recruit Convicts" Level="13" />
+  </Building>
+  <Building ID="Metropolitan Prison XIII" InSettlement="true" Upgrades="Metropolitan Prison XII">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="4250" MinTurns="3" Upkeep="850" Military="true" CardIcon="Buildings\Prison\Prison 13" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="1150" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="80" />
+    <Capability Name="Suppress Nobles" Level="65" />
+    <Capability Name="Recruit Convicts" Level="14" />
+  </Building>
+  <Building ID="Metropolitan Prison XIV" InSettlement="true" Upgrades="Metropolitan Prison XIII">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="4500" MinTurns="3" Upkeep="925" Military="true" CardIcon="Buildings\Prison\Prison 14" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="1225" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="85" />
+    <Capability Name="Suppress Nobles" Level="70" />
+    <Capability Name="Recruit Convicts" Level="15" />
+  </Building>
+  <Building ID="Metropolitan Prison XV" InSettlement="true" Upgrades="Metropolitan Prison XIV">
+    <Model SlotSize="1">
+      <Prefab Name="Architecture/Buildings/Prefabs/OE_Tech_ChinesePrison_Lvl2" />
+      <Prefab Style="Central Asian" Name="Architecture/Buildings/Prefabs/OE_Tech_CAPrison_Lvl2" />
+    </Model>
+    <Construction Cost="4750" MinTurns="3" Upkeep="1000" Military="true" CardIcon="Buildings\Prison\Prison 15" CardMinorIcon="G_Icon12x12_Prison_01" />
+    <Requirements>
+      <Population Num="1300" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="90" />
+    <Capability Name="Suppress Nobles" Level="75" />
+    <Capability Name="Recruit Convicts" Level="16" />
+  </Building>
+  <!-- Metropolitan Military Constructions Desc Done  wall 37500 to fully upgrade-->
+  <!--Suppress Peasants:150 Suppress Nobles:150-->
+  <Building ID="Metropolitan Wall I" InSettlement="true">
+    <VirtualBuilding Type="Wall" Level="0" />
+    <Construction Cost="7500" SackValue="50" MinTurns="0" Upkeep="150" CardIcon="G_BuildingIcon_Walls_Lvl1_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="500" />
+      <Tech Item="Rammed Earth Wall" />
+      <Building ID="Huge City" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Town" Condition="false" Exact="true" />
+      <Building ID="City" Condition="false" Exact="true" />
+      <Building ID="Fortified City" Condition="false" Exact="false" />
+      <Building ID="Trading City" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="10" />
+    <Capability Name="Suppress Nobles" Level="5" />
+  </Building>
+  <Building ID="Metropolitan Wall II" InSettlement="true" Upgrades="Metropolitan Wall I">
+    <VirtualBuilding Type="Wall" Level="1" />
+    <Construction Cost="12500" SackValue="750" MinTurns="1" Upkeep="300" CardIcon="G_BuildingIcon_Walls_Lvl2_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="900" />
+      <Tech Item="High Walls" />
+      <Building ID="Metropolitan City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="20" />
+    <Capability Name="Suppress Nobles" Level="10" />
+  </Building>
+  <Building ID="Metropolitan Wall III" InSettlement="true" Upgrades="Metropolitan Wall II">
+    <VirtualBuilding Type="Wall" Level="2" />
+    <Construction Cost="17500" SackValue="750" MinTurns="1" Upkeep="500" CardIcon="G_BuildingIcon_Walls_Lvl2_01" CardMinorIcon="G_Icon12x12_Defences_01" />
+    <Requirements>
+      <Population Num="1200" />
+      <Tech Item="Brick Faced Walls" />
+      <Building ID="Large Metropolitan City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="30" />
+    <Capability Name="Suppress Nobles" Level="15" />
+  </Building>
+  <!-- Settlements -->
+  <!-- Dummies to represent settlement on building screen Desc Done -->
+  <!--Peasant Happiness:125 Noble Happiness:75-->
+  <Building ID="Town" InSettlement="true">
+    <VirtualBuilding Type="CityLevel" Level="0" />
+    <Construction Cost="0" MinTurns="0" Upkeep="-125" CardIcon="Buildings\Town" CardMinorIcon="G_Icon12x12_City_01" />
+    <StaticRequirements>
+      <Never />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="20" />
+    <Capability Name="Noble Happiness" Level="5" />
+    <Capability Name="City Min Territory" Level="3" />
+    <Capability Name="City Max Improvement Distance" Level="4" />
+    <Capability Name="Increase Tax" Level="150" />
+    <Capability Name="Max Population" Level="150" />
+    <Capability Name="Recruit Civilians" Level="1" />
+  </Building>
+  <!--Peasant Happiness:175 Noble Happiness:1125-->
+  <Building ID="City" InSettlement="true" Upgrades="Town">
+    <VirtualBuilding Type="CityLevel" Level="1" />
+    <Construction Cost="0" MinTurns="0" Upkeep="-75" CardIcon="Buildings\City" CardMinorIcon="G_Icon12x12_City_01" />
+    <StaticRequirements>
+      <Never />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="40" />
+    <Capability Name="Noble Happiness" Level="10" />
+    <Capability Name="City Min Territory" Level="6" />
+    <Capability Name="City Max Improvement Distance" Level="7" />
+    <Capability Name="Increase Internal Trade" Level="5" />
+    <Capability Name="Max Population" Level="300" />
+  </Building> <!--Peasant Happiness:275 Noble Happiness:175-->
+  <Building ID="Huge City" InSettlement="true" Upgrades="City">
+    <VirtualBuilding Type="CityLevel" Level="2" />
+    <Construction Cost="0" MinTurns="0" Upkeep="-30" CardIcon="Buildings\Huge City" CardMinorIcon="G_Icon12x12_City_01" />
+    <StaticRequirements>
+      <Never />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="80" />
+    <Capability Name="Noble Happiness" Level="15" />
+    <Capability Name="Increase Internal Trade" Level="10" />
+    <Capability Name="City Min Territory" Level="9" />
+    <Capability Name="City Max Improvement Distance" Level="10" />
+    <Capability Name="Max Population" Level="750" />
+  </Building>
+  <!-- Has a small amount of slots compared to Trading/City/metropolitan/huge Desc Done -->
+  <!--Suppress Peasants:200 Suppress Nobles:100-->
+  <Building ID="Fortified City" InSettlement="true" Upgrades="City">
+    <VirtualBuilding Type="CityLevel" Level="2" />
+    <Construction Cost="5000" MinTurns="1" Upkeep="250" CardIcon="Buildings\Fortified City" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="175" />
+      <Tech Item="Fortified City" />
+      <Building ID="City" Exact="true" />
+      <Building ID="Fortification I" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Huge City Square" Condition="false" Exact="false" />
+      <Building ID="Trading Square" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Suppress Peasants" Level="120" />
+    <Capability Name="Suppress Nobles" Level="12" />
+    <Capability Name="City Min Territory" Level="6" />
+    <Capability Name="City Max Improvement Distance" Level="6" />
+    <Capability Name="Max Population" Level="400" />
+    <Capability Name="Increase Tax" Level="-30" />
+    <Capability Name="Increase Internal Trade" Level="40" />
+  </Building> <!--Suppress Peasants:400 Suppress Nobles:200-->
+  <Building ID="Large Fortified City" InSettlement="true" Upgrades="Fortified City">
+    <VirtualBuilding Type="CityLevel" Level="3" />
+    <Construction Cost="10000" MinTurns="2" Upkeep="500" CardIcon="Buildings\Large Fortified City" CardMinorIcon="G_Icon12x12_Barracks_01" />
+    <Requirements>
+      <Population Num="300" />
+      <Tech Item="Large Fortified City" />
+      <Tech Item="Military Architecture" />
+      <Building ID="Stone Wall" Condition="true" Exact="false" />
+      <Building ID="Fortification II" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Suppress Peasants" Level="160" />
+    <Capability Name="Suppress Nobles" Level="17" />
+    <Capability Name="City Min Territory" Level="9" />
+    <Capability Name="City Max Improvement Distance" Level="9" />
+    <Capability Name="Max Population" Level="600" />
+    <Capability Name="Increase Tax" Level="-60" />
+    <Capability Name="Increase Internal Trade" Level="80" />
+  </Building>
+  <!-- Has a medium amount of slots compared to metropolitan/huge  Desc Done-->
+  <!--Peasant Happiness:150 Noble Happiness:75-->
+  <Building ID="Trading City" InSettlement="true" Upgrades="City">
+    <VirtualBuilding Type="CityLevel" Level="2" />
+    <Construction Cost="10000" MinTurns="0" Upkeep="0" CardIcon="Buildings\Trading City" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="175" />
+      <Tech Item="Trading City" />
+      <Building ID="City" Exact="true" />
+      <Building ID="Trading Square" Condition="true" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Huge City Square" Condition="false" Exact="false" />
+      <Building ID="Fortification I" Condition="false" Exact="false" />
+    </StaticRequirements>
+    <Capability Name="Peasant Happiness" Level="35" />
+    <Capability Name="Noble Happiness" Level="12" />
+    <Capability Name="City Min Territory" Level="6" />
+    <Capability Name="City Max Improvement Distance" Level="8" />
+    <Capability Name="Max Population" Level="400" />
+  </Building> <!--Peasant Happiness:300 Noble Happiness:150-->
+  <Building ID="Large Trading City" InSettlement="true" Upgrades="Trading City">
+    <VirtualBuilding Type="CityLevel" Level="3" />
+    <Construction Cost="15000" MinTurns="1" Upkeep="0" CardIcon="Buildings\Large Trading City" CardMinorIcon="G_Icon12x12_Market_01" />
+    <Requirements>
+      <Population Num="300" />
+      <Tech Item="Large Trading City" />
+      <Building ID="Large Trading Square" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="70" />
+    <Capability Name="Noble Happiness" Level="17" />
+    <Capability Name="City Min Territory" Level="9" />
+    <Capability Name="City Max Improvement Distance" Level="12" />
+    <Capability Name="Max Population" Level="600" />
+  </Building>
+  <!--Picks into the city construction thing only at the end of upgrading fully in terms of building slots Desc Done -->
+  <!--Peasant Happiness:300 Noble Happiness:250-->
+  <Building ID="Metropolitan City" InSettlement="true" Upgrades="Huge City">
+    <VirtualBuilding Type="CityLevel" Level="3" />
+    <Construction Cost="15000" MinTurns="3" Upkeep="0" CardIcon="Buildings\Metropolitan City" CardMinorIcon="G_Icon12x12_TempleConfucian_01" />
+    <Requirements>
+      <Population Num="600" />
+      <Tech Item="Metropolitan City" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="120" />
+    <Capability Name="Noble Happiness" Level="20" />
+    <Capability Name="Boost Agriculture" Level="50" />
+    <Capability Name="Increase Internal Trade" Level="15" />
+    <Capability Name="City Min Territory" Level="12" />
+    <Capability Name="City Max Improvement Distance" Level="13" />
+    <Capability Name="Max Population" Level="1200" />
+  </Building> <!--Peasant Happiness:600 Noble Happiness:500-->
+  <Building ID="Large Metropolitan City" InSettlement="true" Upgrades="Metropolitan City">
+    <VirtualBuilding Type="CityLevel" Level="3" />
+    <Construction Cost="20000" MinTurns="3" Upkeep="0" CardIcon="Buildings\Large Metropolitan City" CardMinorIcon="G_Icon12x12_TempleConfucian_01" />
+    <Requirements>
+      <Population Num="1050" />
+      <Tech Item="Large Metropolitan City" />
+      <Building ID="Large Metropolitan City Square" Condition="true" Exact="false" />
+      <Building ID="Metropolitan City" Condition="true" Exact="false" />
+    </Requirements>
+    <Capability Name="Peasant Happiness" Level="25" />
+    <Capability Name="Noble Happiness" Level="25" />
+    <Capability Name="Boost Agriculture" Level="75" />
+    <Capability Name="Increase Internal Trade" Level="20" />
+    <Capability Name="City Min Territory" Level="15" />
+    <Capability Name="City Max Improvement Distance" Level="16" />
+    <Capability Name="Max Population" Level="2000" />
+  </Building>
+  <!-- Settlement Upgrades //////////////////////////////////////////////////
+  peasant happiness/suppression max 2546, aka a large metropolitan city can -->
+  <!-- Added for Genghis but must come before other settlement upgrades  Desc Done-->
+  <Building ID="Town To Horde" InSettlement="true">
+    <VirtualBuilding Type="TownToHorde" Level="1" />
+    <Construction Cost="500" MinTurns="0" Upkeep="0" CardIcon="G_BuildingIcon_Mongol_Icon_ConvertHordeToTown_01" CardMinorIcon="G_Icon12x12_City_01" />
+    <Requirements>
+      <Population Num="150" Condition="false" />
+      <HordeSettlement Condition="false" />
+      <Tech Item="Iron Wheeled Carts" />
+      <CanConvertToHorde />
+    </Requirements>
+  </Building>
+  <Building ID="City Upgrade" InSettlement="true">
+    <VirtualBuilding Type="CityUpgrade" Level="1" />
+    <Construction Cost="5000" MinTurns="0" Upkeep="0" CardIcon="Buildings\City" CardMinorIcon="G_Icon12x12_City_01" />
+    <Requirements>
+      <Population Num="100" />
+      <Building ID="Town" Exact="true" />
+      <Building ID="City Square" Condition="true" Exact="false" />
+      <HordeSettlement Condition="false" />
+    </Requirements>
+  </Building>
+  <Building ID="Huge City Upgrade" InSettlement="true">
+    <VirtualBuilding Type="CityUpgrade" Level="2" />
+    <Construction Cost="10000" MinTurns="0" Upkeep="0" CardIcon="Buildings\Huge City" CardMinorIcon="G_Icon12x12_City_01" />
+    <Requirements>
+      <Population Num="250" />
+      <Building ID="City" Exact="true" />
+      <Building ID="Huge City Square" Condition="true" Exact="false" />
+      <HordeSettlement Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Building ID="Trading Square" Condition="false" Exact="false" />
+      <Building ID="Fortification I" Condition="false" Exact="false" />
+    </StaticRequirements>
+  </Building>
+</Root>

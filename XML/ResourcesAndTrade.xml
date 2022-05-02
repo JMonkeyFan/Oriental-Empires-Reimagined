@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires ResourcesAndTrade.xsd">
+  <!--
+  <MapResource ID="Rhinoceros" IconName="G_Icon_Resource_Rhino_01" HighlightIcon="G_Icon_Resource_Rhino_01_Active" Use="Money" Value="60" AmbientItemSet="Rhino Herd">
+    <Placement Terrain="Fertile Plain" Climate="Northern China" Chance="0.01"/>
+    <Placement Terrain="Fertile Plain" Climate="Southern China" Chance="0.01"/>
+    <Placement Terrain="Fertile Plain" Climate="Western China" Chance="0.01"/>
+  </MapResource>
+
+  <MapResource ID="Wild Horses" IconName="G_Icon_Resource_Horse_01" HighlightIcon="G_Icon_Resource_Horse_01_Active"  Use="Trade" TradeItem ="Horses" AmbientItemSet="Wild Horse Herd">
+    <Placement Terrain="Grassland" Climate="Northern China" Chance="0.01"/>
+    <Placement Terrain="Grassland" Climate="Western China" Chance="0.01"/>
+    <Placement Terrain="Grassland" Climate="Central Asia" Chance="0.01"/>
+    <Placement Terrain="Fertile Plain" Climate="Central Asia" Chance="0.01"/>
+  </MapResource>
+
+  <MapResource ID="Wild Game" IconName="G_Icon_Resource_WildGame_01" HighlightIcon="G_Icon_Resource_WildGame_01_Active"  Use="Food" Value="3" AmbientItemSet="Deer Herd">
+    <Placement Terrain="Fertile Plain" Chance="0.01"/>
+    <Placement Terrain="Grassland" Chance="0.005"/>
+  </MapResource>
+
+  <MapResource ID="Fish" IconName="G_Icon_Resource_Fish_01" HighlightIcon="G_Icon_Resource_Fish_01_Active"  Use="Food" Value="4" AmbientItemSet="Fish Shoal">
+    <Placement Terrain="Navigable River" Chance="0.04"/>
+    <Placement Terrain="Coastal" Chance="0.04"/>
+  </MapResource>
+
+  <MapResource ID="Copper" IconName="G_Icon_Resource_Copper_01" HighlightIcon="G_Icon_Resource_Copper_01_Active"  Use="ProductionBoost" BoostTradeItem="Bronze" Value="30">
+    <DotColor R="255" G="0" B="255"/>
+    <Placement Terrain="Mountains" Chance="0.065"/>
+    <Placement Terrain="Steep Hills" Chance="0.065"/>
+  </MapResource>
+
+  <MapResource ID="Gold" IconName="G_Icon_Resource_Gold_01" HighlightIcon="G_Icon_Resource_Gold_01_Active"  Use="Other">
+    <DotColor R="255" G="0" B="255"/>
+    <Placement Terrain="Mountains" Chance="0.25"/>
+  </MapResource>
+
+  <MapResource ID="Jade" IconName="G_Icon_Resource_Jade_01" HighlightIcon="G_Icon_Resource_Jade_01_Active"  Use="Other">
+    <DotColor R="255" G="0" B="255"/>
+    <Placement Terrain="Mountains" Chance="0.15"/>
+  </MapResource>
+
+ <MapResource ID="Kaolinite" IconName="G_Icon_Resource_WhiteClay_01" HighlightIcon="G_Icon_Resource_WhiteClay_01_Active"  Use="ProductionBoost" BoostTradeItem="Ceramics" Value="30">
+    <Placement Terrain="Gentle Hills" Chance="0.002"/>
+  </MapResource>
+
+  <MapResource ID="Mulberry" IconName="G_Icon_Resource_Mulberry_01" HighlightIcon="G_Icon_Resource_Mulberry_01_Active"  Use="ProductionBoost" BoostTradeItem="Silk" Value="30">
+    <Placement Terrain="Fertile Plain" Climate="Northern China" Chance="0.003"/>
+    <Placement Terrain="Fertile Plain" Climate="Southern China" Chance="0.003"/>
+    <Placement Terrain="Fertile Plain" Climate="Western China" Chance="0.003"/>
+  </MapResource>
+
+  <MapResource ID="Bamboo" IconName="G_Icon_Resource_Bamboo_01" HighlightIcon="G_Icon_Resource_Bamboo_01_Active" Use="Trade" TradeItem ="Bamboo">
+    <Placement Terrain="Fertile Plain" Climate="Southern China" Chance="0.001"/>
+    <Placement Terrain="Forest" Climate="Southern China" Chance="0.003"/>
+    <Placement Terrain="Forest" Climate="Western China" Chance="0.003"/>
+  </MapResource>
+
+  <MapResource ID="ZhennanWood" IconName="G_Icon_Resource_ZhennanWood_01" HighlightIcon="G_Icon_Resource_ZhennanWood_01_Active" Use="Trade" TradeItem ="Zhennan Wood">
+    <Placement Terrain="Forest" Climate="Western China" Chance="0.002"/>
+  </MapResource>
+
+  <MapResource ID="Sable" IconName="G_Icon_Resource_Sable_02" HighlightIcon="G_Icon_Resource_Sable_02_Active" Use="Trade" TradeItem ="Sable Fur">
+    <Placement Terrain="Forest" Climate="Central Asia" Chance="0.003"/>
+  </MapResource>
+
+  <MapResource ID="Falcons" IconName="G_Icon_Resource_Falcons_01" HighlightIcon="G_Icon_Resource_Falcons_01_Active" Use="Trade" TradeItem ="Falcons">
+    <Placement Terrain="Steep Hills" Climate="Central Asia" Chance="0.007"/>
+  </MapResource>
+
+  <MapResource ID="Goats" IconName="G_Icon_Resource_WildGoats_01" HighlightIcon="G_Icon_Resource_WildGoats_01_Active" Use="Food" Value ="2">
+    <Placement Terrain="Steep Hills" Climate="Central Asia" Chance="0.002"/>
+    <Placement Terrain="Steep Hills" Climate="Gobi Desert" Chance="0.003"/>
+    <Placement Terrain="Steep Hills" Climate="Central Asia DLC" Chance="0.003"/>
+    <Placement Terrain="Steep Hills" Climate="Western China" Chance="0.002"/>
+  </MapResource>-->
+
+  <!-- Trade Networks -->
+  <MapResource ID="Silk Road West" IconName="G_Icon_Resource_TradeRoute_Carpet_01" HighlightIcon="G_Icon_Resource_TradeRoute_Carpet_01_Active" Use="Network" Value="100" />
+  <MapResource ID="Silk Road East" IconName="G_Icon_Resource_TradeRoute_Silk_01" HighlightIcon="G_Icon_Resource_TradeRoute_Silk_01_Active" Use="Network" Value="100" />
+  <MapResource ID="Silk Road Central" IconName="G_Icon_Resource_TradeRoute_Jade_01" HighlightIcon="G_Icon_Resource_TradeRoute_Jade_01_Active" Use="Network" Value="100" />
+  <MapResource ID="Spice Road" IconName="G_Icon_Resource_TradeRoute_Spice_01" HighlightIcon="G_Icon_Resource_TradeRoute_Spice_01_Active" Use="Network" Value="100" />
+  <MapResource ID="Falcon Road" IconName="G_Icon_Resource_TradeRoute_Falcon_01" HighlightIcon="G_Icon_Resource_TradeRoute_Falcon_01_Active" Use="Network" Value="100" />
+  <MapResource ID="Sable Road" IconName="G_Icon_Resource_TradeRoute_Fur_02" HighlightIcon="G_Icon_Resource_TradeRoute_Fur_02_Active" Use="Network" Value="100" />
+
+  <MapResource ID="Trade Route2" IconName="G_Icon_Resource_TradeRoute_01" HighlightIcon="G_Icon_Resource_TradeRoute_01_Active" Use="Money" Value="100"></MapResource>
+  <!--
+  <MapResource ID="Sea Trade Route2" IconName="G_Icon_Resource_SeaTradeRoute_01" HighlightIcon="G_Icon_Resource_SeaTradeRoute_01_Active"  Use="Money" Value="150">
+  </MapResource>
+-->
+
+</Root>

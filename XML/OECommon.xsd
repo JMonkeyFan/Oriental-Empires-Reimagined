@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Enumeration of seasons -->
+  <xs:simpleType name="Season">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Spring"/>
+      <xs:enumeration value="Summer"/>
+      <xs:enumeration value="Autumn"/>
+      <xs:enumeration value="Winter"/>
+      <xs:enumeration value ="Any"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Enumeration of hex coverage -->
+  <xs:simpleType name="HexCoverage">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Full"/>
+      <xs:enumeration value="Part"/>
+      <xs:enumeration value="Waterside"/>
+      <xs:enumeration value="UnderImprovement"/>
+      <xs:enumeration value="Any"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Degree">
+    <xs:restriction base="xs:float">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="360"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TechEdictArea">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Agriculture"/>
+      <xs:enumeration value="Military"/>
+      <xs:enumeration value ="Economy"/>
+      <xs:enumeration value="Culture"/>
+      <xs:enumeration value="Naval"/>
+      <xs:enumeration value="Authority"/>
+      <xs:enumeration value ="Misc"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

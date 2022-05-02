@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+  <xs:simpleType name="RewardType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RandomPowerTech"/>
+      <xs:enumeration value="ImprovePowerResearch"/>
+      <xs:enumeration value="RandomCraftTech"/>
+      <xs:enumeration value="ImproveCraftResearch"/>
+      <xs:enumeration value="RandomThoughtTech"/>
+      <xs:enumeration value="ImproveThoughtResearch"/>
+      <xs:enumeration value="RandomKnowledgeTech"/>
+      <xs:enumeration value="ImproveKnowledgeResearch"/>
+      <xs:enumeration value="ImproveQi"/>
+      <xs:enumeration value="ImproveRen"/>
+      <xs:enumeration value="Money"/>
+      <xs:enumeration value="IncreaseAuthority"/>
+
+      <xs:enumeration value="DecreaeQi"/>
+      <xs:enumeration value="DecreaseRen"/>
+      <xs:enumeration value="DecreaseAuthority"/>
+      <xs:enumeration value="RevealMap"/>
+      <xs:enumeration value="RevealCities"/>
+      <xs:enumeration value="RevealCapital"/>
+      <xs:enumeration value="RevealWater"/>
+      <xs:enumeration value="RevealResource"/>
+      <xs:enumeration value="JoinAsMilitaryLeader"/>
+      <xs:enumeration value="JoinAsCivilLeader"/>
+      <xs:enumeration value="UnitsJoinArmy"/>
+      <xs:enumeration value="CultureVPs"/>
+      <xs:enumeration value="Never"/>
+      <xs:enumeration value="Always"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CostType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Money"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Standard Event Modifiers -->
+  <xs:complexType name="ClimateModifier">
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+    <xs:attribute name="Modifier" type="xs:float" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="TerrainModifier">
+    <xs:attribute name="BaseTerrainID" type="xs:string" use="required"/>
+    <xs:attribute name="Modifier" type="xs:float" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="TechModifier">
+    <xs:attribute name="Item" type="xs:string" use="required"/>
+    <xs:attribute name="Modifier" type="xs:float" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DifficultyModifier">
+    <xs:attribute name="VH" type="xs:float" use="optional"/>
+    <xs:attribute name="H" type="xs:float" use="optional"/>
+    <xs:attribute name="N" type="xs:float" use="optional"/>
+    <xs:attribute name="E" type="xs:float" use="optional"/>
+  </xs:complexType>
+   
+  <xs:complexType name="Encounter">
+    <xs:sequence>
+      <xs:element name="Graphics">
+        <xs:complexType>
+          <xs:attribute name="Picture" type="xs:string" use ="required"/>
+          <xs:attribute name="Portrait" type="xs:string" use ="required"/>
+          <xs:attribute name="SpriteMarker" type="xs:string" use ="required"/>
+          <xs:attribute name="EventIcon" type="xs:string" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Occurance">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AllowedTerrain" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="ID" type="xs:string" use ="required"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="ClimateModifier" type="oe:ClimateModifier" minOccurs="0" maxOccurs="unbounded"/>
+              <xs:element name="TerrainModifier" type="oe:TerrainModifier" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:choice>
+          </xs:sequence>
+          <xs:attribute name="BaseChance" type="xs:float" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Rewards" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Type" type="oe:RewardType" use="required"/>
+          <xs:attribute name="Min" type="xs:float" use="required"/>
+          <xs:attribute name="Max" type="xs:float" use="required"/>
+          <xs:attribute name="Tag" type="xs:string" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Cost" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Type" type="oe:CostType" use="required"/>
+          <xs:attribute name="Min" type="xs:float" use="required"/>
+          <xs:attribute name="Max" type="xs:float" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Text">
+        <xs:complexType>
+          <xs:attribute name="NoReward" type="xs:string" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use ="required"/>
+    <xs:attribute name="PersistAfterFirstVisit" type="xs:int" use ="optional"/>
+    <xs:attribute name="MustAccept" type="xs:boolean" use ="optional"/>
+  </xs:complexType>
+  
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Encounter" type="oe:Encounter" maxOccurs ="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

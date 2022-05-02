@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="OECommon.xsd" />
+  <xs:include schemaLocation="Requirement.xsd" />
+
+  <!-- Enumeration of roles -->
+  <xs:simpleType name="ActorRole">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Foot" />
+      <xs:enumeration value="Rider" />
+      <xs:enumeration value="RiderShooter" />
+      <xs:enumeration value="Driver" />
+      <xs:enumeration value="Mount" />
+      <xs:enumeration value="Vehicle" />
+      <xs:enumeration value="Draught" />
+      <xs:enumeration value="Equipment" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ElementRole">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default" />
+      <xs:enumeration value="Officer" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ElementType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Infantry" />
+      <xs:enumeration value="Cavalry" />
+      <xs:enumeration value="Vehicle" />
+      <xs:enumeration value="ArtilleryEngine" />
+      <xs:enumeration value="Ship" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Forming">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WellFormed" />
+      <xs:enumeration value="Formed" />
+      <xs:enumeration value="PoorlyFormed" />
+      <xs:enumeration value="Mob" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="UnitCategory">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Infantry" />
+      <xs:enumeration value="Missile" />
+      <xs:enumeration value="Chariot" />
+      <xs:enumeration value="Cavalry" />
+      <xs:enumeration value="Artillery" />
+      <xs:enumeration value="Settler" />
+      <xs:enumeration value="Naval" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Enumeration of card class -->
+  <xs:simpleType name="CardClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Levy" />
+      <xs:enumeration value="Regular" />
+      <xs:enumeration value="Tribal" />
+      <xs:enumeration value="Noble" />
+      <xs:enumeration value="Guard" />
+      <xs:enumeration value="Special" />
+      <xs:enumeration value="Mercenary" />
+      <xs:enumeration value="Leader" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Cost Modifiers -->
+  <xs:complexType name="CostModifiersType">
+    <xs:attribute name="Recruitment" type="xs:int" use="required" />
+    <xs:attribute name="Upkeep" type="xs:int" use="required" />
+  </xs:complexType>
+
+  <!-- Element types for different formations -->
+  <xs:complexType name="BlockFormation">
+    <xs:attribute name="Depth" type="xs:positiveInteger" use="required" />
+    <xs:attribute name="SpacingX" type="xs:float" use="required" />
+    <xs:attribute name="SpacingY" type="xs:float" use="required" />
+    <xs:attribute name="Forming" type="oe:Forming" use="required" />
+    <xs:attribute name="PaddingSide" type="xs:float" use="optional" />
+    <xs:attribute name="PaddingRear" type="xs:float" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="MultiBlockFormation">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="Block">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Anchor" minOccurs="0">
+              <xs:complexType>
+                <xs:attribute name="AnchorBlock" type="xs:nonNegativeInteger" use="required" />
+                <xs:attribute name="XOffset" type="xs:float" use="optional" />
+                <xs:attribute name="YOffset" type="xs:float" use="optional" />
+                <xs:attribute name="EdgeRelativeX" type="xs:boolean" use="optional" />
+                <xs:attribute name="EdgeRelativeY" type="xs:boolean" use="optional" />
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Element" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="Index" type="xs:nonNegativeInteger" use="required" />
+                <xs:attribute name="Weight" type="xs:float" use="required" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="Name" type="xs:string" use="optional" />
+          <xs:attribute name="Forming" type="oe:Forming" use="required" />
+          <xs:attribute name="SpacingX" type="xs:float" use="required" />
+          <xs:attribute name="SpacingY" type="xs:float" use="required" />
+          <xs:attribute name="MaxCols" type="xs:positiveInteger" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Crew">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required" />
+          <xs:attribute name="ElementIndex" type="xs:nonNegativeInteger" use="required" />
+          <xs:attribute name="Weight" type="xs:float" use="required" />
+          <xs:attribute name="AttachTo" type="xs:string" use="required" />
+          <xs:attribute name="Bone" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+    <xs:attribute name="PaddingSide" type="xs:float" use="optional" />
+    <xs:attribute name="PaddingRear" type="xs:float" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="EffectAttachment">
+    <xs:attribute name="BoneName" type="xs:string" use="required" />
+    <xs:attribute name="EffectName" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="BannersType">
+    <xs:attribute name="Main" type="xs:string" use="required" />
+    <xs:attribute name="Mini" type="xs:string" use="required" />
+    <xs:attribute name="MainAttachmentBone" type="xs:string" use="optional" />
+    <xs:attribute name="MiniAttachmentBone" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="CardType">
+    <xs:attribute name="CardName" type="xs:string" use="required" />
+    <xs:attribute name="Class" type="oe:CardClass" use="required" />
+    <xs:attribute name="Armor" type="xs:nonNegativeInteger" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="RecruitmentType">
+    <xs:attribute name="Pool" type="xs:string" use="required" />
+    <xs:attribute name="Cost" type="xs:nonNegativeInteger" use="required" />
+    <xs:attribute name="Upkeep" type="xs:nonNegativeInteger" use="required" />
+    <xs:attribute name="Population" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="FirstEra" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="LastEra" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="Era" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="UnitSet" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="CapabilityType">
+    <xs:attribute name="Name" type="xs:string" use="required" />
+    <xs:attribute name="Level" type="xs:int" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="RemoveCapabilityType">
+    <xs:attribute name="Name" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="CombatType">
+    <xs:attribute name="Morale" type="xs:string" use="required" />
+    <xs:attribute name="DismountedUnit" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="UnitElementType">
+    <xs:sequence>
+      <xs:element name="Actor" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Role" type="oe:ActorRole" use="optional" />
+          <xs:attribute name="Number" type="xs:positiveInteger" use="optional" />
+          <xs:attribute name="ModelName" type="xs:string" use="required" />
+          <xs:attribute name="AnimSet" type="xs:string" use="optional" />
+          <xs:attribute name="TargetBone" type="xs:string" use="optional" />
+          <xs:attribute name="AttachBone" type="xs:string" use="optional" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Combat">
+        <xs:complexType>
+          <xs:attribute name="Weapon" type="xs:string" use="required" />
+          <xs:attribute name="Skill" type="xs:string" use="required" />
+          <xs:attribute name="Armor" type="xs:string" use="required" />
+          <xs:attribute name="Shield" type="xs:string" use="optional" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Projectile" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Ammo" type="xs:string" use="required" />
+          <xs:attribute name="Ammo2" type="xs:string" use="optional" />
+          <xs:attribute name="Ammo3" type="xs:string" use="optional" />
+          <xs:attribute name="Ammo4" type="xs:string" use="optional" />
+          <xs:attribute name="Ammo5" type="xs:string" use="optional" />
+          <xs:attribute name="Ammo6" type="xs:string" use="optional" />
+          <xs:attribute name="Ammo7" type="xs:string" use="optional" />
+          <xs:attribute name="Ammo8" type="xs:string" use="optional" />
+          <xs:attribute name="Ammo9" type="xs:string" use="optional" />
+          <xs:attribute name="AttachBone" type="xs:string" use="required" />
+          <xs:attribute name="SkillModifier" type="xs:int" use="optional" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CollisionSize" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Length" type="xs:float" use="required" />
+          <xs:attribute name="Width" type="xs:float" use="required" />
+          <xs:attribute name="Height" type="xs:float" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DamageEffect" type="oe:EffectAttachment" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="MovementEffect" type="oe:EffectAttachment" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="HiddenShootingPosition" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="BoneName" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Number" type="xs:positiveInteger" use="optional" />
+    <xs:attribute name="Role" type="oe:ElementRole" use="optional" />
+    <xs:attribute name="Type" type="oe:ElementType" use="optional" />
+    <xs:attribute name="DestructionSound" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="MovementType">
+    <xs:attribute name="Class" type="xs:string" use="required" />
+    <xs:attribute name="MovementUnit" type="xs:string" use="optional" />
+    <xs:attribute name="MaxCargoSize" type="xs:int" use="optional" />
+    <xs:attribute name="MaxEmbarkedUnits" type="xs:int" use="optional" />
+    <xs:attribute name="StackingLimit" type="xs:int" use="optional" />
+  </xs:complexType>
+
+  <!-- Full definition for a unit -->
+  <xs:complexType name="UnitType">
+    <xs:sequence>
+      <xs:element name="Banners" type="oe:BannersType" />
+      <xs:element name="Card" type="oe:CardType" />
+      <xs:element name="Recruitment" type="oe:RecruitmentType" />
+      <!--Requirements that the player can take action to meet-->
+      <xs:element name="Requirements" type="oe:RequirementList" minOccurs="0" />
+
+      <!-- These are requirements that won't change over time, or are only valid
+		at certain fixed locations. Player's won't be offerred items that don't meet
+		the static reqirements since they have no means to meet them.
+		Examples include requirements for a specific race, game type,
+		or geographical location -->
+      <xs:element name="StaticRequirements" type="oe:RequirementList" minOccurs="0" />
+
+      <!-- The capabilities the unit has -->
+      <xs:element name="Capability" type="oe:CapabilityType" maxOccurs="unbounded" minOccurs="0" />
+
+      <!-- Choice of formation elements -->
+      <xs:choice>
+        <xs:element name="BlockFormation" type="oe:BlockFormation" />
+        <xs:element name="MultiBlockFormation" type="oe:MultiBlockFormation" />
+      </xs:choice>
+
+      <xs:element name="Combat" type="oe:CombatType" />
+      <xs:element name="Element" type="oe:UnitElementType" maxOccurs="unbounded" />
+      <xs:element name="Movement" type="oe:MovementType" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required" />
+    <xs:attribute name="NameTag" type="xs:string" use="required" />
+    <xs:attribute name="Test" type="xs:boolean" use="optional" />
+    <xs:attribute name="Category" type="oe:UnitCategory" use="optional" />
+    <xs:attribute name="NonCombat" type="xs:boolean" use="optional" />
+    <xs:attribute name="Tags" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- Types to specify upgrade of an element or elements -->
+  <xs:complexType name="ElementChange">
+    <xs:attribute name="Index" type="xs:nonNegativeInteger" use="required" />
+    <xs:attribute name="Armor" type="xs:string" use="optional" />
+    <xs:attribute name="Shield" type="xs:string" use="optional" />
+    <xs:attribute name="Weapon" type="xs:string" use="optional" />
+    <xs:attribute name="Actor" type="xs:nonNegativeInteger" use="required" />
+    <xs:attribute name="NewModel" type="xs:string" use="required" />
+    <xs:attribute name="AnimSet" type="xs:string" use="optional" />
+    <xs:attribute name="Skill" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="ElementChanges">
+    <xs:sequence>
+      <xs:element name="ActorChange" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Index" type="xs:nonNegativeInteger" use="required" />
+          <xs:attribute name="NewModel" type="xs:string" use="required" />
+          <xs:attribute name="AnimSet" type="xs:string" use="optional" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Index" type="xs:nonNegativeInteger" use="required" />
+    <xs:attribute name="Armor" type="xs:string" use="optional" />
+    <xs:attribute name="Shield" type="xs:string" use="optional" />
+    <xs:attribute name="Weapon" type="xs:string" use="optional" />
+    <xs:attribute name="Skill" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="ElementModification">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="ElementChange" type="oe:ElementChange" />
+      <xs:element name="ElementChanges" type="oe:ElementChanges" />
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="UnitSubstitutions">
+    <xs:attribute name="MovementUnit" type="xs:string" use="optional" />
+    <xs:attribute name="DismountedUnit" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- Definition for unit that implements a different armour level of a base type -->
+  <xs:complexType name="ArmorVariantType">
+    <xs:sequence>
+      <xs:element name="Requirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="ChangedRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="AddRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="DropRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="SubstituteUnits" type="oe:UnitSubstitutions" minOccurs="0" />
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ElementChange" type="oe:ElementChange" />
+        <xs:element name="ElementChanges" type="oe:ElementChanges" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required" />
+    <xs:attribute name="BasedOn" type="xs:string" use="required" />
+    <xs:attribute name="ArmorLevel" type="xs:int" use="required" />
+    <xs:attribute name="NameTag" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- Definition for unit that's just a graphical varient for a different era-->
+  <xs:complexType name="EraVariantType">
+    <xs:sequence>
+      <xs:element name="Requirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="ChangedRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="AddRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="DropRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="SubstituteUnits" type="oe:UnitSubstitutions" minOccurs="0" />
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="ElementChange" type="oe:ElementChange" />
+        <xs:element name="ElementChanges" type="oe:ElementChanges" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required" />
+    <xs:attribute name="BasedOn" type="xs:string" use="required" />
+    <xs:attribute name="FirstEra" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="LastEra" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="Era" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="UnitSet" type="xs:string" use="optional" />
+    <xs:attribute name="NameTag" type="xs:string" use="optional" />
+    <xs:attribute name="CardName" type="xs:string" use="optional" />
+    <xs:attribute name="Tags" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="ImportIntoUnitSetType">
+    <xs:sequence>
+      <xs:element name="ModelChange" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Old" type="xs:string" use="required" />
+          <xs:attribute name="New" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ImportUnit" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="ID" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="UnitSet" type="xs:string" use="required" />
+    <xs:attribute name="ReplaceID" type="xs:string" use="required" />
+    <xs:attribute name="With" type="xs:string" use="required" />
+  </xs:complexType>
+
+
+  <!-- Modding Elements ////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <xs:complexType name="DropType">
+    <xs:attribute name="ID" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="ReplaceArmorVariantType">
+    <xs:sequence>
+      <xs:element name="Requirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="ChangedRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="AddRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="DropRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="SubstituteUnits" type="oe:UnitSubstitutions" minOccurs="0" />
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ElementChange" type="oe:ElementChange" />
+        <xs:element name="ElementChanges" type="oe:ElementChanges" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required" />
+    <xs:attribute name="ArmorLevel" type="xs:int" use="required" />
+    <xs:attribute name="NameTag" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="ReplaceEraVariantType">
+    <xs:sequence>
+      <xs:element name="Requirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="ChangedRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="AddRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="DropRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="SubstituteUnits" type="oe:UnitSubstitutions" minOccurs="0" />
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="ElementChange" type="oe:ElementChange" />
+        <xs:element name="ElementChanges" type="oe:ElementChanges" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required" />
+    <xs:attribute name="FirstEra" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="LastEra" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="Era" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="UnitSet" type="xs:string" use="optional" />
+    <xs:attribute name="NameTag" type="xs:string" use="optional" />
+    <xs:attribute name="CardName" type="xs:string" use="optional" />
+    <xs:attribute name="Tags" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="ModifyType">
+    <xs:sequence>
+      <xs:element name="Banners" type="oe:BannersType" minOccurs="0" />
+      <xs:element name="Card" type="oe:CardType" minOccurs="0" />
+      <xs:element name="Recruitment" type="oe:RecruitmentType" minOccurs="0" />
+      <xs:element name="Requirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="StaticRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="ChangedRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="AddRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="DropRequirements" type="oe:RequirementList" minOccurs="0" />
+      <xs:element name="SubstituteUnits" type="oe:UnitSubstitutions" minOccurs="0" />
+      <xs:element name="AddCapability" type="oe:CapabilityType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="RemoveCapability" type="oe:RemoveCapabilityType" minOccurs="0" maxOccurs="unbounded" />
+      <!-- Choice of formation elements -->
+      <xs:choice minOccurs="0">
+        <xs:element name="BlockFormation" type="oe:BlockFormation" />
+        <xs:element name="MultiBlockFormation" type="oe:MultiBlockFormation" />
+      </xs:choice>
+      <xs:element name="Combat" type="oe:CombatType" minOccurs="0" />
+      <xs:element name="Element" type="oe:UnitElementType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="ElementChange" type="oe:ElementChange" />
+        <xs:element name="ElementChanges" type="oe:ElementChanges" />
+      </xs:choice>
+      <xs:element name="Movement" type="oe:MovementType" minOccurs="0" />
+
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required" />
+    <xs:attribute name="NameTag" type="xs:string" use="optional" />
+    <xs:attribute name="Tags" type="xs:string" use="optional" />
+    <xs:attribute name="ArmorLevel" type="xs:int" use="optional" />
+    <xs:attribute name="FirstEra" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="LastEra" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="Era" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="UnitSet" type="xs:string" use="optional" />
+    <xs:attribute name="CardName" type="xs:string" use="optional" />
+
+  </xs:complexType>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <xs:element name="UnitTypes">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="CostModifiers" type="oe:CostModifiersType" />
+        <xs:element name="Unit" type="oe:UnitType" />
+        <xs:element name="ArmorVariant" type="oe:ArmorVariantType" />
+        <xs:element name="EraVariant" type="oe:EraVariantType" />
+        <xs:element name="ImportIntoUnitSet" type="oe:ImportIntoUnitSetType" />
+        <!-- Modding Elements -->
+        <xs:element name="Drop" type="oe:DropType" />
+        <xs:element name="ReplaceArmorVariant" type="oe:ReplaceArmorVariantType" />
+        <xs:element name="ReplaceEraVariant" type="oe:ReplaceEraVariantType" />
+        <xs:element name="Replace" type="oe:UnitType" />
+        <xs:element name="Modify" type="oe:ModifyType" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

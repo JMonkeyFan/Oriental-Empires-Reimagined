@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="Requirement.xsd"/>
+  <xs:include schemaLocation="OECommon.xsd"/>
+
+  <xs:simpleType name="EffectArea">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RecoveryRate"/>
+      <xs:enumeration value="PeasantUnrest"/>
+      <xs:enumeration value="RecruitmentCost"/>
+      <xs:enumeration value="RecruitmentRecovery"/>
+      <xs:enumeration value="CivilCandidateQuality"/>
+      <xs:enumeration value="NobleUnrest"/>
+      <xs:enumeration value="Authority"/>
+      <xs:enumeration value="IncreaseCourtCharacters"/>
+      <xs:enumeration value="ReduceCorruption"/>
+      <xs:enumeration value="MeleeCombat"/>
+      <xs:enumeration value="InfantryCombat"/>
+      <xs:enumeration value="MountedCombat"/>      
+      <xs:enumeration value="IncreaseTax"/>
+      <xs:enumeration value="FoodProduction"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="BudgetType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LandUpkeepCost"/>
+      <xs:enumeration value="AllIncome"/>
+      <xs:enumeration value="Government"/>
+      <xs:enumeration value="SecularBuildingUpkeep"/>
+      <xs:enumeration value="ReligiousBuildingUpkeep"/>
+      <xs:enumeration value="RecruitmentCost"/>
+      <xs:enumeration value="Tribute"/>
+      <xs:enumeration value="Justice"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="Budget">
+    <xs:attribute name="Type" type="oe:BudgetType" use="required"/>
+    <xs:attribute name="ImmuneAmount" type="xs:int" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="OfficeEffect">
+    <xs:attribute name="Type" type="oe:EffectArea" use="required"/>
+    <xs:attribute name="Base" type="xs:float" use="required"/>
+    <xs:attribute name="EffectModifier" type="xs:float" use="optional"/>
+    <xs:attribute name="EffectModifier2" type="xs:float" use="optional"/>
+    <xs:attribute name="CorruptionModifier" type="xs:float" use="optional"/>
+    <xs:attribute name="Max" type="xs:float" use="optional"/>
+    <xs:attribute name="Min" type="xs:float" use="optional"/>
+  </xs:complexType>
+  
+  <!-- Definition for a single office -->
+  <xs:complexType name ="Office">
+    <xs:sequence>
+      <xs:element name="Seniority">
+        <xs:complexType>
+          <xs:attribute name="Max" type="xs:integer" use="required"/>
+          <xs:attribute name="IncreaseYears" type="xs:integer" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Effectiveness">
+        <xs:complexType>
+          <xs:attribute name="Energy" type="xs:float" use="required"/>
+          <xs:attribute name="Virtue" type="xs:float" use="required"/>
+          <xs:attribute name="Seniority" type="xs:float" use="required"/>
+          <xs:attribute name="HasHolderBonus" type="xs:float" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Effectiveness2" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Energy" type="xs:float" use="required"/>
+          <xs:attribute name="Virtue" type="xs:float" use="required"/>
+          <xs:attribute name="Seniority" type="xs:float" use="required"/>
+          <xs:attribute name="HasHolderBonus" type="xs:float" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Effect" type="oe:OfficeEffect" maxOccurs="unbounded" minOccurs ="0"/>
+      <xs:element name="Budget" maxOccurs="unbounded" minOccurs ="0">
+        <xs:complexType>
+          <xs:attribute name="Type" type="oe:BudgetType" use="required"/>
+          <xs:attribute name="Modifier" type="xs:float" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name ="ID" type="xs:string" use ="required"></xs:attribute>
+    <xs:attribute name ="MustBeGeneral" type="xs:boolean" use ="optional"></xs:attribute>
+    <xs:attribute name ="IsAdvisor" type="xs:boolean" use ="optional"></xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Budget" type="oe:Budget" maxOccurs="unbounded"/>
+        <xs:element name="Office" type="oe:Office" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

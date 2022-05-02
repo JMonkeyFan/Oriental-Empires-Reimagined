@@ -1,0 +1,1463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UnitTypes xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires UnitType.xsd">
+
+  <!-- All cost and upkeep values after this will be modified by these percentages -->
+  <CostModifiers Recruitment="140" Upkeep="140" />
+
+  <!--/////////////////////////////////////////////////////////-->
+  <!-- Mongols ////////////////////////////////////////////////-->
+  <!-- ////////////////////////////////////////////////////////-->
+
+  <!-- Mongol Militia -->
+  <EraVariant ID="Mongol Militia Light Archer L1" BasedOn="ENB Militia Light Archer L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Militia Light Archer L2" BasedOn="ENB Militia Light Archer L2" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol LightFur Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Militia Light Archer L3" BasedOn="ENB Militia Light Archer L3" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Leather1A Archer" />
+  </EraVariant>
+
+  <!-- Spearmen -->
+  <EraVariant ID="Mongol Militia Light Spearmen L1" BasedOn="ENB Militia Light Spearmen L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Militia Light Spearmen L2" BasedOn="ENB Militia Light Spearmen L2" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol LightFur Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Militia Light Spearmen L3" BasedOn="ENB Militia Light Spearmen L3" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Leather1A Spearman" />
+  </EraVariant>
+
+  <!-- Halberds -->
+  <EraVariant ID="Mongol Militia Halberds L1" BasedOn="ENB Militia Dagger Axemen L1" UnitSet="Mongol" Era="2" CardName="G_Stack_Type_MeleeHalberd_01" NameTag="Militia Halberds">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Halberd" AnimSet="Halberd NS" Weapon="Foot Halberd" Shield="None" />
+  </EraVariant>
+  <EraVariant ID="Mongol Militia Halberds L2" BasedOn="ENB Militia Dagger Axemen L2" UnitSet="Mongol" Era="2" CardName="G_Stack_Type_MeleeHalberd_01" NameTag="Militia Halberds">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol LightFur Halberd" AnimSet="Halberd NS" Weapon="Foot Halberd" Shield="None" />
+  </EraVariant>
+  <EraVariant ID="Mongol Militia Halberds L3" BasedOn="ENB Militia Dagger Axemen L3" UnitSet="Mongol" Era="2" CardName="G_Stack_Type_MeleeHalberd_01" NameTag="Militia Halberds">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Leather1A Halberd" AnimSet="Halberd NS" Weapon="Foot Halberd" Shield="None" />
+  </EraVariant>
+
+  <!-- Long Spearmen-->
+  <EraVariant ID="Mongol Militia Heavy Spearmen L1" BasedOn="NB Militia Heavy Spearmen L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Long Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Militia Heavy Spearmen L2" BasedOn="NB Militia Heavy Spearmen L2" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol LightFur Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Militia Heavy Spearmen L3" BasedOn="NB Militia Heavy Spearmen L3" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Leather1A Long Spearman" />
+  </EraVariant>
+
+  <!-- Mongol Tribal Troops -->
+  <!-- Mongol Tribal Archers -->
+  <EraVariant ID="Mongol Tribal Archer L1" BasedOn="ENB Tribal Archer L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Tribal Archer L2" BasedOn="ENB Tribal Archer L2" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol LightFur Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Tribal Archer L3" BasedOn="ENB Tribal Archer L3" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Leather1A Archer" />
+  </EraVariant>
+
+  <!-- Mongol Tribal Spearmen -->
+  <EraVariant ID="Mongol Tribal Spearmen L1" BasedOn="ENB Tribal Spearmen L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Tribal Spearmen L2" BasedOn="ENB Tribal Spearmen L2" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol LightFur Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Tribal Spearmen L3" BasedOn="ENB Tribal Spearmen L3" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Leather1A Spearman" />
+  </EraVariant>
+
+  <!-- Mongol Tribal Horse Archers -->
+  <EraVariant ID="Mongol Tribal Horse Archers L1" BasedOn="ENB Tribal Horse Archers L1" UnitSet="Mongol" Era="2">
+    <AddRequirements>
+      <Tech Item="Decimal Army Organization" Condition="false" />
+    </AddRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Tribal Archer L1" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Light Cav Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Tribal Horse Archers L2" BasedOn="ENB Tribal Horse Archers L2" UnitSet="Mongol" Era="2">
+    <AddRequirements>
+      <Tech Item="Decimal Army Organization" Condition="false" />
+    </AddRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Tribal Archer L2" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol LightFur Cav Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Tribal Horse Archers L3" BasedOn="ENB Tribal Horse Archers L3" UnitSet="Mongol" Era="2">
+    <AddRequirements>
+      <Tech Item="Decimal Army Organization" Condition="false" />
+    </AddRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Tribal Archer L3" />
+    <ElementChanges Index="0">
+      <ActorChange Index="1" NewModel="HR Mongol Leather1A Cav Archer" />
+    </ElementChanges>
+  </EraVariant>
+
+  <!-- Mongol Nobles -->
+  <!-- Archers -->
+  <EraVariant ID="Mongol Noble Archer L1" BasedOn="NB Noble Archer L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Leather1A Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Noble Archer L2" BasedOn="NB Noble Archer L2" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1A Archer" />
+  </EraVariant>
+
+  <!-- Spearmen -->
+  <!-- Included just as cavalry dismounts -->
+  <EraVariant ID="Mongol Noble Spearmen L1" BasedOn="NB Noble Spearmen L1" Era="2" UnitSet="Mongol">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Leather1A Long Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Noble Spearmen L2" BasedOn="NB Noble Spearmen L2" Era="2" UnitSet="Mongol">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1A Long Spearman" />
+  </EraVariant>
+
+  <!-- Mongol Noble Horse Archers-->
+  <EraVariant ID="Mongol Noble Horse Archers L1" BasedOn="NB Noble Horse Archers L1" UnitSet="Mongol" Era="2">
+    <AddRequirements>
+      <Tech Item="Decimal Army Organization" Condition="false" />
+    </AddRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Noble Archer L1" />
+    <ElementChange Index="0" Actor="1" NewModel="Mongol Leather1A Cav Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Noble Horse Archers L2" BasedOn="NB Noble Horse Archers L2" UnitSet="Mongol" Era="2">
+    <AddRequirements>
+      <Tech Item="Decimal Army Organization" Condition="false" />
+    </AddRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Noble Archer L2" />
+    <ElementChange Index="0" Actor="1" NewModel="Mongol Armoured1A Cav Archer" />
+  </EraVariant>
+  <!-- Mongol Noble Armored Archers -->
+  <EraVariant ID="Mongol Noble Armored Archers L1" BasedOn="NB Noble Armored Archers L1" UnitSet="Mongol" Era="2">
+    <AddRequirements>
+      <Tech Item="Decimal Army Organization" Condition="false" />
+    </AddRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Noble Archer L1" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1A Cav Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Noble Armored Archers L2" BasedOn="NB Noble Armored Archers L2" UnitSet="Mongol" Era="2">
+    <AddRequirements>
+      <Tech Item="Decimal Army Organization" Condition="false" />
+    </AddRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Noble Archer L2" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1B Cav Archer" />
+  </EraVariant>
+  <!-- Mongol Noble Heavy Cavalry -->
+  <EraVariant ID="Mongol Noble Heavy Cavalry L1" BasedOn="NB Noble Heavy Cavalry L1" UnitSet="Mongol" Era="2">
+    <SubstituteUnits DismountedUnit="Mongol Noble Spearmen L1" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Leather1A Cav Combined" />
+  </EraVariant>
+  <EraVariant ID="Mongol Noble Heavy Cavalry L2" BasedOn="NB Noble Heavy Cavalry L2" UnitSet="Mongol" Era="2">
+    <SubstituteUnits DismountedUnit="Mongol Noble Spearmen L2" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1B Cav Combined" />
+  </EraVariant>
+
+  <!-- Mongol Army Troops -->
+  <!-- Archers -->
+  <EraVariant ID="Mongol Army Light Archer L1" BasedOn="ENB Army Light Archer L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Light Archer L2" BasedOn="ENB Army Light Archer L2" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol LightSilk Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Light Archer L3" BasedOn="ENB Army Light Archer L3" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1A Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Light Archer L4" BasedOn="ENB Army Light Archer L4" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1B Archer" />
+  </EraVariant>
+
+  <!-- Halberds -->
+  <EraVariant ID="Mongol Army Halberds L1" BasedOn="IC Army Halberds L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Halberd" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Halberds L2" BasedOn="IC Army Halberds L2" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol LightSilk Halberd" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Halberds L3" BasedOn="IC Army Halberds L3" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1A Halberd" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Halberds L4" BasedOn="IC Army Halberds L4" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1B Halberd" />
+  </EraVariant>
+
+  <!-- Army Heavy Spearmen -->
+  <EraVariant ID="Mongol Army Heavy Spearmen L1" BasedOn="IC Army Heavy Spearmen L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Long Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Heavy Spearmen L2" BasedOn="IC Army Heavy Spearmen L2" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol LightSilk Long Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Heavy Spearmen L3" BasedOn="IC Army Heavy Spearmen L3" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1A Long Spearman" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Heavy Spearmen L4" BasedOn="IC Army Heavy Spearmen L4" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1B Long Spearman" />
+  </EraVariant>
+
+  <!-- Army Three Eyed Gunners-->
+  <EraVariant ID="Mongol Army Three Eyed Guns L1" BasedOn="IC Army Three Eyed Guns L1" UnitSet="Mongol" Era="2" />
+  <EraVariant ID="Mongol Army Three Eyed Guns L2" BasedOn="IC Army Three Eyed Guns L2" UnitSet="Mongol" Era="2" />
+  <EraVariant ID="Mongol Army Three Eyed Guns L3" BasedOn="IC Army Three Eyed Guns L3" UnitSet="Mongol" Era="2" />
+  <EraVariant ID="Mongol Army Three Eyed Guns L4" BasedOn="IC Army Three Eyed Guns L4" UnitSet="Mongol" Era="2" />
+
+  <!-- Army Beehive Rocketeers -->
+  <EraVariant ID="Mongol Army Beehive Rocketeers L1" BasedOn="IC Army Beehive Rocketeers L1" UnitSet="Mongol" Era="2" />
+  <EraVariant ID="Mongol Army Beehive Rocketeers L2" BasedOn="IC Army Beehive Rocketeers L2" UnitSet="Mongol" Era="2" />
+  <EraVariant ID="Mongol Army Beehive Rocketeers L3" BasedOn="IC Army Beehive Rocketeers L3" UnitSet="Mongol" Era="2" />
+  <EraVariant ID="Mongol Army Beehive Rocketeers L4" BasedOn="IC Army Beehive Rocketeers L4" UnitSet="Mongol" Era="2" />
+
+  <!-- Mongol Army Cavalry -->
+  <!-- Heavy Horse Archers -->
+  <EraVariant ID="Mongol Heavy Horse Archers L1" BasedOn="NB Heavy Horse Archers L1" UnitSet="Mongol" Era="2">
+    <SubstituteUnits DismountedUnit="Mongol Army Light Archer L3" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1A Cav Archer" />
+  </EraVariant>
+  <EraVariant ID="Mongol Heavy Horse Archers L2" BasedOn="NB Heavy Horse Archers L2" UnitSet="Mongol" Era="2">
+    <SubstituteUnits DismountedUnit="Mongol Army Light Archer L4" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1B Cav Archer" />
+  </EraVariant>
+
+  <!-- Cataphracts -->
+  <EraVariant ID="Mongol Cataphract Cavalry L1" BasedOn="NB Cataphract Cavalry L1" UnitSet="Mongol" Era="2">
+    <SubstituteUnits DismountedUnit="Mongol Army Heavy Spearmen L3" />
+    <ElementChanges Index="0" Armor="Cavalry Medium HA">
+      <ActorChange Index="0" NewModel="Horse_Heavy1B" />
+      <ActorChange Index="1" NewModel="HR Mongol Armoured1A Lancer" />
+    </ElementChanges>
+  </EraVariant>
+  <ArmorVariant ID="Mongol Cataphract Cavalry L2" BasedOn="Mongol Cataphract Cavalry L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Iron Foundry" Condition="true" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Army Heavy Spearmen L4" />
+    <ElementChanges Index="0" Armor="Cavalry Extra Heavy">
+      <ActorChange Index="0" NewModel="Horse_Heavy1C" />
+      <ActorChange Index="1" NewModel="HR Mongol Armoured1B Lancer" />
+    </ElementChanges>
+  </ArmorVariant>
+
+  <!-- Cataphract Archers -->
+  <EraVariant ID="Mongol Cataphract Archer L1" BasedOn="NB Cataphract Archer L1" UnitSet="Mongol" Era="2">
+    <SubstituteUnits DismountedUnit="Mongol Army Light Archer L3" />
+    <ElementChanges Index="0" Armor="Cavalry Medium HA">
+      <ActorChange Index="0" NewModel="Horse_Heavy1B" />
+      <ActorChange Index="1" NewModel="HR Mongol Armoured1A Cav Archer" />
+    </ElementChanges>
+  </EraVariant>
+  <ArmorVariant ID="Mongol Cataphract Archer L2" BasedOn="Mongol Cataphract Archer L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Iron Foundry" Condition="true" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Army Light Archer L4" />
+    <ElementChanges Index="0" Armor="Cavalry Extra Heavy">
+      <ActorChange Index="0" NewModel="Horse_Heavy1C" />
+      <ActorChange Index="1" NewModel="HR Mongol Armoured1A Cav Archer" />
+    </ElementChanges>
+  </ArmorVariant>
+  <!-- Mongol Army Heavy Cavalry -->
+  <EraVariant ID="Mongol Army Heavy Cavalry L1" BasedOn="NB Army Heavy Cavalry L1" Era="2" UnitSet="Mongol">
+    <SubstituteUnits DismountedUnit="Mongol Army Heavy Spearmen L3" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1A Cav Combined" />
+  </EraVariant>
+  <EraVariant ID="Mongol Army Heavy Cavalry L2" BasedOn="NB Army Heavy Cavalry L2" Era="2" UnitSet="Mongol">
+    <SubstituteUnits DismountedUnit="Mongol Army Heavy Spearmen L4" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1B Cav Combined" />
+  </EraVariant>
+
+  <!-- Mongol Guards -->
+  <!-- Guard Spearmen-->
+  <EraVariant ID="Mongol Guard Spearmen L1" BasedOn="NB Guard Spearmen L1" Era="2" UnitSet="Mongol">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1C Long Spearman" />
+  </EraVariant>
+
+  <!-- Khan's Guard Cavalry -->
+  <EraVariant ID="Mongol Khan's Guard Cavalry L1" BasedOn="NB Khan's Guard Cavalry L1" Era="2" UnitSet="Mongol">
+    <AddRequirements>
+      <Edict Item="Establish Keshik" Condition="false" />
+    </AddRequirements>
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1C Cav Combined" />
+  </EraVariant>
+
+  <!-- Mongol Generals -->
+  <EraVariant ID="Mongol Foot Bodyguard" BasedOn="NB Foot Bodyguard" Era="2" UnitSet="Mongol">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Armoured1C Sword Shield" />
+    <ElementChange Index="1" Actor="0" NewModel="HR Mongol Armoured1C Sword Shield" />
+  </EraVariant>
+  <EraVariant ID="Mongol Cavalry Bodyguard" BasedOn="NB Cavalry Bodyguard" Era="2" UnitSet="Mongol">
+    <SubstituteUnits DismountedUnit="Mongol Foot Bodyguard" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1C Cav Sword" />
+    <ElementChange Index="1" Actor="1" NewModel="HR Mongol Armoured1C Lancer Shield" />
+  </EraVariant>
+
+  <!-- Mongol Convicts -->
+  <EraVariant ID="Mongol Convict Swordsmen L1" BasedOn="NB Convict Swordsmen L1" UnitSet="Mongol" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Mongol Light Sword Shield" />
+  </EraVariant>
+
+  <!--Tumen Units -->
+  <!-- Mongol Tumen Horse Archers -->
+  <Unit ID="Mongol Tumen Horse Archers L1" NameTag="Tumen Horse Archers" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_TumenArchers_01" Class="Tribal" Armor="0" />
+    <Recruitment Pool="Tribesmen" Cost="0" Upkeep="20" FirstEra="2" LastEra="2" UnitSet="Mongol" />
+    <Requirements>
+      <Tech Item="Horse Archery" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Armorer I" Condition="false" />
+      <Tech Item="Decimal Army Organization" />
+    </Requirements>
+    <BlockFormation Depth="4" SpacingX="2.5" SpacingY="4" Forming="WellFormed" />
+    <Combat Morale="Regular" DismountedUnit="Mongol Army Light Archer L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Light1A" Role="Mount" />
+      <Actor ModelName="Mongol Light Cav Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Regular" Armor="Cavalry None" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="2" />
+    </Element>
+    <Movement Class="Light Cavalry" />
+  </Unit>
+  <ArmorVariant ID="Mongol Tumen Horse Archers L2" BasedOn="Mongol Tumen Horse Archers L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="0" Exact="true" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Army Light Archer L2" />
+    <ElementChange Index="0" Actor="1" Armor="Cavalry Light" NewModel="Mongol LightSilk Cav Archer" />
+  </ArmorVariant>
+  <ArmorVariant ID="Mongol Tumen Horse Archers L3" BasedOn="Mongol Tumen Horse Archers L2" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Army Light Archer L3" />
+    <ElementChange Index="0" Actor="1" Armor="Cavalry Medium" NewModel="Mongol Leather1B Cav Archer" />
+  </ArmorVariant>
+  <ArmorVariant ID="Mongol Tumen Horse Archers L4" BasedOn="Mongol Tumen Horse Archers L3" ArmorLevel="3">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Army Light Archer L4" />
+    <ElementChange Index="0" Actor="1" Armor="Cavalry Heavy" NewModel="Mongol Armoured1A Cav Archer" />
+  </ArmorVariant>
+
+  <Unit ID="Mongol Tumen Lancer L1" NameTag="Tumen Lancers" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_TumenLancers_01" Class="Tribal" Armor="0" />
+    <Recruitment Pool="Tribesmen" Cost="0" Upkeep="20" FirstEra="2" LastEra="2" UnitSet="Mongol" />
+    <Requirements>
+      <Building ID="Armorer I" UpgradeLevel="0" Exact="true" />
+      <Building ID="Weaponsmith I" />
+      <Tech Item="Decimal Army Organization" />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.4" SpacingY="4" Forming="Formed" />
+    <Combat Morale="Regular" DismountedUnit="Mongol Army Heavy Spearmen L2" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1A" Role="Mount" />
+      <Actor ModelName="Mongol Leather1B Lancer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Regular" Armor="Cavalry Medium" Shield="None" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+  <ArmorVariant ID="Mongol Tumen Lancer L2" BasedOn="Mongol Tumen Lancer L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Army Heavy Spearmen L3" />
+    <ElementChange Index="0" Actor="0" Armor="Cavalry Medium HA" NewModel="Horse_Heavy1B" />
+  </ArmorVariant>
+  <ArmorVariant ID="Mongol Tumen Lancer L3" BasedOn="Mongol Tumen Lancer L2" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Army Heavy Spearmen L4" />
+    <ElementChange Index="0" Actor="1" Armor="Cavalry Medium Heavy" NewModel="Mongol Armoured1A Lancer" />
+  </ArmorVariant>
+
+  <Unit ID="Mongol Tumen Heavy Cavalry L1" NameTag="Tumen Heavy Cavalry" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_TumenHeavyCavalry_01" Class="Noble" Armor="0" />
+    <Recruitment Pool="Nobles" Cost="100" Upkeep="30" Era="2" UnitSet="Mongol" />
+    <Requirements>
+      <Tech Item="Horse Archery" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Armorer I" Condition="false" />
+      <Tech Item="Decimal Army Organization" />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.6" SpacingY="4" Forming="Formed" />
+    <Combat Morale="Regular" DismountedUnit="WS Army Light Archer L2" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1B" Role="Mount" />
+      <Actor ModelName="Mongol Leather1A Cav Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Noble" Armor="Cavalry Medium HA" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="2" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+  <ArmorVariant ID="Mongol Tumen Heavy Cavalry L2" BasedOn="Mongol Tumen Heavy Cavalry L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="0" Exact="true" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Army Heavy Spearmen L3" />
+    <ElementChange Index="0" Actor="1" Armor="Cavalry Medium Heavy" NewModel="Mongol Armoured1A Cav Archer" />
+  </ArmorVariant>
+  <ArmorVariant ID="Mongol Tumen Heavy Cavalry L3" BasedOn="Mongol Tumen Heavy Cavalry L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="Mongol Army Heavy Spearmen L4" />
+    <ElementChanges Index="0" Armor="Cavalry Extra Heavy">
+      <ActorChange Index="0" NewModel="Horse_Heavy1C" />
+      <ActorChange Index="1" NewModel="Mongol Armoured1B Cav Archer" />
+    </ElementChanges>
+  </ArmorVariant>
+
+  <!-- Keshiq -->
+  <Unit ID="Mongol Keshik" NameTag="Keshik" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedHeavyBow&amp;Spear_01" Class="Guard" Armor="0" />
+    <Recruitment Pool="Palace Troops" Cost="300" Upkeep="45" Era="2" UnitSet="Mongol" />
+    <Requirements>
+      <Tech Item="Horse Armor" />
+      <Tech Item="Stirrup" Condition="true" />
+      <Building ID="Weaponsmith I" />
+      <Building ID="Fortified Stables I" />
+      <Building ID="Armorer I" UpgradeLevel="2" />
+      <Edict Item="Establish Keshik" Condition="true" />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.3" SpacingY="4" Forming="WellFormed" />
+    <Combat Morale="Guard" DismountedUnit="Mongol Guard Spearmen L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1C" Role="Mount" />
+      <Actor ModelName="Mongol Armoured1C Cav Combined Shield" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Elite Guard" Armor="Cavalry Super Heavy" Shield="Small" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="3" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+
+  <Unit ID="Mongol Algincin Scoutss L1" NameTag="Algincin Scouts" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedArchers_01" Class="Special" Armor="0" />
+    <Recruitment Pool="Army Horsemen" Cost="200" Upkeep="35" FirstEra="2" LastEra="2" UnitSet="Mongol" />
+    <Requirements>
+      <Tech Item="Horse Archery" />
+      <Tech Item="Reconnaissance" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Fortified Stables I" />
+    </Requirements>
+    <Capability Name="Scouting Range" Level="6" />
+    <BlockFormation Depth="4" SpacingX="2.5" SpacingY="4" Forming="WellFormed" />
+    <Combat Morale="Regular" DismountedUnit="Mongol Army Light Archer L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Light1A" Role="Mount" />
+      <Actor ModelName="Mongol LightFur Cav Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Picked" Armor="Cavalry Light" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="3" />
+    </Element>
+    <Movement Class="Scout Cavalry" />
+  </Unit>
+
+  <Unit ID="Temuchins Family" NameTag="Temuchins Family" Category="Settler" NonCombat="true">
+    <Banners Main="OE_Banner_Infantry" Mini="" />
+    <Card CardName="G_Stack_Type_TravellingParty_01" Class="Special" />
+    <Recruitment Pool="Civilians" Cost="0" Population="0" Upkeep="0" />
+    <Requirements>
+      <Never />
+    </Requirements>
+    <BlockFormation Depth="4" SpacingX="2" SpacingY="2" Forming="Mob" />
+    <Combat Morale="Civilian" />
+    <Element Number="2" Type="Infantry">
+      <Actor ModelName="WS Settler Female" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="6" Type="Infantry">
+      <Actor ModelName="HR Mongol Settler Male" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Settler" />
+  </Unit>
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- Turks ////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <ImportIntoUnitSet UnitSet="Turk" ReplaceID="Mongol" With="Turk">
+    <!-- space after Mongol Light is to reduce warnings trying to match LightFur -->
+    <ModelChange Old="HR Mongol Light *" New="HR Turk LightA " />
+    <ModelChange Old="HR Mongol LightSilk *" New="HR Turk LightB " />
+    <ModelChange Old="HR Mongol LightFur *" New="HR Turk LightB " />
+    <ModelChange Old="HR Mongol Leather1A *" New="HR Turk Armoured2A " />
+    <ModelChange Old="HR Mongol Leather1B *" New="HR Turk Armoured2A " />
+    <ModelChange Old="HR Mongol Armoured1A *" New="HR Turk Armoured1A " />
+    <ModelChange Old="HR Mongol Armoured1B *" New="HR Turk Armoured1B " />
+    <ModelChange Old="HR Mongol Armoured1C *" New="HR Turk Armoured1C " />
+
+    <ImportUnit ID="Mongol Militia Light Archer L1" />
+    <ImportUnit ID="Mongol Militia Light Archer L2" />
+    <ImportUnit ID="Mongol Militia Light Archer L3" />
+
+    <ImportUnit ID="Mongol Militia Light Spearmen L1" />
+    <ImportUnit ID="Mongol Militia Light Spearmen L2" />
+    <ImportUnit ID="Mongol Militia Light Spearmen L3" />
+
+    <ImportUnit ID="Mongol Militia Halberds L1" />
+    <ImportUnit ID="Mongol Militia Halberds L2" />
+    <ImportUnit ID="Mongol Militia Halberds L3" />
+
+    <ImportUnit ID="Mongol Militia Heavy Spearmen L1" />
+    <ImportUnit ID="Mongol Militia Heavy Spearmen L2" />
+    <ImportUnit ID="Mongol Militia Heavy Spearmen L3" />
+
+    <ImportUnit ID="Mongol Tribal Archer L1" />
+    <ImportUnit ID="Mongol Tribal Archer L2" />
+    <ImportUnit ID="Mongol Tribal Archer L3" />
+
+    <ImportUnit ID="Mongol Tribal Spearmen L1" />
+    <ImportUnit ID="Mongol Tribal Spearmen L2" />
+    <ImportUnit ID="Mongol Tribal Spearmen L3" />
+
+    <ImportUnit ID="Mongol Tribal Horse Archers L1" />
+    <ImportUnit ID="Mongol Tribal Horse Archers L2" />
+    <ImportUnit ID="Mongol Tribal Horse Archers L3" />
+
+    <ImportUnit ID="Mongol Noble Archer L1" />
+    <ImportUnit ID="Mongol Noble Archer L2" />
+
+    <ImportUnit ID="Mongol Noble Spearmen L1" />
+    <ImportUnit ID="Mongol Noble Spearmen L2" />
+
+    <ImportUnit ID="Mongol Noble Horse Archers L1" />
+    <ImportUnit ID="Mongol Noble Horse Archers L2" />
+
+    <ImportUnit ID="Mongol Noble Armored Archers L1" />
+    <ImportUnit ID="Mongol Noble Armored Archers L2" />
+
+    <ImportUnit ID="Mongol Noble Heavy Cavalry L1" />
+    <ImportUnit ID="Mongol Noble Heavy Cavalry L2" />
+
+    <ImportUnit ID="Mongol Army Light Archer L1" />
+    <ImportUnit ID="Mongol Army Light Archer L2" />
+    <ImportUnit ID="Mongol Army Light Archer L3" />
+    <ImportUnit ID="Mongol Army Light Archer L4" />
+
+    <ImportUnit ID="Mongol Army Halberds L1" />
+    <ImportUnit ID="Mongol Army Halberds L2" />
+    <ImportUnit ID="Mongol Army Halberds L3" />
+    <ImportUnit ID="Mongol Army Halberds L4" />
+
+    <ImportUnit ID="Mongol Army Heavy Spearmen L1" />
+    <ImportUnit ID="Mongol Army Heavy Spearmen L2" />
+    <ImportUnit ID="Mongol Army Heavy Spearmen L3" />
+    <ImportUnit ID="Mongol Army Heavy Spearmen L4" />
+
+    <ImportUnit ID="Mongol Army Three Eyed Guns L1" />
+    <ImportUnit ID="Mongol Army Three Eyed Guns L2" />
+    <ImportUnit ID="Mongol Army Three Eyed Guns L3" />
+    <ImportUnit ID="Mongol Army Three Eyed Guns L4" />
+
+    <ImportUnit ID="Mongol Army Beehive Rocketeers L1" />
+    <ImportUnit ID="Mongol Army Beehive Rocketeers L2" />
+    <ImportUnit ID="Mongol Army Beehive Rocketeers L3" />
+    <ImportUnit ID="Mongol Army Beehive Rocketeers L4" />
+
+    <ImportUnit ID="Mongol Heavy Horse Archers L1" />
+    <ImportUnit ID="Mongol Heavy Horse Archers L2" />
+
+    <ImportUnit ID="Mongol Cataphract Cavalry L1" />
+    <ImportUnit ID="Mongol Cataphract Cavalry L2" />
+
+    <ImportUnit ID="Mongol Cataphract Archer L1" />
+    <ImportUnit ID="Mongol Cataphract Archer L2" />
+
+    <ImportUnit ID="Mongol Army Heavy Cavalry L1" />
+    <ImportUnit ID="Mongol Army Heavy Cavalry L2" />
+
+    <ImportUnit ID="Mongol Guard Spearmen L1" />
+
+    <ImportUnit ID="Mongol Khan's Guard Cavalry L1" />
+
+    <ImportUnit ID="Mongol Foot Bodyguard" />
+    <ImportUnit ID="Mongol Cavalry Bodyguard" />
+
+    <ImportUnit ID="Mongol Convict Swordsmen L1" />
+  </ImportIntoUnitSet>
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- Islamic Turk ////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <ImportIntoUnitSet UnitSet="Islamic Turk" ReplaceID="Mongol" With="IT">
+    <!-- space after Mongol Light is to reduce warnings trying to match LightFur -->
+    <ModelChange Old="HR Mongol Light *" New="HR Turk LightA " />
+    <ModelChange Old="HR Mongol LightSilk *" New="HR Turk LightB " />
+    <ModelChange Old="HR Mongol LightFur *" New="HR Turk LightB " />
+    <ModelChange Old="HR Mongol Leather1A *" New="HR Turk Armoured2A " />
+    <ModelChange Old="HR Mongol Leather1B *" New="HR Turk Armoured2A " />
+    <ModelChange Old="HR Mongol Armoured1A *" New="HR Turk Armoured1A " />
+    <ModelChange Old="HR Mongol Armoured1B *" New="HR Turk Armoured1B " />
+    <ModelChange Old="HR Mongol Armoured1C *" New="HR Turk Armoured1C " />
+
+    <ImportUnit ID="Mongol Militia Light Archer L1" />
+    <ImportUnit ID="Mongol Militia Light Archer L2" />
+    <ImportUnit ID="Mongol Militia Light Archer L3" />
+
+    <ImportUnit ID="Mongol Militia Light Spearmen L1" />
+    <ImportUnit ID="Mongol Militia Light Spearmen L2" />
+    <ImportUnit ID="Mongol Militia Light Spearmen L3" />
+
+    <ImportUnit ID="Mongol Tribal Archer L1" />
+    <ImportUnit ID="Mongol Tribal Archer L2" />
+    <ImportUnit ID="Mongol Tribal Archer L3" />
+
+    <ImportUnit ID="Mongol Tribal Spearmen L1" />
+    <ImportUnit ID="Mongol Tribal Spearmen L2" />
+    <ImportUnit ID="Mongol Tribal Spearmen L3" />
+
+    <ImportUnit ID="Mongol Tribal Horse Archers L1" />
+    <ImportUnit ID="Mongol Tribal Horse Archers L2" />
+    <ImportUnit ID="Mongol Tribal Horse Archers L3" />
+
+    <ImportUnit ID="Mongol Noble Archer L1" />
+    <ImportUnit ID="Mongol Noble Archer L2" />
+
+    <ImportUnit ID="Mongol Noble Spearmen L1" />
+    <ImportUnit ID="Mongol Noble Spearmen L2" />
+
+    <ImportUnit ID="Mongol Noble Horse Archers L1" />
+    <ImportUnit ID="Mongol Noble Horse Archers L2" />
+
+    <ImportUnit ID="Mongol Army Light Archer L1" />
+    <ImportUnit ID="Mongol Army Light Archer L2" />
+    <ImportUnit ID="Mongol Army Light Archer L3" />
+    <ImportUnit ID="Mongol Army Light Archer L4" />
+
+    <ImportUnit ID="Mongol Army Three Eyed Guns L1" />
+    <ImportUnit ID="Mongol Army Three Eyed Guns L2" />
+    <ImportUnit ID="Mongol Army Three Eyed Guns L3" />
+    <ImportUnit ID="Mongol Army Three Eyed Guns L4" />
+
+    <ImportUnit ID="Mongol Army Beehive Rocketeers L1" />
+    <ImportUnit ID="Mongol Army Beehive Rocketeers L2" />
+    <ImportUnit ID="Mongol Army Beehive Rocketeers L3" />
+    <ImportUnit ID="Mongol Army Beehive Rocketeers L4" />
+
+    <ImportUnit ID="Mongol Heavy Horse Archers L1" />
+    <ImportUnit ID="Mongol Heavy Horse Archers L2" />
+
+    <ImportUnit ID="Mongol Cataphract Cavalry L1" />
+    <ImportUnit ID="Mongol Cataphract Cavalry L2" />
+
+    <ImportUnit ID="Mongol Cataphract Archer L1" />
+    <ImportUnit ID="Mongol Cataphract Archer L2" />
+
+    <ImportUnit ID="Mongol Convict Swordsmen L1" />
+  </ImportIntoUnitSet>
+
+  <ImportIntoUnitSet UnitSet="Islamic Turk" ReplaceID="Mongol" With="IT">
+    <!-- space after Mongol Light is to reduce warnings trying to match LightFur -->
+    <ModelChange Old="HR Mongol Armoured1A *" New="HR Khwarezm Armoured1A " />
+    <ModelChange Old="HR Mongol Armoured1B *" New="HR Khwarezm Armoured1B " />
+    <ModelChange Old="HR Mongol Armoured1C *" New="HR Khwarezm Armoured1C " />
+
+    <ImportUnit ID="Mongol Guard Spearmen L1" />
+
+    <ImportUnit ID="Mongol Foot Bodyguard" />
+    <ImportUnit ID="Mongol Cavalry Bodyguard" />
+  </ImportIntoUnitSet>
+
+  <!-- IT Militia Swordsmen -->
+  <Unit ID="IT Militia Swordsmen L1" NameTag="IT Militia Swordsmen" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MeleeSword2H_01" Class="Levy" />
+    <Recruitment Pool="Militia" Cost="0" Upkeep="10" Era="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Building ID="Weaponsmith I" />
+      <Building ID="Armorer I" UpgradeLevel="1" Condition="false" />
+    </Requirements>
+    <BlockFormation Depth="5" SpacingX="1" SpacingY="1" Forming="PoorlyFormed" />
+    <Combat Morale="Militia" />
+    <Element Number="60">
+      <Actor ModelName="HR Afghan LightA Sword Shield" />
+      <Combat Weapon="Foot Long Sword LI" Skill="Militia" Armor="None" Shield="Small" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="IT Militia Swordsmen L2" BasedOn="IT Militia Swordsmen L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk LightB Sword Shield" Armor="Light" />
+  </ArmorVariant>
+  <ArmorVariant ID="IT Militia Swordsmen L3" BasedOn="IT Militia Swordsmen L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk Armoured2A Sword Shield" Armor="Medium" />
+  </ArmorVariant>
+
+  <!-- IT Army Swordsmen -->
+  <Unit ID="IT Army Swordsmen L1" NameTag="IT Army Swordsmen" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MeleeSword2H_01" Class="Regular" />
+    <Recruitment Pool="Regulars" Cost="70" Upkeep="20" Era="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Building ID="Fortified Barracks I" />
+      <Building ID="Weaponsmith I" />
+      <Building ID="Armorer I" Condition="false" />
+    </Requirements>
+    <BlockFormation Depth="4" SpacingX="1" SpacingY="1" Forming="Formed" />
+    <Combat Morale="Regular" />
+    <Element Number="60">
+      <Actor ModelName="HR Afghan LightA Sword Shield" />
+      <Combat Weapon="Foot Long Sword LI" Skill="Regular" Armor="None" Shield="Small" />
+    </Element>
+    <Movement Class="Light Infantry" />
+  </Unit>
+  <ArmorVariant ID="IT Army Swordsmen L2" BasedOn="IT Army Swordsmen L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="0" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk LightB Sword Shield" Armor="Light" />
+  </ArmorVariant>
+  <ArmorVariant ID="IT Army Swordsmen L3" BasedOn="IT Army Swordsmen L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk Armoured2A Sword Shield" Armor="Medium" />
+  </ArmorVariant>
+  <ArmorVariant ID="IT Army Swordsmen L4" BasedOn="IT Army Swordsmen L1" ArmorLevel="3">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk Armoured1B Sword Shield" Armor="Heavy" />
+  </ArmorVariant>
+
+  <!-- IT Militia Supported Spearmen-->
+  <Unit ID="IT Militia Supported Spearmen L1" NameTag="IT Militia Spear Archers" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MixedBow&amp;Spear_01" Class="Levy" />
+    <Recruitment Pool="Militia" Cost="0" Upkeep="25" Era="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Building ID="Fortified Barracks I" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Armorer I" UpgradeLevel="0" Condition="false" />
+    </Requirements>
+    <BlockFormation Depth="6" SpacingX="1" SpacingY="1" Forming="WellFormed" />
+    <Combat Morale="Militia" />
+    <Element Number="48">
+      <Actor ModelName="Afghan LightA Long Spearman" />
+      <Combat Weapon="Foot Long Spear" Skill="Militia" Armor="None" Shield="Small" />
+    </Element>
+    <Element Number="24">
+      <Actor ModelName="Afghan LightA Archer" />
+      <Combat Weapon="Foot Long Sword" Skill="Militia" Armor="None" />
+      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="IT Militia Supported Spearmen L2" BasedOn="IT Militia Supported Spearmen L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk LightB Long Spearman" Armor="Light" />
+    <ElementChange Index="1" Actor="0" NewModel="Turk LightB Archer" Armor="Light" />
+  </ArmorVariant>
+  <ArmorVariant ID="IT Militia Supported Spearmen L3" BasedOn="IT Militia Supported Spearmen L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk Armoured2A Long Spearman" Armor="Medium" />
+    <ElementChange Index="1" Actor="0" NewModel="Turk Armoured2A Archer" Armor="Medium" />
+  </ArmorVariant>
+
+  <!-- IT Army Supported Spearmen-->
+  <Unit ID="IT Army Supported Spearmen L1" NameTag="IT Army Spear Archers" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MixedBow&amp;Spear_01" Class="Regular" />
+    <Recruitment Pool="Regulars" Cost="90" Upkeep="25" Era="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Building ID="Fortified Barracks I" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Armorer I" Condition="false" />
+    </Requirements>
+    <BlockFormation Depth="6" SpacingX="1" SpacingY="1" Forming="WellFormed" />
+    <Combat Morale="Regular" />
+    <Element Number="48">
+      <Actor ModelName="Afghan LightA Long Spearman" />
+      <Combat Weapon="Foot Long Spear" Skill="Regular" Armor="None" Shield="Small" />
+    </Element>
+    <Element Number="24">
+      <Actor ModelName="Afghan LightA Archer" />
+      <Combat Weapon="Foot Long Sword" Skill="Regular" Armor="None" />
+      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="IT Army Supported Spearmen L2" BasedOn="IT Army Supported Spearmen L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="0" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk LightB Long Spearman" Armor="Light" />
+    <ElementChange Index="1" Actor="0" NewModel="Turk LightB Archer" Armor="Light" />
+  </ArmorVariant>
+  <ArmorVariant ID="IT Army Supported Spearmen L3" BasedOn="IT Army Supported Spearmen L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk Armoured2A Long Spearman" Armor="Medium" />
+    <ElementChange Index="1" Actor="0" NewModel="Turk Armoured2A Archer" Armor="Medium" />
+  </ArmorVariant>
+  <ArmorVariant ID="IT Army Supported Spearmen L4" BasedOn="IT Army Supported Spearmen L1" ArmorLevel="3">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="Turk Armoured1A Long Spearman" Armor="Medium" />
+    <ElementChange Index="1" Actor="0" NewModel="Turk Armoured1A Archer" Armor="Medium" />
+  </ArmorVariant>
+
+  <!-- IT Palace Ghulams -->
+  <Unit ID="IT Palace Ghulams L1" NameTag="Palace Ghulams" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedHeavyBow&amp;Spear_01" Class="Guard" Armor="0" />
+    <Recruitment Pool="Palace Troops" Cost="350" Upkeep="45" Era="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Tech Item="Horse Armor" />
+      <Tech Item="Stirrup" Condition="true" />
+      <Building ID="Weaponsmith I" />
+      <Building ID="Fortified Stables I" />
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.3" SpacingY="4" Forming="WellFormed" />
+    <Combat Morale="Guard" DismountedUnit="Mongol Guard Spearmen L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1C" Role="Mount" />
+      <Actor ModelName="HR Khwarezm Armoured1B Cav Combined" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Guard" Armor="Cavalry Super Heavy" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="3" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+
+  <!-- IT Ghulams -->
+  <Unit ID="IT Ghulam Archers L1" NameTag="Ghulams Archers" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedArcherHeavy_01" Class="Regular" Armor="0" />
+    <Recruitment Pool="Army Horsemen" Cost="200" Upkeep="30" Era="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Tech Item="Horse Archery" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Fortified Stables I" />
+      <Building ID="Armorer I" UpgradeLevel="0" Exact="true" />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.6" SpacingY="4" Forming="Formed" />
+    <Combat Morale="Regular" DismountedUnit="IT Army Light Archer L3" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Medium1A" Role="Mount" />
+      <Actor ModelName="Khwarezm Armoured1A Cav Archer Mace Shield" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Mace" Skill="Regular" Armor="Cavalry Medium" Shield="Small" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+  <ArmorVariant ID="IT Ghulam Archers L2" BasedOn="IT Ghulam Archers L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="IT Army Light Archer L4" />
+    <ElementChange Index="0" Actor="0" NewModel="Horse_Heavy1A" />
+    <ElementChange Index="0" Actor="1" Armor="Cavalry Heavy" NewModel="Khwarezm Armoured1B Cav Archer Mace Shield" />
+  </ArmorVariant>
+
+  <!-- IT Heavy Ghulams -->
+  <Unit ID="IT Heavy Ghulam Archers L1" NameTag="Ghulams Heavy Archers" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedHeavyBow&amp;Spear_01" Class="Regular" Armor="0" />
+    <Recruitment Pool="Army Horsemen" Cost="250" Upkeep="35" Era="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Tech Item="Horse Archery" />
+      <Tech Item="Stirrup" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Fortified Stables I" />
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.6" SpacingY="4" Forming="Formed" />
+    <Combat Morale="Regular" DismountedUnit="IT Army Light Archer L3" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1C" Role="Mount" />
+      <Actor ModelName="Khwarezm Armoured1A Cav Archer Mace Shield" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Mace" Skill="Regular" Armor="Cavalry Extra Heavy" Shield="Small" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+  <ArmorVariant ID="IT Heavy Ghulam Archers L2" BasedOn="IT Heavy Ghulam Archers L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="IT Army Light Archer L4" />
+    <ElementChange Index="0" Actor="1" Armor="Cavalry Super Heavy" NewModel="Khwarezm Armoured1B Cav Archer Mace Shield" />
+  </ArmorVariant>
+
+  <!-- IT Turkish Mercenaries-->
+  <Unit ID="IT Turkoman Mercenaries" NameTag="Turkoman Mercenaries" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedArchers_01" Class="Mercenary" Armor="0" />
+    <Recruitment Pool="Army Horsemen" Cost="150" Upkeep="20" Era="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Tech Item="Horse Archery" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Fortified Stables I" />
+    </Requirements>
+    <BlockFormation Depth="4" SpacingX="2.5" SpacingY="4" Forming="PoorlyFormed" />
+    <Combat Morale="Militia" DismountedUnit="IT Army Light Archer L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Light1A" Role="Mount" />
+      <Actor ModelName="Turk LightA Cav Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Regular" Armor="Cavalry None" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="2" />
+    </Element>
+    <Movement Class="Light Cavalry" />
+  </Unit>
+
+  <!-- Dailami Guard -->
+  <Unit ID="IT Dailami Guard L1" NameTag="Dailami Guard" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MeleeSwordShort_01" Class="Guard" />
+    <Recruitment Pool="Palace Troops" Cost="150" Upkeep="30" Era="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Building ID="Armorer I" />
+      <Building ID="Swordsmith" />
+    </Requirements>
+    <BlockFormation Depth="5" SpacingX="1" SpacingY="1.4" Forming="WellFormed" />
+    <Combat Morale="Guard" />
+    <Element Number="60">
+      <Actor ModelName="Persian Armoured1A Sword Shield" />
+      <Combat Weapon="Foot Long Sword LI" Skill="Guard" Armor="Medium" Shield="Small" />
+    </Element>
+    <Movement Class="Light Infantry" />
+  </Unit>
+
+  <!-- Atabegs -->
+  <EraVariant ID="IT Dismounted Atabeg Archers L1" BasedOn="ENB Noble Archer L1" NameTag="Atabeg Archers" UnitSet="Islamic Turk" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Persian Armoured1A Archer" />
+  </EraVariant>
+  <EraVariant ID="IT Dismounted Atabeg Archers L2" BasedOn="ENB Noble Archer L2" NameTag="Atabeg Archers" UnitSet="Islamic Turk" Era="2">
+    <ElementChange Index="0" Actor="0" NewModel="HR Persian Armoured1B Archer" />
+  </EraVariant>
+  <!--
+  <EraVariant ID="IT Atabeg Horse Archers L1" BasedOn="ENB Noble Horse Archers L1" NameTag="Atabeg Archers" UnitSet="Islamic Turk" Era="2">
+    <SubstituteUnits DismountedUnit="IT Dismounted Atabeg Archers L1"/>
+    <ElementChange Index="0" Actor="1" NewModel="HR Persian Armoured1A Cav Archer"/>
+  </EraVariant>
+  <EraVariant ID="IT Atabeg Horse Archers L2" BasedOn="ENB Noble Horse Archers L2" NameTag="Atabeg Archers" UnitSet="Islamic Turk" Era="2">
+    <SubstituteUnits DismountedUnit="IT Dismounted Atabeg Archers L2"/>
+    <ElementChange Index="0" Actor="1" NewModel="HR Persian Armoured1B Cav Archer"/>
+  </EraVariant>
+  -->
+  <Unit ID="IT Atabeg Horse Archers L1" NameTag="Atabeg Archers" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedArcherHeavy_01" Class="Noble" Armor="0" />
+    <Recruitment Pool="Nobles" Cost="0" Upkeep="18" FirstEra="2" LastEra="2" UnitSet="Islamic Turk" />
+    <Requirements>
+      <Tech Item="Horse Archery" />
+      <Building ID="Shortbow Maker" />
+      <Building ID="Armorer I" Condition="false" />
+      <Edict Item="Gentlemen Ride Horses" />
+    </Requirements>
+    <BlockFormation Depth="4" SpacingX="1.5" SpacingY="4" Forming="Formed" />
+    <Combat Morale="Regular" DismountedUnit="IT Dismounted Atabeg Archers L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Medium1A" Role="Mount" />
+      <Actor ModelName="HR Persian Armoured1A Cav Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Noble" Armor="Cavalry Medium" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="1" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+  <ArmorVariant ID="IT Atabeg Horse Archers L2" BasedOn="IT Atabeg Horse Archers L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="IT Dismounted Atabeg Archers L2" />
+    <ElementChange Index="0" Actor="1" Armor="Cavalry Heavy" NewModel="HR Persian Armoured1A Cav Archer" />
+  </ArmorVariant>
+
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- Jurchen Jin ///////////////////////////////////////////////-->
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <ImportIntoUnitSet UnitSet="Jurchen Jin" ReplaceID="IC" With="JJ">
+    <ImportUnit ID="IC Militia Light Spearmen L1" />
+    <ImportUnit ID="IC Militia Light Spearmen L2" />
+    <ImportUnit ID="IC Militia Light Spearmen L3" />
+    <ImportUnit ID="IC Militia Light Archer L1" />
+    <ImportUnit ID="IC Militia Light Archer L2" />
+    <ImportUnit ID="IC Militia Light Archer L3" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L1" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L2" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L3" />
+    <ImportUnit ID="IC Militia Halberds L1" />
+    <ImportUnit ID="IC Militia Halberds L2" />
+    <ImportUnit ID="IC Militia Halberds L3" />
+    <ImportUnit ID="IC Army Halberds L1" />
+    <ImportUnit ID="IC Army Halberds L2" />
+    <ImportUnit ID="IC Army Halberds L3" />
+    <ImportUnit ID="IC Army Halberds L4" />
+    <ImportUnit ID="IC Army Light Archer L1" />
+    <ImportUnit ID="IC Army Light Archer L2" />
+    <ImportUnit ID="IC Army Light Archer L3" />
+    <ImportUnit ID="IC Army Light Archer L4" />
+    <ImportUnit ID="IC Army Crossbows L1" />
+    <ImportUnit ID="IC Army Crossbows L2" />
+    <ImportUnit ID="IC Army Crossbows L3" />
+    <ImportUnit ID="IC Army Crossbows L4" />
+    <ImportUnit ID="IC Army Heavy Spearmen L1" />
+    <ImportUnit ID="IC Army Heavy Spearmen L2" />
+    <ImportUnit ID="IC Army Heavy Spearmen L3" />
+    <ImportUnit ID="IC Army Heavy Spearmen L4" />
+    <ImportUnit ID="IC Army Spear/Crossbows L1" />
+    <ImportUnit ID="IC Army Spear/Crossbows L2" />
+    <ImportUnit ID="IC Army Spear/Crossbows L3" />
+    <ImportUnit ID="IC Army Spear/Crossbows L4" />
+    <ImportUnit ID="IC Army Three Eyed Guns L1" />
+    <ImportUnit ID="IC Army Three Eyed Guns L2" />
+    <ImportUnit ID="IC Army Three Eyed Guns L3" />
+    <ImportUnit ID="IC Army Three Eyed Guns L4" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L1" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L2" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L3" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L4" />
+    <ImportUnit ID="IC Cavalry L1" />
+    <ImportUnit ID="IC Cavalry L2" />
+    <ImportUnit ID="IC Cavalry L3" />
+    <ImportUnit ID="IC Cavalry L4" />
+    <ImportUnit ID="IC Cataphract Cavalry L1" />
+    <ImportUnit ID="IC Cataphract Cavalry L2" />
+    <ImportUnit ID="IC Cataphract Archer L1" />
+    <ImportUnit ID="IC Cataphract Archer L2" />
+    <ImportUnit ID="IC Light Horse Archers L1" />
+    <ImportUnit ID="IC Light Horse Archers L2" />
+    <ImportUnit ID="IC Heavy Horse Archers L1" />
+    <ImportUnit ID="IC Heavy Horse Archers L2" />
+    <ImportUnit ID="IC Noble Halberds L1" />
+    <ImportUnit ID="IC Noble Halberds L2" />
+    <ImportUnit ID="IC Picked Swordsmen L1" />
+    <ImportUnit ID="IC Guard Halberds L1" />
+    <ImportUnit ID="IC Guard Spearmen L1" />
+    <ImportUnit ID="IC Guard Archers L1" />
+    <ImportUnit ID="IC Guard Cavalry L1" />
+    <ImportUnit ID="IC Guard Cataphract Cavalry L1" />
+    <ImportUnit ID="IC Imperial Guard Cavalry L1" />
+    <ImportUnit ID="IC Convict Swordsmen L1" />
+    <ImportUnit ID="IC Foot Bodyguard" />
+    <ImportUnit ID="IC Cavalry Bodyguard" />
+  </ImportIntoUnitSet>
+
+  <ImportIntoUnitSet UnitSet="Jurchen Jin" ReplaceID="Mongol" With="JJ">
+    <ImportUnit ID="Mongol Tribal Archer L1" />
+    <ImportUnit ID="Mongol Tribal Archer L2" />
+    <ImportUnit ID="Mongol Tribal Archer L3" />
+
+    <ImportUnit ID="Mongol Tribal Spearmen L1" />
+    <ImportUnit ID="Mongol Tribal Spearmen L2" />
+    <ImportUnit ID="Mongol Tribal Spearmen L3" />
+
+    <ImportUnit ID="Mongol Tribal Horse Archers L1" />
+    <ImportUnit ID="Mongol Tribal Horse Archers L2" />
+    <ImportUnit ID="Mongol Tribal Horse Archers L3" />
+  </ImportIntoUnitSet>
+
+  <Unit ID="JJ Dismounted Meng'an L1" NameTag="Meng'an Cavalry" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MixedBow&amp;Spear_01" Class="Noble" />
+    <Recruitment Pool="Nobles" Cost="0" Upkeep="25" Era="2" UnitSet="Jurchen Jin" />
+    <Requirements>
+      <Never />
+    </Requirements>
+    <BlockFormation Depth="5" SpacingX="1" SpacingY="1.2" Forming="Formed" />
+    <Combat Morale="Noble" />
+    <Element Number="14" Type="Infantry">
+      <Actor ModelName="HR Mongol Leather1A Long Spearman" />
+      <Combat Weapon="Foot Long Spear" Skill="Noble" Armor="Medium" Shield="Small" />
+    </Element>
+    <Element Number="21" Type="Infantry">
+      <Actor ModelName="HR Mongol LightFur Archer" />
+      <Combat Weapon="Foot Long Sword" Skill="Militia" Armor="Light" Shield="None" />
+      <Projectile Ammo="Infantry Arrow" Ammo2="Burning Arrow" Ammo3="Flaming Arrow" Ammo4="Fire Arrow" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+  <ArmorVariant ID="JJ Dismounted Meng'an L2" BasedOn="JJ Dismounted Meng'an L1" ArmorLevel="1">
+    <ElementChange Index="0" Actor="0" Armor="Heavy" NewModel="HR Mongol Armoured1A Long Spearman" />
+  </ArmorVariant>
+  <ArmorVariant ID="JJ Dismounted Meng'an L3" BasedOn="JJ Dismounted Meng'an L1" ArmorLevel="2">
+    <ElementChange Index="0" Actor="0" Armor="Heavy" NewModel="HR Mongol Armoured1A Long Spearman" />
+    <ElementChange Index="1" Actor="0" Armor="Heavy" NewModel="HR Mongol Armoured1A Archer" />
+  </ArmorVariant>
+
+
+  <Unit ID="JJ Meng'an Cavalry L1" NameTag="Meng'an Cavalry" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedHeavyBow&amp;Spear_01" Class="Noble" Armor="0" />
+    <Recruitment Pool="Nobles" Cost="0" Upkeep="40" Era="2" UnitSet="Jurchen Jin" />
+    <Requirements>
+      <Tech Item="Horse Archery" />
+      <Building ID="Armorer I" Condition="false" />
+    </Requirements>
+    <BlockFormation Depth="5" SpacingX="1.6" SpacingY="4" Forming="Formed" />
+    <Combat Morale="Noble" DismountedUnit="JJ Dismounted Meng'an L1" />
+    <Element Number="14" Type="Cavalry">
+      <Actor ModelName="HR Horse_Heavy1A" Role="Mount" />
+      <Actor ModelName="HR Mongol Leather1A Lancer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Noble" Armor="Cavalry Medium" Shield="None" />
+    </Element>
+    <Element Number="21" Type="Cavalry">
+      <Actor ModelName="HR Horse_Heavy1A" Role="Mount" />
+      <Actor ModelName="HR Mongol LightFur Cav Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Militia" Armor="Cavalry Light" Shield="None" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="1" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+  <ArmorVariant ID="JJ Meng'an Cavalry L2" BasedOn="JJ Meng'an Cavalry L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="0" Exact="true" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="JJ Dismounted Meng'an L2" />
+    <ElementChange Index="0" Actor="1" NewModel="HR Mongol Armoured1A Lancer" Armor="Cavalry Heavy" />
+  </ArmorVariant>
+  <ArmorVariant ID="JJ Meng'an Cavalry L3" BasedOn="JJ Meng'an Cavalry L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="false" />
+    </ChangedRequirements>
+    <AddRequirements>
+      <Building ID="Iron Foundry" />
+    </AddRequirements>
+    <SubstituteUnits DismountedUnit="JJ Dismounted Meng'an L3" />
+    <ElementChanges Index="0" Armor="Cavalry Extra Heavy">
+      <ActorChange Index="0" NewModel="HR Horse_Heavy1C" />
+      <ActorChange Index="1" NewModel="HR Mongol Armoured1A Lancer" />
+    </ElementChanges>
+    <ElementChanges Index="1" Armor="Cavalry Heavy">
+      <ActorChange Index="0" NewModel="HR Horse_Heavy1A" />
+      <ActorChange Index="1" NewModel="HR Mongol Armoured1A Cav Archer" />
+    </ElementChanges>
+  </ArmorVariant>
+
+  <!-- Iron Pagodas -->
+  <Unit ID="JJ Iron Pagoda Cavalry L1" NameTag="Iron Pagodas" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_IronPagodas_01" Class="Guard" Armor="0" />
+    <Recruitment Pool="Palace Troops" Cost="450" Upkeep="50" Era="2" UnitSet="Jurchen Jin" />
+    <Requirements>
+      <Tech Item="Horse Armor" />
+      <Building ID="Fortified Stables I" />
+      <Building ID="Armorer I" UpgradeLevel="1" />
+      <Building ID="Iron Foundry" />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.3" SpacingY="4" Forming="WellFormed" />
+    <Combat Morale="Guard" DismountedUnit="JJ Guard Spearmen L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1C" Role="Mount" />
+      <Actor ModelName="HR Iron Pagoda Lancer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Guard" Armor="Cavalry Iron Pagoda" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- Xi Xia ///////////////////////////////////////////////-->
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <ImportIntoUnitSet UnitSet="Xi Xia" ReplaceID="IC" With="XX">
+    <ImportUnit ID="IC Militia Light Spearmen L1" />
+    <ImportUnit ID="IC Militia Light Spearmen L2" />
+    <ImportUnit ID="IC Militia Light Spearmen L3" />
+    <ImportUnit ID="IC Militia Light Archer L1" />
+    <ImportUnit ID="IC Militia Light Archer L2" />
+    <ImportUnit ID="IC Militia Light Archer L3" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L1" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L2" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L3" />
+    <ImportUnit ID="IC Militia Halberds L1" />
+    <ImportUnit ID="IC Militia Halberds L2" />
+    <ImportUnit ID="IC Militia Halberds L3" />
+    <ImportUnit ID="IC Army Halberds L1" />
+    <ImportUnit ID="IC Army Halberds L2" />
+    <ImportUnit ID="IC Army Halberds L3" />
+    <ImportUnit ID="IC Army Halberds L4" />
+    <ImportUnit ID="IC Army Light Archer L1" />
+    <ImportUnit ID="IC Army Light Archer L2" />
+    <ImportUnit ID="IC Army Light Archer L3" />
+    <ImportUnit ID="IC Army Light Archer L4" />
+    <ImportUnit ID="IC Army Crossbows L1" />
+    <ImportUnit ID="IC Army Crossbows L2" />
+    <ImportUnit ID="IC Army Crossbows L3" />
+    <ImportUnit ID="IC Army Crossbows L4" />
+    <ImportUnit ID="IC Army Heavy Spearmen L1" />
+    <ImportUnit ID="IC Army Heavy Spearmen L2" />
+    <ImportUnit ID="IC Army Heavy Spearmen L3" />
+    <ImportUnit ID="IC Army Heavy Spearmen L4" />
+    <ImportUnit ID="IC Army Spear/Crossbows L1" />
+    <ImportUnit ID="IC Army Spear/Crossbows L2" />
+    <ImportUnit ID="IC Army Spear/Crossbows L3" />
+    <ImportUnit ID="IC Army Spear/Crossbows L4" />
+    <ImportUnit ID="IC Army Three Eyed Guns L1" />
+    <ImportUnit ID="IC Army Three Eyed Guns L2" />
+    <ImportUnit ID="IC Army Three Eyed Guns L3" />
+    <ImportUnit ID="IC Army Three Eyed Guns L4" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L1" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L2" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L3" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L4" />
+    <ImportUnit ID="IC Cavalry L1" />
+    <ImportUnit ID="IC Cavalry L2" />
+    <ImportUnit ID="IC Cavalry L3" />
+    <ImportUnit ID="IC Cavalry L4" />
+    <ImportUnit ID="IC Cataphract Cavalry L1" />
+    <ImportUnit ID="IC Cataphract Cavalry L2" />
+    <ImportUnit ID="IC Cataphract Archer L1" />
+    <ImportUnit ID="IC Cataphract Archer L2" />
+    <ImportUnit ID="IC Heavy Horse Archers L1" />
+    <ImportUnit ID="IC Heavy Horse Archers L2" />
+    <ImportUnit ID="IC Noble Halberds L1" />
+    <ImportUnit ID="IC Noble Halberds L2" />
+    <ImportUnit ID="IC Guard Halberds L1" />
+    <ImportUnit ID="IC Guard Spearmen L1" />
+    <ImportUnit ID="IC Guard Archers L1" />
+    <ImportUnit ID="IC Guard Cavalry L1" />
+    <ImportUnit ID="IC Guard Cataphract Cavalry L1" />
+    <ImportUnit ID="IC Imperial Guard Cavalry L1" />
+    <ImportUnit ID="IC Convict Swordsmen L1" />
+    <ImportUnit ID="IC Foot Bodyguard" />
+    <ImportUnit ID="IC Cavalry Bodyguard" />
+  </ImportIntoUnitSet>
+  <ImportIntoUnitSet UnitSet="Xi Xia" ReplaceID="Mongol" With="XX">
+    <ImportUnit ID="Mongol Tribal Archer L1" />
+    <ImportUnit ID="Mongol Tribal Archer L2" />
+    <ImportUnit ID="Mongol Tribal Archer L3" />
+
+    <ImportUnit ID="Mongol Tribal Spearmen L1" />
+    <ImportUnit ID="Mongol Tribal Spearmen L2" />
+    <ImportUnit ID="Mongol Tribal Spearmen L3" />
+
+    <ImportUnit ID="Mongol Tribal Horse Archers L1" />
+    <ImportUnit ID="Mongol Tribal Horse Archers L2" />
+    <ImportUnit ID="Mongol Tribal Horse Archers L3" />
+
+    <ImportUnit ID="Mongol Noble Spearmen L1" />
+    <ImportUnit ID="Mongol Noble Spearmen L2" />
+    <ImportUnit ID="Mongol Noble Heavy Cavalry L1" />
+    <ImportUnit ID="Mongol Noble Heavy Cavalry L2" />
+  </ImportIntoUnitSet>
+
+  <!-- Iron Sparrow Hawks -->
+  <Unit ID="XX Iron Sparrow Hawk Cavalry L1" NameTag="Iron Sparrowhawks" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_MountedHeavySpear_01" Class="Guard" Armor="0" />
+    <Recruitment Pool="Palace Troops" Cost="500" Upkeep="50" Era="2" UnitSet="Xi Xia" />
+    <Requirements>
+      <Tech Item="Horse Armor" />
+      <Tech Item="Stirrup" Condition="true" />
+      <Building ID="Weaponsmith I" />
+      <Building ID="Fortified Stables I" />
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.5" SpacingY="4" Forming="Formed" />
+    <Combat Morale="Guard" DismountedUnit="XX Guard Spearmen L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1C" Role="Mount" />
+      <Actor ModelName="Mongol Armoured1A Lancer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Guard" Armor="Cavalry Extra Heavy" />
+    </Element>
+    <Movement Class="Light Cavalry" />
+  </Unit>
+
+  <!-- Foot SLoggers -->
+  <Unit ID="XX Foot Sloggers L1" NameTag="Foot Treaders" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_FootTreader_01" Class="Special" />
+    <Recruitment Pool="Palace Troops" Cost="120" Upkeep="25" Era="2" UnitSet="Xi Xia" />
+    <Requirements>
+      <Building ID="Armorer I" />
+    </Requirements>
+    <BlockFormation Depth="5" SpacingX="1.4" SpacingY="1.4" Forming="WellFormed" />
+    <Combat Morale="Guard" />
+    <Element Number="60">
+      <Actor ModelName="HR Mongol Leather1A Spearman" />
+      <Combat Weapon="Foot Short Spear" Skill="Guard" Armor="Medium" Shield="Small" />
+    </Element>
+    <Movement Class="Light Infantry" />
+  </Unit>
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <!--Tarim Basin Buddhists ///////////////////////////////////////////////-->
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <ImportIntoUnitSet UnitSet="TarimB" ReplaceID="IC" With="TBB">
+    <ImportUnit ID="IC Militia Light Spearmen L1" />
+    <ImportUnit ID="IC Militia Light Spearmen L2" />
+    <ImportUnit ID="IC Militia Light Spearmen L3" />
+    <ImportUnit ID="IC Militia Light Archer L1" />
+    <ImportUnit ID="IC Militia Light Archer L2" />
+    <ImportUnit ID="IC Militia Light Archer L3" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L1" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L2" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L3" />
+    <ImportUnit ID="IC Militia Halberds L1" />
+    <ImportUnit ID="IC Militia Halberds L2" />
+    <ImportUnit ID="IC Militia Halberds L3" />
+    <ImportUnit ID="IC Army Halberds L1" />
+    <ImportUnit ID="IC Army Halberds L2" />
+    <ImportUnit ID="IC Army Halberds L3" />
+    <ImportUnit ID="IC Army Halberds L4" />
+    <ImportUnit ID="IC Army Light Archer L1" />
+    <ImportUnit ID="IC Army Light Archer L2" />
+    <ImportUnit ID="IC Army Light Archer L3" />
+    <ImportUnit ID="IC Army Light Archer L4" />
+    <ImportUnit ID="IC Army Crossbows L1" />
+    <ImportUnit ID="IC Army Crossbows L2" />
+    <ImportUnit ID="IC Army Crossbows L3" />
+    <ImportUnit ID="IC Army Crossbows L4" />
+    <ImportUnit ID="IC Army Heavy Spearmen L1" />
+    <ImportUnit ID="IC Army Heavy Spearmen L2" />
+    <ImportUnit ID="IC Army Heavy Spearmen L3" />
+    <ImportUnit ID="IC Army Heavy Spearmen L4" />
+    <ImportUnit ID="IC Army Spear/Crossbows L1" />
+    <ImportUnit ID="IC Army Spear/Crossbows L2" />
+    <ImportUnit ID="IC Army Spear/Crossbows L3" />
+    <ImportUnit ID="IC Army Spear/Crossbows L4" />
+    <ImportUnit ID="IC Army Three Eyed Guns L1" />
+    <ImportUnit ID="IC Army Three Eyed Guns L2" />
+    <ImportUnit ID="IC Army Three Eyed Guns L3" />
+    <ImportUnit ID="IC Army Three Eyed Guns L4" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L1" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L2" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L3" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L4" />
+    <ImportUnit ID="IC Cavalry L1" />
+    <ImportUnit ID="IC Cavalry L2" />
+    <ImportUnit ID="IC Cavalry L3" />
+    <ImportUnit ID="IC Cavalry L4" />
+    <ImportUnit ID="IC Cavalry Crossbows L1" />
+    <ImportUnit ID="IC Cavalry Crossbows L2" />
+    <ImportUnit ID="IC Cavalry Crossbows L3" />
+    <ImportUnit ID="IC Cavalry Crossbows L4" />
+    <ImportUnit ID="IC Cataphract Cavalry L1" />
+    <ImportUnit ID="IC Cataphract Cavalry L2" />
+    <ImportUnit ID="IC Cataphract Archer L1" />
+    <ImportUnit ID="IC Cataphract Archer L2" />
+    <ImportUnit ID="IC Light Horse Archers L1" />
+    <ImportUnit ID="IC Light Horse Archers L2" />
+    <ImportUnit ID="IC Heavy Horse Archers L1" />
+    <ImportUnit ID="IC Heavy Horse Archers L2" />
+    <ImportUnit ID="IC Noble Halberds L1" />
+    <ImportUnit ID="IC Noble Halberds L2" />
+    <ImportUnit ID="IC Noble Cavalry L1" />
+    <ImportUnit ID="IC Noble Cavalry L2" />
+    <ImportUnit ID="IC Picked Swordsmen L1" />
+    <ImportUnit ID="IC Guard Halberds L1" />
+    <ImportUnit ID="IC Guard Spearmen L1" />
+    <ImportUnit ID="IC Picked Zhan Ma Dao L1" />
+    <ImportUnit ID="IC Picked Zhan Ma Dao L2" />
+    <ImportUnit ID="IC Picked Zhan Ma Dao L3" />
+    <ImportUnit ID="IC Picked Zhan Ma Dao L4" />
+    <ImportUnit ID="IC Guard Archers L1" />
+    <ImportUnit ID="IC Guard Cavalry L1" />
+    <ImportUnit ID="IC Guard Cataphract Cavalry L1" />
+    <ImportUnit ID="IC Imperial Guard Cavalry L1" />
+    <ImportUnit ID="IC Convict Swordsmen L1" />
+    <ImportUnit ID="IC Foot Bodyguard" />
+    <ImportUnit ID="IC Cavalry Bodyguard" />
+  </ImportIntoUnitSet>
+
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- Common Units //////////////////////////////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
+  <Unit ID="Driven Civilians Chinese" NameTag="Driven Civilians" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_DrivenCivilians_01" Class="Levy" />
+    <Recruitment Pool="Militia" Cost="0" Upkeep="30" Population="5" Era="2" />
+    <Requirements>
+      <Population Num="20" />
+      <Tech Item="Terror Tactics" />
+      <CityArchitecture Style="Chinese" />
+    </Requirements>
+    <Capability Name="Surrender Check" Level="1" />
+    <Capability Name="Terrifying Weapon" Level="1" />
+    <BlockFormation Depth="8" SpacingX="1.2" SpacingY="1.2" Forming="Mob" />
+    <Combat Morale="Militia" />
+    <Element Number="96">
+      <Actor ModelName="HR WS Peasant Male" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" Shield="None" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+
+  <EraVariant ID="Driven Civilians Afghan" BasedOn="Driven Civilians Chinese">
+    <ChangedRequirements>
+      <CityArchitecture Style="Central Asian" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Actor="0" NewModel="HR Afghan Male Base" />
+  </EraVariant>
+
+  <Unit ID="Nomad Horde" NameTag="Horde" Category="Settler" NonCombat="true">
+    <Banners Main="OE_Banner_Infantry" Mini="" />
+    <Card CardName="G_Stack_Type_Horde_01" Class="Levy" />
+    <Recruitment Pool="Civilians" Cost="50" Population="8" Upkeep="0" />
+    <Requirements>
+      <Population Num="16" />
+      <Tech Item="Iron Wheeled Carts" Condition="true" />
+    </Requirements>
+    <Capability Name="Travelling Horde" Level="1" />
+    <MultiBlockFormation PaddingRear="2">
+      <Block Name="Carts" SpacingX="4" SpacingY="8" MaxCols="2" Forming="Formed">
+        <Element Index="0" Weight="1" />
+      </Block>
+      <Block Name="LiveStock" SpacingX="2.5" SpacingY="5" MaxCols="3" Forming="Mob">
+        <Anchor AnchorBlock="0" EdgeRelativeX="true" XOffset="0.1" YOffset="0" />
+        <Element Index="3" Weight="1" />
+        <Element Index="4" Weight="1" />
+      </Block>
+      <Block Name="Right Peasants" SpacingX="1.5" SpacingY="2.5" MaxCols="2" Forming="Mob">
+        <Anchor AnchorBlock="1" EdgeRelativeX="true" XOffset="0.1" YOffset="-1" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+      </Block>
+      <Block Name="Left Peasants" SpacingX="1.5" SpacingY="2.5" MaxCols="2" Forming="Mob">
+        <Anchor AnchorBlock="0" EdgeRelativeX="true" XOffset="-0.1" YOffset="-1" />
+        <Element Index="1" Weight="1" />
+        <Element Index="2" Weight="1" />
+      </Block>
+    </MultiBlockFormation>
+    <Combat Morale="Civilian" />
+    <Element Number="8" Type="Vehicle">
+      <Actor ModelName="M_Cart2hA" Role="Vehicle" />
+      <Actor ModelName="Ox" Role="Draught" TargetBone="bone_OxPos1_NS" AttachBone="bone_Ox_Hip" />
+      <Actor ModelName="Ox" Role="Draught" TargetBone="bone_OxPos2_NS" AttachBone="bone_Ox_Hip" />
+      <Actor ModelName="WS Cart Driver" Role="Driver" TargetBone="bone_OxDriverPos_NS" AttachBone="bone_hips" AnimSet="On Carrier Cart F" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="20" Type="Infantry">
+      <Actor ModelName="HR Mongol Settler Male" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="20" Type="Infantry">
+      <Actor ModelName="WS Settler Female" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="10" Type="Infantry">
+      <Actor ModelName="Nomad Horse" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Element Number="6" Type="Infantry">
+      <Actor ModelName="Pack Ox" />
+      <Combat Weapon="Foot Unarmed" Skill="Civilian" Armor="None" />
+    </Element>
+    <Movement Class="Settler" />
+  </Unit>
+
+</UnitTypes> 

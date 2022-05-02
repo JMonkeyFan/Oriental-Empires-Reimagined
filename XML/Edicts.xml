@@ -1,0 +1,2045 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Edicts.xsd">
+
+
+  <Edict ID="Self Criticism" Area="Misc" NumTurns="20" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Tech Item="Mandate of Heaven2" />
+      <SettlementWithDisasterUnrest />
+    </Requirements>
+    <Effect Type="Cost" Value="1000" />
+    <Effect Type="PersonalAuthority" Value="-2" />
+    <Effect Type="DisasterUnrest" Value="0" />
+  </Edict>
+  <Edict ID="Move Capital" Area="Misc" NumTurns="10" ExpireSilently="true" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Tech Item="Priest King" />
+      <CanRelocateCapital />
+    </Requirements>
+    <Effect Type="Cost" Value="500" />
+    <Effect Type="MoveCapital" Value="0" />
+    <Effect Type="NobleUnrest" Value="15" Turns="10" />
+  </Edict>
+  <Edict ID="Ride Like a Barbarian" Area="Military">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Horse Archery" />
+      <Edict Item="Gentlemen Ride Horses" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Zhao" />
+    </StaticRequirements>
+    <Effect Type="Cost" Value="1000" />
+    <Effect Type="RecruitSpecialUnits" Value="0" />
+    <Effect Type="NobleUnrest" Value="15" Turns="20" />
+    <CancelEffect Type="Authority" Value="-3" Turns="20" />
+  </Edict>
+  <Edict ID="Kurultai" Area="Authority" NumTurns="2" ExpireSilently="true" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Kurultai" />
+      <SuccessionCrisis />
+      <FactionLeaderInCapital />
+    </Requirements>
+    <Effect Type="Cost" Value="1000" />
+    <Effect Type="CancelSuccessionPenalty" Value="10" />
+    <Effect Type="PersonalAuthority" Value="1" />
+  </Edict>
+  <Edict ID="Great Kurultai" Area="Authority" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <ScriptEventTriggered Event="Genghis Khan" />
+      <FactionLeaderInCapital />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Genghis" />
+    </StaticRequirements>
+    <Effect Type="Cost" Value="1000" />
+    <Effect Type="PersonalAuthority" Value="8" />
+  </Edict>
+  <Edict ID="Establish Keshik" Area="Military" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Edict Item="Great Kurultai" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Genhis" />
+    </StaticRequirements>
+    <Effect Type="RecruitSpecialUnits" Value="0" />
+    <Effect Type="Cost" Value="1000" />
+  </Edict>
+  <Edict ID="Yassa Law" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Khanate Administration" />
+    </Requirements>
+    <Effect Type="Cost" Value="200" PerTurn="true" />
+    <Effect Type="Authority" Value="2" />
+    <Effect Type="PeasantUnrest" Value="-10" />
+    <CancelEffect Type="PeasantUnrest" Value="20" Turns="20" />
+  </Edict>
+  <Edict ID="Freedom of Worship" Area="Culture">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Khanate Administration" />
+    </Requirements>
+    <Effect Type="Cost" Value="200" />
+    <Effect Type="Culture" Value="2" />
+    <Effect Type="PeasantUnrest" Value="-10" />
+    <CancelEffect Type="PeasantUnrest" Value="20" Turns="20" />
+  </Edict>
+  <Edict ID="Grand Commandant New" Area="Military" TranslationTag="Grand Commandant">
+    <Requirements>
+      <ControlNumSettlements Num="15" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt />
+    </StaticRequirements>
+    <!-- Value 1 = general-->
+    <Effect Type="AddLeader" Value="1" />
+    <Effect Type="Authority" Value="-1" />
+    <Effect Type="Cost" Value="80" PerTurn="true" />
+    <Effect Type="CreateOffice" Name="Grand Commandant" Value="0" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Central Bureaucracy New" Area="Authority" LeaderTitle="ELDR Chancellor" TranslationTag="Central Bureaucracy">
+    <Requirements>
+      <ControlNumSettlements Num="15" Exact="false" />
+      <Tech Item="Bamboo Strips" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt />
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Grand Chancellor" Value="0" />
+    <!-- Value 2 = admin-->
+    <Effect Type="AddLeader" Value="2" />
+    <Effect Type="PeasantUnrest" Value="-10" />
+    <Effect Type="Authority" Value="2" />
+    <Effect Type="Cost" Value="400" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="25" Turns="20" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="The Three Excellencies" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="100" Exact="false" />
+      <Edict Item="Central Bureaucracy New" />
+      <Edict Item="Grand Commandant New" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt />
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Imperial Counsellor" Value="0" />
+    <Effect Type="Authority" Value="1" />
+    <Effect Type="Cost" Value="100" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="10" Turns="20" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Minister Coachman" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Light Chariot" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt />
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Minister Coachman" Value="0" />
+    <Effect Type="Authority" Value="1" />
+    <Effect Type="Cost" Value="60" PerTurn="true" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Centralized Justice" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Tech Item="Five Punishments" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt />
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Minister of Justice" Value="0" />
+    <Effect Type="Authority" Value="1" />
+    <Effect Type="Cost" Value="100" PerTurn="true" />
+    <CancelEffect Type="PeasantUnrest" Value="15" Turns="20" />
+  </Edict>
+  <Edict ID="Centralized Rites" Area="Culture">
+    <Requirements>
+      <ControlNumSettlements Num="75" Exact="false" />
+      <Tech Item="Imperial Rites" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt />
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Minister of Rites" Value="0" />
+    <Effect Type="Culture" Value="1" />
+    <Effect Type="Cost" Value="80" PerTurn="true" />
+    <CancelEffect Type="Authority" Value="-2" Turns="10" />
+  </Edict>
+  <Edict ID="The Six Ministries" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Tech Item="Paper" />
+      <Edict Item="The Three Excellencies" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt />
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Name="Minister oF War" Value="0" />
+    <Effect Type="CreateOffice" Name="Minister oF Finance" Value="0" />
+    <Effect Type="CreateOffice" Name="Minister of Works" Value="0" />
+    <Effect Type="CreateOffice" Name="Minister of Rites" Value="0" />
+    <Effect Type="CreateOffice" Name="Minister of Justice" Value="0" />
+    <Effect Type="CreateOffice" Name="Minister of Personnel" Value="0" />
+    <Effect Type="Authority" Value="8" />
+    <Effect Type="Cost" Value="500" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="15" Turns="20" />
+    <CancelEffect Type="Authority" Value="-4" Turns="20" />
+    <CancelsEdict Name="Grand Commandant New" />
+    <CancelsEdict Name="Central Bureaucracy New" />
+    <CancelsEdict Name="The Three Excellencies" />
+    <CancelsEdict Name="Minister Coachman" />
+  </Edict>
+  <Edict ID="Appoint a Shi New" Area="Military" TranslationTag="Appoint a Shi">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Tech Item="I Ching" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <!-- Value 2 = admin-->
+    <Effect Type="CreateOffice" Value="0" Name="Advisor 1" />
+    <Effect Type="NobleUnrest" Value="5" />
+    <Effect Type="Cost" Value="30" PerTurn="true" />
+    <Effect Type="Cost" Value="0" />
+  </Edict>
+  <Edict ID="Appoint a Strategist New" Area="Military" TranslationTag="Appoint a Strategist">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Military Theory" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="CreateOffice" Value="0" Name="Advisor 2" />
+    <Effect Type="NobleUnrest" Value="5" />
+    <Effect Type="Cost" Value="100" PerTurn="true" />
+  </Edict>
+  <Edict ID="Salt Tax New" Area="Economy" TranslationTag="Salt Tax">
+    <Requirements>
+      <Edict Item="Central Bureaucracy New" />
+      <Tech Item="Coinage" />
+      <Never />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="NobleUnrest" Value="10" />
+    <Effect Type="PeasantUnrest" Value="20" />
+    <Effect Type="SpecialPopulationTax" Value="1" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Private Land New" Area="Agriculture" TranslationTag="Private Land">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Edict Item="Central Bureaucracy New" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-10" />
+    <Effect Type="FoodProduction" Value="1.2" />
+    <Effect Type="Cost" Value="300" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="10" Turns="10" />
+    <!--    <Effect Type="PeasantUnrest" Value="0.3" PerTurn="true"/> -->
+    <CancelEffect Type="NobleUnrest" Value="20" Turns="20" />
+    <CancelEffect Type="PeasantUnrest" Value="10" Turns="10" />
+  </Edict>
+  <Edict ID="Imperial University New" Area="Culture" TranslationTag="Imperial University">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Edict Item="Central Bureaucracy New" />
+      <Tech Item="Canon of Wisdom2" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="Cost" Value="300" PerTurn="true" />
+    <Effect Type="Culture" Value="2" />
+    <Effect Type="PeasantUnrest" Value="-10" />
+    <Effect Type="TaxCollection" Value="1.1" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Civil Service Examinations New" Area="Culture" TranslationTag="Civil Service Examinations">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Confucianism" />
+      <Edict Item="Central Bureaucracy New" />
+      <Era Value="2" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="Culture" Value="2" />
+    <Effect Type="Cost" Value="100" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="15" Turns="10" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <!-- Legacy Edicts for games not using royal court /////////////////////////////////////////////////////////-->
+  <!-- Civil Service -->
+  <!-- Edicts for 3K Scenario -->
+  <Edict ID="Abandon Luoyang" Area="Misc" MayBeCancelled="false">
+    <Requirements>
+      <ControlSettlementAt X="71" Y="73" />
+      <ControlSettlementAt X="53" Y="70" />
+      <PlayerCapability Name="Puppet Emperor" Level="1" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Dong Zhuo" />
+      <FactionTag Tag="Three Kingdoms Edicts" />
+    </StaticRequirements>
+    <Effect Type="ImmediateIncome" Value="5000" PerTurn="false" />
+    <Effect Type="Culture" Value="-4" />
+    <Effect Type="DestroySettlement" Value="71" Name="73" />
+    <Effect Type="MoveCapitalTo" Value="53" Name="70" />
+    <Effect Type="NobleUnrest" Value="20" Turns="20" />
+  </Edict>
+  <Edict ID="Force Abdication" Area="Authority" MayBeCancelled="false">
+    <Requirements>
+      <PlayerCapability Name="Puppet Emperor" Level="1" />
+      <ControlNumSettlements Num="10" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Three Kingdoms Edicts" />
+    </StaticRequirements>
+    <Effect Type="Authority" Value="12" />
+    <Effect Type="KillPuppetEmperor" Value="0" />
+    <Effect Type="Cost" Value="2000" />
+    <CancelsEdict Name="Proclaim King" />
+    <CancelsEdict Name="Proclaim Emperor" />
+  </Edict>
+  <Edict ID="Proclaim King" Area="Authority" MayBeCancelled="false">
+    <Requirements>
+      <Edict Item="Force Abdication" Condition="false" />
+      <Edict Item="Proclaim Emperor" Condition="false" />
+      <ControlNumSettlements Num="8" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Three Kingdoms Edicts" />
+    </StaticRequirements>
+    <Effect Type="Authority" Value="4" />
+    <Effect Type="Cost" Value="1000" />
+    <Effect Type="NobleUnrest" Value="15" Turns="20" />
+  </Edict>
+  <Edict ID="Proclaim Emperor" Area="Authority" MayBeCancelled="false">
+    <Requirements>
+      <PlayerCapability Name="Puppet Emperor" Level="1" Condition="false" />
+      <Edict Item="Force Abdication" Condition="false" />
+      <Edict Item="Proclaim King" />
+      <ControlNumSettlements Num="10" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <FactionTag Tag="Three Kingdoms Edicts" />
+    </StaticRequirements>
+    <Effect Type="Authority" Value="12" />
+    <Effect Type="Cost" Value="2000" />
+    <Effect Type="NobleUnrest" Value="20" Turns="20" />
+    <CancelsEdict Name="Proclaim King" />
+  </Edict>
+  <!-- Era Progression -->
+  <Edict ID="Warring States" Area="Misc" MayBeCancelled="false" IssuedInStartingEra="1">
+    <Requirements>
+      <NumTechs Num="24" Era="0" />
+    </Requirements>
+    <Effect Type="Cost" Value="1000" />
+    <Effect Type="NobleUnrest" Value="15" Turns="10" />
+    <Effect Type="AdvanceEra" Value="1" />
+  </Edict>
+  <Edict ID="Imperial Era" Area="Misc" MayBeCancelled="false" IssuedInStartingEra="2">
+    <Requirements>
+      <Era Value="1" />
+      <NumTechs Num="24" Era="1" />
+    </Requirements>
+    <Effect Type="Cost" Value="1000" />
+    <Effect Type="NobleUnrest" Value="15" Turns="10" />
+    <Effect Type="AdvanceEra" Value="2" />
+  </Edict>
+  <!--Mine Finished: -->
+  <!-- uncancelables -->
+  <Edict ID="Tax Exemption 1" Area="Culture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Era Value="0" />
+      <Edict Item="Tax Exemption 2" Condition="false" />
+      <Edict Item="Tax Exemption 3" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="10000" PerTurn="true" />
+    <Effect Type="Culture" Value="0.0005" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-0.0005" PerTurn="true" />
+  </Edict>
+  <Edict ID="Tax Exemption 2" Area="Culture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Era Value="1" />
+      <Edict Item="Tax Exemption 1" Condition="false" />
+      <Edict Item="Tax Exemption 3" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="20000" PerTurn="true" />
+    <Effect Type="Culture" Value="0.001" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-0.001" PerTurn="true" />
+  </Edict>
+  <Edict ID="Tax Exemption 3" Area="Culture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Era Value="2" />
+      <Edict Item="Tax Exemption 1" Condition="false" />
+      <Edict Item="Tax Exemption 2" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="40000" PerTurn="true" />
+    <Effect Type="Culture" Value="0.0015" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-0.0015" PerTurn="true" />
+  </Edict>
+  <Edict ID="Small Loan 0" Area="Economy" MayBeCancelled="false" NumTurns="5">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" Condition="false" />
+      <Era Value="0" Condition="true" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="325" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="1250" />
+  </Edict>
+  <Edict ID="Medium Loan 0" Area="Economy" MayBeCancelled="false" NumTurns="8">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" Condition="false" />
+      <Era Value="0" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="425" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="2500" />
+  </Edict>
+  <Edict ID="Large Loan 0" Area="Economy" MayBeCancelled="false" NumTurns="15">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" Condition="false" />
+      <Era Value="0" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="475" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="5000" />
+  </Edict>
+  <Edict ID="Small Loan 1" Area="Economy" MayBeCancelled="false" NumTurns="5">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" Condition="false" />
+      <Era Value="1" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="650" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="2500" />
+  </Edict>
+  <Edict ID="Medium Loan 1" Area="Economy" MayBeCancelled="false" NumTurns="8">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" Condition="false" />
+      <Era Value="1" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="850" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="5000" />
+  </Edict>
+  <Edict ID="Large Loan 1" Area="Economy" MayBeCancelled="false" NumTurns="15">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" Condition="true" />
+      <Era Value="1" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="950" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="10000" />
+  </Edict>
+  <Edict ID="Small Loan 2" Area="Economy" MayBeCancelled="false" NumTurns="5">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" Condition="false" />
+      <Era Value="2" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="1300" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="5000" />
+  </Edict>
+  <Edict ID="Medium Loan 2" Area="Economy" MayBeCancelled="false" NumTurns="8">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" Condition="true" />
+      <Era Value="2" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="1700" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="10000" />
+  </Edict>
+  <Edict ID="Large Loan 2" Area="Economy" MayBeCancelled="false" NumTurns="15">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" />
+      <Era Value="2" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="1900" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="20000" />
+  </Edict>
+  <Edict ID="Huge Loan 2" Area="Economy" MayBeCancelled="false" NumTurns="20">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" />
+      <Era Value="2" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="2900" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="40000" />
+  </Edict>
+  <Edict ID="Massive Loan 2" Area="Economy" MayBeCancelled="false" NumTurns="25">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" />
+      <Era Value="2" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="3750" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="80000" />
+  </Edict>
+  <Edict ID="Bonkers Loan 2" Area="Economy" MayBeCancelled="false" NumTurns="45">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Banking I" />
+      <Tech Item="Banking II" />
+      <Era Value="2" Condition="true" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="4500" PerTurn="true" />
+    <Effect Type="ImmediateIncome" Value="160000" />
+  </Edict>
+  <Edict ID="Trade Venture Short" Area="Economy" MayBeCancelled="false" NumTurns="40">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Joint Stock Company" />
+      <Tech Item="Mathematics" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <!-- returns 32K Total-->
+    <Effect Type="Cost" Value="15000" />
+    <Effect Type="Income" Value="800" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="20" />
+  </Edict>
+  <Edict ID="Trade Venture Medium" Area="Economy" MayBeCancelled="false" NumTurns="80">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Joint Stock Company" />
+      <Tech Item="Mathematics" />
+      <Tech Item="Algebra" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+    </Requirements>
+    <!-- returns 64K Total-->
+    <Effect Type="Cost" Value="30" />
+    <Effect Type="Income" Value="525" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="16" />
+  </Edict>
+  <Edict ID="Trade Venture Long" Area="Economy" MayBeCancelled="false" NumTurns="125">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Joint Stock Company" />
+      <Tech Item="Mathematics" />
+      <Tech Item="Algebra" />
+      <Tech Item="Number Theory" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Very Long" Condition="false" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+    </Requirements>
+    <!-- returns 81K Total-->
+    <Effect Type="Cost" Value="50000" />
+    <Effect Type="Income" Value="375" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="12" />
+  </Edict>
+  <Edict ID="Trade Venture Very Long" Area="Economy" MayBeCancelled="false" NumTurns="175">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Joint Stock Company" />
+      <Tech Item="Mathematics" />
+      <Tech Item="Algebra" />
+      <Tech Item="Number Theory" />
+      <Edict Item="Trade Venture Short" Condition="false" />
+      <Edict Item="Trade Venture Medium" Condition="false" />
+      <Edict Item="Trade Venture Long" Condition="false" />
+      <Edict Item="Small Loan 0" Condition="false" />
+      <Edict Item="Medium Loan 0" Condition="false" />
+      <Edict Item="Large Loan 0" Condition="false" />
+      <Edict Item="Small Loan 1" Condition="false" />
+      <Edict Item="Medium Loan 1" Condition="false" />
+      <Edict Item="Large Loan 1" Condition="false" />
+      <Edict Item="Small Loan 2" Condition="false" />
+      <Edict Item="Medium Loan 2" Condition="false" />
+      <Edict Item="Large Loan 2" Condition="false" />
+      <Edict Item="Huge Loan 2" Condition="false" />
+      <Edict Item="Massive Loan 2" Condition="false" />
+      <Edict Item="Bonkers Loan 2" Condition="false" />
+    </Requirements>
+    <!-- returns 140K Total-->
+    <Effect Type="Cost" Value="100000" />
+    <Effect Type="Income" Value="375" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="8" />
+  </Edict>
+  <!--Cancelables-->
+  <Edict ID="Agricultural Tax 0" Area="Economy" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="30" Exact="false" />
+      <Tech Item="Flood Control" />
+      <Building ID="City" Exact="false" />
+      <Edict Item="Agricultural Tax 1" Condition="false" />
+      <Edict Item="Agricultural Tax 2" Condition="false" />
+      <Edict Item="Agricultural Tax 3" Condition="false" />
+    </Requirements>
+    <Effect Type="CollectAgricultureTax" Value="1" />
+    <Effect Type="PeasantUnrest" Value="0" />
+    <Effect Type="PeasantUnrest" Value="0" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="0" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="0" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="10" />
+    <CancelEffect Type="Authority" Value="-1" Turns="15" />
+  </Edict>
+  <Edict ID="Agricultural Tax 1" Area="Economy" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="60" Exact="false" />
+      <Tech Item="Flood Control" />
+      <Tech Item="Wells" />
+      <Building ID="Huge City" Exact="false" />
+      <Edict Item="Agricultural Tax 0" Condition="false" />
+      <Edict Item="Agricultural Tax 2" Condition="false" />
+      <Edict Item="Agricultural Tax 3" Condition="false" />
+    </Requirements>
+    <Effect Type="CollectAgricultureTax" Value="2" />
+    <Effect Type="PeasantUnrest" Value="1" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="10" />
+    <CancelEffect Type="Authority" Value="-2" Turns="15" />
+  </Edict>
+  <Edict ID="Agricultural Tax 2" Area="Economy" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="90" Exact="false" />
+      <Tech Item="Flood Control" />
+      <Tech Item="Wells" />
+      <Tech Item="Seedling Transplantation" />
+      <Building ID="Metropolitan City" Exact="false" />
+      <Edict Item="Agricultural Tax 0" Condition="false" />
+      <Edict Item="Agricultural Tax 1" Condition="false" />
+      <Edict Item="Agricultural Tax 3" Condition="false" />
+    </Requirements>
+    <Effect Type="CollectAgricultureTax" Value="3" />
+    <Effect Type="PeasantUnrest" Value="2" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="10" />
+    <CancelEffect Type="Authority" Value="-3" Turns="15" />
+  </Edict>
+  <Edict ID="Agricultural Tax 3" Area="Economy" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="120" Exact="false" />
+      <Tech Item="Flood Control" />
+      <Tech Item="Wells" />
+      <Tech Item="Seedling Transplantation" />
+      <Tech Item="Crop Rotation" />
+      <Building ID="Large Metropolitan City" Exact="false" />
+      <Edict Item="Agricultural Tax 0" Condition="false" />
+      <Edict Item="Agricultural Tax 1" Condition="false" />
+      <Edict Item="Agricultural Tax 2" Condition="false" />
+    </Requirements>
+    <Effect Type="CollectAgricultureTax" Value="4" />
+    <Effect Type="PeasantUnrest" Value="3" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="10" />
+    <CancelEffect Type="Authority" Value="-4" Turns="15" />
+  </Edict>
+  <Edict ID="Salt Tax 0" Area="Economy" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="40" Exact="false" />
+      <Edict Item="Central Bureaucracy New" />
+      <Tech Item="Coinage" />
+      <Building ID="City" Exact="false" />
+      <Edict Item="Salt Tax 1" Condition="false" />
+      <Edict Item="Salt Tax 2" Condition="false" />
+      <Edict Item="Salt Tax 3" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="SpecialPopulationTax" Value="4" />
+    <Effect Type="PeasantUnrest" Value="0" />
+    <Effect Type="PeasantUnrest" Value="0" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="0" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="0" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="10" />
+    <CancelEffect Type="Authority" Value="-1" Turns="15" />
+  </Edict>
+  <Edict ID="Salt Tax 1" Area="Economy" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="80" Exact="false" />
+      <Edict Item="Central Bureaucracy New" />
+      <Tech Item="Mathematics" />
+      <Tech Item="Coinage" />
+      <Building ID="Huge City" Exact="false" />
+      <Edict Item="Salt Tax 0" Condition="false" />
+      <Edict Item="Salt Tax 2" Condition="false" />
+      <Edict Item="Salt Tax 3" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="SpecialPopulationTax" Value="4" />
+    <Effect Type="PeasantUnrest" Value="1" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="10" />
+    <CancelEffect Type="Authority" Value="-2" Turns="15" />
+  </Edict>
+  <Edict ID="Salt Tax 2" Area="Economy" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="120" Exact="false" />
+      <Edict Item="Central Bureaucracy New" />
+      <Tech Item="Algebra" />
+      <Tech Item="Mathematics" />
+      <Tech Item="Coinage" />
+      <Building ID="Metropolitan City" Exact="false" />
+      <Edict Item="Salt Tax 1" Condition="false" />
+      <Edict Item="Salt Tax 0" Condition="false" />
+      <Edict Item="Salt Tax 3" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="SpecialPopulationTax" Value="4" />
+    <Effect Type="PeasantUnrest" Value="2" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="10" />
+    <CancelEffect Type="Authority" Value="-3" Turns="15" />
+  </Edict>
+  <Edict ID="Salt Tax 3" Area="Economy" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="180" Exact="false" />
+      <Edict Item="Central Bureaucracy New" />
+      <Tech Item="Number Theory" />
+      <Tech Item="Algebra" />
+      <Tech Item="Mathematics" />
+      <Tech Item="Coinage" />
+      <Building ID="Large Metropolitan City" Exact="false" />
+      <Edict Item="Salt Tax 1" Condition="false" />
+      <Edict Item="Salt Tax 2" Condition="false" />
+      <Edict Item="Salt Tax 0" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="SpecialPopulationTax" Value="4" />
+    <Effect Type="PeasantUnrest" Value="3" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="10" />
+    <CancelEffect Type="Authority" Value="-4" Turns="15" />
+  </Edict>
+  <Edict ID="Agricultural Boost 0" Area="Agriculture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Irrigation" />
+      <Building ID="Huge City" Exact="false" />
+      <Edict Item="Agricultural Boost 1" Condition="false" />
+      <Edict Item="Agricultural Boost 2" Condition="false" />
+      <Edict Item="Agricultural Boost 3" Condition="false" />
+    </Requirements>
+    <Effect Type="FoodProduction" Value="6" />
+    <Effect Type="PeasantUnrest" Value="1" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="10" />
+    <CancelEffect Type="Authority" Value="-1" Turns="15" />
+  </Edict>
+  <Edict ID="Agricultural Boost 1" Area="Agriculture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Tech Item="Irrigation" />
+      <Tech Item="Wells" />
+      <Building ID="Metropolitan City" Exact="false" />
+      <Edict Item="Agricultural Boost 0" Condition="false" />
+      <Edict Item="Agricultural Boost 2" Condition="false" />
+      <Edict Item="Agricultural Boost 3" Condition="false" />
+    </Requirements>
+    <Effect Type="FoodProduction" Value="12" />
+    <Effect Type="PeasantUnrest" Value="2" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="10" />
+    <CancelEffect Type="Authority" Value="-2" Turns="15" />
+  </Edict>
+  <Edict ID="Agricultural Boost 2" Area="Agriculture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="75" Exact="false" />
+      <Tech Item="Irrigation" />
+      <Tech Item="Wells" />
+      <Tech Item="Seedling Transplantation" />
+      <Building ID="Large Metropolitan City" Exact="false" />
+      <Edict Item="Agricultural Boost 0" Condition="false" />
+      <Edict Item="Agricultural Boost 1" Condition="false" />
+      <Edict Item="Agricultural Boost 3" Condition="false" />
+    </Requirements>
+    <Effect Type="FoodProduction" Value="18" />
+    <Effect Type="PeasantUnrest" Value="3" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="10" />
+    <CancelEffect Type="Authority" Value="-3" Turns="15" />
+  </Edict>
+  <Edict ID="Agricultural Boost 3" Area="Agriculture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="100" Exact="false" />
+      <Tech Item="Irrigation" />
+      <Tech Item="Wells" />
+      <Tech Item="Seedling Transplantation" />
+      <Tech Item="Crop Rotation" />
+      <Building ID="Large Metropolitan City" Exact="false" />
+      <Edict Item="Agricultural Boost 0" Condition="false" />
+      <Edict Item="Agricultural Boost 1" Condition="false" />
+      <Edict Item="Agricultural Boost 2" Condition="false" />
+    </Requirements>
+    <Effect Type="FoodProduction" Value="25" />
+    <Effect Type="PeasantUnrest" Value="3" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="2" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="3" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="3" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="3" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="3" Turns="10" />
+    <CancelEffect Type="Authority" Value="-4" Turns="15" />
+  </Edict>
+  <Edict ID="Land Redistribution Light" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Edict Item="Land Redistribution Medium" Condition="false" />
+      <Edict Item="Land Redistribution Heavy" Condition="false" />
+      <Edict Item="Central Bureaucracy" />
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="-1" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="10" />
+    <Effect Type="NobleUnrest" Value="1" />
+    <Effect Type="NobleUnrest" Value="1" Turns="290" />
+    <Effect Type="NobleUnrest" Value="1" Turns="260" />
+    <Effect Type="NobleUnrest" Value="1" Turns="230" />
+    <Effect Type="NobleUnrest" Value="1" Turns="200" />
+    <Effect Type="NobleUnrest" Value="1" Turns="180" />
+    <Effect Type="NobleUnrest" Value="1" Turns="160" />
+    <Effect Type="NobleUnrest" Value="1" Turns="140" />
+    <Effect Type="NobleUnrest" Value="1" Turns="120" />
+    <Effect Type="NobleUnrest" Value="1" Turns="105" />
+    <Effect Type="NobleUnrest" Value="1" Turns="90" />
+    <Effect Type="NobleUnrest" Value="1" Turns="75" />
+    <Effect Type="NobleUnrest" Value="1" Turns="60" />
+    <Effect Type="NobleUnrest" Value="1" Turns="45" />
+    <Effect Type="NobleUnrest" Value="1" Turns="30" />
+    <Effect Type="NobleUnrest" Value="1" Turns="20" />
+    <Effect Type="NobleUnrest" Value="1" Turns="10" />
+    <CancelEffect Type="Authority" Value="-1" Turns="15" />
+  </Edict>
+  <Edict ID="Land Redistribution Medium" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="75" Exact="false" />
+      <Edict Item="Land Redistribution Light" Condition="false" />
+      <Edict Item="Land Redistribution Heavy" Condition="false" />
+      <Edict Item="Central Bureaucracy" />
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="-2" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="-1" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="10" />
+    <Effect Type="NobleUnrest" Value="2" />
+    <Effect Type="NobleUnrest" Value="1" Turns="290" />
+    <Effect Type="NobleUnrest" Value="1" Turns="260" />
+    <Effect Type="NobleUnrest" Value="1" Turns="230" />
+    <Effect Type="NobleUnrest" Value="1" Turns="200" />
+    <Effect Type="NobleUnrest" Value="1" Turns="180" />
+    <Effect Type="NobleUnrest" Value="1" Turns="160" />
+    <Effect Type="NobleUnrest" Value="1" Turns="140" />
+    <Effect Type="NobleUnrest" Value="1" Turns="120" />
+    <Effect Type="NobleUnrest" Value="1" Turns="105" />
+    <Effect Type="NobleUnrest" Value="1" Turns="90" />
+    <Effect Type="NobleUnrest" Value="2" Turns="75" />
+    <Effect Type="NobleUnrest" Value="2" Turns="60" />
+    <Effect Type="NobleUnrest" Value="2" Turns="45" />
+    <Effect Type="NobleUnrest" Value="2" Turns="30" />
+    <Effect Type="NobleUnrest" Value="2" Turns="20" />
+    <Effect Type="NobleUnrest" Value="2" Turns="10" />
+    <CancelEffect Type="Authority" Value="-2" Turns="15" />
+  </Edict>
+  <Edict ID="Land Redistribution Heavy" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="100" Exact="false" />
+      <Edict Item="Land Redistribution Medium" Condition="false" />
+      <Edict Item="Land Redistribution Light" Condition="false" />
+      <Edict Item="Central Bureaucracy" />
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="-3" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="290" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="260" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="230" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="200" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="180" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="160" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="140" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="120" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="105" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="90" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="75" />
+    <Effect Type="PeasantUnrest" Value="-2" Turns="60" />
+    <Effect Type="PeasantUnrest" Value="-3" Turns="45" />
+    <Effect Type="PeasantUnrest" Value="-3" Turns="30" />
+    <Effect Type="PeasantUnrest" Value="-3" Turns="20" />
+    <Effect Type="PeasantUnrest" Value="-3" Turns="10" />
+    <Effect Type="NobleUnrest" Value="3" />
+    <Effect Type="NobleUnrest" Value="2" Turns="290" />
+    <Effect Type="NobleUnrest" Value="2" Turns="260" />
+    <Effect Type="NobleUnrest" Value="2" Turns="230" />
+    <Effect Type="NobleUnrest" Value="2" Turns="200" />
+    <Effect Type="NobleUnrest" Value="2" Turns="180" />
+    <Effect Type="NobleUnrest" Value="2" Turns="160" />
+    <Effect Type="NobleUnrest" Value="2" Turns="140" />
+    <Effect Type="NobleUnrest" Value="2" Turns="120" />
+    <Effect Type="NobleUnrest" Value="2" Turns="105" />
+    <Effect Type="NobleUnrest" Value="2" Turns="90" />
+    <Effect Type="NobleUnrest" Value="2" Turns="75" />
+    <Effect Type="NobleUnrest" Value="2" Turns="60" />
+    <Effect Type="NobleUnrest" Value="3" Turns="45" />
+    <Effect Type="NobleUnrest" Value="3" Turns="30" />
+    <Effect Type="NobleUnrest" Value="3" Turns="20" />
+    <Effect Type="NobleUnrest" Value="3" Turns="10" />
+    <CancelEffect Type="Authority" Value="-3" Turns="15" />
+  </Edict>
+  <Edict ID="Trade 1" Area="Economy">
+    <Requirements>
+      <ControlNumSettlements Num="75" Exact="false" />
+      <Tech Item="Legalism" />
+      <Edict Item="Trade 2" Condition="false" />
+      <Edict Item="Trade 3" Condition="false" />
+    </Requirements>
+    <Effect Type="Trade" Value="1.15" />
+    <CancelEffect Type="Authority" Value="-1" Turns="15" />
+  </Edict>
+  <Edict ID="Trade 2" Area="Economy">
+    <Requirements>
+      <ControlNumSettlements Num="125" Exact="false" />
+      <Tech Item="Legalism" />
+      <Edict Item="Trade 1" Condition="false" />
+      <Edict Item="Trade 3" Condition="false" />
+    </Requirements>
+    <Effect Type="Trade" Value="1.3" />
+    <CancelEffect Type="Authority" Value="-2" Turns="15" />
+  </Edict>
+  <Edict ID="Trade 3" Area="Economy">
+    <Requirements>
+      <ControlNumSettlements Num="175" Exact="false" />
+      <Tech Item="Legalism" />
+      <Edict Item="Trade 2" Condition="false" />
+      <Edict Item="Trade 1" Condition="false" />
+    </Requirements>
+    <Effect Type="Trade" Value="1.5" />
+    <Effect Type="NobleUnrest" Value="3" />
+    <Effect Type="NobleUnrest" Value="2" Turns="290" />
+    <Effect Type="NobleUnrest" Value="2" Turns="260" />
+    <Effect Type="NobleUnrest" Value="2" Turns="230" />
+    <Effect Type="NobleUnrest" Value="2" Turns="200" />
+    <Effect Type="NobleUnrest" Value="2" Turns="180" />
+    <Effect Type="NobleUnrest" Value="2" Turns="160" />
+    <Effect Type="NobleUnrest" Value="2" Turns="140" />
+    <Effect Type="NobleUnrest" Value="2" Turns="120" />
+    <Effect Type="NobleUnrest" Value="2" Turns="105" />
+    <Effect Type="NobleUnrest" Value="2" Turns="90" />
+    <Effect Type="NobleUnrest" Value="2" Turns="75" />
+    <Effect Type="NobleUnrest" Value="2" Turns="60" />
+    <Effect Type="NobleUnrest" Value="3" Turns="45" />
+    <Effect Type="NobleUnrest" Value="3" Turns="30" />
+    <Effect Type="NobleUnrest" Value="3" Turns="20" />
+    <Effect Type="NobleUnrest" Value="3" Turns="10" />
+    <CancelEffect Type="Authority" Value="-3" Turns="15" />
+  </Edict>
+  <Edict ID="Lots Of Militia 1" Area="Military" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Era Value="1" />
+      <Edict Item="Lots Of Militia 2" Condition="false" />
+      <Edict Item="Lots Of Militia 3" Condition="false" />
+      <Edict Item="Fewer Militia 1" Condition="false" />
+      <Edict Item="Fewer Militia 2" Condition="false" />
+      <Edict Item="Fewer Militia 3" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="10000" PerTurn="true" />
+    <Effect Type="MilitiaAvailability" Value="1.12" />
+    <Effect Type="MilitiaSkill" Value="0.6" />
+    <CancelEffect Type="ImmediateIncome" Value="2500" />
+  </Edict>
+  <Edict ID="Lots Of Militia 2" Area="Military" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Era Value="2" />
+      <Edict Item="Lots Of Militia 1" Condition="false" />
+      <Edict Item="Lots Of Militia 3" Condition="false" />
+      <Edict Item="Fewer Militia 1" Condition="false" />
+      <Edict Item="Fewer Militia 2" Condition="false" />
+      <Edict Item="Fewer Militia 3" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="20000" PerTurn="true" />
+    <Effect Type="MilitiaAvailability" Value="1.18" />
+    <Effect Type="MilitiaSkill" Value="0.65" />
+    <CancelEffect Type="ImmediateIncome" Value="5000" />
+  </Edict>
+  <Edict ID="Lots Of Militia 3" Area="Military" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="75" Exact="false" />
+      <Era Value="2" />
+      <Edict Item="Lots Of Militia 2" Condition="false" />
+      <Edict Item="Lots Of Militia 3" Condition="false" />
+      <Edict Item="Fewer Militia 1" Condition="false" />
+      <Edict Item="Fewer Militia 2" Condition="false" />
+      <Edict Item="Fewer Militia 3" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="20000" PerTurn="true" />
+    <Effect Type="MilitiaAvailability" Value="1.25" />
+    <Effect Type="MilitiaSkill" Value="0.7" />
+    <CancelEffect Type="ImmediateIncome" Value="5000" />
+  </Edict>
+  <Edict ID="Fewer Militia 1" Area="Military" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Era Value="1" />
+      <Edict Item="Lots Of Militia 1" Condition="false" />
+      <Edict Item="Lots Of Militia 2" Condition="false" />
+      <Edict Item="Lots Of Militia 3" Condition="false" />
+      <Edict Item="Fewer Militia 2" Condition="false" />
+      <Edict Item="Fewer Militia 3" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="10000" PerTurn="true" />
+    <Effect Type="MilitiaAvailability" Value="0.7" />
+    <Effect Type="MilitiaSkill" Value="1.12" />
+    <CancelEffect Type="ImmediateIncome" Value="2500" />
+  </Edict>
+  <Edict ID="Fewer Militia 2" Area="Military" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Era Value="2" />
+      <Edict Item="Lots Of Militia 1" Condition="false" />
+      <Edict Item="Lots Of Militia 2" Condition="false" />
+      <Edict Item="Lots Of Militia 3" Condition="false" />
+      <Edict Item="Fewer Militia 1" Condition="false" />
+      <Edict Item="Fewer Militia 3" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="20000" PerTurn="true" />
+    <Effect Type="MilitiaAvailability" Value="0.65" />
+    <Effect Type="MilitiaSkill" Value="1.18" />
+    <CancelEffect Type="ImmediateIncome" Value="5000" />
+  </Edict>
+  <Edict ID="Fewer Militia 3" Area="Military" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="75" Exact="false" />
+      <Era Value="2" />
+      <Edict Item="Lots Of Militia 1" Condition="false" />
+      <Edict Item="Lots Of Militia 2" Condition="false" />
+      <Edict Item="Lots Of Militia 3" Condition="false" />
+      <Edict Item="Fewer Militia 1" Condition="false" />
+      <Edict Item="Fewer Militia 2" Condition="false" />
+    </Requirements>
+    <Effect Type="Cost" Value="20000" PerTurn="true" />
+    <Effect Type="MilitiaAvailability" Value="0.6" />
+    <Effect Type="MilitiaSkill" Value="1.25" />
+    <CancelEffect Type="ImmediateIncome" Value="5000" />
+  </Edict>
+  <Edict ID="Keeper Of Records" Area="Culture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Record Keeping" />
+      <Edict Item="Historian" Condition="false" />
+      <Edict Item="Official Historian" Condition="false" />
+    </Requirements>
+    <Effect Type="Authority" Value="0.001" PerTurn="true" />
+    <Effect Type="Culture" Value="0.0001" PerTurn="true" />
+    <Effect Type="Cost" Value="1000" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="0.005" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="-0.0025" PerTurn="true" />
+    <CancelEffect Type="PeasantUnrest" Value="0.025" PerTurn="true" Turns="15" />
+    <CancelEffect Type="NobleUnrest" Value="-0.0125" PerTurn="true" Turns="15" />
+  </Edict>
+  <Edict ID="Historian" Area="Culture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Tech Item="Canon of Wisdom2" />
+      <Edict Item="Keeper Of Records" Condition="false" />
+      <Edict Item="Official Historian" Condition="false" />
+    </Requirements>
+    <Effect Type="Authority" Value="0.002" PerTurn="true" />
+    <Effect Type="Culture" Value="0.0002" PerTurn="true" />
+    <Effect Type="Cost" Value="2000" PerTurn="true" />
+    <CancelEffect Type="PeasantUnrest" Value="0.05" PerTurn="true" Turns="15" />
+    <CancelEffect Type="NobleUnrest" Value="-0.025" PerTurn="true" Turns="15" />
+  </Edict>
+  <Edict ID="Official Historian" Area="Culture" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="100" Exact="false" />
+      <Tech Item="History2" />
+      <Edict Item="Keeper Of Records" Condition="false" />
+      <Edict Item="Historian" Condition="false" />
+    </Requirements>
+    <Effect Type="Authority" Value="0.003" PerTurn="true" />
+    <Effect Type="Culture" Value="0.0003" PerTurn="true" />
+    <Effect Type="Cost" Value="3000" PerTurn="true" />
+    <CancelEffect Type="PeasantUnrest" Value="0.075" PerTurn="true" Turns="15" />
+    <CancelEffect Type="NobleUnrest" Value="-0.0375" PerTurn="true" Turns="15" />
+  </Edict>
+  <Edict ID="Yam Messenger System" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Tech Item="Khanate Administration" />
+    </Requirements>
+    <Effect Type="Cost" Value="800" PerTurn="true" />
+    <Effect Type="CancelDistancePenalty" Value="1" />
+    <CancelEffect Type="NobleUnrest" Value="20" Turns="20" />
+  </Edict>
+  <Edict ID="Encourage Looting 1" Area="Military">
+    <Requirements>
+      <ControlNumSettlements Num="35" Exact="false" />
+      <Tech Item="Military Theory" />
+      <Edict Item="Forbid Looting" Condition="false" />
+      <Edict Item="Encourage Looting 2" Condition="false" />
+      <Edict Item="Encourage Looting 3" Condition="false" />
+      <Edict Item="Discourage Looting" Condition="false" />
+    </Requirements>
+    <StaticRequirements></StaticRequirements>
+    <Effect Type="IncreaseBooty" Value="1.25" />
+    <Effect Type="PeasantUnrest" Value="-0.001" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="-0.00025" PerTurn="true" />
+    <Effect Type="Cost" Value="10000" />
+  </Edict>
+  <Edict ID="Encourage Looting 2" Area="Military">
+    <Requirements>
+      <ControlNumSettlements Num="75" Exact="false" />
+      <Tech Item="Military Theory" />
+      <Edict Item="Forbid Looting" Condition="false" />
+      <Edict Item="Encourage Looting 1" Condition="false" />
+      <Edict Item="Encourage Looting 3" Condition="false" />
+      <Edict Item="Discourage Looting" Condition="false" />
+    </Requirements>
+    <StaticRequirements></StaticRequirements>
+    <Effect Type="IncreaseBooty" Value="1.5" />
+    <Effect Type="PeasantUnrest" Value="-0.0015" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="-0.0005" PerTurn="true" />
+    <Effect Type="Cost" Value="10000" />
+  </Edict>
+  <Edict ID="Encourage Looting 3" Area="Military">
+    <Requirements>
+      <ControlNumSettlements Num="125" Exact="false" />
+      <Tech Item="Military Theory" />
+      <Edict Item="Forbid Looting" Condition="false" />
+      <Edict Item="Encourage Looting 1" Condition="false" />
+      <Edict Item="Discourage Looting" Condition="false" />
+    </Requirements>
+    <StaticRequirements></StaticRequirements>
+    <Effect Type="IncreaseBooty" Value="1.75" />
+    <Effect Type="PeasantUnrest" Value="-0.002" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="-0.001" PerTurn="true" />
+    <Effect Type="Cost" Value="10000" />
+  </Edict>
+  <Edict ID="Discourage Looting" Area="Military">
+    <Requirements>
+      <ControlNumSettlements Num="125" Exact="false" />
+      <Tech Item="Military Theory" />
+      <Edict Item="Forbid Looting" Condition="false" />
+      <Edict Item="Encourage Looting 1" Condition="false" />
+      <Edict Item="Encourage Looting 2" Condition="false" />
+      <Edict Item="Encourage Looting 3" Condition="false" />
+    </Requirements>
+    <StaticRequirements></StaticRequirements>
+    <Effect Type="IncreaseBooty" Value="0.5" />
+    <Effect Type="PeasantUnrest" Value="0.001" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="0.0005" PerTurn="true" />
+    <Effect Type="Cost" Value="10000" />
+  </Edict>
+  <Edict ID="Forbid Looting" Area="Military">
+    <Requirements>
+      <ControlNumSettlements Num="150" Exact="false" />
+      <Tech Item="Military Theory" />
+      <Edict Item="Encourage Looting 1" Condition="false" />
+      <Edict Item="Encourage Looting 2" Condition="false" />
+      <Edict Item="Encourage Looting 3" Condition="false" />
+      <Edict Item="Discourage Looting" Condition="false" />
+    </Requirements>
+    <StaticRequirements></StaticRequirements>
+    <Effect Type="IncreaseBooty" Value="0" />
+    <Effect Type="PeasantUnrest" Value="0.002" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="0.001" PerTurn="true" />
+    <Effect Type="Cost" Value="10000" />
+  </Edict>
+  <Edict ID="Patronize The Arts New" Area="Culture" MayBeCancelled="true" TranslationTag="Patronize The Arts">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Era Value="0" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="Culture" Value="0.01" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="0.0025" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="-0.0025" PerTurn="true" />
+    <Effect Type="Cost" Value="1000" PerTurn="true" />
+    <CancelEffect Type="NobleUnrest" Value="0.0025" PerTurn="true" Turns="15" />
+    <CancelEffect Type="Culture" Value="-0.005" PerTurn="true" Turns="15" />
+  </Edict>
+  <Edict ID="Patronize The Arts 1" Area="Culture" MayBeCancelled="true" TranslationTag="Patronize The Arts1">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Era Value="1" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="Culture" Value="0.02" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="0.005" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="-0.005" PerTurn="true" />
+    <Effect Type="Cost" Value="2500" PerTurn="true" />
+    <CancelEffect Type="NobleUnrest" Value="0.005" PerTurn="true" Turns="15" />
+    <CancelEffect Type="Culture" Value="-0.01" PerTurn="true" Turns="15" />
+  </Edict>
+  <Edict ID="Patronize The Arts 2" Area="Culture" MayBeCancelled="true" TranslationTag="Patronize The Arts2">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Era Value="2" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="true" />
+    </StaticRequirements>
+    <Effect Type="Culture" Value="0.03" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="0.0075" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="-0.0075" PerTurn="true" />
+    <Effect Type="Cost" Value="5000" PerTurn="true" />
+    <CancelEffect Type="NobleUnrest" Value="0.0075" PerTurn="true" Turns="15" />
+    <CancelEffect Type="Culture" Value="-0.015" PerTurn="true" Turns="15" />
+  </Edict>
+  <Edict ID="Promotion in Battle" Area="Military" NumTurns="15" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Tech Item="Legalism" />
+    </Requirements>
+    <Effect Type="AddLeader" Value="1" />
+    <Effect Type="FoodProduction" Value="0.9" />
+    <CancelEffect Type="PeasantUnrest" Value="20" Turns="20" />
+    <CancelEffect Type="Authority" Value="5" Turns="25" />
+  </Edict>
+  <Edict ID="Private Arms Ban" Area="Misc" MayBeCancelled="true">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Legalism" />
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="-20" />
+    <Effect Type="NobleUnrest" Value="-10" />
+    <Effect Type="MilitiaAvailability" Value="0.6" />
+    <Effect Type="PeasantUnrest" Value="15" Turns="20" />
+    <Effect Type="NobleUnrest" Value="30" Turns="10" />
+    <CancelEffect Type="NobleUnrest" Value="-20" Turns="10" />
+  </Edict>
+  <Edict ID="Relocation of Nobles" Area="Authority">
+    <Requirements>
+      <Tech Item="Priest King" />
+      <Never />
+    </Requirements>
+    <Effect Type="Authority" Value="10" />
+    <Effect Type="NobleUnrest" Value="3" />
+    <Effect Type="NobleUnrest" Value="2" Turns="290" />
+    <Effect Type="NobleUnrest" Value="2" Turns="260" />
+    <Effect Type="NobleUnrest" Value="2" Turns="230" />
+    <Effect Type="NobleUnrest" Value="2" Turns="200" />
+    <Effect Type="NobleUnrest" Value="2" Turns="180" />
+    <Effect Type="NobleUnrest" Value="2" Turns="160" />
+    <Effect Type="NobleUnrest" Value="2" Turns="140" />
+    <Effect Type="NobleUnrest" Value="2" Turns="120" />
+    <Effect Type="NobleUnrest" Value="2" Turns="105" />
+    <Effect Type="NobleUnrest" Value="2" Turns="90" />
+    <Effect Type="NobleUnrest" Value="2" Turns="75" />
+    <Effect Type="NobleUnrest" Value="2" Turns="60" />
+    <Effect Type="NobleUnrest" Value="3" Turns="45" />
+    <Effect Type="NobleUnrest" Value="3" Turns="30" />
+    <Effect Type="NobleUnrest" Value="3" Turns="20" />
+    <Effect Type="NobleUnrest" Value="3" Turns="10" />
+    <CancelEffect Type="Authority" Value="-5" Turns="50" />
+  </Edict>
+  <Edict ID="Gentlemen Ride Chariots" Area="Military" MayBeCancelled="false" IssuedInStartingEra="1">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Light Chariot" />
+      <Era Value="2" Condition="false" />
+      <Edict Item="Gentlemen Ride Horses" Condition="false" />
+    </Requirements>
+    <Effect Type="Recruitment" Value="0" />
+    <Effect Type="NobleUnrest" Value="10" Turns="15" />
+  </Edict>
+  <Edict ID="Gentlemen Ride Horses" Area="Military" MayBeCancelled="false" IssuedInStartingEra="2">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Horse Archery" />
+      <Era Value="0" Exact="true" Condition="false" />
+    </Requirements>
+    <Effect Type="Recruitment" Value="0" />
+    <CancelsEdict Name="Gentlemen Ride Chariots" />
+  </Edict>
+  <!--Deprecated -->
+  <Edict ID="Well Field System" Area="Economy" MayBeCancelled="false">
+    <Requirements>
+      <Tech Item="Flood Control" />
+      <Edict Item="Equal Field System" Condition="false" />
+      <Tech Item="Metropolitan City" />
+      <Never />
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="10" />
+    <Effect Type="NobleUnrest" Value="-10" />
+    <Effect Type="PeasantUnrest" Value="10" Turns="10" />
+    <Effect Type="CollectAgricultureTax" Value="2" />
+  </Edict>
+  <Edict ID="Land Redistribution" Area="Misc">
+    <Requirements>
+      <Edict Item="Central Bureaucracy" />
+      <Never />
+    </Requirements>
+    <Effect Type="PeasantUnrest" Value="-10" Turns="80" />
+    <Effect Type="NobleUnrest" Value="20" Turns="20" />
+    <Effect Type="Cost" Value="3000" />
+  </Edict>
+  <Edict ID="Standardization" Area="Economy">
+    <Requirements>
+      <ControlNumSettlements Num="100" Exact="false" />
+      <Tech Item="Legalism" />
+      <Never />
+    </Requirements>
+    <Effect Type="Trade" Value="1.2" />
+    <Effect Type="Cost" Value="1000" />
+    <Effect Type="NobleUnrest" Value="20" Turns="10" />
+    <Effect Type="PeasantUnrest" Value="20" Turns="10" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Fubing Militia" Area="Military" MayBeCancelled="true">
+    <Requirements>
+      <Never />
+      <Era Value="0" />
+    </Requirements>
+    <Effect Type="Cost" Value="5000" PerTurn="true" />
+    <Effect Type="MilitiaAvailability" Value="2" />
+    <Effect Type="MilitiaSkill" Value="0.2" />
+    <CancelEffect Type="ImmediateIncome" Value="1250" />
+  </Edict>
+  <Edict ID="Equal Field System" Area="Economy" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Era Value="2" />
+      <Never />
+    </Requirements>
+    <Effect Type="Cost" Value="2000" />
+    <Effect Type="PeasantUnrest" Value="10" Turns="10" />
+    <Effect Type="NobleUnrest" Value="10" Turns="20" />
+    <Effect Type="CollectAgricultureTax" Value="3" />
+    <CancelsEdict Name="Well Field System" />
+  </Edict>
+  <Edict ID="Ban Dangerous Books" Area="Authority">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <Tech Item="Legalism" />
+      <Never />
+    </Requirements>
+    <Effect Type="Cost" Value="500" />
+    <Effect Type="NobleUnrest" Value="10" />
+    <Effect Type="Authority" Value="3" />
+    <Effect Type="Culture" Value="-5" />
+    <CancelEffect Type="Culture" Value="-3" Turns="20" />
+  </Edict>
+  <Edict ID="Salt Tax 1" Area="Economy">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <Edict Item="Central Bureaucracy" />
+      <Tech Item="Coinage" />
+      <Edict Item="Salt Tax 2" Condition="false" />
+      <Edict Item="Salt Tax 3" Condition="false" />
+    </Requirements>
+    <Effect Type="NobleUnrest" Value="6" />
+    <Effect Type="PeasantUnrest" Value="4" />
+    <Effect Type="SpecialPopulationTax" Value="1" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Salt Tax 2" Area="Economy">
+    <Requirements>
+      <ControlNumSettlements Num="90" Exact="false" />
+      <Edict Item="Central Bureaucracy" />
+      <Tech Item="Trading City" />
+      <Edict Item="Salt Tax 1" Condition="false" />
+      <Edict Item="Salt Tax 3" Condition="false" />
+    </Requirements>
+    <Effect Type="NobleUnrest" Value="10" />
+    <Effect Type="PeasantUnrest" Value="7" />
+    <Effect Type="SpecialPopulationTax" Value="2" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Salt Tax 3" Area="Economy">
+    <Requirements>
+      <ControlNumSettlements Num="160" Exact="false" />
+      <Edict Item="Central Bureaucracy" />
+      <Tech Item="Large Trading City" />
+      <Edict Item="Salt Tax 2" Condition="false" />
+      <Edict Item="Salt Tax 1" Condition="false" />
+    </Requirements>
+    <Effect Type="NobleUnrest" Value="14" />
+    <Effect Type="PeasantUnrest" Value="11" />
+    <Effect Type="SpecialPopulationTax" Value="3" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Patronize The Arts" Area="Culture">
+    <Requirements>
+      <Tech Item="Poetry" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Effect Type="Culture" Value="2" />
+    <Effect Type="Cost" Value="200" PerTurn="true" />
+    <CancelEffect Type="NobleUnrest" Value="5" Turns="10" />
+  </Edict>
+  <Edict ID="Salt Tax" Area="Economy">
+    <Requirements>
+      <Edict Item="Central Bureaucracy" />
+      <Tech Item="Coinage" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Effect Type="NobleUnrest" Value="6" />
+    <Effect Type="PeasantUnrest" Value="4" />
+    <Effect Type="SpecialPopulationTax" Value="1" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Grand Commandant" Area="Military" LeaderTitle="ELDR Grand Commandent">
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <!-- Value 1 = general-->
+    <Effect Type="AddLeader" Value="1" />
+    <Effect Type="Authority" Value="-1" />
+    <Effect Type="Cost" Value="80" PerTurn="true" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Imperial University" Area="Culture">
+    <Requirements>
+      <Edict Item="Central Bureaucracy" />
+      <Tech Item="Canon of Wisdom2" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Effect Type="Cost" Value="300" PerTurn="true" />
+    <Effect Type="Culture" Value="2" />
+    <Effect Type="PeasantUnrest" Value="-10" />
+    <Effect Type="TaxCollection" Value="1.1" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Civil Service Examinations" Area="Culture">
+    <Requirements>
+      <Tech Item="Confucianism" />
+      <Edict Item="Central Bureaucracy" />
+      <Era Value="2" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Effect Type="Culture" Value="2" />
+    <Effect Type="Cost" Value="100" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="15" Turns="10" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Appoint a Shi" Area="Military" LeaderTitle="ELDR Hired Shi">
+    <Requirements>
+      <Tech Item="Logographic Script" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <!-- Value 2 = admin-->
+    <Effect Type="AddLeader" Value="2" />
+    <Effect Type="NobleUnrest" Value="5" />
+    <Effect Type="Cost" Value="120" PerTurn="true" />
+    <Effect Type="Cost" Value="0" />
+  </Edict>
+  <Edict ID="Appoint a Strategist" Area="Military" LeaderTitle="ELDR Military Specialist">
+    <Requirements>
+      <Tech Item="Military Theory" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <!-- Value 1 = General -->
+    <Effect Type="AddLeader" Value="1" />
+    <Effect Type="NobleUnrest" Value="5" />
+    <Effect Type="Cost" Value="150" PerTurn="true" />
+  </Edict>
+  <Edict ID="Private Land" Area="Agriculture">
+    <Requirements>
+      <Edict Item="Central Bureaucracy" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-10" />
+    <Effect Type="FoodProduction" Value="1.2" />
+    <Effect Type="Cost" Value="300" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="10" Turns="10" />
+    <!--    <Effect Type="PeasantUnrest" Value="0.3" PerTurn="true"/> -->
+    <CancelEffect Type="NobleUnrest" Value="20" Turns="20" />
+    <CancelEffect Type="PeasantUnrest" Value="10" Turns="10" />
+  </Edict>
+  <Edict ID="Central Bureaucracy" Area="Authority" LeaderTitle="ELDR Chancellor">
+    <Requirements>
+      <Tech Item="Bamboo Strips" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <!-- Value 2 = admin-->
+    <Effect Type="AddLeader" Value="2" />
+    <Effect Type="PeasantUnrest" Value="-10" />
+    <Effect Type="Authority" Value="2" />
+    <Effect Type="Cost" Value="500" PerTurn="true" />
+    <Effect Type="NobleUnrest" Value="25" Turns="20" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+  <Edict ID="Imperial Secretary" Area="Economy">
+    <Requirements>
+      <Era Value="2" />
+      <Edict Item="Central Bureaucracy" />
+    </Requirements>
+    <StaticRequirements>
+      <UsingRoyalCourt Condition="false" />
+    </StaticRequirements>
+    <Effect Type="NobleUnrest" Value="-15" />
+    <Effect Type="TaxCollection" Value="1.1" />
+    <Effect Type="Cost" Value="200" PerTurn="true" />
+    <CancelEffect Type="Authority" Value="-1" Turns="20" />
+  </Edict>
+
+  <!-- <Edict ID="LaborAllowance0" Area="Misc" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="1" Exact="false" />
+      <ControlNumSettlements Num="10" Exact="false" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Edict Item="LaborAllowance1" Condition="false" />
+      <Edict Item="LaborAllowance2" Condition="false" />
+      <Edict Item="LaborAllowance3" Condition="false" />
+      <Edict Item="LaborAllowance4" Condition="false" />
+      <Edict Item="LaborAllowance5" Condition="false" />
+      <Edict Item="LaborAllowance6" Condition="false" />
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-4" PerTurn="true" />
+  </Edict>
+  <Edict ID="LaborAllowance1" Area="Misc" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="10" Exact="false" />
+      <ControlNumSettlements Num="25" Exact="false" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Edict Item="LaborAllowance2" Condition="false" />
+      <Edict Item="LaborAllowance3" Condition="false" />
+      <Edict Item="LaborAllowance4" Condition="false" />
+      <Edict Item="LaborAllowance5" Condition="false" />
+      <Edict Item="LaborAllowance6" Condition="false" />
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-5" PerTurn="true" />
+    <CancelsEdict Name="LaborAllowance0" />
+  </Edict>
+  <Edict ID="LaborAllowance2" Area="Misc" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="25" Exact="false" />
+      <ControlNumSettlements Num="50" Exact="false" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Edict Item="LaborAllowance0" Condition="false" />
+      <Edict Item="LaborAllowance3" Condition="false" />
+      <Edict Item="LaborAllowance4" Condition="false" />
+      <Edict Item="LaborAllowance5" Condition="false" />
+      <Edict Item="LaborAllowance6" Condition="false" />
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-6" PerTurn="true" />
+    <CancelsEdict Name="LaborAllowance1" />
+  </Edict>
+  <Edict ID="LaborAllowance3" Area="Misc" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="50" Exact="false" />
+      <ControlNumSettlements Num="100" Exact="false" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Edict Item="LaborAllowance0" Condition="false" />
+      <Edict Item="LaborAllowance1" Condition="false" />
+      <Edict Item="LaborAllowance4" Condition="false" />
+      <Edict Item="LaborAllowance5" Condition="false" />
+      <Edict Item="LaborAllowance6" Condition="false" />
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-7" PerTurn="true" />
+    <CancelsEdict Name="LaborAllowance2" />
+  </Edict>
+  <Edict ID="LaborAllowance4" Area="Misc" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="100" Exact="false" />
+      <ControlNumSettlements Num="200" Exact="false" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Edict Item="LaborAllowance0" Condition="false" />
+      <Edict Item="LaborAllowance1" Condition="false" />
+      <Edict Item="LaborAllowance2" Condition="false" />
+      <Edict Item="LaborAllowance5" Condition="false" />
+      <Edict Item="LaborAllowance6" Condition="false" />
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-8" PerTurn="true" />
+    <CancelsEdict Name="LaborAllowance3" />
+  </Edict>
+  <Edict ID="LaborAllowance5" Area="Misc" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="200" Exact="false" />
+      <ControlNumSettlements Num="400" Exact="false" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Edict Item="LaborAllowance0" Condition="false" />
+      <Edict Item="LaborAllowance1" Condition="false" />
+      <Edict Item="LaborAllowance2" Condition="false" />
+      <Edict Item="LaborAllowance3" Condition="false" />
+      <Edict Item="LaborAllowance6" Condition="false" />
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-9" PerTurn="true" />
+    <CancelsEdict Name="LaborAllowance4" />
+  </Edict>
+  <Edict ID="LaborAllowance6" Area="Misc" MayBeCancelled="false">
+    <Requirements>
+      <ControlNumSettlements Num="400" Exact="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Edict Item="LaborAllowance0" Condition="false" />
+      <Edict Item="LaborAllowance1" Condition="false" />
+      <Edict Item="LaborAllowance2" Condition="false" />
+      <Edict Item="LaborAllowance3" Condition="false" />
+      <Edict Item="LaborAllowance4" Condition="false" />
+    </StaticRequirements>
+    <Effect Type="PeasantUnrest" Value="-10" PerTurn="true" />
+    <CancelsEdict Name="LaborAllowance5" />
+  </Edict> -->
+</Root>

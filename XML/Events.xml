@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Events.xsd">
+  <!-- (doesn't work as intended)
+  <Event ID="Labor Service" Picture="Buildings\City" PositiveEvent="true">
+    <Trigger Test="PerSettlement" BaseChance="100" MinTurnToOccur="1">
+      <ClimateModifier ID="Central Asia" Modifier="100" />
+      <ClimateModifier ID="Gobi Desert" Modifier="100" />
+      <ClimateModifier ID="Northern China" Modifier="100" />
+      <ClimateModifier ID="Southern China" Modifier="100" />
+      <ClimateModifier ID="Western China" Modifier="100" />
+    </Trigger>
+    <Target Affects="TriggerTarget">
+      <AIDifficultyModifier VH="0.8" H="0.9" />
+      <PlayerDifficultyModifier E="1.1" />
+      <PopulationModifier LessThan="10000" Modifier="1.5" />
+      <PopulationModifier LessThan="4900" Modifier="3.0" />
+      <PopulationModifier LessThan="4800" Modifier="3.05" />
+      <PopulationModifier LessThan="4700" Modifier="3.1" />
+      <PopulationModifier LessThan="4600" Modifier="3.15" />
+      <PopulationModifier LessThan="4500" Modifier="3.2" />
+      <PopulationModifier LessThan="4400" Modifier="3.25" />
+      <PopulationModifier LessThan="4300" Modifier="3.3" />
+      <PopulationModifier LessThan="4200" Modifier="3.35" />
+      <PopulationModifier LessThan="4100" Modifier="3.4" />
+      <PopulationModifier LessThan="4000" Modifier="3.45" />
+      <PopulationModifier LessThan="3900" Modifier="3.55" />
+      <PopulationModifier LessThan="3800" Modifier="3.65" />
+      <PopulationModifier LessThan="3700" Modifier="3.75" />
+      <PopulationModifier LessThan="3600" Modifier="3.85" />
+      <PopulationModifier LessThan="3500" Modifier="3.95" />
+      <PopulationModifier LessThan="3400" Modifier="4.1" />
+      <PopulationModifier LessThan="3300" Modifier="4.25" />
+      <PopulationModifier LessThan="3200" Modifier="4.4" />
+      <PopulationModifier LessThan="3100" Modifier="4.55" />
+      <PopulationModifier LessThan="3000" Modifier="4.7" />
+      <PopulationModifier LessThan="2900" Modifier="4.85" />
+      <PopulationModifier LessThan="2800" Modifier="5.0" />
+      <PopulationModifier LessThan="2700" Modifier="5.1" />
+      <PopulationModifier LessThan="2600" Modifier="5.2" />
+      <PopulationModifier LessThan="2500" Modifier="5.3" />
+      <PopulationModifier LessThan="2400" Modifier="5.4" />
+      <PopulationModifier LessThan="2300" Modifier="5.5" />
+      <PopulationModifier LessThan="2200" Modifier="5.6" />
+      <PopulationModifier LessThan="2100" Modifier="5.7" />
+      <PopulationModifier LessThan="2000" Modifier="5.8" />
+      <PopulationModifier LessThan="1900" Modifier="5.9" />
+      <PopulationModifier LessThan="1800" Modifier="6" />
+      <PopulationModifier LessThan="1700" Modifier="5.9" />
+      <PopulationModifier LessThan="1600" Modifier="5.8" />
+      <PopulationModifier LessThan="1500" Modifier="5.5" />
+      <PopulationModifier LessThan="1400" Modifier="5.2" />
+      <PopulationModifier LessThan="1300" Modifier="4.9" />
+      <PopulationModifier LessThan="1200" Modifier="4.6" />
+      <PopulationModifier LessThan="1100" Modifier="4.3" />
+      <PopulationModifier LessThan="1000" Modifier="4" />
+      <PopulationModifier LessThan="900" Modifier="3.7" />
+      <PopulationModifier LessThan="800" Modifier="3.4" />
+      <PopulationModifier LessThan="700" Modifier="3.1" />
+      <PopulationModifier LessThan="600" Modifier="2.8" />
+      <PopulationModifier LessThan="500" Modifier="2.5" />
+      <PopulationModifier LessThan="400" Modifier="2.2" />
+      <PopulationModifier LessThan="300" Modifier="1.9" />
+      <PopulationModifier LessThan="200" Modifier="1.6" />
+      <PopulationModifier LessThan="100" Modifier="1.3" />
+      <Effect Effect="PeasantUnrest" Parameter="-50"></Effect>
+      <Effect Effect="GlobalPeasantUnrest" Parameter="-50"></Effect>
+    </Target>
+    <ReportToPlayer EventName="DS Sickness Msg" MainMsg="DS Sickness Text" />
+    <ThirdPartyReport EventName="DS 3P Sickness Msg" MainMsg="DS 3P Sickness Text" />
+  </Event> -->
+
+  <!-- Disasters ////////////////////////////////////////////////////// -->
+  <!-- Minor Earthquake -->
+  <Event ID="Minor Earthquake" Picture="OE_Event_EarthQuake_01">
+    <Trigger Test="PerClimateRegion" BaseChance="0.01" MinTurnToOccur="10">
+      <!-- Modifiers to occurance chance -->
+      <ClimateModifier ID="Central Asia" Modifier="0" />
+      <ClimateModifier ID="Gobi Desert" Modifier="1" />
+      <ClimateModifier ID="Northern China" Modifier="0.5" />
+      <ClimateModifier ID="Southern China" Modifier="1.5" />
+      <ClimateModifier ID="Western China" Modifier="2" />
+    </Trigger>
+    <Target Affects="OneSettlement">
+      <!-- Modifiers to effects -->
+      <AIDifficultyModifier VH="0.5" H="0.5" />
+      <PlayerDifficultyModifier E="0.5" />
+      <Effect Effect="DamageBuildings" Chance="0.4">
+        <TechModifier Item="Ceramic Roof Tiles" Modifier="0.33" />
+      </Effect>
+      <Effect Effect="DamageWalls" Chance="0.2">
+        <TechModifier Item="Brick Faced Walls" Modifier="0.5" />
+      </Effect>
+      <Effect Effect="KillPopulation" MinPercent="10" MaxPercent="25">
+        <TechModifier Item="Ceramic Roof Tiles" Modifier="0.33" />
+      </Effect>
+      <Effect Effect="KillCharacter" Chance="0.1" />
+      <Effect Effect="KillSoldiers" MinPercent="0" MaxPercent="20" />
+      <Effect Effect="NobleUnrest" Parameter="10" Duration="3" />
+      <Effect Effect="PeasantUnrest" Parameter="10" Duration="3" />
+    </Target>
+    <ReportToPlayer EventName="DS Earthquake Msg" MainMsg="DS Earthquake Text" />
+    <ThirdPartyReport EventName="DS 3P Earthquake Msg" MainMsg="DS 3P Earthquake Text" />
+  </Event>
+
+
+  <!-- Major Earthquake -->
+  <Event ID="Major Earthquake" Picture="OE_Event_EarthQuake_01">
+    <Trigger Test="PerClimateRegion" BaseChance="0.003" MinTurnToOccur="40">
+      <!-- Modifiers to occurance chance -->
+      <ClimateModifier ID="Central Asia" Modifier="0" />
+      <ClimateModifier ID="Gobi Desert" Modifier="1" />
+      <ClimateModifier ID="Northern China" Modifier="0.5" />
+      <ClimateModifier ID="Southern China" Modifier="1.5" />
+      <ClimateModifier ID="Western China" Modifier="2" />
+    </Trigger>
+    <Target Affects="SettlementAndSettlementsNearby" Range="20">
+      <!-- Modifiers to effects -->
+      <AIDifficultyModifier VH="0.5" H="0.5" />
+      <PlayerDifficultyModifier E="0.5" VH="1.5" />
+      <Effect Effect="DamageBuildings" Chance="0.4">
+        <TechModifier Item="Ceramic Roof Tiles" Modifier="0.33" />
+      </Effect>
+      <Effect Effect="DamageWalls" Chance="0.2">
+        <TechModifier Item="Brick Faced Walls" Modifier="0.5" />
+      </Effect>
+      <Effect Effect="KillPopulation" MinPercent="10" MaxPercent="25">
+        <TechModifier Item="Ceramic Roof Tiles" Modifier="0.33" />
+      </Effect>
+      <Effect Effect="KillCharacter" Chance="0.1" />
+      <Effect Effect="KillSoldiers" MinPercent="0" MaxPercent="20" />
+      <Effect Effect="NobleUnrest" Parameter="30" Duration="4" />
+      <Effect Effect="PeasantUnrest" Parameter="20" Duration="4" />
+    </Target>
+    <ReportToPlayer EventName="DS Earthquake Msg" MainMsg="DS Major Earthquake Text" SecondaryMsg="DS Earthquake Text" />
+    <ThirdPartyReport EventName="DS 3P Earthquake Msg" MainMsg="DS 3P Earthquake Text" />
+  </Event>
+
+  <!-- Fire-->
+  <Event ID="Fire" Picture="OE_Event_Fire_01">
+    <Trigger Test="PerSettlement" BaseChance="0.005" MinTurnToOccur="20">
+      <!-- Modifiers to occurance chance -->
+      <AIDifficultyModifier VH="0.5" H="0.5" />
+      <PlayerDifficultyModifier E="0.5" VH="1.25" />
+      <ClimateModifier ID="Southern China" Modifier="0.5" />
+      <PopulationModifier LessThan="10" Modifier="0.3" />
+    </Trigger>
+    <Target Affects="TriggerTarget">
+      <!-- Modifiers to effects -->
+      <TechModifier Item="Ceramic Roof Tiles" Modifier="0.33" />
+      <Effect Effect="DamageBuildings" Chance="0.4" />
+      <Effect Effect="DamageWalls" Chance="0.4" Parameter="1" /> <!-- Param is max level to damage -->
+      <Effect Effect="KillPopulation" MinPercent="10" MaxPercent="25" />
+      <Effect Effect="KillCharacter" Chance="0.06" />
+    </Target>
+    <ReportToPlayer EventName="DS Fire Msg" MainMsg="DS Fire Text" />
+    <ThirdPartyReport EventName="DS 3P Fire Msg" MainMsg="DS 3P Fire Text" />
+  </Event>
+
+  <!-- Flood -->
+  <Event ID="Flood" Picture="OE_Event_Flood_01">
+    <Trigger Test="PerClimateRegion" BaseChance="0.03" MinTurnToOccur="5">
+      <!-- Modifiers to occurance chance -->
+      <AIDifficultyModifier VH="0.5" H="0.5" />
+      <PlayerDifficultyModifier E="0.5" VH="1.25" />
+      <ClimateModifier ID="Gobi Desert" Modifier="0.5" />
+      <ClimateModifier ID="Northern China" Modifier="2" />
+    </Trigger>
+    <Target Affects="RiverSection" Range="15">
+      <!-- Modifiers to effects -->
+      <AIDifficultyModifier VH="0.5" H="0.5" N="0.5" />
+      <TechModifier Item="Flood Control" Modifier="0.5" />
+      <Effect Effect="DamageBuildings" Chance="0.4" />
+      <Effect Effect="DamageWalls" Chance="0.6">
+        <TechModifier Item="Brick Faced Walls" Modifier="0" />
+      </Effect>
+      <Effect Effect="KillPopulation" MinPercent="20" MaxPercent="40" />
+      <Effect Effect="PeasantUnrest" Parameter="20" Duration="4" />
+    </Target>
+    <ReportToPlayer EventName="DS Flood Msg" MainMsg="DS Flood Text" />
+    <ThirdPartyReport EventName="DS 3P Flood Msg" MainMsg="DS 3P Flood Text" />
+  </Event>
+
+  <!-- Disease -->
+  <Event ID="Disease" Picture="OE_Event_Sickness_01">
+    <Trigger Test="PerSettlement" BaseChance="0.01" MinTurnToOccur="10">
+      <!-- Modifiers to occurance chance -->
+      <AIDifficultyModifier VH="0.5" H="0.5" />
+      <PlayerDifficultyModifier E="0.5" VH="1.25" />
+      <ClimateModifier ID="Gobi Desert" Modifier="0.5" />
+      <ClimateModifier ID="Southern China" Modifier="2" />
+      <TechModifier Item="Medicine" Modifier="0.8" />
+      <PopulationModifier LessThan="10" Modifier="0.1" />
+    </Trigger>
+    <Target Affects="TriggerTarget">
+      <TechModifier Item="Hot Cold Theory" Modifier="0.8" />
+      <TechModifier Item="Medicine" Modifier="0.8" />
+      <TechModifier Item="Acupuncture" Modifier="0.8" />
+      <TechModifier Item="Blood Circulation" Modifier="0.85" />
+      <Effect Effect="KillPopulation" MinPercent="20" MaxPercent="40" />
+      <Effect Effect="KillCharacter" Chance="0.1" />
+      <Effect Effect="KillSoldiers" MinPercent="10" MaxPercent="30" />
+      <Effect Effect="ArmyReadiness" Parameter="40" />
+      <Effect Effect="NobleUnrest" Parameter="10" Duration="4" />
+      <Effect Effect="PeasantUnrest" Parameter="10" Duration="4" />
+    </Target>
+    <ReportToPlayer EventName="DS Disease Msg" MainMsg="DS Disease Text" />
+    <ThirdPartyReport EventName="DS 3P Disease Msg" MainMsg="DS 3P Disease Text" />
+  </Event>
+
+  <!-- Sickness -->
+  <Event ID="Sickness" Picture="OE_Event_Sickness_01">
+    <Trigger Test="PerArmy" BaseChance="0.02" MinTurnToOccur="10">
+      <!-- Modifiers to occurance chance -->
+      <AIDifficultyModifier VH="0.5" H="0.5" />
+      <PlayerDifficultyModifier E="0.5" VH="1.25" />
+      <ClimateModifier ID="Gobi Desert" Modifier="0.5" />
+      <ClimateModifier ID="Southern China" Modifier="2" />
+      <TechModifier Item="Medicine" Modifier="0.8" />
+      <ArmySizeModifier LessThan="4" Modifier="0.2" />
+      <TerrainModifier BaseTerrainID="Marsh" Modifier="3" />
+    </Trigger>
+    <Target Affects="TriggerTarget">
+      <TechModifier Item="Hot Cold Theory" Modifier="0.8" />
+      <TechModifier Item="Medicine" Modifier="0.8" />
+      <TechModifier Item="Acupuncture" Modifier="0.8" />
+      <TechModifier Item="Blood Circulation" Modifier="0.85" />
+      <Effect Effect="KillCharacter" Chance="0.1" />
+      <Effect Effect="KillSoldiers" MinPercent="10" MaxPercent="30" />
+      <Effect Effect="ArmyReadiness" Parameter="40" />
+    </Target>
+    <ReportToPlayer EventName="DS Sickness Msg" MainMsg="DS Sickness Text" />
+    <ThirdPartyReport EventName="DS 3P Sickness Msg" MainMsg="DS 3P Sickness Text" />
+  </Event>
+
+  <Event ID="Sick Animals" Picture="OE_Event_AnimalSickness_01">
+    <Trigger Test="PerClimateRegion" BaseChance="0.01" MinTurnToOccur="20"></Trigger>
+    <Target Affects="AllSettlements">
+      <!-- Modifiers to effects -->
+      <AIDifficultyModifier VH="0.3" H="0.5" N="0.5" />
+      <PlayerDifficultyModifier E="0.5" />
+      <Effect Effect="KillAnimals" MinPercent="10" MaxPercent="30" />
+    </Target>
+    <ReportToPlayer EventName="DS Sick Animals Msg" MainMsg="DS Sick Animals Text" />
+  </Event>
+
+  <Event ID="Drought" Picture="OE_Event_Famine_01">
+    <Trigger Test="PerClimateRegion" BaseChance="0.01" MinTurnToOccur="20"></Trigger>
+    <Target Affects="AllSettlements">
+      <!-- Modifiers to effects -->
+      <AIDifficultyModifier VH="0.3" H="0.5" N="0.5" />
+      <PlayerDifficultyModifier E="0.5" />
+      <Effect Effect="GrainProduction" Parameter="-20" Duration="4" />
+      <Effect Effect="PeasantUnrest" Parameter="15" Duration="4" />
+    </Target>
+    <ReportToPlayer EventName="DS Drought Msg" MainMsg="DS Drought Text" />
+  </Event>
+
+  <Event ID="Bumper Harvest" Picture="OE_Event_BumperHarvest_01" PositiveEvent="true">
+    <Trigger Test="PerClimateRegion" BaseChance="0.01" MinTurnToOccur="20"></Trigger>
+    <Target Affects="AllSettlements">
+      <!-- Modifiers to effects -->
+      <Effect Effect="GrainProduction" Parameter="20" Duration="4" />
+      <Effect Effect="PeasantUnrest" Parameter="-20" Duration="4" />
+    </Target>
+    <ReportToPlayer EventName="DS Bumper Harvest Msg" MainMsg="DS Bumper Harvest Text" />
+  </Event>
+
+  <Event ID="Locust Swarm" Picture="OE_Event_Famine_01">
+    <Trigger Test="PerClimateRegion" BaseChance="0.01" MinTurnToOccur="20"></Trigger>
+    <Target Affects="SettlementAndSettlementsNearby" Range="10">
+      <!-- Modifiers to effects -->
+      <AIDifficultyModifier VH="0.3" H="0.5" N="0.5" />
+      <PlayerDifficultyModifier E="0.5" />
+      <Effect Effect="GrainProduction" Parameter="-50" Duration="2" />
+      <Effect Effect="PeasantUnrest" Parameter="20" Duration="2" />
+      <Effect Effect="NobleUnrest" Parameter="15" />
+    </Target>
+    <ReportToPlayer EventName="DS Locust Swarm Msg" MainMsg="DS Locust Swarm Text" />
+  </Event>
+
+  <Event ID="Hail Storm" Picture="OE_Event_Storm_01">
+    <Trigger Test="PerClimateRegion" BaseChance="0.002" MinTurnToOccur="20">
+      <ClimateModifier ID="Gobi Desert" Modifier="0" />
+    </Trigger>
+    <Target Affects="OneSettlement">
+      <!-- Modifiers to effects -->
+      <AIDifficultyModifier VH="0.3" H="0.5" N="0.5" />
+      <PlayerDifficultyModifier E="0.5" />
+      <Effect Effect="GrainProduction" Parameter="-25" />
+    </Target>
+    <ReportToPlayer EventName="DS Hail Storm Msg" MainMsg="DS Hail Storm Text" />
+  </Event>
+  <!-- Plague -->
+
+  <!-- Region Omens ////////////////////////////////////////////////////////////// -->
+  <!-- Eclipse -->
+  <Event ID="Eclipse" Picture="OE_Event_Eclipse_01">
+    <Trigger Test="PerTurn" BaseChance="0.002" />
+    <Target Affects="AllPlayers">
+      <TechModifier Item="Astronomy" Modifier="0" />
+      <Effect Effect="GlobalPeasantUnrest" Parameter="25" Duration="3" />
+      <Effect Effect="GlobalNobleUnrest" Parameter="30" Duration="3" />
+    </Target>
+    <ReportToPlayer EventName="EV Eclipse Msg" MainMsg="EV Eclipse Text" />
+  </Event>
+
+  <!-- Comet -->
+  <Event ID="Comet" Picture="OE_Event_BadOmen_01">
+    <Trigger Test="PerTurn" BaseChance="0.01" />
+    <Target Affects="AllPlayers">
+      <TechModifier Item="Astronomy" Modifier="0" />
+      <Effect Effect="GlobalPeasantUnrest" Parameter="15" Duration="3" />
+      <Effect Effect="GlobalNobleUnrest" Parameter="20" Duration="3" />
+    </Target>
+    <ReportToPlayer EventName="EV Comet Msg" MainMsg="EV Comet Text" />
+  </Event>
+
+  <!-- Three Horned Ox-->
+  <Event ID="Three Horned Ox" Picture="OE_Event_GoodOmen_01" PositiveEvent="true">
+    <Trigger Test="PerPlayer" BaseChance="0.001" />
+    <Target Affects="TriggerTarget">
+      <Effect Effect="GlobalPeasantUnrest" Parameter="-20" Duration="3" />
+      <Effect Effect="GlobalNobleUnrest" Parameter="-10" Duration="3" />
+    </Target>
+    <ReportToPlayer EventName="EV 3HOx Msg" MainMsg="EV 3HOx Text" />
+  </Event>
+
+  <!-- Nine Tailed Fox-->
+  <Event ID="Nine Tailed Fox" Picture="OE_Event_GoodOmen_01" PositiveEvent="true">
+    <Trigger Test="PerPlayer" BaseChance="0.002" />
+    <Target Affects="TriggerTarget">
+      <Effect Effect="GlobalPeasantUnrest" Parameter="-10" Duration="3" />
+      <Effect Effect="GlobalNobleUnrest" Parameter="-20" Duration="3" />
+    </Target>
+    <ReportToPlayer EventName="EV 9TFox Msg" MainMsg="EV 9TFox Text" />
+  </Event>
+
+  <!-- Red Rain -->
+  <Event ID="Red Rain" Picture="OE_Event_BadOmen_01">
+    <Trigger Test="PerPlayer" BaseChance="0.002" />
+    <Target Affects="TriggerTarget">
+      <Effect Effect="GlobalPeasantUnrest" Parameter="20" Duration="2" />
+      <Effect Effect="GlobalNobleUnrest" Parameter="20" Duration="2" />
+    </Target>
+    <ReportToPlayer EventName="EV RedRain Msg" MainMsg="EV RedRain Text" />
+  </Event>
+
+  <!-- Phoenix Sighting-->
+  <Event ID="Phoenix Sighting" Picture="OE_Event_GoodOmen_01" PositiveEvent="true">
+    <Trigger Test="PerPlayer" BaseChance="0.002" />
+    <Target Affects="TriggerTarget">
+      <Effect Effect="GlobalPeasantUnrest" Parameter="-20" Duration="3" />
+      <Effect Effect="GlobalNobleUnrest" Parameter="-20" Duration="3" />
+    </Target>
+    <ReportToPlayer EventName="EV Phoenix Msg" MainMsg="EV Phoenix Text" />
+  </Event>
+
+
+</Root>

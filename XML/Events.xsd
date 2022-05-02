@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+  <xs:simpleType name="TriggerTest">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PerTurn"/>
+      <xs:enumeration value="PerClimateRegion"/>
+      <xs:enumeration value="PerSettlement"/>
+      <xs:enumeration value="PerArmy"/>
+      <xs:enumeration value="PerPlayer"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EventTarget">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TriggerTarget"/>
+      <xs:enumeration value="OneSettlement"/>
+      <xs:enumeration value="AllSettlements"/>
+      <xs:enumeration value="SettlementAndSettlementsNearby"/>
+      <xs:enumeration value="SettlementsNearRiver"/>
+      <xs:enumeration value="AllPlayers"/>
+      <xs:enumeration value="RiverSection"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EventEffect">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DamageBuildings"/>
+      <xs:enumeration value="DamageWalls"/>
+      <xs:enumeration value="KillPopulation"/>
+      <xs:enumeration value="KillAnimals"/>
+      <xs:enumeration value="KillSoldiers"/>
+      <xs:enumeration value="SinkShips"/>
+      <xs:enumeration value="KillCharacter"/>
+      <xs:enumeration value="ArmyReadiness"/>
+      <xs:enumeration value="PreventMovement"/>
+      <xs:enumeration value="PeasantUnrest"/>
+      <xs:enumeration value="NobleUnrest"/>
+      <xs:enumeration value="GlobalPeasantUnrest"/>
+      <xs:enumeration value="GlobalNobleUnrest"/>
+      <xs:enumeration value="GrainProduction"/>      
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Standard Event Modifiers -->
+  <xs:complexType name="ClimateModifier">
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+    <xs:attribute name="Modifier" type="xs:float" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="TerrainModifier">
+    <xs:attribute name="BaseTerrainID" type="xs:string" use="required"/>
+    <xs:attribute name="Modifier" type="xs:float" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="TechModifier">
+    <xs:attribute name="Item" type="xs:string" use="required"/>
+    <xs:attribute name="Modifier" type="xs:float" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ArmySizeModifier">
+    <xs:attribute name="LessThan" type="xs:int" use="required"/>
+    <xs:attribute name="Modifier" type="xs:float" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="PopulationModifier">
+    <xs:attribute name="LessThan" type="xs:int" use="required"/>
+    <xs:attribute name="Modifier" type="xs:float" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DifficultyModifier">
+    <xs:attribute name="VH" type="xs:float" use="optional"/>
+    <xs:attribute name="H" type="xs:float" use="optional"/>
+    <xs:attribute name="N" type="xs:float" use="optional"/>
+    <xs:attribute name="E" type="xs:float" use="optional"/>
+  </xs:complexType>
+   
+  <xs:complexType name="EventTrigger">
+    <xs:sequence>
+      <xs:element name="AIDifficultyModifier" type="oe:DifficultyModifier" minOccurs="0"/>
+      <xs:element name="PlayerDifficultyModifier" type="oe:DifficultyModifier" minOccurs="0"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ClimateModifier" type="oe:ClimateModifier" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="TechModifier" type="oe:TechModifier" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="ArmySizeModifier" type="oe:ArmySizeModifier" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="PopulationModifier" type="oe:PopulationModifier" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="TerrainModifier" type="oe:TerrainModifier" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:choice> 
+    </xs:sequence>
+    <xs:attribute name="Test" type="oe:TriggerTest" use ="required"/>
+    <xs:attribute name="BaseChance" type="xs:float" use ="required"/>
+    <xs:attribute name="MinTurnToOccur" type="xs:int" use ="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="EventEffectType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="ClimateModifier" type="oe:ClimateModifier" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="TechModifier" type="oe:TechModifier" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="Effect" type="oe:EventEffect" use="required"/>
+    <xs:attribute name="Chance" type="xs:float" use ="optional"/>
+    <xs:attribute name="Parameter" type="xs:int" use ="optional"/>
+    <xs:attribute name="Duration" type="xs:int" use ="optional"/>
+    <xs:attribute name="MinPercent" type="xs:float" use ="optional"/>
+    <xs:attribute name="MaxPercent" type="xs:float" use ="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="EventTargetSelection">
+    <xs:sequence>
+      <xs:element name="AIDifficultyModifier" type="oe:DifficultyModifier" minOccurs="0"/>
+      <xs:element name="PlayerDifficultyModifier" type="oe:DifficultyModifier" minOccurs="0"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ClimateModifier" type="oe:ClimateModifier" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="TechModifier" type="oe:TechModifier" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="ArmySizeModifier" type="oe:ArmySizeModifier" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="PopulationModifier" type="oe:PopulationModifier" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="TerrainModifier" type="oe:TerrainModifier" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:choice>
+      <xs:element name ="Effect" type ="oe:EventEffectType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="Affects" type="oe:EventTarget" use="required"/>
+    <xs:attribute name="Range" type="xs:int" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="Event">
+    <xs:sequence>
+      <xs:element name="Trigger" type="oe:EventTrigger"/>
+      <xs:element name ="Target" type="oe:EventTargetSelection" maxOccurs="unbounded"/>
+      <xs:element name ="ReportToPlayer">
+        <xs:complexType>
+          <xs:attribute name="EventName" type="xs:string" use="required"/>
+          <xs:attribute name="MainMsg" type="xs:string" use="required"/>
+          <xs:attribute name="MsgTitle" type="xs:string" use="optional"/>
+          <xs:attribute name="SecondaryMsg" type="xs:string" use="optional"/>
+          <xs:attribute name="OngoingMsg" type="xs:string" use="optional"/>
+          <xs:attribute name="NoEffectMsg" type="xs:string" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name ="ThirdPartyReport" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="EventName" type="xs:string" use="required"/>
+          <xs:attribute name="MsgTitle" type="xs:string" use="optional"/>
+          <xs:attribute name="MainMsg" type="xs:string" use="required"/>
+          <xs:attribute name="OngoingMsg" type="xs:string" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use ="required"/>
+    <xs:attribute name="Picture" type="xs:string" use ="required"/>
+    <xs:attribute name="PositiveEvent" type="xs:boolean" use ="optional"/>
+  </xs:complexType>
+  
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Event" type="oe:Event" maxOccurs ="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UnitTypes xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires UnitType.xsd">
+
+  <!-- All cost and upkeep values after this will be modified by these percentages -->
+  <CostModifiers Recruitment="140" Upkeep="140" />
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- Chinese Three Kingdoms ///////////////////////////////////////////////-->
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <ImportIntoUnitSet UnitSet="Three Kingdoms" ReplaceID="IC" With="3K">
+    <ModelChange Old="HR IC Light1A *" New="HR 3K Light1A " />
+    <ModelChange Old="HR IC Cav1A *" New="HR 3K Cav1A " />
+    <ModelChange Old="HR IC Light1B *" New="HR 3K Light1B " />
+    <ModelChange Old="HR IC Cav1B *" New="HR 3K Cav1B " />
+    <ModelChange Old="HR IC Armoured1A *" New="HR 3K Armoured1A " />
+    <ModelChange Old="HR IC Cav2A *" New="HR 3K Cav2A " />
+    <ModelChange Old="HR IC Armoured1B *" New="HR 3K Armoured1B " />
+    <ModelChange Old="HR IC Cav2B *" New="HR 3K Cav2B " />
+    <ModelChange Old="HR IC Guard Infantry *" New="HR 3K Guard Infantry " />
+    <ModelChange Old="HR IC GuardCav1A *" New="HR 3K GuardCav1A " />
+    <ModelChange Old="HR IC_Elite1A *" New="HR 3K_Elite1A " />
+    <ModelChange Old="HR IC General *" New="HR 3K General " />
+
+    <ImportUnit ID="IC Militia Light Spearmen L1" />
+    <ImportUnit ID="IC Militia Light Spearmen L2" />
+    <ImportUnit ID="IC Militia Light Spearmen L3" />
+    <ImportUnit ID="IC Militia Light Archer L1" />
+    <ImportUnit ID="IC Militia Light Archer L2" />
+    <ImportUnit ID="IC Militia Light Archer L3" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L1" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L2" />
+    <ImportUnit ID="IC Militia Repeating Crossbow L3" />
+    <ImportUnit ID="IC Militia Halberds L1" />
+    <ImportUnit ID="IC Militia Halberds L2" />
+    <ImportUnit ID="IC Militia Halberds L3" />
+    <ImportUnit ID="IC Army Halberds L1" />
+    <ImportUnit ID="IC Army Halberds L2" />
+    <ImportUnit ID="IC Army Halberds L3" />
+    <ImportUnit ID="IC Army Halberds L4" />
+    <ImportUnit ID="IC Army Light Archer L1" />
+    <ImportUnit ID="IC Army Light Archer L2" />
+    <ImportUnit ID="IC Army Light Archer L3" />
+    <ImportUnit ID="IC Army Light Archer L4" />
+    <ImportUnit ID="IC Army Crossbows L1" />
+    <ImportUnit ID="IC Army Crossbows L2" />
+    <ImportUnit ID="IC Army Crossbows L3" />
+    <ImportUnit ID="IC Army Crossbows L4" />
+    <ImportUnit ID="IC Army Heavy Spearmen L1" />
+    <ImportUnit ID="IC Army Heavy Spearmen L2" />
+    <ImportUnit ID="IC Army Heavy Spearmen L3" />
+    <ImportUnit ID="IC Army Heavy Spearmen L4" />
+    <ImportUnit ID="IC Army Spear/Crossbows L1" />
+    <ImportUnit ID="IC Army Spear/Crossbows L2" />
+    <ImportUnit ID="IC Army Spear/Crossbows L3" />
+    <ImportUnit ID="IC Army Spear/Crossbows L4" />
+    <ImportUnit ID="IC Army Three Eyed Guns L1" />
+    <ImportUnit ID="IC Army Three Eyed Guns L2" />
+    <ImportUnit ID="IC Army Three Eyed Guns L3" />
+    <ImportUnit ID="IC Army Three Eyed Guns L4" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L1" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L2" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L3" />
+    <ImportUnit ID="IC Army Beehive Rocketeers L4" />
+    <ImportUnit ID="IC Cavalry L1" />
+    <ImportUnit ID="IC Cavalry L2" />
+    <ImportUnit ID="IC Cavalry L3" />
+    <ImportUnit ID="IC Cavalry L4" />
+    <ImportUnit ID="IC Cavalry Crossbows L1" />
+    <ImportUnit ID="IC Cavalry Crossbows L2" />
+    <ImportUnit ID="IC Cavalry Crossbows L3" />
+    <ImportUnit ID="IC Cavalry Crossbows L4" />
+    <ImportUnit ID="IC Cataphract Cavalry L1" />
+    <ImportUnit ID="IC Cataphract Cavalry L2" />
+    <ImportUnit ID="IC Cataphract Archer L1" />
+    <ImportUnit ID="IC Cataphract Archer L2" />
+    <ImportUnit ID="IC Light Horse Archers L1" />
+    <ImportUnit ID="IC Light Horse Archers L2" />
+    <ImportUnit ID="IC Heavy Horse Archers L1" />
+    <ImportUnit ID="IC Heavy Horse Archers L2" />
+    <ImportUnit ID="IC Noble Halberds L1" />
+    <ImportUnit ID="IC Noble Halberds L2" />
+    <ImportUnit ID="IC Noble Cavalry L1" />
+    <ImportUnit ID="IC Noble Cavalry L2" />
+    <ImportUnit ID="IC Picked Swordsmen L1" />
+    <ImportUnit ID="IC Guard Halberds L1" />
+    <ImportUnit ID="IC Guard Spearmen L1" />
+    <ImportUnit ID="IC Picked Zhan Ma Dao L1" />
+    <ImportUnit ID="IC Picked Zhan Ma Dao L2" />
+    <ImportUnit ID="IC Picked Zhan Ma Dao L3" />
+    <ImportUnit ID="IC Picked Zhan Ma Dao L4" />
+    <ImportUnit ID="IC Guard Archers L1" />
+    <ImportUnit ID="IC Guard Cavalry L1" />
+    <ImportUnit ID="IC Guard Cataphract Cavalry L1" />
+    <ImportUnit ID="IC Imperial Guard Cavalry L1" />
+    <ImportUnit ID="IC Convict Swordsmen L1" />
+    <ImportUnit ID="IC Foot Bodyguard" />
+  </ImportIntoUnitSet>
+
+  <Unit ID="3K White Horse Cavalry L1" NameTag="3K White Horse Cavalry" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_WhiteHorseCavalry_01" Class="Special" Armor="0" />
+    <Recruitment Pool="Palace Troops" Cost="250" Upkeep="35" Era="2" UnitSet="Three Kingdoms" />
+    <Requirements>
+      <Building ID="Fortified Palace I" />
+      <Building ID="Fortified Stables I" />
+      <Building ID="Armorer I" Condition="false" />
+      <FactionTag Tag="White Horse Cavalry" />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.6" SpacingY="4" Forming="WellFormed" />
+    <Combat Morale="Guard" DismountedUnit="3K Noble Halberds L1" />
+    <Element Number="24" Type="Cavalry">
+      <Actor ModelName="HR Horse_Heavy_1A_White" Role="Mount" />
+      <Actor ModelName="HR 3K Cav2A Archer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Sword" Skill="Picked" Armor="Cavalry Medium" />
+      <Projectile Ammo="Cavalry Arrow" AttachBone="bone_Weapon" SkillModifier="1" />
+    </Element>
+    <Movement Class="Light Cavalry" />
+  </Unit>
+  <ArmorVariant ID="3K White Horse Cavalry L2" BasedOn="3K White Horse Cavalry L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" />
+    </ChangedRequirements>
+    <SubstituteUnits DismountedUnit="3K Noble Halberds L2" />
+    <ElementChange Index="0" Actor="1" Armor="Cavalry Heavy" NewModel="HR 3K Cav2B Archer" />
+  </ArmorVariant>
+
+  <!-- Generic Heroes-->
+  <Unit ID="3K Dismounted Hero" NameTag="Dismounted Hero" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_Heroes_01" Class="Leader" Armor="0" />
+    <Recruitment Pool="Nobles" Cost="0" Upkeep="0" Era="2" UnitSet="Three Kingdoms" />
+    <Requirements>
+      <Never />
+    </Requirements>
+    <BlockFormation Depth="4" SpacingX="1" SpacingY="1" Forming="Formed" />
+    <Combat Morale="Bodyguard" />
+    <Element Number="1">
+      <Actor ModelName="HR 3K General Sword" />
+      <Combat Weapon="Foot Long Sword" Skill="Hero" Armor="Heavy" Shield="Small" />
+    </Element>
+    <Element Number="19">
+      <Actor ModelName="HR 3K Armoured1B Sword Shield" />
+      <Combat Weapon="Foot Long Sword" Skill="Hero" Armor="Heavy" Shield="Small" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <Unit ID="3K Spear Hero" NameTag="Spear Hero" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_Heroes_01" Class="Leader" />
+    <Recruitment Pool="Nobles" Cost="0" Upkeep="0" Era="2" UnitSet="Three Kingdoms" />
+    <Requirements>
+      <Never />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.5" SpacingY="4" Forming="Formed" />
+    <Combat Morale="Bodyguard" DismountedUnit="3K Dismounted Hero" />
+    <Element Number="1" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1A" Role="Mount" />
+      <Actor ModelName="HR 3K General Lancer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" AnimSet="Cavalry Sword NS" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Hero" Armor="Cavalry Heavy" />
+    </Element>
+    <Element Number="14" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1A" Role="Mount" />
+      <Actor ModelName="HR 3K Bodyguard Lancer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Hero" Armor="Cavalry Heavy" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+
+  <!-- Generic Minor Hero-->
+  <ArmorVariant ID="3K Dismounted Minor Hero" BasedOn="3K Dismounted Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K General Sword" Skill="Minor Hero" />
+    <ElementChange Index="1" Actor="0" NewModel="HR 3K Armoured1B Sword Shield" Skill="Minor Hero" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Minor Spear Hero" BasedOn="3K Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Dismounted Minor Hero" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K General Lancer" Skill="Minor Hero" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Minor Sword Hero" BasedOn="3K Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Dismounted Minor Hero" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K General Cav Sword" Skill="Minor Hero" Weapon="Cavalry Sword" />
+    <ElementChange Index="1" Actor="1" NewModel="HR 3K Bodyguard Lancer" Skill="Minor Hero" />
+  </ArmorVariant>
+
+  <!-- Generic Major Hero-->
+  <ArmorVariant ID="3K Dismounted Major Hero" BasedOn="3K Dismounted Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K General Sword" Skill="Major Hero" />
+    <ElementChange Index="1" Actor="0" NewModel="HR 3K Armoured1B Sword Shield" Skill="Major Hero" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Major Spear Hero" BasedOn="3K Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Dismounted Major Hero" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K General Lancer" Skill="Major Hero" />
+    <ElementChange Index="1" Actor="1" NewModel="HR 3K Bodyguard Lancer" Skill="Major Hero" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Dismounted Major Halberd Hero" BasedOn="3K Dismounted Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K General Halberd" Skill="Major Hero" AnimSet="Halberd NS F" Weapon="Foot Halberd" Shield="None" />
+    <ElementChange Index="1" Actor="0" NewModel="HR 3K Armoured1B Sword Shield" Skill="Major Hero" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Major Halberd Hero" BasedOn="3K Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Dismounted Major Halberd Hero" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K General Halberd" Skill="Major Hero" AnimSet="Cavalry Halberd F" Weapon="Cavalry Halberd" />
+    <ElementChange Index="1" Actor="1" NewModel="HR 3K Bodyguard Lancer" Skill="Major Hero" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Major Sword Hero" BasedOn="3K Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Dismounted Major Hero" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K General Sword" Skill="Major Hero" AnimSet="Cavalry Sword NS F" Weapon="Cavalry Sword" />
+    <ElementChange Index="1" Actor="1" NewModel="HR 3K Bodyguard Lancer" Skill="Major Hero" />
+  </ArmorVariant>
+
+  <!-- Named Generals and Heros-->
+  <ArmorVariant ID="3K Sun Jian Dismounted" BasedOn="3K Dismounted Minor Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Sun Jian Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Sun Jian" BasedOn="3K Minor Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Sun Jian Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Sun Jian" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Sun Ce Dismounted" BasedOn="3K Dismounted Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Sun Ce Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Sun Ce" BasedOn="3K Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Sun Ce Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Sun Ce" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Sun Quan Dismounted" BasedOn="3K Dismounted Minor Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Sun Quan Dismounted" Skill="Bodyguard" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Sun Quan" BasedOn="3K Minor Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Sun Quan Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Sun Quan" Skill="Bodyguard" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Gongsun Zan Dismounted" BasedOn="3K Dismounted Minor Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Gongsun Zan Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Gongsun Zan" BasedOn="3K Minor Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Gongsun Zan Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Gongsun Zan" />
+    <ElementChange Index="0" Actor="0" NewModel="HR Horse_Heavy_1A_White" />
+    <ElementChange Index="1" Actor="0" NewModel="HR Horse_Heavy_1A_White" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Zhao Yun Dismounted" BasedOn="3K Dismounted Major Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Zhao Yun Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Zhao Yun" BasedOn="3K Major Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Zhao Yun Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Zhao Yun" />
+    <ElementChange Index="0" Actor="0" NewModel="HR Horse_Heavy_1A_White" />
+    <ElementChange Index="1" Actor="0" NewModel="HR Horse_Heavy_1A_White" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Guan Yu Dismounted" BasedOn="3K Dismounted Major Halberd Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Guan Yu Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Guan Yu" BasedOn="3K Major Halberd Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Guan Yu Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Guan Yu" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Zhang Fei Dismounted" BasedOn="3K Dismounted Major Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Zhang Fei Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Zhang Fei" BasedOn="3K Major Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Zhang Fei Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Zhang Fei" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Liu Bei Dismounted" BasedOn="3K Dismounted Minor Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Liu Bei Dismounted" Skill="Bodyguard" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Liu Bei" BasedOn="3K Minor Sword Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Liu Bei Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Liu Bei" Skill="Bodyguard" />
+    <ElementChange Index="0" Actor="0" NewModel="HR Horse_Heavy_1A_White" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Zhuge Liang Dismounted" BasedOn="3K Dismounted Minor Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Zhuge Liang Dismounted" Skill="Bodyguard" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Zhuge Liang" BasedOn="3K Minor Sword Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Zhuge Liang Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Zhuge Liang" Skill="Bodyguard" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Cao Cao Dismounted" BasedOn="3K Dismounted Minor Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Cao Cao Dismounted" Skill="Bodyguard" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Cao Cao" BasedOn="3K Minor Sword Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Cao Cao Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Cao Cao" Skill="Bodyguard" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Yuan Shao Dismounted" BasedOn="3K Dismounted Minor Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Cao Cao Dismounted" Skill="Bodyguard" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Yuan Shao" BasedOn="3K Minor Sword Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Yuan Shao Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Yuan Shao" Skill="Bodyguard" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Dong Zhuo Dismounted" BasedOn="3K Dismounted Minor Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Dong Zhuo Dismounted" Skill="Bodyguard" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Dong Zhuo" BasedOn="3K Minor Sword Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Dong Zhuo Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Dong Zhuo" Skill="Bodyguard" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Lu Bu Dismounted" BasedOn="3K Dismounted Major Halberd Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Lu Bu Dismounted" Skill="Uber Hero" />
+    <ElementChange Index="1" Actor="0" NewModel="HR 3K Armoured1B Sword Shield" Skill="Uber Hero" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Lu Bu" BasedOn="3K Major Halberd Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Lu Bu Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Lu Bu" Skill="Uber Hero" />
+    <ElementChange Index="1" Actor="1" NewModel="HR 3K Bodyguard Lancer" Skill="Uber Hero" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Zhang Liao Dismounted" BasedOn="3K Dismounted Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Zhang Liao Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Zhang Liao" BasedOn="3K Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Zhang Liao Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Zhang Liao" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Ma Chao Dismounted" BasedOn="3K Dismounted Major Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Ma Chao Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Ma Chao" BasedOn="3K Major Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Ma Chao Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Ma Chao" />
+  </ArmorVariant>
+
+  <ArmorVariant ID="3K Xiahou Dun Dismounted" BasedOn="3K Dismounted Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Xiahou Dun Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Xiahou Dun" BasedOn="3K Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Xiahou Dun Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Xiahou Dun" />
+  </ArmorVariant>
+
+  <!-- Make this the last 3K General so that it's the default -->
+  <EraVariant ID="3K Cavalry Bodyguard" BasedOn="IC Cavalry Bodyguard" Era="2" UnitSet="Three Kingdoms">
+    <SubstituteUnits DismountedUnit="3K Foot Bodyguard" />
+    <ElementChanges Index="0" Armor="Cavalry Heavy">
+      <ActorChange Index="0" NewModel="HR Horse_Heavy1A" />
+      <ActorChange Index="1" NewModel="HR 3K General Cav Sword" />
+    </ElementChanges>
+    <ElementChanges Index="1" Armor="Cavalry Heavy">
+      <ActorChange Index="0" NewModel="HR Horse_Heavy1A" />
+      <ActorChange Index="1" NewModel="HR 3K_Elite1A Halberd" />
+    </ElementChanges>
+  </EraVariant>
+
+  <!-- Long spear infantry for Qiang and Ma Teng -->
+  <!-- Long Spearmen -->
+  <Unit ID="3K Militia Long Spearmen L1" NameTag="Militia Long Spearmen" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MeleeSpear2H_01" Class="Levy" />
+    <Recruitment Pool="Militia" Cost="0" Upkeep="10" Era="2" UnitSet="Three Kingdoms" />
+    <Requirements>
+      <FactionTag Tag="Militia Long Spears" />
+      <Tech Item="Military Drill" />
+      <Building ID="Armorer I" UpgradeLevel="1" Condition="false" />
+    </Requirements>
+    <BlockFormation Depth="6" SpacingX="0.8" SpacingY="0.8" Forming="Formed" />
+    <Combat Morale="Militia" />
+    <Element Number="72">
+      <Actor ModelName="HR 3K Light1A 2H Spearman" />
+      <Combat Weapon="Foot 2H Spear" Skill="Militia" Armor="None" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="3K Militia Long Spearmen L2" BasedOn="3K Militia Long Spearmen L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Light" Actor="0" NewModel="HR 3K Light1B 2H Spearman" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Militia Long Spearmen L3" BasedOn="3K Militia Long Spearmen L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Light" Actor="0" NewModel="HR 3K Armoured1A 2H Spearman" />
+  </ArmorVariant>
+
+  <!-- Crossbow militia for Yuan Shao -->
+  <!-- WS Crossbow Militia -->
+  <Unit ID="3K Crossbow Militia L1" NameTag="Crossbow Militia" Category="Missile">
+    <Banners Main="OE_Banner_Missile" Mini="OE_Banner_SmallShort" />
+    <Card CardName="G_Stack_Type_MissileCrossbow_01" Class="Levy" />
+    <Recruitment Pool="Militia" Cost="0" Upkeep="10" Era="1" UnitSet="Three Kingdoms" />
+    <Requirements>
+      <FactionTag Tag="Crossbow Militia" />
+      <Building ID="Shortbow Maker" UpgradeLevel="1" />
+      <Building ID="Armorer I" UpgradeLevel="1" Condition="false" />
+    </Requirements>
+    <StaticRequirements>
+      <Faction ID="Han" />
+    </StaticRequirements>
+    <BlockFormation Depth="5" SpacingX="1" SpacingY="1.5" Forming="PoorlyFormed" />
+    <Combat Morale="Militia" />
+    <Element Number="60">
+      <Actor ModelName="HR 3K Light1A Crossbow" />
+      <Combat Weapon="Foot Short Sword" Skill="Militia" Armor="None" />
+      <Projectile Ammo="Regular Composite Bow Arrow 1" AttachBone="bone_Weapon" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="3K Crossbow Militia L2" BasedOn="3K Crossbow Militia L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Light" Actor="0" NewModel="HR 3K Light1B Crossbow" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Crossbow Militia L3" BasedOn="3K Crossbow Militia L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Medium" Actor="0" NewModel="HR 3K Armoured1A Crossbow" />
+  </ArmorVariant>
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- Southern Barbarians/////////////////////// ///////////////////////////////////////////////-->
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <!-- Put these before importing other types so that they don't affect general bodyguard choice -->
+  <!-- Generic Heroes-->
+  <Unit ID="SB Dismounted Nanman Minor Hero" NameTag="Dismounted Hero" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_minor_Heroes_01" Class="Leader" Armor="0" />
+    <Recruitment Pool="Nobles" Cost="0" Upkeep="0" Era="2" UnitSet="Southern Barbarian" />
+    <Requirements>
+      <Never />
+    </Requirements>
+    <BlockFormation Depth="4" SpacingX="1" SpacingY="1" Forming="Formed" />
+    <Combat Morale="Bodyguard" />
+    <Element Number="1">
+      <Actor ModelName="HR 3K Nanman Hero Sword" />
+      <Combat Weapon="Foot Long Sword" Skill="Minor Hero" Armor="Heavy" Shield="Small" />
+    </Element>
+    <Element Number="19">
+      <Actor ModelName="HR NB Armoured1B Sword Shield" />
+      <Combat Weapon="Foot Long Sword" Skill="Minor Hero" Armor="Heavy" Shield="Small" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <Unit ID="SB Nanman Minor Spear Hero" NameTag="Spear Hero" Category="Cavalry">
+    <Banners Main="OE_Banner_Mounted" Mini="OE_Banner_SmallLong" />
+    <Card CardName="G_Stack_Type_minor_Heroes_01" Class="Leader" />
+    <Recruitment Pool="Nobles" Cost="0" Upkeep="0" Era="2" UnitSet="Southern Barbarian" />
+    <Requirements>
+      <Never />
+    </Requirements>
+    <BlockFormation Depth="3" SpacingX="1.5" SpacingY="4" Forming="Formed" />
+    <Combat Morale="Bodyguard" DismountedUnit="SB Dismounted Nanman Minor Hero" />
+    <Element Number="1" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1A" Role="Mount" />
+      <Actor ModelName="HR 3K Nanman Hero Lancer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" AnimSet="Cavalry Sword NS" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Minor Hero" Armor="Cavalry Heavy" />
+    </Element>
+    <Element Number="14" Type="Cavalry">
+      <Actor ModelName="Horse_Heavy1A" Role="Mount" />
+      <Actor ModelName="HR NB Cav2B Lancer" Role="Rider" TargetBone="bone_H_MountPos_NS" AttachBone="bone_hips" />
+      <Combat Weapon="Cavalry Long Spear" Skill="Minor Hero" Armor="Cavalry Heavy" />
+    </Element>
+    <Movement Class="Heavy Cavalry" />
+  </Unit>
+
+  <!-- Meng Huo -->
+  <ArmorVariant ID="3K Meng Huo Dismounted" BasedOn="SB Dismounted Nanman Minor Hero" ArmorLevel="0">
+    <ElementChange Index="0" Actor="0" NewModel="HR 3K Meng Huo Dismounted" />
+  </ArmorVariant>
+  <ArmorVariant ID="3K Meng Huo" BasedOn="SB Nanman Minor Spear Hero" ArmorLevel="0">
+    <SubstituteUnits DismountedUnit="3K Meng Huo Dismounted" />
+    <ElementChange Index="0" Actor="1" NewModel="HR 3K Meng Huo" />
+  </ArmorVariant>
+
+  <ImportIntoUnitSet UnitSet="Southern Barbarian" ReplaceID="NB" With="SB">
+    <ModelChange Old="HR NB Light1A *" New="HR Nanman Light1A " />
+    <ModelChange Old="HR NB Light1B *" New="HR Nanman Light1B " />
+    <ModelChange Old="HR NB Armoured1A *" New="HR Qiang Armoured1A " />
+    <ModelChange Old="HR NB Cav1A *" New="HR Nanman Cav1A " />
+    <ModelChange Old="HR NB Cav1B *" New="HR Nanman Cav1B " />
+    <ModelChange Old="HR NB Cav2A *" New="HR Qiang Cav2A " />
+
+    <ImportUnit ID="NB Militia Light Archer L1" />
+    <ImportUnit ID="NB Militia Light Archer L2" />
+    <ImportUnit ID="NB Militia Light Archer L3" />
+    <ImportUnit ID="NB Militia Light Spearmen L1" />
+    <ImportUnit ID="NB Militia Light Spearmen L2" />
+    <ImportUnit ID="NB Militia Light Spearmen L3" />
+    <ImportUnit ID="NB Militia Halberds L1" />
+    <ImportUnit ID="NB Militia Halberds L2" />
+    <ImportUnit ID="NB Militia Halberds L3" />
+    <ImportUnit ID="NB Militia Heavy Spearmen L1" />
+    <ImportUnit ID="NB Militia Heavy Spearmen L2" />
+    <ImportUnit ID="NB Militia Heavy Spearmen L3" />
+    <ImportUnit ID="NB Tribal Archer L1" />
+    <ImportUnit ID="NB Tribal Archer L2" />
+    <ImportUnit ID="NB Tribal Archer L3" />
+    <ImportUnit ID="NB Tribal Spearmen L1" />
+    <ImportUnit ID="NB Tribal Spearmen L2" />
+    <ImportUnit ID="NB Tribal Spearmen L3" />
+    <ImportUnit ID="NB Tribal Horse Archers L1" />
+    <ImportUnit ID="NB Tribal Horse Archers L2" />
+    <ImportUnit ID="NB Tribal Horse Archers L3" />
+    <ImportUnit ID="NB Noble Archer L1" />
+    <ImportUnit ID="NB Noble Archer L2" />
+    <ImportUnit ID="NB Noble Spearmen L1" />
+    <ImportUnit ID="NB Noble Spearmen L2" />
+    <ImportUnit ID="NB Noble Horse Archers L1" />
+    <ImportUnit ID="NB Noble Horse Archers L2" />
+    <ImportUnit ID="NB Noble Armored Archers L1" />
+    <ImportUnit ID="NB Noble Armored Archers L2" />
+    <ImportUnit ID="NB Noble Heavy Cavalry L1" />
+    <ImportUnit ID="NB Noble Heavy Cavalry L2" />
+    <ImportUnit ID="NB Army Light Archer L1" />
+    <ImportUnit ID="NB Army Light Archer L2" />
+    <ImportUnit ID="NB Army Light Archer L3" />
+    <ImportUnit ID="NB Army Light Archer L4" />
+    <ImportUnit ID="NB Army Halberds L1" />
+    <ImportUnit ID="NB Army Halberds L2" />
+    <ImportUnit ID="NB Army Halberds L3" />
+    <ImportUnit ID="NB Army Halberds L4" />
+    <ImportUnit ID="NB Army Heavy Spearmen L1" />
+    <ImportUnit ID="NB Army Heavy Spearmen L2" />
+    <ImportUnit ID="NB Army Heavy Spearmen L3" />
+    <ImportUnit ID="NB Army Heavy Spearmen L4" />
+    <ImportUnit ID="NB Army Three Eyed Guns L1" />
+    <ImportUnit ID="NB Army Three Eyed Guns L2" />
+    <ImportUnit ID="NB Army Three Eyed Guns L3" />
+    <ImportUnit ID="NB Army Three Eyed Guns L4" />
+    <ImportUnit ID="NB Army Beehive Rocketeers L1" />
+    <ImportUnit ID="NB Army Beehive Rocketeers L2" />
+    <ImportUnit ID="NB Army Beehive Rocketeers L3" />
+    <ImportUnit ID="NB Army Beehive Rocketeers L4" />
+    <ImportUnit ID="NB Heavy Horse Archers L1" />
+    <ImportUnit ID="NB Heavy Horse Archers L2" />
+    <ImportUnit ID="NB Cataphract Cavalry L1" />
+    <ImportUnit ID="NB Cataphract Cavalry L2" />
+    <ImportUnit ID="NB Cataphract Archer L1" />
+    <ImportUnit ID="NB Cataphract Archer L2" />
+    <ImportUnit ID="NB Army Heavy Cavalry L1" />
+    <ImportUnit ID="NB Army Heavy Cavalry L2" />
+    <ImportUnit ID="NB Guard Spearmen L1" />
+    <ImportUnit ID="NB Khan's Guard Cavalry L1" />
+    <ImportUnit ID="NB Foot Bodyguard" />
+    <ImportUnit ID="NB Cavalry Bodyguard" />
+    <ImportUnit ID="NB Convict Swordsmen L1" />
+  </ImportIntoUnitSet>
+
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- Early Southern Barbarians/////////////////////// ///////////////////////////////////////////////-->
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <ImportIntoUnitSet UnitSet="Early Southern Barbarian" ReplaceID="ENB" With="ESB">
+    <ModelChange Old="HR ENB Light1A *" New="HR Nanman Light1A " />
+    <ModelChange Old="HR ENB Light1B *" New="HR Nanman Light1B " />
+    <ModelChange Old="HR ENB Cav1A *" New="HR Nanman Cav1A " />
+    <ModelChange Old="HR ENB Cav1B *" New="HR Nanman Cav1B " />
+
+    <ImportUnit ID="ENB Militia Light Archer L1" />
+    <ImportUnit ID="ENB Militia Light Archer L2" />
+    <ImportUnit ID="ENB Militia Light Archer L3" />
+    <ImportUnit ID="ENB Militia Light Spearmen L1" />
+    <ImportUnit ID="ENB Militia Light Spearmen L2" />
+    <ImportUnit ID="ENB Militia Light Spearmen L3" />
+    <ImportUnit ID="ENB Militia Dagger Axemen L1" />
+    <ImportUnit ID="ENB Militia Dagger Axemen L2" />
+    <ImportUnit ID="ENB Militia Dagger Axemen L3" />
+    <ImportUnit ID="ENB Militia Long Spearmen L1" />
+    <ImportUnit ID="ENB Militia Long Spearmen L2" />
+    <ImportUnit ID="ENB Militia Long Spearmen L3" />
+    <ImportUnit ID="ENB Tribal Archer L1" />
+    <ImportUnit ID="ENB Tribal Archer L2" />
+    <ImportUnit ID="ENB Tribal Archer L3" />
+    <ImportUnit ID="ENB Tribal Spearmen L1" />
+    <ImportUnit ID="ENB Tribal Spearmen L2" />
+    <ImportUnit ID="ENB Tribal Spearmen L3" />
+    <ImportUnit ID="ENB Tribal Horse Archers L1" />
+    <ImportUnit ID="ENB Tribal Horse Archers L2" />
+    <ImportUnit ID="ENB Tribal Horse Archers L3" />
+    <ImportUnit ID="ENB Noble Archer L1" />
+    <ImportUnit ID="ENB Noble Archer L2" />
+    <ImportUnit ID="ENB Noble Dagger Axemen L1" />
+    <ImportUnit ID="ENB Noble Dagger Axemen L2" />
+    <ImportUnit ID="ENB Light Chariot L1" />
+    <ImportUnit ID="ENB Light Chariot L2" />
+    <ImportUnit ID="ENB Medium Chariot L1" />
+    <ImportUnit ID="ENB Medium Chariot L2" />
+    <ImportUnit ID="ENB Heavy Chariot L1" />
+    <ImportUnit ID="ENB Heavy Chariot L2" />
+    <ImportUnit ID="ENB Noble Horse Archers L1" />
+    <ImportUnit ID="ENB Noble Horse Archers L2" />
+    <ImportUnit ID="ENB Army Dagger Axemen L1" />
+    <ImportUnit ID="ENB Army Dagger Axemen L2" />
+    <ImportUnit ID="ENB Army Dagger Axemen L3" />
+    <ImportUnit ID="ENB Army Dagger Axemen L4" />
+    <ImportUnit ID="ENB Army Light Archer L1" />
+    <ImportUnit ID="ENB Army Light Archer L2" />
+    <ImportUnit ID="ENB Army Light Archer L3" />
+    <ImportUnit ID="ENB Army Light Archer L4" />
+    <ImportUnit ID="ENB Army Light Chariot L1" />
+    <ImportUnit ID="ENB Army Light Chariot L2" />
+    <ImportUnit ID="ENB Army Medium Chariot L1" />
+    <ImportUnit ID="ENB Army Medium Chariot L2" />
+    <ImportUnit ID="ENB Army Heavy Chariot L1" />
+    <ImportUnit ID="ENB Army Heavy Chariot L2" />
+    <ImportUnit ID="ENB Convict Axemen L1" />
+    <ImportUnit ID="ENB Foot Bodyguard" />
+    <ImportUnit ID="ENB Light Chariot Bodyguard" />
+    <ImportUnit ID="ENB Medium Chariot Bodyguard" />
+    <ImportUnit ID="ENB Cavalry Bodyguard" />
+  </ImportIntoUnitSet>
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <!-- Qiang /////////////////////// ///////////////////////////////////////////////-->
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////-->
+  <ImportIntoUnitSet UnitSet="Qiang" ReplaceID="NB" With="QI">
+    <ModelChange Old="HR NB Light1A *" New="HR Qiang Light1A " />
+    <ModelChange Old="HR NB Light1B *" New="HR Qiang Light1B " />
+    <ModelChange Old="HR NB Armoured1A *" New="HR Qiang Armoured1A " />
+    <ModelChange Old="HR NB Cav1A *" New="HR Qiang Cav1A " />
+    <ModelChange Old="HR NB Cav1B *" New="HR Qiang Cav1B " />
+    <ModelChange Old="HR NB Cav2A *" New="HR Qiang Cav2A " />
+
+    <ImportUnit ID="NB Militia Light Archer L1" />
+    <ImportUnit ID="NB Militia Light Archer L2" />
+    <ImportUnit ID="NB Militia Light Archer L3" />
+    <ImportUnit ID="NB Militia Light Spearmen L1" />
+    <ImportUnit ID="NB Militia Light Spearmen L2" />
+    <ImportUnit ID="NB Militia Light Spearmen L3" />
+    <ImportUnit ID="NB Militia Halberds L1" />
+    <ImportUnit ID="NB Militia Halberds L2" />
+    <ImportUnit ID="NB Militia Halberds L3" />
+    <ImportUnit ID="NB Militia Heavy Spearmen L1" />
+    <ImportUnit ID="NB Militia Heavy Spearmen L2" />
+    <ImportUnit ID="NB Militia Heavy Spearmen L3" />
+    <ImportUnit ID="NB Tribal Archer L1" />
+    <ImportUnit ID="NB Tribal Archer L2" />
+    <ImportUnit ID="NB Tribal Archer L3" />
+    <ImportUnit ID="NB Tribal Spearmen L1" />
+    <ImportUnit ID="NB Tribal Spearmen L2" />
+    <ImportUnit ID="NB Tribal Spearmen L3" />
+    <ImportUnit ID="NB Tribal Horse Archers L1" />
+    <ImportUnit ID="NB Tribal Horse Archers L2" />
+    <ImportUnit ID="NB Tribal Horse Archers L3" />
+    <ImportUnit ID="NB Noble Archer L1" />
+    <ImportUnit ID="NB Noble Archer L2" />
+    <ImportUnit ID="NB Noble Spearmen L1" />
+    <ImportUnit ID="NB Noble Spearmen L2" />
+    <ImportUnit ID="NB Noble Horse Archers L1" />
+    <ImportUnit ID="NB Noble Horse Archers L2" />
+    <ImportUnit ID="NB Noble Armored Archers L1" />
+    <ImportUnit ID="NB Noble Armored Archers L2" />
+    <ImportUnit ID="NB Noble Heavy Cavalry L1" />
+    <ImportUnit ID="NB Noble Heavy Cavalry L2" />
+    <ImportUnit ID="NB Army Light Archer L1" />
+    <ImportUnit ID="NB Army Light Archer L2" />
+    <ImportUnit ID="NB Army Light Archer L3" />
+    <ImportUnit ID="NB Army Light Archer L4" />
+    <ImportUnit ID="NB Army Halberds L1" />
+    <ImportUnit ID="NB Army Halberds L2" />
+    <ImportUnit ID="NB Army Halberds L3" />
+    <ImportUnit ID="NB Army Halberds L4" />
+    <ImportUnit ID="NB Army Heavy Spearmen L1" />
+    <ImportUnit ID="NB Army Heavy Spearmen L2" />
+    <ImportUnit ID="NB Army Heavy Spearmen L3" />
+    <ImportUnit ID="NB Army Heavy Spearmen L4" />
+    <ImportUnit ID="NB Army Three Eyed Guns L1" />
+    <ImportUnit ID="NB Army Three Eyed Guns L2" />
+    <ImportUnit ID="NB Army Three Eyed Guns L3" />
+    <ImportUnit ID="NB Army Three Eyed Guns L4" />
+    <ImportUnit ID="NB Army Beehive Rocketeers L1" />
+    <ImportUnit ID="NB Army Beehive Rocketeers L2" />
+    <ImportUnit ID="NB Army Beehive Rocketeers L3" />
+    <ImportUnit ID="NB Army Beehive Rocketeers L4" />
+    <ImportUnit ID="NB Heavy Horse Archers L1" />
+    <ImportUnit ID="NB Heavy Horse Archers L2" />
+    <ImportUnit ID="NB Cataphract Cavalry L1" />
+    <ImportUnit ID="NB Cataphract Cavalry L2" />
+    <ImportUnit ID="NB Cataphract Archer L1" />
+    <ImportUnit ID="NB Cataphract Archer L2" />
+    <ImportUnit ID="NB Army Heavy Cavalry L1" />
+    <ImportUnit ID="NB Army Heavy Cavalry L2" />
+    <ImportUnit ID="NB Guard Spearmen L1" />
+    <ImportUnit ID="NB Khan's Guard Cavalry L1" />
+    <ImportUnit ID="NB Foot Bodyguard" />
+    <ImportUnit ID="NB Cavalry Bodyguard" />
+    <ImportUnit ID="NB Convict Swordsmen L1" />
+  </ImportIntoUnitSet>
+
+  <!-- Tribal Long Spearmen -->
+  <Unit ID="QI Tribal Long Spearmen L1" NameTag="Tribal Long Spearmen" Category="Infantry">
+    <Banners Main="OE_Banner_Infantry" Mini="OE_Banner_SmallDouble" />
+    <Card CardName="G_Stack_Type_MeleeSpear2H_01" Class="Tribal" />
+    <Recruitment Pool="Tribesmen" Cost="0" Upkeep="10" Era="2" UnitSet="Qiang" />
+    <Requirements>
+      <Tech Item="Military Drill" />
+      <Building ID="Armorer I" UpgradeLevel="1" Condition="false" />
+    </Requirements>
+    <BlockFormation Depth="6" SpacingX="0.8" SpacingY="0.8" Forming="Formed" />
+    <Combat Morale="Tribal" />
+    <Element Number="72">
+      <Actor ModelName="HR Qiang Light1A 2H Spearman" />
+      <Combat Weapon="Foot 2H Spear" Skill="Tribal" Armor="None" />
+    </Element>
+    <Movement Class="Infantry" />
+  </Unit>
+  <ArmorVariant ID="QI Tribal Long Spearmen L2" BasedOn="QI Tribal Long Spearmen L1" ArmorLevel="1">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="1" Exact="true" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Light" Actor="0" NewModel="HR Qiang Light1B 2H Spearman" />
+  </ArmorVariant>
+  <ArmorVariant ID="QI Tribal Long Spearmen L3" BasedOn="QI Tribal Long Spearmen L1" ArmorLevel="2">
+    <ChangedRequirements>
+      <Building ID="Armorer I" UpgradeLevel="2" />
+    </ChangedRequirements>
+    <ElementChange Index="0" Armor="Light" Actor="0" NewModel="HR Qiang Armoured1A 2H Spearman" />
+  </ArmorVariant>
+
+
+</UnitTypes>

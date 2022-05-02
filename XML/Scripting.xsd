@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="FloatCondition">
+    <xs:attribute name="Property" type="xs:string" use="required"/>
+    <xs:attribute name="Condition" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type="xs:float" use="required"/>
+    <xs:attribute name="Parameter" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="BoolCondition">
+    <xs:attribute name="Property" type="xs:string" use="required"/>
+    <xs:attribute name="Condition" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type="xs:boolean" use="required"/>
+    <xs:attribute name="Parameter" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="StringCondition">
+    <xs:attribute name="Property" type="xs:string" use="required"/>
+    <xs:attribute name="Condition" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type="xs:string" use="required"/>
+    <xs:attribute name="Parameter" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="Float2Condition">
+    <xs:attribute name="Property" type="xs:string" use="required"/>
+    <xs:attribute name="Condition" type="xs:string" use="required"/>
+    <xs:attribute name="Property2" type="xs:string" use="required"/>
+    <xs:attribute name="Parameter" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="ActionSet">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="ScenarioMsg">
+        <xs:complexType>
+          <xs:attribute name="Title" type="xs:string" use="required"/>
+          <xs:attribute name="Text" type="xs:string" use="required"/>
+          <xs:attribute name="ListName" type="xs:string" use="required"/>
+          <xs:attribute name="Image" type="xs:string" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Hint">
+        <xs:complexType>
+          <xs:attribute name="Title" type="xs:string" use="required"/>
+          <xs:attribute name="Text" type="xs:string" use="required"/>
+          <xs:attribute name="ListName" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GiveMission">
+        <xs:complexType>
+          <xs:attribute name="Title" type="xs:string" use="required"/>
+          <xs:attribute name="Text" type="xs:string" use="required"/>
+          <xs:attribute name="Image" type="xs:string" use="optional"/>
+          <xs:attribute name="CompletedTest" type="xs:string" use="required"/>
+          <xs:attribute name="Parameter" type="xs:string" use="optional"/>
+          <xs:attribute name="X" type="xs:int" use="optional"/>
+          <xs:attribute name="Y" type="xs:int" use="optional"/>
+          <xs:attribute name="TurnLimit" type="xs:int" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name ="MissionFailedMessage">
+        <xs:complexType>
+          <xs:attribute name="AuthorityPenalty" type="xs:int" use="optional"/>
+          <xs:attribute name="AllianceCancelled" type="xs:boolean" use="optional"/>
+          <xs:attribute name="Image" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="NewLeaderMsg">
+        <xs:complexType>
+          <xs:attribute name="FirstName" type="xs:string" use="required"/>
+          <xs:attribute name="LastName" type="xs:string" use="optional"/>
+          <xs:attribute name="Text" type="xs:string" use="optional"/>
+          <xs:attribute name="Title" type="xs:string" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      
+      <xs:element name="AddLeader">
+        <xs:complexType>
+          <xs:attribute name="FirstName" type="xs:string" use="required"/>
+          <xs:attribute name="LastName" type="xs:string" use="required"/>
+          <xs:attribute name="AgeInYears" type="xs:int" use="required"/>
+          <xs:attribute name="Qi" type="xs:int" use="required"/>
+          <xs:attribute name="Ren" type="xs:int" use="required"/>
+          <xs:attribute name="Authority" type="xs:int" use="optional"/>
+          <xs:attribute name="X" type="xs:int" use="required"/>
+          <xs:attribute name="Y" type="xs:int" use="required"/>
+          <xs:attribute name="Leader" type="xs:boolean" use="optional"/>
+          <xs:attribute name="Heir" type="xs:boolean" use="optional"/>
+          <xs:attribute name="PortraitName" type="xs:string" use="required"/>
+          <xs:attribute name="Title" type="xs:string" use="optional"/>
+          <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="CreateSettlement">
+        <xs:complexType>
+          <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+          <xs:attribute name="Name" type="xs:string" use="required"/>
+          <xs:attribute name="X" type="xs:int" use="required"/>
+          <xs:attribute name="Y" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="AddPopulation">
+        <xs:complexType>
+          <xs:attribute name="X" type="xs:int" use="required"/>
+          <xs:attribute name="Y" type="xs:int" use="required"/>
+          <xs:attribute name="Amount" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="AddFlocks">
+        <xs:complexType>
+          <xs:attribute name="X" type="xs:int" use="required"/>
+          <xs:attribute name="Y" type="xs:int" use="required"/>
+          <xs:attribute name="Amount" type="xs:int" use="required"/>
+          <xs:attribute name="ExpandTerritory" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="AddBuilding">
+        <xs:complexType>
+          <xs:attribute name="X" type="xs:int" use="required"/>
+          <xs:attribute name="Y" type="xs:int" use="required"/>
+          <xs:attribute name="BuildingID" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="SetRoyalEstate">
+        <xs:complexType>
+          <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+          <xs:attribute name="Amount" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="AddMoney">
+        <xs:complexType>
+          <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+          <xs:attribute name="Amount" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="AddUnit">
+        <xs:complexType>
+          <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+          <xs:attribute name="UnitID" type="xs:string" use="required"/>
+          <xs:attribute name="X" type="xs:int" use="required"/>
+          <xs:attribute name="Y" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="ChangeFactionRules">
+        <xs:complexType>
+          <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+          <xs:attribute name="BaseType" type ="xs:string" use="optional"/>
+
+          <xs:attribute name="NoTechnology" type="xs:boolean" use="optional"/>
+          <xs:attribute name="NoEdicts" type="xs:boolean" use="optional"/>
+          <xs:attribute name="NoDiplomacy" type="xs:boolean" use="optional"/>
+          <xs:attribute name="NoNewLeaders" type="xs:boolean" use="optional"/>
+          <xs:attribute name="NoElimination" type="xs:boolean" use="optional"/>
+          <xs:attribute name="NoVictory" type="xs:boolean" use="optional"/>
+          <xs:attribute name="CannotBeAttacked" type="xs:boolean" use="optional"/>
+          <xs:attribute name="NoAttacking" type="xs:boolean" use="optional"/>
+          <xs:attribute name="StateFrozen" type="xs:boolean" use="optional"/>
+          <xs:attribute name="UnfreezeIfAttacked" type="xs:boolean" use="optional"/>
+          <xs:attribute name="NoMovement" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="DestroyStack">
+        <xs:complexType>
+          <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+          <xs:attribute name="X" type="xs:int" use="required"/>
+          <xs:attribute name="Y" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="Diplomacy">
+        <xs:complexType>
+          <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+          <xs:attribute name="Target" type="xs:string" use="required"/>
+          <xs:attribute name="Agreement" type="xs:string" use="required"/>
+          <xs:attribute name="Turns" type="xs:int" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="ChangeLeaderAuthority">
+        <xs:complexType>
+          <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+          <xs:attribute name="Amount" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="TriggerEvent">
+        <xs:complexType>
+          <xs:attribute name="Event" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="TakeOverFaction">
+        <xs:complexType>
+          <xs:attribute name="Faction" type="xs:string" use="required"/>
+          <xs:attribute name="NewController" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:choice>
+    <xs:attribute name="OnceOnly" type="xs:boolean" use="optional"/>
+    <xs:attribute name="Always" type="xs:boolean" use="optional"/>
+    <xs:attribute name="MinTimesToActivater" type="xs:integer" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="ScriptEvent">
+    <xs:sequence>
+      <xs:element name ="Trigger">
+        <xs:complexType>
+          <xs:choice maxOccurs ="unbounded" minOccurs ="0">
+            <xs:element name="ConditionF" type="oe:FloatCondition"/>
+            <xs:element name="ConditionF2" type="oe:Float2Condition"/>
+            <xs:element name="ConditionB" type="oe:BoolCondition"/>
+            <xs:element name="ConditionS" type="oe:StringCondition"/>
+          </xs:choice>
+          <xs:attribute name="Time" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name ="ActionSet" type="oe:ActionSet" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+    <xs:complexType name="FactionScript">
+      <xs:sequence>
+        <xs:element name="Event" type="oe:ScriptEvent" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    <xs:attribute name="FactionID" type="xs:string" use="optional"/>
+    <xs:attribute name="Any" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+  
+  <xs:element name="Script">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name ="FactionScript" maxOccurs ="unbounded" type="oe:FactionScript"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="Requirement.xsd" />
+  <xs:include schemaLocation="OECommon.xsd" />
+
+  <xs:simpleType name="EdictEffect">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cost" />
+      <xs:enumeration value="PeasantUnrest" />
+      <xs:enumeration value="NobleUnrest" />
+      <xs:enumeration value="FoodProduction" />
+      <xs:enumeration value="Culture" />
+      <xs:enumeration value="Authority" />
+      <xs:enumeration value="Trade" />
+      <xs:enumeration value="BattleMorale" />
+      <xs:enumeration value="MilitiaAvailability" />
+      <xs:enumeration value="MilitiaSkill" />
+      <xs:enumeration value="GarrissonAvailability" />
+      <xs:enumeration value="Militia Melee LongSkill" />
+      <xs:enumeration value="CollectAgricultureTax" />
+      <!-- Leader Set value for type  0 = random, 1 = general, 2 = admin-->
+      <xs:enumeration value="AddLeader" />
+      <xs:enumeration value="TaxCollection" />
+      <xs:enumeration value="SpecialPopulationTax" />
+      <xs:enumeration value="AdvanceEra" />
+      <xs:enumeration value="Recruitment" />
+      <xs:enumeration value="Income" />
+      <xs:enumeration value="ImmediateIncome" />
+      <xs:enumeration value="PersonalAuthority" />
+      <xs:enumeration value="DisasterUnrest" />
+      <xs:enumeration value="RecruitSpecialUnits" />
+      <xs:enumeration value="MoveCapital" />
+      <xs:enumeration value="IncreaseBooty" />
+      <xs:enumeration value="CancelDistancePenalty" />
+      <xs:enumeration value="CancelSuccessionPenalty" />
+      <xs:enumeration value="CreateOffice" />
+      <xs:enumeration value="DestroySettlement" />
+      <xs:enumeration value="MoveCapitalTo" />
+      <xs:enumeration value="CreateUnit" />
+      <xs:enumeration value="KillPuppetEmperor" />
+      <xs:enumeration value="ReduceCorruption" />
+      <xs:enumeration value="UpsetCourt" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="Effect">
+    <xs:attribute name="Type" type="oe:EdictEffect" use="required" />
+    <xs:attribute name="Value" type="xs:float" use="required" />
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+    <xs:attribute name="Turns" type="xs:nonNegativeInteger" use="optional" />
+    <xs:attribute name="PerTurn" type="xs:boolean" use="optional" />
+  </xs:complexType>
+
+  <!-- Definition for a single edict -->
+  <xs:complexType name="Edict">
+    <xs:sequence>
+      <!--Requirements that the player can take action to meet-->
+      <xs:element name="Requirements" type="oe:RequirementList" minOccurs="0" />
+
+      <!-- These are requirements that won't change over time, or are only valid
+			at certain fixed locations. Player's won't be offerred items that don't meet
+			the static reqirements since they have no means to meet them.
+			Examples include requirements for a specific race, game type,
+			or geographical location -->
+      <xs:element name="StaticRequirements" type="oe:RequirementList" minOccurs="0" />
+
+      <xs:element name="Effect" type="oe:Effect" maxOccurs="unbounded" minOccurs="0" />
+      <xs:element name="CancelEffect" type="oe:Effect" maxOccurs="unbounded" minOccurs="0" />
+      <xs:element name="CancelsEdict" maxOccurs="unbounded" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required"></xs:attribute>
+    <xs:attribute name="Area" type="oe:TechEdictArea" use="required"></xs:attribute>
+    <xs:attribute name="NumTurns" type="xs:nonNegativeInteger" use="optional"></xs:attribute>
+    <xs:attribute name="MayBeCancelled" type="xs:boolean" use="optional"></xs:attribute>
+    <xs:attribute name="ExpireSilently" type="xs:boolean" use="optional"></xs:attribute>
+    <xs:attribute name="LeaderTitle" type="xs:string" use="optional"></xs:attribute>
+    <xs:attribute name="IssuedInStartingEra" type="xs:int" use="optional" />
+    <xs:attribute name="TranslationTag" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- Modding Elements //////////////////////////////////////////////////// -->
+
+  <xs:complexType name="DropEdictType">
+    <xs:attribute name="ID" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <!-- ///////////////////////////////////////////////////////////////////// -->
+
+  <xs:element name="Root">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Edict" type="oe:Edict" maxOccurs="unbounded" />
+        <xs:element name="Drop" type="oe:DropEdictType" />
+        <xs:element name="Replace" type="oe:Edict" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

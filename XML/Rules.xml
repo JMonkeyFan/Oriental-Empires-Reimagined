@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Rules.xsd">
+
+  <!-- MOVEMENT RULES ////////////////////////////////////////////////////////-->
+  <!-- Terrain Classes -->
+  <!-- Land -->
+  <TerrainClass Name="FlatGround" />
+  <TerrainClass Name="SoftGround" />
+  <TerrainClass Name="RoughGround" />
+  <TerrainClass Name="GentleHills" />
+  <TerrainClass Name="SteepHills" />
+  <TerrainClass Name="Mountains" />
+  <TerrainClass Name="Forest" />
+  <TerrainClass Name="Impassable" />
+
+  <!-- Water -->
+  <TerrainClass Name="Ocean" Water="true" CapabilityNeededToPass="Oceanfaring" />
+  <TerrainClass Name="Sea" Water="true" CapabilityNeededToPass="Seafaring" />
+  <TerrainClass Name="Coastal" Water="true" />
+  <TerrainClass Name="NavigableRiver" Water="true" />
+  <TerrainClass Name="UnnavigableRiver" Water="true" />
+
+  <!-- Movement Classes -->
+  <!-- All terrain classes cost 1 move point unless otherwise specified -->
+  <!-- Water terrain is impassable to non naval and land is impassable to naval unless otherwise specified -->
+  <!-- Land -->
+  <MovementClass Name="BaseLandF" MovePoints="4" Naval="false" RoadModifier="0.66">
+    <Impassable Class="Impassable" />
+    <Impassable Class="Mountains" />
+    <Impassable Class="SteepHills" />
+    <Impassable Class="Ocean" />
+    <Impassable Class="Sea" />
+    <Impassable Class="Coastal" />
+    <Impassable Class="UnnavigableRiver" />
+    <Terrain Class="NavigableRiver" Points="-1" CrossingOnly="true" />
+    <Terrain Class="Forest" Points="-1" CrossingOnly="true" />
+  </MovementClass>
+  <MovementClass Name="BaseLandF1" MovePoints="4" Naval="false" RoadModifier="0.66">
+    <Impassable Class="Impassable" />
+    <Impassable Class="Mountains" />
+    <Impassable Class="SteepHills" />
+    <Impassable Class="Ocean" />
+    <Impassable Class="Sea" />
+    <Impassable Class="Coastal" />
+    <Impassable Class="UnnavigableRiver" />
+    <Terrain Class="NavigableRiver" Points="-1" CrossingOnly="true" />
+    <Terrain Class="Forest" Points="1" CrossingOnly="true" />
+  </MovementClass>
+  <MovementClass Name="BaseLand" MovePoints="4" Naval="false" RoadModifier="0.66">
+    <Impassable Class="Impassable" />
+    <Impassable Class="Mountains" />
+    <Impassable Class="SteepHills" />
+    <Impassable Class="Ocean" />
+    <Impassable Class="Sea" />
+    <Impassable Class="Coastal" />
+    <Terrain Class="NavigableRiver" Points="-1" CrossingOnly="true" />
+    <Terrain Class="UnnavigableRiver" Points="-1" CrossingOnly="true" />
+    <Terrain Class="Forest" Points="2" />
+  </MovementClass>
+  <MovementClass Name="NoForest" MovePoints="4" Naval="false" RoadModifier="0.66">
+    <Impassable Class="Impassable" />
+    <Impassable Class="Mountains" />
+    <Impassable Class="SteepHills" />
+    <Impassable Class="Ocean" />
+    <Impassable Class="Sea" />
+    <Impassable Class="Coastal" />
+    <Impassable Class="UnnavigableRiver" />
+    <Impassable Class="Forest" />
+    <Terrain Class="NavigableRiver" Points="-1" CrossingOnly="true" />
+  </MovementClass>
+  <MovementClass Name="Garrisson" MovePoints="1" Naval="false" RoadModifier="1">
+    <Impassable Class="Impassable" />
+    <Impassable Class="Mountains" />
+    <Impassable Class="SteepHills" />
+    <Impassable Class="Ocean" />
+    <Impassable Class="Sea" />
+    <Impassable Class="Coastal" />
+    <Impassable Class="UnnavigableRiver" />
+    <Impassable Class="Forest" />
+    <Impassable Class="NavigableRiver" />
+    <Impassable Class="SoftGround" />
+    <Impassable Class="RoughGround" />
+  </MovementClass>
+  <MovementClass Name="Tier 1 Infantry" Base="BaseLand" MovePoints="13" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="11" />
+    <Terrain Class="RoughGround" Points="9" />
+  </MovementClass>
+  <MovementClass Name="Tier 2 Infantry" Base="BaseLand" MovePoints="12" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="10" />
+    <Terrain Class="RoughGround" Points="8" />
+  </MovementClass>
+  <MovementClass Name="Tier 3 Infantry" Base="BaseLandF" MovePoints="11" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="9" />
+    <Terrain Class="RoughGround" Points="7" />
+  </MovementClass>
+  <MovementClass Name="Tier 4 Infantry" Base="BaseLandF" MovePoints="10" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="8" />
+    <Terrain Class="RoughGround" Points="6" />
+  </MovementClass>
+  <MovementClass Name="Tier 5 Infantry" Base="BaseLandF" MovePoints="9" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="7" />
+    <Terrain Class="RoughGround" Points="6" />
+  </MovementClass>
+  <MovementClass Name="Tier 6 Infantry" Base="BaseLandF" MovePoints="8" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="6" />
+    <Terrain Class="RoughGround" Points="5" />
+  </MovementClass>
+  <MovementClass Name="Tier 7 Infantry" Base="BaseLandF" MovePoints="7" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="5" />
+    <Terrain Class="RoughGround" Points="4" />
+  </MovementClass>
+  <MovementClass Name="Tier 1 Cavalry" Base="BaseLandF1" MovePoints="15" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="13" />
+    <Terrain Class="RoughGround" Points="11" />
+  </MovementClass>
+  <MovementClass Name="Tier 2 Cavalry" Base="BaseLandF1" MovePoints="14" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="12" />
+    <Terrain Class="RoughGround" Points="10" />
+  </MovementClass>
+  <MovementClass Name="Tier 3 Cavalry" Base="BaseLandF" MovePoints="13" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="11" />
+    <Terrain Class="RoughGround" Points="9" />
+  </MovementClass>
+  <MovementClass Name="Tier 4 Cavalry" Base="NoForest" MovePoints="12" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="10" />
+    <Terrain Class="RoughGround" Points="8" />
+  </MovementClass>
+  <MovementClass Name="Tier 5 Cavalry" Base="NoForest" MovePoints="11" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="9" />
+    <Terrain Class="RoughGround" Points="7" />
+  </MovementClass>
+  <MovementClass Name="Tier 6 Cavalry" Base="NoForest" MovePoints="10" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="8" />
+    <Terrain Class="RoughGround" Points="6" />
+  </MovementClass>
+  <MovementClass Name="Tier 7 Cavalry" Base="NoForest" MovePoints="9" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="7" />
+    <Terrain Class="RoughGround" Points="4" />
+  </MovementClass>
+  <MovementClass Name="Tier 1 Chariot" Base="NoForest" MovePoints="16" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="7" />
+    <Terrain Class="RoughGround" Points="8" />
+  </MovementClass>
+  <MovementClass Name="Tier 1 Chariot" Base="NoForest" MovePoints="15" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="6" />
+    <Terrain Class="RoughGround" Points="7" />
+  </MovementClass>
+  <MovementClass Name="Tier 3 Chariot" Base="NoForest" MovePoints="14" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="5" />
+    <Terrain Class="RoughGround" Points="6" />
+  </MovementClass>
+  <MovementClass Name="Tier 4 Chariot" Base="NoForest" MovePoints="13" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="4" />
+    <Terrain Class="RoughGround" Points="5" />
+  </MovementClass>
+  <MovementClass Name="Tier 5 Chariot" Base="NoForest" MovePoints="12" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="3" />
+    <Terrain Class="RoughGround" Points="4" />
+  </MovementClass>
+  <MovementClass Name="Tier 6 Chariot" Base="NoForest" MovePoints="10" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="2" />
+    <Terrain Class="RoughGround" Points="3" />
+  </MovementClass>
+  <MovementClass Name="Tier 7 Chariot" Base="NoForest" MovePoints="9" Naval="false" RoadModifier="0.8">
+    <Terrain Class="SoftGround" Points="1" />
+    <Terrain Class="RoughGround" Points="2" />
+  </MovementClass>
+  <MovementClass Name="Baggage Train" Base="NoForest" MovePoints="12" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="10" />
+    <Terrain Class="RoughGround" Points="8" />
+  </MovementClass>
+  <MovementClass Name="Settler" Base="BaseLand" MovePoints="16" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="14" />
+    <Terrain Class="RoughGround" Points="12" />
+  </MovementClass>
+  <!--Base-->
+  <MovementClass Name="Infantry" Base="BaseLand" MovePoints="4" Naval="false" RoadModifier="0.66">
+    <Terrain Class="SoftGround" Points="2" />
+  </MovementClass>
+  <MovementClass Name="Light Infantry" Base="Infantry" MovePoints="5" Naval="false" RoadModifier="0.66">
+    <Terrain Class="Forest" Points="1" />
+    <Terrain Class="SoftGround" Points="1" />
+  </MovementClass>
+  <MovementClass Name="Light Cavalry" Base="BaseLand" MovePoints="8" Naval="false" RoadModifier="0.8">
+    <Terrain Class="Forest" Points="6" />
+    <Terrain Class="SoftGround" Points="6" />
+  </MovementClass>
+  <MovementClass Name="Scout Cavalry" Base="BaseLand" MovePoints="10" Naval="false" RoadModifier="0.8">
+    <Terrain Class="Forest" Points="3" />
+    <Terrain Class="SoftGround" Points="5" />
+  </MovementClass>
+  <MovementClass Name="Heavy Cavalry" Base="BaseLand" MovePoints="6" Naval="false" RoadModifier="0.8">
+    <Terrain Class="Forest" Points="4" />
+    <Terrain Class="SoftGround" Points="4" />
+  </MovementClass>
+  <MovementClass Name="Chariot" Base="BaseLand" MovePoints="6" Naval="false" RoadModifier="0.8">
+    <Terrain Class="Forest" Points="6" />
+    <Terrain Class="SoftGround" Points="4" />
+  </MovementClass>
+  <!-- Naval -->
+  <MovementClass Name="BaseNaval" MovePoints="6" Naval="true">
+    <Impassable Class="UnnavigableRiver" />
+  </MovementClass>
+  <MovementClass Name="River Boat" MovePoints="6" Naval="true" Base="BaseNaval">
+    <Impassable Class="Ocean" />
+    <Impassable Class="Sea" />
+    <Terrain Class="Coastal" Points="2" />
+  </MovementClass>
+  <MovementClass Name="Small Ship" MovePoints="6" Naval="true" Base="BaseNaval">
+    <Impassable Class="Ocean" />
+    <Terrain Class="NavigableRiver" Points="2" />
+  </MovementClass>
+  <MovementClass Name="Large Ship" MovePoints="8" Naval="true" Base="BaseNaval">
+    <Impassable Class="NavigableRiver" />
+  </MovementClass>
+  <MovementClass Name="Paddle Wheel Boat" MovePoints="8" Naval="true" Base="BaseNaval">
+    <Impassable Class="Ocean" />
+    <Impassable Class="Sea" />
+    <Terrain Class="Coastal" Points="2" />
+  </MovementClass>
+  <!-- These are needed for trade route pathfinding -->
+  <!--
+  <MovementClass Name="Land Trade" Base="BaseLand" MovePoints ="4" Naval ="false" RoadModifier="1">
+    <Impassable Class="Forest"/>
+    <Impassable Class ="SoftGround"/>
+  </MovementClass>
+  -->
+  <MovementClass Name="Land Trade" MovePoints="1" Naval="false" RoadModifier="1">
+    <Impassable Class="Impassable" />
+    <Impassable Class="Mountains" />
+    <Impassable Class="SteepHills" />
+    <Impassable Class="Ocean" />
+    <Impassable Class="Sea" />
+    <Impassable Class="Coastal" />
+    <Impassable Class="Forest" />
+    <Terrain Class="NavigableRiver" Points="1" CrossingOnly="true" />
+    <Terrain Class="UnnavigableRiver" Points="1" CrossingOnly="true" />
+  </MovementClass>
+
+  <MovementClass Name="Water Trade" Base="BaseNaval" MovePoints="6" Naval="true"></MovementClass>
+
+
+  <!-- TerrainCombatEffectClasses -->
+
+
+  <!--  Mine -->
+  <!--  Long Spears & Stuff -->
+  <TerrainCombatEffectClass ID="Garrisson" WadingModifier="0.05">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="LongWeapons Tier 1" WadingModifier="0.65">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="0.9" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.85" DefenseModifier="0.95" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.9" DefenseModifier="1.05" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.1" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.55" DefenseModifier="0.95" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="LongWeapons Tier 2" WadingModifier="0.6">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="0.95" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.85" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.9" DefenseModifier="1.1" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.15" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.55" DefenseModifier="0.9" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="LongWeapons Tier 3" WadingModifier="0.55">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.85" DefenseModifier="1.05" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.9" DefenseModifier="1.15" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.2" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.55" DefenseModifier="0.85" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="LongWeapons Tier 4" WadingModifier="0.5">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="1.05" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.85" DefenseModifier="1.1" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.9" DefenseModifier="1.2" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.25" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.55" DefenseModifier="0.8" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="LongWeapons Tier 5" WadingModifier="0.45">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="1.1" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.85" DefenseModifier="1.15" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.9" DefenseModifier="1.25" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.3" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.55" DefenseModifier="0.75" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="LongWeapons Tier 6" WadingModifier="0.4">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="1.15" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.85" DefenseModifier="1.2" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.9" DefenseModifier="1.3" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.35" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.55" DefenseModifier="0.7" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="LongWeapons Tier 7" WadingModifier="0.35">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="1.2" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.85" DefenseModifier="1.25" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.9" DefenseModifier="1.35" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.4" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.55" DefenseModifier="0.65" Charge="false" />
+  </TerrainCombatEffectClass>
+  <!--  Short Spears & Stuff -->
+  <TerrainCombatEffectClass ID="VeryLongWeapons Tier 1" WadingModifier="0.55">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.65" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1.05" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.85" DefenseModifier="1.15" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1.2" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.4" DefenseModifier="0.85" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="VeryLongWeapons Tier 2" WadingModifier="0.50">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.65" DefenseModifier="1.05" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1.1" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.85" DefenseModifier="1.2" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1.25" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.4" DefenseModifier="0.8" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="VeryLongWeapons Tier 3" WadingModifier="0.45">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.65" DefenseModifier="1.1" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1.15" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.85" DefenseModifier="1.25" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1.3" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.4" DefenseModifier="0.75" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="VeryLongWeapons Tier 4" WadingModifier="0.40">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.65" DefenseModifier="1.15" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1.2" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.85" DefenseModifier="1.3" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1.35" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.4" DefenseModifier="0.7" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="VeryLongWeapons Tier 5" WadingModifier="0.35">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.65" DefenseModifier="1.2" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1.25" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.85" DefenseModifier="1.35" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1.4" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.4" DefenseModifier="0.65" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="VeryLongWeapons Tier 6" WadingModifier="0.3">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.65" DefenseModifier="1.25" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1.3" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.85" DefenseModifier="1.4" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1.45" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.4" DefenseModifier="0.6" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="VeryLongWeapons Tier 7" WadingModifier="0.25">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.65" DefenseModifier="1.3" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1.35" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.85" DefenseModifier="1.45" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1.5" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.4" DefenseModifier="0.55" Charge="false" />
+  </TerrainCombatEffectClass>
+  <!--  Short Swords & Stuff -->
+  <TerrainCombatEffectClass ID="Short Tier 1" WadingModifier="0.85">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1.2" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="1.15" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="1.05" DefenseModifier="1.1" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="1.25" DefenseModifier="1.2" Charge="true" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Short Tier 2" WadingModifier="0.8">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1.15" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="1.1" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="1" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="1.2" DefenseModifier="1.15" Charge="true" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Short Tier 3" WadingModifier="0.75">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1.1" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.95" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.9" DefenseModifier="0.95" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="1.15" DefenseModifier="1.1" Charge="true" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Short Tier 4" WadingModifier="0.7">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.9" DefenseModifier="0.95" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.85" DefenseModifier="0.9" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="1.1" DefenseModifier="1.05" Charge="true" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Short Tier 5" WadingModifier="0.65">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="0.95" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.85" DefenseModifier="0.9" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.8" DefenseModifier="0.85" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="1.05" DefenseModifier="1" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Short Tier 6" WadingModifier="0.6">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="0.95" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="0.9" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="0.85" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.75" DefenseModifier="0.85" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="1" DefenseModifier="0.95" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Short Tier 7" WadingModifier="0.55">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="0.9" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="0.85" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="0.8" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.75" DefenseModifier="0.8" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="1" DefenseModifier="0.9" Charge="false" />
+  </TerrainCombatEffectClass>
+  <!--  Longswords and Stuff -->
+  <TerrainCombatEffectClass ID="Long Tier 1" WadingModifier="0.75">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="0.85" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.9" DefenseModifier="0.9" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="0.95" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.7" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.6" DefenseModifier="0.75" Charge="true" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Long Tier 2" WadingModifier="0.7">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="0.9" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.9" DefenseModifier="0.95" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.7" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.6" DefenseModifier="0.7" Charge="true" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Long Tier 3" WadingModifier="0.65">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="0.95" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.9" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.7" DefenseModifier="1.1" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.6" DefenseModifier="0.65" Charge="true" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Long Tier 4" WadingModifier="0.6">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.9" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="1.1" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.7" DefenseModifier="1.15" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.6" DefenseModifier="0.6" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Long Tier 5" WadingModifier="0.55">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.9" DefenseModifier="1.1" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="1.15" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.7" DefenseModifier="1.2" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.6" DefenseModifier="0.55" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Long Tier 6" WadingModifier="0.5">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1.1" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.9" DefenseModifier="1.15" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="1.2" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.7" DefenseModifier="1.25" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.6" DefenseModifier="0.5" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Long Tier 7" WadingModifier="0.45">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1.15" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.9" DefenseModifier="1.2" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="1.25" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.7" DefenseModifier="1.3" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.6" DefenseModifier="0.45" Charge="false" />
+  </TerrainCombatEffectClass>
+  <!--  Cavalry Base -->
+  <TerrainCombatEffectClass ID="Cavalry Tier 1" WadingModifier="0.6">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1.25" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1.2" DefenseModifier="0.85" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="1.15" DefenseModifier="0.9" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1.05" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.8" DefenseModifier="0.8" Charge="true" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Cavalry Tier 2" WadingModifier="0.55">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1.15" DefenseModifier="0.9" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1.15" DefenseModifier="0.9" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="1.1" DefenseModifier="0.95" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.7" DefenseModifier="0.7" Charge="true" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Cavalry Tier 3" WadingModifier="0.45">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1.05" DefenseModifier="0.8" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1.1" DefenseModifier="0.95" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="1.05" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1.1" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.6" DefenseModifier="0.6" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Cavalry Tier 4" WadingModifier="0.35">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.95" DefenseModifier="0.7" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1.05" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="1" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.9" DefenseModifier="1.15" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.5" DefenseModifier="0.5" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Cavalry Tier 5" WadingModifier="0.25">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.85" DefenseModifier="0.6" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="1.05" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.95" DefenseModifier="1.1" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.85" DefenseModifier="1.2" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.4" DefenseModifier="0.4" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Cavalry Tier 6" WadingModifier="0.2">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="0.5" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.95" DefenseModifier="1.1" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.85" DefenseModifier="1.15" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.8" DefenseModifier="1.25" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.3" DefenseModifier="0.35" Charge="false" />
+  </TerrainCombatEffectClass>
+  <TerrainCombatEffectClass ID="Cavalry Tier 7" WadingModifier="0.15">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.65" DefenseModifier="0.5" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.9" DefenseModifier="1.1" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.8" DefenseModifier="1.15" Charge="true" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.75" DefenseModifier="1.25" Charge="true" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.3" DefenseModifier="0.35" Charge="false" />
+  </TerrainCombatEffectClass>
+  <!-- End of Mine 
+  Possible Weapons(Tier 1, Tier 2, Tier 3, Tier 4, Tier 5, Tier 6 versions):
+  Infantry:
+  Short Spear(LongWeapons)
+  Long Spear(VeryLongWeapons)
+  Halberd(VeryLongWeapons)
+  Short Sword(Short)
+  Dagger Axe(Short)
+  Long Sword(Tier 3)
+  Cavalry:
+  Short Spear(Cavalry)
+  Long Spear(Cavalry)
+  Halberd(Cavalry)
+  Short Sword(Cavalry)
+  Dagger Axe(Cavalry)
+  Long Sword(Cavalry)
+-->
+  <!--Base-->
+  <TerrainCombatEffectClass ID="Infantry" WadingModifier="0.5">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="1" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="1" DefenseModifier="1" Charge="true" />
+  </TerrainCombatEffectClass>
+
+  <TerrainCombatEffectClass ID="Light Infantry" WadingModifier="0.5">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1.25" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="1.25" DefenseModifier="1" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="1" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="1.25" DefenseModifier="1" Charge="true" />
+  </TerrainCombatEffectClass>
+
+  <TerrainCombatEffectClass ID="LongWeapons" WadingModifier="0.5">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.8" DefenseModifier="0.8" Charge="true" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.8" DefenseModifier="0.8" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.75" DefenseModifier="0.75" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.75" DefenseModifier="0.75" Charge="true" />
+  </TerrainCombatEffectClass>
+
+  <TerrainCombatEffectClass ID="VeryLongWeapons" WadingModifier="0.5">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.7" DefenseModifier="0.7" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.7" DefenseModifier="0.5" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.5" DefenseModifier="0.5" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.5" DefenseModifier="0.5" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.5" DefenseModifier="0.5" Charge="true" />
+  </TerrainCombatEffectClass>
+
+  <TerrainCombatEffectClass ID="Cavalry" WadingModifier="0.7">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.5" DefenseModifier="1" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="0.75" Charge="true" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.75" DefenseModifier="0.5" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.5" DefenseModifier="0.5" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.5" DefenseModifier="0.75" Charge="false" />
+  </TerrainCombatEffectClass>
+
+  <TerrainCombatEffectClass ID="Vehicle" WadingModifier="0.8">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="0.5" DefenseModifier="0.75" Charge="false" />
+    <TerrainEffect MoveClass="RoughGround" AttackModifier="0.5" DefenseModifier="0.75" Charge="false" />
+    <TerrainEffect MoveClass="SteepHills" AttackModifier="0.5" DefenseModifier="0.5" Charge="false" />
+    <TerrainEffect MoveClass="Mountains" AttackModifier="0.25" DefenseModifier="0.25" Charge="false" />
+    <TerrainEffect MoveClass="Forest" AttackModifier="0.5" DefenseModifier="0.5" Charge="false" />
+  </TerrainCombatEffectClass>
+
+  <TerrainCombatEffectClass ID="Naval" WadingModifier="1">
+    <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1" Charge="false" />
+  </TerrainCombatEffectClass>
+  <!-- Weapon Classes -->
+  <WeaponClass Name="Long Spear Tier 1" Attack="1" Defense="0" CavAttackLevel="4" CavDefenceLevel="2" TerrainCombatClass="VeryLongWeapons Tier 1" />
+  <WeaponClass Name="Long Spear Tier 2" Attack="2" Defense="0" CavAttackLevel="3" CavDefenceLevel="3" TerrainCombatClass="VeryLongWeapons Tier 2" />
+  <WeaponClass Name="Long Spear Tier 3" Attack="3" Defense="0" CavAttackLevel="3" CavDefenceLevel="4" TerrainCombatClass="VeryLongWeapons Tier 3" />
+  <WeaponClass Name="Long Spear Tier 4" Attack="4" Defense="0" CavAttackLevel="2" CavDefenceLevel="5" TerrainCombatClass="VeryLongWeapons Tier 4" />
+  <WeaponClass Name="Long Spear Tier 5" Attack="5" Defense="0" CavAttackLevel="2" CavDefenceLevel="6" TerrainCombatClass="VeryLongWeapons Tier 5" />
+  <WeaponClass Name="Long Spear Tier 6" Attack="6" Defense="0" CavAttackLevel="1" CavDefenceLevel="7" TerrainCombatClass="VeryLongWeapons Tier 6" />
+  <WeaponClass Name="Long Spear Tier 7" Attack="7" Defense="0" CavAttackLevel="1" CavDefenceLevel="8" TerrainCombatClass="VeryLongWeapons Tier 7" />
+  <WeaponClass Name="Short Spear Tier 1" Attack="2" Defense="0" CavAttackLevel="0" CavDefenceLevel="1" TerrainCombatClass="LongWeapons Tier 1" />
+  <WeaponClass Name="Short Spear Tier 2" Attack="3" Defense="0" CavAttackLevel="1" CavDefenceLevel="2" TerrainCombatClass="LongWeapons Tier 2" />
+  <WeaponClass Name="Short Spear Tier 3" Attack="4" Defense="0" CavAttackLevel="2" CavDefenceLevel="3" TerrainCombatClass="LongWeapons Tier 3" />
+  <WeaponClass Name="Short Spear Tier 4" Attack="5" Defense="0" CavAttackLevel="2" CavDefenceLevel="4" TerrainCombatClass="LongWeapons Tier 4" />
+  <WeaponClass Name="Short Spear Tier 5" Attack="6" Defense="0" CavAttackLevel="3" CavDefenceLevel="5" TerrainCombatClass="LongWeapons Tier 5" />
+  <WeaponClass Name="Short Spear Tier 6" Attack="7" Defense="0" CavAttackLevel="2" CavDefenceLevel="6" TerrainCombatClass="LongWeapons Tier 6" />
+  <WeaponClass Name="Short Spear Tier 7" Attack="8" Defense="0" CavAttackLevel="1" CavDefenceLevel="7" TerrainCombatClass="LongWeapons Tier 7" />
+  <WeaponClass Name="Short Sword Tier 1" Attack="3" Defense="0" Metallic="0.15" TerrainCombatClass="Short Tier 1" Blade="true" />
+  <WeaponClass Name="Short Sword Tier 2" Attack="4" Defense="0" Metallic="0.15" TerrainCombatClass="Short Tier 2" Blade="true" />
+  <WeaponClass Name="Short Sword Tier 3" Attack="5" Defense="0" Metallic="0.15" TerrainCombatClass="Short Tier 3" Blade="true" />
+  <WeaponClass Name="Short Sword Tier 4" Attack="6" Defense="0" Metallic="0.15" TerrainCombatClass="Short Tier 4" Blade="true" />
+  <WeaponClass Name="Short Sword Tier 5" Attack="7" Defense="0" Metallic="0.15" TerrainCombatClass="Short Tier 5" Blade="true" />
+  <WeaponClass Name="Short Sword Tier 6" Attack="8" Defense="0" Metallic="0.15" TerrainCombatClass="Short Tier 6" Blade="true" />
+  <WeaponClass Name="Short Sword Tier 7" Attack="9" Defense="0" Metallic="0.15" TerrainCombatClass="Short Tier 6" Blade="true" />
+  <WeaponClass Name="Long Sword Tier 1" Attack="2" Defense="0" Metallic="0.25" CavAttackLevel="1" TerrainCombatClass="Long Tier 1" Blade="true" />
+  <WeaponClass Name="Long Sword Tier 2" Attack="3" Defense="0" Metallic="0.25" CavAttackLevel="2" TerrainCombatClass="Long Tier 2" Blade="true" />
+  <WeaponClass Name="Long Sword Tier 3" Attack="4" Defense="0" Metallic="0.25" CavAttackLevel="2" TerrainCombatClass="Long Tier 3" Blade="true" />
+  <WeaponClass Name="Long Sword Tier 4" Attack="5" Defense="0" Metallic="0.25" CavAttackLevel="3" TerrainCombatClass="Long Tier 4" Blade="true" />
+  <WeaponClass Name="Long Sword Tier 5" Attack="6" Defense="0" Metallic="0.25" CavAttackLevel="3" TerrainCombatClass="Long Tier 5" Blade="true" />
+  <WeaponClass Name="Long Sword Tier 6" Attack="7" Defense="0" Metallic="0.25" CavAttackLevel="2" TerrainCombatClass="Long Tier 6" Blade="true" />
+  <WeaponClass Name="Long Sword Tier 7" Attack="8" Defense="0" Metallic="0.25" CavAttackLevel="1" TerrainCombatClass="Long Tier 7" Blade="true" />
+  <WeaponClass Name="Dagger Axe Tier 1" Attack="2" Defense="0" APLevel="1" Metallic="0.05" TerrainCombatClass="Short Tier 1" Blade="true" />
+  <WeaponClass Name="Dagger Axe Tier 2" Attack="3" Defense="0" APLevel="2" Metallic="0.05" TerrainCombatClass="Short Tier 2" Blade="true" />
+  <WeaponClass Name="Dagger Axe Tier 3" Attack="4" Defense="0" APLevel="2" Metallic="0.05" TerrainCombatClass="Short Tier 3" Blade="true" />
+  <WeaponClass Name="Dagger Axe Tier 4" Attack="5" Defense="0" APLevel="2" Metallic="0.05" TerrainCombatClass="Short Tier 4" Blade="true" />
+  <WeaponClass Name="Dagger Axe Tier 5" Attack="6" Defense="0" APLevel="3" Metallic="0.05" TerrainCombatClass="Short Tier 5" Blade="true" />
+  <WeaponClass Name="Dagger Axe Tier 6" Attack="7" Defense="0" APLevel="3" Metallic="0.05" TerrainCombatClass="Short Tier 6" Blade="true" />
+  <WeaponClass Name="Dagger Axe Tier 7" Attack="8" Defense="0" APLevel="4" Metallic="0.05" TerrainCombatClass="Short Tier 7" Blade="true" />
+  <WeaponClass Name="2H Axe Tier 1" Attack="2" Defense="0" APLevel="1" Metallic="0.15" TerrainCombatClass="Short Tier 1" Blade="true" />
+  <WeaponClass Name="2H Axe Tier 2" Attack="3" Defense="0" APLevel="3" Metallic="0.15" TerrainCombatClass="Short Tier 2" Blade="true" />
+  <WeaponClass Name="2H Axe Tier 3" Attack="4" Defense="0" APLevel="3" Metallic="0.15" TerrainCombatClass="Short Tier 3" Blade="true" />
+  <WeaponClass Name="2H Axe Tier 4" Attack="5" Defense="0" APLevel="4" Metallic="0.15" TerrainCombatClass="Short Tier 4" Blade="true" />
+  <WeaponClass Name="2H Axe Tier 5" Attack="6" Defense="0" APLevel="4" Metallic="0.15" TerrainCombatClass="Short Tier 5" Blade="true" />
+  <WeaponClass Name="2H Axe Tier 6" Attack="7" Defense="0" APLevel="5" Metallic="0.15" TerrainCombatClass="Short Tier 6" Blade="true" />
+  <WeaponClass Name="2H Axe Tier 7" Attack="8" Defense="0" APLevel="6" Metallic="0.15" TerrainCombatClass="Short Tier 7" Blade="true" />
+  <WeaponClass Name="Halberd Tier 1" Attack="1" Defense="1" APLevel="0" CavAttackLevel="5" CavDefenceLevel="1" TerrainCombatClass="VeryLongWeapons Tier 1" Blade="true" />
+  <WeaponClass Name="Halberd Tier 2" Attack="2" Defense="2" APLevel="1" CavAttackLevel="4" CavDefenceLevel="2" TerrainCombatClass="VeryLongWeapons Tier 2" Blade="true" />
+  <WeaponClass Name="Halberd Tier 3" Attack="3" Defense="3" APLevel="2" CavAttackLevel="4" CavDefenceLevel="3" TerrainCombatClass="VeryLongWeapons Tier 3" Blade="true" />
+  <WeaponClass Name="Halberd Tier 4" Attack="4" Defense="2" APLevel="3" CavAttackLevel="3" CavDefenceLevel="3" TerrainCombatClass="VeryLongWeapons Tier 4" Blade="true" />
+  <WeaponClass Name="Halberd Tier 5" Attack="5" Defense="1" APLevel="4" CavAttackLevel="3" CavDefenceLevel="4" TerrainCombatClass="VeryLongWeapons Tier 5" Blade="true" />
+  <WeaponClass Name="Halberd Tier 6" Attack="6" Defense="0" APLevel="5" CavAttackLevel="2" CavDefenceLevel="4" TerrainCombatClass="VeryLongWeapons Tier 6" Blade="true" />
+  <WeaponClass Name="Halberd Tier 7" Attack="7" Defense="0" APLevel="5" CavAttackLevel="1" CavDefenceLevel="5" TerrainCombatClass="VeryLongWeapons Tier 7" Blade="true" />
+
+
+  <WeaponClass Name="Cavalry Long Spear Tier 1" Attack="1" Defense="0" CavAttackLevel="1" CavDefenceLevel="2" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 1" />
+  <WeaponClass Name="Cavalry Long Spear Tier 2" Attack="2" Defense="0" CavAttackLevel="1" CavDefenceLevel="3" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 2" />
+  <WeaponClass Name="Cavalry Long Spear Tier 3" Attack="3" Defense="0" CavAttackLevel="2" CavDefenceLevel="4" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 3" />
+  <WeaponClass Name="Cavalry Long Spear Tier 4" Attack="4" Defense="0" CavAttackLevel="2" CavDefenceLevel="5" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 4" />
+  <WeaponClass Name="Cavalry Long Spear Tier 5" Attack="5" Defense="0" CavAttackLevel="3" CavDefenceLevel="6" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 5" />
+  <WeaponClass Name="Cavalry Long Spear Tier 6" Attack="6" Defense="0" CavAttackLevel="3" CavDefenceLevel="7" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 6" />
+  <WeaponClass Name="Cavalry Long Spear Tier 7" Attack="7" Defense="0" CavAttackLevel="4" CavDefenceLevel="8" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 7" />
+  <WeaponClass Name="Cavalry Short Spear Tier 1" Attack="2" Defense="0" CavAttackLevel="0" CavDefenceLevel="1" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 1" />
+  <WeaponClass Name="Cavalry Short Spear Tier 2" Attack="3" Defense="0" CavAttackLevel="0" CavDefenceLevel="2" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 2" />
+  <WeaponClass Name="Cavalry Short Spear Tier 3" Attack="4" Defense="0" CavAttackLevel="1" CavDefenceLevel="3" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 3" />
+  <WeaponClass Name="Cavalry Short Spear Tier 4" Attack="5" Defense="0" CavAttackLevel="1" CavDefenceLevel="4" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 4" />
+  <WeaponClass Name="Cavalry Short Spear Tier 5" Attack="6" Defense="0" CavAttackLevel="2" CavDefenceLevel="5" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 5" />
+  <WeaponClass Name="Cavalry Short Spear Tier 6" Attack="7" Defense="0" CavAttackLevel="2" CavDefenceLevel="6" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 6" />
+  <WeaponClass Name="Cavalry Short Spear Tier 7" Attack="8" Defense="0" CavAttackLevel="3" CavDefenceLevel="7" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 7" />
+  <WeaponClass Name="Cavalry Sword Tier 1" Attack="2" Defense="0" Metallic="0.25" CavAttackLevel="1" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 1" Blade="true" />
+  <WeaponClass Name="Cavalry Sword Tier 2" Attack="3" Defense="0" Metallic="0.25" CavAttackLevel="2" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 2" Blade="true" />
+  <WeaponClass Name="Cavalry Sword Tier 3" Attack="4" Defense="0" Metallic="0.25" CavAttackLevel="2" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 3" Blade="true" />
+  <WeaponClass Name="Cavalry Sword Tier 4" Attack="5" Defense="0" Metallic="0.25" CavAttackLevel="3" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 4" Blade="true" />
+  <WeaponClass Name="Cavalry Sword Tier 5" Attack="6" Defense="0" Metallic="0.25" CavAttackLevel="3" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 5" Blade="true" />
+  <WeaponClass Name="Cavalry Sword Tier 6" Attack="7" Defense="0" Metallic="0.25" CavAttackLevel="2" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 6" Blade="true" />
+  <WeaponClass Name="Cavalry Sword Tier 7" Attack="8" Defense="0" Metallic="0.25" CavAttackLevel="1" FootAttackLevel="2" TerrainCombatClass="Cavalry Tier 7" Blade="true" />
+  <WeaponClass Name="Cavalry Dagger Axe Tier 1" Attack="2" Defense="0" APLevel="1" Metallic="0.05" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 1" Blade="true" />
+  <WeaponClass Name="Cavalry Dagger Axe Tier 2" Attack="3" Defense="0" APLevel="1" Metallic="0.05" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 2" Blade="true" />
+  <WeaponClass Name="Cavalry Dagger Axe Tier 3" Attack="4" Defense="0" APLevel="2" Metallic="0.05" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 3" Blade="true" />
+  <WeaponClass Name="Cavalry Dagger Axe Tier 4" Attack="5" Defense="0" APLevel="3" Metallic="0.05" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 4" Blade="true" />
+  <WeaponClass Name="Cavalry Dagger Axe Tier 5" Attack="6" Defense="0" APLevel="4" Metallic="0.05" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 5" Blade="true" />
+  <WeaponClass Name="Cavalry Dagger Axe Tier 6" Attack="7" Defense="0" APLevel="5" Metallic="0.05" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 6" Blade="true" />
+  <WeaponClass Name="Cavalry Dagger Axe Tier 7" Attack="7" Defense="0" APLevel="6" Metallic="0.05" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 7" Blade="true" />
+  <WeaponClass Name="Cavalry Halberd Tier 1" Attack="1" Defense="0" APLevel="0" CavAttackLevel="5" CavDefenceLevel="2" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 1" Blade="true" />
+  <WeaponClass Name="Cavalry Halberd Tier 2" Attack="2" Defense="0" APLevel="0" CavAttackLevel="4" CavDefenceLevel="3" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 2" Blade="true" />
+  <WeaponClass Name="Cavalry Halberd Tier 3" Attack="3" Defense="0" APLevel="1" CavAttackLevel="3" CavDefenceLevel="4" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 3" Blade="true" />
+  <WeaponClass Name="Cavalry Halberd Tier 4" Attack="4" Defense="0" APLevel="2" CavAttackLevel="2" CavDefenceLevel="3" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 4" Blade="true" />
+  <WeaponClass Name="Cavalry Halberd Tier 5" Attack="5" Defense="0" APLevel="3" CavAttackLevel="1" CavDefenceLevel="2" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 5" Blade="true" />
+  <WeaponClass Name="Cavalry Halberd Tier 6" Attack="6" Defense="0" APLevel="4" CavAttackLevel="0" CavDefenceLevel="1" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 6" Blade="true" />
+  <WeaponClass Name="Cavalry Halberd Tier 7" Attack="7" Defense="0" APLevel="5" CavAttackLevel="0" CavDefenceLevel="1" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 7" Blade="true" />
+  <!--Base -->
+  <WeaponClass Name="Foot Unarmed" Attack="0" Defense="0" TerrainCombatClass="Infantry" />
+  <WeaponClass Name="Short Sword Light" Attack="0" Defense="0" TerrainCombatClass="Infantry" />
+  <WeaponClass Name="Short Sword Medium" Attack="0" Defense="0" TerrainCombatClass="Infantry" />
+  <WeaponClass Name="Short Sword Heavy" Attack="0" Defense="0" TerrainCombatClass="Infantry" />
+  <WeaponClass Name="Short Sword Very Heavy" Attack="0" Defense="0" TerrainCombatClass="Infantry" />
+  <WeaponClass Name="Foot Short Sword" Attack="3" Defense="0" Metallic="1" TerrainCombatClass="Infantry" Blade="true" />
+  <WeaponClass Name="Foot Long Sword" Attack="4" Defense="2" Metallic="1" TerrainCombatClass="Infantry" Blade="true" />
+  <WeaponClass Name="Foot Long Sword LI" Attack="5" Defense="2" Metallic="1" TerrainCombatClass="Light Infantry" Blade="true" />
+  <WeaponClass Name="Foot Short Spear" Attack="3" Defense="2" TerrainCombatClass="Infantry" />
+  <WeaponClass Name="Foot Long Spear" Attack="3" Defense="4" CavAttackLevel="1" CavDefenceLevel="2" TerrainCombatClass="LongWeapons" />
+  <WeaponClass Name="Foot 2H Spear" Attack="2" Defense="6" CavAttackLevel="1" CavDefenceLevel="2" TerrainCombatClass="VeryLongWeapons" />
+  <WeaponClass Name="Foot Dagger Axe" Attack="5" Defense="1" APLevel="1" Metallic="0.5" TerrainCombatClass="Infantry" Blade="true" />
+  <WeaponClass Name="Foot Halberd" Attack="5" Defense="2" APLevel="1" CavDefenceLevel="1" Metallic="0.75" TerrainCombatClass="LongWeapons" Blade="true" />
+  <WeaponClass Name="Foot Zhan Ma Dao" Attack="3" Defense="1" CavAttackLevel="2" CavDefenceLevel="1" APLevel="1" Metallic="1" TerrainCombatClass="LongWeapons" Blade="true" />
+  <WeaponClass Name="Foot Mace" Attack="4" Defense="0" APLevel="1" Metallic="1" TerrainCombatClass="Infantry" />
+  <WeaponClass Name="2HLight Chariot Dagger Axe" Attack="8" Defense="1" APLevel="1" Metallic="0.5" TerrainCombatClass="Vehicle" />
+  <WeaponClass Name="2HChariot Dagger Axe" Attack="11" Defense="1" APLevel="1" Metallic="0.5" TerrainCombatClass="Vehicle" />
+  <WeaponClass Name="4HChariot Dagger Axe" Attack="18" Defense="1" APLevel="1" Metallic="0.5" TerrainCombatClass="Vehicle" />
+  <WeaponClass Name="4HChariot Triple Dagger Axe" Attack="21" Defense="1" APLevel="1" CavAttackLevel="1" Metallic="0.75" TerrainCombatClass="Vehicle" />
+  <WeaponClass Name="Cavalry Short Spear" Attack="5" Defense="2" TerrainCombatClass="Cavalry" />
+  <WeaponClass Name="Cavalry Halberd" Attack="8" Defense="3" APLevel="1" FootAttackLevel="1" Metallic="0.75" TerrainCombatClass="Cavalry" Blade="true" />
+  <WeaponClass Name="Cavalry Sword" Attack="3" Defense="0" Metallic="1" TerrainCombatClass="Cavalry" Blade="true" />
+  <WeaponClass Name="Cavalry Long Spear" Attack="6" Defense="1" CavAttackLevel="1" FootAttackLevel="1" TerrainCombatClass="Cavalry" />
+  <WeaponClass Name="Cavalry Mace" Attack="3" Defense="0" APLevel="1" Metallic="1" TerrainCombatClass="Cavalry" />
+  <WeaponClass Name="Ship" Attack="0" Defense="0" TerrainCombatClass="Naval" />
+
+  <!-- Combat Skill Classes -->
+  <CombatSkillClass Name="Civilian" Attack="1" Defense="0" />
+  <CombatSkillClass Name="Militia" Attack="2" Defense="1" />
+  <CombatSkillClass Name="Garrisson" Attack="3" Defense="3" />
+  <CombatSkillClass Name="Regular" Attack="5" Defense="3" />
+  <CombatSkillClass Name="Picked" Attack="4" Defense="4" />
+  <CombatSkillClass Name="Guard" Attack="3" Defense="4" />
+  <CombatSkillClass Name="Elite Guard" Attack="4" Defense="5" />
+  <CombatSkillClass Name="Noble" Attack="4" Defense="5" />
+  <CombatSkillClass Name="Bodyguard" Attack="3" Defense="7" />
+  <CombatSkillClass Name="Do Or Die" Attack="6" Defense="0" />
+  <CombatSkillClass Name="Tribal" Attack="3" Defense="1" />
+  <CombatSkillClass Name="Naval" Attack="0" Defense="0" />
+  <!-- For 3K-->
+  <CombatSkillClass Name="Minor Hero" Attack="10" Defense="12" />
+  <CombatSkillClass Name="Hero" Attack="14" Defense="16" />
+  <CombatSkillClass Name="Major Hero" Attack="18" Defense="20" />
+  <CombatSkillClass Name="Uber Hero" Attack="22" Defense="24" />
+
+
+  <!-- Armor Classes -->
+  <!--Not done yet(no units for this yet)-->
+  <ArmorClass Name="Convict Tier 1" Defense="1" Metallic="0.05" />
+  <ArmorClass Name="Convict Tier 2" Defense="2" Metallic="0.05" />
+  <ArmorClass Name="Convict Tier 3" Defense="3" Metallic="0.05" />
+  <ArmorClass Name="Convict Tier 4" Defense="4" Metallic="0.05" />
+  <ArmorClass Name="Convict Tier 5" Defense="5" Metallic="0.05" />
+  <ArmorClass Name="Convict Tier 6" Defense="6" Metallic="0.05" />
+  <ArmorClass Name="Convict Tier 7" Defense="6" Metallic="0.05" />
+  <ArmorClass Name="Tribal Tier 1" Defense="2" Metallic="0.125" />
+  <ArmorClass Name="Tribal Tier 2" Defense="3" Metallic="0.125" />
+  <ArmorClass Name="Tribal Tier 3" Defense="4" Metallic="0.125" />
+  <ArmorClass Name="Tribal Tier 4" Defense="5" Metallic="0.125" />
+  <ArmorClass Name="Tribal Tier 5" Defense="6" Metallic="0.125" />
+  <ArmorClass Name="Tribal Tier 6" Defense="7" Metallic="0.125" />
+  <ArmorClass Name="Tribal Tier 7" Defense="7" Metallic="0.125" />
+  <ArmorClass Name="Convict Cavalry Tier 1" Defense="2" HorseDefense="1" Metallic="0.05" />
+  <ArmorClass Name="Convict Cavalry Tier 2" Defense="3" HorseDefense="1" Metallic="0.05" />
+  <ArmorClass Name="Convict Cavalry Tier 3" Defense="4" HorseDefense="3" Metallic="0.05" />
+  <ArmorClass Name="Convict Cavalry Tier 4" Defense="5" HorseDefense="5" Metallic="0.05" />
+  <ArmorClass Name="Convict Cavalry Tier 5" Defense="6" HorseDefense="7" Metallic="0.05" />
+  <ArmorClass Name="Convict Cavalry Tier 6" Defense="7" HorseDefense="7" Metallic="0.05" />
+  <ArmorClass Name="Convict Cavalry Tier 7" Defense="7" HorseDefense="7" Metallic="0.05" />
+  <ArmorClass Name="Tribal Cavalry Tier 1" Defense="2" HorseDefense="1" Metallic="0.125" />
+  <ArmorClass Name="Tribal Cavalry Tier 2" Defense="3" HorseDefense="1" Metallic="0.125" />
+  <ArmorClass Name="Tribal Cavalry Tier 3" Defense="4" HorseDefense="3" Metallic="0.125" />
+  <ArmorClass Name="Tribal Cavalry Tier 4" Defense="5" HorseDefense="5" Metallic="0.125" />
+  <ArmorClass Name="Tribal Cavalry Tier 5" Defense="6" HorseDefense="7" Metallic="0.125" />
+  <ArmorClass Name="Tribal Cavalry Tier 6" Defense="7" HorseDefense="7" Metallic="0.125" />
+  <ArmorClass Name="Tribal Cavalry Tier 7" Defense="7" HorseDefense="7" Metallic="0.125" />
+  <!--Units-->
+  <ArmorClass Name="Militia Tier 1" Defense="2" Metallic="0.045" />
+  <ArmorClass Name="Militia Tier 2" Defense="3" Metallic="0.05" />
+  <ArmorClass Name="Militia Tier 3" Defense="4" Metallic="0.055" />
+  <ArmorClass Name="Militia Tier 4" Defense="5" Metallic="0.06" />
+  <ArmorClass Name="Militia Tier 5" Defense="6" Metallic="0.065" />
+  <ArmorClass Name="Militia Tier 6" Defense="7" Metallic="0.07" />
+  <ArmorClass Name="Militia Tier 7" Defense="7" Metallic="0.075" />
+  <ArmorClass Name="Nobles Tier 2" Defense="2" Metallic="0.37" />
+  <ArmorClass Name="Nobles Tier 1" Defense="3" Metallic="0.40" />
+  <ArmorClass Name="Nobles Tier 3" Defense="4" Metallic="0.43" />
+  <ArmorClass Name="Nobles Tier 4" Defense="5" Metallic="0.46" />
+  <ArmorClass Name="Nobles Tier 5" Defense="6" Metallic="0.49" />
+  <ArmorClass Name="Nobles Tier 6" Defense="7" Metallic="0.52" />
+  <ArmorClass Name="Nobles Tier 7" Defense="7" Metallic="0.55" />
+  <ArmorClass Name="Guards Tier 1" Defense="2" Metallic="0.17" />
+  <ArmorClass Name="Guards Tier 2" Defense="3" Metallic="0.2" />
+  <ArmorClass Name="Guards Tier 3" Defense="4" Metallic="0.23" />
+  <ArmorClass Name="Guards Tier 4" Defense="5" Metallic="0.26" />
+  <ArmorClass Name="Guards Tier 5" Defense="6" Metallic="0.29" />
+  <ArmorClass Name="Guards Tier 6" Defense="7" Metallic="0.32" />
+  <ArmorClass Name="Guards Tier 7" Defense="7" Metallic="0.35" />
+  <ArmorClass Name="Regulars Tier 1" Defense="3" Metallic="0.18" />
+  <ArmorClass Name="Regulars Tier 2" Defense="4" Metallic="0.2" />
+  <ArmorClass Name="Regulars Tier 3" Defense="5" Metallic="0.22" />
+  <ArmorClass Name="Regulars Tier 4" Defense="6" Metallic="0.24" />
+  <ArmorClass Name="Regulars Tier 5" Defense="7" Metallic="0.26" />
+  <ArmorClass Name="Regulars Tier 6" Defense="8" Metallic="0.28" />
+  <ArmorClass Name="Regulars Tier 7" Defense="8" Metallic="0.3" />
+  <ArmorClass Name="Garrisson Tier 1" Defense="2" Metallic="0.065" />
+  <ArmorClass Name="Garrisson Tier 2" Defense="3" Metallic="0.075" />
+  <ArmorClass Name="Garrisson Tier 3" Defense="4" Metallic="0.085" />
+  <ArmorClass Name="Garrisson Tier 4" Defense="5" Metallic="0.095" />
+  <ArmorClass Name="Garrisson Tier 5" Defense="6" Metallic="0.105" />
+  <ArmorClass Name="Garrisson Tier 6" Defense="7" Metallic="0.115" />
+  <ArmorClass Name="Garrisson Tier 7" Defense="7" Metallic="0.125" />
+  <ArmorClass Name="Militia Cavalry Tier 1" Defense="2" HorseDefense="1" Metallic="0.45" />
+  <ArmorClass Name="Militia Cavalry Tier 2" Defense="3" HorseDefense="1" Metallic="0.5" />
+  <ArmorClass Name="Militia Cavalry Tier 3" Defense="4" HorseDefense="3" Metallic="0.55" />
+  <ArmorClass Name="Militia Cavalry Tier 4" Defense="5" HorseDefense="5" Metallic="0.06" />
+  <ArmorClass Name="Militia Cavalry Tier 5" Defense="6" HorseDefense="7" Metallic="0.065" />
+  <ArmorClass Name="Militia Cavalry Tier 6" Defense="7" HorseDefense="7" Metallic="0.07" />
+  <ArmorClass Name="Militia Cavalry Tier 7" Defense="7" HorseDefense="7" Metallic="0.075" />
+  <ArmorClass Name="Nobles Cavalry Tier 1" Defense="2" HorseDefense="1" Metallic="0.37" />
+  <ArmorClass Name="Nobles Cavalry Tier 2" Defense="3" HorseDefense="1" Metallic="0.4" />
+  <ArmorClass Name="Nobles Cavalry Tier 3" Defense="4" HorseDefense="3" Metallic="0.43" />
+  <ArmorClass Name="Nobles Cavalry Tier 4" Defense="5" HorseDefense="5" Metallic="0.46" />
+  <ArmorClass Name="Nobles Cavalry Tier 5" Defense="6" HorseDefense="7" Metallic="0.49" />
+  <ArmorClass Name="Nobles Cavalry Tier 6" Defense="7" HorseDefense="7" Metallic="0.52" />
+  <ArmorClass Name="Nobles Cavalry Tier 7" Defense="7" HorseDefense="7" Metallic="0.55" />
+  <ArmorClass Name="Guards Cavalry Tier 1" Defense="2" HorseDefense="4" Metallic="0.17" />
+  <ArmorClass Name="Guards Cavalry Tier 2" Defense="3" HorseDefense="3" Metallic="0.2" />
+  <ArmorClass Name="Guards Cavalry Tier 3" Defense="4" HorseDefense="2" Metallic="0.23" />
+  <ArmorClass Name="Guards Cavalry Tier 4" Defense="5" HorseDefense="3" Metallic="0.26" />
+  <ArmorClass Name="Guards Cavalry Tier 5" Defense="6" HorseDefense="4" Metallic="0.29" />
+  <ArmorClass Name="Guards Cavalry Tier 6" Defense="7" HorseDefense="5" Metallic="0.32" />
+  <ArmorClass Name="Guards Cavalry Tier 7" Defense="7" HorseDefense="5" Metallic="0.35" />
+  <ArmorClass Name="Regulars Cavalry Tier 1" Defense="3" HorseDefense="3" Metallic="0.18" />
+  <ArmorClass Name="Regulars Cavalry Tier 2" Defense="4" HorseDefense="3" Metallic="0.2" />
+  <ArmorClass Name="Regulars Cavalry Tier 3" Defense="5" HorseDefense="2" Metallic="0.22" />
+  <ArmorClass Name="Regulars Cavalry Tier 4" Defense="3" HorseDefense="3" Metallic="0.24" />
+  <ArmorClass Name="Regulars Cavalry Tier 5" Defense="7" HorseDefense="4" Metallic="0.26" />
+  <ArmorClass Name="Regulars Cavalry Tier 6" Defense="8" HorseDefense="5" Metallic="0.28" />
+  <ArmorClass Name="Regulars Cavalry Tier 7" Defense="8" HorseDefense="5" Metallic="0.3" />
+  <ArmorClass Name="Garrisson Cavalry Tier 1" Defense="2" HorseDefense="4" Metallic="0.065" />
+  <ArmorClass Name="Garrisson Cavalry Tier 2" Defense="3" HorseDefense="3" Metallic="0.075" />
+  <ArmorClass Name="Garrisson Cavalry Tier 3" Defense="4" HorseDefense="2" Metallic="0.085" />
+  <ArmorClass Name="Garrisson Cavalry Tier 4" Defense="5" HorseDefense="3" Metallic="0.095" />
+  <ArmorClass Name="Garrisson Cavalry Tier 5" Defense="6" HorseDefense="4" Metallic="0.105" />
+  <ArmorClass Name="Garrisson Cavalry Tier 6" Defense="7" HorseDefense="5" Metallic="0.115" />
+  <ArmorClass Name="Garrisson Cavalry Tier 7" Defense="7" HorseDefense="5" Metallic="0.125" />
+  <!--Base-->
+  <ArmorClass Name="None" Defense="3" />
+  <ArmorClass Name="Light" Defense="5" />
+  <ArmorClass Name="Medium" Defense="7" Metallic="0.5" />
+  <ArmorClass Name="Heavy" Defense="10" Metallic="0.8" />
+  <ArmorClass Name="Light Chariot" Defense="11" HorseDefense="22" />
+  <ArmorClass Name="Light Chariot2" Defense="15" HorseDefense="22" />
+  <ArmorClass Name="Heavy Chariot" Defense="13" HorseDefense="25" />
+  <ArmorClass Name="Heavy Chariot2" Defense="18" HorseDefense="25" />
+  <ArmorClass Name="Heavy 4HChariot" Defense="17" HorseDefense="30" />
+  <ArmorClass Name="Heavy 4HChariot2" Defense="22" HorseDefense="30" />
+  <ArmorClass Name="Cavalry None" Defense="5" HorseDefense="8" />
+  <ArmorClass Name="Cavalry Light" Defense="7" HorseDefense="8" />
+  <ArmorClass Name="Cavalry Medium" Defense="11" HorseDefense="10" Metallic="0.3" />
+  <ArmorClass Name="Cavalry Medium HA" Defense="11" HorseDefense="14" Metallic="0.3" />
+  <ArmorClass Name="Cavalry Heavy" Defense="15" HorseDefense="10" Metallic="0.5" />
+  <ArmorClass Name="Cavalry Medium Heavy" Defense="15" HorseDefense="14" Metallic="0.5" />
+  <ArmorClass Name="Cavalry Extra Heavy" Defense="15" HorseDefense="18" Metallic="0.7" />
+  <ArmorClass Name="Cavalry Super Heavy" Defense="19" HorseDefense="24" Metallic="1" />
+  <ArmorClass Name="Cavalry Iron Pagoda" Defense="24" HorseDefense="28" Metallic="1" />
+  <ArmorClass Name="Light Engine" Defense="30" />
+  <ArmorClass Name="Heavy Engine" Defense="50" />
+  <!-- Naval Armour is the number of hit points that can be sustained-->
+  <ArmorClass Name="Small River Ship" Defense="150" />
+  <ArmorClass Name="Medium River Ship" Defense="350" />
+  <ArmorClass Name="Large River Ship" Defense="500" />
+  <ArmorClass Name="Small Sailing Ship" Defense="150" />
+  <ArmorClass Name="Medium Sailing Ship" Defense="350" />
+  <ArmorClass Name="Small Paddle Wheel Ship" Defense="225" />
+
+
+  <!-- Shield Classes-->
+  <ShieldClass Name="Convict Tier 1" Defense="0" Metallic="0.001" />
+  <ShieldClass Name="Convict Tier 2" Defense="0" Metallic="0.0025" />
+  <ShieldClass Name="Convict Tier 3" Defense="0" Metallic="0.005" />
+  <ShieldClass Name="Convict Tier 4" Defense="0" Metallic="0.0075" />
+  <ShieldClass Name="Convict Tier 5" Defense="0" Metallic="0.01" />
+  <ShieldClass Name="Convict Tier 6" Defense="0" Metallic="0.0125" />
+  <ShieldClass Name="Convict Tier 7" Defense="0" Metallic="0.015" />
+  <ShieldClass Name="Tribal Tier 1" Defense="1" Metallic="0.005" />
+  <ShieldClass Name="Tribal Tier 2" Defense="1" Metallic="0.0075" />
+  <ShieldClass Name="Tribal Tier 3" Defense="1" Metallic="0.01" />
+  <ShieldClass Name="Tribal Tier 4" Defense="1" Metallic="0.0125" />
+  <ShieldClass Name="Tribal Tier 5" Defense="1" Metallic="0.015" />
+  <ShieldClass Name="Tribal Tier 6" Defense="1" Metallic="0.0175" />
+  <ShieldClass Name="Tribal Tier 7" Defense="1" Metallic="0.02" />
+  <ShieldClass Name="Militia Tier 1" Defense="1" Metallic="0.01" />
+  <ShieldClass Name="Militia Tier 2" Defense="1" Metallic="0.0125" />
+  <ShieldClass Name="Militia Tier 3" Defense="1" Metallic="0.015" />
+  <ShieldClass Name="Militia Tier 4" Defense="1" Metallic="0.0175" />
+  <ShieldClass Name="Militia Tier 5" Defense="1" Metallic="0.02" />
+  <ShieldClass Name="Militia Tier 6" Defense="1" Metallic="0.0225" />
+  <ShieldClass Name="Militia Tier 7" Defense="1" Metallic="0.025" />
+  <ShieldClass Name="Nobles Tier 1" Defense="1" Metallic="0.09" />
+  <ShieldClass Name="Nobles Tier 2" Defense="1" Metallic="0.10" />
+  <ShieldClass Name="Nobles Tier 3" Defense="1" Metallic="0.11" />
+  <ShieldClass Name="Nobles Tier 4" Defense="1" Metallic="0.12" />
+  <ShieldClass Name="Nobles Tier 5" Defense="1" Metallic="0.13" />
+  <ShieldClass Name="Nobles Tier 6" Defense="1" Metallic="0.14" />
+  <ShieldClass Name="Nobles Tier 7" Defense="1" Metallic="0.15" />
+  <ShieldClass Name="Guards Tier 1" Defense="1" Metallic="0.025" />
+  <ShieldClass Name="Guards Tier 2" Defense="1" Metallic="0.035" />
+  <ShieldClass Name="Guards Tier 3" Defense="1" Metallic="0.045" />
+  <ShieldClass Name="Guards Tier 4" Defense="1" Metallic="0.065" />
+  <ShieldClass Name="Guards Tier 5" Defense="1" Metallic="0.075" />
+  <ShieldClass Name="Guards Tier 6" Defense="1" Metallic="0.085" />
+  <ShieldClass Name="Guards Tier 7" Defense="1" Metallic="0.095" />
+  <ShieldClass Name="Regulars Tier 1" Defense="1" Metallic="0.055" />
+  <ShieldClass Name="Regulars Tier 2" Defense="1" Metallic="0.06" />
+  <ShieldClass Name="Regulars Tier 3" Defense="1" Metallic="0.065" />
+  <ShieldClass Name="Regulars Tier 4" Defense="1" Metallic="0.07" />
+  <ShieldClass Name="Regulars Tier 5" Defense="1" Metallic="0.075" />
+  <ShieldClass Name="Regulars Tier 6" Defense="1" Metallic="0.08" />
+  <ShieldClass Name="Regulars Tier 7" Defense="1" Metallic="0.085" />
+  <ShieldClass Name="Garrisson Tier 1" Defense="1" Metallic="0.015" />
+  <ShieldClass Name="Garrisson Tier 2" Defense="1" Metallic="0.025" />
+  <ShieldClass Name="Garrisson Tier 3" Defense="1" Metallic="0.035" />
+  <ShieldClass Name="Garrisson Tier 4" Defense="1" Metallic="0.045" />
+  <ShieldClass Name="Garrisson Tier 5" Defense="1" Metallic="0.055" />
+  <ShieldClass Name="Garrisson Tier 6" Defense="1" Metallic="0.065" />
+  <ShieldClass Name="Garrisson Tier 7" Defense="1" Metallic="0.075" />
+  <!--Base -->
+  <ShieldClass Name="None" Defense="0" />
+  <ShieldClass Name="Small" Defense="2" />
+  <ShieldClass Name="Large" Defense="4" Metallic="0.3" />
+  <!-- Morale Classes -->
+  <MoraleClass Name="Civilian" Morale="3" />
+  <MoraleClass Name="Militia" Morale="3" />
+  <MoraleClass Name="Regular" Morale="5" />
+  <MoraleClass Name="Noble" Morale="4" />
+  <MoraleClass Name="Guard" Morale="7" />
+  <MoraleClass Name="Bodyguard" Morale="6" />
+  <MoraleClass Name="Do Or Die" Morale="8" />
+  <MoraleClass Name="Tribal" Morale="2" />
+  <!-- Recruitment Pools -->
+  <RecruitmentPool ID="Civilians" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0015" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Town Settlers" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00015" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="City Settlers" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0001" RegenTime="1" Max="3" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Huge City Settlers" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00005" RegenTime="1" Max="1" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Garrisson" SplitWithTribal="false" Population="Peasants" IsNoble="true" AmountPerPop="0.005" RegenTime="1" Max="2" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Convicts" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.1" RegenTime="1" Max="15" IsPeasant="true" DisbandedUnitReturn="false" />
+  <RecruitmentPool ID="Regulars Melee Short" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.005" RegenTime="1" Max="8" IsPeasant="true" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Nobles Melee Short" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0025" RegenTime="1" Max="7" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Militia Melee Short" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.005" RegenTime="1" Max="12" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Guards Melee Short" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0015" RegenTime="1" Max="24" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Regulars Melee Long" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0045" RegenTime="1" Max="8" IsPeasant="true" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Nobles Melee Long" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00225" RegenTime="1" Max="7" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Militia Melee Long" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0045" RegenTime="1" Max="12" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Guards Melee Long" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00125" RegenTime="1" Max="28" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Regulars Ranged" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.005" RegenTime="1" Max="8" IsPeasant="true" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Nobles Ranged" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0025" RegenTime="1" Max="7" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Militia Ranged" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.005" RegenTime="1" Max="12" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Guards Ranged" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.001275" RegenTime="1" Max="24" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Regulars Ranged Crossbow" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0035" RegenTime="1" Max="6" IsPeasant="true" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Nobles Ranged Crossbow" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0021" RegenTime="1" Max="5" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Militia Ranged Crossbow" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0035" RegenTime="1" Max="9" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Guards Ranged Crossbow" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.001225" RegenTime="1" Max="18" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Regulars Ranged Crossbow Alt" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0015" RegenTime="1" Max="4" IsPeasant="true" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Nobles Ranged Crossbow Alt" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.001" RegenTime="1" Max="3" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Militia Ranged Crossbow Alt" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0015" RegenTime="1" Max="6" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Guards Ranged Crossbow Alt" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0009" RegenTime="1" Max="12" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Regulars Cavalry" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0028" RegenTime="1" Max="5" IsPeasant="true" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Nobles Cavalry" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.002" RegenTime="1" Max="4" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Militia Cavalry" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.002" RegenTime="1" Max="7" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Guards Cavalry" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0015" RegenTime="1" Max="12" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Regulars Hybrid" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0025" RegenTime="1" Max="8" IsPeasant="true" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Nobles Hybrid" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0035" RegenTime="1" Max="7" IsNoble="false" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Militia Hybrid" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="12" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Guards Hybrid" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.001" RegenTime="1" Max="24" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Palace Troops" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.005" RegenTime="1" Max="3" DisbandedUnitReturn="true" />
+  <!--Nobles  -->
+  <!--90 pop = 1.008 per turn-->
+  <!--140 pop = 1.05 per turn-->
+  <!--<RecruitmentPool ID="Garrisson Melee Long" SplitWithTribal="false" Population="Peasants" IsNoble="true" AmountPerPop="0.005" RegenTime="1" Max="2" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Garrisson Ranged" SplitWithTribal="false" Population="Peasants" IsNoble="true" AmountPerPop="0.005" RegenTime="1" Max="4" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Garrisson Cavalry" SplitWithTribal="false" Population="Peasants" IsNoble="true" AmountPerPop="0.005" RegenTime="1" Max="3" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Garrisson Hybrid" SplitWithTribal="false" Population="Peasants" IsNoble="true" AmountPerPop="0.005" RegenTime="1" Max="2" DisbandedUnitReturn="true" />
+  -->
+  <!--Army & Other -->
+  <!--160 pop = 1.0008 per turn-->
+  <!--180 pop = 1.008 per turn-->
+  <!--Each type of city has its tier of units it can recruit, 
+    Huge/Metropolitan cities can recruit militia,
+    Trading cities can recruit Nobles 
+    Fortified Cities can recruit Regulars
+    All types of cities can recruit Guards, and they function as your "nobles" in terms of suppression.
+    Guards cost less population, are free to recruit, but have a massive upkeep, 
+    making them more suited for very short term defensive situations.
+    In terms of gear quality, nobles win. in terms of fighting strength/gear quality combined, regulars win. Militia have poor gear
+    Guards are in between nobles and regulars-->
+  <RecruitmentPool ID="Nobles" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Militia" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Regulars" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Guards" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="5" IsNoble="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Conscripts" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.03" RegenTime="1" Max="15" IsPeasant="true" DisbandedUnitReturn="true" />
+  <!--Convicts: 100 pop = 1.0 per turn-->
+  <RecruitmentPool ID="Nobles" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0625" RegenTime="1" Max="5" IsNoble="true" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Army Horsemen" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.02" RegenTime="1" Max="10" DisbandedUnitReturn="true" />
+  <RecruitmentPool ID="Tribesmen" Population="Tribesmen" Min="1" AmountPerPop="0.0588235294" RegenTime="1" IsPeasant="true" Max="5" IsTribal="true" DisbandedUnitReturn="true" />
+  <!--225 pop = 1.00125 per turn-->
+  <RecruitmentPool ID="Light Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0001" RegenTime="1" Max="3" />
+  <RecruitmentPool ID="Medium Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.000075" RegenTime="1" Max="3" />
+  <RecruitmentPool ID="Heavy Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00005" RegenTime="1" Max="3" />
+  <RecruitmentPool ID="Heaviest Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00005" RegenTime="1" Max="3" />
+  <!--140 pop = 1.05 per turn-->
+  <RecruitmentPool ID="Naval" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0075" RegenTime="1" Max="16" Naval="true" DisbandedUnitReturn="true" />
+  <!--140 pop = 1.05 per turn-->
+  <RecruitmentPool ID="Mercenary" RegenTime="5" ReplenishAnywhere="true" />
+  <RecruitmentPool ID="TestAndDebug" RegenTime="1" />
+  <GeneralRules>
+    <IProperty Name="NumEras" Value="3" /> <!-- Not sure you can change this -->
+
+    <IProperty Name="LeaderMinAgeToDie" Value="40" />
+    <IProperty Name="LeaderAvergeDeathAge" Value="60" />
+    <FProperty Name="HeirGenerationChance" Value="0.25" />
+    <FProperty Name="LeaderGenerationChance" Value="0.3" />
+    <FProperty Name="CourtCharacterDeathChancePerYear" Value="0.002" />
+    <FProperty Name="ChildDeathChancePerYear" Value="0.015" />
+    <IProperty Name="AgeOfMajorityInYears" Value="16" />
+    <IProperty Name="MaxChildbearingAgeYears" Value="42" />
+    <FProperty Name="BabyChancePerYear" Value="0.5" />
+    <IProperty Name="MaxGeneralCourtCharacters" Value="20" />
+
+    <!-- Chances of various age related attribute changes -->
+    <FProperty Name="LeaderYouthfulEnergyChance" Value="0.1" />
+    <FProperty Name="LeaderMatureWisdomChance" Value="0.003" />
+    <FProperty Name="LeaderNoLongerYoungChance" Value="0.003" />
+    <FProperty Name="LeaderOldAgeDeclineChance" Value="0.005" />
+
+    <!--Leader wound recovery and stat changes -->
+    <FProperty Name="LeaderDeadRecoveryChance" Value="0.85" />
+    <FProperty Name="LeaderWoundEnergyLossChance" Value="0.25" />
+    <FProperty Name="LeaderWoundEnergyGainChance" Value="0.1" />
+    <FProperty Name="LeaderWoundVirtueGainChance" Value="0.2" />
+
+    <!-- A battle with this many units per side count for authority -->
+    <IProperty Name="MinUnitsPerSideToCountForAuthority" Value="25" />
+    <!-- A battle also counts for authority if both sides have this proportion of total units -->
+    <FProperty Name="MinProportionPerSideToCountForAuthority" Value="0.15" />
+
+    <!-- Succesion authority penalties -->
+    <IProperty Name="HeirSuccessionAuthorityPenalty" Value="-1" />
+    <IProperty Name="GeneralSuccessionAuthorityPenalty" Value="-3" />
+    <IProperty Name="NewCharacterSuccessionAuthorityPenalty" Value="-6" />
+
+    <IProperty Name="ConcubineCost" Value="150" />
+    <IProperty Name="ConcubineUpkeep" Value="50" />
+    <IProperty Name="MarriageCost" Value="200" />
+    <IProperty Name="MarriageUpkeep" Value="0" />
+    <IProperty Name="PrisonerUpkeepCost" Value="0" />
+    <IProperty Name="PrisonerRecruitmentCost" Value="250" />
+
+    <!-- Victory requirements -->
+    <IProperty Name="ConquestVictoryPercentRequired" Value="75" />
+    <IProperty Name="SOHVictoryPercentRequired" Value="85" />
+    <IProperty Name="CultureVPSRequired" Value="75" />
+    <FProperty Name="CultureVictoryMargin" Value="1.75" />
+
+    <!-- Authority Modifiers -->
+    <IProperty Name="VassalAuthorityPenalty" Value="5" />
+    <IProperty Name="RecognizeOtherEmperorPenalty" Value="-25" />
+    <IProperty Name="AuthorityBonus1Recognizer" Value="10" />
+    <IProperty Name="AuthorityBonus3Recognizers" Value="30" />
+    <IProperty Name="AuthorityBonus5Recognizers" Value="50" />
+    <IProperty Name="AuthorityBonus8Recognizers" Value="80" />
+
+    <!-- Diplomacy Rules -->
+    <IProperty Name="AgreementTermLong" Value="40" />
+    <IProperty Name="AgreementTermMedium" Value="20" />
+    <IProperty Name="AgreementTermShort" Value="10" />
+    <IProperty Name="OffensiveAllianceTurns" Value="15" />
+    <IProperty Name="PaymentTermShort" Value="15" />
+    <IProperty Name="PaymentTermMedium" Value="30" />
+
+    <!-- Visibility -->
+    <IProperty Name="StackTotalVisionDistance" Value="20" />
+    <IProperty Name="StackPartialVisionDistance" Value="15" />
+    <IProperty Name="SettlementTotalVisionDistance" Value="25" />
+    <IProperty Name="SettlementPartialVisionDistance" Value="25" />
+    <IProperty Name="AIScoutingRangeBonus" Value="0" />
+    <!-- Faction Control -->
+    <IProperty Name="TurnsToUnlockFaction" Value="1" />
+    <IProperty Name="TurnsToUnlockCampaign" Value="1" />
+
+    <!-- Troop replenishment (proportion of troops that are replenished when in friendly territory) -->
+    <FProperty Name="UnitReplenishmentRate" Value="0.1" />
+
+    <!-- Corruption -->
+    <FProperty Name="DefaultCorruptionIncrease" Value="0.0001" />
+  </GeneralRules>
+
+  <SettlementRules>
+    <IProperty Name="MaxInternalBuildingLabour" Value="250" />
+    <IProperty Name="MaxExternalBuildingLabour" Value="250" />
+    <IProperty Name="MaxFarmImprovementLabour" Value="250" />
+    <IProperty Name="MaxRoadLabour" Value="250" />
+    <IProperty Name="MaxClearanceLabour" Value="250" />
+    <IProperty Name="RoadConstructionLabour" Value="250" />
+    <IProperty Name="MaxConstructionDistance" Value="15" />
+    <IProperty Name="CityFood" Value="25" />
+    <FProperty Name="FoodPerFlock" Value="1.5" />
+    <FProperty Name="LaborNeededPerGrazedHex" Value="1" />
+    <!-- Increase if all flocks grazed -->
+    <FProperty Name="FlockGrowthRate" Value="0.45" />
+    <!-- Decline if not all flocks grazed -->
+    <FProperty Name="FLockDeclineRate" Value="0.25" />
+
+    <FProperty Name="PopulationTaxMultiplier" Value="2" />
+
+    <FProperty Name="FoodGrowthMultiplier" Value="2.01" />
+    <FProperty Name="MaxFoodGrowth" Value="0.25" />
+    <FProperty Name="StarvationGrowthModifier" Value="0.5" />
+
+    <FProperty Name="TradeMultiplier" Value="0.0016" />
+    <FProperty Name="InternalTradeMultiplier" Value="0.0016" />
+
+    <!-- Trade in some items to a player with a lower culture is multiplied by this, and divided by it if to a higher culture player -->
+    <FProperty Name="CultureTradeModifier" Value="1.5" />
+    <!-- Re-exports" Values are modified by this-->
+    <FProperty Name="OnwardTradeModifier" Value="0.5" />
+    <FProperty Name="RoadTradeModifier" Value="1.2" />
+    <!-- Unrest-->
+    <!-- Nobles-->
+    <FProperty Name="NobleUnrestRandomChange" Value="0" />
+    <FProperty Name="NobleUnrestBias" Value="-0.07" />
+    <IProperty Name="NobleUnrestInitialMin" Value="15" />
+    <IProperty Name="NobleUnrestInitialMax" Value="40" />
+    <FProperty Name="NobleUnrestArmyFactor" Value="2.5" />
+    <FProperty Name="NobleUnrestLeaderFactor" Value="10" />
+    <FProperty Name="NobleUnrestAuthorityFactor" Value="3" />
+    <FProperty Name="NobleUnrestMilitaryServiceFactor" Value="2" />
+    <FProperty Name="NobleUnrestCultureFactor" Value="2" />
+    <FProperty Name="NobleUnrestLuxuryFactor" Value="7" />
+    <FProperty Name="NobleUnrestInsufficientAuthorityFactor" Value="10" />
+    <IProperty Name="MinNobleUnrestToBlockRecruitment" Value="80" />
+    <IProperty Name="MinNobleUnrestToBlockTaxes" Value="80" />
+    <IProperty Name="MinNobleUnrestForNewRevolt" Value="90" />
+    <IProperty Name="MinNobleUnrestToJoinRevolt" Value="60" />
+    <FProperty Name="MinNobleProportionToRebel" Value="0.33" />
+    <FProperty Name="JoinNobleRebellionChance" Value="0.5" />
+    <IProperty Name="MinNobleUnrestWithEffect" Value="60" />
+    <!--Peasants -->
+    <FProperty Name="PeasantUnrestRandomChange" Value="0" />
+    <FProperty Name="PeasantUnrestBias" Value="0.08" />
+    <IProperty Name="PeasantUnrestInitialMin" Value="5" />
+    <IProperty Name="PeasantUnrestInitialMax" Value="30" />
+    <FProperty Name="PeasantUnrestArmyFactor" Value="5" />
+    <FProperty Name="PeasantUnrestLeaderFactor" Value="10" />
+    <FProperty Name="PeasantUnrestAuthorityFactor" Value="2" />
+    <FProperty Name="PeasantUnrestMilitaryServiceFactor" Value="1" />
+    <FProperty Name="PeasantUnrestCultureFactor" Value="1" />
+    <FProperty Name="PeasantUnrestFoodShortageFactor" Value="150" />
+    <FProperty Name="PeasantUnrestFoodSurplusFactor" Value="50" />
+    <IProperty Name="PeasantUnrestMaxFoodSurplusFactor" Value="20" />
+    <IProperty Name="PeasantUnrestMaxFoodShortageFactor" Value="40" />
+    <IProperty Name="MinPeasantUnrestToBlockRecruitment" Value="80" />
+    <IProperty Name="MinPeaantUnrestToBlockTaxes" Value="70" />
+    <IProperty Name="MinPeasantUnrestForNewRevolt" Value="90" />
+    <IProperty Name="MinPeasantUnrestForNewBandits" Value="60" />
+    <IProperty Name="MinPeasantUnrestToJoinRevolt" Value="60" />
+    <FProperty Name="MinPeasantProportionToRebel" Value="0.5" />
+    <FProperty Name="JoinPeasantRebellionChance" Value="0.33" />
+    <IProperty Name="MinPeasantUnrestWithEffect" Value="60" />
+    <!--Other -->
+    <FProperty Name="DistanceToCapitalUnrestFactor" Value="5" />
+    <FProperty Name="NomadDistanceToCapitalUnrestFactor" Value="12" />
+    <FProperty Name="DistanceToCapitalUAuthorityFactor" Value="20" />
+    <FProperty Name="UnrestPreviousGrievencesDecay" Value="0.01" />
+    <IProperty Name="UnrestFoundationBonus" Value="20" />
+    <IProperty Name="UnrestCaptureBonus" Value="20" />
+    <!-- When settlement is this full overcrowding unrest kicks in -->
+    <FProperty Name="UnrestOvercrowdingThreshold" Value="0.6" />
+    <!-- Factor when a settlement is full -->
+    <FProperty Name="UnrestOvercrowdingFactor" Value="50" />
+    <!-- new bandit armies will be a maximum of this number of units big -->
+    <IProperty Name="MaxBanditUnitsToGenerate" Value="3" />
+    <!-- no settlement ever has more than this chance to generate bandits -->
+    <FProperty Name="MaxBanditChance" Value="0.20" />
+    <!-- Armies within this range of a rebel may join them -->
+    <IProperty Name="JoinRebelRange" Value="4" />
+
+    <!-- Sacking and Destruction -->
+    <FProperty Name="MenNeededToSackBuilding" Value="200" />
+    <FProperty Name="MenNeededToSackPerPopulation" Value="1.5" />
+    <IProperty Name="SackLootPerPopulation" Value="50" />
+    <FProperty Name="PopKilledPerSoldierSacking" Value="0.03" />
+    <FProperty Name="MaxProportionKilledInSack" Value="0.25" />
+    <FProperty Name="ValuableBuildingSackDamageChance" Value="0.4" />
+    <FProperty Name="WorthlessBuildingSackDamageChance" Value="0.25" />
+
+    <FProperty Name="MenNeededToDestroyBuilding" Value="250" />
+    <FProperty Name="MenNeededToDestroyPerPopulation" Value="3" />
+
+    <IProperty Name="TurnsTurmoilFromSacking" Value="5" />
+    <IProperty Name="TurnsTurmoilFromDestruction" Value="10" />
+    <IProperty Name="TurnsTurmoilFromOccupation" Value="2" />
+
+    <IProperty Name="MaxPopForDisbandedSettlement" Value="200" />
+    <IProperty Name="DefaultPopPerSettlerWhenDisbanding" Value="20" />
+    <IProperty Name="DefaultNumSettlersFromDisbanding" Value="1" />
+
+    <!-- Pillaging -->
+    <IProperty Name="PillageFarmLootAmount" Value="175" />
+
+    <!-- Damage -->
+    <FProperty Name="RoofTileFlameDamageModifier" Value="1.5" />
+
+    <!-- Visibility -->
+    <IProperty Name="SettlementVisionRadius" Value="22" />
+  </SettlementRules>
+
+  <CombatRules>
+    <FProperty Name="MeleeCombatRate" Value="0.25" />
+    <FProperty Name="MissileCombatRate" Value="0.17" />
+    <FProperty Name="MissileDamageShipRate" Value="0.5" />
+
+    <!-- Weapon modifiers -->
+    <FProperty Name="APLevel1Modifier" Value="0.5" />
+    <FProperty Name="APLevel2Modifier" Value="0.25" />
+    <FProperty Name="PoorVsArmorModifier" Value="2" />
+    <FProperty Name="CavAttackLevel1Modifier" Value="2" />
+    <FProperty Name="CavAttackLevel2Modifier" Value="3" />
+    <FProperty Name="FootAttackLevel1Modifier" Value="1.5" />
+    <FProperty Name="FootAttackLevel2Modifier" Value="2" />
+    <FProperty Name="CavDefenseLevel1Modifier" Value="2" />
+    <FProperty Name="CavDefenseLevel2Modifier" Value="4" />
+
+    <IProperty Name="BaseArmourLevel" Value="0" />
+
+    <!-- number of kills in battle needed to get an extra experience point -->
+    <IProperty Name="KillsPerXP" Value="4" />
+    <!-- Experience points needed to get level 1 -->
+    <IProperty Name="XPForLevel1" Value="8" />
+    <IProperty Name="XPForLevel2" Value="16" />
+    <IProperty Name="XPForLevel3" Value="35" />
+    <IProperty Name="XPForLevel4" Value="55" />
+    <IProperty Name="XPForLevel5" Value="75" />
+
+    <!-- Combat modifiers -->
+    <FProperty Name="HeightAdvantageModifier" Value="0.4" />
+    <FProperty Name="HeightDisadvantageModifier" Value="0.4" />
+
+    <FProperty Name="CavalryVsInfantryModifier" Value="2" />
+    <FProperty Name="CavalryVsChariotModifier" Value="1.5" />
+    <FProperty Name="ChariotVsInfantryModifier" Value="1.75" />
+
+    <FProperty Name="FootRearAttackModifier" Value="2.5" />
+    <FProperty Name="FootFlankAttackModifer" Value="2.5" />
+    <FProperty Name="CavalryRearAttackModifier" Value="1.5" />
+    <FProperty Name="CavalryFlankAttackModifer" Value="1" />
+
+    <!-- applied both ways so effective amount is double this per era difference -->
+    <FProperty Name="EraCombatModifier" Value="0.05" />
+
+    <!-- as percentage -->
+    <FProperty Name="MaxKnockBackChance" Value="75" />
+    <!-- Multiplies kill chance to get knockback chance -->
+    <FProperty Name="KnockBackChance" Value="3" />
+
+    <!-- Applied to normal chance at cavalry charge impact -->
+    <FProperty Name="CavalryChargeImpactModifier" Value="1" />
+    <!-- as percentage -->
+    <FProperty Name="MaxCavalryImpactKnockBackChance" Value="90" />
+    <!-- Multiplies kill chance to get knockback chance -->
+    <FProperty Name="CavalryImpactKnockBackChance" Value="2" />
+
+    <!-- Shooting Modifiers -->
+    <FProperty Name="MovingTargetShootingModifier" Value="1.3" />
+    <FProperty Name="FriendlyFireModifier" Value="0.25" />
+
+    <!-- Battle time -->
+    <!-- Max battle length in seconds -->
+    <FProperty Name="BattleMaxTime" Value="160" />
+    <!-- Battle ends if no kill within this many seconds -->
+    <FProperty Name="BattleNoKillTimeout" Value="30" />
+    <!-- However battle always lasts this long after the last stack joins -->
+    <FProperty Name="BattleMinTimeAfterJoiner" Value="30" />
+
+    <!-- Sieges -->
+    <!-- Number of men from a unit needed to garrison a tower -->
+    <IProperty Name="MinShootersPerTower" Value="15" />
+    <!-- Seconds to reload for an ungarrisoned settlement tower -->
+    <FProperty Name="EmptyTowerReloadTime" Value="3" />
+
+    <!-- Evading behaviour -->
+    <IProperty Name="DistanceToTriggerEvade" Value="30" />
+    <IProperty Name="MinEvadeDistance" Value="30" />
+
+    <!-- Leader modifiers -->
+    <FProperty Name="LeaderQiAttackModifier" Value="0.1" />
+    <IProperty Name="LeaderVirtueMoraleFactor" Value="5" />
+
+    <!-- Fatigue -->
+    <IProperty Name="MeleeAtackFatigue" Value="8" />
+    <IProperty Name="FireMissileFatigue" Value="2" />
+    <IProperty Name="FireArtilleryMissileFatigue" Value="4" />
+    <IProperty Name="DefendMeleeFatigue" Value="6" />
+    <IProperty Name="HitByMissileFatigue" Value="2" />
+    <IProperty Name="QuickBattleFatigue" Value="30" />
+    <FProperty Name="FatigueToEfficenyFactor" Value="0.005" />
+    <FProperty Name="BattleLoserFatigueMultiplier" Value="1.5" />
+
+    <!-- If didn't fight or move and in friendly territory -->
+    <FProperty Name="FriendlyEfficiencyRecoveryPerTurn" Value="0.3" />
+    <!-- If didn't fight or move -->
+    <FProperty Name="HostileEfficiencyRecoveryPerTurn" Value="0.15" />
+
+  </CombatRules>
+
+  <MoraleRules>
+    <!-- When units strength * efficiency get below this, they disolve (if strength < 50%) -->
+    <FProperty Name="PlayerUnitDissolveThreshold" Value="0.185" />
+    <FProperty Name="BanditRebelUnitDissolveThreshold" Value="0.45" />
+  </MoraleRules>
+
+
+  <!-- base stuff -->
+
+</Rules>

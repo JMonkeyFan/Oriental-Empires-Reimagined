@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="Requirement.xsd"/>
+  <xs:include schemaLocation="OECommon.xsd"/>
+
+  <!-- Enumeration of areas -->
+  <xs:simpleType name="TechArea">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Thought"/>
+      <xs:enumeration value="Knowledge"/>
+      <xs:enumeration value="Craft"/>
+      <xs:enumeration value="Power"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="LevelData">
+    <xs:attribute name="Level" type="xs:nonNegativeInteger" use="required"/>
+    <xs:attribute name="Turns" type="xs:nonNegativeInteger" use="required"/>
+    <xs:attribute name="Era" type="xs:nonNegativeInteger" use="optional"/>
+  </xs:complexType>
+  
+  <!-- Entry for an individual item-->
+  <xs:complexType name="TechnologyItem">
+    <xs:sequence>
+      <xs:element name ="Description" minOccurs="0"></xs:element>
+      <xs:element name="Data">
+        <xs:complexType>
+          <xs:attribute name="Tech" type ="oe:TechArea" use ="required"/>
+          <xs:attribute name="Area" type ="oe:TechEdictArea" use ="required"/>
+          <xs:attribute name="Level" type="xs:nonNegativeInteger" use ="required"/>
+          <xs:attribute name="Difficulty" type="xs:float" use ="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name ="StaticRequirements" type ="oe:RequirementList" minOccurs ="0"/>
+      <xs:element name ="Requirements" type ="oe:RequirementList" minOccurs ="0"/>
+      <xs:element name ="Prerequisite" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name ="Item" type="xs:string" use ="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Capability" minOccurs ="0" maxOccurs ="unbounded">
+        <xs:complexType>
+          <xs:attribute name ="Name" type="xs:string" use="required"/>
+          <xs:attribute name ="Level" type="xs:int" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CustomGameTech" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="FactionTag" type="xs:string" use="optional"/>
+          <xs:attribute name="Condition" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name ="ID" type ="xs:string" use="required"/>
+    <xs:attribute name ="TranslationTag" type ="xs:string" use="optional"/>
+    <xs:attribute name="Icon" type ="xs:string" use ="required"/>
+  </xs:complexType>
+
+ <!-- Modding Elements //////////////////////////////////////////////// -->
+
+  <xs:complexType name="DropTechType">
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+  <!--///////////////////////////////////////////////////////////////// -->
+
+  <xs:element name ="TechnologyItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LevelData" type="oe:LevelData" maxOccurs="unbounded"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="Item" type ="oe:TechnologyItem" maxOccurs ="unbounded"/>
+          <xs:element name="Drop" type="oe:DropTechType"/>
+          <xs:element name="Replace" type="oe:TechnologyItem"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,66 @@
+{MR Copper}
+{Copper}
+{MR Copper Desc}
+{A wealthy vein of Copper was discovered here, providing a boost to Copper production for any settlement which controls it of 160%.}
+{MR Tin And Copper Deposit}
+{Tin And Copper Deposit}
+{MR Tin And Copper Deposit Desc}
+{A wealthy vein of Tin and Copper was discovered here, providing a boost to Bronze production for any settlement which controls it of 120%.}
+{MR Iron Deposit}
+{Iron Deposit}
+{MR Iron Deposit Desc}
+{A wealthy vein of Iron was discovered here, providing a boost to Iron production for any settlement which controls it of 90%.}
+{MR Rhinoceros}
+{Rhinoceros}
+{MR Rhinoceros Desc}
+{In ancient times rhinoceros and other large animals were common on the plains of China. Rhinoceros hide leather is very tough and can be used for armor, or as protective coverings for ships or siege engine. A settlement that controls or has adjacent territory to his resource, will receive an income of {0} each turn.}
+{MR Wild Horses}
+{Wild Horses}
+{MR Wild Horses Desc}
+{The herds of wild horses here mean that there is no problem obtaining steeds for mounted warriors. A settlement that controls (or has adjacent territory) to this resource can trade them for additional income. }
+{MR Wild Game}
+{Wild Game}
+{MR Wild Game Desc}
+{This area has a plethora of animals that can be hunted for food. This will increase by {0} the food production of any settlement that controls it, or has adjacent territory.}
+{MR Fish}
+{Fish}
+{MR Fish Desc}
+{The rich shoals of fish here will increase the by {0} the food supply of any settlement which controls it, or has adjacent territory.}
+{MR Copper}
+{Copper}
+{MR Copper Desc}
+{Copper is a valuable material used for making a wide range of utensils, and the main ingredient of bronze used for armor and weapons. Constructing a mine here will produce an income, and also produce copper for trade.}
+{MR Gold}
+{Gold}
+{MR Gold Desc}
+{Gold was the first metal worked by mankind. In China as elsewhere, it's natural beauty and malleability make it valuable for ornamental objects, and its rarity and durability make it a natural form of currency. A mine constructed here will provide a good income.}
+{MR Jade}
+{Jade}
+{MR Jade Desc}
+{This hard translucent rock was more highly prized than gold in ancient China. It was known as the stone of Heaven, and thought to posses many virtues. Emperors were buried in jade suits sown with gold thread. This deposit is highly valuable, especially if the jade can be traded. A mine will need to be constructed here to make use of this resource.}
+{MR Trade Route}
+{Trade Route}
+{MR Trade Route Desc}
+{This is the departure point for a trade route to areas beyond the map. It will boost the trade income of any settlement that controls it.}
+{MR Sea Trade Route}
+{Trade Route}
+{MR Sea Trade Route Desc}
+{This a departure point for a trade route leading to areas beyond the map. It will boost the trade income of any settlement that controls it. However, it will also require sufficient technology to be able trade long distances across the sea.}
+{MR Mulberry}
+{Mulberry}
+{MR Mulberry Desc}
+{The soil here is particularly suitable for cultivation of the Mulberry Bush. This resource will increase by {0}% the value of any silk produced at a settlement which controls it, or has adjacent territory.}
+{MR Kaolinite}
+{Kaolinite}
+{MR Kaolinite Desc}
+{This clay is excellent for the production of high quality porcelain and other pottery. This resource will increase by {0}% the value of any ceramics produced at a settlement which controls it, or has adjacent territory.}
+{TI Clear Grassland}
+{Clear Grassland}
+{TI Clear Fertile Plain}
+{Clear Fertile Plain}
+{TI Clear Gentle Hills}
+{Clear Gentle Hills}
+{TI Clear Steep Hills}
+{Clear Steep Hills}
+{TI Clear Dry Grassland}
+{Clear Dry Grassland}
