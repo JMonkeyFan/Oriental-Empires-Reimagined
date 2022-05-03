@@ -90,7 +90,7 @@
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Grassy Farmland" Labor="35" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="37" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="City" Condition="true" Exact="true" />
@@ -105,7 +105,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Grassy Farmland" Labor="55" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="58" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <RequireEither>
@@ -120,13 +120,13 @@
         <Building ID="Huge City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Grassy Farmland" Labor="90" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="92" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Metropolitan City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Grassy Farmland" Labor="110" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="125" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
@@ -141,19 +141,19 @@
     <AmbientCreatureSet Name="Generic Fertile" />
     <MapColor R="0" G="255" B="0" />
     <Data Water="false" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" />
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="27" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="25" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="40" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="37" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="50" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="45" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <RequireEither>
@@ -162,7 +162,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="66" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="58" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <RequireEither>
@@ -171,19 +171,19 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="83" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="75" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Huge City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="106" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="92" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Metropolitan City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="178" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="125" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
@@ -203,7 +203,7 @@
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="35" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="37" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="City" Condition="true" Exact="true" />
@@ -218,7 +218,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="55" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="58" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
       <Requirements>
         <Tech Item="Agriculture" />
         <RequireEither>
@@ -233,13 +233,13 @@
         <Building ID="Huge City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="90" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="92" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Metropolitan City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="110" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="125" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
@@ -254,19 +254,19 @@
     <ExternalPlacementMap Name="ExtPlacement_Generic_HM_SteepHills" />
     <MapColor R="160" G="128" B="0" />
     <Data Water="false" />
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="27" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="25" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="40" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="37" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="50" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="45" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <RequireEither>
@@ -275,7 +275,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="66" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="58" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Agriculture" />
         <RequireEither>
@@ -284,19 +284,19 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="83" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="75" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Huge City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="106" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="92" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Metropolitan City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="178" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="125" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Large Metropolitan City" Condition="true" Exact="true" />
@@ -542,7 +542,7 @@
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="35" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="37" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -561,7 +561,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="55" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="58" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -580,7 +580,7 @@
         <Building ID="Huge City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="90" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="92" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -588,7 +588,7 @@
         <Building ID="Metropolitan City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="110" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="125" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -632,7 +632,7 @@
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="35" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="37" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <Terrain ID="Grassy Farmland" />
@@ -649,7 +649,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="55" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="58" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -667,14 +667,14 @@
         <Building ID="Huge City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="90" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="92" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <Terrain ID="Grassy Farmland" />
         <Building ID="Metropolitan City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="110" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="125" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <Terrain ID="Grassy Farmland" />

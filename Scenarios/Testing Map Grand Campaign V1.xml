@@ -1,2302 +1,2671 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Scenario xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Scenario.xsd">
+<Scenario xmlns="OrientalEmpires"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation ="OrientalEmpires Scenario.xsd">
 
   <Description>
-  This is meant for the purpose of testing my mod, with the mongols having the best position.
+This is meant for the purpose of testing my mod, with the mongols having the best position.
   It's not meant to be fair, its meant to test stuff.
   </Description>
-  <Game ID="Testing Map GC V1" ShowSetupScreen="true" ShowFactionStats="false" Tutorial="false"></Game>
-  <Rules CanWinByDomination="true" CanWinByCulturalVictory="true" CanWinBySOH="true" CanWinByPoints="true" TurnLimit="999999" ResearchRate="1" WeeksPerTurn="0" MaxTurnForRandomBandits="0" UseRoyalCourt="true" />
-  <Map FileName="996X256.bytes" RandomResources="true" FactionSelectionImage="" />
-  <CustomFaction ID="Shang">
-    <BasedOn Faction="Shang" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Northern China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="160" YPos="143" FactionImage="OE_FE_FactionElement_Shang_01" />
-    <FactionRules />
-    <Capability Name="Boost Power" Level="10" />
-    <Capability Name="Boost Military" Level="5" />
-    <Capability Name="Naval Skill" Level="1" />
-    <Capability Name="Accepts Peasant Rebels" Level="1" />
-    <Capability Name="Melee Attack" Level="10" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Farmers" />
-    <Force X="353" Y="31" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Shang Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <Game ID = "Testing Map GC V1" ShowSetupScreen = "true" ShowFactionStats = "false" Tutorial = "false">
+  </Game>
+  <Rules CanWinByDomination = "true" CanWinByCulturalVictory = "true" CanWinBySOH = "true" CanWinByPoints = "true" TurnLimit = "999999" ResearchRate = "1" WeeksPerTurn = "0" MaxTurnForRandomBandits = "0" UseRoyalCourt = "true"/>
+  <Map FileName = "996X256.bytes" RandomResources = "true" FactionSelectionImage = ""/>
+  <CustomFaction ID = "Shang">
+    <BasedOn Faction = "Shang" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Northern China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "160" YPos = "143" FactionImage = "OE_FE_FactionElement_Shang_01"/>
+    <FactionRules/>
+    <Capability Name = "Boost Power" Level = "10"/>
+    <Capability Name = "Boost Military" Level = "5"/>
+    <Capability Name = "Naval Skill" Level = "1"/>
+    <Capability Name = "Accepts Peasant Rebels" Level = "1"/>
+    <Capability Name = "Melee Attack" Level = "10"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Farmers"/>
+    <Force X = "353" Y = "31" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Shang Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="328" Y="37" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "328" Y = "37" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="308" Y="45" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "308" Y = "45" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Yin" X="353" Y="31" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="353" Y="34" />
+    <Settlement Name = "Yin" X = "353" Y = "31" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "353" Y = "34"/>
       <FarmImprovements>
-        <Pos X="352" Y="33" />
-        <Pos X="352" Y="34" />
-        <Pos X="354" Y="34" />
-        <Pos X="355" Y="34" />
-        <Pos X="355" Y="33" />
-        <Pos X="356" Y="32" />
-        <Pos X="356" Y="31" />
-        <Pos X="356" Y="30" />
-        <Pos X="355" Y="31" />
-        <Pos X="355" Y="32" />
-        <Pos X="354" Y="33" />
-        <Pos X="353" Y="33" />
-        <Pos X="354" Y="32" />
-        <Pos X="354" Y="31" />
-        <Pos X="355" Y="30" />
-        <Pos X="354" Y="29" />
-        <Pos X="354" Y="30" />
-        <Pos X="353" Y="30" />
-        <Pos X="352" Y="31" />
-        <Pos X="353" Y="32" />
-        <Pos X="352" Y="32" />
-        <Pos X="351" Y="31" />
-        <Pos X="352" Y="30" />
-        <Pos X="351" Y="30" />
-        <Pos X="351" Y="29" />
-        <Pos X="352" Y="29" />
-        <Pos X="353" Y="29" />
-        <Pos X="352" Y="28" />
-        <Pos X="353" Y="28" />
-        <Pos X="354" Y="28" />
-        <Pos X="355" Y="28" />
+        <Pos X = "352" Y = "33"/>
+        <Pos X = "352" Y = "34"/>
+        <Pos X = "354" Y = "34"/>
+        <Pos X = "355" Y = "34"/>
+        <Pos X = "355" Y = "33"/>
+        <Pos X = "356" Y = "32"/>
+        <Pos X = "356" Y = "31"/>
+        <Pos X = "356" Y = "30"/>
+        <Pos X = "355" Y = "31"/>
+        <Pos X = "355" Y = "32"/>
+        <Pos X = "354" Y = "33"/>
+        <Pos X = "353" Y = "33"/>
+        <Pos X = "354" Y = "32"/>
+        <Pos X = "354" Y = "31"/>
+        <Pos X = "355" Y = "30"/>
+        <Pos X = "354" Y = "29"/>
+        <Pos X = "354" Y = "30"/>
+        <Pos X = "353" Y = "30"/>
+        <Pos X = "352" Y = "31"/>
+        <Pos X = "353" Y = "32"/>
+        <Pos X = "352" Y = "32"/>
+        <Pos X = "351" Y = "31"/>
+        <Pos X = "352" Y = "30"/>
+        <Pos X = "351" Y = "30"/>
+        <Pos X = "351" Y = "29"/>
+        <Pos X = "352" Y = "29"/>
+        <Pos X = "353" Y = "29"/>
+        <Pos X = "352" Y = "28"/>
+        <Pos X = "353" Y = "28"/>
+        <Pos X = "354" Y = "28"/>
+        <Pos X = "355" Y = "28"/>
+        <Pos X = "355" Y = "35"/>
+        <Pos X = "356" Y = "36"/>
+        <Pos X = "356" Y = "37"/>
+        <Pos X = "357" Y = "36"/>
+        <Pos X = "357" Y = "35"/>
+        <Pos X = "356" Y = "35"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Ao" X="328" Y="37" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="330" Y="40" />
+    <Settlement Name = "Ao" X = "328" Y = "37" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "330" Y = "40"/>
       <FarmImprovements>
-        <Pos X="327" Y="36" />
-        <Pos X="326" Y="37" />
-        <Pos X="327" Y="38" />
-        <Pos X="327" Y="39" />
-        <Pos X="328" Y="39" />
-        <Pos X="329" Y="39" />
-        <Pos X="330" Y="38" />
-        <Pos X="330" Y="37" />
-        <Pos X="330" Y="36" />
-        <Pos X="329" Y="35" />
-        <Pos X="328" Y="35" />
-        <Pos X="329" Y="36" />
-        <Pos X="329" Y="37" />
-        <Pos X="329" Y="38" />
-        <Pos X="327" Y="37" />
-        <Pos X="328" Y="38" />
-        <Pos X="328" Y="36" />
-        <Pos X="328" Y="40" />
-        <Pos X="327" Y="40" />
-        <Pos X="326" Y="39" />
-        <Pos X="326" Y="38" />
-        <Pos X="325" Y="37" />
-        <Pos X="326" Y="36" />
-        <Pos X="327" Y="34" />
-        <Pos X="330" Y="35" />
-        <Pos X="331" Y="36" />
-        <Pos X="331" Y="37" />
-        <Pos X="331" Y="38" />
-        <Pos X="330" Y="39" />
+        <Pos X = "327" Y = "36"/>
+        <Pos X = "326" Y = "37"/>
+        <Pos X = "327" Y = "38"/>
+        <Pos X = "327" Y = "39"/>
+        <Pos X = "328" Y = "39"/>
+        <Pos X = "329" Y = "39"/>
+        <Pos X = "330" Y = "38"/>
+        <Pos X = "330" Y = "37"/>
+        <Pos X = "330" Y = "36"/>
+        <Pos X = "329" Y = "35"/>
+        <Pos X = "328" Y = "35"/>
+        <Pos X = "329" Y = "36"/>
+        <Pos X = "329" Y = "37"/>
+        <Pos X = "329" Y = "38"/>
+        <Pos X = "327" Y = "37"/>
+        <Pos X = "328" Y = "38"/>
+        <Pos X = "328" Y = "36"/>
+        <Pos X = "328" Y = "40"/>
+        <Pos X = "327" Y = "40"/>
+        <Pos X = "326" Y = "39"/>
+        <Pos X = "326" Y = "38"/>
+        <Pos X = "325" Y = "37"/>
+        <Pos X = "326" Y = "36"/>
+        <Pos X = "327" Y = "34"/>
+        <Pos X = "330" Y = "35"/>
+        <Pos X = "331" Y = "36"/>
+        <Pos X = "331" Y = "37"/>
+        <Pos X = "331" Y = "38"/>
+        <Pos X = "330" Y = "39"/>
+        <Pos X = "331" Y = "42"/>
+        <Pos X = "331" Y = "41"/>
+        <Pos X = "332" Y = "41"/>
+        <Pos X = "333" Y = "40"/>
+        <Pos X = "333" Y = "39"/>
+        <Pos X = "334" Y = "38"/>
+        <Pos X = "334" Y = "37"/>
+        <Pos X = "334" Y = "36"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Xiang" X="308" Y="45" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="308" Y="48" />
+    <Settlement Name = "Xiang" X = "308" Y = "45" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "308" Y = "48"/>
       <FarmImprovements>
-        <Pos X="307" Y="47" />
-        <Pos X="308" Y="47" />
-        <Pos X="309" Y="47" />
-        <Pos X="310" Y="46" />
-        <Pos X="309" Y="45" />
-        <Pos X="310" Y="44" />
-        <Pos X="309" Y="43" />
-        <Pos X="309" Y="44" />
-        <Pos X="309" Y="46" />
-        <Pos X="308" Y="46" />
-        <Pos X="307" Y="46" />
-        <Pos X="306" Y="45" />
-        <Pos X="307" Y="45" />
-        <Pos X="308" Y="44" />
-        <Pos X="307" Y="43" />
-        <Pos X="308" Y="43" />
-        <Pos X="306" Y="47" />
-        <Pos X="306" Y="46" />
-        <Pos X="305" Y="45" />
-        <Pos X="306" Y="44" />
-        <Pos X="307" Y="42" />
-        <Pos X="308" Y="42" />
-        <Pos X="309" Y="42" />
-        <Pos X="310" Y="42" />
-        <Pos X="310" Y="43" />
-        <Pos X="311" Y="44" />
-        <Pos X="311" Y="45" />
-        <Pos X="309" Y="48" />
+        <Pos X = "307" Y = "47"/>
+        <Pos X = "308" Y = "47"/>
+        <Pos X = "309" Y = "47"/>
+        <Pos X = "310" Y = "46"/>
+        <Pos X = "309" Y = "45"/>
+        <Pos X = "310" Y = "44"/>
+        <Pos X = "309" Y = "43"/>
+        <Pos X = "309" Y = "44"/>
+        <Pos X = "309" Y = "46"/>
+        <Pos X = "308" Y = "46"/>
+        <Pos X = "307" Y = "46"/>
+        <Pos X = "306" Y = "45"/>
+        <Pos X = "307" Y = "45"/>
+        <Pos X = "308" Y = "44"/>
+        <Pos X = "307" Y = "43"/>
+        <Pos X = "308" Y = "43"/>
+        <Pos X = "306" Y = "47"/>
+        <Pos X = "306" Y = "46"/>
+        <Pos X = "305" Y = "45"/>
+        <Pos X = "306" Y = "44"/>
+        <Pos X = "307" Y = "42"/>
+        <Pos X = "308" Y = "42"/>
+        <Pos X = "309" Y = "42"/>
+        <Pos X = "310" Y = "42"/>
+        <Pos X = "310" Y = "43"/>
+        <Pos X = "311" Y = "44"/>
+        <Pos X = "311" Y = "45"/>
+        <Pos X = "309" Y = "48"/>
+        <Pos X = "312" Y = "49"/>
+        <Pos X = "311" Y = "51"/>
+        <Pos X = "312" Y = "50"/>
+        <Pos X = "311" Y = "49"/>
+        <Pos X = "309" Y = "49"/>
+        <Pos X = "308" Y = "49"/>
+        <Pos X = "307" Y = "49"/>
+        <Pos X = "305" Y = "49"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="310" Y="45" />
+        <Pos X = "310" Y = "45"/>
       </ClearanceImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Zhou">
-    <BasedOn Faction="Zhou" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Northern China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="66" YPos="140" FactionImage="OE_FE_FactionElement_Zhou_01" />
-    <FactionRules />
-    <Capability Name="Noble Happiness" Level="10" />
-    <Capability Name="Crossbow Skill" Level="10" />
-    <Capability Name="Cavalry Skill" Level="15" />
-    <Capability Name="NewLeaderVirtue" Level="2" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Farmers" />
-    <Force X="145" Y="41" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Zhou Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Zhou">
+    <BasedOn Faction = "Zhou" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Northern China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "66" YPos = "140" FactionImage = "OE_FE_FactionElement_Zhou_01"/>
+    <FactionRules/>
+    <Capability Name = "Noble Happiness" Level = "10"/>
+    <Capability Name = "Crossbow Skill" Level = "10"/>
+    <Capability Name = "Cavalry Skill" Level = "15"/>
+    <Capability Name = "NewLeaderVirtue" Level = "2"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Farmers"/>
+    <Force X = "145" Y = "41" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Zhou Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="174" Y="58" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "174" Y = "58" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="179" Y="44" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "179" Y = "44" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Fengjing" X="145" Y="41" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="145" Y="44" />
+    <Settlement Name = "Fengjing" X = "145" Y = "41" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "145" Y = "44"/>
       <FarmImprovements>
-        <Pos X="146" Y="39" />
-        <Pos X="147" Y="40" />
-        <Pos X="147" Y="41" />
-        <Pos X="147" Y="42" />
-        <Pos X="146" Y="43" />
-        <Pos X="145" Y="43" />
-        <Pos X="144" Y="43" />
-        <Pos X="144" Y="42" />
-        <Pos X="145" Y="42" />
-        <Pos X="146" Y="42" />
-        <Pos X="146" Y="41" />
-        <Pos X="146" Y="40" />
-        <Pos X="145" Y="39" />
-        <Pos X="145" Y="40" />
-        <Pos X="144" Y="41" />
-        <Pos X="144" Y="40" />
-        <Pos X="144" Y="39" />
-        <Pos X="142" Y="41" />
-        <Pos X="143" Y="40" />
-        <Pos X="143" Y="39" />
-        <Pos X="144" Y="38" />
-        <Pos X="146" Y="38" />
-        <Pos X="147" Y="38" />
-        <Pos X="147" Y="39" />
-        <Pos X="148" Y="40" />
-        <Pos X="148" Y="41" />
-        <Pos X="148" Y="42" />
-        <Pos X="144" Y="44" />
+        <Pos X = "146" Y = "39"/>
+        <Pos X = "147" Y = "40"/>
+        <Pos X = "147" Y = "41"/>
+        <Pos X = "147" Y = "42"/>
+        <Pos X = "146" Y = "43"/>
+        <Pos X = "145" Y = "43"/>
+        <Pos X = "144" Y = "43"/>
+        <Pos X = "144" Y = "42"/>
+        <Pos X = "145" Y = "42"/>
+        <Pos X = "146" Y = "42"/>
+        <Pos X = "146" Y = "41"/>
+        <Pos X = "146" Y = "40"/>
+        <Pos X = "145" Y = "39"/>
+        <Pos X = "145" Y = "40"/>
+        <Pos X = "144" Y = "41"/>
+        <Pos X = "144" Y = "40"/>
+        <Pos X = "144" Y = "39"/>
+        <Pos X = "142" Y = "41"/>
+        <Pos X = "143" Y = "40"/>
+        <Pos X = "143" Y = "39"/>
+        <Pos X = "144" Y = "38"/>
+        <Pos X = "146" Y = "38"/>
+        <Pos X = "147" Y = "38"/>
+        <Pos X = "147" Y = "39"/>
+        <Pos X = "148" Y = "40"/>
+        <Pos X = "148" Y = "41"/>
+        <Pos X = "148" Y = "42"/>
+        <Pos X = "144" Y = "44"/>
+        <Pos X = "142" Y = "47"/>
+        <Pos X = "142" Y = "46"/>
+        <Pos X = "141" Y = "45"/>
+        <Pos X = "142" Y = "45"/>
+        <Pos X = "143" Y = "46"/>
+        <Pos X = "143" Y = "45"/>
+        <Pos X = "144" Y = "46"/>
+        <Pos X = "144" Y = "45"/>
+        <Pos X = "143" Y = "41"/>
+        <Pos X = "142" Y = "43"/>
+        <Pos X = "140" Y = "42"/>
+        <Pos X = "139" Y = "41"/>
+        <Pos X = "140" Y = "41"/>
+        <Pos X = "140" Y = "40"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="143" Y="41" />
+        <Pos X = "143" Y = "41"/>
       </ClearanceImprovements>
     </Settlement>
-    <Settlement Name="Qizhou" X="174" Y="58" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="173" Y="61" />
+    <Settlement Name = "Qizhou" X = "174" Y = "58" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "173" Y = "61"/>
       <FarmImprovements>
-        <Pos X="173" Y="60" />
-        <Pos X="174" Y="60" />
-        <Pos X="175" Y="60" />
-        <Pos X="176" Y="58" />
-        <Pos X="175" Y="59" />
-        <Pos X="175" Y="57" />
-        <Pos X="175" Y="58" />
-        <Pos X="174" Y="59" />
-        <Pos X="173" Y="58" />
-        <Pos X="173" Y="59" />
-        <Pos X="173" Y="57" />
-        <Pos X="174" Y="57" />
-        <Pos X="175" Y="56" />
-        <Pos X="174" Y="56" />
-        <Pos X="171" Y="58" />
-        <Pos X="171" Y="57" />
-        <Pos X="172" Y="56" />
-        <Pos X="172" Y="55" />
-        <Pos X="174" Y="55" />
-        <Pos X="175" Y="55" />
-        <Pos X="176" Y="56" />
-        <Pos X="176" Y="57" />
-        <Pos X="177" Y="58" />
-        <Pos X="174" Y="61" />
+        <Pos X = "173" Y = "60"/>
+        <Pos X = "174" Y = "60"/>
+        <Pos X = "175" Y = "60"/>
+        <Pos X = "176" Y = "58"/>
+        <Pos X = "175" Y = "59"/>
+        <Pos X = "175" Y = "57"/>
+        <Pos X = "175" Y = "58"/>
+        <Pos X = "174" Y = "59"/>
+        <Pos X = "173" Y = "58"/>
+        <Pos X = "173" Y = "59"/>
+        <Pos X = "173" Y = "57"/>
+        <Pos X = "174" Y = "57"/>
+        <Pos X = "175" Y = "56"/>
+        <Pos X = "174" Y = "56"/>
+        <Pos X = "171" Y = "58"/>
+        <Pos X = "171" Y = "57"/>
+        <Pos X = "172" Y = "56"/>
+        <Pos X = "172" Y = "55"/>
+        <Pos X = "174" Y = "55"/>
+        <Pos X = "175" Y = "55"/>
+        <Pos X = "176" Y = "56"/>
+        <Pos X = "176" Y = "57"/>
+        <Pos X = "177" Y = "58"/>
+        <Pos X = "174" Y = "61"/>
+        <Pos X = "174" Y = "62"/>
+        <Pos X = "174" Y = "63"/>
+        <Pos X = "175" Y = "64"/>
+        <Pos X = "176" Y = "64"/>
+        <Pos X = "175" Y = "63"/>
+        <Pos X = "176" Y = "63"/>
+        <Pos X = "176" Y = "62"/>
+        <Pos X = "177" Y = "62"/>
+        <Pos X = "179" Y = "60"/>
+        <Pos X = "178" Y = "61"/>
+        <Pos X = "179" Y = "59"/>
+        <Pos X = "179" Y = "58"/>
+        <Pos X = "178" Y = "59"/>
+        <Pos X = "178" Y = "58"/>
+        <Pos X = "177" Y = "57"/>
+        <Pos X = "178" Y = "57"/>
+        <Pos X = "179" Y = "57"/>
+        <Pos X = "179" Y = "56"/>
+        <Pos X = "178" Y = "56"/>
+        <Pos X = "177" Y = "56"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Shao" X="179" Y="41" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="178" Y="44" />
+    <Settlement Name = "Shao" X = "179" Y = "41" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "178" Y = "44"/>
       <FarmImprovements>
-        <Pos X="179" Y="43" />
-        <Pos X="180" Y="42" />
-        <Pos X="181" Y="42" />
-        <Pos X="181" Y="41" />
-        <Pos X="181" Y="40" />
-        <Pos X="180" Y="41" />
-        <Pos X="180" Y="40" />
-        <Pos X="180" Y="39" />
-        <Pos X="179" Y="39" />
-        <Pos X="179" Y="40" />
-        <Pos X="178" Y="41" />
-        <Pos X="179" Y="42" />
-        <Pos X="178" Y="43" />
-        <Pos X="178" Y="42" />
-        <Pos X="177" Y="41" />
-        <Pos X="178" Y="40" />
-        <Pos X="178" Y="39" />
-        <Pos X="179" Y="44" />
-        <Pos X="181" Y="44" />
-        <Pos X="182" Y="40" />
-        <Pos X="179" Y="38" />
-        <Pos X="178" Y="38" />
-        <Pos X="177" Y="39" />
-        <Pos X="177" Y="40" />
-        <Pos X="176" Y="41" />
-        <Pos X="177" Y="42" />
-        <Pos X="177" Y="43" />
-      </FarmImprovements>
-    </Settlement>
-  </CustomFaction>
-  <CustomFaction ID="Qin">
-    <BasedOn Faction="Qin" ColorSet="95" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Northern China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="26" YPos="126" FactionImage="OE_FE_FactionElement_Qin_01" />
-    <FactionRules />
-    <Capability Name="CombatAdvantage" Level="10" />
-    <Capability Name="Boost Power" Level="20" />
-    <Capability Name="Reduce Thought" Level="20" />
-    <Capability Name="Reduce Culture" Level="20" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Farmers" />
-    <Force X="58" Y="102" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Qin Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
-      </Unit>
-    </Force>
-    <Force X="77" Y="128" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Force X="73" Y="94" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Settlement Name="Qinyi" X="58" Y="102" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="57" Y="105" />
-      <FarmImprovements>
-        <Pos X="58" Y="104" />
-        <Pos X="59" Y="104" />
-        <Pos X="59" Y="103" />
-        <Pos X="59" Y="102" />
-        <Pos X="59" Y="101" />
-        <Pos X="59" Y="100" />
-        <Pos X="58" Y="101" />
-        <Pos X="58" Y="103" />
-        <Pos X="57" Y="103" />
-        <Pos X="57" Y="104" />
-        <Pos X="56" Y="103" />
-        <Pos X="56" Y="102" />
-        <Pos X="57" Y="102" />
-        <Pos X="56" Y="101" />
-        <Pos X="57" Y="101" />
-        <Pos X="58" Y="100" />
-        <Pos X="57" Y="100" />
-        <Pos X="56" Y="105" />
-        <Pos X="56" Y="104" />
-        <Pos X="55" Y="103" />
-        <Pos X="55" Y="102" />
-        <Pos X="55" Y="101" />
-        <Pos X="56" Y="100" />
-        <Pos X="56" Y="99" />
-        <Pos X="57" Y="99" />
-        <Pos X="58" Y="99" />
-        <Pos X="59" Y="99" />
-        <Pos X="61" Y="102" />
-        <Pos X="59" Y="105" />
-        <Pos X="58" Y="105" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Xianyang" X="77" Y="128" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="79" Y="130" />
-      <FarmImprovements>
-        <Pos X="77" Y="130" />
-        <Pos X="78" Y="130" />
-        <Pos X="78" Y="129" />
-        <Pos X="78" Y="128" />
-        <Pos X="78" Y="127" />
-        <Pos X="78" Y="126" />
-        <Pos X="77" Y="127" />
-        <Pos X="77" Y="129" />
-        <Pos X="76" Y="129" />
-        <Pos X="75" Y="129" />
-        <Pos X="75" Y="128" />
-        <Pos X="76" Y="128" />
-        <Pos X="76" Y="127" />
-        <Pos X="77" Y="126" />
-        <Pos X="75" Y="127" />
-        <Pos X="76" Y="126" />
-        <Pos X="75" Y="131" />
-        <Pos X="74" Y="129" />
-        <Pos X="74" Y="128" />
-        <Pos X="74" Y="127" />
-        <Pos X="75" Y="126" />
-        <Pos X="75" Y="125" />
-        <Pos X="76" Y="125" />
-        <Pos X="78" Y="125" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Xichui" X="73" Y="94" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="71" Y="97" />
-      <FarmImprovements>
-        <Pos X="74" Y="93" />
-        <Pos X="74" Y="94" />
-        <Pos X="74" Y="95" />
-        <Pos X="74" Y="96" />
-        <Pos X="73" Y="96" />
-        <Pos X="72" Y="96" />
-        <Pos X="71" Y="95" />
-        <Pos X="72" Y="95" />
-        <Pos X="73" Y="95" />
-        <Pos X="72" Y="94" />
-        <Pos X="71" Y="94" />
-        <Pos X="71" Y="93" />
-        <Pos X="72" Y="93" />
-        <Pos X="72" Y="92" />
-        <Pos X="73" Y="92" />
-        <Pos X="73" Y="93" />
-        <Pos X="74" Y="97" />
-        <Pos X="73" Y="97" />
-        <Pos X="72" Y="97" />
-        <Pos X="71" Y="96" />
-        <Pos X="70" Y="95" />
-        <Pos X="70" Y="94" />
-        <Pos X="70" Y="93" />
-        <Pos X="71" Y="92" />
-        <Pos X="71" Y="91" />
-        <Pos X="76" Y="94" />
+        <Pos X = "179" Y = "43"/>
+        <Pos X = "180" Y = "42"/>
+        <Pos X = "181" Y = "42"/>
+        <Pos X = "181" Y = "41"/>
+        <Pos X = "181" Y = "40"/>
+        <Pos X = "180" Y = "41"/>
+        <Pos X = "180" Y = "40"/>
+        <Pos X = "180" Y = "39"/>
+        <Pos X = "179" Y = "39"/>
+        <Pos X = "179" Y = "40"/>
+        <Pos X = "178" Y = "41"/>
+        <Pos X = "179" Y = "42"/>
+        <Pos X = "178" Y = "43"/>
+        <Pos X = "178" Y = "42"/>
+        <Pos X = "177" Y = "41"/>
+        <Pos X = "178" Y = "40"/>
+        <Pos X = "178" Y = "39"/>
+        <Pos X = "179" Y = "44"/>
+        <Pos X = "181" Y = "44"/>
+        <Pos X = "182" Y = "40"/>
+        <Pos X = "179" Y = "38"/>
+        <Pos X = "178" Y = "38"/>
+        <Pos X = "177" Y = "39"/>
+        <Pos X = "177" Y = "40"/>
+        <Pos X = "176" Y = "41"/>
+        <Pos X = "177" Y = "42"/>
+        <Pos X = "177" Y = "43"/>
+        <Pos X = "184" Y = "44"/>
+        <Pos X = "183" Y = "45"/>
+        <Pos X = "183" Y = "46"/>
+        <Pos X = "182" Y = "47"/>
+        <Pos X = "181" Y = "47"/>
+        <Pos X = "182" Y = "46"/>
+        <Pos X = "182" Y = "45"/>
+        <Pos X = "183" Y = "44"/>
+        <Pos X = "183" Y = "43"/>
+        <Pos X = "183" Y = "42"/>
+        <Pos X = "182" Y = "43"/>
+        <Pos X = "182" Y = "44"/>
+        <Pos X = "181" Y = "45"/>
+        <Pos X = "181" Y = "46"/>
+        <Pos X = "180" Y = "47"/>
+        <Pos X = "179" Y = "47"/>
       </FarmImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Han">
-    <BasedOn Faction="Han" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Northern China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="62" YPos="102" FactionImage="OE_FE_FactionElement_Han_01" />
-    <FactionRules />
-    <Capability Name="Boost Culture" Level="5" />
-    <Capability Name="Peasant Happiness" Level="10" />
-    <Capability Name="Crossbow Skill" Level="20" />
-    <Capability Name="CombatDisadvantage" Level="10" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Farmers" />
-    <Force X="137" Y="205" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Han Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Qin">
+    <BasedOn Faction = "Qin" ColorSet = "95" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Northern China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "26" YPos = "126" FactionImage = "OE_FE_FactionElement_Qin_01"/>
+    <FactionRules/>
+    <Capability Name = "CombatAdvantage" Level = "10"/>
+    <Capability Name = "Boost Power" Level = "20"/>
+    <Capability Name = "Reduce Thought" Level = "20"/>
+    <Capability Name = "Reduce Culture" Level = "20"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Farmers"/>
+    <Force X = "58" Y = "102" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Qin Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="132" Y="175" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "77" Y = "128" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="158" Y="189" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "73" Y = "94" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Zheng" X="137" Y="205" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="137" Y="207" />
+    <Settlement Name = "Qinyi" X = "58" Y = "102" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "57" Y = "105"/>
       <FarmImprovements>
-        <Pos X="136" Y="207" />
-        <Pos X="136" Y="208" />
-        <Pos X="135" Y="207" />
-        <Pos X="135" Y="206" />
-        <Pos X="135" Y="205" />
-        <Pos X="136" Y="204" />
-        <Pos X="136" Y="202" />
-        <Pos X="137" Y="202" />
-        <Pos X="137" Y="204" />
-        <Pos X="136" Y="205" />
-        <Pos X="136" Y="206" />
-        <Pos X="137" Y="206" />
-        <Pos X="137" Y="208" />
-        <Pos X="138" Y="206" />
-        <Pos X="138" Y="207" />
-        <Pos X="139" Y="208" />
-        <Pos X="139" Y="207" />
-        <Pos X="139" Y="206" />
-        <Pos X="140" Y="206" />
-        <Pos X="139" Y="205" />
-        <Pos X="139" Y="203" />
-        <Pos X="138" Y="202" />
-        <Pos X="138" Y="204" />
-        <Pos X="138" Y="205" />
+        <Pos X = "58" Y = "104"/>
+        <Pos X = "59" Y = "104"/>
+        <Pos X = "59" Y = "103"/>
+        <Pos X = "59" Y = "102"/>
+        <Pos X = "59" Y = "101"/>
+        <Pos X = "59" Y = "100"/>
+        <Pos X = "58" Y = "101"/>
+        <Pos X = "58" Y = "103"/>
+        <Pos X = "57" Y = "103"/>
+        <Pos X = "57" Y = "104"/>
+        <Pos X = "56" Y = "103"/>
+        <Pos X = "56" Y = "102"/>
+        <Pos X = "57" Y = "102"/>
+        <Pos X = "56" Y = "101"/>
+        <Pos X = "57" Y = "101"/>
+        <Pos X = "58" Y = "100"/>
+        <Pos X = "57" Y = "100"/>
+        <Pos X = "56" Y = "105"/>
+        <Pos X = "56" Y = "104"/>
+        <Pos X = "55" Y = "103"/>
+        <Pos X = "55" Y = "102"/>
+        <Pos X = "55" Y = "101"/>
+        <Pos X = "56" Y = "100"/>
+        <Pos X = "56" Y = "99"/>
+        <Pos X = "57" Y = "99"/>
+        <Pos X = "58" Y = "99"/>
+        <Pos X = "59" Y = "99"/>
+        <Pos X = "61" Y = "102"/>
+        <Pos X = "59" Y = "105"/>
+        <Pos X = "58" Y = "105"/>
+        <Pos X = "55" Y = "99"/>
+        <Pos X = "54" Y = "99"/>
+        <Pos X = "53" Y = "99"/>
+        <Pos X = "53" Y = "100"/>
+        <Pos X = "52" Y = "101"/>
+        <Pos X = "52" Y = "103"/>
+        <Pos X = "53" Y = "102"/>
+        <Pos X = "53" Y = "101"/>
+        <Pos X = "54" Y = "100"/>
+        <Pos X = "55" Y = "100"/>
+        <Pos X = "54" Y = "101"/>
+        <Pos X = "54" Y = "102"/>
+        <Pos X = "54" Y = "103"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Yiyang" X="132" Y="175" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="131" Y="178" />
+    <Settlement Name = "Xianyang" X = "77" Y = "128" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "79" Y = "130"/>
       <FarmImprovements>
-        <Pos X="131" Y="177" />
-        <Pos X="134" Y="178" />
-        <Pos X="134" Y="177" />
-        <Pos X="135" Y="176" />
-        <Pos X="135" Y="175" />
-        <Pos X="135" Y="174" />
-        <Pos X="134" Y="175" />
-        <Pos X="134" Y="176" />
-        <Pos X="133" Y="177" />
-        <Pos X="133" Y="178" />
-        <Pos X="132" Y="178" />
-        <Pos X="132" Y="177" />
-        <Pos X="133" Y="176" />
-        <Pos X="133" Y="175" />
-        <Pos X="134" Y="174" />
-        <Pos X="134" Y="173" />
-        <Pos X="134" Y="172" />
-        <Pos X="133" Y="173" />
-        <Pos X="133" Y="174" />
-        <Pos X="132" Y="174" />
-        <Pos X="131" Y="175" />
-        <Pos X="132" Y="176" />
-        <Pos X="131" Y="176" />
-        <Pos X="130" Y="177" />
-        <Pos X="130" Y="176" />
-        <Pos X="129" Y="175" />
-        <Pos X="130" Y="174" />
-        <Pos X="130" Y="175" />
-        <Pos X="131" Y="174" />
-        <Pos X="130" Y="173" />
-        <Pos X="131" Y="172" />
-        <Pos X="131" Y="173" />
-        <Pos X="132" Y="172" />
-        <Pos X="132" Y="173" />
-        <Pos X="133" Y="172" />
+        <Pos X = "77" Y = "130"/>
+        <Pos X = "78" Y = "130"/>
+        <Pos X = "78" Y = "129"/>
+        <Pos X = "78" Y = "128"/>
+        <Pos X = "78" Y = "127"/>
+        <Pos X = "78" Y = "126"/>
+        <Pos X = "77" Y = "127"/>
+        <Pos X = "77" Y = "129"/>
+        <Pos X = "76" Y = "129"/>
+        <Pos X = "75" Y = "129"/>
+        <Pos X = "75" Y = "128"/>
+        <Pos X = "76" Y = "128"/>
+        <Pos X = "76" Y = "127"/>
+        <Pos X = "77" Y = "126"/>
+        <Pos X = "75" Y = "127"/>
+        <Pos X = "76" Y = "126"/>
+        <Pos X = "75" Y = "131"/>
+        <Pos X = "74" Y = "129"/>
+        <Pos X = "74" Y = "128"/>
+        <Pos X = "74" Y = "127"/>
+        <Pos X = "75" Y = "126"/>
+        <Pos X = "75" Y = "125"/>
+        <Pos X = "76" Y = "125"/>
+        <Pos X = "78" Y = "125"/>
+        <Pos X = "80" Y = "130"/>
+        <Pos X = "80" Y = "131"/>
+        <Pos X = "81" Y = "132"/>
+        <Pos X = "80" Y = "133"/>
+        <Pos X = "80" Y = "132"/>
+        <Pos X = "79" Y = "133"/>
+        <Pos X = "79" Y = "134"/>
+        <Pos X = "79" Y = "131"/>
+        <Pos X = "78" Y = "132"/>
+        <Pos X = "77" Y = "134"/>
+        <Pos X = "74" Y = "134"/>
+        <Pos X = "73" Y = "133"/>
+        <Pos X = "73" Y = "132"/>
+        <Pos X = "72" Y = "131"/>
+        <Pos X = "72" Y = "130"/>
+        <Pos X = "71" Y = "129"/>
+        <Pos X = "73" Y = "129"/>
+        <Pos X = "71" Y = "127"/>
+        <Pos X = "72" Y = "126"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Yangdi" X="158" Y="189" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="157" Y="192" />
+    <Settlement Name = "Xichui" X = "73" Y = "94" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "71" Y = "97"/>
       <FarmImprovements>
-        <Pos X="157" Y="191" />
-        <Pos X="158" Y="192" />
-        <Pos X="158" Y="191" />
-        <Pos X="159" Y="191" />
-        <Pos X="161" Y="190" />
-        <Pos X="160" Y="186" />
-        <Pos X="160" Y="188" />
-        <Pos X="159" Y="189" />
-        <Pos X="159" Y="190" />
-        <Pos X="158" Y="190" />
-        <Pos X="157" Y="190" />
-        <Pos X="156" Y="191" />
-        <Pos X="157" Y="189" />
-        <Pos X="156" Y="189" />
-        <Pos X="156" Y="188" />
-        <Pos X="157" Y="188" />
-        <Pos X="156" Y="187" />
-        <Pos X="157" Y="186" />
-        <Pos X="158" Y="186" />
-        <Pos X="158" Y="187" />
-        <Pos X="159" Y="188" />
-        <Pos X="158" Y="188" />
-        <Pos X="157" Y="187" />
+        <Pos X = "74" Y = "93"/>
+        <Pos X = "74" Y = "94"/>
+        <Pos X = "74" Y = "95"/>
+        <Pos X = "74" Y = "96"/>
+        <Pos X = "73" Y = "96"/>
+        <Pos X = "72" Y = "96"/>
+        <Pos X = "71" Y = "95"/>
+        <Pos X = "72" Y = "95"/>
+        <Pos X = "73" Y = "95"/>
+        <Pos X = "72" Y = "94"/>
+        <Pos X = "71" Y = "94"/>
+        <Pos X = "71" Y = "93"/>
+        <Pos X = "72" Y = "93"/>
+        <Pos X = "72" Y = "92"/>
+        <Pos X = "73" Y = "92"/>
+        <Pos X = "73" Y = "93"/>
+        <Pos X = "74" Y = "97"/>
+        <Pos X = "73" Y = "97"/>
+        <Pos X = "72" Y = "97"/>
+        <Pos X = "71" Y = "96"/>
+        <Pos X = "70" Y = "95"/>
+        <Pos X = "70" Y = "94"/>
+        <Pos X = "70" Y = "93"/>
+        <Pos X = "71" Y = "92"/>
+        <Pos X = "71" Y = "91"/>
+        <Pos X = "76" Y = "94"/>
+        <Pos X = "69" Y = "89"/>
+        <Pos X = "69" Y = "90"/>
+        <Pos X = "69" Y = "91"/>
+        <Pos X = "70" Y = "90"/>
+        <Pos X = "70" Y = "91"/>
+        <Pos X = "70" Y = "92"/>
+        <Pos X = "69" Y = "93"/>
+        <Pos X = "69" Y = "94"/>
+        <Pos X = "68" Y = "94"/>
+        <Pos X = "69" Y = "95"/>
+        <Pos X = "69" Y = "96"/>
       </FarmImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Chu">
-    <BasedOn Faction="Chu" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Southern China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="142" YPos="96" FactionImage="OE_FE_FactionElement_Chu_01" />
-    <FactionRules />
-    <Capability Name="Naval Skill" Level="15" />
-    <Capability Name="Peasant Happiness" Level="10" />
-    <Capability Name="CombatDisadvantage" Level="10" />
-    <Capability Name="Boost Agriculture" Level="25" />
-    <Capability Name="Accepts Bandits" Level="1" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Farmers" />
-    <Force X="313" Y="231" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Chu Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Han">
+    <BasedOn Faction = "Han" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Northern China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "62" YPos = "102" FactionImage = "OE_FE_FactionElement_Han_01"/>
+    <FactionRules/>
+    <Capability Name = "Boost Culture" Level = "5"/>
+    <Capability Name = "Peasant Happiness" Level = "10"/>
+    <Capability Name = "Crossbow Skill" Level = "20"/>
+    <Capability Name = "CombatDisadvantage" Level = "10"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Farmers"/>
+    <Force X = "137" Y = "205" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Han Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="322" Y="206" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "132" Y = "175" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="347" Y="211" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "158" Y = "189" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Ying" X="313" Y="231" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="313" Y="230" />
+    <Settlement Name = "Zheng" X = "137" Y = "205" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "137" Y = "207"/>
       <FarmImprovements>
-        <Pos X="312" Y="229" />
-        <Pos X="312" Y="234" />
-        <Pos X="311" Y="233" />
-        <Pos X="311" Y="232" />
-        <Pos X="310" Y="231" />
-        <Pos X="311" Y="230" />
-        <Pos X="311" Y="231" />
-        <Pos X="312" Y="232" />
-        <Pos X="312" Y="233" />
-        <Pos X="313" Y="234" />
-        <Pos X="314" Y="234" />
-        <Pos X="315" Y="234" />
-        <Pos X="314" Y="233" />
-        <Pos X="313" Y="233" />
-        <Pos X="313" Y="232" />
-        <Pos X="314" Y="232" />
-        <Pos X="315" Y="232" />
-        <Pos X="315" Y="233" />
-        <Pos X="316" Y="232" />
-        <Pos X="316" Y="231" />
-        <Pos X="316" Y="230" />
-        <Pos X="315" Y="231" />
-        <Pos X="314" Y="231" />
-        <Pos X="315" Y="230" />
-        <Pos X="315" Y="229" />
-        <Pos X="315" Y="228" />
-        <Pos X="314" Y="229" />
-        <Pos X="314" Y="230" />
-        <Pos X="312" Y="231" />
-        <Pos X="312" Y="230" />
-        <Pos X="311" Y="229" />
-        <Pos X="312" Y="228" />
-        <Pos X="313" Y="228" />
-        <Pos X="313" Y="229" />
-        <Pos X="314" Y="228" />
+        <Pos X = "136" Y = "207"/>
+        <Pos X = "136" Y = "208"/>
+        <Pos X = "135" Y = "207"/>
+        <Pos X = "135" Y = "206"/>
+        <Pos X = "135" Y = "205"/>
+        <Pos X = "136" Y = "204"/>
+        <Pos X = "136" Y = "202"/>
+        <Pos X = "137" Y = "202"/>
+        <Pos X = "137" Y = "204"/>
+        <Pos X = "136" Y = "205"/>
+        <Pos X = "136" Y = "206"/>
+        <Pos X = "137" Y = "206"/>
+        <Pos X = "137" Y = "208"/>
+        <Pos X = "138" Y = "206"/>
+        <Pos X = "138" Y = "207"/>
+        <Pos X = "139" Y = "208"/>
+        <Pos X = "139" Y = "207"/>
+        <Pos X = "139" Y = "206"/>
+        <Pos X = "140" Y = "206"/>
+        <Pos X = "139" Y = "205"/>
+        <Pos X = "139" Y = "203"/>
+        <Pos X = "138" Y = "202"/>
+        <Pos X = "138" Y = "204"/>
+        <Pos X = "138" Y = "205"/>
+        <Pos X = "132" Y = "207"/>
+        <Pos X = "134" Y = "204"/>
+        <Pos X = "133" Y = "203"/>
+        <Pos X = "132" Y = "203"/>
+        <Pos X = "134" Y = "203"/>
+        <Pos X = "134" Y = "202"/>
+        <Pos X = "134" Y = "201"/>
+        <Pos X = "135" Y = "202"/>
+        <Pos X = "135" Y = "201"/>
+        <Pos X = "136" Y = "200"/>
+        <Pos X = "136" Y = "201"/>
+        <Pos X = "137" Y = "200"/>
+        <Pos X = "137" Y = "201"/>
+        <Pos X = "138" Y = "200"/>
+        <Pos X = "138" Y = "201"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Yiyang" X = "132" Y = "175" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "131" Y = "178"/>
+      <FarmImprovements>
+        <Pos X = "131" Y = "177"/>
+        <Pos X = "134" Y = "178"/>
+        <Pos X = "134" Y = "177"/>
+        <Pos X = "135" Y = "176"/>
+        <Pos X = "135" Y = "175"/>
+        <Pos X = "135" Y = "174"/>
+        <Pos X = "134" Y = "175"/>
+        <Pos X = "134" Y = "176"/>
+        <Pos X = "133" Y = "177"/>
+        <Pos X = "133" Y = "178"/>
+        <Pos X = "132" Y = "178"/>
+        <Pos X = "132" Y = "177"/>
+        <Pos X = "133" Y = "176"/>
+        <Pos X = "133" Y = "175"/>
+        <Pos X = "134" Y = "174"/>
+        <Pos X = "134" Y = "173"/>
+        <Pos X = "134" Y = "172"/>
+        <Pos X = "133" Y = "173"/>
+        <Pos X = "133" Y = "174"/>
+        <Pos X = "132" Y = "174"/>
+        <Pos X = "131" Y = "175"/>
+        <Pos X = "132" Y = "176"/>
+        <Pos X = "131" Y = "176"/>
+        <Pos X = "130" Y = "177"/>
+        <Pos X = "130" Y = "176"/>
+        <Pos X = "129" Y = "175"/>
+        <Pos X = "130" Y = "174"/>
+        <Pos X = "130" Y = "175"/>
+        <Pos X = "131" Y = "174"/>
+        <Pos X = "130" Y = "173"/>
+        <Pos X = "131" Y = "172"/>
+        <Pos X = "131" Y = "173"/>
+        <Pos X = "132" Y = "172"/>
+        <Pos X = "132" Y = "173"/>
+        <Pos X = "133" Y = "172"/>
+        <Pos X = "136" Y = "171"/>
+        <Pos X = "135" Y = "177"/>
+        <Pos X = "135" Y = "178"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Yangdi" X = "158" Y = "189" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "157" Y = "192"/>
+      <FarmImprovements>
+        <Pos X = "157" Y = "191"/>
+        <Pos X = "158" Y = "192"/>
+        <Pos X = "158" Y = "191"/>
+        <Pos X = "159" Y = "191"/>
+        <Pos X = "161" Y = "190"/>
+        <Pos X = "160" Y = "186"/>
+        <Pos X = "160" Y = "188"/>
+        <Pos X = "159" Y = "189"/>
+        <Pos X = "159" Y = "190"/>
+        <Pos X = "158" Y = "190"/>
+        <Pos X = "157" Y = "190"/>
+        <Pos X = "156" Y = "191"/>
+        <Pos X = "157" Y = "189"/>
+        <Pos X = "156" Y = "189"/>
+        <Pos X = "156" Y = "188"/>
+        <Pos X = "157" Y = "188"/>
+        <Pos X = "156" Y = "187"/>
+        <Pos X = "157" Y = "186"/>
+        <Pos X = "158" Y = "186"/>
+        <Pos X = "158" Y = "187"/>
+        <Pos X = "159" Y = "188"/>
+        <Pos X = "158" Y = "188"/>
+        <Pos X = "157" Y = "187"/>
+        <Pos X = "162" Y = "193"/>
+        <Pos X = "163" Y = "192"/>
+        <Pos X = "156" Y = "195"/>
+        <Pos X = "162" Y = "190"/>
+        <Pos X = "163" Y = "189"/>
+        <Pos X = "163" Y = "188"/>
+        <Pos X = "162" Y = "187"/>
+        <Pos X = "163" Y = "186"/>
+        <Pos X = "162" Y = "185"/>
+        <Pos X = "162" Y = "186"/>
+        <Pos X = "161" Y = "187"/>
+        <Pos X = "161" Y = "186"/>
+        <Pos X = "160" Y = "185"/>
+        <Pos X = "160" Y = "184"/>
+        <Pos X = "159" Y = "184"/>
+        <Pos X = "159" Y = "185"/>
+        <Pos X = "157" Y = "185"/>
+        <Pos X = "156" Y = "186"/>
+        <Pos X = "155" Y = "187"/>
+        <Pos X = "154" Y = "187"/>
+      </FarmImprovements>
+    </Settlement>
+  </CustomFaction>
+  <CustomFaction ID = "Chu">
+    <BasedOn Faction = "Chu" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Southern China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "142" YPos = "96" FactionImage = "OE_FE_FactionElement_Chu_01"/>
+    <FactionRules/>
+    <Capability Name = "Naval Skill" Level = "15"/>
+    <Capability Name = "Peasant Happiness" Level = "10"/>
+    <Capability Name = "CombatDisadvantage" Level = "10"/>
+    <Capability Name = "Boost Agriculture" Level = "25"/>
+    <Capability Name = "Accepts Bandits" Level = "1"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Farmers"/>
+    <Force X = "313" Y = "231" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Chu Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
+      </Unit>
+    </Force>
+    <Force X = "322" Y = "206" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Force X = "347" Y = "211" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Settlement Name = "Ying" X = "313" Y = "231" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "313" Y = "230"/>
+      <FarmImprovements>
+        <Pos X = "312" Y = "229"/>
+        <Pos X = "312" Y = "234"/>
+        <Pos X = "311" Y = "233"/>
+        <Pos X = "311" Y = "232"/>
+        <Pos X = "310" Y = "231"/>
+        <Pos X = "311" Y = "230"/>
+        <Pos X = "311" Y = "231"/>
+        <Pos X = "312" Y = "232"/>
+        <Pos X = "312" Y = "233"/>
+        <Pos X = "313" Y = "234"/>
+        <Pos X = "314" Y = "234"/>
+        <Pos X = "315" Y = "234"/>
+        <Pos X = "314" Y = "233"/>
+        <Pos X = "313" Y = "233"/>
+        <Pos X = "313" Y = "232"/>
+        <Pos X = "314" Y = "232"/>
+        <Pos X = "315" Y = "232"/>
+        <Pos X = "315" Y = "233"/>
+        <Pos X = "316" Y = "232"/>
+        <Pos X = "316" Y = "231"/>
+        <Pos X = "316" Y = "230"/>
+        <Pos X = "315" Y = "231"/>
+        <Pos X = "314" Y = "231"/>
+        <Pos X = "315" Y = "230"/>
+        <Pos X = "315" Y = "229"/>
+        <Pos X = "315" Y = "228"/>
+        <Pos X = "314" Y = "229"/>
+        <Pos X = "314" Y = "230"/>
+        <Pos X = "312" Y = "231"/>
+        <Pos X = "312" Y = "230"/>
+        <Pos X = "311" Y = "229"/>
+        <Pos X = "312" Y = "228"/>
+        <Pos X = "313" Y = "228"/>
+        <Pos X = "313" Y = "229"/>
+        <Pos X = "314" Y = "228"/>
+        <Pos X = "319" Y = "232"/>
+        <Pos X = "319" Y = "231"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="312" Y="230" />
+        <Pos X = "312" Y = "230"/>
       </ClearanceImprovements>
     </Settlement>
-    <Settlement Name="Ruo" X="322" Y="206" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="320" Y="205" />
+    <Settlement Name = "Ruo" X = "322" Y = "206" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "320" Y = "205"/>
       <FarmImprovements>
-        <Pos X="321" Y="204" />
-        <Pos X="320" Y="209" />
-        <Pos X="320" Y="208" />
-        <Pos X="319" Y="207" />
-        <Pos X="319" Y="206" />
-        <Pos X="319" Y="205" />
-        <Pos X="320" Y="206" />
-        <Pos X="320" Y="207" />
-        <Pos X="321" Y="208" />
-        <Pos X="321" Y="209" />
-        <Pos X="322" Y="209" />
-        <Pos X="322" Y="208" />
-        <Pos X="323" Y="208" />
-        <Pos X="323" Y="209" />
-        <Pos X="324" Y="208" />
-        <Pos X="323" Y="207" />
-        <Pos X="324" Y="206" />
-        <Pos X="323" Y="205" />
-        <Pos X="323" Y="206" />
-        <Pos X="322" Y="207" />
-        <Pos X="321" Y="207" />
-        <Pos X="321" Y="206" />
-        <Pos X="321" Y="205" />
-        <Pos X="322" Y="205" />
-        <Pos X="323" Y="204" />
-        <Pos X="322" Y="204" />
-        <Pos X="320" Y="204" />
+        <Pos X = "321" Y = "204"/>
+        <Pos X = "320" Y = "209"/>
+        <Pos X = "320" Y = "208"/>
+        <Pos X = "319" Y = "207"/>
+        <Pos X = "319" Y = "206"/>
+        <Pos X = "319" Y = "205"/>
+        <Pos X = "320" Y = "206"/>
+        <Pos X = "320" Y = "207"/>
+        <Pos X = "321" Y = "208"/>
+        <Pos X = "321" Y = "209"/>
+        <Pos X = "322" Y = "209"/>
+        <Pos X = "322" Y = "208"/>
+        <Pos X = "323" Y = "208"/>
+        <Pos X = "323" Y = "209"/>
+        <Pos X = "324" Y = "208"/>
+        <Pos X = "323" Y = "207"/>
+        <Pos X = "324" Y = "206"/>
+        <Pos X = "323" Y = "205"/>
+        <Pos X = "323" Y = "206"/>
+        <Pos X = "322" Y = "207"/>
+        <Pos X = "321" Y = "207"/>
+        <Pos X = "321" Y = "206"/>
+        <Pos X = "321" Y = "205"/>
+        <Pos X = "322" Y = "205"/>
+        <Pos X = "323" Y = "204"/>
+        <Pos X = "322" Y = "204"/>
+        <Pos X = "320" Y = "204"/>
+        <Pos X = "326" Y = "209"/>
+        <Pos X = "327" Y = "208"/>
+        <Pos X = "327" Y = "207"/>
+        <Pos X = "328" Y = "206"/>
+        <Pos X = "327" Y = "205"/>
+        <Pos X = "327" Y = "206"/>
+        <Pos X = "326" Y = "207"/>
+        <Pos X = "326" Y = "208"/>
+        <Pos X = "325" Y = "209"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Chen" X="347" Y="211" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="346" Y="210" />
+    <Settlement Name = "Chen" X = "347" Y = "211" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "346" Y = "210"/>
       <FarmImprovements>
-        <Pos X="346" Y="209" />
-        <Pos X="346" Y="214" />
-        <Pos X="345" Y="212" />
-        <Pos X="344" Y="211" />
-        <Pos X="345" Y="210" />
-        <Pos X="345" Y="211" />
-        <Pos X="346" Y="212" />
-        <Pos X="346" Y="211" />
-        <Pos X="347" Y="212" />
-        <Pos X="347" Y="213" />
-        <Pos X="348" Y="213" />
-        <Pos X="348" Y="212" />
-        <Pos X="349" Y="213" />
-        <Pos X="349" Y="212" />
-        <Pos X="348" Y="211" />
-        <Pos X="349" Y="211" />
-        <Pos X="350" Y="212" />
-        <Pos X="350" Y="211" />
-        <Pos X="350" Y="210" />
-        <Pos X="349" Y="210" />
-        <Pos X="348" Y="209" />
-        <Pos X="349" Y="209" />
-        <Pos X="349" Y="208" />
-        <Pos X="348" Y="208" />
-        <Pos X="347" Y="209" />
-        <Pos X="348" Y="210" />
-        <Pos X="347" Y="210" />
-        <Pos X="347" Y="208" />
-        <Pos X="346" Y="208" />
-        <Pos X="345" Y="209" />
-      </FarmImprovements>
-    </Settlement>
-  </CustomFaction>
-  <CustomFaction ID="Wu">
-    <BasedOn Faction="Wu" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Southern China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="154" YPos="117" FactionImage="OE_FE_FactionElement_Wu_01" />
-    <FactionRules />
-    <Capability Name="Sword Skill" Level="10" />
-    <Capability Name="Naval Skill" Level="15" />
-    <Capability Name="Poor Horses" Level="15" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Farmers" />
-    <Force X="340" Y="144" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Wu Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
-      </Unit>
-    </Force>
-    <Force X="342" Y="102" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Force X="359" Y="110" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Settlement Name="Meili" X="340" Y="144" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="338" Y="146" />
-      <FarmImprovements>
-        <Pos X="338" Y="145" />
-        <Pos X="340" Y="145" />
-        <Pos X="340" Y="146" />
-        <Pos X="339" Y="147" />
-        <Pos X="338" Y="147" />
-        <Pos X="339" Y="146" />
-        <Pos X="339" Y="145" />
-        <Pos X="341" Y="144" />
-        <Pos X="342" Y="145" />
-        <Pos X="342" Y="146" />
-        <Pos X="341" Y="147" />
-        <Pos X="341" Y="143" />
-        <Pos X="342" Y="142" />
-        <Pos X="341" Y="141" />
-        <Pos X="341" Y="142" />
-        <Pos X="340" Y="143" />
-        <Pos X="339" Y="143" />
-        <Pos X="339" Y="144" />
-        <Pos X="338" Y="144" />
-        <Pos X="337" Y="145" />
-        <Pos X="337" Y="144" />
-        <Pos X="337" Y="143" />
-        <Pos X="338" Y="143" />
-        <Pos X="338" Y="142" />
-        <Pos X="339" Y="142" />
-        <Pos X="340" Y="142" />
-        <Pos X="340" Y="141" />
-        <Pos X="339" Y="141" />
-        <Pos X="338" Y="141" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Gusu" X="342" Y="102" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="340" Y="100" />
-      <FarmImprovements>
-        <Pos X="341" Y="100" />
-        <Pos X="340" Y="105" />
-        <Pos X="343" Y="105" />
-        <Pos X="343" Y="104" />
-        <Pos X="343" Y="103" />
-        <Pos X="344" Y="102" />
-        <Pos X="344" Y="101" />
-        <Pos X="344" Y="100" />
-        <Pos X="343" Y="101" />
-        <Pos X="343" Y="102" />
-        <Pos X="342" Y="103" />
-        <Pos X="342" Y="104" />
-        <Pos X="341" Y="104" />
-        <Pos X="341" Y="103" />
-        <Pos X="340" Y="103" />
-        <Pos X="340" Y="104" />
-        <Pos X="339" Y="103" />
-        <Pos X="340" Y="102" />
-        <Pos X="339" Y="101" />
-        <Pos X="340" Y="101" />
-        <Pos X="341" Y="102" />
-        <Pos X="341" Y="101" />
-        <Pos X="342" Y="101" />
-        <Pos X="342" Y="100" />
-        <Pos X="343" Y="100" />
-        <Pos X="343" Y="99" />
-        <Pos X="342" Y="99" />
-        <Pos X="341" Y="99" />
-        <Pos X="340" Y="99" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Helu" X="359" Y="110" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="356" Y="111" />
-      <FarmImprovements>
-        <Pos X="357" Y="109" />
-        <Pos X="357" Y="110" />
-        <Pos X="357" Y="113" />
-        <Pos X="358" Y="113" />
-        <Pos X="359" Y="113" />
-        <Pos X="360" Y="113" />
-        <Pos X="361" Y="112" />
-        <Pos X="361" Y="109" />
-        <Pos X="361" Y="111" />
-        <Pos X="360" Y="111" />
-        <Pos X="360" Y="112" />
-        <Pos X="359" Y="111" />
-        <Pos X="359" Y="112" />
-        <Pos X="358" Y="112" />
-        <Pos X="358" Y="111" />
-        <Pos X="357" Y="111" />
-        <Pos X="357" Y="112" />
-        <Pos X="356" Y="110" />
-        <Pos X="356" Y="109" />
-        <Pos X="357" Y="108" />
-        <Pos X="358" Y="108" />
-        <Pos X="358" Y="110" />
-        <Pos X="359" Y="108" />
-        <Pos X="359" Y="109" />
-        <Pos X="360" Y="110" />
-        <Pos X="360" Y="108" />
-        <Pos X="360" Y="107" />
-        <Pos X="359" Y="107" />
+        <Pos X = "346" Y = "209"/>
+        <Pos X = "346" Y = "214"/>
+        <Pos X = "345" Y = "212"/>
+        <Pos X = "344" Y = "211"/>
+        <Pos X = "345" Y = "210"/>
+        <Pos X = "345" Y = "211"/>
+        <Pos X = "346" Y = "212"/>
+        <Pos X = "346" Y = "211"/>
+        <Pos X = "347" Y = "212"/>
+        <Pos X = "347" Y = "213"/>
+        <Pos X = "348" Y = "213"/>
+        <Pos X = "348" Y = "212"/>
+        <Pos X = "349" Y = "213"/>
+        <Pos X = "349" Y = "212"/>
+        <Pos X = "348" Y = "211"/>
+        <Pos X = "349" Y = "211"/>
+        <Pos X = "350" Y = "212"/>
+        <Pos X = "350" Y = "211"/>
+        <Pos X = "350" Y = "210"/>
+        <Pos X = "349" Y = "210"/>
+        <Pos X = "348" Y = "209"/>
+        <Pos X = "349" Y = "209"/>
+        <Pos X = "349" Y = "208"/>
+        <Pos X = "348" Y = "208"/>
+        <Pos X = "347" Y = "209"/>
+        <Pos X = "348" Y = "210"/>
+        <Pos X = "347" Y = "210"/>
+        <Pos X = "347" Y = "208"/>
+        <Pos X = "346" Y = "208"/>
+        <Pos X = "345" Y = "209"/>
+        <Pos X = "352" Y = "212"/>
+        <Pos X = "353" Y = "212"/>
+        <Pos X = "353" Y = "211"/>
+        <Pos X = "353" Y = "210"/>
+        <Pos X = "352" Y = "211"/>
+        <Pos X = "351" Y = "211"/>
       </FarmImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Min">
-    <BasedOn Faction="Min" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Southern China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="200" YPos="138" FactionImage="OE_FE_FactionElement_Yue_01" />
-    <FactionRules />
-    <Capability Name="Forest Combat Skill" Level="20" />
-    <Capability Name="Naval Skill" Level="15" />
-    <Capability Name="Boost Naval" Level="20" />
-    <Capability Name="Poor Horses" Level="15" />
-    <Capability Name="Reduce Military" Level="20" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Farmers" />
-    <Force X="440" Y="50" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Min Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Wu">
+    <BasedOn Faction = "Wu" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Southern China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "154" YPos = "117" FactionImage = "OE_FE_FactionElement_Wu_01"/>
+    <FactionRules/>
+    <Capability Name = "Sword Skill" Level = "10"/>
+    <Capability Name = "Naval Skill" Level = "15"/>
+    <Capability Name = "Poor Horses" Level = "15"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Farmers"/>
+    <Force X = "340" Y = "144" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Wu Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="435" Y="74" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "342" Y = "102" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="426" Y="61" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "359" Y = "110" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Kuaiji" X="440" Y="50" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="440" Y="52" />
+    <Settlement Name = "Meili" X = "340" Y = "144" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "338" Y = "146"/>
       <FarmImprovements>
-        <Pos X="439" Y="52" />
-        <Pos X="438" Y="53" />
-        <Pos X="439" Y="53" />
-        <Pos X="440" Y="53" />
-        <Pos X="441" Y="53" />
-        <Pos X="442" Y="52" />
-        <Pos X="442" Y="51" />
-        <Pos X="442" Y="50" />
-        <Pos X="441" Y="51" />
-        <Pos X="441" Y="52" />
-        <Pos X="440" Y="51" />
-        <Pos X="441" Y="50" />
-        <Pos X="441" Y="49" />
-        <Pos X="442" Y="48" />
-        <Pos X="441" Y="47" />
-        <Pos X="441" Y="48" />
-        <Pos X="440" Y="49" />
-        <Pos X="439" Y="51" />
-        <Pos X="438" Y="51" />
-        <Pos X="439" Y="50" />
-        <Pos X="439" Y="49" />
-        <Pos X="440" Y="48" />
-        <Pos X="440" Y="47" />
-        <Pos X="439" Y="47" />
-        <Pos X="439" Y="48" />
-        <Pos X="438" Y="49" />
-        <Pos X="438" Y="47" />
-        <Pos X="437" Y="50" />
+        <Pos X = "338" Y = "145"/>
+        <Pos X = "340" Y = "145"/>
+        <Pos X = "340" Y = "146"/>
+        <Pos X = "339" Y = "147"/>
+        <Pos X = "338" Y = "147"/>
+        <Pos X = "339" Y = "146"/>
+        <Pos X = "339" Y = "145"/>
+        <Pos X = "341" Y = "144"/>
+        <Pos X = "342" Y = "145"/>
+        <Pos X = "342" Y = "146"/>
+        <Pos X = "341" Y = "147"/>
+        <Pos X = "341" Y = "143"/>
+        <Pos X = "342" Y = "142"/>
+        <Pos X = "341" Y = "141"/>
+        <Pos X = "341" Y = "142"/>
+        <Pos X = "340" Y = "143"/>
+        <Pos X = "339" Y = "143"/>
+        <Pos X = "339" Y = "144"/>
+        <Pos X = "338" Y = "144"/>
+        <Pos X = "337" Y = "145"/>
+        <Pos X = "337" Y = "144"/>
+        <Pos X = "337" Y = "143"/>
+        <Pos X = "338" Y = "143"/>
+        <Pos X = "338" Y = "142"/>
+        <Pos X = "339" Y = "142"/>
+        <Pos X = "340" Y = "142"/>
+        <Pos X = "340" Y = "141"/>
+        <Pos X = "339" Y = "141"/>
+        <Pos X = "338" Y = "141"/>
+        <Pos X = "344" Y = "144"/>
+        <Pos X = "345" Y = "144"/>
+        <Pos X = "346" Y = "144"/>
+        <Pos X = "345" Y = "145"/>
+        <Pos X = "345" Y = "146"/>
+        <Pos X = "344" Y = "145"/>
+        <Pos X = "344" Y = "146"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Shanyin" X="435" Y="74" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="436" Y="77" />
+    <Settlement Name = "Gusu" X = "342" Y = "102" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "340" Y = "100"/>
       <FarmImprovements>
-        <Pos X="436" Y="76" />
-        <Pos X="433" Y="77" />
-        <Pos X="434" Y="77" />
-        <Pos X="435" Y="77" />
-        <Pos X="437" Y="76" />
-        <Pos X="437" Y="75" />
-        <Pos X="438" Y="74" />
-        <Pos X="437" Y="73" />
-        <Pos X="437" Y="74" />
-        <Pos X="436" Y="75" />
-        <Pos X="435" Y="75" />
-        <Pos X="435" Y="76" />
-        <Pos X="434" Y="76" />
-        <Pos X="433" Y="76" />
-        <Pos X="433" Y="75" />
-        <Pos X="432" Y="75" />
-        <Pos X="434" Y="75" />
-        <Pos X="434" Y="74" />
-        <Pos X="433" Y="74" />
-        <Pos X="432" Y="74" />
-        <Pos X="433" Y="73" />
-        <Pos X="434" Y="73" />
-        <Pos X="435" Y="73" />
-        <Pos X="436" Y="74" />
-        <Pos X="436" Y="73" />
-        <Pos X="437" Y="72" />
-        <Pos X="436" Y="72" />
-        <Pos X="436" Y="71" />
-        <Pos X="435" Y="71" />
-        <Pos X="435" Y="72" />
-        <Pos X="434" Y="72" />
+        <Pos X = "341" Y = "100"/>
+        <Pos X = "340" Y = "105"/>
+        <Pos X = "343" Y = "105"/>
+        <Pos X = "343" Y = "104"/>
+        <Pos X = "343" Y = "103"/>
+        <Pos X = "344" Y = "102"/>
+        <Pos X = "344" Y = "101"/>
+        <Pos X = "344" Y = "100"/>
+        <Pos X = "343" Y = "101"/>
+        <Pos X = "343" Y = "102"/>
+        <Pos X = "342" Y = "103"/>
+        <Pos X = "342" Y = "104"/>
+        <Pos X = "341" Y = "104"/>
+        <Pos X = "341" Y = "103"/>
+        <Pos X = "340" Y = "103"/>
+        <Pos X = "340" Y = "104"/>
+        <Pos X = "339" Y = "103"/>
+        <Pos X = "340" Y = "102"/>
+        <Pos X = "339" Y = "101"/>
+        <Pos X = "340" Y = "101"/>
+        <Pos X = "341" Y = "102"/>
+        <Pos X = "341" Y = "101"/>
+        <Pos X = "342" Y = "101"/>
+        <Pos X = "342" Y = "100"/>
+        <Pos X = "343" Y = "100"/>
+        <Pos X = "343" Y = "99"/>
+        <Pos X = "342" Y = "99"/>
+        <Pos X = "341" Y = "99"/>
+        <Pos X = "340" Y = "99"/>
+        <Pos X = "346" Y = "99"/>
+        <Pos X = "347" Y = "100"/>
+        <Pos X = "347" Y = "101"/>
+        <Pos X = "347" Y = "102"/>
+        <Pos X = "347" Y = "103"/>
+        <Pos X = "347" Y = "104"/>
+        <Pos X = "346" Y = "104"/>
+        <Pos X = "346" Y = "103"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Helu" X = "359" Y = "110" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "356" Y = "111"/>
+      <FarmImprovements>
+        <Pos X = "357" Y = "109"/>
+        <Pos X = "357" Y = "110"/>
+        <Pos X = "357" Y = "113"/>
+        <Pos X = "358" Y = "113"/>
+        <Pos X = "359" Y = "113"/>
+        <Pos X = "360" Y = "113"/>
+        <Pos X = "361" Y = "112"/>
+        <Pos X = "361" Y = "109"/>
+        <Pos X = "361" Y = "111"/>
+        <Pos X = "360" Y = "111"/>
+        <Pos X = "360" Y = "112"/>
+        <Pos X = "359" Y = "111"/>
+        <Pos X = "359" Y = "112"/>
+        <Pos X = "358" Y = "112"/>
+        <Pos X = "358" Y = "111"/>
+        <Pos X = "357" Y = "111"/>
+        <Pos X = "357" Y = "112"/>
+        <Pos X = "356" Y = "110"/>
+        <Pos X = "356" Y = "109"/>
+        <Pos X = "357" Y = "108"/>
+        <Pos X = "358" Y = "108"/>
+        <Pos X = "358" Y = "110"/>
+        <Pos X = "359" Y = "108"/>
+        <Pos X = "359" Y = "109"/>
+        <Pos X = "360" Y = "110"/>
+        <Pos X = "360" Y = "108"/>
+        <Pos X = "360" Y = "107"/>
+        <Pos X = "359" Y = "107"/>
+        <Pos X = "361" Y = "115"/>
+        <Pos X = "362" Y = "114"/>
+        <Pos X = "362" Y = "113"/>
+        <Pos X = "362" Y = "112"/>
+        <Pos X = "361" Y = "113"/>
+        <Pos X = "361" Y = "114"/>
+        <Pos X = "360" Y = "115"/>
+        <Pos X = "360" Y = "114"/>
+        <Pos X = "359" Y = "115"/>
+        <Pos X = "359" Y = "114"/>
+      </FarmImprovements>
+    </Settlement>
+  </CustomFaction>
+  <CustomFaction ID = "Min">
+    <BasedOn Faction = "Min" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Southern China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "200" YPos = "138" FactionImage = "OE_FE_FactionElement_Yue_01"/>
+    <FactionRules/>
+    <Capability Name = "Forest Combat Skill" Level = "20"/>
+    <Capability Name = "Naval Skill" Level = "15"/>
+    <Capability Name = "Boost Naval" Level = "20"/>
+    <Capability Name = "Poor Horses" Level = "15"/>
+    <Capability Name = "Reduce Military" Level = "20"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Farmers"/>
+    <Force X = "440" Y = "50" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Min Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
+      </Unit>
+    </Force>
+    <Force X = "435" Y = "74" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Force X = "426" Y = "61" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Settlement Name = "Kuaiji" X = "440" Y = "50" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "440" Y = "52"/>
+      <FarmImprovements>
+        <Pos X = "439" Y = "52"/>
+        <Pos X = "438" Y = "53"/>
+        <Pos X = "439" Y = "53"/>
+        <Pos X = "440" Y = "53"/>
+        <Pos X = "441" Y = "53"/>
+        <Pos X = "442" Y = "52"/>
+        <Pos X = "442" Y = "51"/>
+        <Pos X = "442" Y = "50"/>
+        <Pos X = "441" Y = "51"/>
+        <Pos X = "441" Y = "52"/>
+        <Pos X = "440" Y = "51"/>
+        <Pos X = "441" Y = "50"/>
+        <Pos X = "441" Y = "49"/>
+        <Pos X = "442" Y = "48"/>
+        <Pos X = "441" Y = "47"/>
+        <Pos X = "441" Y = "48"/>
+        <Pos X = "440" Y = "49"/>
+        <Pos X = "439" Y = "51"/>
+        <Pos X = "438" Y = "51"/>
+        <Pos X = "439" Y = "50"/>
+        <Pos X = "439" Y = "49"/>
+        <Pos X = "440" Y = "48"/>
+        <Pos X = "440" Y = "47"/>
+        <Pos X = "439" Y = "47"/>
+        <Pos X = "439" Y = "48"/>
+        <Pos X = "438" Y = "49"/>
+        <Pos X = "438" Y = "47"/>
+        <Pos X = "437" Y = "50"/>
+        <Pos X = "437" Y = "56"/>
+        <Pos X = "437" Y = "55"/>
+        <Pos X = "439" Y = "54"/>
+        <Pos X = "438" Y = "54"/>
+        <Pos X = "440" Y = "55"/>
+        <Pos X = "441" Y = "54"/>
+        <Pos X = "441" Y = "55"/>
+        <Pos X = "443" Y = "56"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Shanyin" X = "435" Y = "74" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "436" Y = "77"/>
+      <FarmImprovements>
+        <Pos X = "436" Y = "76"/>
+        <Pos X = "433" Y = "77"/>
+        <Pos X = "434" Y = "77"/>
+        <Pos X = "435" Y = "77"/>
+        <Pos X = "437" Y = "76"/>
+        <Pos X = "437" Y = "75"/>
+        <Pos X = "438" Y = "74"/>
+        <Pos X = "437" Y = "73"/>
+        <Pos X = "437" Y = "74"/>
+        <Pos X = "436" Y = "75"/>
+        <Pos X = "435" Y = "75"/>
+        <Pos X = "435" Y = "76"/>
+        <Pos X = "434" Y = "76"/>
+        <Pos X = "433" Y = "76"/>
+        <Pos X = "433" Y = "75"/>
+        <Pos X = "432" Y = "75"/>
+        <Pos X = "434" Y = "75"/>
+        <Pos X = "434" Y = "74"/>
+        <Pos X = "433" Y = "74"/>
+        <Pos X = "432" Y = "74"/>
+        <Pos X = "433" Y = "73"/>
+        <Pos X = "434" Y = "73"/>
+        <Pos X = "435" Y = "73"/>
+        <Pos X = "436" Y = "74"/>
+        <Pos X = "436" Y = "73"/>
+        <Pos X = "437" Y = "72"/>
+        <Pos X = "436" Y = "72"/>
+        <Pos X = "436" Y = "71"/>
+        <Pos X = "435" Y = "71"/>
+        <Pos X = "435" Y = "72"/>
+        <Pos X = "434" Y = "72"/>
+        <Pos X = "441" Y = "74"/>
+        <Pos X = "440" Y = "75"/>
+        <Pos X = "440" Y = "76"/>
+        <Pos X = "439" Y = "77"/>
+        <Pos X = "439" Y = "78"/>
+        <Pos X = "438" Y = "79"/>
+        <Pos X = "438" Y = "80"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="437" Y="74" />
-        <Pos X="433" Y="74" />
-        <Pos X="434" Y="76" />
+        <Pos X = "437" Y = "74"/>
+        <Pos X = "433" Y = "74"/>
+        <Pos X = "434" Y = "76"/>
       </ClearanceImprovements>
     </Settlement>
-    <Settlement Name="Gouwu" X="426" Y="61" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="426" Y="64" />
+    <Settlement Name = "Gouwu" X = "426" Y = "61" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "426" Y = "64"/>
       <FarmImprovements>
-        <Pos X="425" Y="63" />
-        <Pos X="425" Y="64" />
-        <Pos X="424" Y="63" />
-        <Pos X="424" Y="62" />
-        <Pos X="424" Y="61" />
-        <Pos X="424" Y="59" />
-        <Pos X="425" Y="58" />
-        <Pos X="426" Y="59" />
-        <Pos X="426" Y="60" />
-        <Pos X="425" Y="61" />
-        <Pos X="425" Y="62" />
-        <Pos X="426" Y="62" />
-        <Pos X="426" Y="63" />
-        <Pos X="427" Y="62" />
-        <Pos X="427" Y="63" />
-        <Pos X="428" Y="64" />
-        <Pos X="427" Y="64" />
-        <Pos X="428" Y="62" />
-        <Pos X="427" Y="61" />
-        <Pos X="427" Y="60" />
-        <Pos X="427" Y="59" />
-        <Pos X="427" Y="58" />
-        <Pos X="428" Y="58" />
-        <Pos X="428" Y="59" />
-        <Pos X="429" Y="60" />
-        <Pos X="428" Y="61" />
-        <Pos X="428" Y="60" />
+        <Pos X = "425" Y = "63"/>
+        <Pos X = "425" Y = "64"/>
+        <Pos X = "424" Y = "63"/>
+        <Pos X = "424" Y = "62"/>
+        <Pos X = "424" Y = "61"/>
+        <Pos X = "424" Y = "59"/>
+        <Pos X = "425" Y = "58"/>
+        <Pos X = "426" Y = "59"/>
+        <Pos X = "426" Y = "60"/>
+        <Pos X = "425" Y = "61"/>
+        <Pos X = "425" Y = "62"/>
+        <Pos X = "426" Y = "62"/>
+        <Pos X = "426" Y = "63"/>
+        <Pos X = "427" Y = "62"/>
+        <Pos X = "427" Y = "63"/>
+        <Pos X = "428" Y = "64"/>
+        <Pos X = "427" Y = "64"/>
+        <Pos X = "428" Y = "62"/>
+        <Pos X = "427" Y = "61"/>
+        <Pos X = "427" Y = "60"/>
+        <Pos X = "427" Y = "59"/>
+        <Pos X = "427" Y = "58"/>
+        <Pos X = "428" Y = "58"/>
+        <Pos X = "428" Y = "59"/>
+        <Pos X = "429" Y = "60"/>
+        <Pos X = "428" Y = "61"/>
+        <Pos X = "428" Y = "60"/>
+        <Pos X = "427" Y = "67"/>
+        <Pos X = "426" Y = "67"/>
+        <Pos X = "425" Y = "67"/>
+        <Pos X = "424" Y = "67"/>
+        <Pos X = "425" Y = "66"/>
+        <Pos X = "424" Y = "65"/>
+        <Pos X = "424" Y = "64"/>
+        <Pos X = "422" Y = "65"/>
+        <Pos X = "422" Y = "64"/>
+        <Pos X = "421" Y = "63"/>
+        <Pos X = "422" Y = "63"/>
       </FarmImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Shu">
-    <BasedOn Faction="Shu" AltSymbol="" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Western China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="200" YPos="100" FactionImage="OE_FE_FactionElement_Shu_01" />
-    <FactionRules />
-    <Capability Name="Boost Craft" Level="15" />
-    <Capability Name="Reduce Thought" Level="15" />
-    <Capability Name="Cavalry Skill" Level="20" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Farmers" />
-    <Force X="440" Y="213" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Shu Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Shu">
+    <BasedOn Faction = "Shu" AltSymbol = "" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Western China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "200" YPos = "100" FactionImage = "OE_FE_FactionElement_Shu_01"/>
+    <FactionRules/>
+    <Capability Name = "Boost Craft" Level = "15"/>
+    <Capability Name = "Reduce Thought" Level = "15"/>
+    <Capability Name = "Cavalry Skill" Level = "20"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Farmers"/>
+    <Force X = "440" Y = "213" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Shu Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="456" Y="211" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "456" Y = "211" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="426" Y="187" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "426" Y = "187" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Pi" X="440" Y="213" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="438" Y="215" />
+    <Settlement Name = "Pi" X = "440" Y = "213" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "438" Y = "215"/>
       <FarmImprovements>
-        <Pos X="439" Y="215" />
-        <Pos X="439" Y="216" />
-        <Pos X="440" Y="216" />
-        <Pos X="441" Y="216" />
-        <Pos X="442" Y="216" />
-        <Pos X="442" Y="215" />
-        <Pos X="443" Y="214" />
-        <Pos X="442" Y="213" />
-        <Pos X="443" Y="212" />
-        <Pos X="442" Y="211" />
-        <Pos X="442" Y="210" />
-        <Pos X="441" Y="211" />
-        <Pos X="441" Y="212" />
-        <Pos X="440" Y="211" />
-        <Pos X="439" Y="211" />
-        <Pos X="440" Y="212" />
-        <Pos X="439" Y="213" />
-        <Pos X="440" Y="214" />
-        <Pos X="440" Y="215" />
-        <Pos X="441" Y="215" />
-        <Pos X="442" Y="214" />
-        <Pos X="441" Y="214" />
-        <Pos X="441" Y="213" />
-        <Pos X="441" Y="210" />
-        <Pos X="440" Y="210" />
-        <Pos X="439" Y="210" />
-        <Pos X="438" Y="211" />
-        <Pos X="438" Y="212" />
-        <Pos X="437" Y="213" />
-        <Pos X="438" Y="214" />
-        <Pos X="439" Y="214" />
-        <Pos X="438" Y="213" />
-        <Pos X="439" Y="212" />
+        <Pos X = "439" Y = "215"/>
+        <Pos X = "439" Y = "216"/>
+        <Pos X = "440" Y = "216"/>
+        <Pos X = "441" Y = "216"/>
+        <Pos X = "442" Y = "216"/>
+        <Pos X = "442" Y = "215"/>
+        <Pos X = "443" Y = "214"/>
+        <Pos X = "442" Y = "213"/>
+        <Pos X = "443" Y = "212"/>
+        <Pos X = "442" Y = "211"/>
+        <Pos X = "442" Y = "210"/>
+        <Pos X = "441" Y = "211"/>
+        <Pos X = "441" Y = "212"/>
+        <Pos X = "440" Y = "211"/>
+        <Pos X = "439" Y = "211"/>
+        <Pos X = "440" Y = "212"/>
+        <Pos X = "439" Y = "213"/>
+        <Pos X = "440" Y = "214"/>
+        <Pos X = "440" Y = "215"/>
+        <Pos X = "441" Y = "215"/>
+        <Pos X = "442" Y = "214"/>
+        <Pos X = "441" Y = "214"/>
+        <Pos X = "441" Y = "213"/>
+        <Pos X = "441" Y = "210"/>
+        <Pos X = "440" Y = "210"/>
+        <Pos X = "439" Y = "210"/>
+        <Pos X = "438" Y = "211"/>
+        <Pos X = "438" Y = "212"/>
+        <Pos X = "437" Y = "213"/>
+        <Pos X = "438" Y = "214"/>
+        <Pos X = "439" Y = "214"/>
+        <Pos X = "438" Y = "213"/>
+        <Pos X = "439" Y = "212"/>
+        <Pos X = "445" Y = "210"/>
+        <Pos X = "445" Y = "211"/>
+        <Pos X = "446" Y = "212"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="441" Y="212" />
+        <Pos X = "441" Y = "212"/>
       </ClearanceImprovements>
     </Settlement>
-    <Settlement Name="Chengdu" X="456" Y="211" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="454" Y="210" />
+    <Settlement Name = "Chengdu" X = "456" Y = "211" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "454" Y = "210"/>
       <FarmImprovements>
-        <Pos X="454" Y="211" />
-        <Pos X="455" Y="210" />
-        <Pos X="454" Y="213" />
-        <Pos X="454" Y="212" />
-        <Pos X="455" Y="212" />
-        <Pos X="455" Y="213" />
-        <Pos X="456" Y="212" />
-        <Pos X="456" Y="213" />
-        <Pos X="457" Y="212" />
-        <Pos X="457" Y="213" />
-        <Pos X="458" Y="214" />
-        <Pos X="458" Y="212" />
-        <Pos X="459" Y="212" />
-        <Pos X="459" Y="211" />
-        <Pos X="458" Y="211" />
-        <Pos X="457" Y="211" />
-        <Pos X="457" Y="210" />
-        <Pos X="458" Y="210" />
-        <Pos X="457" Y="209" />
-        <Pos X="458" Y="208" />
-        <Pos X="457" Y="208" />
-        <Pos X="456" Y="209" />
-        <Pos X="456" Y="210" />
-        <Pos X="455" Y="211" />
-        <Pos X="455" Y="209" />
-        <Pos X="456" Y="208" />
-        <Pos X="455" Y="208" />
-        <Pos X="454" Y="209" />
+        <Pos X = "454" Y = "211"/>
+        <Pos X = "455" Y = "210"/>
+        <Pos X = "454" Y = "213"/>
+        <Pos X = "454" Y = "212"/>
+        <Pos X = "455" Y = "212"/>
+        <Pos X = "455" Y = "213"/>
+        <Pos X = "456" Y = "212"/>
+        <Pos X = "456" Y = "213"/>
+        <Pos X = "457" Y = "212"/>
+        <Pos X = "457" Y = "213"/>
+        <Pos X = "458" Y = "214"/>
+        <Pos X = "458" Y = "212"/>
+        <Pos X = "459" Y = "212"/>
+        <Pos X = "459" Y = "211"/>
+        <Pos X = "458" Y = "211"/>
+        <Pos X = "457" Y = "211"/>
+        <Pos X = "457" Y = "210"/>
+        <Pos X = "458" Y = "210"/>
+        <Pos X = "457" Y = "209"/>
+        <Pos X = "458" Y = "208"/>
+        <Pos X = "457" Y = "208"/>
+        <Pos X = "456" Y = "209"/>
+        <Pos X = "456" Y = "210"/>
+        <Pos X = "455" Y = "211"/>
+        <Pos X = "455" Y = "209"/>
+        <Pos X = "456" Y = "208"/>
+        <Pos X = "455" Y = "208"/>
+        <Pos X = "454" Y = "209"/>
+        <Pos X = "462" Y = "211"/>
+        <Pos X = "462" Y = "212"/>
+        <Pos X = "461" Y = "213"/>
+        <Pos X = "461" Y = "214"/>
+        <Pos X = "460" Y = "215"/>
+        <Pos X = "460" Y = "216"/>
+        <Pos X = "460" Y = "214"/>
+        <Pos X = "461" Y = "212"/>
+        <Pos X = "461" Y = "211"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Zitong" X="426" Y="187" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="424" Y="186" />
+    <Settlement Name = "Zitong" X = "426" Y = "187" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "424" Y = "186"/>
       <FarmImprovements>
-        <Pos X="425" Y="186" />
-        <Pos X="426" Y="190" />
-        <Pos X="427" Y="190" />
-        <Pos X="428" Y="190" />
-        <Pos X="428" Y="189" />
-        <Pos X="429" Y="188" />
-        <Pos X="429" Y="187" />
-        <Pos X="429" Y="186" />
-        <Pos X="428" Y="187" />
-        <Pos X="428" Y="188" />
-        <Pos X="427" Y="189" />
-        <Pos X="426" Y="189" />
-        <Pos X="427" Y="188" />
-        <Pos X="427" Y="187" />
-        <Pos X="428" Y="186" />
-        <Pos X="428" Y="185" />
-        <Pos X="428" Y="184" />
-        <Pos X="427" Y="185" />
-        <Pos X="427" Y="186" />
-        <Pos X="426" Y="186" />
-        <Pos X="425" Y="187" />
-        <Pos X="426" Y="188" />
-        <Pos X="425" Y="189" />
-        <Pos X="425" Y="188" />
-        <Pos X="424" Y="187" />
-        <Pos X="423" Y="187" />
-        <Pos X="424" Y="185" />
-        <Pos X="425" Y="185" />
-        <Pos X="426" Y="185" />
-        <Pos X="427" Y="184" />
-        <Pos X="426" Y="184" />
-        <Pos X="425" Y="184" />
+        <Pos X = "425" Y = "186"/>
+        <Pos X = "426" Y = "190"/>
+        <Pos X = "427" Y = "190"/>
+        <Pos X = "428" Y = "190"/>
+        <Pos X = "428" Y = "189"/>
+        <Pos X = "429" Y = "188"/>
+        <Pos X = "429" Y = "187"/>
+        <Pos X = "429" Y = "186"/>
+        <Pos X = "428" Y = "187"/>
+        <Pos X = "428" Y = "188"/>
+        <Pos X = "427" Y = "189"/>
+        <Pos X = "426" Y = "189"/>
+        <Pos X = "427" Y = "188"/>
+        <Pos X = "427" Y = "187"/>
+        <Pos X = "428" Y = "186"/>
+        <Pos X = "428" Y = "185"/>
+        <Pos X = "428" Y = "184"/>
+        <Pos X = "427" Y = "185"/>
+        <Pos X = "427" Y = "186"/>
+        <Pos X = "426" Y = "186"/>
+        <Pos X = "425" Y = "187"/>
+        <Pos X = "426" Y = "188"/>
+        <Pos X = "425" Y = "189"/>
+        <Pos X = "425" Y = "188"/>
+        <Pos X = "424" Y = "187"/>
+        <Pos X = "423" Y = "187"/>
+        <Pos X = "424" Y = "185"/>
+        <Pos X = "425" Y = "185"/>
+        <Pos X = "426" Y = "185"/>
+        <Pos X = "427" Y = "184"/>
+        <Pos X = "426" Y = "184"/>
+        <Pos X = "425" Y = "184"/>
+        <Pos X = "430" Y = "187"/>
+        <Pos X = "430" Y = "188"/>
+        <Pos X = "429" Y = "189"/>
+        <Pos X = "430" Y = "190"/>
       </FarmImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Ba">
-    <BasedOn Faction="Ba" AltSymbol="" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" />
-    <Start Money="100000" LeadersIncome="0" Era="0" PreferredClimate="Western China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="224" YPos="112" FactionImage="OE_FE_FactionElement_Ba_01" />
-    <FactionRules />
-    <Capability Name="Reduce Agriculture" Level="15" />
-    <Capability Name="Reduce Culture" Level="20" />
-    <Capability Name="Reduce Military" Level="25" />
-    <Capability Name="Boost Economy" Level="25" />
-    <Capability Name="Reduced Noble Recruitment" Level="50" />
-    <Capability Name="Decreased Wall Cost" Level="50" />
-    <Capability Name="Capture Tech" Level="50" />
-    <Capability Name="Increase Trade" Level="1" />
-    <Tech Item="Agriculture" />
-    <AIHints></AIHints>
-    <Tag Name="Farmers" />
-    <Force X="493" Y="164" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Ba Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Ba">
+    <BasedOn Faction = "Ba" AltSymbol = "" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "0" PreferredClimate = "Western China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "224" YPos = "112" FactionImage = "OE_FE_FactionElement_Ba_01"/>
+    <FactionRules/>
+    <Capability Name = "Reduce Agriculture" Level = "15"/>
+    <Capability Name = "Reduce Culture" Level = "20"/>
+    <Capability Name = "Reduce Military" Level = "25"/>
+    <Capability Name = "Boost Economy" Level = "25"/>
+    <Capability Name = "Reduced Noble Recruitment" Level = "50"/>
+    <Capability Name = "Decreased Wall Cost" Level = "50"/>
+    <Capability Name = "Capture Tech" Level = "50"/>
+    <Capability Name = "Increase Trade" Level = "1"/>
+    <Tech Item = "Agriculture"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Farmers"/>
+    <Force X = "493" Y = "164" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Ba Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="525" Y="150" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "525" Y = "150" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="544" Y="161" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "544" Y = "161" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Yicheng" X="493" Y="164" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="495" Y="163" />
+    <Settlement Name = "Yicheng" X = "493" Y = "164" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "495" Y = "163"/>
       <FarmImprovements>
-        <Pos X="495" Y="164" />
-        <Pos X="494" Y="167" />
-        <Pos X="493" Y="167" />
-        <Pos X="493" Y="166" />
-        <Pos X="494" Y="166" />
-        <Pos X="493" Y="165" />
-        <Pos X="494" Y="165" />
-        <Pos X="495" Y="165" />
-        <Pos X="494" Y="163" />
-        <Pos X="495" Y="162" />
-        <Pos X="494" Y="161" />
-        <Pos X="494" Y="162" />
-        <Pos X="493" Y="163" />
-        <Pos X="492" Y="163" />
-        <Pos X="492" Y="164" />
-        <Pos X="492" Y="165" />
-        <Pos X="492" Y="166" />
-        <Pos X="491" Y="166" />
-        <Pos X="491" Y="165" />
-        <Pos X="490" Y="165" />
-        <Pos X="491" Y="164" />
-        <Pos X="490" Y="163" />
-        <Pos X="491" Y="162" />
-        <Pos X="491" Y="163" />
-        <Pos X="492" Y="162" />
-        <Pos X="491" Y="161" />
-        <Pos X="492" Y="161" />
-        <Pos X="493" Y="162" />
-        <Pos X="493" Y="161" />
+        <Pos X = "495" Y = "164"/>
+        <Pos X = "494" Y = "167"/>
+        <Pos X = "493" Y = "167"/>
+        <Pos X = "493" Y = "166"/>
+        <Pos X = "494" Y = "166"/>
+        <Pos X = "493" Y = "165"/>
+        <Pos X = "494" Y = "165"/>
+        <Pos X = "495" Y = "165"/>
+        <Pos X = "494" Y = "163"/>
+        <Pos X = "495" Y = "162"/>
+        <Pos X = "494" Y = "161"/>
+        <Pos X = "494" Y = "162"/>
+        <Pos X = "493" Y = "163"/>
+        <Pos X = "492" Y = "163"/>
+        <Pos X = "492" Y = "164"/>
+        <Pos X = "492" Y = "165"/>
+        <Pos X = "492" Y = "166"/>
+        <Pos X = "491" Y = "166"/>
+        <Pos X = "491" Y = "165"/>
+        <Pos X = "490" Y = "165"/>
+        <Pos X = "491" Y = "164"/>
+        <Pos X = "490" Y = "163"/>
+        <Pos X = "491" Y = "162"/>
+        <Pos X = "491" Y = "163"/>
+        <Pos X = "492" Y = "162"/>
+        <Pos X = "491" Y = "161"/>
+        <Pos X = "492" Y = "161"/>
+        <Pos X = "493" Y = "162"/>
+        <Pos X = "493" Y = "161"/>
+        <Pos X = "494" Y = "170"/>
+        <Pos X = "491" Y = "169"/>
+        <Pos X = "490" Y = "167"/>
+        <Pos X = "490" Y = "166"/>
+        <Pos X = "489" Y = "166"/>
+        <Pos X = "489" Y = "167"/>
+        <Pos X = "488" Y = "163"/>
+        <Pos X = "489" Y = "161"/>
+        <Pos X = "489" Y = "162"/>
+        <Pos X = "490" Y = "162"/>
+        <Pos X = "490" Y = "161"/>
+        <Pos X = "488" Y = "161"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="494" Y="166" />
-        <Pos X="494" Y="164" />
+        <Pos X = "494" Y = "166"/>
+        <Pos X = "494" Y = "164"/>
       </ClearanceImprovements>
     </Settlement>
-    <Settlement Name="Zhi" X="525" Y="150" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="526" Y="153" />
+    <Settlement Name = "Zhi" X = "525" Y = "150" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "526" Y = "153"/>
       <FarmImprovements>
-        <Pos X="526" Y="149" />
-        <Pos X="527" Y="150" />
-        <Pos X="526" Y="151" />
-        <Pos X="526" Y="152" />
-        <Pos X="525" Y="151" />
-        <Pos X="524" Y="151" />
-        <Pos X="524" Y="150" />
-        <Pos X="523" Y="150" />
-        <Pos X="523" Y="149" />
-        <Pos X="524" Y="148" />
-        <Pos X="524" Y="149" />
-        <Pos X="525" Y="149" />
-        <Pos X="526" Y="150" />
-        <Pos X="524" Y="153" />
-        <Pos X="523" Y="152" />
-        <Pos X="522" Y="150" />
-        <Pos X="522" Y="149" />
-        <Pos X="523" Y="148" />
-        <Pos X="523" Y="147" />
-        <Pos X="524" Y="147" />
-        <Pos X="525" Y="148" />
-        <Pos X="525" Y="147" />
-        <Pos X="526" Y="148" />
-        <Pos X="526" Y="147" />
-        <Pos X="527" Y="148" />
-        <Pos X="527" Y="149" />
-        <Pos X="527" Y="152" />
+        <Pos X = "526" Y = "149"/>
+        <Pos X = "527" Y = "150"/>
+        <Pos X = "526" Y = "151"/>
+        <Pos X = "526" Y = "152"/>
+        <Pos X = "525" Y = "151"/>
+        <Pos X = "524" Y = "151"/>
+        <Pos X = "524" Y = "150"/>
+        <Pos X = "523" Y = "150"/>
+        <Pos X = "523" Y = "149"/>
+        <Pos X = "524" Y = "148"/>
+        <Pos X = "524" Y = "149"/>
+        <Pos X = "525" Y = "149"/>
+        <Pos X = "526" Y = "150"/>
+        <Pos X = "524" Y = "153"/>
+        <Pos X = "523" Y = "152"/>
+        <Pos X = "522" Y = "150"/>
+        <Pos X = "522" Y = "149"/>
+        <Pos X = "523" Y = "148"/>
+        <Pos X = "523" Y = "147"/>
+        <Pos X = "524" Y = "147"/>
+        <Pos X = "525" Y = "148"/>
+        <Pos X = "525" Y = "147"/>
+        <Pos X = "526" Y = "148"/>
+        <Pos X = "526" Y = "147"/>
+        <Pos X = "527" Y = "148"/>
+        <Pos X = "527" Y = "149"/>
+        <Pos X = "527" Y = "152"/>
+        <Pos X = "521" Y = "153"/>
+        <Pos X = "521" Y = "154"/>
+        <Pos X = "522" Y = "154"/>
+        <Pos X = "524" Y = "155"/>
+        <Pos X = "527" Y = "156"/>
+        <Pos X = "528" Y = "156"/>
+        <Pos X = "528" Y = "154"/>
+        <Pos X = "528" Y = "153"/>
+        <Pos X = "527" Y = "153"/>
+        <Pos X = "527" Y = "154"/>
+        <Pos X = "531" Y = "150"/>
+        <Pos X = "530" Y = "148"/>
+        <Pos X = "529" Y = "149"/>
+        <Pos X = "528" Y = "149"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="525" Y="148" />
-        <Pos X="526" Y="148" />
+        <Pos X = "525" Y = "148"/>
+        <Pos X = "526" Y = "148"/>
       </ClearanceImprovements>
     </Settlement>
-    <Settlement Name="Jiangzhou" X="544" Y="161" Template="Chinese City" Architecture="Chinese">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="546" Y="163" />
+    <Settlement Name = "Jiangzhou" X = "544" Y = "161" Template = "Chinese City" Architecture = "Chinese">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "546" Y = "163"/>
       <FarmImprovements>
-        <Pos X="545" Y="163" />
-        <Pos X="546" Y="162" />
-        <Pos X="543" Y="164" />
-        <Pos X="544" Y="164" />
-        <Pos X="544" Y="163" />
-        <Pos X="546" Y="164" />
-        <Pos X="547" Y="162" />
-        <Pos X="546" Y="161" />
-        <Pos X="547" Y="160" />
-        <Pos X="546" Y="160" />
-        <Pos X="545" Y="159" />
-        <Pos X="546" Y="158" />
-        <Pos X="545" Y="158" />
-        <Pos X="544" Y="159" />
-        <Pos X="545" Y="160" />
-        <Pos X="545" Y="161" />
-        <Pos X="545" Y="162" />
-        <Pos X="544" Y="162" />
-        <Pos X="543" Y="163" />
-        <Pos X="543" Y="162" />
-        <Pos X="543" Y="161" />
-        <Pos X="544" Y="160" />
-        <Pos X="543" Y="159" />
-        <Pos X="544" Y="158" />
-        <Pos X="543" Y="158" />
-        <Pos X="542" Y="159" />
-        <Pos X="543" Y="160" />
-        <Pos X="542" Y="161" />
+        <Pos X = "545" Y = "163"/>
+        <Pos X = "546" Y = "162"/>
+        <Pos X = "543" Y = "164"/>
+        <Pos X = "544" Y = "164"/>
+        <Pos X = "544" Y = "163"/>
+        <Pos X = "546" Y = "164"/>
+        <Pos X = "547" Y = "162"/>
+        <Pos X = "546" Y = "161"/>
+        <Pos X = "547" Y = "160"/>
+        <Pos X = "546" Y = "160"/>
+        <Pos X = "545" Y = "159"/>
+        <Pos X = "546" Y = "158"/>
+        <Pos X = "545" Y = "158"/>
+        <Pos X = "544" Y = "159"/>
+        <Pos X = "545" Y = "160"/>
+        <Pos X = "545" Y = "161"/>
+        <Pos X = "545" Y = "162"/>
+        <Pos X = "544" Y = "162"/>
+        <Pos X = "543" Y = "163"/>
+        <Pos X = "543" Y = "162"/>
+        <Pos X = "543" Y = "161"/>
+        <Pos X = "544" Y = "160"/>
+        <Pos X = "543" Y = "159"/>
+        <Pos X = "544" Y = "158"/>
+        <Pos X = "543" Y = "158"/>
+        <Pos X = "542" Y = "159"/>
+        <Pos X = "543" Y = "160"/>
+        <Pos X = "542" Y = "161"/>
+        <Pos X = "546" Y = "167"/>
+        <Pos X = "547" Y = "166"/>
+        <Pos X = "548" Y = "165"/>
+        <Pos X = "548" Y = "164"/>
+        <Pos X = "547" Y = "163"/>
+        <Pos X = "547" Y = "164"/>
+        <Pos X = "546" Y = "165"/>
+        <Pos X = "546" Y = "166"/>
+        <Pos X = "545" Y = "167"/>
+        <Pos X = "545" Y = "166"/>
+        <Pos X = "543" Y = "167"/>
+        <Pos X = "542" Y = "167"/>
+        <Pos X = "543" Y = "165"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="543" Y="162" />
-        <Pos X="542" Y="161" />
-        <Pos X="545" Y="159" />
-      </ClearanceImprovements>
-    </Settlement>
-  </CustomFaction>
-  <CustomFaction ID="Rong">
-    <BasedOn Faction="Rong" AltSymbol="" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" Music="Mongol" PortraitSet="Mongolian" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Western China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="268" YPos="97" FactionImage="OE_FE_FactionElement_DogRong_01" />
-    <FactionRules />
-    <Capability Name="Reduce Power" Level="20" />
-    <Capability Name="Reduce Knowledge" Level="15" />
-    <Capability Name="Reduce Thought" Level="10" />
-    <Capability Name="Boost Craft" Level="25" />
-    <Capability Name="Increase General Virtue" Level="2" />
-    <Capability Name="Bow Skill" Level="25" />
-    <Capability Name="Looting Bonus" Level="50" />
-    <Capability Name="Reduced Noble Recruitment" Level="25" />
-    <Tech Item="Pastoralism" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Herders" />
-    <Tag Name="No Crossbows" />
-    <Force X="589" Y="225" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Rong Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
-      </Unit>
-    </Force>
-    <Force X="629" Y="201" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Force X="606" Y="192" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Settlement Name="Weirong" X="589" Y="225" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="591" Y="227" />
-      <FarmImprovements>
-        <Pos X="590" Y="227" />
-        <Pos X="591" Y="226" />
-        <Pos X="588" Y="228" />
-        <Pos X="587" Y="227" />
-        <Pos X="587" Y="226" />
-        <Pos X="587" Y="225" />
-        <Pos X="588" Y="226" />
-        <Pos X="588" Y="227" />
-        <Pos X="589" Y="228" />
-        <Pos X="590" Y="228" />
-        <Pos X="589" Y="227" />
-        <Pos X="591" Y="228" />
-        <Pos X="592" Y="226" />
-        <Pos X="592" Y="225" />
-        <Pos X="592" Y="224" />
-        <Pos X="591" Y="225" />
-        <Pos X="591" Y="224" />
-        <Pos X="590" Y="225" />
-        <Pos X="590" Y="226" />
-        <Pos X="589" Y="226" />
-        <Pos X="588" Y="225" />
-        <Pos X="589" Y="224" />
-        <Pos X="588" Y="224" />
-        <Pos X="587" Y="223" />
-        <Pos X="588" Y="223" />
-        <Pos X="588" Y="222" />
-        <Pos X="589" Y="222" />
-        <Pos X="589" Y="223" />
-        <Pos X="590" Y="224" />
-        <Pos X="590" Y="223" />
-        <Pos X="590" Y="222" />
-        <Pos X="591" Y="223" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Qiangfang" X="629" Y="201" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="629" Y="204" />
-      <FarmImprovements>
-        <Pos X="628" Y="203" />
-        <Pos X="629" Y="203" />
-        <Pos X="631" Y="199" />
-        <Pos X="632" Y="200" />
-        <Pos X="631" Y="201" />
-        <Pos X="632" Y="202" />
-        <Pos X="631" Y="203" />
-        <Pos X="631" Y="204" />
-        <Pos X="630" Y="204" />
-        <Pos X="628" Y="204" />
-        <Pos X="627" Y="202" />
-        <Pos X="626" Y="201" />
-        <Pos X="627" Y="200" />
-        <Pos X="627" Y="199" />
-        <Pos X="628" Y="198" />
-        <Pos X="628" Y="199" />
-        <Pos X="629" Y="198" />
-        <Pos X="629" Y="199" />
-        <Pos X="630" Y="198" />
-        <Pos X="630" Y="199" />
-        <Pos X="631" Y="200" />
-        <Pos X="630" Y="201" />
-        <Pos X="631" Y="202" />
-        <Pos X="630" Y="203" />
-        <Pos X="630" Y="202" />
-        <Pos X="629" Y="202" />
-        <Pos X="628" Y="202" />
-        <Pos X="627" Y="201" />
-        <Pos X="628" Y="201" />
-        <Pos X="628" Y="200" />
-        <Pos X="629" Y="200" />
-        <Pos X="630" Y="200" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Yiqu" X="606" Y="192" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="606" Y="194" />
-      <FarmImprovements>
-        <Pos X="607" Y="194" />
-        <Pos X="604" Y="195" />
-        <Pos X="604" Y="194" />
-        <Pos X="603" Y="193" />
-        <Pos X="603" Y="192" />
-        <Pos X="603" Y="191" />
-        <Pos X="604" Y="190" />
-        <Pos X="604" Y="189" />
-        <Pos X="605" Y="190" />
-        <Pos X="605" Y="189" />
-        <Pos X="606" Y="190" />
-        <Pos X="606" Y="189" />
-        <Pos X="607" Y="190" />
-        <Pos X="607" Y="189" />
-        <Pos X="608" Y="190" />
-        <Pos X="608" Y="191" />
-        <Pos X="609" Y="192" />
-        <Pos X="608" Y="193" />
-        <Pos X="608" Y="194" />
-        <Pos X="607" Y="195" />
-        <Pos X="606" Y="195" />
-        <Pos X="605" Y="195" />
-        <Pos X="605" Y="194" />
-        <Pos X="604" Y="193" />
-        <Pos X="604" Y="192" />
-        <Pos X="604" Y="191" />
-        <Pos X="605" Y="192" />
-        <Pos X="605" Y="191" />
-        <Pos X="605" Y="193" />
-        <Pos X="606" Y="193" />
-        <Pos X="607" Y="192" />
-        <Pos X="606" Y="191" />
-        <Pos X="607" Y="191" />
-        <Pos X="607" Y="193" />
-        <Pos X="608" Y="192" />
-      </FarmImprovements>
-    </Settlement>
-  </CustomFaction>
-  <CustomFaction ID="Di">
-    <BasedOn Faction="Di" AltSymbol="" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" Music="Mongol" PortraitSet="Mongolian" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Northern China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="305" YPos="117" FactionImage="OE_FE_FactionElement_WhiteDi_01" />
-    <FactionRules />
-    <Capability Name="Infantry Skill" Level="15" />
-    <Capability Name="Bow Skill" Level="10" />
-    <Capability Name="Chariot Skill" Level="5" />
-    <Capability Name="NewLeaderVirtue" Level="3" />
-    <Capability Name="AgriculturalProduction" Level="10" />
-    <Capability Name="Character Armor" Level="10" />
-    <Tech Item="Pastoralism" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Herders" />
-    <Tag Name="No Crossbows" />
-    <Force X="670" Y="141" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Di Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
-      </Unit>
-    </Force>
-    <Force X="660" Y="111" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Force X="643" Y="130" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Settlement Name="PingShan" X="670" Y="141" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="670" Y="143" />
-      <FarmImprovements>
-        <Pos X="669" Y="143" />
-        <Pos X="669" Y="144" />
-        <Pos X="668" Y="143" />
-        <Pos X="668" Y="142" />
-        <Pos X="668" Y="141" />
-        <Pos X="669" Y="140" />
-        <Pos X="669" Y="139" />
-        <Pos X="669" Y="138" />
-        <Pos X="670" Y="138" />
-        <Pos X="670" Y="139" />
-        <Pos X="670" Y="140" />
-        <Pos X="669" Y="141" />
-        <Pos X="669" Y="142" />
-        <Pos X="670" Y="142" />
-        <Pos X="670" Y="144" />
-        <Pos X="671" Y="144" />
-        <Pos X="671" Y="143" />
-        <Pos X="672" Y="144" />
-        <Pos X="672" Y="143" />
-        <Pos X="673" Y="142" />
-        <Pos X="673" Y="141" />
-        <Pos X="673" Y="140" />
-        <Pos X="672" Y="139" />
-        <Pos X="672" Y="138" />
-        <Pos X="671" Y="138" />
-        <Pos X="671" Y="139" />
-        <Pos X="672" Y="140" />
-        <Pos X="672" Y="141" />
-        <Pos X="672" Y="142" />
-        <Pos X="671" Y="141" />
-        <Pos X="671" Y="142" />
-        <Pos X="671" Y="140" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Lingshou" X="660" Y="111" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="660" Y="114" />
-      <FarmImprovements>
-        <Pos X="659" Y="113" />
-        <Pos X="661" Y="114" />
-        <Pos X="661" Y="113" />
-        <Pos X="662" Y="113" />
-        <Pos X="663" Y="112" />
-        <Pos X="663" Y="111" />
-        <Pos X="663" Y="110" />
-        <Pos X="662" Y="111" />
-        <Pos X="662" Y="112" />
-        <Pos X="661" Y="111" />
-        <Pos X="661" Y="112" />
-        <Pos X="660" Y="113" />
-        <Pos X="660" Y="112" />
-        <Pos X="659" Y="112" />
-        <Pos X="658" Y="112" />
-        <Pos X="658" Y="111" />
-        <Pos X="657" Y="111" />
-        <Pos X="658" Y="110" />
-        <Pos X="659" Y="110" />
-        <Pos X="658" Y="109" />
-        <Pos X="659" Y="108" />
-        <Pos X="659" Y="109" />
-        <Pos X="660" Y="108" />
-        <Pos X="660" Y="109" />
-        <Pos X="661" Y="108" />
-        <Pos X="661" Y="109" />
-        <Pos X="662" Y="110" />
-        <Pos X="661" Y="110" />
-        <Pos X="660" Y="110" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Dai" X="643" Y="130" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="643" Y="132" />
-      <FarmImprovements>
-        <Pos X="642" Y="132" />
-        <Pos X="641" Y="133" />
-        <Pos X="641" Y="132" />
-        <Pos X="640" Y="131" />
-        <Pos X="640" Y="130" />
-        <Pos X="640" Y="129" />
-        <Pos X="641" Y="130" />
-        <Pos X="641" Y="129" />
-        <Pos X="641" Y="127" />
-        <Pos X="642" Y="127" />
-        <Pos X="642" Y="129" />
-        <Pos X="642" Y="130" />
-        <Pos X="641" Y="131" />
-        <Pos X="642" Y="131" />
-        <Pos X="642" Y="133" />
-        <Pos X="643" Y="133" />
-        <Pos X="644" Y="132" />
-        <Pos X="644" Y="133" />
-        <Pos X="645" Y="132" />
-        <Pos X="645" Y="131" />
-        <Pos X="646" Y="130" />
-        <Pos X="645" Y="129" />
-        <Pos X="645" Y="128" />
-        <Pos X="644" Y="127" />
-        <Pos X="644" Y="128" />
-        <Pos X="643" Y="129" />
-        <Pos X="644" Y="129" />
-        <Pos X="645" Y="130" />
-        <Pos X="644" Y="131" />
-        <Pos X="643" Y="131" />
-        <Pos X="644" Y="130" />
-      </FarmImprovements>
-    </Settlement>
-  </CustomFaction>
-  <CustomFaction ID="Yi">
-    <BasedOn Faction="Yi" AltSymbol="" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" Music="Mongol" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Northern China" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="358" YPos="97" FactionImage="OE_FE_FactionElement_DongYi_01" />
-    <FactionRules />
-    <Capability Name="Bow Skill" Level="15" />
-    <Capability Name="Cavalry Skill" Level="25" />
-    <Capability Name="Capture Tech" Level="25" />
-    <Capability Name="Looting Bonus" Level="25" />
-    <Capability Name="Boost Power" Level="10" />
-    <Capability Name="Boost Military" Level="15" />
-    <Capability Name="Reduce Knowledge" Level="25" />
-    <Capability Name="Reduce Thought" Level="20" />
-    <Capability Name="Reduce Craft" Level="15" />
-    <Tech Item="Pastoralism" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Herders" />
-    <Tag Name="No Crossbows" />
-    <Force X="787" Y="224" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Yi Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
-      </Unit>
-    </Force>
-    <Force X="800" Y="203" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Force X="770" Y="202" Facing="30">
-      <Unit Type="WS Settlers" />
-    </Force>
-    <Settlement Name="Jiaodong" X="787" Y="224" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="180" Flocks="0" />
-      <Building Type="City Square" X="787" Y="226" />
-      <FarmImprovements>
-        <Pos X="786" Y="226" />
-        <Pos X="786" Y="227" />
-        <Pos X="787" Y="227" />
-        <Pos X="788" Y="227" />
-        <Pos X="788" Y="226" />
-        <Pos X="789" Y="226" />
-        <Pos X="788" Y="225" />
-        <Pos X="789" Y="225" />
-        <Pos X="790" Y="224" />
-        <Pos X="789" Y="223" />
-        <Pos X="789" Y="224" />
-        <Pos X="788" Y="223" />
-        <Pos X="788" Y="224" />
-        <Pos X="787" Y="225" />
-        <Pos X="786" Y="225" />
-        <Pos X="785" Y="225" />
-        <Pos X="785" Y="226" />
-        <Pos X="784" Y="225" />
-        <Pos X="784" Y="224" />
-        <Pos X="785" Y="224" />
-        <Pos X="784" Y="223" />
-        <Pos X="785" Y="223" />
-        <Pos X="785" Y="222" />
-        <Pos X="786" Y="222" />
-        <Pos X="785" Y="221" />
-        <Pos X="786" Y="221" />
-        <Pos X="787" Y="222" />
-        <Pos X="787" Y="221" />
-        <Pos X="788" Y="222" />
-        <Pos X="788" Y="221" />
-        <Pos X="787" Y="223" />
-        <Pos X="786" Y="223" />
-        <Pos X="786" Y="224" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Jibei" X="800" Y="203" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="180" Flocks="0" />
-      <Building Type="City Square" X="800" Y="206" />
-      <FarmImprovements>
-        <Pos X="799" Y="205" />
-        <Pos X="799" Y="206" />
-        <Pos X="801" Y="206" />
-        <Pos X="802" Y="206" />
-        <Pos X="801" Y="205" />
-        <Pos X="802" Y="204" />
-        <Pos X="803" Y="202" />
-        <Pos X="802" Y="203" />
-        <Pos X="802" Y="201" />
-        <Pos X="802" Y="202" />
-        <Pos X="801" Y="203" />
-        <Pos X="801" Y="204" />
-        <Pos X="800" Y="205" />
-        <Pos X="800" Y="204" />
-        <Pos X="799" Y="204" />
-        <Pos X="798" Y="203" />
-        <Pos X="799" Y="203" />
-        <Pos X="799" Y="202" />
-        <Pos X="798" Y="202" />
-        <Pos X="798" Y="201" />
-        <Pos X="799" Y="201" />
-        <Pos X="799" Y="200" />
-        <Pos X="800" Y="200" />
-        <Pos X="800" Y="201" />
-        <Pos X="800" Y="202" />
-        <Pos X="801" Y="202" />
-        <Pos X="801" Y="201" />
-        <Pos X="802" Y="200" />
-        <Pos X="801" Y="200" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Langye" X="770" Y="202" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="180" Flocks="0" />
-      <Building Type="City Square" X="769" Y="205" />
-      <FarmImprovements>
-        <Pos X="769" Y="204" />
-        <Pos X="769" Y="202" />
-        <Pos X="768" Y="203" />
-        <Pos X="768" Y="204" />
-        <Pos X="767" Y="203" />
-        <Pos X="768" Y="202" />
-        <Pos X="767" Y="202" />
-        <Pos X="767" Y="201" />
-        <Pos X="768" Y="200" />
-        <Pos X="768" Y="199" />
-        <Pos X="769" Y="200" />
-        <Pos X="770" Y="200" />
-        <Pos X="770" Y="199" />
-        <Pos X="771" Y="200" />
-        <Pos X="771" Y="199" />
-        <Pos X="772" Y="200" />
-        <Pos X="772" Y="201" />
-        <Pos X="772" Y="202" />
-        <Pos X="771" Y="203" />
-        <Pos X="771" Y="205" />
-        <Pos X="772" Y="204" />
-        <Pos X="771" Y="204" />
-        <Pos X="770" Y="205" />
-        <Pos X="770" Y="204" />
-        <Pos X="769" Y="203" />
-        <Pos X="770" Y="203" />
-        <Pos X="771" Y="202" />
-        <Pos X="771" Y="201" />
-        <Pos X="770" Y="201" />
-        <Pos X="769" Y="201" />
-        <Pos X="768" Y="201" />
-      </FarmImprovements>
-      <ClearanceImprovements>
-        <Pos X="772" Y="202" />
-        <Pos X="768" Y="203" />
+        <Pos X = "543" Y = "162"/>
+        <Pos X = "542" Y = "161"/>
+        <Pos X = "545" Y = "159"/>
       </ClearanceImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Xiongnu">
-    <BasedOn Faction="Xiongnu" AltSymbol="" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" Music="Mongol" PortraitSet="Mongolian" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Central Asia" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="364" YPos="121" FactionImage="OE_FE_FactionElement_Xiongnu_01" />
-    <FactionRules />
-    <Capability Name="Chariot Skill" Level="15" />
-    <Capability Name="Cavalry Skill" Level="25" />
-    <Capability Name="Capture Tech" Level="25" />
-    <Capability Name="Looting Bonus" Level="25" />
-    <Capability Name="Boost Power" Level="15" />
-    <Capability Name="Boost Military" Level="10" />
-    <Capability Name="Reduce Knowledge" Level="25" />
-    <Capability Name="Reduce Thought" Level="20" />
-    <Capability Name="Reduce Craft" Level="15" />
-    <Tech Item="Pastoralism" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Herders" />
-    <Tag Name="No Crossbows" />
-    <Force X="799" Y="123" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Xiongnu Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Rong">
+    <BasedOn Faction = "Rong" AltSymbol = "" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true" Music = "Mongol" PortraitSet = "Mongolian"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Western China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "268" YPos = "97" FactionImage = "OE_FE_FactionElement_DogRong_01"/>
+    <FactionRules/>
+    <Capability Name = "Reduce Power" Level = "20"/>
+    <Capability Name = "Reduce Knowledge" Level = "15"/>
+    <Capability Name = "Reduce Thought" Level = "10"/>
+    <Capability Name = "Boost Craft" Level = "25"/>
+    <Capability Name = "Increase General Virtue" Level = "2"/>
+    <Capability Name = "Bow Skill" Level = "25"/>
+    <Capability Name = "Looting Bonus" Level = "50"/>
+    <Capability Name = "Reduced Noble Recruitment" Level = "25"/>
+    <Tech Item = "Pastoralism"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Herders"/>
+    <Tag Name = "No Crossbows"/>
+    <Force X = "589" Y = "225" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Rong Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="808" Y="97" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "629" Y = "201" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="821" Y="67" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "606" Y = "192" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Longshan" X="799" Y="123" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="797" Y="125" />
+    <Settlement Name = "Weirong" X = "589" Y = "225" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "591" Y = "227"/>
       <FarmImprovements>
-        <Pos X="798" Y="125" />
-        <Pos X="798" Y="126" />
-        <Pos X="799" Y="126" />
-        <Pos X="800" Y="126" />
-        <Pos X="801" Y="126" />
-        <Pos X="801" Y="125" />
-        <Pos X="802" Y="124" />
-        <Pos X="801" Y="123" />
-        <Pos X="802" Y="122" />
-        <Pos X="801" Y="121" />
-        <Pos X="801" Y="122" />
-        <Pos X="800" Y="123" />
-        <Pos X="801" Y="124" />
-        <Pos X="800" Y="125" />
-        <Pos X="799" Y="125" />
-        <Pos X="799" Y="124" />
-        <Pos X="800" Y="124" />
-        <Pos X="798" Y="123" />
-        <Pos X="798" Y="124" />
-        <Pos X="797" Y="124" />
-        <Pos X="797" Y="123" />
-        <Pos X="796" Y="123" />
-        <Pos X="797" Y="122" />
-        <Pos X="798" Y="122" />
-        <Pos X="799" Y="122" />
-        <Pos X="800" Y="122" />
-        <Pos X="800" Y="121" />
-        <Pos X="801" Y="120" />
-        <Pos X="800" Y="120" />
-        <Pos X="799" Y="121" />
-        <Pos X="798" Y="121" />
-        <Pos X="799" Y="120" />
-        <Pos X="798" Y="120" />
-        <Pos X="797" Y="121" />
-      </FarmImprovements>
-      <ClearanceImprovements>
-        <Pos X="801" Y="123" />
-      </ClearanceImprovements>
-    </Settlement>
-    <Settlement Name="Tongwancheng" X="808" Y="97" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="806" Y="98" />
-      <FarmImprovements>
-        <Pos X="807" Y="99" />
-        <Pos X="807" Y="98" />
-        <Pos X="806" Y="99" />
-        <Pos X="805" Y="97" />
-        <Pos X="806" Y="96" />
-        <Pos X="806" Y="97" />
-        <Pos X="807" Y="97" />
-        <Pos X="807" Y="96" />
-        <Pos X="806" Y="95" />
-        <Pos X="807" Y="94" />
-        <Pos X="807" Y="95" />
-        <Pos X="808" Y="94" />
-        <Pos X="808" Y="95" />
-        <Pos X="809" Y="94" />
-        <Pos X="809" Y="95" />
-        <Pos X="810" Y="94" />
-        <Pos X="810" Y="95" />
-        <Pos X="811" Y="96" />
-        <Pos X="811" Y="97" />
-        <Pos X="811" Y="98" />
-        <Pos X="810" Y="99" />
-        <Pos X="809" Y="99" />
-        <Pos X="810" Y="98" />
-        <Pos X="810" Y="97" />
-        <Pos X="810" Y="96" />
-        <Pos X="809" Y="97" />
-        <Pos X="809" Y="98" />
-        <Pos X="808" Y="99" />
-        <Pos X="808" Y="98" />
-        <Pos X="808" Y="96" />
-        <Pos X="809" Y="96" />
+        <Pos X = "590" Y = "227"/>
+        <Pos X = "591" Y = "226"/>
+        <Pos X = "588" Y = "228"/>
+        <Pos X = "587" Y = "227"/>
+        <Pos X = "587" Y = "226"/>
+        <Pos X = "587" Y = "225"/>
+        <Pos X = "588" Y = "226"/>
+        <Pos X = "588" Y = "227"/>
+        <Pos X = "589" Y = "228"/>
+        <Pos X = "590" Y = "228"/>
+        <Pos X = "589" Y = "227"/>
+        <Pos X = "591" Y = "228"/>
+        <Pos X = "592" Y = "226"/>
+        <Pos X = "592" Y = "225"/>
+        <Pos X = "592" Y = "224"/>
+        <Pos X = "591" Y = "225"/>
+        <Pos X = "591" Y = "224"/>
+        <Pos X = "590" Y = "225"/>
+        <Pos X = "590" Y = "226"/>
+        <Pos X = "589" Y = "226"/>
+        <Pos X = "588" Y = "225"/>
+        <Pos X = "589" Y = "224"/>
+        <Pos X = "588" Y = "224"/>
+        <Pos X = "587" Y = "223"/>
+        <Pos X = "588" Y = "223"/>
+        <Pos X = "588" Y = "222"/>
+        <Pos X = "589" Y = "222"/>
+        <Pos X = "589" Y = "223"/>
+        <Pos X = "590" Y = "224"/>
+        <Pos X = "590" Y = "223"/>
+        <Pos X = "590" Y = "222"/>
+        <Pos X = "591" Y = "223"/>
+        <Pos X = "593" Y = "226"/>
+        <Pos X = "593" Y = "227"/>
+        <Pos X = "594" Y = "228"/>
+        <Pos X = "593" Y = "229"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Burkhan" X="821" Y="67" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="819" Y="69" />
+    <Settlement Name = "Qiangfang" X = "629" Y = "201" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "629" Y = "204"/>
       <FarmImprovements>
-        <Pos X="820" Y="69" />
-        <Pos X="820" Y="70" />
-        <Pos X="821" Y="70" />
-        <Pos X="821" Y="69" />
-        <Pos X="822" Y="70" />
-        <Pos X="823" Y="70" />
-        <Pos X="822" Y="69" />
-        <Pos X="823" Y="69" />
-        <Pos X="823" Y="68" />
-        <Pos X="822" Y="68" />
-        <Pos X="821" Y="68" />
-        <Pos X="820" Y="68" />
-        <Pos X="819" Y="68" />
-        <Pos X="818" Y="67" />
-        <Pos X="819" Y="67" />
-        <Pos X="820" Y="67" />
-        <Pos X="820" Y="66" />
-        <Pos X="819" Y="66" />
-        <Pos X="821" Y="66" />
-        <Pos X="822" Y="66" />
-        <Pos X="822" Y="67" />
-        <Pos X="823" Y="67" />
-        <Pos X="823" Y="66" />
-        <Pos X="823" Y="65" />
-        <Pos X="822" Y="65" />
-        <Pos X="821" Y="65" />
-        <Pos X="820" Y="65" />
-        <Pos X="819" Y="65" />
-        <Pos X="820" Y="64" />
-        <Pos X="821" Y="64" />
-        <Pos X="822" Y="64" />
+        <Pos X = "628" Y = "203"/>
+        <Pos X = "629" Y = "203"/>
+        <Pos X = "631" Y = "199"/>
+        <Pos X = "632" Y = "200"/>
+        <Pos X = "631" Y = "201"/>
+        <Pos X = "632" Y = "202"/>
+        <Pos X = "631" Y = "203"/>
+        <Pos X = "631" Y = "204"/>
+        <Pos X = "630" Y = "204"/>
+        <Pos X = "628" Y = "204"/>
+        <Pos X = "627" Y = "202"/>
+        <Pos X = "626" Y = "201"/>
+        <Pos X = "627" Y = "200"/>
+        <Pos X = "627" Y = "199"/>
+        <Pos X = "628" Y = "198"/>
+        <Pos X = "628" Y = "199"/>
+        <Pos X = "629" Y = "198"/>
+        <Pos X = "629" Y = "199"/>
+        <Pos X = "630" Y = "198"/>
+        <Pos X = "630" Y = "199"/>
+        <Pos X = "631" Y = "200"/>
+        <Pos X = "630" Y = "201"/>
+        <Pos X = "631" Y = "202"/>
+        <Pos X = "630" Y = "203"/>
+        <Pos X = "630" Y = "202"/>
+        <Pos X = "629" Y = "202"/>
+        <Pos X = "628" Y = "202"/>
+        <Pos X = "627" Y = "201"/>
+        <Pos X = "628" Y = "201"/>
+        <Pos X = "628" Y = "200"/>
+        <Pos X = "629" Y = "200"/>
+        <Pos X = "630" Y = "200"/>
+        <Pos X = "635" Y = "201"/>
+        <Pos X = "635" Y = "202"/>
+        <Pos X = "634" Y = "203"/>
+        <Pos X = "634" Y = "204"/>
+        <Pos X = "633" Y = "204"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Yiqu" X = "606" Y = "192" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "606" Y = "194"/>
+      <FarmImprovements>
+        <Pos X = "607" Y = "194"/>
+        <Pos X = "604" Y = "195"/>
+        <Pos X = "604" Y = "194"/>
+        <Pos X = "603" Y = "193"/>
+        <Pos X = "603" Y = "192"/>
+        <Pos X = "603" Y = "191"/>
+        <Pos X = "604" Y = "190"/>
+        <Pos X = "604" Y = "189"/>
+        <Pos X = "605" Y = "190"/>
+        <Pos X = "605" Y = "189"/>
+        <Pos X = "606" Y = "190"/>
+        <Pos X = "606" Y = "189"/>
+        <Pos X = "607" Y = "190"/>
+        <Pos X = "607" Y = "189"/>
+        <Pos X = "608" Y = "190"/>
+        <Pos X = "608" Y = "191"/>
+        <Pos X = "609" Y = "192"/>
+        <Pos X = "608" Y = "193"/>
+        <Pos X = "608" Y = "194"/>
+        <Pos X = "607" Y = "195"/>
+        <Pos X = "606" Y = "195"/>
+        <Pos X = "605" Y = "195"/>
+        <Pos X = "605" Y = "194"/>
+        <Pos X = "604" Y = "193"/>
+        <Pos X = "604" Y = "192"/>
+        <Pos X = "604" Y = "191"/>
+        <Pos X = "605" Y = "192"/>
+        <Pos X = "605" Y = "191"/>
+        <Pos X = "605" Y = "193"/>
+        <Pos X = "606" Y = "193"/>
+        <Pos X = "607" Y = "192"/>
+        <Pos X = "606" Y = "191"/>
+        <Pos X = "607" Y = "191"/>
+        <Pos X = "607" Y = "193"/>
+        <Pos X = "608" Y = "192"/>
+        <Pos X = "609" Y = "197"/>
+        <Pos X = "610" Y = "196"/>
+        <Pos X = "610" Y = "195"/>
       </FarmImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Xianbei">
-    <BasedOn Faction="Xianbei" AltSymbol="" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" Music="Mongol" PortraitSet="Mongolian" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Central Asia" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="345" YPos="143" FactionImage="OE_FE_FactionElement_Xianbei_01" />
-    <FactionRules />
-    <Capability Name="Chariot Skill" Level="15" />
-    <Capability Name="Cavalry Skill" Level="25" />
-    <Capability Name="Capture Tech" Level="25" />
-    <Capability Name="Looting Bonus" Level="25" />
-    <Capability Name="Boost Power" Level="10" />
-    <Capability Name="Boost Military" Level="10" />
-    <Capability Name="Reduce Knowledge" Level="25" />
-    <Capability Name="Reduce Thought" Level="20" />
-    <Capability Name="Reduce Craft" Level="15" />
-    <Tech Item="Pastoralism" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Herders" />
-    <Force X="757" Y="31" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Xianbei Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Di">
+    <BasedOn Faction = "Di" AltSymbol = "" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true" Music = "Mongol" PortraitSet = "Mongolian"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Northern China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "305" YPos = "117" FactionImage = "OE_FE_FactionElement_WhiteDi_01"/>
+    <FactionRules/>
+    <Capability Name = "Infantry Skill" Level = "15"/>
+    <Capability Name = "Bow Skill" Level = "10"/>
+    <Capability Name = "Chariot Skill" Level = "5"/>
+    <Capability Name = "NewLeaderVirtue" Level = "3"/>
+    <Capability Name = "AgriculturalProduction" Level = "10"/>
+    <Capability Name = "Character Armor" Level = "10"/>
+    <Tech Item = "Pastoralism"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Herders"/>
+    <Tag Name = "No Crossbows"/>
+    <Force X = "670" Y = "141" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Di Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="719" Y="27" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "660" Y = "111" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="696" Y="39" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "643" Y = "130" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Xianbei" X="757" Y="31" Template="Chinese City" TiledRoof="true" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="180" Flocks="0" />
-      <Building Type="City Square" X="756" Y="34" />
+    <Settlement Name = "PingShan" X = "670" Y = "141" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "670" Y = "143"/>
       <FarmImprovements>
-        <Pos X="756" Y="33" />
-        <Pos X="757" Y="34" />
-        <Pos X="758" Y="34" />
-        <Pos X="758" Y="33" />
-        <Pos X="759" Y="34" />
-        <Pos X="759" Y="32" />
-        <Pos X="759" Y="31" />
-        <Pos X="759" Y="30" />
-        <Pos X="758" Y="30" />
-        <Pos X="758" Y="32" />
-        <Pos X="757" Y="33" />
-        <Pos X="757" Y="32" />
-        <Pos X="756" Y="32" />
-        <Pos X="755" Y="33" />
-        <Pos X="755" Y="32" />
-        <Pos X="754" Y="31" />
-        <Pos X="755" Y="31" />
-        <Pos X="755" Y="30" />
-        <Pos X="756" Y="30" />
-        <Pos X="756" Y="31" />
-        <Pos X="757" Y="30" />
-        <Pos X="756" Y="29" />
-        <Pos X="756" Y="28" />
-        <Pos X="757" Y="28" />
-        <Pos X="757" Y="29" />
-        <Pos X="758" Y="29" />
-      </FarmImprovements>
-      <ClearanceImprovements>
-        <Pos X="759" Y="31" />
-        <Pos X="759" Y="32" />
-        <Pos X="759" Y="30" />
-        <Pos X="758" Y="33" />
-        <Pos X="758" Y="29" />
-        <Pos X="758" Y="31" />
-      </ClearanceImprovements>
-    </Settlement>
-    <Settlement Name="Shengle" X="719" Y="27" Template="Chinese City" TiledRoof="true" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="180" Flocks="0" />
-      <Building Type="City Square" X="718" Y="30" />
-      <FarmImprovements>
-        <Pos X="718" Y="29" />
-        <Pos X="719" Y="30" />
-        <Pos X="719" Y="29" />
-        <Pos X="720" Y="30" />
-        <Pos X="720" Y="29" />
-        <Pos X="721" Y="30" />
-        <Pos X="721" Y="29" />
-        <Pos X="722" Y="28" />
-        <Pos X="722" Y="27" />
-        <Pos X="722" Y="26" />
-        <Pos X="721" Y="27" />
-        <Pos X="721" Y="28" />
-        <Pos X="720" Y="27" />
-        <Pos X="720" Y="28" />
-        <Pos X="720" Y="26" />
-        <Pos X="719" Y="26" />
-        <Pos X="718" Y="27" />
-        <Pos X="719" Y="28" />
-        <Pos X="718" Y="28" />
-        <Pos X="717" Y="29" />
-        <Pos X="717" Y="28" />
-        <Pos X="717" Y="27" />
-        <Pos X="716" Y="27" />
-        <Pos X="717" Y="26" />
-        <Pos X="718" Y="26" />
-        <Pos X="721" Y="26" />
+        <Pos X = "669" Y = "143"/>
+        <Pos X = "669" Y = "144"/>
+        <Pos X = "668" Y = "143"/>
+        <Pos X = "668" Y = "142"/>
+        <Pos X = "668" Y = "141"/>
+        <Pos X = "669" Y = "140"/>
+        <Pos X = "669" Y = "139"/>
+        <Pos X = "669" Y = "138"/>
+        <Pos X = "670" Y = "138"/>
+        <Pos X = "670" Y = "139"/>
+        <Pos X = "670" Y = "140"/>
+        <Pos X = "669" Y = "141"/>
+        <Pos X = "669" Y = "142"/>
+        <Pos X = "670" Y = "142"/>
+        <Pos X = "670" Y = "144"/>
+        <Pos X = "671" Y = "144"/>
+        <Pos X = "671" Y = "143"/>
+        <Pos X = "672" Y = "144"/>
+        <Pos X = "672" Y = "143"/>
+        <Pos X = "673" Y = "142"/>
+        <Pos X = "673" Y = "141"/>
+        <Pos X = "673" Y = "140"/>
+        <Pos X = "672" Y = "139"/>
+        <Pos X = "672" Y = "138"/>
+        <Pos X = "671" Y = "138"/>
+        <Pos X = "671" Y = "139"/>
+        <Pos X = "672" Y = "140"/>
+        <Pos X = "672" Y = "141"/>
+        <Pos X = "672" Y = "142"/>
+        <Pos X = "671" Y = "141"/>
+        <Pos X = "671" Y = "142"/>
+        <Pos X = "671" Y = "140"/>
+        <Pos X = "674" Y = "144"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Hulun" X="696" Y="39" Template="Chinese City" TiledRoof="true" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="180" Flocks="0" />
-      <Building Type="City Square" X="695" Y="42" />
+    <Settlement Name = "Lingshou" X = "660" Y = "111" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "660" Y = "114"/>
       <FarmImprovements>
-        <Pos X="695" Y="41" />
-        <Pos X="696" Y="42" />
-        <Pos X="697" Y="42" />
-        <Pos X="698" Y="42" />
-        <Pos X="698" Y="41" />
-        <Pos X="699" Y="40" />
-        <Pos X="698" Y="39" />
-        <Pos X="699" Y="38" />
-        <Pos X="698" Y="37" />
-        <Pos X="698" Y="38" />
-        <Pos X="697" Y="39" />
-        <Pos X="698" Y="40" />
-        <Pos X="697" Y="41" />
-        <Pos X="697" Y="40" />
-        <Pos X="696" Y="41" />
-        <Pos X="696" Y="40" />
-        <Pos X="695" Y="40" />
-        <Pos X="694" Y="41" />
-        <Pos X="694" Y="40" />
-        <Pos X="693" Y="39" />
-        <Pos X="694" Y="39" />
-        <Pos X="695" Y="39" />
-        <Pos X="696" Y="38" />
-        <Pos X="697" Y="38" />
-        <Pos X="697" Y="37" />
-        <Pos X="698" Y="36" />
-        <Pos X="697" Y="36" />
-        <Pos X="696" Y="37" />
-        <Pos X="695" Y="37" />
-        <Pos X="695" Y="38" />
-        <Pos X="694" Y="38" />
+        <Pos X = "659" Y = "113"/>
+        <Pos X = "661" Y = "114"/>
+        <Pos X = "661" Y = "113"/>
+        <Pos X = "662" Y = "113"/>
+        <Pos X = "663" Y = "112"/>
+        <Pos X = "663" Y = "111"/>
+        <Pos X = "663" Y = "110"/>
+        <Pos X = "662" Y = "111"/>
+        <Pos X = "662" Y = "112"/>
+        <Pos X = "661" Y = "111"/>
+        <Pos X = "661" Y = "112"/>
+        <Pos X = "660" Y = "113"/>
+        <Pos X = "660" Y = "112"/>
+        <Pos X = "659" Y = "112"/>
+        <Pos X = "658" Y = "112"/>
+        <Pos X = "658" Y = "111"/>
+        <Pos X = "657" Y = "111"/>
+        <Pos X = "658" Y = "110"/>
+        <Pos X = "659" Y = "110"/>
+        <Pos X = "658" Y = "109"/>
+        <Pos X = "659" Y = "108"/>
+        <Pos X = "659" Y = "109"/>
+        <Pos X = "660" Y = "108"/>
+        <Pos X = "660" Y = "109"/>
+        <Pos X = "661" Y = "108"/>
+        <Pos X = "661" Y = "109"/>
+        <Pos X = "662" Y = "110"/>
+        <Pos X = "661" Y = "110"/>
+        <Pos X = "660" Y = "110"/>
+        <Pos X = "662" Y = "117"/>
+        <Pos X = "664" Y = "116"/>
+        <Pos X = "664" Y = "115"/>
+        <Pos X = "665" Y = "114"/>
+        <Pos X = "666" Y = "112"/>
+        <Pos X = "666" Y = "111"/>
+        <Pos X = "666" Y = "110"/>
+        <Pos X = "665" Y = "111"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Dai" X = "643" Y = "130" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "643" Y = "132"/>
+      <FarmImprovements>
+        <Pos X = "642" Y = "132"/>
+        <Pos X = "641" Y = "133"/>
+        <Pos X = "641" Y = "132"/>
+        <Pos X = "640" Y = "131"/>
+        <Pos X = "640" Y = "130"/>
+        <Pos X = "640" Y = "129"/>
+        <Pos X = "641" Y = "130"/>
+        <Pos X = "641" Y = "129"/>
+        <Pos X = "641" Y = "127"/>
+        <Pos X = "642" Y = "127"/>
+        <Pos X = "642" Y = "129"/>
+        <Pos X = "642" Y = "130"/>
+        <Pos X = "641" Y = "131"/>
+        <Pos X = "642" Y = "131"/>
+        <Pos X = "642" Y = "133"/>
+        <Pos X = "643" Y = "133"/>
+        <Pos X = "644" Y = "132"/>
+        <Pos X = "644" Y = "133"/>
+        <Pos X = "645" Y = "132"/>
+        <Pos X = "645" Y = "131"/>
+        <Pos X = "646" Y = "130"/>
+        <Pos X = "645" Y = "129"/>
+        <Pos X = "645" Y = "128"/>
+        <Pos X = "644" Y = "127"/>
+        <Pos X = "644" Y = "128"/>
+        <Pos X = "643" Y = "129"/>
+        <Pos X = "644" Y = "129"/>
+        <Pos X = "645" Y = "130"/>
+        <Pos X = "644" Y = "131"/>
+        <Pos X = "643" Y = "131"/>
+        <Pos X = "644" Y = "130"/>
+        <Pos X = "646" Y = "136"/>
+        <Pos X = "644" Y = "136"/>
+        <Pos X = "643" Y = "136"/>
+      </FarmImprovements>
+    </Settlement>
+  </CustomFaction>
+  <CustomFaction ID = "Yi">
+    <BasedOn Faction = "Yi" AltSymbol = "" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true" Music = "Mongol"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Northern China"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "358" YPos = "97" FactionImage = "OE_FE_FactionElement_DongYi_01"/>
+    <FactionRules/>
+    <Capability Name = "Bow Skill" Level = "15"/>
+    <Capability Name = "Cavalry Skill" Level = "25"/>
+    <Capability Name = "Capture Tech" Level = "25"/>
+    <Capability Name = "Looting Bonus" Level = "25"/>
+    <Capability Name = "Boost Power" Level = "10"/>
+    <Capability Name = "Boost Military" Level = "15"/>
+    <Capability Name = "Reduce Knowledge" Level = "25"/>
+    <Capability Name = "Reduce Thought" Level = "20"/>
+    <Capability Name = "Reduce Craft" Level = "15"/>
+    <Tech Item = "Pastoralism"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Herders"/>
+    <Tag Name = "No Crossbows"/>
+    <Force X = "787" Y = "224" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Yi Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
+      </Unit>
+    </Force>
+    <Force X = "800" Y = "203" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Force X = "770" Y = "202" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Settlement Name = "Jiaodong" X = "787" Y = "224" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "180" Flocks = "0"/>
+      <Building Type = "City Square" X = "787" Y = "226"/>
+      <FarmImprovements>
+        <Pos X = "786" Y = "226"/>
+        <Pos X = "786" Y = "227"/>
+        <Pos X = "787" Y = "227"/>
+        <Pos X = "788" Y = "227"/>
+        <Pos X = "788" Y = "226"/>
+        <Pos X = "789" Y = "226"/>
+        <Pos X = "788" Y = "225"/>
+        <Pos X = "789" Y = "225"/>
+        <Pos X = "790" Y = "224"/>
+        <Pos X = "789" Y = "223"/>
+        <Pos X = "789" Y = "224"/>
+        <Pos X = "788" Y = "223"/>
+        <Pos X = "788" Y = "224"/>
+        <Pos X = "787" Y = "225"/>
+        <Pos X = "786" Y = "225"/>
+        <Pos X = "785" Y = "225"/>
+        <Pos X = "785" Y = "226"/>
+        <Pos X = "784" Y = "225"/>
+        <Pos X = "784" Y = "224"/>
+        <Pos X = "785" Y = "224"/>
+        <Pos X = "784" Y = "223"/>
+        <Pos X = "785" Y = "223"/>
+        <Pos X = "785" Y = "222"/>
+        <Pos X = "786" Y = "222"/>
+        <Pos X = "785" Y = "221"/>
+        <Pos X = "786" Y = "221"/>
+        <Pos X = "787" Y = "222"/>
+        <Pos X = "787" Y = "221"/>
+        <Pos X = "788" Y = "222"/>
+        <Pos X = "788" Y = "221"/>
+        <Pos X = "787" Y = "223"/>
+        <Pos X = "786" Y = "223"/>
+        <Pos X = "786" Y = "224"/>
+        <Pos X = "790" Y = "226"/>
+        <Pos X = "789" Y = "227"/>
+        <Pos X = "790" Y = "228"/>
+        <Pos X = "789" Y = "228"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Jibei" X = "800" Y = "203" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "180" Flocks = "0"/>
+      <Building Type = "City Square" X = "800" Y = "206"/>
+      <FarmImprovements>
+        <Pos X = "799" Y = "205"/>
+        <Pos X = "799" Y = "206"/>
+        <Pos X = "801" Y = "206"/>
+        <Pos X = "802" Y = "206"/>
+        <Pos X = "801" Y = "205"/>
+        <Pos X = "802" Y = "204"/>
+        <Pos X = "803" Y = "202"/>
+        <Pos X = "802" Y = "203"/>
+        <Pos X = "802" Y = "201"/>
+        <Pos X = "802" Y = "202"/>
+        <Pos X = "801" Y = "203"/>
+        <Pos X = "801" Y = "204"/>
+        <Pos X = "800" Y = "205"/>
+        <Pos X = "800" Y = "204"/>
+        <Pos X = "799" Y = "204"/>
+        <Pos X = "798" Y = "203"/>
+        <Pos X = "799" Y = "203"/>
+        <Pos X = "799" Y = "202"/>
+        <Pos X = "798" Y = "202"/>
+        <Pos X = "798" Y = "201"/>
+        <Pos X = "799" Y = "201"/>
+        <Pos X = "799" Y = "200"/>
+        <Pos X = "800" Y = "200"/>
+        <Pos X = "800" Y = "201"/>
+        <Pos X = "800" Y = "202"/>
+        <Pos X = "801" Y = "202"/>
+        <Pos X = "801" Y = "201"/>
+        <Pos X = "802" Y = "200"/>
+        <Pos X = "801" Y = "200"/>
+        <Pos X = "805" Y = "200"/>
+        <Pos X = "805" Y = "201"/>
+        <Pos X = "806" Y = "202"/>
+        <Pos X = "806" Y = "203"/>
+        <Pos X = "806" Y = "204"/>
+        <Pos X = "805" Y = "205"/>
+        <Pos X = "805" Y = "206"/>
+        <Pos X = "804" Y = "208"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Langye" X = "770" Y = "202" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "180" Flocks = "0"/>
+      <Building Type = "City Square" X = "769" Y = "205"/>
+      <FarmImprovements>
+        <Pos X = "769" Y = "204"/>
+        <Pos X = "769" Y = "202"/>
+        <Pos X = "768" Y = "203"/>
+        <Pos X = "768" Y = "204"/>
+        <Pos X = "767" Y = "203"/>
+        <Pos X = "768" Y = "202"/>
+        <Pos X = "767" Y = "202"/>
+        <Pos X = "767" Y = "201"/>
+        <Pos X = "768" Y = "200"/>
+        <Pos X = "768" Y = "199"/>
+        <Pos X = "769" Y = "200"/>
+        <Pos X = "770" Y = "200"/>
+        <Pos X = "770" Y = "199"/>
+        <Pos X = "771" Y = "200"/>
+        <Pos X = "771" Y = "199"/>
+        <Pos X = "772" Y = "200"/>
+        <Pos X = "772" Y = "201"/>
+        <Pos X = "772" Y = "202"/>
+        <Pos X = "771" Y = "203"/>
+        <Pos X = "771" Y = "205"/>
+        <Pos X = "772" Y = "204"/>
+        <Pos X = "771" Y = "204"/>
+        <Pos X = "770" Y = "205"/>
+        <Pos X = "770" Y = "204"/>
+        <Pos X = "769" Y = "203"/>
+        <Pos X = "770" Y = "203"/>
+        <Pos X = "771" Y = "202"/>
+        <Pos X = "771" Y = "201"/>
+        <Pos X = "770" Y = "201"/>
+        <Pos X = "769" Y = "201"/>
+        <Pos X = "768" Y = "201"/>
+        <Pos X = "772" Y = "205"/>
+        <Pos X = "772" Y = "206"/>
+        <Pos X = "772" Y = "207"/>
+        <Pos X = "773" Y = "206"/>
+        <Pos X = "773" Y = "207"/>
+        <Pos X = "774" Y = "206"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="695" Y="38" />
-        <Pos X="695" Y="37" />
+        <Pos X = "772" Y = "202"/>
+        <Pos X = "768" Y = "203"/>
       </ClearanceImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Dingling">
-    <BasedOn Faction="Dingling" AltSymbol="" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" Music="Mongol" PortraitSet="Mongolian" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Central Asia" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="278" YPos="139" FactionImage="OE_FE_FactionElement_Dingling_01" />
-    <FactionRules />
-    <Capability Name="Infantry Skill" Level="25" />
-    <Capability Name="Bow Skill" Level="10" />
-    <Capability Name="NewLeaderEnergy" Level="2" />
-    <Capability Name="AgriculturalProduction" Level="15" />
-    <Tech Item="Pastoralism" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Herders" />
-    <Tag Name="No Crossbows" />
-    <Force X="610" Y="46" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Dingling Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Xiongnu">
+    <BasedOn Faction = "Xiongnu" AltSymbol = "" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true" Music = "Mongol" PortraitSet = "Mongolian"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Central Asia"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "364" YPos = "121" FactionImage = "OE_FE_FactionElement_Xiongnu_01"/>
+    <FactionRules/>
+    <Capability Name = "Chariot Skill" Level = "15"/>
+    <Capability Name = "Cavalry Skill" Level = "25"/>
+    <Capability Name = "Capture Tech" Level = "25"/>
+    <Capability Name = "Looting Bonus" Level = "25"/>
+    <Capability Name = "Boost Power" Level = "15"/>
+    <Capability Name = "Boost Military" Level = "10"/>
+    <Capability Name = "Reduce Knowledge" Level = "25"/>
+    <Capability Name = "Reduce Thought" Level = "20"/>
+    <Capability Name = "Reduce Craft" Level = "15"/>
+    <Tech Item = "Pastoralism"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Herders"/>
+    <Tag Name = "No Crossbows"/>
+    <Force X = "799" Y = "123" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Xiongnu Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="588" Y="63" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "808" Y = "97" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="589" Y="41" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "821" Y = "67" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Dingling" X="610" Y="46" Template="Chinese City" TiledRoof="true" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="180" Flocks="0" />
-      <Building Type="City Square" X="611" Y="49" />
+    <Settlement Name = "Longshan" X = "799" Y = "123" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "797" Y = "125"/>
       <FarmImprovements>
-        <Pos X="611" Y="48" />
-        <Pos X="608" Y="49" />
-        <Pos X="608" Y="48" />
-        <Pos X="607" Y="47" />
-        <Pos X="607" Y="46" />
-        <Pos X="607" Y="45" />
-        <Pos X="608" Y="46" />
-        <Pos X="608" Y="47" />
-        <Pos X="609" Y="49" />
-        <Pos X="610" Y="49" />
-        <Pos X="612" Y="48" />
-        <Pos X="612" Y="47" />
-        <Pos X="613" Y="46" />
-        <Pos X="611" Y="47" />
-        <Pos X="610" Y="47" />
-        <Pos X="609" Y="47" />
-        <Pos X="609" Y="46" />
-        <Pos X="608" Y="45" />
-        <Pos X="609" Y="45" />
-        <Pos X="608" Y="44" />
-        <Pos X="608" Y="43" />
-        <Pos X="609" Y="44" />
-        <Pos X="609" Y="43" />
-        <Pos X="610" Y="44" />
-        <Pos X="610" Y="43" />
-        <Pos X="611" Y="44" />
-        <Pos X="610" Y="45" />
-        <Pos X="611" Y="46" />
-        <Pos X="611" Y="45" />
-        <Pos X="612" Y="46" />
-        <Pos X="612" Y="45" />
-        <Pos X="612" Y="44" />
-        <Pos X="611" Y="43" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Guifang" X="588" Y="63" Template="Chinese City" TiledRoof="true" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="180" Flocks="0" />
-      <Building Type="City Square" X="588" Y="65" />
-      <FarmImprovements>
-        <Pos X="589" Y="65" />
-        <Pos X="586" Y="65" />
-        <Pos X="587" Y="66" />
-        <Pos X="588" Y="66" />
-        <Pos X="587" Y="65" />
-        <Pos X="589" Y="66" />
-        <Pos X="590" Y="66" />
-        <Pos X="590" Y="65" />
-        <Pos X="591" Y="64" />
-        <Pos X="591" Y="63" />
-        <Pos X="591" Y="62" />
-        <Pos X="590" Y="63" />
-        <Pos X="590" Y="64" />
-        <Pos X="589" Y="64" />
-        <Pos X="589" Y="63" />
-        <Pos X="590" Y="62" />
-        <Pos X="590" Y="61" />
-        <Pos X="590" Y="60" />
-        <Pos X="589" Y="61" />
-        <Pos X="589" Y="62" />
-        <Pos X="588" Y="61" />
-        <Pos X="588" Y="62" />
-        <Pos X="587" Y="63" />
-        <Pos X="588" Y="64" />
-        <Pos X="587" Y="64" />
-        <Pos X="586" Y="64" />
-        <Pos X="585" Y="63" />
-        <Pos X="587" Y="62" />
-        <Pos X="586" Y="61" />
-        <Pos X="587" Y="61" />
-        <Pos X="587" Y="60" />
-        <Pos X="588" Y="60" />
-        <Pos X="589" Y="60" />
-      </FarmImprovements>
-    </Settlement>
-    <Settlement Name="Gekun" X="589" Y="41" Template="Chinese City" TiledRoof="true" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="180" Flocks="0" />
-      <Building Type="City Square" X="587" Y="43" />
-      <FarmImprovements>
-        <Pos X="588" Y="43" />
-        <Pos X="588" Y="44" />
-        <Pos X="589" Y="44" />
-        <Pos X="590" Y="44" />
-        <Pos X="589" Y="43" />
-        <Pos X="590" Y="43" />
-        <Pos X="591" Y="42" />
-        <Pos X="592" Y="42" />
-        <Pos X="592" Y="41" />
-        <Pos X="592" Y="40" />
-        <Pos X="591" Y="41" />
-        <Pos X="591" Y="40" />
-        <Pos X="591" Y="39" />
-        <Pos X="591" Y="38" />
-        <Pos X="590" Y="39" />
-        <Pos X="590" Y="40" />
-        <Pos X="590" Y="41" />
-        <Pos X="590" Y="42" />
-        <Pos X="589" Y="42" />
-        <Pos X="588" Y="41" />
-        <Pos X="588" Y="42" />
-        <Pos X="587" Y="42" />
-        <Pos X="587" Y="41" />
-        <Pos X="586" Y="41" />
-        <Pos X="587" Y="40" />
-        <Pos X="588" Y="40" />
-        <Pos X="587" Y="39" />
-        <Pos X="588" Y="38" />
-        <Pos X="588" Y="39" />
-        <Pos X="589" Y="38" />
-        <Pos X="589" Y="39" />
-        <Pos X="589" Y="40" />
-        <Pos X="590" Y="38" />
+        <Pos X = "798" Y = "125"/>
+        <Pos X = "798" Y = "126"/>
+        <Pos X = "799" Y = "126"/>
+        <Pos X = "800" Y = "126"/>
+        <Pos X = "801" Y = "126"/>
+        <Pos X = "801" Y = "125"/>
+        <Pos X = "802" Y = "124"/>
+        <Pos X = "801" Y = "123"/>
+        <Pos X = "802" Y = "122"/>
+        <Pos X = "801" Y = "121"/>
+        <Pos X = "801" Y = "122"/>
+        <Pos X = "800" Y = "123"/>
+        <Pos X = "801" Y = "124"/>
+        <Pos X = "800" Y = "125"/>
+        <Pos X = "799" Y = "125"/>
+        <Pos X = "799" Y = "124"/>
+        <Pos X = "800" Y = "124"/>
+        <Pos X = "798" Y = "123"/>
+        <Pos X = "798" Y = "124"/>
+        <Pos X = "797" Y = "124"/>
+        <Pos X = "797" Y = "123"/>
+        <Pos X = "796" Y = "123"/>
+        <Pos X = "797" Y = "122"/>
+        <Pos X = "798" Y = "122"/>
+        <Pos X = "799" Y = "122"/>
+        <Pos X = "800" Y = "122"/>
+        <Pos X = "800" Y = "121"/>
+        <Pos X = "801" Y = "120"/>
+        <Pos X = "800" Y = "120"/>
+        <Pos X = "799" Y = "121"/>
+        <Pos X = "798" Y = "121"/>
+        <Pos X = "799" Y = "120"/>
+        <Pos X = "798" Y = "120"/>
+        <Pos X = "797" Y = "121"/>
+        <Pos X = "803" Y = "126"/>
+        <Pos X = "802" Y = "125"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="591" Y="40" />
+        <Pos X = "801" Y = "123"/>
+      </ClearanceImprovements>
+    </Settlement>
+    <Settlement Name = "Tongwancheng" X = "808" Y = "97" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "806" Y = "98"/>
+      <FarmImprovements>
+        <Pos X = "807" Y = "99"/>
+        <Pos X = "807" Y = "98"/>
+        <Pos X = "806" Y = "99"/>
+        <Pos X = "805" Y = "97"/>
+        <Pos X = "806" Y = "96"/>
+        <Pos X = "806" Y = "97"/>
+        <Pos X = "807" Y = "97"/>
+        <Pos X = "807" Y = "96"/>
+        <Pos X = "806" Y = "95"/>
+        <Pos X = "807" Y = "94"/>
+        <Pos X = "807" Y = "95"/>
+        <Pos X = "808" Y = "94"/>
+        <Pos X = "808" Y = "95"/>
+        <Pos X = "809" Y = "94"/>
+        <Pos X = "809" Y = "95"/>
+        <Pos X = "810" Y = "94"/>
+        <Pos X = "810" Y = "95"/>
+        <Pos X = "811" Y = "96"/>
+        <Pos X = "811" Y = "97"/>
+        <Pos X = "811" Y = "98"/>
+        <Pos X = "810" Y = "99"/>
+        <Pos X = "809" Y = "99"/>
+        <Pos X = "810" Y = "98"/>
+        <Pos X = "810" Y = "97"/>
+        <Pos X = "810" Y = "96"/>
+        <Pos X = "809" Y = "97"/>
+        <Pos X = "809" Y = "98"/>
+        <Pos X = "808" Y = "99"/>
+        <Pos X = "808" Y = "98"/>
+        <Pos X = "808" Y = "96"/>
+        <Pos X = "809" Y = "96"/>
+        <Pos X = "811" Y = "99"/>
+        <Pos X = "812" Y = "100"/>
+        <Pos X = "813" Y = "100"/>
+        <Pos X = "812" Y = "98"/>
+        <Pos X = "813" Y = "96"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Burkhan" X = "821" Y = "67" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "819" Y = "69"/>
+      <FarmImprovements>
+        <Pos X = "820" Y = "69"/>
+        <Pos X = "820" Y = "70"/>
+        <Pos X = "821" Y = "70"/>
+        <Pos X = "821" Y = "69"/>
+        <Pos X = "822" Y = "70"/>
+        <Pos X = "823" Y = "70"/>
+        <Pos X = "822" Y = "69"/>
+        <Pos X = "823" Y = "69"/>
+        <Pos X = "823" Y = "68"/>
+        <Pos X = "822" Y = "68"/>
+        <Pos X = "821" Y = "68"/>
+        <Pos X = "820" Y = "68"/>
+        <Pos X = "819" Y = "68"/>
+        <Pos X = "818" Y = "67"/>
+        <Pos X = "819" Y = "67"/>
+        <Pos X = "820" Y = "67"/>
+        <Pos X = "820" Y = "66"/>
+        <Pos X = "819" Y = "66"/>
+        <Pos X = "821" Y = "66"/>
+        <Pos X = "822" Y = "66"/>
+        <Pos X = "822" Y = "67"/>
+        <Pos X = "823" Y = "67"/>
+        <Pos X = "823" Y = "66"/>
+        <Pos X = "823" Y = "65"/>
+        <Pos X = "822" Y = "65"/>
+        <Pos X = "821" Y = "65"/>
+        <Pos X = "820" Y = "65"/>
+        <Pos X = "819" Y = "65"/>
+        <Pos X = "820" Y = "64"/>
+        <Pos X = "821" Y = "64"/>
+        <Pos X = "822" Y = "64"/>
+        <Pos X = "824" Y = "70"/>
+        <Pos X = "824" Y = "72"/>
+        <Pos X = "824" Y = "69"/>
+        <Pos X = "825" Y = "68"/>
+        <Pos X = "826" Y = "68"/>
+        <Pos X = "827" Y = "68"/>
+      </FarmImprovements>
+    </Settlement>
+  </CustomFaction>
+  <CustomFaction ID = "Xianbei">
+    <BasedOn Faction = "Xianbei" AltSymbol = "" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true" Music = "Mongol" PortraitSet = "Mongolian"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Central Asia"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "345" YPos = "143" FactionImage = "OE_FE_FactionElement_Xianbei_01"/>
+    <FactionRules/>
+    <Capability Name = "Chariot Skill" Level = "15"/>
+    <Capability Name = "Cavalry Skill" Level = "25"/>
+    <Capability Name = "Capture Tech" Level = "25"/>
+    <Capability Name = "Looting Bonus" Level = "25"/>
+    <Capability Name = "Boost Power" Level = "10"/>
+    <Capability Name = "Boost Military" Level = "10"/>
+    <Capability Name = "Reduce Knowledge" Level = "25"/>
+    <Capability Name = "Reduce Thought" Level = "20"/>
+    <Capability Name = "Reduce Craft" Level = "15"/>
+    <Tech Item = "Pastoralism"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Herders"/>
+    <Force X = "757" Y = "31" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Xianbei Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
+      </Unit>
+    </Force>
+    <Force X = "719" Y = "27" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Force X = "696" Y = "39" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Settlement Name = "Xianbei" X = "757" Y = "31" Template = "Chinese City" TiledRoof = "true" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "180" Flocks = "0"/>
+      <Building Type = "City Square" X = "756" Y = "34"/>
+      <FarmImprovements>
+        <Pos X = "756" Y = "33"/>
+        <Pos X = "757" Y = "34"/>
+        <Pos X = "758" Y = "34"/>
+        <Pos X = "758" Y = "33"/>
+        <Pos X = "759" Y = "34"/>
+        <Pos X = "759" Y = "32"/>
+        <Pos X = "759" Y = "31"/>
+        <Pos X = "759" Y = "30"/>
+        <Pos X = "758" Y = "30"/>
+        <Pos X = "758" Y = "32"/>
+        <Pos X = "757" Y = "33"/>
+        <Pos X = "757" Y = "32"/>
+        <Pos X = "756" Y = "32"/>
+        <Pos X = "755" Y = "33"/>
+        <Pos X = "755" Y = "32"/>
+        <Pos X = "754" Y = "31"/>
+        <Pos X = "755" Y = "31"/>
+        <Pos X = "755" Y = "30"/>
+        <Pos X = "756" Y = "30"/>
+        <Pos X = "756" Y = "31"/>
+        <Pos X = "757" Y = "30"/>
+        <Pos X = "756" Y = "29"/>
+        <Pos X = "756" Y = "28"/>
+        <Pos X = "757" Y = "28"/>
+        <Pos X = "757" Y = "29"/>
+        <Pos X = "758" Y = "29"/>
+      </FarmImprovements>
+      <ClearanceImprovements>
+        <Pos X = "759" Y = "31"/>
+        <Pos X = "759" Y = "32"/>
+        <Pos X = "759" Y = "30"/>
+        <Pos X = "758" Y = "33"/>
+        <Pos X = "758" Y = "29"/>
+        <Pos X = "758" Y = "31"/>
+      </ClearanceImprovements>
+    </Settlement>
+    <Settlement Name = "Shengle" X = "719" Y = "27" Template = "Chinese City" TiledRoof = "true" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "180" Flocks = "0"/>
+      <Building Type = "City Square" X = "718" Y = "30"/>
+      <FarmImprovements>
+        <Pos X = "718" Y = "29"/>
+        <Pos X = "719" Y = "30"/>
+        <Pos X = "719" Y = "29"/>
+        <Pos X = "720" Y = "30"/>
+        <Pos X = "720" Y = "29"/>
+        <Pos X = "721" Y = "30"/>
+        <Pos X = "721" Y = "29"/>
+        <Pos X = "722" Y = "28"/>
+        <Pos X = "722" Y = "27"/>
+        <Pos X = "722" Y = "26"/>
+        <Pos X = "721" Y = "27"/>
+        <Pos X = "721" Y = "28"/>
+        <Pos X = "720" Y = "27"/>
+        <Pos X = "720" Y = "28"/>
+        <Pos X = "720" Y = "26"/>
+        <Pos X = "719" Y = "26"/>
+        <Pos X = "718" Y = "27"/>
+        <Pos X = "719" Y = "28"/>
+        <Pos X = "718" Y = "28"/>
+        <Pos X = "717" Y = "29"/>
+        <Pos X = "717" Y = "28"/>
+        <Pos X = "717" Y = "27"/>
+        <Pos X = "716" Y = "27"/>
+        <Pos X = "717" Y = "26"/>
+        <Pos X = "718" Y = "26"/>
+        <Pos X = "721" Y = "26"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Hulun" X = "696" Y = "39" Template = "Chinese City" TiledRoof = "true" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "180" Flocks = "0"/>
+      <Building Type = "City Square" X = "695" Y = "42"/>
+      <FarmImprovements>
+        <Pos X = "695" Y = "41"/>
+        <Pos X = "696" Y = "42"/>
+        <Pos X = "697" Y = "42"/>
+        <Pos X = "698" Y = "42"/>
+        <Pos X = "698" Y = "41"/>
+        <Pos X = "699" Y = "40"/>
+        <Pos X = "698" Y = "39"/>
+        <Pos X = "699" Y = "38"/>
+        <Pos X = "698" Y = "37"/>
+        <Pos X = "698" Y = "38"/>
+        <Pos X = "697" Y = "39"/>
+        <Pos X = "698" Y = "40"/>
+        <Pos X = "697" Y = "41"/>
+        <Pos X = "697" Y = "40"/>
+        <Pos X = "696" Y = "41"/>
+        <Pos X = "696" Y = "40"/>
+        <Pos X = "695" Y = "40"/>
+        <Pos X = "694" Y = "41"/>
+        <Pos X = "694" Y = "40"/>
+        <Pos X = "693" Y = "39"/>
+        <Pos X = "694" Y = "39"/>
+        <Pos X = "695" Y = "39"/>
+        <Pos X = "696" Y = "38"/>
+        <Pos X = "697" Y = "38"/>
+        <Pos X = "697" Y = "37"/>
+        <Pos X = "698" Y = "36"/>
+        <Pos X = "697" Y = "36"/>
+        <Pos X = "696" Y = "37"/>
+        <Pos X = "695" Y = "37"/>
+        <Pos X = "695" Y = "38"/>
+        <Pos X = "694" Y = "38"/>
+      </FarmImprovements>
+      <ClearanceImprovements>
+        <Pos X = "695" Y = "38"/>
+        <Pos X = "695" Y = "37"/>
       </ClearanceImprovements>
     </Settlement>
   </CustomFaction>
-  <CustomFaction ID="Mongols">
-    <BasedOn Faction="Mongols" ColorSet="119" AltSymbol="" NewCapabilities="true" NewStartItems="true" NewTech="true" NewTags="true" NewAIStrategies="true" Music="Mongol" PortraitSet="Mongolian" />
-    <Start Money="100000" LeadersIncome="0" Era="1" PreferredClimate="Central Asia" />
-    <Selection Selectable="Any" ShowPositionMarker="true" XPos="423" YPos="120" FactionImage="OE_FE_FactionElement_Mongols_01" />
-    <FactionRules />
-    <Capability Name="Character Armor" Level="5" />
-    <Capability Name="AttackAdvantageIfCharging" Level="5" />
-    <Capability Name="Looting Bonus" Level="50" />
-    <Capability Name="Boost Military" Level="10" />
-    <Capability Name="Boost Agriculture" Level="25" />
-    <Capability Name="Accepts Bandits" Level="1" />
-    <Capability Name="Friendly To Rebels" Level="1" />
-    <Capability Name="Accepts Peasant Rebels" Level="1" />
-    <Capability Name="Agriculture" Level="1" />
-    <Capability Name="Pastoralism" Level="1" />
-    <Capability Name="Nomadism" Level="1" />
-    <Capability Name="Reduced Noble Recruitment" Level="5" />
-    <Tech Item="Pastoralism" />
-    <Tech Item="Agriculture" />
-    <Edict ID="Warring States" />
-    <Edict ID="Gentlemen Ride Chariots" />
-    <AIHints></AIHints>
-    <Tag Name="Herders" />
-    <Force X="928" Y="132" Facing="30">
-      <Unit Type="WS Settlers" />
-      <Unit Type="ENB Foot Bodyguard">
-        <Leader FirstName="Mongol Leader" PortraitIndex="9" AgeInYears="16" Energy="5" Virtue="5" Leader="true" />
+  <CustomFaction ID = "Dingling">
+    <BasedOn Faction = "Dingling" AltSymbol = "" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true" Music = "Mongol" PortraitSet = "Mongolian"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Central Asia"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "278" YPos = "139" FactionImage = "OE_FE_FactionElement_Dingling_01"/>
+    <FactionRules/>
+    <Capability Name = "Infantry Skill" Level = "25"/>
+    <Capability Name = "Bow Skill" Level = "10"/>
+    <Capability Name = "NewLeaderEnergy" Level = "2"/>
+    <Capability Name = "AgriculturalProduction" Level = "15"/>
+    <Tech Item = "Pastoralism"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Herders"/>
+    <Tag Name = "No Crossbows"/>
+    <Force X = "610" Y = "46" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Dingling Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
       </Unit>
     </Force>
-    <Force X="921" Y="152" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "588" Y = "63" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Force X="946" Y="144" Facing="30">
-      <Unit Type="WS Settlers" />
+    <Force X = "589" Y = "41" Facing = "30">
+      <Unit Type = "WS Settlers"/>
     </Force>
-    <Settlement Name="Bleu" X="928" Y="132" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="926" Y="135" />
+    <Settlement Name = "Dingling" X = "610" Y = "46" Template = "Chinese City" TiledRoof = "true" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "180" Flocks = "0"/>
+      <Building Type = "City Square" X = "611" Y = "49"/>
       <FarmImprovements>
-        <Pos X="927" Y="134" />
-        <Pos X="926" Y="134" />
-        <Pos X="925" Y="133" />
-        <Pos X="925" Y="132" />
-        <Pos X="926" Y="132" />
-        <Pos X="926" Y="131" />
-        <Pos X="926" Y="130" />
-        <Pos X="926" Y="129" />
-        <Pos X="927" Y="130" />
-        <Pos X="927" Y="129" />
-        <Pos X="928" Y="130" />
-        <Pos X="928" Y="129" />
-        <Pos X="929" Y="130" />
-        <Pos X="929" Y="129" />
-        <Pos X="930" Y="130" />
-        <Pos X="930" Y="131" />
-        <Pos X="931" Y="132" />
-        <Pos X="930" Y="133" />
-        <Pos X="930" Y="134" />
-        <Pos X="929" Y="135" />
-        <Pos X="928" Y="135" />
-        <Pos X="929" Y="134" />
-        <Pos X="928" Y="134" />
-        <Pos X="927" Y="135" />
-        <Pos X="927" Y="133" />
-        <Pos X="926" Y="133" />
-        <Pos X="927" Y="132" />
-        <Pos X="927" Y="131" />
-        <Pos X="928" Y="131" />
-        <Pos X="929" Y="132" />
-        <Pos X="928" Y="133" />
-        <Pos X="929" Y="133" />
-        <Pos X="930" Y="132" />
-        <Pos X="929" Y="131" />
+        <Pos X = "611" Y = "48"/>
+        <Pos X = "608" Y = "49"/>
+        <Pos X = "608" Y = "48"/>
+        <Pos X = "607" Y = "47"/>
+        <Pos X = "607" Y = "46"/>
+        <Pos X = "607" Y = "45"/>
+        <Pos X = "608" Y = "46"/>
+        <Pos X = "608" Y = "47"/>
+        <Pos X = "609" Y = "49"/>
+        <Pos X = "610" Y = "49"/>
+        <Pos X = "612" Y = "48"/>
+        <Pos X = "612" Y = "47"/>
+        <Pos X = "613" Y = "46"/>
+        <Pos X = "611" Y = "47"/>
+        <Pos X = "610" Y = "47"/>
+        <Pos X = "609" Y = "47"/>
+        <Pos X = "609" Y = "46"/>
+        <Pos X = "608" Y = "45"/>
+        <Pos X = "609" Y = "45"/>
+        <Pos X = "608" Y = "44"/>
+        <Pos X = "608" Y = "43"/>
+        <Pos X = "609" Y = "44"/>
+        <Pos X = "609" Y = "43"/>
+        <Pos X = "610" Y = "44"/>
+        <Pos X = "610" Y = "43"/>
+        <Pos X = "611" Y = "44"/>
+        <Pos X = "610" Y = "45"/>
+        <Pos X = "611" Y = "46"/>
+        <Pos X = "611" Y = "45"/>
+        <Pos X = "612" Y = "46"/>
+        <Pos X = "612" Y = "45"/>
+        <Pos X = "612" Y = "44"/>
+        <Pos X = "611" Y = "43"/>
       </FarmImprovements>
     </Settlement>
-    <Settlement Name="Frontline" X="921" Y="152" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="919" Y="154" />
+    <Settlement Name = "Guifang" X = "588" Y = "63" Template = "Chinese City" TiledRoof = "true" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "180" Flocks = "0"/>
+      <Building Type = "City Square" X = "588" Y = "65"/>
       <FarmImprovements>
-        <Pos X="920" Y="154" />
-        <Pos X="922" Y="155" />
-        <Pos X="921" Y="155" />
-        <Pos X="920" Y="155" />
-        <Pos X="919" Y="153" />
-        <Pos X="918" Y="152" />
-        <Pos X="918" Y="151" />
-        <Pos X="919" Y="150" />
-        <Pos X="919" Y="149" />
-        <Pos X="920" Y="152" />
-        <Pos X="921" Y="151" />
-        <Pos X="921" Y="149" />
-        <Pos X="923" Y="150" />
-        <Pos X="922" Y="151" />
-        <Pos X="922" Y="152" />
-        <Pos X="920" Y="153" />
-        <Pos X="924" Y="152" />
-        <Pos X="921" Y="153" />
-        <Pos X="922" Y="153" />
-        <Pos X="920" Y="151" />
-        <Pos X="921" Y="150" />
+        <Pos X = "589" Y = "65"/>
+        <Pos X = "586" Y = "65"/>
+        <Pos X = "587" Y = "66"/>
+        <Pos X = "588" Y = "66"/>
+        <Pos X = "587" Y = "65"/>
+        <Pos X = "589" Y = "66"/>
+        <Pos X = "590" Y = "66"/>
+        <Pos X = "590" Y = "65"/>
+        <Pos X = "591" Y = "64"/>
+        <Pos X = "591" Y = "63"/>
+        <Pos X = "591" Y = "62"/>
+        <Pos X = "590" Y = "63"/>
+        <Pos X = "590" Y = "64"/>
+        <Pos X = "589" Y = "64"/>
+        <Pos X = "589" Y = "63"/>
+        <Pos X = "590" Y = "62"/>
+        <Pos X = "590" Y = "61"/>
+        <Pos X = "590" Y = "60"/>
+        <Pos X = "589" Y = "61"/>
+        <Pos X = "589" Y = "62"/>
+        <Pos X = "588" Y = "61"/>
+        <Pos X = "588" Y = "62"/>
+        <Pos X = "587" Y = "63"/>
+        <Pos X = "588" Y = "64"/>
+        <Pos X = "587" Y = "64"/>
+        <Pos X = "586" Y = "64"/>
+        <Pos X = "585" Y = "63"/>
+        <Pos X = "587" Y = "62"/>
+        <Pos X = "586" Y = "61"/>
+        <Pos X = "587" Y = "61"/>
+        <Pos X = "587" Y = "60"/>
+        <Pos X = "588" Y = "60"/>
+        <Pos X = "589" Y = "60"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Gekun" X = "589" Y = "41" Template = "Chinese City" TiledRoof = "true" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "180" Flocks = "0"/>
+      <Building Type = "City Square" X = "587" Y = "43"/>
+      <FarmImprovements>
+        <Pos X = "588" Y = "43"/>
+        <Pos X = "588" Y = "44"/>
+        <Pos X = "589" Y = "44"/>
+        <Pos X = "590" Y = "44"/>
+        <Pos X = "589" Y = "43"/>
+        <Pos X = "590" Y = "43"/>
+        <Pos X = "591" Y = "42"/>
+        <Pos X = "592" Y = "42"/>
+        <Pos X = "592" Y = "41"/>
+        <Pos X = "592" Y = "40"/>
+        <Pos X = "591" Y = "41"/>
+        <Pos X = "591" Y = "40"/>
+        <Pos X = "591" Y = "39"/>
+        <Pos X = "591" Y = "38"/>
+        <Pos X = "590" Y = "39"/>
+        <Pos X = "590" Y = "40"/>
+        <Pos X = "590" Y = "41"/>
+        <Pos X = "590" Y = "42"/>
+        <Pos X = "589" Y = "42"/>
+        <Pos X = "588" Y = "41"/>
+        <Pos X = "588" Y = "42"/>
+        <Pos X = "587" Y = "42"/>
+        <Pos X = "587" Y = "41"/>
+        <Pos X = "586" Y = "41"/>
+        <Pos X = "587" Y = "40"/>
+        <Pos X = "588" Y = "40"/>
+        <Pos X = "587" Y = "39"/>
+        <Pos X = "588" Y = "38"/>
+        <Pos X = "588" Y = "39"/>
+        <Pos X = "589" Y = "38"/>
+        <Pos X = "589" Y = "39"/>
+        <Pos X = "589" Y = "40"/>
+        <Pos X = "590" Y = "38"/>
       </FarmImprovements>
       <ClearanceImprovements>
-        <Pos X="922" Y="153" />
-        <Pos X="921" Y="150" />
-        <Pos X="921" Y="153" />
-        <Pos X="920" Y="151" />
+        <Pos X = "591" Y = "40"/>
       </ClearanceImprovements>
     </Settlement>
-    <Settlement Name="Metropolis" X="946" Y="144" Template="Chinese City" Architecture="Nomad">
-      <Walls WallLevel="0" WallTech="0" TowerUpgrade="0" />
-      <Population Number="120" Flocks="0" />
-      <Building Type="City Square" X="944" Y="147" />
+  </CustomFaction>
+  <CustomFaction ID = "Mongols">
+    <BasedOn Faction = "Mongols" ColorSet = "119" AltSymbol = "" NewCapabilities = "true" NewStartItems = "true" NewTech = "true" NewTags = "true" NewAIStrategies = "true" Music = "Mongol" PortraitSet = "Mongolian"/>
+    <Start Money = "100000" LeadersIncome = "0" Era = "1" PreferredClimate = "Central Asia"/>
+    <Selection Selectable = "Any" ShowPositionMarker = "true" XPos = "423" YPos = "120" FactionImage = "OE_FE_FactionElement_Mongols_01"/>
+    <FactionRules/>
+    <Capability Name = "Character Armor" Level = "5"/>
+    <Capability Name = "AttackAdvantageIfCharging" Level = "5"/>
+    <Capability Name = "Looting Bonus" Level = "50"/>
+    <Capability Name = "Boost Military" Level = "10"/>
+    <Capability Name = "Boost Agriculture" Level = "25"/>
+    <Capability Name = "Accepts Bandits" Level = "1"/>
+    <Capability Name = "Friendly To Rebels" Level = "1"/>
+    <Capability Name = "Accepts Peasant Rebels" Level = "1"/>
+    <Capability Name = "Agriculture" Level = "1"/>
+    <Capability Name = "Pastoralism" Level = "1"/>
+    <Capability Name = "Nomadism" Level = "1"/>
+    <Capability Name = "Reduced Noble Recruitment" Level = "5"/>
+    <Tech Item = "Pastoralism"/>
+    <Tech Item = "Agriculture"/>
+    <Edict ID = "Warring States"/>
+    <Edict ID = "Gentlemen Ride Chariots"/>
+    <AIHints>
+    </AIHints>
+    <Tag Name = "Herders"/>
+    <Force X = "928" Y = "132" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+      <Unit Type = "ENB Foot Bodyguard">
+        <Leader FirstName = "Mongol Leader" PortraitIndex = "9" AgeInYears = "16" Energy = "5" Virtue = "5" Leader = "true"/>
+      </Unit>
+    </Force>
+    <Force X = "921" Y = "152" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Force X = "946" Y = "144" Facing = "30">
+      <Unit Type = "WS Settlers"/>
+    </Force>
+    <Settlement Name = "Bleu" X = "928" Y = "132" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "926" Y = "135"/>
       <FarmImprovements>
-        <Pos X="945" Y="146" />
-        <Pos X="945" Y="147" />
-        <Pos X="946" Y="147" />
-        <Pos X="947" Y="147" />
-        <Pos X="948" Y="146" />
-        <Pos X="948" Y="145" />
-        <Pos X="949" Y="144" />
-        <Pos X="948" Y="143" />
-        <Pos X="948" Y="144" />
-        <Pos X="947" Y="145" />
-        <Pos X="947" Y="146" />
-        <Pos X="946" Y="146" />
-        <Pos X="946" Y="145" />
-        <Pos X="947" Y="144" />
-        <Pos X="947" Y="143" />
-        <Pos X="948" Y="142" />
-        <Pos X="947" Y="141" />
-        <Pos X="947" Y="142" />
-        <Pos X="946" Y="143" />
-        <Pos X="945" Y="145" />
-        <Pos X="944" Y="145" />
-        <Pos X="944" Y="146" />
-        <Pos X="943" Y="145" />
-        <Pos X="943" Y="144" />
-        <Pos X="944" Y="144" />
-        <Pos X="943" Y="143" />
-        <Pos X="944" Y="143" />
-        <Pos X="945" Y="144" />
-        <Pos X="945" Y="143" />
-        <Pos X="946" Y="142" />
-        <Pos X="946" Y="141" />
-        <Pos X="945" Y="141" />
-        <Pos X="945" Y="142" />
-        <Pos X="944" Y="141" />
-        <Pos X="944" Y="142" />
+        <Pos X = "925" Y = "132"/>
+        <Pos X = "926" Y = "132"/>
+        <Pos X = "926" Y = "131"/>
+        <Pos X = "926" Y = "130"/>
+        <Pos X = "926" Y = "129"/>
+        <Pos X = "927" Y = "130"/>
+        <Pos X = "927" Y = "129"/>
+        <Pos X = "928" Y = "130"/>
+        <Pos X = "928" Y = "129"/>
+        <Pos X = "929" Y = "130"/>
+        <Pos X = "929" Y = "129"/>
+        <Pos X = "927" Y = "133"/>
+        <Pos X = "926" Y = "133"/>
+        <Pos X = "927" Y = "132"/>
+        <Pos X = "927" Y = "131"/>
+        <Pos X = "928" Y = "131"/>
+        <Pos X = "929" Y = "132"/>
+        <Pos X = "928" Y = "133"/>
+        <Pos X = "929" Y = "131"/>
+        <Pos X = "923" Y = "133"/>
+        <Pos X = "924" Y = "132"/>
+        <Pos X = "925" Y = "130"/>
+        <Pos X = "925" Y = "129"/>
+        <Pos X = "925" Y = "128"/>
+        <Pos X = "926" Y = "128"/>
+        <Pos X = "927" Y = "128"/>
+        <Pos X = "928" Y = "128"/>
+        <Pos X = "927" Y = "126"/>
+        <Pos X = "928" Y = "126"/>
+        <Pos X = "929" Y = "127"/>
+        <Pos X = "929" Y = "126"/>
+        <Pos X = "930" Y = "126"/>
+        <Pos X = "930" Y = "127"/>
+        <Pos X = "931" Y = "126"/>
+        <Pos X = "931" Y = "127"/>
+        <Pos X = "932" Y = "128"/>
+      </FarmImprovements>
+    </Settlement>
+    <Settlement Name = "Frontline" X = "921" Y = "152" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "919" Y = "154"/>
+      <FarmImprovements>
+        <Pos X = "920" Y = "154"/>
+        <Pos X = "922" Y = "155"/>
+        <Pos X = "921" Y = "155"/>
+        <Pos X = "920" Y = "155"/>
+        <Pos X = "918" Y = "151"/>
+        <Pos X = "919" Y = "150"/>
+        <Pos X = "919" Y = "149"/>
+        <Pos X = "921" Y = "151"/>
+        <Pos X = "921" Y = "149"/>
+        <Pos X = "923" Y = "150"/>
+        <Pos X = "922" Y = "151"/>
+        <Pos X = "922" Y = "152"/>
+        <Pos X = "920" Y = "153"/>
+        <Pos X = "924" Y = "152"/>
+        <Pos X = "921" Y = "153"/>
+        <Pos X = "922" Y = "153"/>
+        <Pos X = "920" Y = "151"/>
+        <Pos X = "921" Y = "150"/>
+        <Pos X = "925" Y = "148"/>
+        <Pos X = "924" Y = "149"/>
+        <Pos X = "924" Y = "150"/>
+        <Pos X = "925" Y = "150"/>
+        <Pos X = "925" Y = "149"/>
+        <Pos X = "926" Y = "150"/>
+        <Pos X = "918" Y = "147"/>
+        <Pos X = "919" Y = "146"/>
+        <Pos X = "918" Y = "146"/>
+        <Pos X = "917" Y = "147"/>
+        <Pos X = "917" Y = "148"/>
+        <Pos X = "917" Y = "150"/>
+        <Pos X = "916" Y = "151"/>
+        <Pos X = "916" Y = "152"/>
+        <Pos X = "915" Y = "151"/>
+        <Pos X = "915" Y = "152"/>
+        <Pos X = "915" Y = "153"/>
+        <Pos X = "916" Y = "154"/>
+        <Pos X = "920" Y = "152"/>
+      </FarmImprovements>
+      <ClearanceImprovements>
+        <Pos X = "922" Y = "153"/>
+        <Pos X = "921" Y = "150"/>
+        <Pos X = "921" Y = "153"/>
+        <Pos X = "920" Y = "151"/>
+      </ClearanceImprovements>
+    </Settlement>
+    <Settlement Name = "Metropolis" X = "946" Y = "144" Template = "Chinese City" Architecture = "Nomad">
+      <Walls WallLevel = "0" WallTech = "0" TowerUpgrade = "0"/>
+      <Population Number = "120" Flocks = "0"/>
+      <Building Type = "City Square" X = "944" Y = "147"/>
+      <FarmImprovements>
+        <Pos X = "945" Y = "146"/>
+        <Pos X = "945" Y = "147"/>
+        <Pos X = "946" Y = "147"/>
+        <Pos X = "947" Y = "147"/>
+        <Pos X = "948" Y = "146"/>
+        <Pos X = "948" Y = "145"/>
+        <Pos X = "949" Y = "144"/>
+        <Pos X = "948" Y = "143"/>
+        <Pos X = "948" Y = "144"/>
+        <Pos X = "947" Y = "145"/>
+        <Pos X = "947" Y = "146"/>
+        <Pos X = "946" Y = "146"/>
+        <Pos X = "946" Y = "145"/>
+        <Pos X = "947" Y = "144"/>
+        <Pos X = "947" Y = "143"/>
+        <Pos X = "948" Y = "142"/>
+        <Pos X = "947" Y = "141"/>
+        <Pos X = "947" Y = "142"/>
+        <Pos X = "946" Y = "143"/>
+        <Pos X = "945" Y = "145"/>
+        <Pos X = "944" Y = "145"/>
+        <Pos X = "944" Y = "146"/>
+        <Pos X = "943" Y = "145"/>
+        <Pos X = "943" Y = "144"/>
+        <Pos X = "944" Y = "144"/>
+        <Pos X = "943" Y = "143"/>
+        <Pos X = "944" Y = "143"/>
+        <Pos X = "945" Y = "144"/>
+        <Pos X = "945" Y = "143"/>
+        <Pos X = "946" Y = "142"/>
+        <Pos X = "946" Y = "141"/>
+        <Pos X = "945" Y = "141"/>
+        <Pos X = "945" Y = "142"/>
+        <Pos X = "944" Y = "141"/>
+        <Pos X = "944" Y = "142"/>
+        <Pos X = "950" Y = "144"/>
       </FarmImprovements>
     </Settlement>
   </CustomFaction>

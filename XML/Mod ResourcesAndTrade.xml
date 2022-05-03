@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires ResourcesAndTrade.xsd">
   <!--Resources-->
-  <MapResource ID="Copper" IconName="Resources\CopperBoost" HighlightIcon="CopperBoost" Use="ProductionBoost" BoostTradeItem="Copper" Value="160">
+  <MapResource ID="Copper" IconName="Resources\CopperBoost" HighlightIcon="Resources\CopperBoost" Use="ProductionBoost" BoostTradeItem="Copper" Value="160">
     <DotColor R="255" G="0" B="255" />
     <Placement Terrain="Steep Hills" Chance="0.01" />
   </MapResource>
-  <MapResource ID="Tin And Copper Deposit" IconName="Resources\TinAndCopperBoost" HighlightIcon="TinAndCopperBoost" Use="ProductionBoost" BoostTradeItem="Bronze" Value="100">
+  <MapResource ID="Tin And Copper Deposit" IconName="Resources\TinAndCopperBoost" HighlightIcon="Resources\TinAndCopperBoost" Use="ProductionBoost" BoostTradeItem="Bronze" Value="100">
     <Placement Terrain="Steep Hills" Chance="0.0022" />
     <Placement Terrain="Mountains" Chance="0.004" />
   </MapResource>
-  <MapResource ID="Iron Deposit" IconName="Resources\IronBoost" HighlightIcon="IronBoost" Use="ProductionBoost" BoostTradeItem="Iron" Value="90">
+  <MapResource ID="Iron Deposit" IconName="Resources\IronBoost" HighlightIcon="Resources\IronBoost" Use="ProductionBoost" BoostTradeItem="Iron" Value="90">
     <Placement Terrain="Steep Hills" Chance="0.0015" />
     <Placement Terrain="Mountains" Chance="0.006" />
   </MapResource>

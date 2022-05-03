@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root xmlns="OrientalEmpires" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OrientalEmpires Events.xsd">
-  <!-- (doesn't work as intended)
-  <Event ID="Labor Service" Picture="Buildings\City" PositiveEvent="true">
+  <!-- <Event ID="Labor Unrest Reduction" Picture="Buildings\City" PositiveEvent="true">
     <Trigger Test="PerSettlement" BaseChance="100" MinTurnToOccur="1">
       <ClimateModifier ID="Central Asia" Modifier="100" />
       <ClimateModifier ID="Gobi Desert" Modifier="100" />
@@ -9,7 +8,7 @@
       <ClimateModifier ID="Southern China" Modifier="100" />
       <ClimateModifier ID="Western China" Modifier="100" />
     </Trigger>
-    <Target Affects="TriggerTarget">
+    <Target Affects="OneSettlement">
       <AIDifficultyModifier VH="0.8" H="0.9" />
       <PlayerDifficultyModifier E="1.1" />
       <PopulationModifier LessThan="10000" Modifier="1.5" />

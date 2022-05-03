@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="OrientalEmpires" xmlns:oe="OrientalEmpires" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="Factions.xsd"/>
+
+  <xs:element name ="Scenario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name ="Description" minOccurs="0"/>
+        <xs:element name="Game">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StartCameraLookAt" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="X" type="xs:int" use="required"/>
+                  <xs:attribute name="Y" type="xs:int" use="required"/>
+                  <xs:attribute name="Dist" type="xs:int" use="required"/>
+                  <xs:attribute name="Facinng" type="xs:int" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ID" type="xs:string" use="optional"/>
+            <xs:attribute name="ShowSetupScreen" type="xs:boolean" use="optional"/>
+            <xs:attribute name="Tutorial" type="xs:boolean" use="optional"/>
+            <xs:attribute name="ShowFactionStats" type="xs:boolean" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Rules">
+          <xs:complexType>
+            <xs:attribute name="CanWinByDomination" type="xs:boolean" use="optional"/>
+            <xs:attribute name="CanWinByCulturalVictory" type="xs:boolean" use="optional"/>
+            <xs:attribute name="TurnLimit" type ="xs:positiveInteger" use="required"/>
+            <xs:attribute name="ResearchRate" type ="xs:float" use="optional"/>
+            <xs:attribute name="GrowthRate" type ="xs:float" use="optional"/>
+            <xs:attribute name="WeeksPerTurn" type ="xs:int" use="optional"/>
+            <xs:attribute name="SeasonalCycle" type ="xs:string" use="optional"/>
+            <xs:attribute name="MaxTurnForRandomBandits" type ="xs:int" use="optional"/>
+         </xs:complexType>
+        </xs:element>
+        <xs:element name="Scripting" minOccurs="0">
+          <xs:complexType>
+            <xs:attribute name="File" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:choice>
+          <xs:element name ="Map">
+            <xs:complexType>
+              <xs:attribute name="FileName" type="xs:string" use="required"/>
+              <xs:attribute name ="RandomResources" type="xs:boolean" use ="optional"/>
+              <xs:attribute name ="FactionSelectionImage" type="xs:string" use ="required"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name ="RandomMap">
+            <xs:complexType>
+              <xs:attribute name="Width" type ="xs:positiveInteger" use="required"/>
+              <xs:attribute name="Height" type ="xs:positiveInteger" use="required"/>
+              <xs:attribute name ="RandomResources" type="xs:boolean" use ="optional"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+        <xs:element name="MapResource" maxOccurs ="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:attribute name="Type" type="xs:string" use="required"/>
+            <xs:attribute name="X" type="xs:int" use="required"/>
+            <xs:attribute name="Y" type="xs:int" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name ="Extras" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name ="Item" maxOccurs ="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" use="required"/>
+                  <xs:attribute name="x" type="xs:float" use="required"/>
+                  <xs:attribute name="y" type="xs:float" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:sequence minOccurs ="0" maxOccurs ="unbounded">
+          <xs:choice>
+            <xs:element name ="StandardFaction">
+              <xs:complexType>
+                <xs:attribute name="Name" type="xs:string" use="required"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name ="CustomFaction" type ="oe:Faction"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

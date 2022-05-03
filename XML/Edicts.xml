@@ -1951,7 +1951,7 @@
       <Edict Item="LaborAllowance5" Condition="false" />
       <Edict Item="LaborAllowance6" Condition="false" />
     </StaticRequirements>
-    <Effect Type="PeasantUnrest" Value="-4" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-10" PerTurn="true" />
   </Edict>
   <Edict ID="LaborAllowance1" Area="Misc" MayBeCancelled="false">
     <Requirements>
@@ -1965,7 +1965,7 @@
       <Edict Item="LaborAllowance5" Condition="false" />
       <Edict Item="LaborAllowance6" Condition="false" />
     </StaticRequirements>
-    <Effect Type="PeasantUnrest" Value="-5" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-13" PerTurn="true" />
     <CancelsEdict Name="LaborAllowance0" />
   </Edict>
   <Edict ID="LaborAllowance2" Area="Misc" MayBeCancelled="false">
@@ -1980,7 +1980,7 @@
       <Edict Item="LaborAllowance5" Condition="false" />
       <Edict Item="LaborAllowance6" Condition="false" />
     </StaticRequirements>
-    <Effect Type="PeasantUnrest" Value="-6" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-16" PerTurn="true" />
     <CancelsEdict Name="LaborAllowance1" />
   </Edict>
   <Edict ID="LaborAllowance3" Area="Misc" MayBeCancelled="false">
@@ -1995,7 +1995,7 @@
       <Edict Item="LaborAllowance5" Condition="false" />
       <Edict Item="LaborAllowance6" Condition="false" />
     </StaticRequirements>
-    <Effect Type="PeasantUnrest" Value="-7" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-22" PerTurn="true" />
     <CancelsEdict Name="LaborAllowance2" />
   </Edict>
   <Edict ID="LaborAllowance4" Area="Misc" MayBeCancelled="false">
@@ -2010,7 +2010,7 @@
       <Edict Item="LaborAllowance5" Condition="false" />
       <Edict Item="LaborAllowance6" Condition="false" />
     </StaticRequirements>
-    <Effect Type="PeasantUnrest" Value="-8" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-25" PerTurn="true" />
     <CancelsEdict Name="LaborAllowance3" />
   </Edict>
   <Edict ID="LaborAllowance5" Area="Misc" MayBeCancelled="false">
@@ -2025,7 +2025,7 @@
       <Edict Item="LaborAllowance3" Condition="false" />
       <Edict Item="LaborAllowance6" Condition="false" />
     </StaticRequirements>
-    <Effect Type="PeasantUnrest" Value="-9" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-28" PerTurn="true" />
     <CancelsEdict Name="LaborAllowance4" />
   </Edict>
   <Edict ID="LaborAllowance6" Area="Misc" MayBeCancelled="false">
@@ -2039,7 +2039,7 @@
       <Edict Item="LaborAllowance3" Condition="false" />
       <Edict Item="LaborAllowance4" Condition="false" />
     </StaticRequirements>
-    <Effect Type="PeasantUnrest" Value="-10" PerTurn="true" />
+    <Effect Type="PeasantUnrest" Value="-31" PerTurn="true" />
     <CancelsEdict Name="LaborAllowance5" />
   </Edict> -->
 </Root>
