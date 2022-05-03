@@ -112,7 +112,7 @@ Only seems fair, right?
 As such, the units currently available are all pretty standard, but I might add in more specialized units if I feel like it.
 
 ### Settlers(Civilians)
-
+Settlers now have a significant upkeep, incentivizing you to use them closer to the city it spawned from rather than further AND to not have too many at a time.
 Settlers(Civilians) have been reworked so they now take a significant amount of population with them to found a new settlement, and only Towns(the smallest type of city) can just recruit settlers without further requirements.
 
 To recruit settlers in larger, more specialized cities you will need a Settlement Office(External building) of which it and better tiers will become available to you by simply expanding your population.
