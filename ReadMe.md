@@ -1,6 +1,3 @@
-***Note:
-"You're under no obligation to choose a license. However, without a license, the default copyright laws apply, meaning that you retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work. If you're creating an open source project, we strongly encourage you to include an open source license. The Open Source Guide provides additional guidance on choosing the correct license for your project."
-I'll be finding a suitable license at some point, until then the above applies.***
 ## Welcome to "Oriental Empires: Reimagined".
 
 The basic goals I worked towards are simple.
