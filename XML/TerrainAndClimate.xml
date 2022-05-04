@@ -75,19 +75,19 @@
     <EnvironmentSet Name="Northern_Dry" AmbientSound="AmbientTemperatePlain" />
     <MapColor R="180" G="180" B="64" />
     <Data Water="false" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" />
-    <Improvement Type="Farm" To="Barren Farmland" Labor="6" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Barren Farmland">
+    <Improvement Type="Farm" To="Barren Farmland" Labor="4" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Barren Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Barren Farmland" Labor="5" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Barren Farmland">
+    <Improvement Type="Farm" To="Barren Farmland" Labor="4" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Barren Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Barren Farmland" Labor="4" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Barren Farmland">
+    <Improvement Type="Farm" To="Barren Farmland" Labor="3" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Barren Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <RequireEither>
@@ -105,7 +105,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Barren Farmland" Labor="3" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Barren Farmland">
+    <Improvement Type="Farm" To="Barren Farmland" Labor="2" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Barren Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Huge City" Condition="true" Exact="true" />
@@ -132,19 +132,19 @@
     <AmbientCreatureSet Name="Generic Grassland" />
     <MapColor R="72" G="209" B="117" />
     <Data Water="false" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" />
-    <Improvement Type="Farm" To="Grassy Farmland" Labor="6" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="4" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Grassy Farmland" Labor="5" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="4" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Grassy Farmland" Labor="4" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="3" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <RequireEither>
@@ -162,7 +162,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Grassy Farmland" Labor="3" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Grassy Farmland" Labor="2" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Huge City" Condition="true" Exact="true" />
@@ -189,19 +189,19 @@
     <AmbientCreatureSet Name="Generic Fertile" />
     <MapColor R="0" G="255" B="0" />
     <Data Water="false" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" />
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="6" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="4" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="5" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="4" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="4" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="3" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <RequireEither>
@@ -219,7 +219,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Fertile Farmland" Labor="3" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
+    <Improvement Type="Farm" To="Fertile Farmland" Labor="2" Sprite="G_ExtConstruct_Farm_01" NameTag="TI Fertile Farmland">
       <Requirements>
         <Tech Item="Agriculture" />
         <Building ID="Huge City" Condition="true" Exact="true" />
@@ -245,19 +245,19 @@
     <EnvironmentSet Name="Northern_GentleHills" AmbientSound="AmbientTemperatePlain" />
     <MapColor R="64" G="192" B="64" />
     <Data Water="false" AdjacentSettlement="true" AllowAdjacentPort="false" AllowRoad="true" AllowSettlement="true" />
-    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="6" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="4" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="5" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="4" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="4" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="3" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <RequireEither>
@@ -275,7 +275,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="3" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
+    <Improvement Type="Farm" To="Terraced Gentle Hills" Labor="2" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Gentle Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Huge City" Condition="true" Exact="true" />
@@ -302,19 +302,19 @@
     <ExternalPlacementMap Name="ExtPlacement_Generic_HM_SteepHills" />
     <MapColor R="160" G="128" B="0" />
     <Data Water="false" />
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="6" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="4" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="5" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="4" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="4" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="3" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <RequireEither>
@@ -332,7 +332,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="3" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
+    <Improvement Type="Farm" To="Terraced Steep Hills" Labor="2" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Steep Hills">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Huge City" Condition="true" Exact="true" />
@@ -368,7 +368,7 @@
     <AmbientCreatureSet Name="Generic Forest" />
     <MapColor R="0" G="100" B="0" />
     <Data Water="false" AdjacentSettlement="true" />
-    <Improvement Type="Clearing" To="Grassland" Labor="6" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Grassland">
+    <Improvement Type="Clearing" To="Grassland" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Grassland">
       <Requirements>
         <Tech Item="Enable Clear Grassland" />
         <Tech Item="Axe Making" />
@@ -383,7 +383,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Grassland" Labor="5" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Grassland">
+    <Improvement Type="Clearing" To="Grassland" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Grassland">
       <Requirements>
         <Tech Item="Enable Clear Grassland" />
         <Tech Item="Axe Making" />
@@ -398,7 +398,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Grassland" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Grassland">
+    <Improvement Type="Clearing" To="Grassland" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Grassland">
       <Requirements>
         <Tech Item="Enable Clear Grassland" />
         <Tech Item="Axe Making" />
@@ -434,7 +434,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Grassland" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Grassland">
+    <Improvement Type="Clearing" To="Grassland" Labor="2" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Grassland">
       <Requirements>
         <Tech Item="Enable Clear Grassland" />
         <Tech Item="Axe Making" />
@@ -479,7 +479,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Fertile Plain" Labor="6" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Fertile Plain">
+    <Improvement Type="Clearing" To="Fertile Plain" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Fertile Plain">
       <Requirements>
         <Tech Item="Enable Clear Fertile Plain" />
         <Tech Item="Axe Making" />
@@ -494,7 +494,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Fertile Plain" Labor="5" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Fertile Plain">
+    <Improvement Type="Clearing" To="Fertile Plain" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Fertile Plain">
       <Requirements>
         <Tech Item="Enable Clear Fertile Plain" />
         <Tech Item="Axe Making" />
@@ -509,7 +509,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Fertile Plain" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Fertile Plain">
+    <Improvement Type="Clearing" To="Fertile Plain" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Fertile Plain">
       <Requirements>
         <Tech Item="Enable Clear Fertile Plain" />
         <Tech Item="Axe Making" />
@@ -545,7 +545,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Fertile Plain" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Fertile Plain">
+    <Improvement Type="Clearing" To="Fertile Plain" Labor="2" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Fertile Plain">
       <Requirements>
         <Tech Item="Enable Clear Fertile Plain" />
         <Tech Item="Axe Making" />
@@ -590,7 +590,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Plateau" Labor="6" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Plateau">
+    <Improvement Type="Clearing" To="Plateau" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Plateau">
       <Requirements>
         <Tech Item="Enable Clear Plateau" />
         <Tech Item="Axe Making" />
@@ -605,7 +605,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Plateau" Labor="5" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Plateau">
+    <Improvement Type="Clearing" To="Plateau" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Plateau">
       <Requirements>
         <Tech Item="Enable Clear Plateau" />
         <Tech Item="Axe Making" />
@@ -620,7 +620,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Plateau" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Plateau">
+    <Improvement Type="Clearing" To="Plateau" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Plateau">
       <Requirements>
         <Tech Item="Enable Clear Plateau" />
         <Tech Item="Axe Making" />
@@ -656,7 +656,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Plateau" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Plateau">
+    <Improvement Type="Clearing" To="Plateau" Labor="2" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Plateau">
       <Requirements>
         <Tech Item="Enable Clear Plateau" />
         <Tech Item="Axe Making" />
@@ -701,7 +701,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Gentle Hills" Labor="6" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Gentle Hills">
+    <Improvement Type="Clearing" To="Gentle Hills" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Gentle Hills">
       <Requirements>
         <Tech Item="Enable Clear Gentle Hills" />
         <Tech Item="Axe Making" />
@@ -716,7 +716,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Gentle Hills" Labor="5" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Gentle Hills">
+    <Improvement Type="Clearing" To="Gentle Hills" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Gentle Hills">
       <Requirements>
         <Tech Item="Enable Clear Gentle Hills" />
         <Tech Item="Axe Making" />
@@ -731,7 +731,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Gentle Hills" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Gentle Hills">
+    <Improvement Type="Clearing" To="Gentle Hills" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Gentle Hills">
       <Requirements>
         <Tech Item="Enable Clear Gentle Hills" />
         <Tech Item="Axe Making" />
@@ -767,7 +767,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Gentle Hills" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Gentle Hills">
+    <Improvement Type="Clearing" To="Gentle Hills" Labor="2" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Gentle Hills">
       <Requirements>
         <Tech Item="Enable Clear Gentle Hills" />
         <Tech Item="Axe Making" />
@@ -812,7 +812,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Steep Hills" Labor="6" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Steep Hills">
+    <Improvement Type="Clearing" To="Steep Hills" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Steep Hills">
       <Requirements>
         <Tech Item="Enable Clear Steep Hills" />
         <Tech Item="Axe Making" />
@@ -827,7 +827,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Steep Hills" Labor="5" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Steep Hills">
+    <Improvement Type="Clearing" To="Steep Hills" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Steep Hills">
       <Requirements>
         <Tech Item="Enable Clear Steep Hills" />
         <Tech Item="Axe Making" />
@@ -842,7 +842,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Steep Hills" Labor="4" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Steep Hills">
+    <Improvement Type="Clearing" To="Steep Hills" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Steep Hills">
       <Requirements>
         <Tech Item="Enable Clear Steep Hills" />
         <Tech Item="Axe Making" />
@@ -878,7 +878,7 @@
         <TerrainAttribute Require="Farmland" Adjacent="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Clearing" To="Steep Hills" Labor="3" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Steep Hills">
+    <Improvement Type="Clearing" To="Steep Hills" Labor="2" Sprite="G_ExtConstruct_Chop_01" NameTag="TI Clear Steep Hills">
       <Requirements>
         <Tech Item="Enable Clear Steep Hills" />
         <Tech Item="Axe Making" />
@@ -952,19 +952,19 @@
     <EnvironmentSet Name="Northern_Plateau" AmbientSound="AmbientWindyGrassland" />
     <MapColor R="100" G="150" B="100" />
     <Data Water="false" AllowRoad="true" AllowSettlement="true" />
-    <Improvement Type="Farm" To="Terraced Plateau" Labor="6" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="4" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Plateau" Labor="5" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="4" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Plateau" Labor="4" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="3" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
       <Requirements>
         <Tech Item="Terracing" />
         <RequireEither>
@@ -982,7 +982,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Terraced Plateau" Labor="3" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
+    <Improvement Type="Farm" To="Terraced Plateau" Labor="2" Sprite="G_ExtConstruct_Terrace_01" NameTag="TI Terrace Plateau">
       <Requirements>
         <Tech Item="Terracing" />
         <Building ID="Huge City" Condition="true" Exact="true" />
@@ -1041,7 +1041,7 @@
     <AmbientCreatureSet Name="Generic Farmland" />
     <MapColor R="10" G="245" B="131" />
     <Data Water="false" Farmland="true" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" PillagedType="Destroyed Farmland" />
-    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="6" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="4" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -1049,7 +1049,7 @@
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="5" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="4" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -1057,7 +1057,7 @@
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="4" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="3" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -1079,7 +1079,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="3" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
+    <Improvement Type="Farm" To="Irrigated Fertile Farmland" Labor="2" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Irrigated Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -1131,7 +1131,7 @@
     <AmbientCreatureSet Name="Generic Grassland" />
     <MapColor R="72" G="209" B="117" />
     <Data Water="false" Farmland="true" AllowSettlement="true" AllowRoad="true" AllowAdjacentPort="true" Floods="true" PillagedType="Destroyed Farmland" />
-    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="6" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="4" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <TerrainAttribute Require="IrrigationSource" Adjacent="true" />
@@ -1139,14 +1139,14 @@
         <Building ID="Town" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="5" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="4" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <Terrain ID="Grassy Farmland" />
         <Building ID="City" Condition="true" Exact="true" />
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="4" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="3" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <Terrain ID="Grassy Farmland" />
@@ -1167,7 +1167,7 @@
         </RequireEither>
       </Requirements>
     </Improvement>
-    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="3" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
+    <Improvement Type="Farm" To="Irrigated Grassy Farmland" Labor="2" Sprite="G_ExtConstruct_Irrigate_01" NameTag="TI Grassy Farmland">
       <Requirements>
         <Tech Item="Irrigation" />
         <Terrain ID="Grassy Farmland" />

@@ -375,7 +375,7 @@
       <Building ID="Fortified City" Condition="false" Exact="false" />
     </StaticRequirements>
     <Capability Name="Peasant Unrest" Level="40" />
-    <Capability Name="Recruit Town Settlers" Level="1" />
+    <Capability Name="Recruit Town Settlers" Level="2" />
     <Capability Name="Recruit City Settlers" Level="1" />
   </Building>
   <Building ID="Settlement Office III" InSettlement="false" MaxNumber="1" Upgrades="Settlement Office II">
@@ -387,8 +387,8 @@
     <Requirements>
       <Population Num="850" />
     </Requirements>
-    <Capability Name="Recruit Town Settlers" Level="1" />
-    <Capability Name="Recruit City Settlers" Level="1" />
+    <Capability Name="Recruit Town Settlers" Level="3" />
+    <Capability Name="Recruit City Settlers" Level="2" />
     <Capability Name="Peasant Unrest" Level="60" />
   </Building>
   <Building ID="Settlement Office IV" InSettlement="false" MaxNumber="1" Upgrades="Settlement Office III">
@@ -401,8 +401,8 @@
       <Population Num="1050" />
     </Requirements>
     <Capability Name="Peasant Unrest" Level="80" />
-    <Capability Name="Recruit Town Settlers" Level="1" />
-    <Capability Name="Recruit City Settlers" Level="1" />
+    <Capability Name="Recruit Town Settlers" Level="4" />
+    <Capability Name="Recruit City Settlers" Level="3" />
     <Capability Name="Recruit Huge City Settlers" Level="1" />
   </Building>
   <Building ID="Settlement Office V" InSettlement="false" MaxNumber="1" Upgrades="Settlement Office IV">
@@ -415,9 +415,9 @@
       <Population Num="1250" />
     </Requirements>
     <Capability Name="Peasant Unrest" Level="100" />
-    <Capability Name="Recruit Town Settlers" Level="1" />
-    <Capability Name="Recruit City Settlers" Level="1" />
-    <Capability Name="Recruit Huge City Settlers" Level="1" />
+    <Capability Name="Recruit Town Settlers" Level="5" />
+    <Capability Name="Recruit City Settlers" Level="4" />
+    <Capability Name="Recruit Huge City Settlers" Level="2" />
   </Building>
   <!-- Mines & Related -->
   <!-- Nomad Only -->
