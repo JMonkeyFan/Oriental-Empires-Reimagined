@@ -52,7 +52,7 @@
       <Population Num="550" />
     </Requirements>
     <Capability Name="Peasant Happiness" Level="30" />
-    <Capability Name="Noble Happiness" Level="17" />
+    <Capability Name="Noble Happiness" Level="15" />
     <Capability Name="Culture VP" Level="3" />
   </Building>
   <Building ID="Taoist Temple" InSettlement="true" Tags="Taoist" AllowedForHorde="true">

@@ -12,7 +12,6 @@
   <TerrainClass Name="Mountains" />
   <TerrainClass Name="Forest" />
   <TerrainClass Name="Impassable" />
-
   <!-- Water -->
   <TerrainClass Name="Ocean" Water="true" CapabilityNeededToPass="Oceanfaring" />
   <TerrainClass Name="Sea" Water="true" CapabilityNeededToPass="Seafaring" />
@@ -24,7 +23,7 @@
   <!-- All terrain classes cost 1 move point unless otherwise specified -->
   <!-- Water terrain is impassable to non naval and land is impassable to naval unless otherwise specified -->
   <!-- Land -->
-  <MovementClass Name="BaseLandF" MovePoints="4" Naval="false" RoadModifier="0.66">
+  <MovementClass Name="NoRiverNoForest" MovePoints="4" Naval="false" RoadModifier="0.66">
     <Impassable Class="Impassable" />
     <Impassable Class="Mountains" />
     <Impassable Class="SteepHills" />
@@ -35,7 +34,7 @@
     <Terrain Class="NavigableRiver" Points="-1" CrossingOnly="true" />
     <Terrain Class="Forest" Points="-1" CrossingOnly="true" />
   </MovementClass>
-  <MovementClass Name="BaseLandF1" MovePoints="4" Naval="false" RoadModifier="0.66">
+  <MovementClass Name="ForestNoRiver" MovePoints="4" Naval="false" RoadModifier="0.66">
     <Impassable Class="Impassable" />
     <Impassable Class="Mountains" />
     <Impassable Class="SteepHills" />
@@ -56,17 +55,6 @@
     <Terrain Class="NavigableRiver" Points="-1" CrossingOnly="true" />
     <Terrain Class="UnnavigableRiver" Points="-1" CrossingOnly="true" />
     <Terrain Class="Forest" Points="2" />
-  </MovementClass>
-  <MovementClass Name="NoForest" MovePoints="4" Naval="false" RoadModifier="0.66">
-    <Impassable Class="Impassable" />
-    <Impassable Class="Mountains" />
-    <Impassable Class="SteepHills" />
-    <Impassable Class="Ocean" />
-    <Impassable Class="Sea" />
-    <Impassable Class="Coastal" />
-    <Impassable Class="UnnavigableRiver" />
-    <Impassable Class="Forest" />
-    <Terrain Class="NavigableRiver" Points="-1" CrossingOnly="true" />
   </MovementClass>
   <MovementClass Name="Garrisson" MovePoints="1" Naval="false" RoadModifier="1">
     <Impassable Class="Impassable" />
@@ -89,83 +77,83 @@
     <Terrain Class="SoftGround" Points="10" />
     <Terrain Class="RoughGround" Points="8" />
   </MovementClass>
-  <MovementClass Name="Tier 3 Infantry" Base="BaseLandF" MovePoints="11" Naval="false" RoadModifier="0.66">
+  <MovementClass Name="Tier 3 Infantry" Base="BaseLand" MovePoints="11" Naval="false" RoadModifier="0.66">
     <Terrain Class="SoftGround" Points="9" />
     <Terrain Class="RoughGround" Points="7" />
   </MovementClass>
-  <MovementClass Name="Tier 4 Infantry" Base="BaseLandF" MovePoints="10" Naval="false" RoadModifier="0.66">
+  <MovementClass Name="Tier 4 Infantry" Base="ForestNoRiver" MovePoints="10" Naval="false" RoadModifier="0.66">
     <Terrain Class="SoftGround" Points="8" />
     <Terrain Class="RoughGround" Points="6" />
   </MovementClass>
-  <MovementClass Name="Tier 5 Infantry" Base="BaseLandF" MovePoints="9" Naval="false" RoadModifier="0.66">
+  <MovementClass Name="Tier 5 Infantry" Base="ForestNoRiver" MovePoints="9" Naval="false" RoadModifier="0.66">
     <Terrain Class="SoftGround" Points="7" />
     <Terrain Class="RoughGround" Points="6" />
   </MovementClass>
-  <MovementClass Name="Tier 6 Infantry" Base="BaseLandF" MovePoints="8" Naval="false" RoadModifier="0.66">
+  <MovementClass Name="Tier 6 Infantry" Base="NoRiverNoForest" MovePoints="8" Naval="false" RoadModifier="0.66">
     <Terrain Class="SoftGround" Points="6" />
     <Terrain Class="RoughGround" Points="5" />
   </MovementClass>
-  <MovementClass Name="Tier 7 Infantry" Base="BaseLandF" MovePoints="7" Naval="false" RoadModifier="0.66">
+  <MovementClass Name="Tier 7 Infantry" Base="NoRiverNoForest" MovePoints="7" Naval="false" RoadModifier="0.66">
     <Terrain Class="SoftGround" Points="5" />
     <Terrain Class="RoughGround" Points="4" />
   </MovementClass>
-  <MovementClass Name="Tier 1 Cavalry" Base="BaseLandF1" MovePoints="15" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 1 Cavalry" Base="ForestNoRiver" MovePoints="15" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="13" />
     <Terrain Class="RoughGround" Points="11" />
   </MovementClass>
-  <MovementClass Name="Tier 2 Cavalry" Base="BaseLandF1" MovePoints="14" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 2 Cavalry" Base="ForestNoRiver" MovePoints="14" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="12" />
     <Terrain Class="RoughGround" Points="10" />
   </MovementClass>
-  <MovementClass Name="Tier 3 Cavalry" Base="BaseLandF" MovePoints="13" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 3 Cavalry" Base="ForestNoRiver" MovePoints="13" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="11" />
     <Terrain Class="RoughGround" Points="9" />
   </MovementClass>
-  <MovementClass Name="Tier 4 Cavalry" Base="NoForest" MovePoints="12" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 4 Cavalry" Base="NoRiverNoForest" MovePoints="12" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="10" />
     <Terrain Class="RoughGround" Points="8" />
   </MovementClass>
-  <MovementClass Name="Tier 5 Cavalry" Base="NoForest" MovePoints="11" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 5 Cavalry" Base="NoRiverNoForest" MovePoints="11" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="9" />
     <Terrain Class="RoughGround" Points="7" />
   </MovementClass>
-  <MovementClass Name="Tier 6 Cavalry" Base="NoForest" MovePoints="10" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 6 Cavalry" Base="NoRiverNoForest" MovePoints="10" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="8" />
     <Terrain Class="RoughGround" Points="6" />
   </MovementClass>
-  <MovementClass Name="Tier 7 Cavalry" Base="NoForest" MovePoints="9" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 7 Cavalry" Base="NoRiverNoForest" MovePoints="9" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="7" />
     <Terrain Class="RoughGround" Points="4" />
   </MovementClass>
-  <MovementClass Name="Tier 1 Chariot" Base="NoForest" MovePoints="16" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 1 Chariot" Base="NoRiverNoForest" MovePoints="16" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="7" />
     <Terrain Class="RoughGround" Points="8" />
   </MovementClass>
-  <MovementClass Name="Tier 1 Chariot" Base="NoForest" MovePoints="15" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 1 Chariot" Base="NoRiverNoForest" MovePoints="15" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="6" />
     <Terrain Class="RoughGround" Points="7" />
   </MovementClass>
-  <MovementClass Name="Tier 3 Chariot" Base="NoForest" MovePoints="14" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 3 Chariot" Base="NoRiverNoForest" MovePoints="14" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="5" />
     <Terrain Class="RoughGround" Points="6" />
   </MovementClass>
-  <MovementClass Name="Tier 4 Chariot" Base="NoForest" MovePoints="13" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 4 Chariot" Base="NoRiverNoForest" MovePoints="13" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="4" />
     <Terrain Class="RoughGround" Points="5" />
   </MovementClass>
-  <MovementClass Name="Tier 5 Chariot" Base="NoForest" MovePoints="12" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 5 Chariot" Base="NoRiverNoForest" MovePoints="12" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="3" />
     <Terrain Class="RoughGround" Points="4" />
   </MovementClass>
-  <MovementClass Name="Tier 6 Chariot" Base="NoForest" MovePoints="10" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 6 Chariot" Base="NoRiverNoForest" MovePoints="10" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="2" />
     <Terrain Class="RoughGround" Points="3" />
   </MovementClass>
-  <MovementClass Name="Tier 7 Chariot" Base="NoForest" MovePoints="9" Naval="false" RoadModifier="0.8">
+  <MovementClass Name="Tier 7 Chariot" Base="NoRiverNoForest" MovePoints="9" Naval="false" RoadModifier="0.8">
     <Terrain Class="SoftGround" Points="1" />
     <Terrain Class="RoughGround" Points="2" />
   </MovementClass>
-  <MovementClass Name="Baggage Train" Base="NoForest" MovePoints="12" Naval="false" RoadModifier="0.66">
+  <MovementClass Name="Baggage Train" Base="ForestNoRiver" MovePoints="12" Naval="false" RoadModifier="0.66">
     <Terrain Class="SoftGround" Points="10" />
     <Terrain Class="RoughGround" Points="8" />
   </MovementClass>
@@ -173,11 +161,11 @@
     <Terrain Class="SoftGround" Points="14" />
     <Terrain Class="RoughGround" Points="12" />
   </MovementClass>
-  <!--Base-->
+  <!--Base(not used, and chariots arent in the roster yet.-->
   <MovementClass Name="Infantry" Base="BaseLand" MovePoints="4" Naval="false" RoadModifier="0.66">
     <Terrain Class="SoftGround" Points="2" />
   </MovementClass>
-  <MovementClass Name="Light Infantry" Base="Infantry" MovePoints="5" Naval="false" RoadModifier="0.66">
+  <MovementClass Name="Light Infantry" Base="BaseLand" MovePoints="5" Naval="false" RoadModifier="0.66">
     <Terrain Class="Forest" Points="1" />
     <Terrain Class="SoftGround" Points="1" />
   </MovementClass>
@@ -219,12 +207,6 @@
     <Terrain Class="Coastal" Points="2" />
   </MovementClass>
   <!-- These are needed for trade route pathfinding -->
-  <!--
-  <MovementClass Name="Land Trade" Base="BaseLand" MovePoints ="4" Naval ="false" RoadModifier="1">
-    <Impassable Class="Forest"/>
-    <Impassable Class ="SoftGround"/>
-  </MovementClass>
-  -->
   <MovementClass Name="Land Trade" MovePoints="1" Naval="false" RoadModifier="1">
     <Impassable Class="Impassable" />
     <Impassable Class="Mountains" />
@@ -236,15 +218,11 @@
     <Terrain Class="NavigableRiver" Points="1" CrossingOnly="true" />
     <Terrain Class="UnnavigableRiver" Points="1" CrossingOnly="true" />
   </MovementClass>
-
   <MovementClass Name="Water Trade" Base="BaseNaval" MovePoints="6" Naval="true"></MovementClass>
 
-
   <!-- TerrainCombatEffectClasses -->
-
-
-  <!--  Mine -->
-  <!--  Long Spears & Stuff -->
+  <!--  Custom(Mine) -->
+  <!--  Temporary-->
   <TerrainCombatEffectClass ID="Garrisson" WadingModifier="0.05">
     <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
     <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
@@ -252,6 +230,7 @@
     <TerrainEffect MoveClass="Mountains" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
     <TerrainEffect MoveClass="Forest" AttackModifier="0.75" DefenseModifier="1" Charge="false" />
   </TerrainCombatEffectClass>
+  <!--  Short Spears etc...-->
   <TerrainCombatEffectClass ID="LongWeapons Tier 1" WadingModifier="0.65">
     <TerrainEffect MoveClass="SoftGround" AttackModifier="0.75" DefenseModifier="0.9" Charge="false" />
     <TerrainEffect MoveClass="RoughGround" AttackModifier="0.85" DefenseModifier="0.95" Charge="false" />
@@ -301,7 +280,7 @@
     <TerrainEffect MoveClass="Mountains" AttackModifier="1" DefenseModifier="1.4" Charge="false" />
     <TerrainEffect MoveClass="Forest" AttackModifier="0.55" DefenseModifier="0.65" Charge="false" />
   </TerrainCombatEffectClass>
-  <!--  Short Spears & Stuff -->
+  <!--  Long Spears, Halberds etc...-->
   <TerrainCombatEffectClass ID="VeryLongWeapons Tier 1" WadingModifier="0.55">
     <TerrainEffect MoveClass="SoftGround" AttackModifier="0.65" DefenseModifier="1" Charge="false" />
     <TerrainEffect MoveClass="RoughGround" AttackModifier="0.75" DefenseModifier="1.05" Charge="false" />
@@ -351,7 +330,7 @@
     <TerrainEffect MoveClass="Mountains" AttackModifier="0.95" DefenseModifier="1.5" Charge="false" />
     <TerrainEffect MoveClass="Forest" AttackModifier="0.4" DefenseModifier="0.55" Charge="false" />
   </TerrainCombatEffectClass>
-  <!--  Short Swords & Stuff -->
+  <!--  Short Swords, axe & shield etc.. -->
   <TerrainCombatEffectClass ID="Short Tier 1" WadingModifier="0.85">
     <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1.2" Charge="true" />
     <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="1.15" Charge="true" />
@@ -401,7 +380,7 @@
     <TerrainEffect MoveClass="Mountains" AttackModifier="0.75" DefenseModifier="0.8" Charge="true" />
     <TerrainEffect MoveClass="Forest" AttackModifier="1" DefenseModifier="0.9" Charge="false" />
   </TerrainCombatEffectClass>
-  <!--  Longswords and Stuff -->
+  <!--  Longswords, 2H axes etc.. -->
   <TerrainCombatEffectClass ID="Long Tier 1" WadingModifier="0.75">
     <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="0.85" Charge="true" />
     <TerrainEffect MoveClass="RoughGround" AttackModifier="0.9" DefenseModifier="0.9" Charge="true" />
@@ -518,7 +497,7 @@
   Dagger Axe(Cavalry)
   Long Sword(Cavalry)
 -->
-  <!--Base-->
+  <!--Base, not used except for vehicle and naval-->
   <TerrainCombatEffectClass ID="Infantry" WadingModifier="0.5">
     <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1" Charge="true" />
     <TerrainEffect MoveClass="RoughGround" AttackModifier="1" DefenseModifier="1" Charge="true" />
@@ -571,6 +550,7 @@
     <TerrainEffect MoveClass="SoftGround" AttackModifier="1" DefenseModifier="1" Charge="false" />
   </TerrainCombatEffectClass>
   <!-- Weapon Classes -->
+  <!--  Infantry  -->
   <WeaponClass Name="Long Spear Tier 1" Attack="1" Defense="0" CavAttackLevel="4" CavDefenceLevel="2" TerrainCombatClass="VeryLongWeapons Tier 1" />
   <WeaponClass Name="Long Spear Tier 2" Attack="2" Defense="0" CavAttackLevel="3" CavDefenceLevel="3" TerrainCombatClass="VeryLongWeapons Tier 2" />
   <WeaponClass Name="Long Spear Tier 3" Attack="3" Defense="0" CavAttackLevel="3" CavDefenceLevel="4" TerrainCombatClass="VeryLongWeapons Tier 3" />
@@ -620,8 +600,7 @@
   <WeaponClass Name="Halberd Tier 5" Attack="5" Defense="1" APLevel="4" CavAttackLevel="3" CavDefenceLevel="4" TerrainCombatClass="VeryLongWeapons Tier 5" Blade="true" />
   <WeaponClass Name="Halberd Tier 6" Attack="6" Defense="0" APLevel="5" CavAttackLevel="2" CavDefenceLevel="4" TerrainCombatClass="VeryLongWeapons Tier 6" Blade="true" />
   <WeaponClass Name="Halberd Tier 7" Attack="7" Defense="0" APLevel="5" CavAttackLevel="1" CavDefenceLevel="5" TerrainCombatClass="VeryLongWeapons Tier 7" Blade="true" />
-
-
+  <!--  Cavalry  -->
   <WeaponClass Name="Cavalry Long Spear Tier 1" Attack="1" Defense="0" CavAttackLevel="1" CavDefenceLevel="2" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 1" />
   <WeaponClass Name="Cavalry Long Spear Tier 2" Attack="2" Defense="0" CavAttackLevel="1" CavDefenceLevel="3" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 2" />
   <WeaponClass Name="Cavalry Long Spear Tier 3" Attack="3" Defense="0" CavAttackLevel="2" CavDefenceLevel="4" FootAttackLevel="1" TerrainCombatClass="Cavalry Tier 3" />
@@ -657,7 +636,7 @@
   <WeaponClass Name="Cavalry Halberd Tier 5" Attack="5" Defense="0" APLevel="3" CavAttackLevel="1" CavDefenceLevel="2" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 5" Blade="true" />
   <WeaponClass Name="Cavalry Halberd Tier 6" Attack="6" Defense="0" APLevel="4" CavAttackLevel="0" CavDefenceLevel="1" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 6" Blade="true" />
   <WeaponClass Name="Cavalry Halberd Tier 7" Attack="7" Defense="0" APLevel="5" CavAttackLevel="0" CavDefenceLevel="1" FootAttackLevel="3" TerrainCombatClass="Cavalry Tier 7" Blade="true" />
-  <!--Base -->
+  <!--Base(In general, not used) -->
   <WeaponClass Name="Foot Unarmed" Attack="0" Defense="0" TerrainCombatClass="Infantry" />
   <WeaponClass Name="Short Sword Light" Attack="0" Defense="0" TerrainCombatClass="Infantry" />
   <WeaponClass Name="Short Sword Medium" Attack="0" Defense="0" TerrainCombatClass="Infantry" />
@@ -703,9 +682,8 @@
   <CombatSkillClass Name="Major Hero" Attack="18" Defense="20" />
   <CombatSkillClass Name="Uber Hero" Attack="22" Defense="24" />
 
-
   <!-- Armor Classes -->
-  <!--Not done yet(no units for this yet)-->
+  <!--Not used yet(no units for this for now)-->
   <ArmorClass Name="Convict Tier 1" Defense="1" Metallic="0.05" />
   <ArmorClass Name="Convict Tier 2" Defense="2" Metallic="0.05" />
   <ArmorClass Name="Convict Tier 3" Defense="3" Metallic="0.05" />
@@ -734,7 +712,7 @@
   <ArmorClass Name="Tribal Cavalry Tier 5" Defense="6" HorseDefense="7" Metallic="0.125" />
   <ArmorClass Name="Tribal Cavalry Tier 6" Defense="7" HorseDefense="7" Metallic="0.125" />
   <ArmorClass Name="Tribal Cavalry Tier 7" Defense="7" HorseDefense="7" Metallic="0.125" />
-  <!--Units-->
+  <!--Used: -->
   <ArmorClass Name="Militia Tier 1" Defense="2" Metallic="0.045" />
   <ArmorClass Name="Militia Tier 2" Defense="3" Metallic="0.05" />
   <ArmorClass Name="Militia Tier 3" Defense="4" Metallic="0.055" />
@@ -805,7 +783,18 @@
   <ArmorClass Name="Garrisson Cavalry Tier 5" Defense="6" HorseDefense="4" Metallic="0.105" />
   <ArmorClass Name="Garrisson Cavalry Tier 6" Defense="7" HorseDefense="5" Metallic="0.115" />
   <ArmorClass Name="Garrisson Cavalry Tier 7" Defense="7" HorseDefense="5" Metallic="0.125" />
-  <!--Base-->
+  <!-- Base, Used -->
+  <ArmorClass Name="Light Engine" Defense="30" />
+  <ArmorClass Name="Heavy Engine" Defense="50" />
+  <!-- 
+    Naval Armour is the number of hit points that can be sustained-->
+  <ArmorClass Name="Small River Ship" Defense="150" />
+  <ArmorClass Name="Medium River Ship" Defense="350" />
+  <ArmorClass Name="Large River Ship" Defense="500" />
+  <ArmorClass Name="Small Sailing Ship" Defense="150" />
+  <ArmorClass Name="Medium Sailing Ship" Defense="350" />
+  <ArmorClass Name="Small Paddle Wheel Ship" Defense="225" />
+  <!--Base(not used)-->
   <ArmorClass Name="None" Defense="3" />
   <ArmorClass Name="Light" Defense="5" />
   <ArmorClass Name="Medium" Defense="7" Metallic="0.5" />
@@ -825,16 +814,6 @@
   <ArmorClass Name="Cavalry Extra Heavy" Defense="15" HorseDefense="18" Metallic="0.7" />
   <ArmorClass Name="Cavalry Super Heavy" Defense="19" HorseDefense="24" Metallic="1" />
   <ArmorClass Name="Cavalry Iron Pagoda" Defense="24" HorseDefense="28" Metallic="1" />
-  <ArmorClass Name="Light Engine" Defense="30" />
-  <ArmorClass Name="Heavy Engine" Defense="50" />
-  <!-- Naval Armour is the number of hit points that can be sustained-->
-  <ArmorClass Name="Small River Ship" Defense="150" />
-  <ArmorClass Name="Medium River Ship" Defense="350" />
-  <ArmorClass Name="Large River Ship" Defense="500" />
-  <ArmorClass Name="Small Sailing Ship" Defense="150" />
-  <ArmorClass Name="Medium Sailing Ship" Defense="350" />
-  <ArmorClass Name="Small Paddle Wheel Ship" Defense="225" />
-
 
   <!-- Shield Classes-->
   <ShieldClass Name="Convict Tier 1" Defense="0" Metallic="0.001" />
@@ -886,7 +865,7 @@
   <ShieldClass Name="Garrisson Tier 5" Defense="1" Metallic="0.055" />
   <ShieldClass Name="Garrisson Tier 6" Defense="1" Metallic="0.065" />
   <ShieldClass Name="Garrisson Tier 7" Defense="1" Metallic="0.075" />
-  <!--Base -->
+  <!--Base(not used except for None) -->
   <ShieldClass Name="None" Defense="0" />
   <ShieldClass Name="Small" Defense="2" />
   <ShieldClass Name="Large" Defense="4" Metallic="0.3" />
@@ -900,6 +879,15 @@
   <MoraleClass Name="Do Or Die" Morale="8" />
   <MoraleClass Name="Tribal" Morale="2" />
   <!-- Recruitment Pools -->
+  <!--Each type of city has its tier of units it can recruit, 
+    Huge/Metropolitan cities can recruit militia,
+    Trading cities can recruit Nobles 
+    Fortified Cities can recruit Regulars
+    All types of cities can recruit Guards, and they function as your "nobles" in terms of suppression.
+    Guards cost less population, are free to recruit, but have a massive upkeep, 
+    making them more suited for very short term defensive situations.
+    In terms of gear quality, nobles win. in terms of fighting strength/gear quality combined, regulars win. Militia have poor gear
+    Guards are in between nobles and regulars-->
   <RecruitmentPool ID="Civilians" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0015" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="Town Settlers" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00015" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="City Settlers" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0001" RegenTime="1" Max="3" IsPeasant="true" DisbandedUnitReturn="true" />
@@ -935,48 +923,24 @@
   <RecruitmentPool ID="Militia Hybrid" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="12" IsPeasant="true" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="Guards Hybrid" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.001" RegenTime="1" Max="24" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="Palace Troops" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.005" RegenTime="1" Max="3" DisbandedUnitReturn="true" />
-  <!--Nobles  -->
-  <!--90 pop = 1.008 per turn-->
-  <!--140 pop = 1.05 per turn-->
-  <!--<RecruitmentPool ID="Garrisson Melee Long" SplitWithTribal="false" Population="Peasants" IsNoble="true" AmountPerPop="0.005" RegenTime="1" Max="2" DisbandedUnitReturn="true" />
-  <RecruitmentPool ID="Garrisson Ranged" SplitWithTribal="false" Population="Peasants" IsNoble="true" AmountPerPop="0.005" RegenTime="1" Max="4" DisbandedUnitReturn="true" />
-  <RecruitmentPool ID="Garrisson Cavalry" SplitWithTribal="false" Population="Peasants" IsNoble="true" AmountPerPop="0.005" RegenTime="1" Max="3" DisbandedUnitReturn="true" />
-  <RecruitmentPool ID="Garrisson Hybrid" SplitWithTribal="false" Population="Peasants" IsNoble="true" AmountPerPop="0.005" RegenTime="1" Max="2" DisbandedUnitReturn="true" />
-  -->
-  <!--Army & Other -->
-  <!--160 pop = 1.0008 per turn-->
-  <!--180 pop = 1.008 per turn-->
-  <!--Each type of city has its tier of units it can recruit, 
-    Huge/Metropolitan cities can recruit militia,
-    Trading cities can recruit Nobles 
-    Fortified Cities can recruit Regulars
-    All types of cities can recruit Guards, and they function as your "nobles" in terms of suppression.
-    Guards cost less population, are free to recruit, but have a massive upkeep, 
-    making them more suited for very short term defensive situations.
-    In terms of gear quality, nobles win. in terms of fighting strength/gear quality combined, regulars win. Militia have poor gear
-    Guards are in between nobles and regulars-->
+  <RecruitmentPool ID="Light Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0001" RegenTime="1" Max="3" />
+  <RecruitmentPool ID="Medium Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.000075" RegenTime="1" Max="3" />
+  <RecruitmentPool ID="Heavy Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00005" RegenTime="1" Max="3" />
+  <RecruitmentPool ID="Heaviest Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00005" RegenTime="1" Max="3" />
+  <RecruitmentPool ID="Naval" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0075" RegenTime="1" Max="16" Naval="true" DisbandedUnitReturn="true" />
+  <!--Base(not used) -->
   <RecruitmentPool ID="Nobles" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="Militia" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="Regulars" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="5" IsPeasant="true" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="Guards" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.004" RegenTime="1" Max="5" IsNoble="true" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="Conscripts" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.03" RegenTime="1" Max="15" IsPeasant="true" DisbandedUnitReturn="true" />
-  <!--Convicts: 100 pop = 1.0 per turn-->
   <RecruitmentPool ID="Nobles" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0625" RegenTime="1" Max="5" IsNoble="true" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="Army Horsemen" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.02" RegenTime="1" Max="10" DisbandedUnitReturn="true" />
   <RecruitmentPool ID="Tribesmen" Population="Tribesmen" Min="1" AmountPerPop="0.0588235294" RegenTime="1" IsPeasant="true" Max="5" IsTribal="true" DisbandedUnitReturn="true" />
-  <!--225 pop = 1.00125 per turn-->
-  <RecruitmentPool ID="Light Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0001" RegenTime="1" Max="3" />
-  <RecruitmentPool ID="Medium Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.000075" RegenTime="1" Max="3" />
-  <RecruitmentPool ID="Heavy Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00005" RegenTime="1" Max="3" />
-  <RecruitmentPool ID="Heaviest Artillery" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.00005" RegenTime="1" Max="3" />
-  <!--140 pop = 1.05 per turn-->
-  <RecruitmentPool ID="Naval" SplitWithTribal="false" Population="Peasants" AmountPerPop="0.0075" RegenTime="1" Max="16" Naval="true" DisbandedUnitReturn="true" />
-  <!--140 pop = 1.05 per turn-->
   <RecruitmentPool ID="Mercenary" RegenTime="5" ReplenishAnywhere="true" />
   <RecruitmentPool ID="TestAndDebug" RegenTime="1" />
   <GeneralRules>
     <IProperty Name="NumEras" Value="3" /> <!-- Not sure you can change this -->
-
     <IProperty Name="LeaderMinAgeToDie" Value="40" />
     <IProperty Name="LeaderAvergeDeathAge" Value="60" />
     <FProperty Name="HeirGenerationChance" Value="0.25" />
@@ -1040,14 +1004,14 @@
     <IProperty Name="PaymentTermMedium" Value="30" />
 
     <!-- Visibility -->
-    <IProperty Name="StackTotalVisionDistance" Value="20" />
-    <IProperty Name="StackPartialVisionDistance" Value="15" />
-    <IProperty Name="SettlementTotalVisionDistance" Value="25" />
-    <IProperty Name="SettlementPartialVisionDistance" Value="25" />
+    <IProperty Name="StackTotalVisionDistance" Value="22" />
+    <IProperty Name="StackPartialVisionDistance" Value="28" />
+    <IProperty Name="SettlementTotalVisionDistance" Value="22" />
+    <IProperty Name="SettlementPartialVisionDistance" Value="28" />
     <IProperty Name="AIScoutingRangeBonus" Value="0" />
     <!-- Faction Control -->
-    <IProperty Name="TurnsToUnlockFaction" Value="1" />
-    <IProperty Name="TurnsToUnlockCampaign" Value="1" />
+    <IProperty Name="TurnsToUnlockFaction" Value="120" />
+    <IProperty Name="TurnsToUnlockCampaign" Value="120" />
 
     <!-- Troop replenishment (proportion of troops that are replenished when in friendly territory) -->
     <FProperty Name="UnitReplenishmentRate" Value="0.1" />
@@ -1057,20 +1021,21 @@
   </GeneralRules>
 
   <SettlementRules>
-    <IProperty Name="MaxInternalBuildingLabour" Value="250" />
-    <IProperty Name="MaxExternalBuildingLabour" Value="250" />
-    <IProperty Name="MaxFarmImprovementLabour" Value="250" />
-    <IProperty Name="MaxRoadLabour" Value="250" />
-    <IProperty Name="MaxClearanceLabour" Value="250" />
-    <IProperty Name="RoadConstructionLabour" Value="250" />
+    <IProperty Name="MaxInternalBuildingLabour" Value="8" />
+    <IProperty Name="MaxExternalBuildingLabour" Value="8" />
+    <IProperty Name="MaxFarmImprovementLabour" Value="8" />
+    <IProperty Name="MaxRoadLabour" Value="8" />
+    <IProperty Name="MaxClearanceLabour" Value="8" />
+    <IProperty Name="RoadConstructionLabour" Value="8" />
     <IProperty Name="MaxConstructionDistance" Value="15" />
-    <IProperty Name="CityFood" Value="25" />
+
+    <IProperty Name="CityFood" Value="35" />
     <FProperty Name="FoodPerFlock" Value="1.5" />
     <FProperty Name="LaborNeededPerGrazedHex" Value="1" />
     <!-- Increase if all flocks grazed -->
-    <FProperty Name="FlockGrowthRate" Value="0.45" />
+    <FProperty Name="FlockGrowthRate" Value="0.1" />
     <!-- Decline if not all flocks grazed -->
-    <FProperty Name="FLockDeclineRate" Value="0.25" />
+    <FProperty Name="FLockDeclineRate" Value="0.5" />
 
     <FProperty Name="PopulationTaxMultiplier" Value="2" />
 
@@ -1088,8 +1053,8 @@
     <FProperty Name="RoadTradeModifier" Value="1.2" />
     <!-- Unrest-->
     <!-- Nobles-->
-    <FProperty Name="NobleUnrestRandomChange" Value="0" />
-    <FProperty Name="NobleUnrestBias" Value="-0.07" />
+    <FProperty Name="NobleUnrestRandomChange" Value="2" />
+    <FProperty Name="NobleUnrestBias" Value="0.07" />
     <IProperty Name="NobleUnrestInitialMin" Value="15" />
     <IProperty Name="NobleUnrestInitialMax" Value="40" />
     <FProperty Name="NobleUnrestArmyFactor" Value="2.5" />
@@ -1107,7 +1072,7 @@
     <FProperty Name="JoinNobleRebellionChance" Value="0.5" />
     <IProperty Name="MinNobleUnrestWithEffect" Value="60" />
     <!--Peasants -->
-    <FProperty Name="PeasantUnrestRandomChange" Value="0" />
+    <FProperty Name="PeasantUnrestRandomChange" Value="3" />
     <FProperty Name="PeasantUnrestBias" Value="0.08" />
     <IProperty Name="PeasantUnrestInitialMin" Value="5" />
     <IProperty Name="PeasantUnrestInitialMax" Value="30" />
@@ -1132,7 +1097,7 @@
     <FProperty Name="DistanceToCapitalUnrestFactor" Value="5" />
     <FProperty Name="NomadDistanceToCapitalUnrestFactor" Value="12" />
     <FProperty Name="DistanceToCapitalUAuthorityFactor" Value="20" />
-    <FProperty Name="UnrestPreviousGrievencesDecay" Value="0.01" />
+    <FProperty Name="UnrestPreviousGrievencesDecay" Value="0.75" />
     <IProperty Name="UnrestFoundationBonus" Value="20" />
     <IProperty Name="UnrestCaptureBonus" Value="20" />
     <!-- When settlement is this full overcrowding unrest kicks in -->
@@ -1147,8 +1112,8 @@
     <IProperty Name="JoinRebelRange" Value="4" />
 
     <!-- Sacking and Destruction -->
-    <FProperty Name="MenNeededToSackBuilding" Value="200" />
-    <FProperty Name="MenNeededToSackPerPopulation" Value="1.5" />
+    <FProperty Name="MenNeededToSackBuilding" Value="150" />
+    <FProperty Name="MenNeededToSackPerPopulation" Value="1" />
     <IProperty Name="SackLootPerPopulation" Value="50" />
     <FProperty Name="PopKilledPerSoldierSacking" Value="0.03" />
     <FProperty Name="MaxProportionKilledInSack" Value="0.25" />
@@ -1156,18 +1121,18 @@
     <FProperty Name="WorthlessBuildingSackDamageChance" Value="0.25" />
 
     <FProperty Name="MenNeededToDestroyBuilding" Value="250" />
-    <FProperty Name="MenNeededToDestroyPerPopulation" Value="3" />
+    <FProperty Name="MenNeededToDestroyPerPopulation" Value="1.5" />
 
-    <IProperty Name="TurnsTurmoilFromSacking" Value="5" />
-    <IProperty Name="TurnsTurmoilFromDestruction" Value="10" />
-    <IProperty Name="TurnsTurmoilFromOccupation" Value="2" />
+    <IProperty Name="TurnsTurmoilFromSacking" Value="2" />
+    <IProperty Name="TurnsTurmoilFromDestruction" Value="4" />
+    <IProperty Name="TurnsTurmoilFromOccupation" Value="1" />
 
     <IProperty Name="MaxPopForDisbandedSettlement" Value="200" />
     <IProperty Name="DefaultPopPerSettlerWhenDisbanding" Value="20" />
     <IProperty Name="DefaultNumSettlersFromDisbanding" Value="1" />
 
     <!-- Pillaging -->
-    <IProperty Name="PillageFarmLootAmount" Value="175" />
+    <IProperty Name="PillageFarmLootAmount" Value="250" />
 
     <!-- Damage -->
     <FProperty Name="RoofTileFlameDamageModifier" Value="1.5" />
