@@ -1,3 +1,8 @@
+Disclaimer: 
+If I want to post this mod on the Steam Workshop, then I will do so in due time, for now my mod will remain exclusively on Github.
+It is my right to do so and no one elses so do me a favor and don't bother. 
+It's just fine, right here.
+
 ## Welcome to "Oriental Empires: Reimagined".
 
 The basic goals I worked towards are simple.
