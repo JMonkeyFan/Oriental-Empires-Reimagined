@@ -5,7 +5,8 @@ The basic goals I worked towards are simple.
  1. ***Specialized Cities:*** try to not to make each city a copy of the last
  2. ***Settlers(civilians)*** should be more impactful and somewhat harder to obtain.
  3. ***Population must be better integrated***, be it for:
-  - Building(In vanilla, only like 20 people can actually work at a time while the rest does... something?), 
+  -  ~~Building(In vanilla, only like 20 people can actually work at a time while the rest does... something?)~~(Scrapped for now)
+  
   - Recruitment(All units will cost a certain amount of population to recruit, depending on what type of unit, what type of city they were recruited from(more on that in a minute) and how good their gear is.)
 
 ### Specialized Cities:
